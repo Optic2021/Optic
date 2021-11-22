@@ -125,6 +125,33 @@
                                     <Font name="Arial Black" size="24.0" />
                                  </font>
                               </Label>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="122.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Lista partecipanti">
+                                 <font>
+                                    <Font name="Arial Black" size="16.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="login" />
+                                    <String fx:value="menuButton" />
+                                 </styleClass>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="176.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Recensisci">
+                                 <font>
+                                    <Font name="Arial Black" size="16.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="login" />
+                                    <String fx:value="menuButton" />
+                                 </styleClass>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="68.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Prenota">
+                                 <font>
+                                    <Font name="Arial Black" size="16.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="login" />
+                                    <String fx:value="menuButton" />
+                                 </styleClass>
+                              </Button>
                            </children>
                         </AnchorPane>
                             </items></ToolBar>
@@ -147,25 +174,15 @@
                      </font>
                   </Label>
                   <Label layoutX="478.0" layoutY="73.0" prefHeight="260.0" prefWidth="518.0" text="FOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTOFOTO" wrapText="true" />
-                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="374.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Prenota">
-                     <font>
-                        <Font name="Arial Black" size="16.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="login" />
-                        <String fx:value="menuButton" />
-                     </styleClass>
-                  </Button>
-                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="646.0" layoutY="374.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Recensione">
-                     <font>
-                        <Font name="Arial Black" size="16.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="login" />
-                        <String fx:value="menuButton" />
-                     </styleClass>
-                  </Button>
                   <ComboBox layoutX="714.0" layoutY="23.0" prefHeight="42.0" prefWidth="119.0" promptText="gg/mm/aaaa" visibleRowCount="5" />
+                  <Label alignment="TOP_CENTER" layoutX="17.0" layoutY="315.0" prefHeight="238.0" prefWidth="974.0" text="Nome evento non so come si va a capo descrizione evento non so come si va a capo" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
                </children>
                 </AnchorPane>
             </center>
