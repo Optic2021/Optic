@@ -1,7 +1,24 @@
 .background{
     -fx-background-color:rgb(28,28,28);
 }
+.backgroundG{
+    -fx-background-color:GREY;
+}
+.backgroundLG{
+    -fx-background-color:rgb(120,120,120);
+}
+.text-area *.content {
+    -fx-background-color: rgb(120,120,120);
+}
 .menuButton{
+    -fx-background-color:rgb(28,28,28);
+    -fx-text-fill: rgb(229,190,51);
+    -fx-pref-width: 181;
+    -fx-pref-height: 54;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 16;
+}
+.icon{
     -fx-background-color:rgb(28,28,28);
     -fx-text-fill: rgb(229,190,51);
 }
@@ -21,4 +38,9 @@
     -fx-text-fill: rgb(28,28,28);
     -fx-background-color:GREY;
     -fx-effect: innershadow(gaussian, rgb(28,28,28), 7, 0.5, 0.0, 0.0);
+}
+.section{
+    -fx-border-color: rgb(28,28,28);
+    -fx-border-width: 3;
+    -fx-border-radius: 3px 3px 3px 3px;
 }
