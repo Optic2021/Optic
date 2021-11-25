@@ -18,6 +18,14 @@
     -fx-font-family: "Arial Black";
     -fx-font-size: 16;
 }
+.changeButton{
+    -fx-background-color:rgb(28,28,28);
+    -fx-text-fill: rgb(229,190,51);
+    -fx-pref-width: 54;
+    -fx-pref-height: 54;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 20;
+}
 .icon{
     -fx-background-color:rgb(28,28,28);
     -fx-text-fill: rgb(229,190,51);
@@ -43,4 +51,24 @@
     -fx-border-color: rgb(28,28,28);
     -fx-border-width: 3;
     -fx-border-radius: 3px 3px 3px 3px;
+}
+.title{
+    -fx-text-fill: rgb(28,28,28);
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 15;
+}
+.text-black{
+    -fx-text-fill: rgb(28,28,28);
+}
+.table-view .column-header-background .filler{
+    -fx-background-color: GREY;
+}
+.table-view .column-header-background .label{
+    -fx-background-color: GREY;
+    -fx-text-fill: rgb(28,28,28);
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 15;
+}
+.table-view .column-header {
+    -fx-background-color: GREY;
 }
