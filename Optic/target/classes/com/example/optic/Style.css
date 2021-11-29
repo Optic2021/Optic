@@ -18,6 +18,20 @@
     -fx-font-family: "Arial Black";
     -fx-font-size: 16;
 }
+.menuButton2{
+    -fx-background-color:rgb(28,28,28);
+    -fx-text-fill: rgb(229,190,51);
+    -fx-pref-width: 87;
+    -fx-pref-height: 34;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 16;
+}
+.menuButtonDF{
+    -fx-background-color:rgb(28,28,28);
+    -fx-text-fill: rgb(229,190,51);
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 16;
+}
 .changeButton{
     -fx-background-color:rgb(28,28,28);
     -fx-text-fill: rgb(229,190,51);

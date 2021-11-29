@@ -7,7 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,6 +15,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
@@ -206,16 +207,6 @@
                                  </font>
                               </Label>
                            </top>
-                           <bottom>
-                              <TextField alignment="TOP_LEFT" prefHeight="121.0" prefWidth="410.0" promptText="Inserire recensione..." styleClass="backgroundLG" BorderPane.alignment="CENTER">
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                              </TextField>
-                           </bottom>
                            <center>
                               <TableView prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" BorderPane.alignment="CENTER">
                                 <columns>
@@ -227,17 +218,91 @@
                                  </BorderPane.margin>
                               </TableView>
                            </center>
+                           <bottom>
+                              <GridPane prefHeight="116.0" prefWidth="408.0" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="335.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="92.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <HBox prefHeight="37.0" prefWidth="408.0">
+                                       <children>
+                                          <Label prefHeight="40.0" prefWidth="21.0" text="*">
+                                             <font>
+                                                <Font name="Arial Black" size="36.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" text="*">
+                                             <font>
+                                                <Font name="Arial Black" size="36.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                          <Label layoutX="31.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" text="*">
+                                             <font>
+                                                <Font name="Arial Black" size="36.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                          <Label layoutX="52.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" text="*">
+                                             <font>
+                                                <Font name="Arial Black" size="36.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                          <Label layoutX="73.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" text="*">
+                                             <font>
+                                                <Font name="Arial Black" size="36.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </HBox>
+                                    <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Inserire recensione..." GridPane.rowIndex="1" />
+                                    <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" text="Invia" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="login" />
+                                          <String fx:value="menuButton2" />
+                                       </styleClass>
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                           </bottom>
                         </BorderPane>
                      </bottom>
                   </BorderPane>
                </center>
                <left>
-                  <BorderPane prefHeight="521.0" prefWidth="576.0" styleClass="section" BorderPane.alignment="CENTER">
+                  <BorderPane prefHeight="521.0" prefWidth="576.0" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                      </BorderPane.margin>
                      <top>
-                        <BorderPane prefHeight="136.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+                        <BorderPane prefHeight="160.0" prefWidth="570.0" BorderPane.alignment="CENTER">
                            <top>
                               <Label alignment="TOP_LEFT" prefHeight="106.0" prefWidth="550.0" styleClass="text-black" text="Il campo da gioco della capitale. Cinque ettari di campo per il Soft Air&#10;con caratteristiche combat, immersi nel verde su Via Salaria a 10 minuti&#10;dal Grande Raccordo Anulare di Roma." BorderPane.alignment="CENTER">
                                  <font>
@@ -251,8 +316,8 @@
                            <center>
                               <GridPane prefHeight="28.0" prefWidth="570.0" BorderPane.alignment="CENTER">
                                 <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="89.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="476.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="88.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="483.0" />
                                 </columnConstraints>
                                 <rowConstraints>
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -271,7 +336,7 @@
                                           <Font size="14.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets top="2.0" />
+                                          <Insets left="9.0" top="2.0" />
                                        </GridPane.margin>
                                     </Label>
                                  </children>
@@ -345,6 +410,14 @@
                                           <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Label>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="177.0" styleClass="title" text="Date" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
                                  </children>
                               </GridPane>
                               <Label alignment="CENTER" prefHeight="60.0" prefWidth="560.0" style="-fx-text-fill: rgb(28,28,28);" text="Event">
@@ -365,14 +438,6 @@
                                  <font>
                                     <Font name="Arial Black" size="24.0" />
                                  </font>
-                              </Label>
-                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="177.0" styleClass="title" text="Date">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </GridPane.margin>
                               </Label>
                            </children>
                            <padding>
