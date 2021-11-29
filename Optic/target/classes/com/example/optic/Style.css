@@ -86,3 +86,15 @@
 .table-view .column-header {
     -fx-background-color: GREY;
 }
+.textClogo .label{
+    -fx-text-fill: rgb(229,190,51);
+    -fx-font-family: "ArialBlack";
+    -fx-font-style: "Regular";
+}
+.textTitoli {
+    -fx-text-fill: rgb(28,28,28);
+    -fx-font-family: "Arial Black";
+    -fx-text-alignment: center;
+}
+
+
