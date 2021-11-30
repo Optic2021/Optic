@@ -211,7 +211,7 @@
                               <TableView prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" BorderPane.alignment="CENTER">
                                 <columns>
                                   <TableColumn prefWidth="141.0" text="Name" />
-                                  <TableColumn minWidth="0.0" prefWidth="266.0" text="Rewiew" />
+                                  <TableColumn minWidth="0.0" prefWidth="266.0" style="-fx-font-family: Arial Black;" text="Rewiew" />
                                 </columns>
                                  <BorderPane.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -430,8 +430,8 @@
                               </Label>
                               <TableView prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" GridPane.rowIndex="3">
                                 <columns>
-                                  <TableColumn editable="false" prefWidth="187.0" sortable="false" style="-fx-font-family: Arial Black; -fx-font-size: 15; -fx-text-fill: BLACK;" text="Name" />
-                                  <TableColumn prefWidth="187.0" text="Stars" />
+                                  <TableColumn editable="false" prefWidth="187.0" sortable="false" text="Name" />
+                                  <TableColumn prefWidth="187.0" style="-fx-text-fill: rgb(229,190,51);" text="Stars" />
                                 </columns>
                               </TableView>
                               <Label alignment="CENTER" layoutX="20.0" layoutY="13.0" prefHeight="60.0" prefWidth="560.0" style="-fx-text-fill: rgb(28,28,28);" text="Players" GridPane.rowIndex="2">
