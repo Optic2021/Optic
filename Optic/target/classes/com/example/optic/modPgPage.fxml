@@ -72,7 +72,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="885.0" layoutY="39.0" mnemonicParsing="false" text="Aggiorna">
+                        <Button layoutX="899.0" layoutY="39.0" mnemonicParsing="false" text="Aggiorna">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -81,7 +81,6 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Label layoutX="105.0" layoutY="31.0" text="Devo finire la combobox rifinire la tabella tu padre è bello" textFill="RED" />
                      </children>
                   </AnchorPane>
                     </items>
@@ -216,7 +215,7 @@
                                         </GridPane>
                                     </center>
                            <top>
-                              <TextArea prefHeight="117.0" prefWidth="572.0" text="Il campo da gioco della capitale. Cinque ettari di campo per il Soft Air&#10;con caratteristiche combat, immersi nel verde su Via Salaria a 10 minuti&#10;dal Grande Raccordo Anulare di Roma." BorderPane.alignment="CENTER">
+                              <TextArea editable="false" prefHeight="117.0" prefWidth="572.0" text="Il campo da gioco della capitale. Cinque ettari di campo per il Soft Air&#10;con caratteristiche combat, immersi nel verde su Via Salaria a 10 minuti&#10;dal Grande Raccordo Anulare di Roma." BorderPane.alignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -298,7 +297,16 @@
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
-                                    <ComboBox editable="true" prefWidth="150.0" promptText="Attività" GridPane.rowIndex="1" />
+                                    <ComboBox prefHeight="13.0" prefWidth="172.0" promptText="Attività" styleClass="login" visibleRowCount="5" GridPane.rowIndex="1" />
+                                    <Label alignment="CENTER" prefHeight="48.0" prefWidth="203.0" text="Cattura la bandiera" GridPane.rowIndex="1">
+                                       <styleClass>
+                                          <String fx:value="backgroundG" />
+                                          <String fx:value="text-black" />
+                                       </styleClass>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
                                             </children>
                                         </GridPane>
                                         <Label alignment="CENTER" prefHeight="45.0" prefWidth="556.0" style="-fx-text-fill: rgb(28,28,28);" text="Event">

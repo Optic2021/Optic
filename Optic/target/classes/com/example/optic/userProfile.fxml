@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -45,7 +46,7 @@
         </ToolBar>
         <BorderPane layoutY="32.0" prefHeight="688.0" prefWidth="1200.0">
             <top>
-                <ToolBar prefHeight="86.0" prefWidth="1199.0" style="-fx-background-radius: 9px 9px 9px 0px;" styleClass="background" BorderPane.alignment="CENTER">
+                <ToolBar prefHeight="86.0" prefWidth="0.0" style="-fx-background-radius: 9px 9px 9px 0px;" styleClass="background" BorderPane.alignment="CENTER">
                     <items>
                         <Button layoutX="10.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="170.0" style="-fx-cursor: hand; -fx-background-color: rgb(28,28,28);">
                             <font>
@@ -59,9 +60,39 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                  <AnchorPane prefHeight="58.0" prefWidth="1000.0">
+                  <GridPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="267.0" styleClass="textClogo">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="122.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="140.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
                      <children>
-                        <Button layoutX="788.0" layoutY="39.0" mnemonicParsing="false" text="Modifica">
+                        <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="93.0" text="Referee:" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="113.0" styleClass="clickabile" text="1234567890" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="9.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" />
+                     </padding>
+                  </GridPane>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="730.0">
+                     <children>
+                        <Button layoutX="633.0" layoutY="39.0" mnemonicParsing="false" text="Modifica">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -70,7 +101,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="885.0" layoutY="39.0" mnemonicParsing="false" text="Aggiorna">
+                        <Button layoutX="532.0" layoutY="39.0" mnemonicParsing="false" text="Aggiorna">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -79,37 +110,6 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <GridPane prefHeight="76.0" prefWidth="178.0" styleClass="textClogo">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="62.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="111.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" prefHeight="66.0" prefWidth="129.0" text="Player:" textAlignment="RIGHT">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets left="5.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label alignment="BOTTOM_LEFT" prefHeight="95.0" prefWidth="401.0" styleClass="clickabile" text="Uaza" GridPane.columnIndex="1">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets left="9.0" top="2.0" />
-                                 </GridPane.margin>
-                              </Label>
-                           </children>
-                           <padding>
-                              <Insets bottom="10.0" left="5.0" />
-                           </padding>
-                        </GridPane>
-                        <Label layoutX="346.0" layoutY="30.0" text="Da Finire" textFill="RED" />
                      </children>
                   </AnchorPane>
                     </items>
@@ -201,6 +201,15 @@
                                     </items>
                                 </ToolBar>
                             </bottom>
+                     <left>
+                        <TextField styleClass="text-area" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="177.0" BorderPane.alignment="CENTER" />
+                     </center>
+                     <right>
+                        <TextField BorderPane.alignment="CENTER" />
+                     </right>
                         </BorderPane>
                     </left>
                 </BorderPane>

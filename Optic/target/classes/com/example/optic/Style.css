@@ -108,10 +108,18 @@
     -fx-font-family: "Arial Black";
     -fx-font-size: 14;
 }
+
 .textClogo .label{
     -fx-text-fill: rgb(229,190,51);
-    -fx-font-family: "ArialBlack";
+    -fx-font-family: "Arial Black";
     -fx-font-style: "Regular";
+    -fx-font-size:15px;
+    -fx-pref-height: 66;
+    -fx-pref-width: 110;
+}
+.textClogo .grid{
+    -fx-pref-height: 76;
+    -fx-pref-width: 207;
 }
 .textTitoli {
     -fx-text-fill: rgb(28,28,28);
@@ -126,5 +134,27 @@
 }
 .radio-button {
     -fx-text-fill: rgb(28,28,28);
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, grey, transparent, grey;
+}
+.text-area .content {
+    -fx-background-color: transparent, grey, transparent, grey;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, grey, transparent, grey;
+}
+
+.text-area:focused {
+    -fx-highlight-fill: rgb(229,190,51);
+}
+
+.text-area .content {
+    -fx-padding: 10px;
+    -fx-text-fill: gray;
+    -fx-highlight-fill: rgb(229,190,51);
 }
 

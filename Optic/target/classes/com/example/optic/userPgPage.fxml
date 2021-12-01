@@ -69,7 +69,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="66.0" prefWidth="129.0" styleClass="title" text="Player:">
+                        <Label alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="66.0" prefWidth="129.0" text="Player:">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -77,7 +77,7 @@
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label alignment="BOTTOM_LEFT" onMouseClicked="#paginaprofilo" prefHeight="66.0" prefWidth="161.0" style="-fx-cursor: hand;" styleClass="text-black" text="xXGhostSniper00" GridPane.columnIndex="1">
+                        <Label alignment="BOTTOM_LEFT" onMouseClicked="#paginaprofilo" prefHeight="66.0" prefWidth="161.0" style="-fx-cursor: hand;" text="xXGhostSniper00" GridPane.columnIndex="1">
                            <font>
                               <Font size="14.0" />
                            </font>
