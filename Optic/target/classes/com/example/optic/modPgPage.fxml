@@ -4,6 +4,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -60,6 +61,29 @@
                                 </ImageView>
                             </graphic>
                         </Button>
+                  <AnchorPane prefHeight="58.0" prefWidth="1000.0">
+                     <children>
+                        <Button layoutX="788.0" layoutY="39.0" mnemonicParsing="false" text="Modifica">
+                           <styleClass>
+                              <String fx:value="menuButtonDF" />
+                              <String fx:value="login" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="885.0" layoutY="39.0" mnemonicParsing="false" text="Aggiorna">
+                           <styleClass>
+                              <String fx:value="menuButtonDF" />
+                              <String fx:value="login" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label layoutX="105.0" layoutY="31.0" text="Devo finire la combobox rifinire la tabella tu padre è bello" textFill="RED" />
+                     </children>
+                  </AnchorPane>
                     </items>
                 </ToolBar>
             </top>
@@ -185,19 +209,6 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </TextField>
-                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
-                                       <children>
-                                          <Button layoutX="175.0" layoutY="8.0" mnemonicParsing="false" text="Aggiorna">
-                                             <styleClass>
-                                                <String fx:value="menuButtonDF" />
-                                                <String fx:value="login" />
-                                             </styleClass>
-                                             <cursor>
-                                                <Cursor fx:constant="HAND" />
-                                             </cursor>
-                                          </Button>
-                                       </children>
-                                    </AnchorPane>
                                             </children>
                                             <padding>
                                                 <Insets left="5.0" />
@@ -278,15 +289,6 @@
                                                         <Insets left="5.0" right="5.0" />
                                                     </GridPane.margin>
                                                 </Label>
-                                    <TextField alignment="CENTER" text="Ruba la bandiera" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <styleClass>
-                                          <String fx:value="backgroundG" />
-                                          <String fx:value="text-black" />
-                                       </styleClass>
-                                    </TextField>
                                     <TextField alignment="CENTER" text="27/9/2022" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <styleClass>
                                           <String fx:value="text-black" />
@@ -296,6 +298,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
+                                    <ComboBox editable="true" prefWidth="150.0" promptText="Attività" GridPane.rowIndex="1" />
                                             </children>
                                         </GridPane>
                                         <Label alignment="CENTER" prefHeight="45.0" prefWidth="556.0" style="-fx-text-fill: rgb(28,28,28);" text="Event">
@@ -308,8 +311,8 @@
                                         </Label>
                                         <TableView prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" GridPane.rowIndex="3">
                                             <columns>
-                                                <TableColumn editable="false" prefWidth="187.0" sortable="false" style="-fx-text-fill: rgb(28,28,28);" text="Name" />
-                                                <TableColumn prefWidth="187.0" style="-fx-text-fill: rgb(229,190,51);" text="Stars" />
+                                                <TableColumn editable="false" prefWidth="187.0" style="-fx-text-fill: rgb(28,28,28);" text="Name" />
+                                                <TableColumn prefWidth="179.0" style="-fx-text-fill: rgb(229,190,51);" text="Stars" />
                                             </columns>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />

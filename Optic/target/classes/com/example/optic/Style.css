@@ -119,4 +119,10 @@
     -fx-text-alignment: center;
 }
 
+.clickabile{
+    -fx-cursor: hand;
+}
+.clickabile:pressed{
+    -fx-text-fill: black;
+}
 
