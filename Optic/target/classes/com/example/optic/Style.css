@@ -118,11 +118,13 @@
     -fx-font-family: "Arial Black";
     -fx-text-alignment: center;
 }
-
 .clickabile{
     -fx-cursor: hand;
 }
 .clickabile:pressed{
     -fx-text-fill: black;
+}
+.radio-button {
+    -fx-text-fill: rgb(28,28,28);
 }
 
