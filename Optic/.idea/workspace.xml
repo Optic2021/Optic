@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="CSS File" />
         <option value="Tag Library Descriptor" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../calculator" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -100,6 +100,9 @@
       <workItem from="1638545290068" duration="248000" />
       <workItem from="1638630888230" duration="1639000" />
       <workItem from="1638867239814" duration="648000" />
+      <workItem from="1639232415721" duration="1090000" />
+      <workItem from="1639233511618" duration="17000" />
+      <workItem from="1639233600031" duration="5344000" />
     </task>
     <servers />
   </component>

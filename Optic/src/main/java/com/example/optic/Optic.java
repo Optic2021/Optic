@@ -3,6 +3,7 @@ package com.example.optic;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -16,7 +17,7 @@ public class Optic extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("userHomeMap.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
         scene.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
@@ -42,4 +43,21 @@ public class Optic extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+    /*public void switchScene(String fxmlFile) {
+
+        FXMLLoader loader = new FXMLLoader(getClass()
+                .getResource(fxmlFile));
+        Parent root;
+        try
+        {
+
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+    }*/
 }
+
