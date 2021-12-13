@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../calculator" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Optic" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -105,6 +105,9 @@
       <workItem from="1639233600031" duration="5344000" />
       <workItem from="1639389615298" duration="135000" />
       <workItem from="1639389789045" duration="148000" />
+      <workItem from="1639393969429" duration="217000" />
+      <workItem from="1639394279857" duration="49000" />
+      <workItem from="1639394385951" duration="13000" />
     </task>
     <servers />
   </component>
