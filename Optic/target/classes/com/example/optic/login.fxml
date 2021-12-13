@@ -165,15 +165,15 @@
                               <Font name="Arial Black" size="16.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="25.0" prefWidth="175.0" promptText="Username" style="-fx-background-color: rgb(140,140,140);" />
+                        <TextField fx:id="username" prefHeight="25.0" prefWidth="175.0" promptText="Username" style="-fx-background-color: rgb(140,140,140);" />
                         <Label layoutX="10.0" layoutY="61.0" prefHeight="51.0" prefWidth="122.0" text="Password" textFill="#1c1c1c">
                            <font>
                               <Font name="Arial Black" size="16.0" />
                            </font>
                         </Label>
-                        <PasswordField promptText="Password" style="-fx-background-color: rgb(140,140,140);" />
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Wrong username or password" textFill="#d00000" visible="false" />
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-text-fill: rgb(229,190,51); -fx-cursor: hand;" text="Sign in">
+                        <PasswordField fx:id="password" promptText="Password" style="-fx-background-color: rgb(140,140,140);" />
+                        <Label fx:id="err1" prefHeight="31.0" prefWidth="190.0" text="Inserire username e password" textFill="#d00000" visible="false" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" style="-fx-text-fill: rgb(229,190,51); -fx-cursor: hand;" text="Accedi">
                            <font>
                               <Font name="Arial Black" size="16.0" />
                            </font>
@@ -195,14 +195,15 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <RadioButton mnemonicParsing="false" text="Player">
+                              <RadioButton fx:id="userRB" mnemonicParsing="false" selected="true" text="Player">
                                  <toggleGroup>
                                     <ToggleGroup fx:id="profileL" />
                                  </toggleGroup></RadioButton>
-                              <RadioButton mnemonicParsing="false" text="Admin" toggleGroup="$profileL" GridPane.rowIndex="1" />
-                              <RadioButton mnemonicParsing="false" text="Referee" toggleGroup="$profileL" GridPane.rowIndex="2" />
+                              <RadioButton fx:id="adminRB" mnemonicParsing="false" text="Admin" toggleGroup="$profileL" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="refereeRB" mnemonicParsing="false" text="Referee" toggleGroup="$profileL" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
+                        <Label fx:id="err2" layoutX="10.0" layoutY="213.0" prefHeight="31.0" prefWidth="190.0" text="Credeneziali non valide" textFill="#d00000" visible="false" />
                      </children>
                      <BorderPane.margin>
                         <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
