@@ -10,7 +10,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -44,9 +46,9 @@ public class ControllerModPGPage extends GraphicController {
     private TextField numWhatsapp;
     //settata non editable*/
 
-
     @FXML
     private Pane id;
+
     private double xOffset = 0;
     private double yOffset = 0;
 
@@ -62,10 +64,23 @@ public class ControllerModPGPage extends GraphicController {
         obj.setX(e.getScreenX() + xOffset);
         obj.setY(e.getScreenY() + yOffset);
     }
-
     public void toLogin(ActionEvent e) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();
         this.toView("login.fxml",obj);
+    }
+
+    public void eventList(ActionEvent e) throws IOException {
+        Stage list = new Stage();
+        Stage obj = (Stage) id.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("eventList.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 500, 350);
+        scene.setFill(Color.TRANSPARENT);
+        list.setResizable(false);
+        list.initOwner(obj);
+        list.initModality(Modality.APPLICATION_MODAL);
+        list.initStyle(StageStyle.TRANSPARENT);
+        list.setScene(scene);
+        list.show();
     }
 
     //aggiungi grid con i social come userprofile
