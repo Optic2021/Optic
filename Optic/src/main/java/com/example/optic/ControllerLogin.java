@@ -15,7 +15,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class ControllerLogin {
+public class ControllerLogin extends GraphicController {
     @FXML
     private Pane id;
     @FXML
@@ -75,54 +75,14 @@ public class ControllerLogin {
                 case 3 -> view = "refCampo.fxml";
                 default -> view = "userHomeMap.fxml";
             }
-            toView(view);
+            Stage obj = (Stage) id.getScene().getWindow();
+            this.toView(view,obj);
        // }
 
     }
 
-    public void toView(String view) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
-        Stage obj = (Stage) id.getScene().getWindow();
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
-        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
-        });
-        scene.setOnMouseDragged(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                obj.setX(event.getScreenX() - xOffset);
-                obj.setY(event.getScreenY() - yOffset);
-            }
-        });
-        scene.setFill(Color.TRANSPARENT);
-        obj.setScene(scene);
-        obj.show();
-    }
-
     public void toRegister(ActionEvent e) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("register.fxml"));
         Stage obj = (Stage) id.getScene().getWindow();
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
-        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
-        });
-        scene.setOnMouseDragged(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                obj.setX(event.getScreenX() - xOffset);
-                obj.setY(event.getScreenY() - yOffset);
-            }
-        });
-        scene.setFill(Color.TRANSPARENT);
-        obj.setScene(scene);
-        obj.show();
+        this.toView("register.fxml", obj);
     }
 }
