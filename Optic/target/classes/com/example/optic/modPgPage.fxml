@@ -63,7 +63,7 @@
                         </Button>
                   <AnchorPane prefHeight="58.0" prefWidth="1000.0">
                      <children>
-                        <Button layoutX="788.0" layoutY="39.0" mnemonicParsing="false" text="Modifica">
+                        <Button layoutX="903.0" layoutY="38.0" mnemonicParsing="false" onAction="#modify" text="Modifica">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -72,7 +72,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="899.0" layoutY="39.0" mnemonicParsing="false" text="Aggiorna">
+                        <Button fx:id="aggiorna" layoutX="802.0" layoutY="38.0" mnemonicParsing="false" onAction="#save" text="Aggiorna" visible="false">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -128,7 +128,7 @@
                                                 <Cursor fx:constant="HAND" />
                                             </cursor>
                                         </Button>
-                              <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="45.0" layoutY="1.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="194.0" text="Aggiungi foto">
+                              <Button fx:id="addPhoto" alignment="CENTER" contentDisplay="RIGHT" layoutX="45.0" layoutY="1.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="194.0" text="Aggiungi foto">
                                  <styleClass>
                                     <String fx:value="login" />
                                     <String fx:value="menuButton" />
@@ -215,7 +215,7 @@
                                         </GridPane>
                                     </center>
                            <top>
-                              <TextArea editable="false" prefHeight="117.0" prefWidth="572.0" text="Il campo da gioco della capitale. Cinque ettari di campo per il Soft Air&#10;con caratteristiche combat, immersi nel verde su Via Salaria a 10 minuti&#10;dal Grande Raccordo Anulare di Roma." BorderPane.alignment="CENTER">
+                              <TextArea fx:id="description" editable="false" prefHeight="117.0" prefWidth="572.0" text="Il campo da gioco della capitale. Cinque ettari di campo per il Soft Air&#10;con caratteristiche combat, immersi nel verde su Via Salaria a 10 minuti&#10;dal Grande Raccordo Anulare di Roma." BorderPane.alignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -253,7 +253,8 @@
                                             </columnConstraints>
                                             <rowConstraints>
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
                                                 <Label alignment="CENTER" prefHeight="20.0" prefWidth="177.0" styleClass="title" text="Activity">
@@ -272,7 +273,7 @@
                                                         <Insets left="5.0" right="5.0" />
                                                     </GridPane.margin>
                                                 </Label>
-                                                <Label alignment="CENTER" layoutX="201.0" layoutY="32.0" prefHeight="20.0" prefWidth="177.0" styleClass="text-black" text="23" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                <Label alignment="CENTER" layoutX="201.0" layoutY="32.0" prefHeight="20.0" prefWidth="177.0" styleClass="text-black" text="23" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                     <font>
                                                         <Font size="14.0" />
                                                     </font>
@@ -288,7 +289,7 @@
                                                         <Insets left="5.0" right="5.0" />
                                                     </GridPane.margin>
                                                 </Label>
-                                    <TextField alignment="CENTER" text="27/9/2022" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <TextField alignment="CENTER" text="27/9/2022" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <styleClass>
                                           <String fx:value="text-black" />
                                           <String fx:value="backgroundG" />
@@ -297,8 +298,8 @@
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
-                                    <ComboBox prefHeight="13.0" prefWidth="172.0" promptText="Attività" styleClass="login" visibleRowCount="5" GridPane.rowIndex="1" />
-                                    <Label alignment="CENTER" prefHeight="48.0" prefWidth="203.0" text="Cattura la bandiera" GridPane.rowIndex="1">
+                                    <ComboBox prefHeight="13.0" prefWidth="172.0" promptText="Attività" styleClass="login" visibleRowCount="5" GridPane.rowIndex="2" />
+                                    <Label alignment="CENTER" prefHeight="48.0" prefWidth="203.0" text="Cattura la bandiera" GridPane.rowIndex="2">
                                        <styleClass>
                                           <String fx:value="backgroundG" />
                                           <String fx:value="text-black" />
@@ -345,7 +346,7 @@
                                     <items>
                                         <AnchorPane prefHeight="30.0" prefWidth="558.0">
                                             <children>
-                                                <Button alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Aggiungi evento">
+                                                <Button fx:id="addEvent" alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Aggiungi evento" visible="false">
                                                     <font>
                                                         <Font name="Arial Black" size="16.0" />
                                                     </font>
@@ -393,7 +394,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="182.0" text="Contattaci" textFill="#f4cd32">
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="182.0" text="Social" textFill="#f4cd32">
                            <font>
                               <Font name="Arial Black" size="24.0" />
                            </font>

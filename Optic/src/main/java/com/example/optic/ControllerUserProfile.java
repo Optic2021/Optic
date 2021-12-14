@@ -27,8 +27,8 @@ public class ControllerUserProfile {
     private TextField urlFacebook;
     @FXML
     private TextField urlInstagram;
-    @FXML
-    private TextField numWhatsapp;
+   /* @FXML
+    private TextField numWhatsapp;*/
     @FXML
     private GridPane modifica;
     @FXML
@@ -39,7 +39,7 @@ public class ControllerUserProfile {
         description.setEditable(true);
         urlFacebook.setEditable(true);
         urlInstagram.setEditable(true);
-        numWhatsapp.setEditable(true);
+       // numWhatsapp.setEditable(true);
         modifica.setVisible(true);
         salva.setVisible(true);
 
@@ -50,13 +50,13 @@ public class ControllerUserProfile {
 
         String Text1=description.getText();
         String Text2=urlFacebook.getText();
-        String Text3=numWhatsapp.getText();
+        //String Text3=numWhatsapp.getText();
         String Text4=urlInstagram.getText();
 
         description.setEditable(false);
         urlFacebook.setEditable(false);
         urlInstagram.setEditable(false);
-        numWhatsapp.setEditable(false);
+        //numWhatsapp.setEditable(false);
         modifica.setVisible(false);
         salva.setVisible(false);
 
