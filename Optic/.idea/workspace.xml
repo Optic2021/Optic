@@ -36,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Calcolatrice" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -119,6 +119,7 @@
       <workItem from="1639394570588" duration="92000" />
       <workItem from="1639395997488" duration="763000" />
       <workItem from="1639406465633" duration="9117000" />
+      <workItem from="1639473328998" duration="4560000" />
     </task>
     <servers />
   </component>

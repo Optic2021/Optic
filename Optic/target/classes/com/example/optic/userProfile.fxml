@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="id" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: GREY; -fx-border-color: rgb(28,28,28); -fx-border-width: 2; -fx-border-radius: 10px 10px 10px 10px; -fx-background-radius: 12px 12px 12px 12px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.optic.ControllerBookSession">
+<Pane fx:id="id" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: GREY; -fx-border-color: rgb(28,28,28); -fx-border-width: 2; -fx-border-radius: 10px 10px 10px 10px; -fx-background-radius: 12px 12px 12px 12px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.optic.ControllerUserProfile">
     <children>
         <ToolBar layoutX="1136.0" layoutY="2.0" prefHeight="30.0" prefWidth="56.0" style="-fx-background-color: GREY; -fx-background-radius: 10PX 10PX 10PX 10PX;">
             <items>
@@ -92,7 +92,7 @@
                   </GridPane>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="730.0">
                      <children>
-                        <Button layoutX="633.0" layoutY="39.0" mnemonicParsing="false" text="Modifica">
+                        <Button layoutX="633.0" layoutY="39.0" mnemonicParsing="false" onAction="#modify" text="Modifica">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -101,7 +101,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="532.0" layoutY="39.0" mnemonicParsing="false" text="Aggiorna">
+                        <Button fx:id="salva" layoutX="532.0" layoutY="39.0" mnemonicParsing="false" onAction="#save" text="Aggiorna" visible="false">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -175,7 +175,7 @@
                             <top>
                                 <BorderPane prefHeight="160.0" prefWidth="576.0" BorderPane.alignment="CENTER">
                            <center>
-                                        <TextArea prefHeight="117.0" prefWidth="572.0" text="Description" BorderPane.alignment="CENTER">
+                                        <TextArea fx:id="description" editable="false" prefHeight="117.0" prefWidth="572.0" text="Description" BorderPane.alignment="CENTER">
                                             <font>
                                                 <Font size="14.0" />
                                             </font>
@@ -196,7 +196,7 @@
                             <bottom>
                                 <ToolBar prefHeight="59.0" prefWidth="570.0" styleClass="backgroundG" BorderPane.alignment="CENTER">
                            <items>
-                              <GridPane prefHeight="90.0" prefWidth="263.0" styleClass="textTitoli">
+                              <GridPane fx:id="modifica" prefHeight="90.0" prefWidth="263.0" styleClass="textTitoli" visible="false">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="132.0" />
                                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="131.0" />
@@ -207,9 +207,9 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <TextField text="urlFacebook" GridPane.columnIndex="1" />
-                                    <TextField text="urlInstagram" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <TextField text="numWhatsapp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="urlFacebook" text="urlFacebook" GridPane.columnIndex="1" />
+                                    <TextField fx:id="urlInstagram" text="urlInstagram" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="numWhatsapp" text="numWhatsapp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                     <Label alignment="CENTER" prefHeight="66.0" prefWidth="183.0" styleClass="text-area" text="Facebook:" />
                                     <Label alignment="CENTER" prefHeight="39.0" prefWidth="143.0" text="Instagram:" GridPane.rowIndex="1" />
                                     <Label alignment="CENTER" prefHeight="115.0" prefWidth="218.0" text="Whatsapp:" GridPane.rowIndex="2" />
