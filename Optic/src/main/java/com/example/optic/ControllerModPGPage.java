@@ -97,11 +97,15 @@ public class ControllerModPGPage extends GraphicController {
         social.show();
     }
 
-    public void facebook(){
+    public void facebook() throws java.io.IOException {
         //query db
+        //Desktop.getDesktop().browse(new URI("http://www.example.com"));
+        Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome https://www.facebook.com/giuseppe.biasiniasr"});
     }
     public void instagram(){
         //query db
+
+        Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome https://www.instagram.com/giuseppe.biasini/"});
     }
     public void whatsapp(){
         //query db
