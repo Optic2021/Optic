@@ -83,6 +83,20 @@ public class ControllerModPGPage extends GraphicController {
         list.show();
     }
 
+    public void socialModify(){
+        Stage social = new Stage();
+        Stage obj = (Stage) id.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("SocialMod.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 500, 350);
+        scene.setFill(Color.TRANSPARENT);
+        social.setResizable(false);
+        social.initOwner(obj);
+        social.initModality(Modality.APPLICATION_MODAL);
+        social.initStyle(StageStyle.TRANSPARENT);
+        social.setScene(scene);
+        social.show();
+    }
+
     //aggiungi grid con i social come userprofile
 
     public void modify(ActionEvent e){

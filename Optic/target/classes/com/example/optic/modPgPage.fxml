@@ -473,6 +473,15 @@
                               <String fx:value="menuButton" />
                            </styleClass>
                         </Button>
+                        <Button fx:id="modificaSocial" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#eventList" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Modifica Social">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="login" />
+                              <String fx:value="menuButton" />
+                           </styleClass>
+                        </Button>
                      </items>
                   </ToolBar>
                </children>
