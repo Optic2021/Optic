@@ -83,11 +83,11 @@ public class ControllerModPGPage extends GraphicController {
         list.show();
     }
 
-    public void socialModify(){
+    public void socialModify() throws IOException{
         Stage social = new Stage();
         Stage obj = (Stage) id.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("SocialMod.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 350);
+        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("SocialModPG.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 400, 250);
         scene.setFill(Color.TRANSPARENT);
         social.setResizable(false);
         social.initOwner(obj);
@@ -97,7 +97,23 @@ public class ControllerModPGPage extends GraphicController {
         social.show();
     }
 
-    //aggiungi grid con i social come userprofile
+    public void facebook(){
+        //query db
+    }
+    public void instagram(){
+        //query db
+    }
+    public void whatsapp(){
+        //query db
+        /*@Override public void start(Stage stage) throws Exception {
+            WebView web = new WebView();
+            web.getEngine().load("http://www.google.com/");
+            Scene scene = new Scene(web);
+            stage.setScene(scene);
+            stage.show();
+        }*/
+    }
+
 
     public void modify(ActionEvent e){
         //abilita la modalita modifica

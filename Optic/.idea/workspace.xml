@@ -36,12 +36,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="public" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\uazap\Desktop\Optic\src\main\java\com\example\optic" />
       <recent name="C:\Users\uazap\Desktop\Optic\target\classes\com\example\optic" />
       <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic" />
       <recent name="C:\Users\simon\IdeaProjects\Optic\src\main\resources\com\example\optic" />
@@ -126,6 +128,7 @@
       <workItem from="1639493525830" duration="8029000" />
       <workItem from="1639502222632" duration="60000" />
       <workItem from="1639518247790" duration="1751000" />
+      <workItem from="1639564469384" duration="4184000" />
     </task>
     <servers />
   </component>
