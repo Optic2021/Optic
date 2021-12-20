@@ -120,7 +120,7 @@
                             <top>
                                 <AnchorPane prefHeight="58.0" prefWidth="422.0" BorderPane.alignment="CENTER">
                                     <children>
-                                        <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="234.0" layoutY="1.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="194.0" text="Gallery">
+                                        <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="234.0" layoutY="1.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="194.0" text="Galleria">
                                             <styleClass>
                                                 <String fx:value="login" />
                                                 <String fx:value="menuButton" />
@@ -197,7 +197,7 @@
                                                         <Insets left="5.0" />
                                                     </GridPane.margin>
                                                 </Label>
-                                    <TextField text="Alessio Puglia" GridPane.columnIndex="1">
+                                    <TextField fx:id="ref" editable="false" text="Alessio Puglia" GridPane.columnIndex="1">
                                        <styleClass>
                                           <String fx:value="backgroundG" />
                                           <String fx:value="text-black" />

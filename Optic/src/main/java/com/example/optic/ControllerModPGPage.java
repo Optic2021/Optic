@@ -48,6 +48,8 @@ public class ControllerModPGPage extends GraphicController {
 
     @FXML
     private Pane id;
+    @FXML
+    private TextField ref;
 
     private double xOffset = 0;
     private double yOffset = 0;
@@ -102,7 +104,7 @@ public class ControllerModPGPage extends GraphicController {
         //Desktop.getDesktop().browse(new URI("http://www.example.com"));
         Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome https://www.facebook.com/giuseppe.biasiniasr"});
     }
-    public void instagram(){
+    public void instagram() throws IOException {
         //query db
 
         Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome https://www.instagram.com/giuseppe.biasini/"});
@@ -125,6 +127,7 @@ public class ControllerModPGPage extends GraphicController {
         addPhoto.setVisible(true);
         aggiorna.setVisible(true);
         addEvent.setVisible(true);
+        ref.setEditable(true);
 
         /*grid.setVisible(true);
         urlFacebook.setEditable(true);
@@ -141,6 +144,7 @@ public class ControllerModPGPage extends GraphicController {
         String text4 =numWhatsapp.getText();*/
 
         description.setEditable(false);
+        ref.setEditable(false);
         addPhoto.setVisible(false);
         aggiorna.setVisible(false);
         addEvent.setVisible(false);
