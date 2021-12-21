@@ -19,7 +19,8 @@ public class Optic extends Application {
     private double yOffset = 0;
 
     private static String USER = "root";
-    private static String PASS = "17moneC*";
+    //private static String PASS = "17moneC*";
+    private static String PASS = "Luca_2001";
     private static String DB_URL = "jdbc:mysql://localhost:3306/opticDB";
     private static String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
 
