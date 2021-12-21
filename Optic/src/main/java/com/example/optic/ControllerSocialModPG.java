@@ -1,14 +1,12 @@
 package com.example.optic;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class ControllerSocialModPG extends GraphicController{
+public class ControllerSocialModPG{
     @FXML
     private Pane idS;
     private double xOffset;

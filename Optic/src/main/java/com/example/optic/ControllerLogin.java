@@ -1,23 +1,11 @@
 package com.example.optic;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
 import java.io.IOException;
 
 public class ControllerLogin extends GraphicController {
-    @FXML
-    private Pane id;
     @FXML
     private TextField username;
     @FXML
@@ -34,22 +22,6 @@ public class ControllerLogin extends GraphicController {
     private RadioButton refereeRB;
     @FXML
     private RadioButton adminRB;
-
-    private double xOffset = 0;
-    private double yOffset = 0;
-
-    public void exitButton(ActionEvent e){
-        Platform.exit();
-    }
-    public void reduceButton(ActionEvent e){
-        Stage obj = (Stage) id.getScene().getWindow();
-        obj.setIconified(true);
-    }
-    public void drag(MouseEvent e){
-        Stage obj = (Stage) id.getScene().getWindow();
-        obj.setX(e.getScreenX() + xOffset);
-        obj.setY(e.getScreenY() + yOffset);
-    }
 
     public void login(ActionEvent e) throws IOException{
         if(username.getText().isEmpty() || password.getText().isEmpty()){
@@ -71,18 +43,16 @@ public class ControllerLogin extends GraphicController {
             int prof = (int)profileL.getSelectedToggle().getUserData();
             String view;
             switch(prof){
-                case 2 -> view = "modPgPage.fxml";
-                case 3 -> view = "refCampo.fxml";
-                default -> view = "userHomeMap.fxml";
+                case 2 -> view = "views/modPgPage.fxml";
+                case 3 -> view = "views/refCampo.fxml";
+                default -> view = "views/userHomeMap.fxml";
             }
-            Stage obj = (Stage) id.getScene().getWindow();
-            this.toView(view,obj);
+            this.toView(view);
        // }
 
     }
 
     public void toRegister(ActionEvent e) throws IOException {
-        Stage obj = (Stage) id.getScene().getWindow();
-        this.toView("register.fxml", obj);
+        this.toView("views/register.fxml");
     }
 }

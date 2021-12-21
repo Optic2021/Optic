@@ -1,19 +1,13 @@
 package com.example.optic;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class ControllerUserPgPage extends GraphicController {
-    @FXML
-    private Pane id;
     @FXML
     private Label star1;
     @FXML
@@ -25,24 +19,8 @@ public class ControllerUserPgPage extends GraphicController {
     @FXML
     private Label star5;
 
-    private double xOffset = 0;
-    private double yOffset = 0;
-
-    public void exitButton(ActionEvent e){
-        Platform.exit();
-    }
-    public void reduceButton(ActionEvent e){
-        Stage obj = (Stage) id.getScene().getWindow();
-        obj.setIconified(true);
-    }
-    public void drag(MouseEvent e){
-        Stage obj = (Stage) id.getScene().getWindow();
-        obj.setX(e.getScreenX() + xOffset);
-        obj.setY(e.getScreenY() + yOffset);
-    }
     public void toHome(ActionEvent e) throws IOException {
-        Stage obj = (Stage) id.getScene().getWindow();
-        this.toView("userHomeMap.fxml",obj);
+        this.toView("views/userHomeMap.fxml");
     }
     public void starEnter(MouseEvent e){
         Label l = (Label)e.getSource();
