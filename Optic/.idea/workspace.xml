@@ -38,9 +38,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/com/example/optic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/driver/mysql-connector-java-8.0.27.jar" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3816092" />
     <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
@@ -51,11 +51,11 @@
       <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic" />
+      <recent name="C:\Users\simon\IdeaProjects\Optic" />
       <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic\views" />
       <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic\driver" />
       <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\mysql\jdcb\Driver" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic\GraphicControllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -148,6 +148,7 @@
       <workItem from="1640111528446" duration="234000" />
       <workItem from="1640111789288" duration="749000" />
       <workItem from="1640126793432" duration="311000" />
+      <workItem from="1640697690938" duration="3437000" />
     </task>
     <servers />
   </component>
