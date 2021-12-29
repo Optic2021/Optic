@@ -1,0 +1,55 @@
+//Queries 
+
+//Giornata
+Select Giornata.*
+From Giornata join Admin on fk_Username=Username
+Where Nomec="Softair River 2.0";
+
+//Player 
+Select Username, Password 
+From Player
+Where Username = "ZuzzerelloPussyFucker22";
+
+Select * 
+From Player
+Where Username = "ZuzzerelloPussyFucker22";
+
+
+//Valutazione
+Select Avg(Stelle)
+From Valutazione
+Where fk_UsernameP1="xXSpettroCecchino00";||Where fk_UsernameA="xXSpettroCecchino00";
+
+//Report
+Select *
+From Report
+Where fk_UsernameP="Tupadre";||Where fk_UsernameR="Tumadre";
+
+//Admin
+Select Username,Password
+From Admin
+Where Username="Username"
+
+//Campo Social
+Select Whatsapp,Facebook,Instagram
+From Admin
+Where NomeC="Softair River 2.0"
+
+//Info Campo
+Select NomeC,Descrizione,R.Username
+From Admin A join Referee R on fk_Username=A.Username
+Where NomeC="Softair River 2.0"
+
+//Foto
+Select Immagine
+From Foto
+Where idFoto="5";
+
+//Prenotazione
+per questa credo non serva nulla
+
+Select Username, NomeC
+From Referee r join Admin a on fk_Username=a.username
+Where r.username="mando";
+
+//unique NomeC
