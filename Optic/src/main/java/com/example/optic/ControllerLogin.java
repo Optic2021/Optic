@@ -1,5 +1,7 @@
 package com.example.optic;
 
+import com.example.optic.bean.PlayerBean;
+import com.example.optic.GraphicController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -23,7 +25,8 @@ public class ControllerLogin extends GraphicController {
     @FXML
     private RadioButton adminRB;
 
-    public void login(ActionEvent e) throws IOException{
+    public void login(ActionEvent e) throws Exception {
+        boolean res = false;
         if(username.getText().isEmpty() || password.getText().isEmpty()){
             err1.setVisible(true);
             return;
@@ -45,9 +48,26 @@ public class ControllerLogin extends GraphicController {
             switch(prof){
                 case 2 -> view = "views/modPgPage.fxml";
                 case 3 -> view = "views/refCampo.fxml";
-                default -> view = "views/userHomeMap.fxml";
+                default -> {
+                    /*PlayerBean player = new PlayerBean();
+                    player.setUsername(name);
+                    player.setPassword(pw);*/
+
+                    res = LoginController.playerLogin(name,pw);
+                    view = "views/userHomeMap.fxml";
+                }
+
             }
-            this.toView(view);
+            if(res){
+                //this.toView(view,name); //da usare effettivamente
+                this.toView(view);
+            }else{
+                Alert err = new Alert(Alert.AlertType.ERROR);
+                err.setContentText("Credenziali errate");
+                err.show();
+                err2.setVisible(true);
+            }
+
        // }
 
     }

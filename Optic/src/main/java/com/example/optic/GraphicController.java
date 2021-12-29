@@ -54,4 +54,26 @@ public class GraphicController {
         obj.setScene(scene);
         obj.show();
     }
+    public void toView(String view, String user) throws IOException {
+        Stage obj = (Stage) id.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
+        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+        scene.setOnMouseDragged(new EventHandler<MouseEvent>(){
+            @Override
+            public void handle(MouseEvent event) {
+                obj.setX(event.getScreenX() - xOffset);
+                obj.setY(event.getScreenY() - yOffset);
+            }
+        });
+        scene.setFill(Color.TRANSPARENT);
+        obj.setScene(scene);
+        obj.show();
+    }
 }

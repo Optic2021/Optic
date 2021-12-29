@@ -15,15 +15,15 @@ public class Optic extends Application {
     private double xOffset = 0;
     private double yOffset = 0;
 
-    private static String USER = "root";
+    /*private static String USER = "root";
     private static String PASS = "17moneC*";
     //private static String PASS = "Luca_2001";
     private static String DB_URL = "jdbc:mysql://localhost:3306/optic";
-    private static String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
+    private static String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";*/
 
     @Override
     public void start(Stage stage) throws IOException, SQLException, Exception{
-        Statement stmt = null;
+        /*Statement stmt = null;
         Connection conn = null;
         try{
             // STEP 2: loading dinamico del driver mysql
@@ -40,7 +40,7 @@ public class Optic extends Application {
            }
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
 
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
