@@ -19,6 +19,13 @@ public class ControllerUserProfile extends GraphicController{
     private GridPane modifica;
     @FXML
     private Button salva;
+    @FXML
+    private Label user;
+
+    @Override
+    public void setUserLabel(String user){
+        this.user.setText(user);
+    }
 
     public void modify(){
         //Rendo visibile il tasto aggiorna e modificabile la grid di connessione ai social e la description

@@ -114,12 +114,6 @@
     -fx-font-family: "Arial Black";
     -fx-font-style: "Regular";
     -fx-font-size: 15px;
-    -fx-pref-height: 66;
-    -fx-pref-width: 200;
-}
-.textClogo .grid{
-    -fx-pref-height: 66;
-    -fx-pref-width: 430;
 }
 .textTitoli {
     -fx-text-fill: rgb(28,28,28);

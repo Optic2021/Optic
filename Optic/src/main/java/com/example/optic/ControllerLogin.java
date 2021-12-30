@@ -1,7 +1,5 @@
 package com.example.optic;
 
-import com.example.optic.bean.PlayerBean;
-import com.example.optic.GraphicController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -59,8 +57,8 @@ public class ControllerLogin extends GraphicController {
 
             }
             if(res){
-                //this.toView(view,name); //da usare effettivamente
-                this.toView(view);
+                this.toView(view,name); //da usare effettivamente
+                //this.toView(view);
             }else{
                 Alert err = new Alert(Alert.AlertType.ERROR);
                 err.setContentText("Credenziali errate");

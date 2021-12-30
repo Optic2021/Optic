@@ -9,27 +9,35 @@ import java.util.Properties;
 
 public class PlayerDAO {
     //i parametri dovrebbero essere presi dal file properties
+    /*
     private static String USER = "root";
     private static String PW = "17moneC*";
     private static String DB_URL = "jdbc:mysql://localhost:3306/optic";
     private static String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
+    */
+
+    private static String USER;
+    private static String PW;
+    private static String DB_URL;
+    private static String DRIVER_CLASS_NAME;
 
     private static PlayerDAO instance = null;
     private Connection conn;
 
+
     protected PlayerDAO() throws IOException {
         this.conn = null;
-
-        /*try(InputStream input = PlayerDAO.class.getClassLoader().getResourceAsStream("prop.properties")){
+        try {
+            InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
             Properties prop = new Properties();
             prop.load(input);
-             this.USER = prop.getProperty("USER");
-             this.PW = prop.getProperty("PW");
-             this.DB_URL = prop.getProperty("DB_URL");
-             this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
+            this.USER = prop.getProperty("USER");
+            this.PW = prop.getProperty("PW");
+            this.DB_URL = prop.getProperty("DB_URL");
+            this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
         }catch (IOException e){
             e.printStackTrace();
-        }*/
+        }
     }
 
     public static PlayerDAO getInstance() throws IOException {
@@ -62,13 +70,10 @@ public class PlayerDAO {
         String verPass;
         Statement stmt = null;
 
-        /*if(instance.conn == null){
-            instance.getConn();
-        }*/
         try{
-            System.out.println(DRIVER_CLASS_NAME);
-            Class.forName(DRIVER_CLASS_NAME);
-            instance.conn = DriverManager.getConnection(DB_URL, USER, PW);
+            if(instance.conn == null || instance.conn.isClosed()) {
+                instance.getConn();
+            }
             stmt = instance.conn.createStatement();
             String sql = "SELECT Password FROM player WHERE Username=?";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
@@ -94,7 +99,6 @@ public class PlayerDAO {
                 se.printStackTrace();
             }
         }
-
         return res;
     }
 }

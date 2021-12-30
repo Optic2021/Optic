@@ -28,7 +28,7 @@ public class ControllerRegister extends GraphicController {
     private RadioButton adminRB;
 
     public void toLogin(ActionEvent e) throws IOException {
-        this.toView("views/login.fxml");
+        this.toView("com/example/optic/views/login.fxml");
     }
 
     public void register(ActionEvent e) throws IOException{

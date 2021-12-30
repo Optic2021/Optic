@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -16,6 +17,8 @@ import java.io.IOException;
 public class GraphicController {
     @FXML
     private Pane id;
+    @FXML
+    private Label user;
 
     private double xOffset = 0;
     private double yOffset = 0;
@@ -32,6 +35,9 @@ public class GraphicController {
         obj.setX(e.getScreenX() + xOffset);
         obj.setY(e.getScreenY() + yOffset);
     }
+
+    public void setUserLabel(String username){}
+
     public void toView(String view) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
@@ -54,10 +60,12 @@ public class GraphicController {
         obj.setScene(scene);
         obj.show();
     }
-    public void toView(String view, String user) throws IOException {
+    public void toView(String view, String usr) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
+        GraphicController controller = fxmlLoader.getController();
+        controller.setUserLabel(usr);
         scene.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
