@@ -11,10 +11,10 @@ public class ControllerBookSession extends GraphicController {
     private Label user;
 
     @Override
-    public void setUserLabel(String user){
+    public void setUserVariables(String user){
         this.user.setText(user);
     }
-    public void toProfile(ActionEvent e) throws IOException {
+    public void toProfile(ActionEvent e) throws Exception {
         this.toView("views/userProfile.fxml",user.getText());
     }
     public void toHome(ActionEvent e) throws IOException {

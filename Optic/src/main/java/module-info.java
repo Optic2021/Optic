@@ -7,4 +7,6 @@ module com.example.optic {
 
     opens com.example.optic to javafx.fxml;
     exports com.example.optic;
+    exports com.example.optic.AppControllers;
+    opens com.example.optic.AppControllers to javafx.fxml;
 }

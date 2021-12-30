@@ -74,9 +74,13 @@
 .text-black{
     -fx-text-fill: rgb(28,28,28);
 }
+.text-yellow{
+    -fx-text-fill: rgb(229,190,51);
+}
 .table-view .column-header-background .filler{
     -fx-background-color: GREY;
 }
+
 .table-view .column-header-background .label{
     -fx-background-color: GREY;
     -fx-text-fill: rgb(28,28,28);

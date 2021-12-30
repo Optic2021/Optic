@@ -36,7 +36,7 @@ public class GraphicController {
         obj.setY(e.getScreenY() + yOffset);
     }
 
-    public void setUserLabel(String username){}
+    public void setUserVariables(String username) throws Exception {}
 
     public void toView(String view) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();
@@ -60,12 +60,12 @@ public class GraphicController {
         obj.setScene(scene);
         obj.show();
     }
-    public void toView(String view, String usr) throws IOException {
+    public void toView(String view, String usr) throws Exception {
         Stage obj = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
         GraphicController controller = fxmlLoader.getController();
-        controller.setUserLabel(usr);
+        controller.setUserVariables(usr);
         scene.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {

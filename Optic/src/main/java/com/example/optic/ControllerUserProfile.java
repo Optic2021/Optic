@@ -1,20 +1,34 @@
 package com.example.optic;
 
+import com.example.optic.dao.PlayerDAO;
+import com.example.optic.entities.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+
 import java.io.IOException;
 
 public class ControllerUserProfile extends GraphicController{
+    @FXML
+    private Label star1;
+    @FXML
+    private Label star2;
+    @FXML
+    private Label star3;
+    @FXML
+    private Label star4;
+    @FXML
+    private Label star5;
+    @FXML
+    private Label title;
     @FXML
     private TextArea description;
     @FXML
     private TextField urlFacebook;
     @FXML
     private TextField urlInstagram;
-   /* @FXML
-    private TextField numWhatsapp;*/
     @FXML
     private GridPane modifica;
     @FXML
@@ -23,8 +37,61 @@ public class ControllerUserProfile extends GraphicController{
     private Label user;
 
     @Override
-    public void setUserLabel(String user){
+    public void setUserVariables(String user) throws Exception {
         this.user.setText(user);
+        Player p = null;
+        try {
+            PlayerDAO player = PlayerDAO.getInstance();
+            p = player.getPlayer(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if(p != null) {
+            //descrizione
+            this.description.setText(p.getDescrizione());
+            //coloro le stele in base alla valutazione
+            this.setStars(p.getValutazione());
+            //se il giocatore è valutato positivamente, nome giallo
+            if(p.getStato().equals("positivo")){
+                this.title.setVisible(true);
+            }
+            this.urlInstagram.setText(p.getIg());;
+            this.urlFacebook.setText(p.getFb());;
+        }
+    }
+
+    public void facebook() throws IOException {
+        Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome "+this.urlFacebook.getText()});
+    }
+
+    public void instagram() throws IOException {
+        Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome "+this.urlInstagram.getText()});
+    }
+
+    private void setStars(int stars){
+        switch (stars){
+            case 1: star1.setVisible(true);
+                    break;
+            case 2: star1.setVisible(true);
+                    star2.setVisible(true);
+                    break;
+            case 3: star1.setVisible(true);
+                    star2.setVisible(true);
+                    star3.setVisible(true);
+                    break;
+            case 4: star1.setVisible(true);
+                    star2.setVisible(true);
+                    star3.setVisible(true);
+                    star4.setVisible(true);
+                    break;
+            case 5: star1.setVisible(true);
+                    star2.setVisible(true);
+                    star3.setVisible(true);
+                    star4.setVisible(true);
+                    star5.setVisible(true);
+                    break;
+            default:
+        }
     }
 
     public void modify(){
@@ -55,7 +122,7 @@ public class ControllerUserProfile extends GraphicController{
 
     }
 
-    public void toHome(ActionEvent e) throws IOException {
-        this.toView("views/userHomeMap.fxml");
+    public void toHome(ActionEvent e) throws Exception {
+        this.toView("views/userHomeMap.fxml",user.getText());
     }
 }
