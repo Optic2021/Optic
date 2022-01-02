@@ -40,7 +40,79 @@ public class PlayerDAO {
         }
     }
 
-    public static Player getPlayer(String user) throws Exception {
+    public void newPlayer(String user, String password) throws Exception {
+        Statement stmt = null;
+        int ret;
+        Player p = new Player(user,password);
+        try{
+            if(instance.conn == null || instance.conn.isClosed()) {
+                instance.getConn();
+            }
+            stmt = instance.conn.createStatement();
+            String sql = "INSERT INTO player VALUES (?,?,?,?,?,?,?)";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt.setString(1,p.getUsername());
+            prepStmt.setString(2,p.getPassword());
+            prepStmt.setString(3,"");
+            prepStmt.setString(4,"0");
+            prepStmt.setString(5,"");
+            prepStmt.setString(6,"");
+            prepStmt.setString(7,p.getStato());
+            prepStmt.executeUpdate();
+            /*
+            if(ret != 0){
+                Exception e = new Exception("Player "+user+" not inserted");
+                throw e;
+            }*/
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException se2) {
+            }
+            try {
+                if (instance.conn != null)
+                    instance.conn.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }
+        }
+    }
+
+    public void setPlayerInfo(String user, String desc, String fb, String ig){
+        Statement stmt = null;
+        Player p = new Player(user);
+        try{
+            if(instance.conn == null || instance.conn.isClosed()) {
+                instance.getConn();
+            }
+            stmt = instance.conn.createStatement();
+            String sql = "UPDATE player SET Descrizione=?, Instagram=?, Facebook=? WHERE Username=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt.setString(1,desc);
+            prepStmt.setString(2,fb);
+            prepStmt.setString(3,ig);
+            prepStmt.setString(4,user);
+            prepStmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (instance.conn != null)
+                    instance.conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public Player getPlayer(String user) throws Exception {
         Statement stmt = null;
         Player p = new Player(user);
         try{
@@ -72,7 +144,41 @@ public class PlayerDAO {
             try {
                 if (stmt != null)
                     stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (instance.conn != null)
+                    instance.conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return p;
+    }
+
+    public boolean isPlayerNameUsed(String username) throws Exception {
+        boolean res = false;
+        Statement stmt = null;
+        try{
+            if(instance.conn == null || instance.conn.isClosed()) {
+                instance.getConn();
+            }
+            stmt = instance.conn.createStatement();
+            String sql = "SELECT Username FROM player WHERE Username=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt.setString(1,username);
+            ResultSet rs = prepStmt.executeQuery();
+            if(rs.next()) {
+                res = true;
+            }
+            rs.close();
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
             } catch (SQLException se2) {
+                se2.printStackTrace();
             }
             try {
                 if (instance.conn != null)
@@ -81,7 +187,7 @@ public class PlayerDAO {
                 se.printStackTrace();
             }
         }
-        return p;
+        return res;
     }
 
     public static PlayerDAO getInstance() throws IOException {

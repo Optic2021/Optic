@@ -1,5 +1,6 @@
 package com.example.optic;
 
+import com.example.optic.AppControllers.UserProfileAppController;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.Player;
 import javafx.event.ActionEvent;
@@ -61,11 +62,15 @@ public class ControllerUserProfile extends GraphicController{
     }
 
     public void facebook() throws IOException {
-        Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome "+this.urlFacebook.getText()});
+        if(!urlFacebook.getText().isEmpty()) {
+            Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + this.urlFacebook.getText()});
+        }
     }
 
     public void instagram() throws IOException {
-        Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome "+this.urlInstagram.getText()});
+        if(!urlInstagram.getText().isEmpty()) {
+            Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + this.urlInstagram.getText()});
+        }
     }
 
     private void setStars(int stars){
@@ -108,18 +113,26 @@ public class ControllerUserProfile extends GraphicController{
     public void save(){
         //Informazione da salvare nel dao
 
-        String Text1=description.getText();
-        String Text2=urlFacebook.getText();
-        //String Text3=numWhatsapp.getText();
-        String Text4=urlInstagram.getText();
+        String desc = description.getText();
+        String fb = urlFacebook.getText();
+        String ig = urlInstagram.getText();
+        if(desc.length() > 200){
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("La descrizione supera il limite massimo di 200 caratteri: "+desc.length());
+            err.show();
+        }else if(fb.length() > 200 || ig.length() > 200){
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("L'url supera il limite massimo di 200 caratteri: fb -> "+fb.length()+", ig -> "+ig.length());
+            err.show();
+        }else {
+            UserProfileAppController.setInfo(user.getText(), desc, fb, ig);
 
-        description.setEditable(false);
-        urlFacebook.setEditable(false);
-        urlInstagram.setEditable(false);
-        //numWhatsapp.setEditable(false);
-        modifica.setVisible(false);
-        salva.setVisible(false);
-
+            description.setEditable(false);
+            urlFacebook.setEditable(false);
+            urlInstagram.setEditable(false);
+            modifica.setVisible(false);
+            salva.setVisible(false);
+        }
     }
 
     public void toHome(ActionEvent e) throws Exception {

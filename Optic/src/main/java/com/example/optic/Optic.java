@@ -22,25 +22,7 @@ public class Optic extends Application {
     private static String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";*/
 
     @Override
-    public void start(Stage stage) throws IOException, SQLException, Exception{
-        /*Statement stmt = null;
-        Connection conn = null;
-        try{
-            // STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
-
-            // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            stmt = conn.createStatement();
-
-           ResultSet rs = stmt.executeQuery("select * from referee");
-
-           while(rs.next()){
-                System.out.println(rs.getString("Username")+ " "+rs.getString("Password"));
-           }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
+    public void start(Stage stage) throws Exception{
 
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);

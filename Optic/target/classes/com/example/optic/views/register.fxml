@@ -21,7 +21,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="id" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: GREY; -fx-border-color: rgb(28,28,28); -fx-border-width: 2; -fx-border-radius: 10px 10px 10px 10px; -fx-background-radius: 12px 12px 12px 12px;" stylesheets="@../Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.optic.ControllerRegister">
+<Pane fx:id="id" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: GREY; -fx-border-color: rgb(28,28,28); -fx-border-width: 2; -fx-border-radius: 10px 10px 10px 10px; -fx-background-radius: 12px 12px 12px 12px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.optic.ControllerRegister">
     <children>
         <ToolBar layoutX="1136.0" layoutY="2.0" prefHeight="30.0" prefWidth="56.0" style="-fx-background-color: GREY; -fx-background-radius: 10PX 10PX 10PX 10PX;">
             <items>
@@ -142,9 +142,6 @@
                               <RadioButton fx:id="refereeRB" mnemonicParsing="false" text="Referee" toggleGroup="$profile" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
-                        <Label fx:id="err2" prefHeight="31.0" prefWidth="190.0" text="Username già usato" textFill="#d00000" visible="false" />
-                        <Label fx:id="err3" prefHeight="31.0" prefWidth="190.0" text="Le password non combaciano" textFill="#d00000" visible="false" />
-                        <Label fx:id="err4" layoutX="10.0" layoutY="475.0" prefHeight="31.0" prefWidth="190.0" text="Inserire i dati" textFill="#d00000" visible="false" />
                             </children>
                      <BorderPane.margin>
                         <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />

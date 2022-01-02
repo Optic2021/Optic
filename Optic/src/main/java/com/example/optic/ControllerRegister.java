@@ -1,5 +1,8 @@
 package com.example.optic;
 
+import com.example.optic.AppControllers.RegisterController;
+import com.example.optic.dao.PlayerDAO;
+import com.example.optic.entities.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -13,12 +16,6 @@ public class ControllerRegister extends GraphicController {
     @FXML
     private PasswordField confPassword;
     @FXML
-    private Label err2;
-    @FXML
-    private Label err3;
-    @FXML
-    private Label err4;
-    @FXML
     private ToggleGroup profile;
     @FXML
     private RadioButton userRB;
@@ -31,44 +28,51 @@ public class ControllerRegister extends GraphicController {
         this.toView("com/example/optic/views/login.fxml");
     }
 
-    public void register(ActionEvent e) throws IOException{
+    public void register(ActionEvent e) throws Exception {
+        boolean res = false;
         if(username.getText().isEmpty() || password.getText().isEmpty()){
-            err4.setVisible(true);
-            return;
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("Inserire i dati");
+            err.show();
+        }else if(password.getText().length() < 4){
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("La password deve contenere almeno 4 caratteri");
+            err.show();
+        }else if(password.getText().equals(confPassword.getText()) != true){
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("Le password non combaciano");
+            err.show();
+        }else {
+            String name = username.getText();
+            String pw = password.getText();
+
+            userRB.setUserData(1);
+            adminRB.setUserData(2);
+            refereeRB.setUserData(3);
+            int prof = (int) profile.getSelectedToggle().getUserData();
+            String view = "views/register.fxml";
+            switch (prof) {
+                case 2 -> view = "views/modPgPage.fxml";
+                case 3 -> view = "views/refCampo.fxml";
+                default -> {
+                    res = RegisterController.isUsernameUsed(name, 1);
+                    if (!res) {
+                        RegisterController.playerRegister(name, pw);
+                        view = "views/userHomeMap.fxml";
+                    }
+                }
+
+            }
+            if (!res) {
+                Alert err = new Alert(Alert.AlertType.CONFIRMATION);
+                err.setContentText("Registrazione avvenuta con successo!");
+                err.show();
+                this.toView(view, name);
+            } else {
+                Alert err = new Alert(Alert.AlertType.ERROR);
+                err.setContentText("Username già utilizzato");
+                err.show();
+            }
         }
-        System.out.println(password.getText() + " " + confPassword.getText());
-        if(password.getText().equals(confPassword.getText()) != true){
-            err3.setVisible(true);
-            return;
-        }
-        String name = username.getText();
-        String pw = password.getText();
-        String confPw = confPassword.getText();
-
-        /*controllo se lo username è già usato comunicando con il DB (tramite Dao)
-        String query = "";//cerca nel db il nome e restituisce
-        if(username già usato){
-            err2.setVisible(true);
-            return;
-        }*/
-
-        //inserisco i dati nel database
-
-        //controllo credenziali sul DB tramite la Dao
-        /*JdbcDao jdbcDao = new JdbcDao();
-        boolean flag = jdbcDao.validate(name, pw);*/ //funziona sicuramente dato che si tratta della registrazione
-
-        userRB.setUserData(1);
-        adminRB.setUserData(2);
-        refereeRB.setUserData(3);
-        int prof = (int)profile.getSelectedToggle().getUserData();
-        String view;
-        switch(prof){
-            case 2 -> view = "views/modPgPage.fxml";
-            case 3 -> view = "views/refCampo.fxml";
-            default -> view = "views/userHomeMap.fxml";
-        }
-        this.toView(view);
-        // }
     }
 }

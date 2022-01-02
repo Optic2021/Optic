@@ -15,4 +15,13 @@ public class UserProfileAppController {
         }
         return p;
     }
+
+    public static void setInfo(String username, String desc, String fb, String ig){
+        try {
+            PlayerDAO player = PlayerDAO.getInstance();
+            player.setPlayerInfo(username,desc,fb,ig);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
