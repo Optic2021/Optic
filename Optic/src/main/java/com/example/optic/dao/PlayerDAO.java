@@ -1,6 +1,5 @@
 package com.example.optic.dao;
 
-import com.example.optic.bean.PlayerBean;
 import com.example.optic.entities.Player;
 
 import java.io.IOException;
@@ -126,20 +125,21 @@ public class PlayerDAO {
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
-                p = null;
-            }else {
-                rs.first();
-                p.setUsername(rs.getString("Username"));
-                p.setPassword(rs.getString("Password"));
-                p.setDescrizione(rs.getString("Descrizione"));
-                p.setValutazione(rs.getInt("Valutazione"));
-                p.setIg(rs.getString("Instagram"));
-                p.setFb(rs.getString("Facebook"));
-                p.setStato(rs.getString("Stato"));
-
-                //chiudo result set
-                rs.close();
+                Exception e = new Exception("Player "+user+" not found");
+                throw e;
             }
+            //il player deve presente in quanto la label da dove prendo il nome non può essere vuota
+            rs.first();
+            p.setUsername(rs.getString("Username"));
+            p.setPassword(rs.getString("Password")); //probabilmente non servirà
+            p.setDescrizione(rs.getString("Descrizione"));
+            p.setValutazione(rs.getInt("Valutazione"));
+            p.setIg(rs.getString("Instagram"));
+            p.setFb(rs.getString("Facebook"));
+            p.setStato(rs.getString("Stato"));
+
+            //chiudo result set
+            rs.close();
         } finally {
             try {
                 if (stmt != null)
@@ -213,5 +213,42 @@ public class PlayerDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public boolean authentication(String user, String pw) throws Exception {
+        boolean res = false;
+        String verPass;
+        Statement stmt = null;
+
+        try{
+            if(instance.conn == null || instance.conn.isClosed()) {
+                instance.getConn();
+            }
+            stmt = instance.conn.createStatement();
+            String sql = "SELECT Password FROM player WHERE Username=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt.setString(1,user);
+            ResultSet rs = prepStmt.executeQuery();
+            if(rs.next()) {
+                verPass = rs.getString("Password");
+                if (pw.equals(verPass)) {
+                    res = true;
+                }
+            }
+            rs.close();
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException se2) {
+            }
+            try {
+                if (instance.conn != null)
+                    instance.conn.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }
+        }
+        return res;
     }
 }

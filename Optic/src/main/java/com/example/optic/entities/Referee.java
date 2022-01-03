@@ -8,6 +8,7 @@ public class Referee {
     public Referee(String username, String password){
         this.username = username;
         this.password = password;
+        this.fk_Username="";
     }
 
     public String getUsername() {

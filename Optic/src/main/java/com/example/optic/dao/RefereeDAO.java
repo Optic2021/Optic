@@ -62,20 +62,18 @@ public class RefereeDAO {
     }
 
     //Possiamo modificare effettivamente un username?
-    /*public void setReferee(String user,String pass){
+    public void setReferee(String user,String fk_Username){
         Statement stmt = null;
-        Referee ref = new Referee(user);
+        Referee ref = new Referee(user,"");
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
             stmt = instance.conn.createStatement();
-            String sql = "UPDATE player SET Descrizione=?, Instagram=?, Facebook=? WHERE Username=?";
+            String sql = "UPDATE referee SET  fk_Username=? WHERE Username=?";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
-            prepStmt.setString(1,desc);
-            prepStmt.setString(2,fb);
-            prepStmt.setString(3,ig);
-            prepStmt.setString(4,user);
+            prepStmt.setString(1,fk_Username);
+            prepStmt.setString(2,user);
             prepStmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -93,12 +91,12 @@ public class RefereeDAO {
                 e.printStackTrace();
             }
         }
-    }*/
+    }
 
     //chiede l aggiunta di una catch clause
-    public Referee getReferee(String user){
+    public Referee getReferee(String user)throws Exception{
         Statement stmt = null;
-        Referee ref = new Referee(user);
+        Referee ref = new Referee(user,"");
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
@@ -161,11 +159,4 @@ public class RefereeDAO {
             e.printStackTrace();
         }
     }
-
-
-
-
-
-
-
 }
