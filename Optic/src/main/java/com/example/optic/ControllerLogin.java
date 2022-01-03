@@ -1,6 +1,7 @@
 package com.example.optic;
 
 import com.example.optic.AppControllers.LoginController;
+import com.example.optic.bean.PlayerBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -39,7 +40,10 @@ public class ControllerLogin extends GraphicController {
                 case 2 -> view = "views/modPgPage.fxml";
                 case 3 -> view = "views/refCampo.fxml";
                 default -> {
-                    res = LoginController.playerLogin(name, pw);
+                    PlayerBean p = new PlayerBean();
+                    p.setUsername(name);
+                    p.setPassword(pw);
+                    res = LoginController.playerLogin(p);
                     view = "views/userHomeMap.fxml";
                 }
 

@@ -1,6 +1,7 @@
 package com.example.optic;
 
 import com.example.optic.AppControllers.RegisterController;
+import com.example.optic.bean.PlayerBean;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.Player;
 import javafx.event.ActionEvent;
@@ -55,9 +56,12 @@ public class ControllerRegister extends GraphicController {
                 case 2 -> view = "views/modPgPage.fxml";
                 case 3 -> view = "views/refCampo.fxml";
                 default -> {
-                    res = RegisterController.isUsernameUsed(name, 1);
+                    PlayerBean p = new PlayerBean();
+                    p.setUsername(name);
+                    p.setPassword(pw);
+                    res = RegisterController.isUsernameUsed(p, 1);
                     if (!res) {
-                        RegisterController.playerRegister(name, pw);
+                        RegisterController.playerRegister(p);
                         view = "views/userHomeMap.fxml";
                     }
                 }

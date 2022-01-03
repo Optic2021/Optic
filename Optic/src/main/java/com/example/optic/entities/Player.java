@@ -4,7 +4,7 @@ public class Player {
     private String username;
     private String password;
     private String descrizione;
-    private int valutazione;
+    private int valutazione = 0;
     private String ig;
     private String fb;
     private String stato = "nullo";

@@ -1,14 +1,22 @@
 package com.example.optic.AppControllers;
 
+import com.example.optic.bean.PlayerBean;
 import com.example.optic.dao.PlayerDAO;
+import com.example.optic.entities.Player;
 
 public class RegisterController {
 
-    public static boolean isUsernameUsed(String username, int userType) throws Exception {
+    public static boolean isUsernameUsed(PlayerBean user, int userType) throws Exception {
         boolean res = false;
         PlayerDAO p = PlayerDAO.getInstance();
+        Player player = null;
         switch (userType){
-            case 1 -> res = p.isPlayerNameUsed(username);
+            case 1 ->   {
+                player = p.getPlayer(user.getUsername());
+                if(player != null){
+                    res = true;
+                }
+            }
             case 2 -> res = true; //res = AdminDAO.isAdmin(username);
             case 3 -> res = true; //res = RefereeDAO.isReferee(username);
             default ->{
@@ -18,10 +26,10 @@ public class RegisterController {
         return res;
     }
 
-    public static void playerRegister(String user, String pw) throws Exception {
+    public static void playerRegister(PlayerBean user) throws Exception {
         try {
             PlayerDAO player = PlayerDAO.getInstance();
-            player.newPlayer(user,pw);
+            player.newPlayer(user.getUsername(),user.getPassword());
         } catch (Exception e) {
             e.printStackTrace();
         }

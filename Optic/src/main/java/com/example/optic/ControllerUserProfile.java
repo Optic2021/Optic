@@ -1,6 +1,7 @@
 package com.example.optic;
 
 import com.example.optic.AppControllers.UserProfileAppController;
+import com.example.optic.bean.PlayerBean;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.Player;
 import javafx.event.ActionEvent;
@@ -42,8 +43,9 @@ public class ControllerUserProfile extends GraphicController{
         this.user.setText(user);
         Player p = null;
         try {
-            PlayerDAO player = PlayerDAO.getInstance();
-            p = player.getPlayer(user);
+            PlayerBean player = new PlayerBean();
+            player.setUsername(user);
+            p = UserProfileAppController.getPlayer(player.getUsername());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -125,6 +127,8 @@ public class ControllerUserProfile extends GraphicController{
             err.setContentText("L'url supera il limite massimo di 200 caratteri: fb -> "+fb.length()+", ig -> "+ig.length());
             err.show();
         }else {
+            //
+            //METTERE LA BEAN
             UserProfileAppController.setInfo(user.getText(), desc, fb, ig);
 
             description.setEditable(false);

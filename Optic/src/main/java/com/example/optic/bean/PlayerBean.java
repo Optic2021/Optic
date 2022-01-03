@@ -22,14 +22,4 @@ public class PlayerBean implements java.io.Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-
-    //metodi di controllo
-    private boolean checkUsername(){
-        boolean bool = true;
-        return bool;
-    }
-    private boolean checkPassword(){
-        boolean bool = true;
-        return bool;
-    }
 }
