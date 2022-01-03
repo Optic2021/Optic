@@ -45,7 +45,7 @@ public class ControllerUserProfile extends GraphicController{
         try {
             PlayerBean player = new PlayerBean();
             player.setUsername(user);
-            p = UserProfileAppController.getPlayer(player.getUsername());
+            p = UserProfileAppController.getPlayer(player);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -113,8 +113,6 @@ public class ControllerUserProfile extends GraphicController{
     }
 
     public void save(){
-        //Informazione da salvare nel dao
-
         String desc = description.getText();
         String fb = urlFacebook.getText();
         String ig = urlInstagram.getText();
@@ -127,9 +125,12 @@ public class ControllerUserProfile extends GraphicController{
             err.setContentText("L'url supera il limite massimo di 200 caratteri: fb -> "+fb.length()+", ig -> "+ig.length());
             err.show();
         }else {
-            //
-            //METTERE LA BEAN
-            UserProfileAppController.setInfo(user.getText(), desc, fb, ig);
+            PlayerBean p = new PlayerBean();
+            p.setUsername(user.getText());
+            p.setDescrizione(desc);
+            p.setFb(fb);
+            p.setIg(ig);
+            UserProfileAppController.setInfo(p);
 
             description.setEditable(false);
             urlFacebook.setEditable(false);

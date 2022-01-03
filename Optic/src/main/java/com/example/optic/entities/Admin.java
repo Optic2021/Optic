@@ -12,11 +12,6 @@ public class Admin {
     public Admin(String username, String password){
         this.username = username;
         this.password = password;
-        this.descrizioneC="";
-        this.nomeC="";
-        this.ig="";
-        this.fb="";
-        this.wa="";
     }
 
     public String getUsername() {

@@ -38,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -168,6 +168,7 @@
       <workItem from="1641132440238" duration="463000" />
       <workItem from="1641132977800" duration="7379000" />
       <workItem from="1641204960761" duration="5789000" />
+      <workItem from="1641223352615" duration="2196000" />
     </task>
     <servers />
   </component>

@@ -1,25 +1,26 @@
 package com.example.optic.AppControllers;
 
+import com.example.optic.bean.PlayerBean;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.Player;
 
 public class UserProfileAppController {
 
-    public static Player getPlayer(String username){
-        Player p = null;
+    public static Player getPlayer(PlayerBean p){
+        Player player = null;
         try {
-            PlayerDAO player = PlayerDAO.getInstance();
-            p = player.getPlayer(username);
+            PlayerDAO dao = PlayerDAO.getInstance();
+            player = dao.getPlayer(p.getUsername());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return p;
+        return player;
     }
 
-    public static void setInfo(String username, String desc, String fb, String ig){
+    public static void setInfo(PlayerBean p){
         try {
             PlayerDAO player = PlayerDAO.getInstance();
-            player.setPlayerInfo(username,desc,fb,ig);
+            player.setPlayerInfo(p.getUsername(),p.getDescrizione(),p.getFb(),p.getIg());
         } catch (Exception e) {
             e.printStackTrace();
         }

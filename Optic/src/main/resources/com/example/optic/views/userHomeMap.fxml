@@ -77,7 +77,7 @@
                                         <Font name="Arial Black" size="14.0" />
                                     </font>
                                     <GridPane.margin>
-                                        <Insets left="9.0" top="2.0" />
+                                        <Insets />
                                     </GridPane.margin>
                                 </Label>
                             </children>
