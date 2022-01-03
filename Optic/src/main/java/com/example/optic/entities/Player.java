@@ -9,10 +9,6 @@ public class Player {
     private String fb;
     private String stato = "nullo";
 
-    public Player(String username){
-        this.username = username;
-    }
-
     public Player(String username, String password){
         this.username = username;
         this.password = password;

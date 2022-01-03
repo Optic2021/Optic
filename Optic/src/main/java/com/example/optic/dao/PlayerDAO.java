@@ -82,7 +82,7 @@ public class PlayerDAO {
 
     public void setPlayerInfo(String user, String desc, String fb, String ig){
         Statement stmt = null;
-        Player p = new Player(user);
+        Player p = new Player(user,"");
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
@@ -115,7 +115,7 @@ public class PlayerDAO {
 
     public Player getPlayer(String user) throws Exception {
         Statement stmt = null;
-        Player p = new Player(user);
+        Player p = new Player(user,"");
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
