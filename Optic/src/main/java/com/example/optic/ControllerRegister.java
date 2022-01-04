@@ -30,7 +30,7 @@ public class ControllerRegister extends GraphicController {
     private TextField addressField;
 
     public void toLogin(ActionEvent e) throws IOException {
-        this.toView("com/example/optic/views/login.fxml");
+        this.toView("views/login.fxml");
         RegisterController.closeConn();
     }
 
@@ -69,7 +69,14 @@ public class ControllerRegister extends GraphicController {
                         view = "views/modPgPage.fxml";
                     }
                 }
-                case 3 -> view = "views/refCampo.fxml";
+                case 3 -> {
+                    res = RegisterController.isUsernameUsed(bean,3);
+                    if (!res) {
+                        System.out.println("Passo in persistenza");
+                        RegisterController.userRegister(bean,3);
+                        view = "views/refCampo.fxml";
+                    }
+                }
                 default -> {
                     res = RegisterController.isUsernameUsed(bean, 1);
                     if (!res) {

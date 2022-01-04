@@ -4,8 +4,11 @@ import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.dao.AdminDAO;
 import com.example.optic.dao.PlayerDAO;
+import com.example.optic.dao.RefereeDAO;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
+import com.example.optic.entities.Referee;
+
 import java.io.IOException;
 
 public class RegisterController {
@@ -29,7 +32,15 @@ public class RegisterController {
                     res = true;
                 }
             }
-            case 3 -> res = true; //res = RefereeDAO.isReferee(username);
+            case 3 -> {
+                RefereeDAO r= RefereeDAO.getInstance();
+                Referee referee=null;
+                referee=r.getReferee(user.getUsername());
+                if(referee != null){
+                    res = true;
+                }
+                //res = true; res = RefereeDAO.isReferee(username);
+            }
             default ->{
 
             }
@@ -49,7 +60,9 @@ public class RegisterController {
                     admin.newAdmin(user.getUsername(),user.getPassword(),user.getVia());
                 }
                 case 3 -> {
-
+                    System.out.println("Scrittura definitiva");
+                    RefereeDAO referee = RefereeDAO.getInstance();
+                    referee.newReferee(user.getUsername(), user.getPassword());
                 }
             }
         }catch (Exception e){

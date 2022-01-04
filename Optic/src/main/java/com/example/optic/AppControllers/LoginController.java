@@ -2,10 +2,14 @@ package com.example.optic.AppControllers;
 
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.RefereeBean;
 import com.example.optic.dao.AdminDAO;
 import com.example.optic.dao.PlayerDAO;
+import com.example.optic.dao.RefereeDAO;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
+import com.example.optic.entities.Referee;
+
 import java.io.IOException;
 
 public class LoginController {
@@ -45,6 +49,23 @@ public class LoginController {
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return res;
+    }
+
+    public static boolean refereeLogin(RefereeBean r)throws Exception{
+        boolean res=false;
+        try{
+            RefereeDAO dao=RefereeDAO.getInstance();
+            Referee ref=dao.getReferee(r.getUsername());
+            if(ref!=null){
+                if(ref.getPassword().equals(r.getPassword())){//controllo se la password è uguale
+                    //password uguale
+                    res = true;
+                }
+            }
+        }catch (Exception e) {
             e.printStackTrace();
         }
         return res;

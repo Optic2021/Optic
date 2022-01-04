@@ -45,7 +45,7 @@ public class RefereeDAO {
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, r.getUsername());
             prepStmt.setString(2, r.getPassword());
-            prepStmt.setString(3, "");
+            prepStmt.setString(3, "cacca");
             prepStmt.executeUpdate();
         } finally {
             try {
@@ -108,16 +108,16 @@ public class RefereeDAO {
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
-                Exception e = new Exception("Referee "+user+" not found");
-                throw e;
-            }
-            //il player deve presente in quanto la label da dove prendo il nome non può essere vuota
-            rs.first();
-            ref.setUsername(rs.getString("Username"));
-            ref.setPassword(rs.getString("Password")); //probabilmente non servirà
+               ref=null;
+            }else {
+                //il player deve presente in quanto la label da dove prendo il nome non può essere vuota
+                rs.first();
+                ref.setUsername(rs.getString("Username"));
+                ref.setPassword(rs.getString("Password")); //probabilmente non servirà
 
-            //chiudo result set
-            rs.close();
+                //chiudo result set
+                rs.close();
+            }
         } finally {
             try {
                 if (stmt != null)
