@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/com/example/optic/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -182,7 +182,8 @@
       <workItem from="1641236072180" duration="396000" />
       <workItem from="1641246793330" duration="6731000" />
       <workItem from="1641253603395" duration="2209000" />
-      <workItem from="1641292905522" duration="10813000" />
+      <workItem from="1641292905522" duration="14117000" />
+      <workItem from="1641310750610" duration="17000" />
     </task>
     <servers />
   </component>

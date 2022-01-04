@@ -4,13 +4,18 @@ import com.example.optic.AppControllers.BookSessionAppController;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Campo;
+import com.example.optic.entities.Event;
 import com.example.optic.entities.ValutazionePlayer;
+import com.mysql.cj.xdevapi.Table;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
@@ -40,15 +45,20 @@ public class ControllerBookSession extends GraphicController {
         this.toView("views/login.fxml");
     }
 
-    public void tableview(ActionEvent e){
-        System.out.println("dragdragdragdragdragdragdrag");
+    public void tableview(MouseEvent e){
+        try {
+            System.out.println("clicked");
+            System.out.println("Accrocco :"+((Node)e.getTarget()).getParent());
+            Node node=((Node)e.getTarget()).getParent();
+            Campo campo=(Campo) table.getSelectionModel().getSelectedItem();
+            System.out.println("Campo :"+campo.getNomec());
+        }
+        catch(Exception z){
+            System.out.println("Errore di I/O "+z);
+        }
     }
-
-    //Debug
-    //Visualizzare provincia e non password
-    //Controllare che effettivamente populate review non buggi niente
-    public void populateReviewTable(String user) {
-        System.out.println("CIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+    
+    public void populateReviewTable(String user){
         PlayerBean player = new PlayerBean();
         player.setUsername(user);
         NomeC.setCellValueFactory(new PropertyValueFactory<>("Nomec"));
