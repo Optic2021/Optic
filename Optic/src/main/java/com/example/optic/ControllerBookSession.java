@@ -57,7 +57,7 @@ public class ControllerBookSession extends GraphicController {
             System.out.println("Errore di I/O "+z);
         }
     }
-    
+    /*
     public void populateReviewTable(String user){
         PlayerBean player = new PlayerBean();
         player.setUsername(user);
@@ -71,5 +71,5 @@ public class ControllerBookSession extends GraphicController {
             table.getItems().add(campo1);
         }
     }
-
+    */
 }
