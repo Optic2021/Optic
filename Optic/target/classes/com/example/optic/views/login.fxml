@@ -109,7 +109,7 @@
                               <Font name="Arial Black" size="16.0" />
                            </font>
                            <VBox.margin>
-                              <Insets />
+                              <Insets top="10.0" />
                            </VBox.margin>
                            <styleClass>
                               <String fx:value="login" />

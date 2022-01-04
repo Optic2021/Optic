@@ -3,6 +3,7 @@ package com.example.optic.AppControllers;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.Player;
+import java.io.IOException;
 
 public class RegisterController {
 
@@ -43,5 +44,15 @@ public class RegisterController {
     public static boolean refereeRegister(String user, String pw){
         boolean bool = true;
         return bool;
+    }
+
+    public static void closeConn() throws IOException {
+        try {
+            PlayerDAO dao = PlayerDAO.getInstance();
+            dao.closeConn();
+        }catch (Exception e){
+            System.out.println("Errore chiusura connessione con il database");
+            e.printStackTrace();
+        }
     }
 }

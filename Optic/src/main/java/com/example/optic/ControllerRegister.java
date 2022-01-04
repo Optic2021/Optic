@@ -2,8 +2,6 @@ package com.example.optic;
 
 import com.example.optic.AppControllers.RegisterController;
 import com.example.optic.bean.PlayerBean;
-import com.example.optic.dao.PlayerDAO;
-import com.example.optic.entities.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -27,6 +25,7 @@ public class ControllerRegister extends GraphicController {
 
     public void toLogin(ActionEvent e) throws IOException {
         this.toView("com/example/optic/views/login.fxml");
+        RegisterController.closeConn();
     }
 
     public void register(ActionEvent e) throws Exception {
@@ -76,6 +75,7 @@ public class ControllerRegister extends GraphicController {
                 Alert err = new Alert(Alert.AlertType.ERROR);
                 err.setContentText("Username già utilizzato");
                 err.show();
+                RegisterController.closeConn();
             }
         }
     }

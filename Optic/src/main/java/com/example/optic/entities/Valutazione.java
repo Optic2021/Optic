@@ -8,6 +8,10 @@ public class Valutazione {
     private String fk_UsernameP2;
     private String fk_UsernameA;
 
+    public Valutazione(){
+
+    }
+
     public int getIdValutazione() {
         return idValutazione;
     }

@@ -2,15 +2,16 @@ package com.example.optic;
 
 import com.example.optic.AppControllers.UserProfileAppController;
 import com.example.optic.bean.PlayerBean;
-import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.Player;
+import com.example.optic.entities.Valutazione;
+import com.example.optic.entities.ValutazionePlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
-
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ControllerUserProfile extends GraphicController{
     @FXML
@@ -37,6 +38,12 @@ public class ControllerUserProfile extends GraphicController{
     private Button salva;
     @FXML
     private Label user;
+    @FXML
+    private TableView reviews;
+    @FXML
+    private TableColumn name;
+    @FXML
+    private TableColumn desc;
 
     @Override
     public void setUserVariables(String user) throws Exception {
@@ -45,6 +52,7 @@ public class ControllerUserProfile extends GraphicController{
         try {
             PlayerBean player = new PlayerBean();
             player.setUsername(user);
+            this.populateReviewTable(user);
             p = UserProfileAppController.getPlayer(player);
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,6 +68,23 @@ public class ControllerUserProfile extends GraphicController{
             }
             this.urlInstagram.setText(p.getIg());;
             this.urlFacebook.setText(p.getFb());;
+        }
+    }
+
+    //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
+    public void populateReviewTable(String user){
+        PlayerBean player = new PlayerBean();
+        player.setUsername(user);
+        name.setCellValueFactory(new PropertyValueFactory<>("user"));
+        desc.setCellValueFactory(new PropertyValueFactory<>("descrizione"));
+       // ArrayList<Valutazione> list = UserProfileAppController.getReviewList(player);
+        boolean list = true;
+        if(list){
+            //ValutazionePlayer val = new ValutazionePlayer(list.get(0).getFk_UsernameP1(),list.get(0).getDescrizione()); //passo chi fa la segnalazione e la descrizione
+            ValutazionePlayer val = new ValutazionePlayer("pippo","giocatore scorretto");
+            reviews.getItems().add(val);
+            ValutazionePlayer val2 = new ValutazionePlayer("marco","Giocatore molto molto molto scorretto!");
+            reviews.getItems().add(val2);
         }
     }
 
@@ -106,10 +131,8 @@ public class ControllerUserProfile extends GraphicController{
         description.setEditable(true);
         urlFacebook.setEditable(true);
         urlInstagram.setEditable(true);
-       // numWhatsapp.setEditable(true);
         modifica.setVisible(true);
         salva.setVisible(true);
-
     }
 
     public void save(){

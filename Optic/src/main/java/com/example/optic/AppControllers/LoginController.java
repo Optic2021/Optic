@@ -3,13 +3,13 @@ package com.example.optic.AppControllers;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.Player;
-import javafx.scene.control.Alert;
+import java.io.IOException;
 
 public class LoginController {
 
     public static boolean playerLogin(PlayerBean p) throws Exception {
         boolean res = false;
-        //devo controllare lo username e la password
+        //controllo username e password
         try {
             PlayerDAO dao = PlayerDAO.getInstance();
             Player user = dao.getPlayer(p.getUsername());
@@ -35,5 +35,15 @@ public class LoginController {
     public static boolean refereeLogin(String user, String pw){
         boolean bool = true;
         return bool;
+    }
+
+    public static void closeConn() throws IOException {
+        try {
+            PlayerDAO dao = PlayerDAO.getInstance();
+            dao.closeConn();
+        }catch (Exception e){
+            System.out.println("Errore chiusura connessione con il database");
+            e.printStackTrace();
+        }
     }
 }

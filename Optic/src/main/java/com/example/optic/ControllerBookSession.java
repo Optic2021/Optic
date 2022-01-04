@@ -1,5 +1,6 @@
 package com.example.optic;
 
+import com.example.optic.AppControllers.BookSessionAppController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -21,6 +22,7 @@ public class ControllerBookSession extends GraphicController {
         this.toView("views/userHomeMap.fxml");
     }
     public void toLogin(ActionEvent e) throws IOException {
+        BookSessionAppController.closeConn();
         this.toView("views/login.fxml");
     }
 }

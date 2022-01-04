@@ -54,6 +54,7 @@ public class ControllerLogin extends GraphicController {
                 Alert err = new Alert(Alert.AlertType.ERROR);
                 err.setContentText("Credenziali errate");
                 err.show();
+                LoginController.closeConn();
             }
         }
     }
