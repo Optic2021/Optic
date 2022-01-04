@@ -77,11 +77,25 @@
 .text-yellow{
     -fx-text-fill: rgb(229,190,51);
 }
-
+.list-view .list-cell{
+    -fx-background-color: rgb(110,110,110);
+    -fx-pref-height: 40;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-text-fill: rgb(28,28,28);
+    -fx-font-size: 14;
+}
+.list-view .list-cell:odd{
+    -fx-background-color: GREY;
+    -fx-pref-height: 40;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-text-fill: rgb(28,28,28);
+    -fx-font-size: 14;
+}
 .table-view .column-header-background .filler{
     -fx-background-color: GREY;
 }
-
 .table-view .column-header-background .label{
     -fx-background-color: GREY;
     -fx-text-fill: rgb(28,28,28);
@@ -121,7 +135,7 @@
 .textClogo .label{
     -fx-text-fill: rgb(229,190,51);
     -fx-font-family: "Arial Black";
-    /*-fx-font-style: "Regular";*/
+    -fx-font-style: "Regular";
     -fx-font-size: 15px;
 }
 .textTitoli {

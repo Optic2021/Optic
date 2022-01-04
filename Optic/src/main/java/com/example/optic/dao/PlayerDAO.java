@@ -33,7 +33,6 @@ public class PlayerDAO {
 
     public void newPlayer(String user, String password) throws Exception {
         Statement stmt = null;
-        int ret;
         Player p = new Player(user,password);
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
@@ -133,6 +132,12 @@ public class PlayerDAO {
         return instance;
     }
 
+    //ritorno l'ogetto Connection
+    public Connection getConnection(){
+        return this.conn;
+    }
+
+    //apro la connessione
     public void getConn(){
         try{
             Class.forName(DRIVER_CLASS_NAME);

@@ -18,7 +18,7 @@ public class Optic extends Application {
     @Override
     public void start(Stage stage) throws Exception{
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
         scene.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override

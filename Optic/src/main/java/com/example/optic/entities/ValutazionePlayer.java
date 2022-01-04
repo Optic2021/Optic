@@ -5,7 +5,7 @@ public class ValutazionePlayer {
 
     public ValutazionePlayer(String user, String descrizione){
         this.user = user;
-        this.descrizione = descrizione;
+        this.descrizione = user+" :\n"+descrizione;
     }
 
     public String getUser() {

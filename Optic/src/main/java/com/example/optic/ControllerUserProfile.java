@@ -3,6 +3,7 @@ package com.example.optic;
 import com.example.optic.AppControllers.UserProfileAppController;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.entities.Player;
+import com.example.optic.entities.Storico;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;
 import javafx.event.ActionEvent;
@@ -11,7 +12,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ControllerUserProfile extends GraphicController{
     @FXML
@@ -27,6 +31,8 @@ public class ControllerUserProfile extends GraphicController{
     @FXML
     private Label title;
     @FXML
+    private Label nVal;
+    @FXML
     private TextArea description;
     @FXML
     private TextField urlFacebook;
@@ -39,11 +45,13 @@ public class ControllerUserProfile extends GraphicController{
     @FXML
     private Label user;
     @FXML
-    private TableView reviews;
+    private ListView reviews;
     @FXML
-    private TableColumn name;
+    private TableView partite;
     @FXML
-    private TableColumn desc;
+    private TableColumn date;
+    @FXML
+    private TableColumn playground;
 
     @Override
     public void setUserVariables(String user) throws Exception {
@@ -52,7 +60,8 @@ public class ControllerUserProfile extends GraphicController{
         try {
             PlayerBean player = new PlayerBean();
             player.setUsername(user);
-            this.populateReviewTable(user);
+            this.populateReviewList(user);
+            this.populateGamesTable(user);
             p = UserProfileAppController.getPlayer(player);
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,8 +69,6 @@ public class ControllerUserProfile extends GraphicController{
         if(p != null) {
             //descrizione
             this.description.setText(p.getDescrizione());
-            //coloro le stele in base alla valutazione
-            this.setStars(p.getValutazione());
             //se il giocatore è valutato positivamente, nome giallo
             if(p.getStato().equals("positivo")){
                 this.title.setVisible(true);
@@ -72,19 +79,41 @@ public class ControllerUserProfile extends GraphicController{
     }
 
     //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
-    public void populateReviewTable(String user){
+    public void populateReviewList(String user) throws IOException {
+        PlayerBean player = new PlayerBean();
+        int numVal = 0;
+        int mediaVal = 0;
+        int stars = 0;
+        player.setUsername(user);
+        ArrayList<Valutazione> list = UserProfileAppController.getReviewList(player);
+        for(int i = 0; i < list.size(); i++) {
+            ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFk_UsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
+            numVal++;
+            mediaVal += list.get(i).getStelle();
+            reviews.getItems().add(val.getDescrizione());
+        }
+        stars = mediaVal/numVal;
+        if(stars > 0){
+            //coloro le stelle in base alla valutazione
+            this.setStars(stars);
+        }
+        nVal.setText(Integer.toString(numVal));
+    }
+
+    //popolo la tabella con lo storico delle partite del player DA FINIRE!!!!!
+    public void populateGamesTable(String user){
         PlayerBean player = new PlayerBean();
         player.setUsername(user);
-        name.setCellValueFactory(new PropertyValueFactory<>("user"));
-        desc.setCellValueFactory(new PropertyValueFactory<>("descrizione"));
-       // ArrayList<Valutazione> list = UserProfileAppController.getReviewList(player);
+        date.setCellValueFactory(new PropertyValueFactory<>("data"));
+        playground.setCellValueFactory(new PropertyValueFactory<>("campo"));
+        //ArrayList<Prenotazione> list = UserProfileAppController.getReviewList(player);
         boolean list = true;
         if(list){
+            SimpleDateFormat dataGiornata = new SimpleDateFormat("dd-mm-yyyy");
+            Date data = new Date(2022,1,10);
             //ValutazionePlayer val = new ValutazionePlayer(list.get(0).getFk_UsernameP1(),list.get(0).getDescrizione()); //passo chi fa la segnalazione e la descrizione
-            ValutazionePlayer val = new ValutazionePlayer("pippo","giocatore scorretto");
-            reviews.getItems().add(val);
-            ValutazionePlayer val2 = new ValutazionePlayer("marco","Giocatore molto molto molto scorretto!");
-            reviews.getItems().add(val2);
+            Storico partita = new Storico("11-2-2022","SoftAir River");
+            partite.getItems().add(partita);
         }
     }
 

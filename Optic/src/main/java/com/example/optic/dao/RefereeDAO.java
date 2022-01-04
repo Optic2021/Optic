@@ -46,6 +46,7 @@ public class RefereeDAO {
             prepStmt.setString(1, r.getUsername());
             prepStmt.setString(2, r.getPassword());
             prepStmt.setString(3, "");
+            prepStmt.executeUpdate();
         } finally {
             try {
                 if (stmt != null)

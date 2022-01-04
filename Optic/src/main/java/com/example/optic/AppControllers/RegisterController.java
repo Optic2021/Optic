@@ -1,24 +1,34 @@
 package com.example.optic.AppControllers;
 
 import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.UserBean;
+import com.example.optic.dao.AdminDAO;
 import com.example.optic.dao.PlayerDAO;
+import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
 import java.io.IOException;
 
 public class RegisterController {
 
-    public static boolean isUsernameUsed(PlayerBean user, int userType) throws Exception {
+    public static boolean isUsernameUsed(UserBean user, int userType) throws Exception {
         boolean res = false;
-        PlayerDAO p = PlayerDAO.getInstance();
-        Player player = null;
         switch (userType){
             case 1 ->   {
+                PlayerDAO p = PlayerDAO.getInstance();
+                Player player = null;
                 player = p.getPlayer(user.getUsername());
                 if(player != null){
                     res = true;
                 }
             }
-            case 2 -> res = true; //res = AdminDAO.isAdmin(username);
+            case 2 -> {
+                AdminDAO a = AdminDAO.getInstance();
+                Admin admin = null;
+                admin = a.getAdmin(user.getUsername());
+                if(admin != null) {
+                    res = true;
+                }
+            }
             case 3 -> res = true; //res = RefereeDAO.isReferee(username);
             default ->{
 
@@ -27,23 +37,24 @@ public class RegisterController {
         return res;
     }
 
-    public static void playerRegister(PlayerBean user) throws Exception {
+    public static void userRegister(UserBean user,int userType) throws Exception {
         try {
-            PlayerDAO player = PlayerDAO.getInstance();
-            player.newPlayer(user.getUsername(),user.getPassword());
-        } catch (Exception e) {
+            switch (userType) {
+                case 1 -> {
+                    PlayerDAO player = PlayerDAO.getInstance();
+                    player.newPlayer(user.getUsername(), user.getPassword());
+                }
+                case 2 -> {
+                    AdminDAO admin = AdminDAO.getInstance();
+                    admin.newAdmin(user.getUsername(),user.getPassword(),user.getVia());
+                }
+                case 3 -> {
+
+                }
+            }
+        }catch (Exception e){
             e.printStackTrace();
         }
-    }
-
-    public static boolean adminRegister(String user, String pw){
-        boolean bool = true;
-        return bool;
-    }
-
-    public static boolean refereeRegister(String user, String pw){
-        boolean bool = true;
-        return bool;
     }
 
     public static void closeConn() throws IOException {

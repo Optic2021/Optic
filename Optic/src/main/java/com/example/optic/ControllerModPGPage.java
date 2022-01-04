@@ -1,5 +1,6 @@
 package com.example.optic;
 
+import com.example.optic.AppControllers.ModPGPageAppController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -49,6 +50,7 @@ public class ControllerModPGPage extends GraphicController {
     private TextField ref;
 
     public void toLogin(ActionEvent e) throws IOException {
+        ModPGPageAppController.closeConn();
         this.toView("views/login.fxml");
     }
 

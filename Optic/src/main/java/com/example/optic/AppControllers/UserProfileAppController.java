@@ -2,9 +2,11 @@ package com.example.optic.AppControllers;
 
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.dao.PlayerDAO;
+import com.example.optic.dao.ValutazioneDAO;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class UserProfileAppController {
@@ -20,9 +22,16 @@ public class UserProfileAppController {
         return player;
     }
 
-    public static ArrayList<Valutazione> getReviewList(PlayerBean p){
-        ArrayList<Valutazione> list = null;
-
+    public static ArrayList<Valutazione> getReviewList(PlayerBean p) throws IOException {
+        ArrayList<Valutazione> list = new ArrayList<Valutazione>();
+        //utilizzo la dao del player dove è creata la connessisone
+        try {
+            PlayerDAO daoP = PlayerDAO.getInstance();
+            ValutazioneDAO dao = new ValutazioneDAO(daoP);
+            list = dao.getReviewList(p.getUsername());
+        }catch (IOException e){
+           e.printStackTrace();
+        }
         return list;
     }
 

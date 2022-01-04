@@ -8,11 +8,17 @@ public class Admin {
     private String ig;
     private String fb;
     private String wa;
-    //private String provincia;
+    private String via;
 
     public Admin(String username, String password){
         this.username = username;
         this.password = password;
+    }
+
+    public Admin(String username, String password, String via){
+        this.username = username;
+        this.password = password;
+        this.via = via;
     }
 
     public String getUsername() {
@@ -71,11 +77,11 @@ public class Admin {
         this.wa = wa;
     }
 
-    /*public String getProvincia() {
-        return provincia;
+    public String getVia() {
+        return via;
     }
 
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
-    }*/
+    public void setVia(String via) {
+        this.via = via;
+    }
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ffc5747-c8a5-44b2-b5ad-ee4802834451" name="Changes" comment="" />
+    <list default="true" id="4efd8a52-79f6-4256-8c10-27adaa747608" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,58 +13,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="Tag Library Descriptor" />
-        <option value="module-info" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="20MjY8AxBBFrGj3u3LuRQKLbv4L" />
+  <component name="ProjectId" id="23Et2EwTsmd1e919rE5jFFpTBIL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/driver/mysql-connector-java-8.0.27.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.3816092" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\uazap\Desktop\Optic\target\classes\com\example\optic\views" />
-      <recent name="C:\Users\uazap\Desktop\Optic\src\main\resources\com\example\optic\views" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\src\main\resources" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\simon\IdeaProjects\Optic\src\main\resources\com\example\optic\views" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic\views" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\src\main\resources" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\src\main\resources\com\example\optic" />
-      <recent name="C:\Users\simon\IdeaProjects\Optic\src\main\java\com\example\optic\dao" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="Optic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -72,7 +37,7 @@
       <module name="Optic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.optic.GraphicControllers.*" />
+          <option name="PATTERN" value="com.example.optic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,119 +54,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3ffc5747-c8a5-44b2-b5ad-ee4802834451" name="Changes" comment="" />
-      <created>1635861401622</created>
+      <changelist id="4efd8a52-79f6-4256-8c10-27adaa747608" name="Changes" comment="" />
+      <created>1641310868642</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1635861401622</updated>
-      <workItem from="1635861402946" duration="802000" />
-      <workItem from="1635862258756" duration="5928000" />
-      <workItem from="1635937492968" duration="3244000" />
-      <workItem from="1636043285544" duration="1803000" />
-      <workItem from="1636371767150" duration="170000" />
-      <workItem from="1636379366172" duration="365000" />
-      <workItem from="1636383274404" duration="971000" />
-      <workItem from="1636544286155" duration="1442000" />
-      <workItem from="1636713672798" duration="6779000" />
-      <workItem from="1636988458706" duration="3479000" />
-      <workItem from="1637002661878" duration="17000" />
-      <workItem from="1637003963491" duration="748000" />
-      <workItem from="1637425726736" duration="13000" />
-      <workItem from="1637427050611" duration="1274000" />
-      <workItem from="1637435586624" duration="773000" />
-      <workItem from="1637518427142" duration="692000" />
-      <workItem from="1637605942686" duration="996000" />
-      <workItem from="1637609599169" duration="897000" />
-      <workItem from="1637855707367" duration="1636000" />
-      <workItem from="1638023913069" duration="3491000" />
-      <workItem from="1638031139471" duration="235000" />
-      <workItem from="1638031509623" duration="14000" />
-      <workItem from="1638198568716" duration="3293000" />
-      <workItem from="1638203005962" duration="1475000" />
-      <workItem from="1638354411614" duration="2599000" />
-      <workItem from="1638358524203" duration="3100000" />
-      <workItem from="1638371360814" duration="18000" />
-      <workItem from="1638375604722" duration="2422000" />
-      <workItem from="1638380570400" duration="3039000" />
-      <workItem from="1638437187794" duration="35000" />
-      <workItem from="1638545290068" duration="248000" />
-      <workItem from="1638630888230" duration="1639000" />
-      <workItem from="1638867239814" duration="648000" />
-      <workItem from="1639232415721" duration="1090000" />
-      <workItem from="1639233511618" duration="17000" />
-      <workItem from="1639233600031" duration="5344000" />
-      <workItem from="1639389615298" duration="135000" />
-      <workItem from="1639389789045" duration="148000" />
-      <workItem from="1639393969429" duration="217000" />
-      <workItem from="1639394279857" duration="49000" />
-      <workItem from="1639394385951" duration="13000" />
-      <workItem from="1639394570588" duration="92000" />
-      <workItem from="1639395997488" duration="763000" />
-      <workItem from="1639406465633" duration="9117000" />
-      <workItem from="1639473328998" duration="4560000" />
-      <workItem from="1639478019587" duration="5182000" />
-      <workItem from="1639489823430" duration="1495000" />
-      <workItem from="1639491338079" duration="316000" />
-      <workItem from="1639493525830" duration="8029000" />
-      <workItem from="1639502222632" duration="60000" />
-      <workItem from="1639518247790" duration="1751000" />
-      <workItem from="1639564469384" duration="4184000" />
-      <workItem from="1639569955862" duration="2130000" />
-      <workItem from="1639582708956" duration="1032000" />
-      <workItem from="1639991045022" duration="1611000" />
-      <workItem from="1640013531719" duration="1426000" />
-      <workItem from="1640085175037" duration="4654000" />
-      <workItem from="1640095932190" duration="5808000" />
-      <workItem from="1640105639148" duration="5449000" />
-      <workItem from="1640111528446" duration="234000" />
-      <workItem from="1640111789288" duration="749000" />
-      <workItem from="1640126793432" duration="311000" />
-      <workItem from="1640697690938" duration="3437000" />
-      <workItem from="1640706233079" duration="231000" />
-      <workItem from="1640706618927" duration="15000" />
-      <workItem from="1640706647360" duration="2181000" />
-      <workItem from="1640708987107" duration="1044000" />
-      <workItem from="1640710553416" duration="1104000" />
-      <workItem from="1640777378799" duration="16129000" />
-      <workItem from="1640855464288" duration="585000" />
-      <workItem from="1640856270062" duration="397000" />
-      <workItem from="1640856688677" duration="7808000" />
-      <workItem from="1640872056654" duration="379000" />
-      <workItem from="1640872818154" duration="7975000" />
-      <workItem from="1640880886192" duration="1506000" />
-      <workItem from="1640901512581" duration="82000" />
-      <workItem from="1640970532482" duration="764000" />
-      <workItem from="1641128368164" duration="3968000" />
-      <workItem from="1641132440238" duration="463000" />
-      <workItem from="1641132977800" duration="7379000" />
-      <workItem from="1641204960761" duration="5789000" />
-      <workItem from="1641223352615" duration="2196000" />
-      <workItem from="1641227089165" duration="850000" />
-      <workItem from="1641229137819" duration="885000" />
-      <workItem from="1641231090314" duration="4670000" />
-      <workItem from="1641236072180" duration="396000" />
-      <workItem from="1641246793330" duration="6731000" />
-      <workItem from="1641253603395" duration="2209000" />
-      <workItem from="1641292905522" duration="14117000" />
-      <workItem from="1641310750610" duration="152000" />
+      <updated>1641310868642</updated>
+      <workItem from="1641310870688" duration="33000" />
+      <workItem from="1641310951395" duration="2735000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

@@ -1,7 +1,9 @@
 package com.example.optic;
 
 import com.example.optic.AppControllers.RegisterController;
+import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.UserBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -22,6 +24,10 @@ public class ControllerRegister extends GraphicController {
     private RadioButton refereeRB;
     @FXML
     private RadioButton adminRB;
+    @FXML
+    private Label addressLabel;
+    @FXML
+    private TextField addressField;
 
     public void toLogin(ActionEvent e) throws IOException {
         this.toView("com/example/optic/views/login.fxml");
@@ -51,16 +57,23 @@ public class ControllerRegister extends GraphicController {
             refereeRB.setUserData(3);
             int prof = (int) profile.getSelectedToggle().getUserData();
             String view = "views/register.fxml";
+            UserBean bean = new UserBean();
+            bean.setUsername(name);
+            bean.setPassword(pw);
             switch (prof) {
-                case 2 -> view = "views/modPgPage.fxml";
+                case 2 -> {
+                    bean.setVia(addressField.getText());
+                    res = RegisterController.isUsernameUsed(bean,2);
+                    if (!res) {
+                        RegisterController.userRegister(bean,2);
+                        view = "views/modPgPage.fxml";
+                    }
+                }
                 case 3 -> view = "views/refCampo.fxml";
                 default -> {
-                    PlayerBean p = new PlayerBean();
-                    p.setUsername(name);
-                    p.setPassword(pw);
-                    res = RegisterController.isUsernameUsed(p, 1);
+                    res = RegisterController.isUsernameUsed(bean, 1);
                     if (!res) {
-                        RegisterController.playerRegister(p);
+                        RegisterController.userRegister(bean,1);
                         view = "views/userHomeMap.fxml";
                     }
                 }
@@ -78,5 +91,15 @@ public class ControllerRegister extends GraphicController {
                 RegisterController.closeConn();
             }
         }
+    }
+
+    public void showAddress(){
+        addressField.setVisible(true);
+        addressLabel.setVisible(true);
+    }
+
+    public void hideAddress(){
+        addressField.setVisible(false);
+        addressLabel.setVisible(false);
     }
 }

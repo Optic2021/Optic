@@ -2,14 +2,18 @@ package com.example.optic.entities;
 
 public class Valutazione {
     private int idValutazione;
-    private String Descrizione;
-    private int Stelle;
+    private String descrizione;
+    private int stelle;
     private String fk_UsernameP1;
     private String fk_UsernameP2;
     private String fk_UsernameA;
 
-    public Valutazione(){
-
+    //costruttore per recensione da utente a utente
+    public Valutazione(String descrizione, String recensore, String recensito, int stelle){
+        this.descrizione = descrizione;
+        this.fk_UsernameP1 = recensore;
+        this.fk_UsernameP2 = recensito;
+        this.stelle = stelle;
     }
 
     public int getIdValutazione() {
@@ -21,19 +25,19 @@ public class Valutazione {
     }
 
     public String getDescrizione() {
-        return Descrizione;
+        return descrizione;
     }
 
     public void setDescrizione(String descrizione) {
-        Descrizione = descrizione;
+        descrizione = descrizione;
     }
 
     public int getStelle() {
-        return Stelle;
+        return stelle;
     }
 
     public void setStelle(int stelle) {
-        Stelle = stelle;
+        stelle = stelle;
     }
 
     public String getFk_UsernameP1() {

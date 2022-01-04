@@ -1,10 +1,6 @@
 package com.example.optic.dao;
 
 import com.example.optic.entities.Admin;
-import com.example.optic.entities.Player;
-import com.example.optic.entities.Referee;
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -35,16 +31,15 @@ public class AdminDAO {
         }
     }
 
-    public static void newAdmin(String username,String password) throws Exception {
+    public void newAdmin(String username,String password,String via) throws Exception {
         Statement stmt = null;
-        int ret;
-        Admin admin = new Admin(username, password);
+        Admin admin = new Admin(username, password, via);
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
             stmt = instance.conn.createStatement();
-            String sql = "INSERT INTO Admin VALUES(?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO admin VALUES(?,?,?,?,?,?,?,?)";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, admin.getUsername());
             prepStmt.setString(2, admin.getPassword());
@@ -53,17 +48,13 @@ public class AdminDAO {
             prepStmt.setString(5, admin.getWa());
             prepStmt.setString(6, admin.getDescrizioneC());
             prepStmt.setString(7, admin.getNomeC());
+            prepStmt.setString(8, admin.getVia());
+            prepStmt.executeUpdate();
         } finally {
             try {
                 if (stmt != null)
                     stmt.close();
             } catch (SQLException se2) {
-            }
-            try {
-                if (instance.conn != null)
-                    instance.conn.close();
-            } catch (SQLException se) {
-                se.printStackTrace();
             }
         }
     }
@@ -72,10 +63,10 @@ public class AdminDAO {
         //qui possiamo dividere i due tipi di update
     }
 
-    public static void setInfoPg(String user,String instagram,String facebook,String whatsapp,String DescrizioneC,String NomeC) throws SQLException {
+    public static void setInfoPg(String user,String instagram,String facebook,String whatsapp,String DescrizioneC,String NomeC, String via) throws SQLException {
         Statement stmt = null;
         int ret;
-        Admin a= new Admin(user,"");
+        Admin a = new Admin(user,"", via);
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
@@ -94,19 +85,14 @@ public class AdminDAO {
             try {
                 if (stmt != null)
                     stmt.close();
-            } catch (SQLException se2) {
-            }
-            try {
-                if (instance.conn != null)
-                    instance.conn.close();
-            } catch (SQLException se) {
-                se.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
 
     }
 
-    public static Admin getAdmin(String user) throws Exception {
+    public Admin getAdmin(String user) throws Exception {
         Statement stmt = null;
         Admin admin = new Admin(user,"");
         try{
@@ -114,7 +100,7 @@ public class AdminDAO {
                 instance.getConn();
             }
             stmt = instance.conn.createStatement();
-            String sql = "SELECT * FROM Admin WHERE Username=?";
+            String sql = "SELECT * FROM admin WHERE Username=?";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,admin.getUsername());
             ResultSet rs = prepStmt.executeQuery();
@@ -129,6 +115,7 @@ public class AdminDAO {
                 admin.setWa(rs.getString("Whatsapp"));
                 admin.setDescrizioneC(rs.getString("DescrizioneC"));
                 admin.setNomeC(rs.getString("NomeC"));
+                admin.setVia(rs.getString("Via"));
 
                 //chiudo result set
                 rs.close();
@@ -137,12 +124,6 @@ public class AdminDAO {
             try {
                 if (stmt != null)
                     stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (instance.conn != null)
-                    instance.conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -161,6 +142,7 @@ public class AdminDAO {
         try{
             Class.forName(DRIVER_CLASS_NAME);
             instance.conn = DriverManager.getConnection(DB_URL, USER, PW);
+            System.out.println("Connessione al db effettuata");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -168,8 +150,10 @@ public class AdminDAO {
 
     public void closeConn(){
         try{
-            if (instance.conn != null)
+            if (instance.conn != null) {
                 instance.conn.close();
+                System.out.println("Connessione al db chiusa");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -1,7 +1,9 @@
 package com.example.optic;
 
 import com.example.optic.AppControllers.LoginController;
+import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
+import com.example.optic.dao.AdminDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -37,7 +39,13 @@ public class ControllerLogin extends GraphicController {
             int prof = (int) profileL.getSelectedToggle().getUserData();
             String view;
             switch (prof) {
-                case 2 -> view = "views/modPgPage.fxml";
+                case 2 -> {
+                    AdminBean a = new AdminBean();
+                    a.setUsername(name);
+                    a.setPassword(pw);
+                    res = LoginController.adminLogin(a);
+                    view = "views/modPgPage.fxml";
+                }
                 case 3 -> view = "views/refCampo.fxml";
                 default -> {
                     PlayerBean p = new PlayerBean();
