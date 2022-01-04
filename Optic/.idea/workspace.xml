@@ -16,6 +16,7 @@
         <option value="CSS File" />
         <option value="Tag Library Descriptor" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -34,13 +35,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="F:/Studio/Universita/ISPW/WorkingCopy/trunk/Optic" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3816092" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -169,8 +174,12 @@
       <workItem from="1641132977800" duration="7379000" />
       <workItem from="1641204960761" duration="5789000" />
       <workItem from="1641223352615" duration="2196000" />
-      <workItem from="1641229000088" duration="1643000" />
-      <workItem from="1641233781789" duration="524000" />
+      <workItem from="1641227089165" duration="850000" />
+      <workItem from="1641229137819" duration="885000" />
+      <workItem from="1641231090314" duration="4670000" />
+      <workItem from="1641236072180" duration="396000" />
+      <workItem from="1641246793330" duration="6731000" />
+      <workItem from="1641253603395" duration="2209000" />
     </task>
     <servers />
   </component>
