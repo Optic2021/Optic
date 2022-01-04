@@ -15,8 +15,8 @@
       <list>
         <option value="CSS File" />
         <option value="Tag Library Descriptor" />
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="F:/Studio/Universita/ISPW/WorkingCopy/trunk/Optic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/com/example/optic/views" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -52,6 +52,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\uazap\Desktop\Optic\target\classes\com\example\optic\views" />
+      <recent name="C:\Users\uazap\Desktop\Optic\src\main\resources\com\example\optic\views" />
       <recent name="C:\Users\simon\IdeaProjects\Optic\src\main\resources" />
       <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic" />
       <recent name="C:\Users\simon\IdeaProjects\Optic\target\classes\com\example\optic\views" />
@@ -180,11 +182,22 @@
       <workItem from="1641236072180" duration="396000" />
       <workItem from="1641246793330" duration="6731000" />
       <workItem from="1641253603395" duration="2209000" />
+      <workItem from="1641292905522" duration="10813000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -8,6 +8,7 @@ public class Admin {
     private String ig;
     private String fb;
     private String wa;
+    //private String provincia;
 
     public Admin(String username, String password){
         this.username = username;
@@ -69,4 +70,12 @@ public class Admin {
     public void setWa(String wa) {
         this.wa = wa;
     }
+
+    /*public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
+    }*/
 }
