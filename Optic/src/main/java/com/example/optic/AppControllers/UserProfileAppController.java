@@ -28,7 +28,7 @@ public class UserProfileAppController {
         try {
             PlayerDAO daoP = PlayerDAO.getInstance();
             ValutazioneDAO dao = new ValutazioneDAO(daoP);
-            list = dao.getReviewList(p.getUsername());
+            list = dao.getPlayerReviewList(p.getUsername());
         }catch (IOException e){
            e.printStackTrace();
         }

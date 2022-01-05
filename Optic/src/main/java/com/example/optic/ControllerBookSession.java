@@ -3,7 +3,7 @@ package com.example.optic;
 import com.example.optic.AppControllers.BookSessionAppController;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.entities.Admin;
-import com.example.optic.entities.Campo;
+//import com.example.optic.entities.Campo;
 import com.example.optic.entities.Event;
 import com.example.optic.entities.ValutazionePlayer;
 import com.mysql.cj.xdevapi.Table;
@@ -32,7 +32,7 @@ public class ControllerBookSession extends GraphicController {
     @Override
     public void setUserVariables(String user){
         this.user.setText(user);
-        populateReviewTable(user);
+       // populateReviewTable(user);
     }
     public void toProfile(ActionEvent e) throws Exception {
         this.toView("views/userProfile.fxml",user.getText());
@@ -45,7 +45,7 @@ public class ControllerBookSession extends GraphicController {
         this.toView("views/login.fxml");
     }
 
-    public void tableview(MouseEvent e){
+    /*public void tableview(MouseEvent e){
         try {
             System.out.println("clicked");
             System.out.println("Accrocco :"+((Node)e.getTarget()).getParent());
@@ -70,5 +70,5 @@ public class ControllerBookSession extends GraphicController {
             Campo campo1 = new Campo("Thule softair", "Somebody once told me");
             table.getItems().add(campo1);
         }
-    }
+    }*/
 }

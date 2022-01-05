@@ -216,7 +216,10 @@
                               </ListView>
                            </center>
                            <top>
-                              <Label prefHeight="30.0" styleClass="title" text="Recensioni" BorderPane.alignment="CENTER" />
+                              <Label prefHeight="30.0" styleClass="text-black" text="Recensioni" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Black" size="24.0" />
+                                 </font></Label>
                            </top>
                                 </BorderPane>
                             </bottom>

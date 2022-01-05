@@ -27,6 +27,7 @@ public class RefereeDAO {
             this.PW = prop.getProperty("PW");
             this.DB_URL = prop.getProperty("DB_URL");
             this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
+            this.getConn();
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -45,7 +46,7 @@ public class RefereeDAO {
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, r.getUsername());
             prepStmt.setString(2, r.getPassword());
-            prepStmt.setString(3, "cacca");
+            prepStmt.setString(3, "");
             prepStmt.executeUpdate();
         } finally {
             try {
@@ -95,13 +96,10 @@ public class RefereeDAO {
     }
 
     //chiede l aggiunta di una catch clause
-    public Referee getReferee(String user)throws Exception{
+    public static Referee getReferee(String user)throws Exception{
         Statement stmt = null;
         Referee ref = new Referee(user,"");
         try{
-            if(instance.conn == null || instance.conn.isClosed()) {
-                instance.getConn();
-            }
             stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM referee WHERE Username=?";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
@@ -114,7 +112,7 @@ public class RefereeDAO {
                 rs.first();
                 ref.setUsername(rs.getString("Username"));
                 ref.setPassword(rs.getString("Password")); //probabilmente non servirà
-
+                ref.setAdminCampo(rs.getString("fk_UsernameA1"));
                 //chiudo result set
                 rs.close();
             }
@@ -122,12 +120,6 @@ public class RefereeDAO {
             try {
                 if (stmt != null)
                     stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (instance.conn != null)
-                    instance.conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

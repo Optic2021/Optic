@@ -1,6 +1,8 @@
 package com.example.optic.dao;
 
 import com.example.optic.entities.Admin;
+import com.example.optic.entities.Referee;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -63,10 +65,10 @@ public class AdminDAO {
         //qui possiamo dividere i due tipi di update
     }
 
-    public static void setInfoPg(String user,String instagram,String facebook,String whatsapp,String DescrizioneC,String NomeC, String via) throws SQLException {
+    public static void setInfoPg(String user,String instagram,String facebook,String whatsapp,String DescrizioneC) throws SQLException {
         Statement stmt = null;
         int ret;
-        Admin a = new Admin(user,"", via);
+        Admin a = new Admin(user,"");
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
@@ -131,11 +133,116 @@ public class AdminDAO {
         return admin;
     }
 
+    //recupero l'arbitro utilizzando il nome dell'admin
+    public static Referee getRefereeFromAdmin(String user)throws Exception{
+        Statement stmt = null;
+        Referee ref = null;
+        try{
+            stmt = instance.conn.createStatement();
+            String sql = "SELECT * FROM referee WHERE fk_UsernameA1=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt.setString(1,user);
+            ResultSet rs = prepStmt.executeQuery();
+            if (!rs.first()){ // rs empty
+                ref=null;
+            }else {
+                rs.first();
+                String name = rs.getString("Username");
+                String pw = rs.getString("Password");
+                String admin = rs.getString("fk_UsernameA1");
+                ref = new Referee(name,pw,admin);
+                //chiudo result set
+                rs.close();
+            }
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return ref;
+    }
+
+    //recupero l'arbitro utilizzando il nome dello stesso
+    public static Referee getReferee(String user)throws Exception{
+        Statement stmt = null;
+        Referee ref = null;
+        try{
+            stmt = instance.conn.createStatement();
+            String sql = "SELECT * FROM referee WHERE Username=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt.setString(1,user);
+            ResultSet rs = prepStmt.executeQuery();
+            if (!rs.first()){ // rs empty
+                ref=null;
+            }else {
+                rs.first();
+                String name = rs.getString("Username");
+                String pw = rs.getString("Password");
+                String admin = rs.getString("fk_UsernameA1");
+                ref = new Referee(name,pw,admin);
+                //chiudo result set
+                rs.close();
+            }
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return ref;
+    }
+
+    public void setReferee(String admin, String ref) throws SQLException {
+        Statement stmt = null;
+        try{
+            stmt = instance.conn.createStatement();
+            String sql = "UPDATE referee SET fk_UsernameA1=? WHERE Username=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt.setString(1,admin);
+            prepStmt.setString(2,ref);
+            prepStmt.executeUpdate();
+            System.out.println(admin+" "+ref);
+        }catch(SQLException e){
+            e.printStackTrace();
+        }finally{
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void freeReferee(String username) throws SQLException{
+        Statement stmt = null;
+        try{
+            stmt = instance.conn.createStatement();
+            String sql = "UPDATE referee SET fk_UsernameA1=? WHERE Username=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt.setNull(1, Types.NULL);
+            prepStmt.setString(2,username);
+            prepStmt.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
     public static AdminDAO getInstance() throws IOException {
         if(AdminDAO.instance == null){
             AdminDAO.instance = new AdminDAO();
         }
         return instance;
+    }
+
+    //ritorno l'ogetto Connection
+    public Connection getConnection(){
+        return this.conn;
     }
 
     public void getConn(){
@@ -158,5 +265,4 @@ public class AdminDAO {
             e.printStackTrace();
         }
     }
-
 }

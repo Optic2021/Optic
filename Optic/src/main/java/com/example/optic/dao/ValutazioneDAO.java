@@ -10,21 +10,22 @@ import java.util.ArrayList;
 
 public class ValutazioneDAO {
     private static PlayerDAO daoP;
-    //private static AdminDAO daoA;
+    private static AdminDAO daoA;
     //private static RefereeDAO daoR;
 
     public ValutazioneDAO(PlayerDAO daoP){
         this.daoP = daoP;
     }
-    /*
+
     public ValutazioneDAO(AdminDAO daoA){
         this.daoA = daoA;
     }
+    /*
     public ValutazioneDAO(RefreeDAO daoR){
         this.daoR = daoR;
     }
     */
-    public ArrayList<Valutazione> getReviewList(String user){
+    public ArrayList<Valutazione> getPlayerReviewList(String user){
         ArrayList<Valutazione> list = new ArrayList<Valutazione>();
         Statement stmt = null;
         try{
@@ -39,6 +40,40 @@ public class ValutazioneDAO {
                     String descrizione = rs.getString("Descrizione");
                     String recensore = rs.getString("fk_UsernameP1");
                     String recensito = rs.getString("fk_UsernameP2");
+                    int stelle = rs.getInt("Stelle");
+                    Valutazione val = new Valutazione(descrizione,recensore,recensito,stelle);
+                    list.add(val);
+                }while(rs.next());
+            }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return list;
+    }
+
+    public ArrayList<Valutazione> getAdminReviewList(String user){
+        ArrayList<Valutazione> list = new ArrayList<Valutazione>();
+        Statement stmt = null;
+        try{
+            stmt = this.daoA.getConnection().createStatement();
+            String sql = "SELECT * FROM valutazione WHERE fk_UsernameA =?";
+            PreparedStatement prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt.setString(1,user);
+            ResultSet rs = prepStmt.executeQuery();
+            if(rs.first()){
+                rs.first();
+                do{
+                    String descrizione = rs.getString("Descrizione");
+                    String recensore = rs.getString("fk_UsernameP1");
+                    String recensito = rs.getString("fk_UsernameA");
                     int stelle = rs.getInt("Stelle");
                     Valutazione val = new Valutazione(descrizione,recensore,recensito,stelle);
                     list.add(val);

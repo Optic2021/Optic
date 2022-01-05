@@ -5,8 +5,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
@@ -18,6 +18,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
@@ -62,9 +63,39 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                  <AnchorPane prefHeight="58.0" prefWidth="1000.0">
+                        <GridPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="382.0" styleClass="textClogo">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="96.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="281.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="93.0" text="Admin:" textAlignment="RIGHT">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="user" alignment="BOTTOM_LEFT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="264.0" styleClass="clickabile" text="AdminName" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font name="Arial Black" size="14.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets />
+                                    </GridPane.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="5.0" />
+                            </padding>
+                        </GridPane>
+                  <AnchorPane prefHeight="76.0" prefWidth="600.0">
                      <children>
-                        <Button layoutX="903.0" layoutY="38.0" mnemonicParsing="false" onAction="#modify" text="Modifica">
+                        <Button layoutX="503.0" layoutY="38.0" mnemonicParsing="false" onAction="#modify" text="Modifica">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -73,7 +104,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="aggiorna" layoutX="802.0" layoutY="38.0" mnemonicParsing="false" onAction="#save" text="Aggiorna" visible="false">
+                        <Button fx:id="aggiorna" layoutX="409.0" layoutY="38.0" mnemonicParsing="false" onAction="#save" text="Aggiorna" visible="false">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -94,16 +125,94 @@
                             <items>
                                 <AnchorPane prefHeight="59.0" prefWidth="987.0">
                                     <children>
-                                        <Label contentDisplay="RIGHT" layoutX="320.0" layoutY="16.0" prefHeight="43.0" prefWidth="354.0" style="-fx-text-fill: rgb(28,28,28);" text="Softair River 2.0">
+                                        <Label fx:id="title" alignment="CENTER" contentDisplay="RIGHT" layoutX="194.0" layoutY="13.0" prefHeight="43.0" prefWidth="600.0" style="-fx-text-fill: rgb(28,28,28);" text="Nome Campo">
                                             <font>
                                                 <Font name="Arial Black" size="40.0" />
                                             </font>
                                         </Label>
-                                        <Label layoutX="14.0" layoutY="35.0" prefHeight="54.0" prefWidth="107.0" style="-fx-text-fill: rgb(229,190,51);" text="*****">
-                                            <font>
-                                                <Font name="Arial Black" size="36.0" />
-                                            </font>
-                                        </Label>
+                                        <HBox prefHeight="37.0" prefWidth="110.0">
+                                            <children>
+                                                <Label fx:id="star1" prefHeight="40.0" prefWidth="21.0" text="*" visible="false">
+                                                    <font>
+                                                        <Font name="Arial Black" size="36.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                    <styleClass>
+                                                        <String fx:value="text-black" />
+                                                        <String fx:value="text-yellow" />
+                                                    </styleClass>
+                                                </Label>
+                                                <Label fx:id="star2" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
+                                                    <font>
+                                                        <Font name="Arial Black" size="36.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Label>
+                                                <Label fx:id="star3" layoutX="31.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
+                                                    <font>
+                                                        <Font name="Arial Black" size="36.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Label>
+                                                <Label fx:id="star4" layoutX="52.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
+                                                    <font>
+                                                        <Font name="Arial Black" size="36.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Label>
+                                                <Label fx:id="star5" layoutX="73.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
+                                                    <font>
+                                                        <Font name="Arial Black" size="36.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Label>
+                                            </children>
+                                            <GridPane.margin>
+                                                <Insets left="5.0" />
+                                            </GridPane.margin>
+                                        </HBox>
+                              <HBox layoutX="857.0" layoutY="11.0" prefHeight="37.0" prefWidth="110.0">
+                                 <children>
+                                    <Label fx:id="urlFacebook" prefHeight="40.0" prefWidth="21.0" text="fb" visible="false">
+                                       <font>
+                                          <Font name="Arial Black" size="36.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <styleClass>
+                                          <String fx:value="text-black" />
+                                          <String fx:value="text-yellow" />
+                                       </styleClass>
+                                    </Label>
+                                    <Label fx:id="urlInstagram" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="ig" visible="false">
+                                       <font>
+                                          <Font name="Arial Black" size="36.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="numWhatsapp" layoutX="31.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="wa" visible="false">
+                                       <font>
+                                          <Font name="Arial Black" size="36.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                 </children>
+                              </HBox>
                                     </children>
                                 </AnchorPane>
                             </items>
@@ -154,18 +263,11 @@
                                         </Label>
                                     </top>
                                     <center>
-                                        <TableView prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" BorderPane.alignment="CENTER">
-                                            <columns>
-                                                <TableColumn prefWidth="141.0" text="Nome" />
-                                                <TableColumn minWidth="0.0" prefWidth="266.0" style="-fx-font-family: Arial Black;" text="Descrizione" />
-                                            </columns>
+                                        <ListView fx:id="reviews" prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" BorderPane.alignment="CENTER">
                                             <BorderPane.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                             </BorderPane.margin>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                                        </TableView>
+                                        </ListView>
                                     </center>
                                 </BorderPane>
                             </bottom>
@@ -181,9 +283,10 @@
                                     <center>
                                         <GridPane prefHeight="28.0" prefWidth="570.0" BorderPane.alignment="CENTER">
                                             <columnConstraints>
-                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="89.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="208.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="276.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="89.0" prefWidth="89.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="208.0" prefWidth="208.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="30.0" prefWidth="30.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="217.0" />
                                             </columnConstraints>
                                             <rowConstraints>
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -209,6 +312,18 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </TextField>
+                                    <Button mnemonicParsing="false" onAction="#freeReferee" prefHeight="30.0" prefWidth="30.0" text="X" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="menuButton3" />
+                                          <String fx:value="login" />
+                                       </styleClass>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
                                             </children>
                                             <padding>
                                                 <Insets left="5.0" />
@@ -321,7 +436,7 @@
                                         </Label>
                                         <TableView prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" GridPane.rowIndex="3">
                                             <columns>
-                                                <TableColumn editable="false" prefWidth="187.0" style="-fx-text-fill: rgb(28,28,28);" text="Nome" />
+                                                <TableColumn editable="false" prefWidth="187.0" style="-fx-text-fill: rgb(28,28,28);" styleClass="title" text="Nome" />
                                                 <TableColumn prefWidth="187.0" style="-fx-text-fill: rgb(229,190,51);" text="Stelle" />
                                             </columns>
                                  <cursor>
@@ -489,6 +604,5 @@
             </AnchorPane>
          </left>
         </BorderPane>
-      <Hyperlink />
     </children>
 </Pane>
