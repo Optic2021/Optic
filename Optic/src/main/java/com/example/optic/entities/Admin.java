@@ -9,6 +9,7 @@ public class Admin {
     private String fb;
     private String wa;
     private String via;
+    private String referee;
 
     public Admin(String username, String password){
         this.username = username;
@@ -83,5 +84,13 @@ public class Admin {
 
     public void setVia(String via) {
         this.via = via;
+    }
+
+    public String getReferee() {
+        return referee;
+    }
+
+    public void setReferee(String referee) {
+        this.referee = referee;
     }
 }
