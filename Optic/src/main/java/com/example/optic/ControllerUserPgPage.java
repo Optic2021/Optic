@@ -94,23 +94,24 @@ public class ControllerUserPgPage extends GraphicController {
 
     @Override
     public void setUserVariables(String string) throws Exception {
-        String [] result=string.split("");
+        String [] result=string.split(" ");
+        System.out.println("1: "+result[0]+"2: "+result[1]);
         String username=result[0];
         String campo=result[1];
         user.setText(username);
 
         AdminBean admin =new AdminBean();
-        Admin admin1=UserPgPageAppController.getCampoInfo(admin);
+        admin.setNomeCampo(campo);
+        AdminBean admin1=UserPgPageAppController.getCampoInfo(admin);
 
         setCampo(admin1);
     }
 
-    public void setCampo(Admin admin){
-        campo.setText(admin.getNomeC());
-        desc.setText(admin.getDescrizioneC());
-        ref.setText(admin.getReferee());
-        /*AdminBean campo= new AdminBean();
-        campo.setNomeCampo(string);*/
+    public void setCampo(AdminBean admin){
+        campo.setText(admin.getNomeCampo());
+        desc.setText(admin.getDescrizione());
+        //Una volta sistemato db aggiungere anche il referee e controllare su tutti gli altri metodi
+        //ref.setText(admin.getReferee());
     }
 
     public void paginaProfilo(ActionEvent e){

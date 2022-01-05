@@ -8,6 +8,9 @@ public class AdminBean implements java.io.Serializable{
     private String wa;
     private String descrizione;
     private String nomeCampo;
+    private String via;
+    private String provincia;
+    private String referee;
 
     public void AdminBean(){}
 
@@ -65,5 +68,29 @@ public class AdminBean implements java.io.Serializable{
 
     public void setNomeCampo(String nomeCampo) {
         this.nomeCampo = nomeCampo;
+    }
+
+    public String getVia() {
+        return via;
+    }
+
+    public void setVia(String via) {
+        this.via = via;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
+    }
+
+    public String getReferee() {
+        return referee;
+    }
+
+    public void setReferee(String referee) {
+        this.referee = referee;
     }
 }

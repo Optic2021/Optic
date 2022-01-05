@@ -1,11 +1,14 @@
 package com.example.optic.dao;
 
+import com.example.optic.bean.AdminBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class AdminDAO {
@@ -244,6 +247,101 @@ public class AdminDAO {
     public Connection getConnection(){
         return this.conn;
     }
+
+    //Da finire con adminDao
+    public Admin getCampo(String nomeC) throws Exception {
+        Statement stmt = null;
+        Admin admin = new Admin("","");
+        admin.setNomeC(nomeC);
+        try{
+            if(instance.conn == null || instance.conn.isClosed()) {
+                instance.getConn();
+            }
+            stmt = instance.conn.createStatement();
+            //String sql = "SELECT * FROM admin join referee on referee.fk_UsernameA1=admin.Username WHERE NomeC=?";
+            String sql = "SELECT * FROM admin WHERE NomeC=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt.setString(1,admin.getNomeC());
+            ResultSet rs = prepStmt.executeQuery();
+            if (!rs.first()){ // rs empty
+                admin = null;
+            }else {
+                rs.first();
+
+                admin.setUsername(rs.getString("Username"));
+                admin.setPassword(rs.getString("Password"));
+                admin.setIg(rs.getString("Instagram"));
+                admin.setFb(rs.getString("Facebook"));
+                admin.setWa(rs.getString("Whatsapp"));
+                admin.setDescrizioneC(rs.getString("DescrizioneC"));
+                admin.setNomeC(rs.getString("NomeC"));
+                //admin.setVia(rs.getString("Via"));
+                //admin.setReferee(rs.getString("referee.Username"));
+
+                //chiudo result set
+                rs.close();
+            }
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return admin;
+    }
+
+    public ArrayList<AdminBean> getCampoList() throws Exception {
+        /*String user;
+        String pass;
+        String ig;
+        String fb;
+        String wa;
+        String desc;
+        String via;
+        String referee;*/
+
+        String nomec;
+        String desc;
+
+        ArrayList<AdminBean> list= new ArrayList<AdminBean>();
+
+        Statement stmt = null;
+        //AdminBean admin = new AdminBean();
+        try{
+            if(instance.conn == null || instance.conn.isClosed()) {
+                instance.getConn();
+            }
+            stmt = instance.conn.createStatement();
+            //String sql = "SELECT * FROM admin join referee on referee.fk_UsernameA1=admin.Username WHERE NomeC=?";
+            String sql = "SELECT NomeC, DescrizioneC FROM admin";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);;
+            ResultSet rs = prepStmt.executeQuery();
+            if (!rs.first()){ // rs empty
+                AdminBean admin = null;
+            }else {
+                rs.first();
+                do {
+                    AdminBean admin = new AdminBean();
+                    admin.setNomeCampo((rs.getString("NomeC")));
+                    admin.setDescrizione((rs.getString("DescrizioneC")));
+                    list.add(admin);
+
+                }while (rs.next());
+                rs.close();
+            }
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return list;
+    }
+
 
     public void getConn(){
         try{
