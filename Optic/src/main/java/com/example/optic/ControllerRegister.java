@@ -28,14 +28,21 @@ public class ControllerRegister extends GraphicController {
     private Label addressLabel;
     @FXML
     private TextField addressField;
+    @FXML
+    private Label pgNameLabel;
+    @FXML
+    private TextField pgNameField;
 
     public void toLogin(ActionEvent e) throws IOException {
         this.toView("views/login.fxml");
-        RegisterController.closeConn();
     }
 
     public void register(ActionEvent e) throws Exception {
         boolean res = false;
+        userRB.setUserData(1);
+        adminRB.setUserData(2);
+        refereeRB.setUserData(3);
+        int prof = (int) profile.getSelectedToggle().getUserData();
         if(username.getText().isEmpty() || password.getText().isEmpty()){
             Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("Inserire i dati");
@@ -48,40 +55,49 @@ public class ControllerRegister extends GraphicController {
             Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("Le password non combaciano");
             err.show();
-        }else {
+        }else if(prof == 2 && (addressField.getText().isEmpty() || pgNameField.getText().isEmpty())) {
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("Inserire informazioni campo!");
+            err.show();
+        } else{
             String name = username.getText();
             String pw = password.getText();
-
-            userRB.setUserData(1);
-            adminRB.setUserData(2);
-            refereeRB.setUserData(3);
-            int prof = (int) profile.getSelectedToggle().getUserData();
             String view = "views/register.fxml";
             UserBean bean = new UserBean();
             bean.setUsername(name);
             bean.setPassword(pw);
             switch (prof) {
+                //registrazione admin
                 case 2 -> {
                     bean.setVia(addressField.getText());
-                    res = RegisterController.isUsernameUsed(bean,2);
+                    bean.setNomeC(pgNameField.getText());
+                    res = RegisterController.isUsernameUsed(bean, 2);
                     if (!res) {
-                        RegisterController.userRegister(bean,2);
+                        RegisterController.userRegister(bean, 2);
                         view = "views/modPgPage.fxml";
+                    }else{
+                        RegisterController.closeConn(2);
                     }
                 }
+                //registrazione arbitro
                 case 3 -> {
-                    res = RegisterController.isUsernameUsed(bean,3);
+                    res = RegisterController.isUsernameUsed(bean, 3);
                     if (!res) {
                         System.out.println("Passo in persistenza");
-                        RegisterController.userRegister(bean,3);
+                        RegisterController.userRegister(bean, 3);
                         view = "views/refCampo.fxml";
+                    }else{
+                        RegisterController.closeConn(3);
                     }
                 }
+                //registrazione giocatore
                 default -> {
                     res = RegisterController.isUsernameUsed(bean, 1);
                     if (!res) {
-                        RegisterController.userRegister(bean,1);
+                        RegisterController.userRegister(bean, 1);
                         view = "views/userHomeMap.fxml";
+                    }else{
+                        RegisterController.closeConn(1);
                     }
                 }
 
@@ -95,7 +111,6 @@ public class ControllerRegister extends GraphicController {
                 Alert err = new Alert(Alert.AlertType.ERROR);
                 err.setContentText("Username già utilizzato");
                 err.show();
-                RegisterController.closeConn();
             }
         }
     }
@@ -103,10 +118,14 @@ public class ControllerRegister extends GraphicController {
     public void showAddress(){
         addressField.setVisible(true);
         addressLabel.setVisible(true);
+        pgNameLabel.setVisible(true);
+        pgNameField.setVisible(true);
     }
 
     public void hideAddress(){
         addressField.setVisible(false);
         addressLabel.setVisible(false);
+        pgNameLabel.setVisible(false);
+        pgNameField.setVisible(false);
     }
 }

@@ -36,9 +36,9 @@ public class AdminDAO {
         }
     }
 
-    public void newAdmin(String username,String password,String via) throws Exception {
+    public void newAdmin(String username,String password,String via, String nomeC) throws Exception {
         Statement stmt = null;
-        Admin admin = new Admin(username, password, via);
+        Admin admin = new Admin(username, password, via, nomeC);
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();

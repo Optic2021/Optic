@@ -33,9 +33,10 @@ public class RegisterController {
                 }
             }
             case 3 -> {
-                RefereeDAO r= RefereeDAO.getInstance();
-                Referee referee=null;
-                referee=r.getReferee(user.getUsername());
+                RefereeDAO r = RefereeDAO.getInstance();
+                Referee referee = null;
+                r.getConn();
+                referee = r.getReferee(user.getUsername());
                 if(referee != null){
                     res = true;
                 }
@@ -57,11 +58,11 @@ public class RegisterController {
                 }
                 case 2 -> {
                     AdminDAO admin = AdminDAO.getInstance();
-                    admin.newAdmin(user.getUsername(),user.getPassword(),user.getVia());
+                    admin.newAdmin(user.getUsername(),user.getPassword(),user.getVia(),user.getNomeC());
                 }
                 case 3 -> {
-                    System.out.println("Scrittura definitiva");
                     RefereeDAO referee = RefereeDAO.getInstance();
+                    referee.getConn();
                     referee.newReferee(user.getUsername(), user.getPassword());
                 }
             }
@@ -70,10 +71,22 @@ public class RegisterController {
         }
     }
 
-    public static void closeConn() throws IOException {
+    public static void closeConn(int user) throws IOException {
         try {
-            PlayerDAO dao = PlayerDAO.getInstance();
-            dao.closeConn();
+            switch (user) {
+                case 1 -> {
+                    PlayerDAO player = PlayerDAO.getInstance();
+                    player.closeConn();
+                }
+                case 2 -> {
+                    AdminDAO admin = AdminDAO.getInstance();
+                    admin.closeConn();
+                }
+                case 3 -> {
+                    RefereeDAO referee = RefereeDAO.getInstance();
+                    referee.closeConn();
+                }
+            }
         }catch (Exception e){
             System.out.println("Errore chiusura connessione con il database");
             e.printStackTrace();

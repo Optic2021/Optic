@@ -187,7 +187,7 @@
                      <items>
                         <AnchorPane prefHeight="59.0" prefWidth="987.0">
                            <children>
-                                    <Label contentDisplay="RIGHT" layoutX="320.0" layoutY="16.0" prefHeight="43.0" prefWidth="354.0" style="-fx-text-fill: rgb(28,28,28);" text="Softair River 2.0">
+                                    <Label fx:id="campo" contentDisplay="RIGHT" layoutX="320.0" layoutY="16.0" prefHeight="43.0" prefWidth="354.0" style="-fx-text-fill: rgb(28,28,28);" text="Softair River 2.0">
                                         <font>
                                             <Font name="Arial Black" size="40.0" />
                                         </font>
@@ -327,7 +327,7 @@
                      <top>
                         <BorderPane prefHeight="160.0" prefWidth="570.0" BorderPane.alignment="CENTER">
                            <top>
-                              <Label alignment="TOP_LEFT" prefHeight="106.0" prefWidth="550.0" styleClass="text-black" text="Il campo da gioco della capitale. Cinque ettari di campo per il Soft Air&#10;con caratteristiche combat, immersi nel verde su Via Salaria a 10 minuti&#10;dal Grande Raccordo Anulare di Roma." BorderPane.alignment="CENTER">
+                              <Label fx:id="desc" alignment="TOP_LEFT" prefHeight="106.0" prefWidth="550.0" styleClass="text-black" text="Il campo da gioco della capitale. Cinque ettari di campo per il Soft Air&#10;con caratteristiche combat, immersi nel verde su Via Salaria a 10 minuti&#10;dal Grande Raccordo Anulare di Roma." BorderPane.alignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

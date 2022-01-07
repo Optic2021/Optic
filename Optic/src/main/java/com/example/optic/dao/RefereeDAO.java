@@ -27,7 +27,6 @@ public class RefereeDAO {
             this.PW = prop.getProperty("PW");
             this.DB_URL = prop.getProperty("DB_URL");
             this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
-            this.getConn();
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -46,7 +45,7 @@ public class RefereeDAO {
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, r.getUsername());
             prepStmt.setString(2, r.getPassword());
-            prepStmt.setString(3, "");
+            prepStmt.setNull(3, Types.NULL);
             prepStmt.executeUpdate();
         } finally {
             try {

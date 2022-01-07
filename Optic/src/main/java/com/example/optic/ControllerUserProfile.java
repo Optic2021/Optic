@@ -92,10 +92,12 @@ public class ControllerUserProfile extends GraphicController{
             mediaVal += list.get(i).getStelle();
             reviews.getItems().add(val.getDescrizione());
         }
-        stars = mediaVal/numVal;
-        if(stars > 0){
-            //coloro le stelle in base alla valutazione
-            this.setStars(stars);
+        if(numVal > 0) {
+            stars = mediaVal / numVal;
+            if (stars > 0) {
+                //coloro le stelle in base alla valutazione
+                this.setStars(stars);
+            }
         }
         nVal.setText(Integer.toString(numVal));
     }

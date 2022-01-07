@@ -28,6 +28,10 @@ public class ValutazioneDAO {
     public ArrayList<Valutazione> getPlayerReviewList(String user){
         ArrayList<Valutazione> list = new ArrayList<Valutazione>();
         Statement stmt = null;
+        String descrizione;
+        String recensore;
+        String recensito;
+        int stelle;
         try{
             stmt = this.daoP.getConnection().createStatement();
             String sql = "SELECT * FROM valutazione WHERE fk_UsernameP2 =?";
@@ -37,10 +41,10 @@ public class ValutazioneDAO {
             if(rs.first()){
                 rs.first();
                 do{
-                    String descrizione = rs.getString("Descrizione");
-                    String recensore = rs.getString("fk_UsernameP1");
-                    String recensito = rs.getString("fk_UsernameP2");
-                    int stelle = rs.getInt("Stelle");
+                    descrizione = rs.getString("Descrizione");
+                    recensore = rs.getString("fk_UsernameP1");
+                    recensito = rs.getString("fk_UsernameP2");
+                    stelle = rs.getInt("Stelle");
                     Valutazione val = new Valutazione(descrizione,recensore,recensito,stelle);
                     list.add(val);
                 }while(rs.next());

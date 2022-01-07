@@ -58,6 +58,7 @@ public class LoginController {
         boolean res=false;
         try{
             RefereeDAO dao=RefereeDAO.getInstance();
+            dao.getConn();
             Referee ref=dao.getReferee(r.getUsername());
             if(ref!=null){
                 if(ref.getPassword().equals(r.getPassword())){//controllo se la password è uguale
@@ -71,20 +72,22 @@ public class LoginController {
         return res;
     }
 
-    public static boolean adminLogin(String user, String pw){
-        boolean bool = true;
-        return bool;
-    }
-
-    public static boolean refereeLogin(String user, String pw){
-        boolean bool = true;
-        return bool;
-    }
-
-    public static void closeConn() throws IOException {
+    public static void closeConn(int user) throws IOException {
         try {
-            PlayerDAO dao = PlayerDAO.getInstance();
-            dao.closeConn();
+            switch (user) {
+                case 1 -> {
+                    PlayerDAO player = PlayerDAO.getInstance();
+                    player.closeConn();
+                }
+                case 2 -> {
+                    AdminDAO admin = AdminDAO.getInstance();
+                    admin.closeConn();
+                }
+                case 3 -> {
+                    RefereeDAO referee = RefereeDAO.getInstance();
+                    referee.closeConn();
+                }
+            }
         }catch (Exception e){
             System.out.println("Errore chiusura connessione con il database");
             e.printStackTrace();

@@ -47,6 +47,9 @@ public class ControllerLogin extends GraphicController {
                     a.setPassword(pw);
                     res = LoginController.adminLogin(a);
                     view = "views/modPgPage.fxml";
+                    if(!res){
+                        LoginController.closeConn(2);
+                    }
                 }
                 case 3 ->{
                     RefereeBean r= new RefereeBean();
@@ -54,6 +57,9 @@ public class ControllerLogin extends GraphicController {
                     r.setPassword(pw);
                     res = LoginController.refereeLogin(r);
                     view = "views/refCampo.fxml";
+                    if(!res){
+                        LoginController.closeConn(3);
+                    }
                 }
                 default -> {
                     PlayerBean p = new PlayerBean();
@@ -61,6 +67,9 @@ public class ControllerLogin extends GraphicController {
                     p.setPassword(pw);
                     res = LoginController.playerLogin(p);
                     view = "views/userHomeMap.fxml";
+                    if(!res){
+                        LoginController.closeConn(1);
+                    }
                 }
 
             }
@@ -70,7 +79,6 @@ public class ControllerLogin extends GraphicController {
                 Alert err = new Alert(Alert.AlertType.ERROR);
                 err.setContentText("Credenziali errate");
                 err.show();
-                LoginController.closeConn();
             }
         }
     }

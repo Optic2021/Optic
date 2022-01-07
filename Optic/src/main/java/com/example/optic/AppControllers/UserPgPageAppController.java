@@ -13,18 +13,20 @@ public class UserPgPageAppController {
         String nomeC=campo.getNomeCampo();
         System.out.println("Nome Campo: "+nomeC);
 
-        //Admin x = dao.getCampo(nomeC);
+        Admin x = dao.getCampo(nomeC);
         AdminBean y = new AdminBean();
 
-       /* y.setUsername(x.getUsername());
+        /*y.setUsername(x.getUsername());
+        y.setUsername(x.getUsername());
+
         y.setPassword(x.getPassword());
         y.setDescrizione(x.getDescrizioneC());
         y.setFb(x.getFb());
         y.setIg(x.getIg());
         y.setWa(x.getWa());
-        y.setNomeCampo(x.getNomeC());*/
+        y.setNomeCampo(x.getNomeC());
         //y.setReferee(x.getReferee());
-        //y.setVia(x.getVia());
+        //y.setVia(x.getVia());*/
         return y;
     }
 }
