@@ -57,7 +57,7 @@ public class RegisterController {
                 }
                 case 2 -> {
                     AdminDAO admin = AdminDAO.getInstance();
-                    admin.newAdmin(user.getUsername(),user.getPassword(),user.getVia());
+                    admin.newAdmin(user.getUsername(),user.getPassword(),user.getVia(),user.getNomeC());
                 }
                 case 3 -> {
                     System.out.println("Scrittura definitiva");
