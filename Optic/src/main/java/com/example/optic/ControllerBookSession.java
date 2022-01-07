@@ -48,19 +48,15 @@ public class ControllerBookSession extends GraphicController {
     public void tableview(MouseEvent e){
         try {
 
-            System.out.println("clicked");
-
             Node node=((Node)e.getTarget()).getParent();
 
             AdminBean campo=(AdminBean) table.getSelectionModel().getSelectedItem();
-
-            System.out.println("Campo :"+campo.getNomeCampo());
 
             toView("views/userPgPage.fxml",user.getText(),campo);
 
         }
         catch(Exception z){
-            System.out.println("Errore di I/O "+z);
+            z.printStackTrace();
         }
     }
 
@@ -91,5 +87,5 @@ public class ControllerBookSession extends GraphicController {
         }
 
 
-        }
+    }
 }

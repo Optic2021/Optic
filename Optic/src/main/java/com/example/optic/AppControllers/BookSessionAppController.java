@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class BookSessionAppController {
 
     public static ArrayList<AdminBean> getCampi() throws Exception {
-            AdminDAO dao = AdminDAO.getInstance();
-            ArrayList<AdminBean> lista = new ArrayList<AdminBean>();
+        AdminDAO dao = AdminDAO.getInstance();
+        ArrayList<AdminBean> lista = new ArrayList<AdminBean>();
         try {
             lista=dao.getCampoList();
         }catch (Exception e){

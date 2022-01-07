@@ -299,8 +299,8 @@
                                              <Insets left="5.0" />
                                          </GridPane.margin>
                                      </HBox>
-                                    <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Inserire recensione..." GridPane.rowIndex="1" />
-                                    <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" text="Invia" GridPane.columnIndex="1">
+                                    <TextArea fx:id="testoRecensione" prefHeight="200.0" prefWidth="200.0" promptText="Inserire recensione..." GridPane.rowIndex="1" />
+                                    <Button mnemonicParsing="false" onAction="#review" prefHeight="34.0" prefWidth="87.0" text="Invia" GridPane.columnIndex="1">
                                        <styleClass>
                                           <String fx:value="login" />
                                           <String fx:value="menuButton2" />
@@ -355,7 +355,7 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label prefHeight="20.0" prefWidth="469.0" styleClass="text-black" text="Arbitro" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Label fx:id="ref" prefHeight="20.0" prefWidth="469.0" styleClass="text-black" text="Arbitro" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
