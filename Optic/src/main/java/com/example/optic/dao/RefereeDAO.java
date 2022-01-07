@@ -1,5 +1,7 @@
 package com.example.optic.dao;
 
+import com.example.optic.bean.AdminBean;
+import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
 import com.mysql.cj.x.protobuf.MysqlxPrepare;
 
@@ -34,12 +36,8 @@ public class RefereeDAO {
 
     public void newReferee(String username,String password) throws Exception {
         Statement stmt = null;
-        int ret;
         Referee r = new Referee(username, password);
         try {
-            if (instance.conn == null || instance.conn.isClosed()) {
-                instance.getConn();
-            }
             stmt = instance.conn.createStatement();
             String sql = "INSERT INTO referee VALUES(?,?,?)";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
@@ -51,47 +49,39 @@ public class RefereeDAO {
             try {
                 if (stmt != null)
                     stmt.close();
-            } catch (SQLException se2) {
-            }
-            try {
-                if (instance.conn != null)
-                    instance.conn.close();
-            } catch (SQLException se) {
-                se.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
     }
 
-    //Possiamo modificare effettivamente un username?
-    public void setReferee(String user,String fk_Username){
+    public Admin getAdminFromRef(String refUsername) throws SQLException {
         Statement stmt = null;
-        Referee ref = new Referee(user,"");
+        Admin a = new Admin();
         try{
-            if(instance.conn == null || instance.conn.isClosed()) {
-                instance.getConn();
-            }
             stmt = instance.conn.createStatement();
-            String sql = "UPDATE referee SET  fk_Username=? WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
-            prepStmt.setString(1,fk_Username);
-            prepStmt.setString(2,user);
-            prepStmt.executeUpdate();
-        } catch (SQLException e) {
+            String sql = "SELECT A.Username,A.Instagram,A.Facebook,A.Whatsapp,A.NomeC,A.DescrizioneC,A.Via FROM (referee R JOIN admin A ON R.fk_UsernameA1 = A.Username) WHERE R.Username=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt.setString(1,refUsername);
+            ResultSet rs = prepStmt.executeQuery();
+            if (rs.first()){ // trovato admin
+                rs.first();
+                a.setUsername(rs.getString("A.Username"));
+                a.setIg(rs.getString("A.Instagram"));
+                a.setFb(rs.getString("A.Facebook"));
+                a.setWa(rs.getString("A.Whatsapp"));
+                a.setNomeC(rs.getString("A.NomeC"));
+                a.setDescrizioneC(rs.getString("A.DescrizioneC"));
+                a.setVia(rs.getString("A.Via"));
+                //chiudo result set
+                rs.close();
+            }else{
+                a = null;
+            }
+        }catch (SQLException e){
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (instance.conn != null)
-                    instance.conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
+        return a;
     }
 
     //chiede l aggiunta di una catch clause

@@ -121,7 +121,7 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
-                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-cursor: hand;" styleClass="icon" GridPane.columnIndex="1">
+                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toInstagram" prefHeight="50.0" prefWidth="50.0" style="-fx-cursor: hand;" styleClass="icon" GridPane.columnIndex="1">
                                                     <font>
                                                         <Font name="Arial Black" size="16.0" />
                                                     </font>
@@ -133,7 +133,7 @@
                                                         </ImageView>
                                                     </graphic>
                                                 </Button>
-                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="20.0" prefWidth="0.0" style="-fx-cursor: hand;" styleClass="icon" GridPane.columnIndex="2">
+                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toWhatsapp" prefHeight="20.0" prefWidth="0.0" style="-fx-cursor: hand;" styleClass="icon" GridPane.columnIndex="2">
                                                     <font>
                                                         <Font name="Arial Black" size="16.0" />
                                                     </font>
@@ -145,7 +145,7 @@
                                                         </ImageView>
                                                     </graphic>
                                                 </Button>
-                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="33.0" style="-fx-cursor: hand;" styleClass="icon">
+                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toFacebook" prefHeight="50.0" prefWidth="33.0" style="-fx-cursor: hand;" styleClass="icon">
                                                     <font>
                                                         <Font name="Arial Black" size="16.0" />
                                                     </font>
@@ -195,14 +195,9 @@
                             <items>
                                 <AnchorPane prefHeight="59.0" prefWidth="987.0">
                                     <children>
-                                        <Label contentDisplay="RIGHT" layoutX="320.0" layoutY="16.0" prefHeight="43.0" prefWidth="354.0" style="-fx-text-fill: rgb(28,28,28);" text="Softair River 2.0">
+                                        <Label fx:id="title" alignment="CENTER" contentDisplay="RIGHT" layoutX="194.0" layoutY="3.0" prefHeight="43.0" prefWidth="600.0" style="-fx-text-fill: rgb(28,28,28);" text="Playground">
                                             <font>
                                                 <Font name="Arial Black" size="40.0" />
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="14.0" layoutY="35.0" prefHeight="54.0" prefWidth="107.0" style="-fx-text-fill: rgb(229,190,51);" text="*****">
-                                            <font>
-                                                <Font name="Arial Black" size="36.0" />
                                             </font>
                                         </Label>
                                     </children>
@@ -282,16 +277,70 @@
                             </BorderPane.margin>
                             <top>
                                 <BorderPane prefHeight="160.0" prefWidth="570.0" BorderPane.alignment="CENTER">
-                                    <top>
-                                        <Label alignment="TOP_LEFT" prefHeight="106.0" prefWidth="550.0" styleClass="text-black" text="Il campo da gioco della capitale. Cinque ettari di campo per il Soft Air&#10;con caratteristiche combat, immersi nel verde su Via Salaria a 10 minuti&#10;dal Grande Raccordo Anulare di Roma." wrapText="true" BorderPane.alignment="CENTER">
-                                            <font>
-                                                <Font size="14.0" />
-                                            </font>
-                                            <BorderPane.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                            </BorderPane.margin>
-                                        </Label>
-                                    </top>
+                           <center>
+                               <GridPane prefHeight="28.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+                                   <columnConstraints>
+                                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="88.0" prefWidth="88.0" />
+                                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="236.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="47.0" minWidth="47.0" prefWidth="47.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="201.0" />
+                                   </columnConstraints>
+                                   <rowConstraints>
+                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                   </rowConstraints>
+                                   <children>
+                                       <Label prefHeight="23.0" prefWidth="87.0" styleClass="title" text="Via:" GridPane.rowIndex="1">
+                                           <font>
+                                               <Font size="14.0" />
+                                           </font>
+                                           <GridPane.margin>
+                                               <Insets left="5.0" />
+                                           </GridPane.margin>
+                                       </Label>
+                                       <Label fx:id="address" prefHeight="20.0" prefWidth="469.0" styleClass="text-black" text="Via" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                           <font>
+                                               <Font size="14.0" />
+                                           </font>
+                                           <GridPane.margin>
+                                               <Insets left="9.0" top="2.0" />
+                                           </GridPane.margin>
+                                       </Label>
+                                       <Label layoutX="20.0" layoutY="32.0" prefHeight="23.0" prefWidth="87.0" styleClass="title" text="Admin:">
+                                           <font>
+                                               <Font size="14.0" />
+                                           </font>
+                                           <GridPane.margin>
+                                               <Insets left="5.0" />
+                                           </GridPane.margin>
+                                       </Label>
+                                       <Label fx:id="admin" layoutX="112.0" layoutY="34.0" prefHeight="20.0" prefWidth="469.0" styleClass="text-black" text="Admin" GridPane.columnIndex="1">
+                                           <font>
+                                               <Font size="14.0" />
+                                           </font>
+                                           <GridPane.margin>
+                                               <Insets left="9.0" />
+                                           </GridPane.margin>
+                                       </Label>
+                                    <Label prefHeight="26.0" prefWidth="79.0" styleClass="title" text="Prov:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Label fx:id="prov" prefHeight="31.0" prefWidth="211.0" styleClass="text-black" text="Provincia" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                   </children>
+                                   <padding>
+                                       <Insets left="5.0" />
+                                   </padding>
+                               </GridPane>
+                           </center>
+                           <top>
+                              <TextArea fx:id="desc" prefHeight="103.0" prefWidth="572.0" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </BorderPane.margin>
+                              </TextArea>
+                           </top>
                                 </BorderPane>
                             </top>
                             <center>
