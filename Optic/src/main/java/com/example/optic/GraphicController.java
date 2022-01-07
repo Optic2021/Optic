@@ -1,7 +1,5 @@
 package com.example.optic;
 
-import com.example.optic.bean.AdminBean;
-import com.example.optic.entities.Campo;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -68,35 +66,6 @@ public class GraphicController {
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
         GraphicController controller = fxmlLoader.getController();
         controller.setUserVariables(usr);
-        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
-        });
-        scene.setOnMouseDragged(new EventHandler<MouseEvent>(){
-            @Override
-            public void handle(MouseEvent event) {
-                obj.setX(event.getScreenX() - xOffset);
-                obj.setY(event.getScreenY() - yOffset);
-            }
-        });
-        scene.setFill(Color.TRANSPARENT);
-        obj.setScene(scene);
-        obj.show();
-    }
-    public void toView(String view, String usr, AdminBean campo)throws Exception{
-        Stage obj = (Stage) id.getScene().getWindow();
-
-        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
-
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
-        GraphicController controller = fxmlLoader.getController();
-
-        usr=usr+" "+campo.getNomeCampo();
-        controller.setUserVariables(usr);
-
         scene.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
