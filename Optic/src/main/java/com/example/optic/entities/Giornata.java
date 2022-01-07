@@ -1,18 +1,25 @@
 package com.example.optic.entities;
 
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Giornata {
     private int idGiornata;
-    private Date data;
+    private Calendar data;
     private int num_Giocatori ;
     private String fk_Nome;
     private String fk_Username;
 
+    public Giornata(Calendar data,int num_Giocatori,String evento){
+        this.data = data;
+        this.num_Giocatori = num_Giocatori;
+        this.fk_Nome = evento;
+    }
     public void setIdGiornata(int newIdGiornata){
         this.idGiornata=newIdGiornata;
     }
-    public void setData(Date newData){
+    public void setData(Calendar newData){
         this.data=newData;
     }
     public void setNum_Giocatori(int newNum_Giocatori){
@@ -31,7 +38,7 @@ public class Giornata {
         return this.idGiornata;
     }
 
-    public Date getData(){
+    public Calendar getData(){
         return this.data;
     }
 

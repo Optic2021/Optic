@@ -8,9 +8,11 @@ import com.example.optic.dao.PlayerDAO;
 import com.example.optic.dao.RefereeDAO;
 import com.example.optic.dao.ValutazioneDAO;
 import com.example.optic.entities.Admin;
+import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Referee;
 import com.example.optic.entities.Valutazione;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ModPGPageAppController {
@@ -36,6 +38,17 @@ public class ModPGPageAppController {
             e.printStackTrace();
         }
         return ref;
+    }
+
+    public static Giornata getFirstPlay(UserBean bean){
+        Giornata play = null;
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            play = dao.getFirstPlay(bean.getUsername());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return play;
     }
 
     //cerco arbitro tramite il suo nome

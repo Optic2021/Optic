@@ -6,10 +6,7 @@ import com.example.optic.AppControllers.UserProfileAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
-import com.example.optic.entities.Admin;
-import com.example.optic.entities.Referee;
-import com.example.optic.entities.Valutazione;
-import com.example.optic.entities.ValutazionePlayer;
+import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +19,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class ControllerModPGPage extends GraphicController {
@@ -72,6 +70,16 @@ public class ControllerModPGPage extends GraphicController {
     private TextField ref;
     @FXML
     private ListView reviews;
+    @FXML
+    private ComboBox activityBox;
+    @FXML
+    private DatePicker datePicker;
+    @FXML
+    private Label nPlayers;
+    @FXML
+    private Label activity;
+    @FXML
+    private Label date;
 
     public void toLogin(ActionEvent e) throws IOException {
         ModPGPageAppController.closeConn();
@@ -101,6 +109,23 @@ public class ControllerModPGPage extends GraphicController {
             this.urlInstagram.setText(a.getIg());;
             this.urlFacebook.setText(a.getFb());;
             this.numWhatsapp.setText(a.getWa());;
+            this.setFirstPlay(a.getUsername());
+        }
+    }
+
+    public void setFirstPlay(String user){
+        Giornata play = null;
+        UserBean bean = new UserBean();
+        bean.setUsername(user);
+        play = ModPGPageAppController.getFirstPlay(bean);
+        //controllo se esiste una giornata da poter mostrare
+        if(play != null){
+            //mostro informazioni della giornata
+            //activity.impostaAttivita;
+            SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+            date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+            activity.setText(play.getFk_Nome());
+            nPlayers.setText(Integer.toString(play.getNum_Giocatori()));
         }
     }
 
