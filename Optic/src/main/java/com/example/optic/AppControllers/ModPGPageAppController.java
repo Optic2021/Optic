@@ -67,6 +67,7 @@ public class ModPGPageAppController {
     public static void setReferee(UserBean admin, UserBean referee) {
         try{
             AdminDAO dao = AdminDAO.getInstance();
+            System.out.println("ok3");
             dao.setReferee(admin.getUsername(),referee.getUsername());
         }catch (Exception e){
             e.printStackTrace();

@@ -59,12 +59,6 @@ public class ControllerModPGPage extends GraphicController {
     //settata non editable
     @FXML
     private Label numWhatsapp;
-    @FXML
-    private Label refName;
-    @FXML
-    private Label prov;
-    @FXML
-    private Label address;
     //settata non editable
     @FXML
     private Pane id;
@@ -94,10 +88,7 @@ public class ControllerModPGPage extends GraphicController {
         }
         if(a != null) {
             this.title.setText(a.getNomeC());
-            this.address.setText(a.getVia());
-            //aggiungere provincia
             this.description.setText(a.getDescrizioneC());
-            this.description.setWrapText(true);
             this.urlInstagram.setText(a.getIg());;
             this.urlFacebook.setText(a.getFb());;
             this.numWhatsapp.setText(a.getWa());;
@@ -117,12 +108,10 @@ public class ControllerModPGPage extends GraphicController {
             mediaVal += list.get(i).getStelle();
             reviews.getItems().add(val.getDescrizione());
         }
-        if(numVal > 0) {
-            stars = mediaVal / numVal;
-            if (stars > 0) {
-                //coloro le stelle in base alla valutazione
-                this.setStars(stars);
-            }
+        stars = mediaVal/numVal;
+        if(stars > 0){
+            //coloro le stelle in base alla valutazione
+            this.setStars(stars);
         }
     }
 
@@ -162,6 +151,7 @@ public class ControllerModPGPage extends GraphicController {
             ref.setText("");
             err.show();
         }else{
+            System.out.println("ok2");
             ModPGPageAppController.setReferee(adminBean,refBean);
         }
     }
@@ -258,7 +248,6 @@ public class ControllerModPGPage extends GraphicController {
         addPhoto.setVisible(true);
         aggiorna.setVisible(true);
         addEvent.setVisible(true);
-        refName.setText(ref.getText());//salvo il nome attuale dell'arbitro per controllare successivamente se sono state apportate modifiche
         ref.setEditable(true);
 
         /*grid.setVisible(true);
@@ -277,8 +266,8 @@ public class ControllerModPGPage extends GraphicController {
 
         description.setEditable(false);
         ref.setEditable(false);
-        //setto il nuovo arbitro se il nome non è vuoto e se è diverso da quello precedente
-        if(!(ref.getText().isEmpty()) && !(ref.getText().equals(refName.getText()))) {
+        if(!(ref.getText().isEmpty())) {
+            System.out.println("ok");
             this.setReferee(ref.getText());
         }
         addPhoto.setVisible(false);

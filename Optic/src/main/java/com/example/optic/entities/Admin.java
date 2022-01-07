@@ -9,17 +9,17 @@ public class Admin {
     private String fb;
     private String wa;
     private String via;
+    private String referee;
 
     public Admin(String username, String password){
         this.username = username;
         this.password = password;
     }
 
-    public Admin(String username, String password, String via, String nomeC){
+    public Admin(String username, String password, String via){
         this.username = username;
         this.password = password;
         this.via = via;
-        this.nomeC = nomeC;
     }
 
     public String getUsername() {
@@ -84,5 +84,13 @@ public class Admin {
 
     public void setVia(String via) {
         this.via = via;
+    }
+
+    public String getReferee() {
+        return referee;
+    }
+
+    public void setReferee(String referee) {
+        this.referee = referee;
     }
 }

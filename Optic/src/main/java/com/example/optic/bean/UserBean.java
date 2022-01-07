@@ -4,7 +4,6 @@ public class UserBean implements java.io.Serializable {
     private String username;
     private String password;
     private String via;
-    private String nomeC;
 
     public UserBean(){}
 
@@ -30,13 +29,5 @@ public class UserBean implements java.io.Serializable {
 
     public void setVia(String via) {
         this.via = via;
-    }
-
-    public String getNomeC() {
-        return nomeC;
-    }
-
-    public void setNomeC(String nomeC) {
-        this.nomeC = nomeC;
     }
 }
