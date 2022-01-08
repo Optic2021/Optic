@@ -1,16 +1,12 @@
 package com.example.optic.AppControllers;
 
 import com.example.optic.bean.AdminBean;
+import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
-import com.example.optic.dao.AdminDAO;
-import com.example.optic.dao.PlayerDAO;
-import com.example.optic.dao.RefereeDAO;
-import com.example.optic.dao.ValutazioneDAO;
-import com.example.optic.entities.Admin;
-import com.example.optic.entities.Giornata;
-import com.example.optic.entities.Referee;
-import com.example.optic.entities.Valutazione;
+import com.example.optic.dao.*;
+import com.example.optic.entities.*;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -44,11 +40,36 @@ public class ModPGPageAppController {
         Giornata play = null;
         try{
             AdminDAO dao = AdminDAO.getInstance();
-            play = dao.getFirstPlay(bean.getUsername());
+            GiornataDAO playDao = new GiornataDAO(dao);
+            play = playDao.getFirstPlay(bean.getUsername());
         } catch (Exception e) {
             e.printStackTrace();
         }
         return play;
+    }
+
+    public static Giornata getNextPlay(GiornataBean bean){
+        Giornata play = null;
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            play = playDao.getNextPlay(bean.getAdmin(),bean.getData());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return  play;
+    }
+
+    public static Giornata getLastPlay(GiornataBean bean){
+        Giornata play = null;
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            play = playDao.getLastPlay(bean.getAdmin(),bean.getData());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return  play;
     }
 
     //cerco arbitro tramite il suo nome
@@ -70,6 +91,18 @@ public class ModPGPageAppController {
             AdminDAO daoA = AdminDAO.getInstance();
             ValutazioneDAO dao = new ValutazioneDAO(daoA);
             list = dao.getAdminReviewList(a.getUsername());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static ArrayList<Player> getPlayersList(GiornataBean bean) throws IOException{
+        ArrayList<Player> list = new ArrayList<Player>();
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            list = playDao.getPlayersList(bean.getIdPlay());
         }catch (IOException e){
             e.printStackTrace();
         }

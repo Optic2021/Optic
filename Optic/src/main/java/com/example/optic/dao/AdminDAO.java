@@ -7,12 +7,12 @@ import com.example.optic.entities.Referee;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.sql.*;
-import java.time.LocalDate;
-import java.time.ZoneId;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Properties;
 
 public class AdminDAO {
@@ -66,33 +66,6 @@ public class AdminDAO {
             } catch (SQLException se2) {
             }
         }
-    }
-
-    //recupero la prima giornata disponibile per la prenotazione dei giocatori
-    public Giornata getFirstPlay(String admin) throws Exception{
-        Statement stmt = null;
-        Giornata play = null;
-        try{
-            stmt = instance.conn.createStatement();
-            String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(Data) FROM giornata WHERE curdate() < Data AND fk_UsernameA2 =?)";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            prepStmt.setString(1,admin);
-            ResultSet rs = prepStmt.executeQuery();
-            if (rs.first()){ //giornata trovata
-                rs.first();
-                //trasformo il formato di data di mysql
-                Calendar data = Calendar.getInstance();
-                data.setTime(rs.getDate("Data"));
-                int nGiocatori = rs.getInt("NumGiocatori");
-                String evento = rs.getString("fk_Nome");
-                play = new Giornata(data,nGiocatori,evento);
-                //chiudo result set
-                rs.close();
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return play;
     }
 
     public static void setAdmin1(String user,String instagram,String facebook,String whatsapp,String DescrizioneC,String NomeC) {

@@ -11,7 +11,8 @@ public class Giornata {
     private String fk_Nome;
     private String fk_Username;
 
-    public Giornata(Calendar data,int num_Giocatori,String evento){
+    public Giornata(int idGiornata,Calendar data,int num_Giocatori,String evento){
+        this.idGiornata = idGiornata;
         this.data = data;
         this.num_Giocatori = num_Giocatori;
         this.fk_Nome = evento;

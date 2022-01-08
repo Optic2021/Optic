@@ -9,6 +9,8 @@ public class Player {
     private String fb;
     private String stato = "nullo";
 
+    public Player(){}
+
     public Player(String username){
         this.username = username;
     }
@@ -16,6 +18,11 @@ public class Player {
     public Player(String username, String password){
         this.username = username;
         this.password = password;
+    }
+
+    public Player(String username, int valutazione){
+        this.username = username;
+        this.valutazione = valutazione;
     }
 
     public String getUsername() {

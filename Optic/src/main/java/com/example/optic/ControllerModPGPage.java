@@ -1,26 +1,27 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.LoginController;
 import com.example.optic.AppControllers.ModPGPageAppController;
-import com.example.optic.AppControllers.UserProfileAppController;
 import com.example.optic.bean.AdminBean;
-import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class ControllerModPGPage extends GraphicController {
     @FXML
@@ -47,7 +48,7 @@ public class ControllerModPGPage extends GraphicController {
     private Button aggiorna;
     //settata non visible
     @FXML
-    private Button addEvent;
+    private Button addPlay;
     //settata non visible
     @FXML
     private Label urlFacebook;
@@ -80,6 +81,14 @@ public class ControllerModPGPage extends GraphicController {
     private Label activity;
     @FXML
     private Label date;
+    @FXML
+    private Label idPlay;
+    @FXML
+    private TableView players;
+    @FXML
+    private TableColumn playerName;
+    @FXML
+    private TableColumn playerVal;
 
     public void toLogin(ActionEvent e) throws IOException {
         ModPGPageAppController.closeConn();
@@ -94,7 +103,6 @@ public class ControllerModPGPage extends GraphicController {
             AdminBean admin = new AdminBean();
             admin.setUsername(user);
             this.populateReviewList(user);
-            this.populateGameTable(user);
             this.playgroundReferee(user);
             a = ModPGPageAppController.getAdmin(admin);
         } catch (Exception e) {
@@ -113,19 +121,102 @@ public class ControllerModPGPage extends GraphicController {
         }
     }
 
-    public void setFirstPlay(String user){
+    //setto la prima giornata di gioco disponibile
+    public void setFirstPlay(String user) throws IOException {
         Giornata play = null;
         UserBean bean = new UserBean();
         bean.setUsername(user);
-        play = ModPGPageAppController.getFirstPlay(bean);
-        //controllo se esiste una giornata da poter mostrare
-        if(play != null){
-            //mostro informazioni della giornata
-            //activity.impostaAttivita;
-            SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
-            date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
-            activity.setText(play.getFk_Nome());
-            nPlayers.setText(Integer.toString(play.getNum_Giocatori()));
+        try {
+            play = ModPGPageAppController.getFirstPlay(bean);
+            //controllo se esiste una giornata da poter mostrare
+            if (play != null) {
+                //mostro informazioni della giornata
+                //activity.impostaAttivita;
+                SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+                idPlay.setText(Integer.toString(play.getIdGiornata()));
+                date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                activity.setText(play.getFk_Nome());
+                nPlayers.setText(Integer.toString(play.getNum_Giocatori()));
+                this.populatePlayersTable();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    //recupero la prossima giornata di gioco disponibile
+    public void getNextPlay() throws ParseException {
+        GiornataBean playBean = new GiornataBean();
+        Giornata play = null;
+        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date data = date_format.parse(date.getText());
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(data);
+            playBean.setData(cal);
+            playBean.setAdmin(user.getText());
+            play = ModPGPageAppController.getNextPlay(playBean);
+            if (play != null) {
+                idPlay.setText(Integer.toString(play.getIdGiornata()));
+                date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                activity.setText(play.getFk_Nome());
+                nPlayers.setText(Integer.toString(play.getNum_Giocatori()));
+                this.populatePlayersTable();
+            } else {
+                activityBox.setVisible(true);
+                datePicker.setVisible(true);
+                addPlay.setVisible(true);
+                idPlay.setVisible(false);
+                date.setVisible(false);
+                activity.setVisible(false);
+                nPlayers.setVisible(false);
+                players.setVisible(false);
+            }
+        }catch (ParseException | IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    //recupero la giornata di gioco precedente a quella mostrata
+    public void getLastPlay(){
+        GiornataBean playBean = new GiornataBean();
+        Giornata play = null;
+        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            if(!(activity.getText().isEmpty()) && activityBox.isVisible()) {
+                activityBox.setVisible(false);
+                datePicker.setVisible(false);
+                addPlay.setVisible(false);
+                idPlay.setVisible(true);
+                date.setVisible(true);
+                activity.setVisible(true);
+                nPlayers.setVisible(true);
+                players.setVisible(true);
+            }else{
+                Date data = date_format.parse(date.getText());
+                Calendar cal = Calendar.getInstance();
+                cal.setTime(data);
+                playBean.setData(cal);
+                playBean.setAdmin(user.getText());
+                play = ModPGPageAppController.getLastPlay(playBean);
+                if (play != null) {
+                    idPlay.setText(Integer.toString(play.getIdGiornata()));
+                    date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                    activity.setText(play.getFk_Nome());
+                    nPlayers.setText(Integer.toString(play.getNum_Giocatori()));
+                    this.populatePlayersTable();
+                }
+                activityBox.setVisible(false);
+                datePicker.setVisible(false);
+                addPlay.setVisible(false);
+                idPlay.setVisible(true);
+                date.setVisible(true);
+                activity.setVisible(true);
+                nPlayers.setVisible(true);
+                players.setVisible(true);
+            }
+        }catch (ParseException | IOException e){
+            e.printStackTrace();
         }
     }
 
@@ -151,8 +242,18 @@ public class ControllerModPGPage extends GraphicController {
         }
     }
 
-    public void populateGameTable(String user){
-
+    public void populatePlayersTable() throws IOException {
+        GiornataBean playBean = new GiornataBean();
+        players.getItems().clear();
+        playerName.setCellValueFactory(new PropertyValueFactory<>("username"));
+        playerVal.setCellValueFactory(new PropertyValueFactory<>("valutazione"));
+        Player p = new Player();
+        playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
+        ArrayList<Player> list = ModPGPageAppController.getPlayersList(playBean);
+        for(int i = 0; i < list.size(); i++) {
+            p = list.get(i);
+            players.getItems().add(p);
+        }
     }
 
     //prendo il valore dentro il database dell'arbitro
@@ -282,7 +383,6 @@ public class ControllerModPGPage extends GraphicController {
         description.setEditable(true);
         addPhoto.setVisible(true);
         aggiorna.setVisible(true);
-        addEvent.setVisible(true);
         refName.setText(ref.getText());//salvo il nome attuale dell'arbitro per controllare successivamente se sono state apportate modifiche
         ref.setEditable(true);
 
@@ -308,7 +408,6 @@ public class ControllerModPGPage extends GraphicController {
         }
         addPhoto.setVisible(false);
         aggiorna.setVisible(false);
-        addEvent.setVisible(false);
 
         /*urlFacebook.setEditable(false);
         urlInstagram.setEditable(false);
