@@ -5,14 +5,19 @@ import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Campo;
+import com.example.optic.entities.Valutazione;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import java.io.IOException;
 import java.lang.Object;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class ControllerUserPgPage extends GraphicController {
@@ -26,6 +31,13 @@ public class ControllerUserPgPage extends GraphicController {
     private Label ref;
     @FXML
     private TextArea testoRecensione;
+
+    @FXML
+    private TableView table;
+    @FXML
+    private TableColumn nome;
+    @FXML
+    private TableColumn recensione;
 
 
     @FXML
@@ -103,17 +115,44 @@ public class ControllerUserPgPage extends GraphicController {
     }
 
     @Override
-    public void setUserVariables(String string) throws Exception {
+    public void setUserVariables(String string) {
         String [] result=string.split(" ");
         String username=result[0];
         String campo=result[1];
         user.setText(username);
 
-        AdminBean admin =new AdminBean();
-        admin.setNomeCampo(campo);
-        AdminBean admin1=UserPgPageAppController.getCampoInfo(admin);
+        AdminBean admin1 = null;
+        AdminBean admin = null;
+        try {
+            admin = new AdminBean();
+            admin.setNomeCampo(campo);
+            admin1 = UserPgPageAppController.getCampoInfo(admin);
+            populateTable(admin);
+        }catch(Exception a){
+            a.printStackTrace();
+        }
+        try {
+            setCampo(admin1);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
-        setCampo(admin1);
+    public void populateTable(AdminBean admin){
+        ArrayList<Valutazione> list = UserPgPageAppController.reviewList(admin);
+        nome.setCellValueFactory(new PropertyValueFactory<>("fk_UsernameP1"));
+        recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
+        int k = list.size();
+        System.out.println("Valore di k: "+k);
+        int i = 0;
+        Valutazione val;
+
+        while (i < k) {
+            System.out.println("Valore di i: "+i);
+            val = list.get(i);
+            table.getItems().add(val);
+            i++;
+        }
     }
 
     public void setCampo(AdminBean admin){
@@ -147,6 +186,10 @@ public class ControllerUserPgPage extends GraphicController {
         valutazione.setUsernameP1(user.getText());
 
         UserPgPageAppController.saveReview(valutazione);
+        AdminBean admin=new AdminBean();
+        admin.setNomeCampo(campo.getText());
+        table.getItems().clear();
+        populateTable(admin);
     }
 
     public void paginaProfilo(ActionEvent e){

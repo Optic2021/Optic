@@ -66,13 +66,34 @@ public class ValutazioneDAO {
         return list;
     }
 
+    public ArrayList<Valutazione> getAdminReviewList1(String user){
+        String sql= "SELECT fk_UsernameA from valutazione join admin on fk_UsernameA=Username";
+        String usernameA = null;
+        try {
+            PreparedStatement prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = prepStmt.executeQuery();
+            rs.first();
+            usernameA = rs.getString("fk_UsernameA");
+            System.out.println("Username admin: "+usernameA);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return getAdminReviewList(usernameA);
+    }
+
     public ArrayList<Valutazione> getAdminReviewList(String user){
         ArrayList<Valutazione> list = new ArrayList<Valutazione>();
         Statement stmt = null;
         try{
-            stmt = this.daoA.getConnection().createStatement();
             String sql = "SELECT * FROM valutazione WHERE fk_UsernameA =?";
-            PreparedStatement prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            PreparedStatement prepStmt=null;
+            if (daoA==null){
+                stmt = this.daoP.getConnection().createStatement();
+                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            }else {
+                stmt = this.daoA.getConnection().createStatement();
+                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            }
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if(rs.first()){
@@ -181,3 +202,4 @@ public class ValutazioneDAO {
         }
     }
 }
+

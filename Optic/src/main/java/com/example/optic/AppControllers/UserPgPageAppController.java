@@ -7,7 +7,11 @@ import com.example.optic.dao.ValutazioneDAO;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Campo;
 import com.example.optic.dao.AdminDAO;
+import com.example.optic.entities.Valutazione;
+
 import java.io.IOException;
+import java.util.ArrayList;
+
 public class UserPgPageAppController {
 
     public static AdminBean getCampoInfo(AdminBean campo) throws Exception{
@@ -37,9 +41,22 @@ public class UserPgPageAppController {
         PlayerDAO p= PlayerDAO.getInstance();
         ValutazioneDAO dao=new ValutazioneDAO(p);
         if(dao.getValutazione(val)){
-            System.out.println("Gia presente");
             dao.deleteValutazione(val);
         }
         dao.saveReview(val);
+    }
+
+    public static ArrayList<Valutazione> reviewList(AdminBean admin){
+        ArrayList<Valutazione> list = null;
+        try {
+
+            PlayerDAO player= PlayerDAO.getInstance();
+            ValutazioneDAO dao= new ValutazioneDAO(player);
+            list=dao.getAdminReviewList1(admin.getUsername());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }
