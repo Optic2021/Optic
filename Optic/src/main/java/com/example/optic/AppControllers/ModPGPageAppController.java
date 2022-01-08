@@ -109,6 +109,18 @@ public class ModPGPageAppController {
         return list;
     }
 
+    public static ArrayList<Event> getEventList() throws IOException{
+        ArrayList<Event> list = new ArrayList<Event>();
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            EventDAO eventDao = new EventDAO(dao);
+            list = eventDao.getEventList();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
     //setto all'admin (bean) il corrispettivo arbitro (bean2)
     public static void setReferee(UserBean admin, UserBean referee) {
         try{

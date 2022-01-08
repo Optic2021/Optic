@@ -136,7 +136,6 @@ public class ControllerModPGPage extends GraphicController {
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
                 date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
                 activity.setText(play.getFk_Nome());
-                nPlayers.setText(Integer.toString(play.getNum_Giocatori()));
                 this.populatePlayersTable();
             }
         }catch (IOException e){
@@ -160,10 +159,10 @@ public class ControllerModPGPage extends GraphicController {
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
                 date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
                 activity.setText(play.getFk_Nome());
-                nPlayers.setText(Integer.toString(play.getNum_Giocatori()));
                 this.populatePlayersTable();
             } else {
                 activityBox.setVisible(true);
+                this.populateActivityBox();
                 datePicker.setVisible(true);
                 addPlay.setVisible(true);
                 idPlay.setVisible(false);
@@ -203,7 +202,6 @@ public class ControllerModPGPage extends GraphicController {
                     idPlay.setText(Integer.toString(play.getIdGiornata()));
                     date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
                     activity.setText(play.getFk_Nome());
-                    nPlayers.setText(Integer.toString(play.getNum_Giocatori()));
                     this.populatePlayersTable();
                 }
                 activityBox.setVisible(false);
@@ -246,13 +244,22 @@ public class ControllerModPGPage extends GraphicController {
         GiornataBean playBean = new GiornataBean();
         players.getItems().clear();
         playerName.setCellValueFactory(new PropertyValueFactory<>("username"));
-        playerVal.setCellValueFactory(new PropertyValueFactory<>("valutazione"));
+        playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
         Player p = new Player();
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
         ArrayList<Player> list = ModPGPageAppController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
             p = list.get(i);
             players.getItems().add(p);
+        }
+        nPlayers.setText(Integer.toString(list.size()));
+    }
+
+    public void populateActivityBox() throws IOException {
+        activityBox.getItems().clear();
+        ArrayList<Event> list = ModPGPageAppController.getEventList();
+        for(int i = 0; i < list.size();i++){
+            activityBox.getItems().add(list.get(i).getNome());
         }
     }
 

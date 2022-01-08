@@ -400,9 +400,9 @@
                                     <children>
                                         <GridPane prefHeight="74.0" prefWidth="570.0" GridPane.rowIndex="1">
                                             <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="90.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="192.0" />
-                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="212.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="64.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="265.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="124.0" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="118.0" />
                                             </columnConstraints>
                                             <rowConstraints>
@@ -411,7 +411,7 @@
                                     <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
-                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="177.0" styleClass="title" text="Attività" GridPane.columnIndex="1">
+                                                <Label alignment="CENTER" prefHeight="23.0" prefWidth="260.0" styleClass="title" text="Attività" GridPane.columnIndex="1">
                                                     <GridPane.margin>
                                                         <Insets left="5.0" right="5.0" />
                                                     </GridPane.margin>
@@ -443,13 +443,19 @@
                                                         <Insets left="5.0" right="5.0" />
                                                     </GridPane.margin>
                                                 </Label>
-                                    <ComboBox fx:id="activityBox" prefHeight="13.0" prefWidth="172.0" visible="false" visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <ComboBox fx:id="activityBox" prefHeight="33.0" prefWidth="257.0" visible="false" visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <styleClass>
                                           <String fx:value="backgroundLG" />
                                           <String fx:value="title" />
-                                       </styleClass></ComboBox>
-                                    <DatePicker fx:id="datePicker" prefHeight="38.0" prefWidth="187.0" styleClass="backgroundG" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Label fx:id="activity" alignment="CENTER" prefHeight="45.0" prefWidth="203.0" styleClass="text-black" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       </styleClass>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></ComboBox>
+                                    <DatePicker fx:id="datePicker" prefHeight="38.0" prefWidth="187.0" styleClass="backgroundG" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></DatePicker>
+                                    <Label fx:id="activity" alignment="CENTER" prefHeight="35.0" prefWidth="265.0" styleClass="text-black" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -482,8 +488,8 @@
                                         </Label>
                                         <TableView fx:id="players" prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" GridPane.rowIndex="3">
                                             <columns>
-                                                <TableColumn fx:id="playerName" editable="false" prefWidth="187.0" style="-fx-text-fill: rgb(28,28,28);" styleClass="title" text="Nome" />
-                                                <TableColumn fx:id="playerVal" prefWidth="187.0" style="-fx-text-fill: rgb(229,190,51);" text="Stelle" />
+                                                <TableColumn fx:id="playerName" editable="false" prefWidth="273.0" style="-fx-text-fill: rgb(28,28,28);" styleClass="title" text="Nome" />
+                                                <TableColumn id="stars" fx:id="playerVal" prefWidth="158.0" style="-fx-text-fill: rgb(229,190,51); -fx-font-size: 20;" text="Stelle" />
                                             </columns>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />

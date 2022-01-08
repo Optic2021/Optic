@@ -113,6 +113,9 @@
 .table-view .column-header {
     -fx-background-color: GREY;
 }
+#stars{
+    -fx-alignment: CENTER;
+}
 .table-row-cell{
     -fx-background-color: -fx-table-cell-border-color, rgb(110,110,110);
     -fx-background-insets: 0, 0 0 1 0;
@@ -132,14 +135,13 @@
 }
 .table-view .table-cell {
     -fx-text-fill: rgb(28,28,28);
-    -fx-font-size: 14;
+    -fx-font-family: "Arial Black";
 }
 .table-view #title{
     -fx-text-fill: rgb(28,28,28);
     -fx-font-family: "Arial Black";
     -fx-font-size: 14;
 }
-
 .textClogo .label{
     -fx-text-fill: rgb(229,190,51);
     -fx-font-family: "Arial Black";

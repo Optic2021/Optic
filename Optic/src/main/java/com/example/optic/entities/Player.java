@@ -5,6 +5,7 @@ public class Player {
     private String password;
     private String descrizione;
     private int valutazione = 0;
+    private String stelle = "";
     private String ig;
     private String fb;
     private String stato = "nullo";
@@ -23,6 +24,7 @@ public class Player {
     public Player(String username, int valutazione){
         this.username = username;
         this.valutazione = valutazione;
+        this.setStarsFromVal(valutazione);
     }
 
     public String getUsername() {
@@ -57,6 +59,14 @@ public class Player {
         this.valutazione = valutazione;
     }
 
+    public String getStelle() {
+        return stelle;
+    }
+
+    public void setStelle(String stelle) {
+        this.stelle = stelle;
+    }
+
     public String getIg() {
         return ig;
     }
@@ -79,5 +89,20 @@ public class Player {
 
     public void setStato(String stato) {
         this.stato = stato;
+    }
+
+    public void setStarsFromVal(int valutazione){
+        switch (valutazione){
+            case 1: this.stelle = "*";
+            break;
+            case 2: this.stelle = "* *";
+            break;
+            case 3: this.stelle = "* * *";
+            break;
+            case 4: this.stelle = "* * * *";
+            break;
+            case 5: this.stelle = "* * * * *";
+            default:;
+        }
     }
 }
