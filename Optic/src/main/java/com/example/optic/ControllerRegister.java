@@ -42,21 +42,18 @@ public class ControllerRegister extends GraphicController {
         userRB.setUserData(1);
         adminRB.setUserData(2);
         refereeRB.setUserData(3);
+        Alert err = new Alert(Alert.AlertType.ERROR);
         int prof = (int) profile.getSelectedToggle().getUserData();
         if(username.getText().isEmpty() || password.getText().isEmpty()){
-            Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("Inserire i dati");
             err.show();
         }else if(password.getText().length() < 4){
-            Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("La password deve contenere almeno 4 caratteri");
             err.show();
         }else if(password.getText().equals(confPassword.getText()) != true){
-            Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("Le password non combaciano");
             err.show();
         }else if(prof == 2 && (addressField.getText().isEmpty() || pgNameField.getText().isEmpty())) {
-            Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("Inserire informazioni campo!");
             err.show();
         } else{
@@ -103,12 +100,11 @@ public class ControllerRegister extends GraphicController {
 
             }
             if (!res) {
-                Alert err = new Alert(Alert.AlertType.CONFIRMATION);
-                err.setContentText("Registrazione avvenuta con successo!");
-                err.show();
+                Alert conf = new Alert(Alert.AlertType.CONFIRMATION);
+                conf.setContentText("Registrazione avvenuta con successo!");
+                conf.show();
                 this.toView(view, name);
             } else {
-                Alert err = new Alert(Alert.AlertType.ERROR);
                 err.setContentText("Username già utilizzato");
                 err.show();
             }

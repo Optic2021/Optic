@@ -10,6 +10,7 @@ import com.example.optic.entities.*;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class ModPGPageAppController {
 
@@ -119,6 +120,34 @@ public class ModPGPageAppController {
             e.printStackTrace();
         }
         return list;
+    }
+
+    public static boolean isDateValid(GiornataBean bean){
+        boolean res = true;
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            String admin = bean.getAdmin();
+            Calendar cal = bean.getData();
+            res = playDao.isDateValid(admin,cal);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return res;
+    }
+
+
+    public static void insertPlay(GiornataBean bean){
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            String event = bean.getEvento();
+            String admin = bean.getAdmin();
+            Calendar cal = bean.getData();
+            playDao.insertPlay(admin,event,cal);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     //setto all'admin (bean) il corrispettivo arbitro (bean2)

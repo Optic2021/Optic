@@ -3,7 +3,7 @@ package com.example.optic.entities;
 public class Event {
     private String nome;
     private String descrizione;
-    private int giocatoriCons;
+    private int giocatoriCons = 0;
 
     public Event(String nome){
         this.nome = nome;
@@ -40,5 +40,10 @@ public class Event {
 
     public void setGiocatoriCons(int giocatoriCons) {
         this.giocatoriCons = giocatoriCons;
+    }
+
+    public String getFormattedText(){
+        String s = nome+"\n"+descrizione+"\n"+"Giocatori consigliati: "+giocatoriCons;
+        return s;
     }
 }

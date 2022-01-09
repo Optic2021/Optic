@@ -19,6 +19,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -72,7 +73,7 @@ public class ControllerModPGPage extends GraphicController {
     @FXML
     private ListView reviews;
     @FXML
-    private ComboBox activityBox;
+    private ComboBox eventBox;
     @FXML
     private DatePicker datePicker;
     @FXML
@@ -161,8 +162,8 @@ public class ControllerModPGPage extends GraphicController {
                 activity.setText(play.getFk_Nome());
                 this.populatePlayersTable();
             } else {
-                activityBox.setVisible(true);
-                this.populateActivityBox();
+                eventBox.setVisible(true);
+                this.populateEventBox();
                 datePicker.setVisible(true);
                 addPlay.setVisible(true);
                 idPlay.setVisible(false);
@@ -182,8 +183,8 @@ public class ControllerModPGPage extends GraphicController {
         Giornata play = null;
         SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            if(!(activity.getText().isEmpty()) && activityBox.isVisible()) {
-                activityBox.setVisible(false);
+            if(!(activity.getText().isEmpty()) && eventBox.isVisible()) {
+                eventBox.setVisible(false);
                 datePicker.setVisible(false);
                 addPlay.setVisible(false);
                 idPlay.setVisible(true);
@@ -204,7 +205,7 @@ public class ControllerModPGPage extends GraphicController {
                     activity.setText(play.getFk_Nome());
                     this.populatePlayersTable();
                 }
-                activityBox.setVisible(false);
+                eventBox.setVisible(false);
                 datePicker.setVisible(false);
                 addPlay.setVisible(false);
                 idPlay.setVisible(true);
@@ -255,11 +256,42 @@ public class ControllerModPGPage extends GraphicController {
         nPlayers.setText(Integer.toString(list.size()));
     }
 
-    public void populateActivityBox() throws IOException {
-        activityBox.getItems().clear();
+    public void populateEventBox() throws IOException {
+        eventBox.getItems().clear();
         ArrayList<Event> list = ModPGPageAppController.getEventList();
         for(int i = 0; i < list.size();i++){
-            activityBox.getItems().add(list.get(i).getNome());
+            eventBox.getItems().add(list.get(i).getNome());
+        }
+    }
+
+    public void insertPlay() throws ParseException {
+        //controllo se sono stati inseriti i dati della giornata da inserire
+        Alert err = new Alert(Alert.AlertType.ERROR);
+        if(eventBox.getSelectionModel().isEmpty() || datePicker.getValue() == null){
+            err.setContentText("Inserire data e tipo di attività.");
+            err.show();
+        }else if(datePicker.getValue().isBefore(LocalDate.now())) {
+            err.setContentText("Impossibile inserire una data già passata.");
+            err.show();
+        }else{
+            GiornataBean playBean = new GiornataBean();
+            SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+            Date date = date_format.parse(datePicker.getValue().toString());
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(date);
+            playBean.setEvento(eventBox.getSelectionModel().getSelectedItem().toString());
+            playBean.setData(cal);
+            playBean.setAdmin(user.getText());
+            boolean res = ModPGPageAppController.isDateValid(playBean);
+            if(!res) {
+                ModPGPageAppController.insertPlay(playBean);
+                Alert conf = new Alert(Alert.AlertType.CONFIRMATION);
+                conf.setContentText("Giornata inserita con successo!");
+                conf.show();
+            }else{
+                err.setContentText("Esiste già una giornata con la stessa data.");
+                err.show();
+            }
         }
     }
 
@@ -339,18 +371,24 @@ public class ControllerModPGPage extends GraphicController {
         }
     }
 
-    public void eventList(ActionEvent e) throws IOException {
-        Stage list = new Stage();
-        Stage obj = (Stage) id.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 350);
-        scene.setFill(Color.TRANSPARENT);
-        list.setResizable(false);
-        list.initOwner(obj);
-        list.initModality(Modality.APPLICATION_MODAL);
-        list.initStyle(StageStyle.TRANSPARENT);
-        list.setScene(scene);
-        list.show();
+    public void eventList(ActionEvent e) throws Exception {
+        try {
+            Stage list = new Stage();
+            Stage obj = (Stage) id.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
+            GraphicController controller = fxmlLoader.getController();
+            controller.setUserVariables(user.getText());
+            scene.setFill(Color.TRANSPARENT);
+            list.setResizable(false);
+            list.initOwner(obj);
+            list.initModality(Modality.APPLICATION_MODAL);
+            list.initStyle(StageStyle.TRANSPARENT);
+            list.setScene(scene);
+            list.show();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 
     public void socialModify() throws IOException{

@@ -26,8 +26,8 @@ public class ControllerLogin extends GraphicController {
 
     public void login(ActionEvent e) throws Exception {
         boolean res = false;
+        Alert err = new Alert(Alert.AlertType.ERROR);
         if(username.getText().isEmpty() || password.getText().isEmpty()){
-            Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("Inserire i dati");
             err.show();
         }else {
@@ -76,7 +76,6 @@ public class ControllerLogin extends GraphicController {
             if (res) {
                 this.toView(view, name);
             } else {
-                Alert err = new Alert(Alert.AlertType.ERROR);
                 err.setContentText("Credenziali errate");
                 err.show();
             }
