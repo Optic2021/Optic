@@ -8,6 +8,7 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -21,18 +22,11 @@
             <String fx:value="backgroundG" />
             <String fx:value="section" />
         </styleClass>
-      <top>
-            <Label prefHeight="45.0" prefWidth="321.0" styleClass="text-black" text="Modifica Recapiti Social" BorderPane.alignment="CENTER">
-                <font>
-                    <Font name="Arial Black" size="24.0" />
-                </font>
-            </Label>
-      </top>
       <center>
          <GridPane prefHeight="192.0" prefWidth="386.0" styleClass="textTitoli" BorderPane.alignment="CENTER">
            <columnConstraints>
-             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="101.0" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="288.0" />
            </columnConstraints>
            <rowConstraints>
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -60,30 +54,47 @@
                <TextField fx:id="numWhatsapp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             </children>
             <BorderPane.margin>
-               <Insets right="5.0" />
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </BorderPane.margin>
          </GridPane>
       </center>
       <bottom>
-         <Button mnemonicParsing="false" onAction="#conferma" style="-fx-cursor: hand;" styleClass="menuButtonDF" text="Conferma" BorderPane.alignment="CENTER">
+         <Button mnemonicParsing="false" onAction="#conferma" style="-fx-cursor: hand;" text="Conferma" BorderPane.alignment="CENTER">
             <opaqueInsets>
                <Insets />
             </opaqueInsets>
             <BorderPane.margin>
                <Insets bottom="5.0" />
             </BorderPane.margin>
+            <styleClass>
+               <String fx:value="menuButtonDF" />
+               <String fx:value="login" />
+            </styleClass>
          </Button>
       </bottom>
+      <top>
+         <AnchorPane prefHeight="55.0" prefWidth="394.0" BorderPane.alignment="CENTER">
+            <children>
+               <Label alignment="CENTER" layoutX="47.0" layoutY="8.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-black" text="Modifica recapiti social">
+                  <font>
+                     <Font name="Arial Black" size="23.0" />
+                  </font>
+               </Label>
+                  <Button layoutX="360.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exitSocial" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: GREY; -fx-cursor: hand;">
+                  <graphic>
+                          <ImageView fitHeight="25.0" fitWidth="25.0">
+                              <image>
+                                  <Image url="@img/close-1214342.png" />
+                              </image>
+                          </ImageView>
+                  </graphic>
+               </Button>
+               <Label fx:id="user" layoutX="183.0" layoutY="6.0" visible="false" />
+            </children>
+         </AnchorPane>
+      </top>
     </BorderPane>
     <ToolBar layoutX="456.0" layoutY="-37.0" prefHeight="30.0" prefWidth="32.0" style="-fx-background-color: GREY; -fx-background-radius: 10PX 10PX 10PX 10PX;" />
-      <Button layoutX="376.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exitSocial" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: GREY; -fx-cursor: hand;">
-      <graphic>
-              <ImageView fitHeight="25.0" fitWidth="25.0">
-                  <image>
-                      <Image url="@img/close-1214342.png" />
-                  </image>
-              </ImageView>
-      </graphic></Button>
     <styleClass>
         <String fx:value="backgroundG" />
         <String fx:value="section" />

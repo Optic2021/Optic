@@ -25,6 +25,19 @@ public class ModPGPageAppController {
         return admin;
     }
 
+    public static void setAdminSocial(AdminBean a){
+        String admin = a.getUsername();
+        String fb = a.getFb();
+        String ig = a.getIg();
+        String wa = a.getWa();
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            dao.setAdminSocial(admin,ig,fb,wa);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     //cerco arbitro tramite admin username
     public static Referee getRefereeFromAdmin(UserBean u){
         Referee ref = null;

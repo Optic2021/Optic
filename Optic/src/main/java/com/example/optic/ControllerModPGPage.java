@@ -391,11 +391,13 @@ public class ControllerModPGPage extends GraphicController {
         }
     }
 
-    public void socialModify() throws IOException{
+    public void socialModify() throws Exception {
         Stage social = new Stage();
         Stage obj = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/SocialModPG.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 250);
+        GraphicController controller = fxmlLoader.getController();
+        controller.setUserVariables(user.getText());
         scene.setFill(Color.TRANSPARENT);
         social.setResizable(false);
         social.initOwner(obj);
@@ -441,10 +443,6 @@ public class ControllerModPGPage extends GraphicController {
     public void save(ActionEvent e){
         //passare a classe di scrittura in database
         String text1 =description.getText();
-        /*String text2 =urlFacebook.getText();
-        String text3 =urlInstagram.getText();
-        String text4 =numWhatsapp.getText();*/
-
         description.setEditable(false);
         ref.setEditable(false);
         //setto il nuovo arbitro se il nome non è vuoto e se è diverso da quello precedente

@@ -29,6 +29,7 @@ public class ControllerEventList extends GraphicController {
         this.events.getItems().clear();
         ArrayList<Event> list = ModPGPageAppController.getEventList();
         for(int i = 0; i < list.size();i++){
+            System.out.println(list.get(i).getFormattedText().length());
             events.getItems().add(list.get(i).getFormattedText());
         }
         events.setCellFactory(new Callback<ListView<String>, ListCell<String>>() {

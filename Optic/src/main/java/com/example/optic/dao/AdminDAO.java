@@ -72,24 +72,20 @@ public class AdminDAO {
         //qui possiamo dividere i due tipi di update
     }
 
-    public static void setInfoPg(String user,String instagram,String facebook,String whatsapp,String DescrizioneC) throws SQLException {
+    public void setAdminSocial(String user,String instagram,String facebook,String whatsapp) throws SQLException {
         Statement stmt = null;
-        int ret;
-        Admin a = new Admin(user,"");
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
             stmt = instance.conn.createStatement();
-            String sql = "UPDATE referee SET Instagram=?, Facebook=?, Whatsapp=?,DescrizioneC=?, NomeC=? WHERE Username=?";
+            String sql = "UPDATE admin SET Instagram=?, Facebook=?, Whatsapp=? WHERE Username=?";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
-            prepStmt.setString(6, a.getUsername());
-            prepStmt.setString(1, a.getIg());
-            prepStmt.setString(2, a.getFb());
-            prepStmt.setString(3, a.getWa());
-            prepStmt.setString(4, a.getDescrizioneC());
-            prepStmt.setString(5, a.getNomeC());
-
+            prepStmt.setString(1, instagram);
+            prepStmt.setString(2, facebook);
+            prepStmt.setString(3, whatsapp);
+            prepStmt.setString(4, user);
+            prepStmt.executeUpdate();
         } finally {
             try {
                 if (stmt != null)
@@ -98,7 +94,6 @@ public class AdminDAO {
                 e.printStackTrace();
             }
         }
-
     }
 
     public Admin getAdmin(String user) throws Exception {

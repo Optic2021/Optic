@@ -290,17 +290,13 @@
                             <top>
                                 <BorderPane prefHeight="160.0" prefWidth="576.0" BorderPane.alignment="CENTER">
                            <top>
-                              <TextArea fx:id="description" editable="false" prefHeight="103.0" prefWidth="572.0" wrapText="true" BorderPane.alignment="CENTER">
+                              <TextArea fx:id="description" editable="false" prefHeight="103.0" prefWidth="572.0" styleClass="text-black" wrapText="true" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                                  <BorderPane.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </BorderPane.margin>
-                                 <styleClass>
-                                    <String fx:value="text-area" />
-                                    <String fx:value="text-black" />
-                                 </styleClass>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
