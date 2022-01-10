@@ -24,6 +24,8 @@ public class ControllerRefCampo extends GraphicController{
     @FXML
     private Label user;
     @FXML
+    private Label userType;
+    @FXML
     private TextArea desc;
     @FXML
     private Label address;
@@ -50,23 +52,29 @@ public class ControllerRefCampo extends GraphicController{
             this.title.setText(a.getNomeC());
             this.desc.setText(a.getDescrizioneC());
             this.address.setText(a.getVia());
-            //this.prov.setText(a.getProvincia());
+            this.prov.setText(a.getProvincia());
             this.admin.setText(a.getUsername());
         }
     }
 
-    public void eventList(ActionEvent e) throws IOException {
-        Stage list = new Stage();
-        Stage obj = (Stage) id.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 350);
-        scene.setFill(Color.TRANSPARENT);
-        list.setResizable(false);
-        list.initOwner(obj);
-        list.initModality(Modality.APPLICATION_MODAL);
-        list.initStyle(StageStyle.TRANSPARENT);
-        list.setScene(scene);
-        list.show();
+    public void eventList(ActionEvent e) throws Exception {
+        try {
+            Stage list = new Stage();
+            Stage obj = (Stage) id.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
+            GraphicController controller = fxmlLoader.getController();
+            controller.setUserVariables(userType.getText());
+            scene.setFill(Color.TRANSPARENT);
+            list.setResizable(false);
+            list.initOwner(obj);
+            list.initModality(Modality.APPLICATION_MODAL);
+            list.initStyle(StageStyle.TRANSPARENT);
+            list.setScene(scene);
+            list.show();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
     public void toLogin(ActionEvent e) throws IOException {
         RefCampoController.closeConn();

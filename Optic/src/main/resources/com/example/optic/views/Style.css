@@ -141,6 +141,8 @@
 
 .table-row-cell:selected {
     -fx-background-color: rgb(60,60,60);
+    -fx-table-cell-border-color: rgb(229,190,51);
+    -fx-border-color: rgb(229,190,51);
     -fx-background-insets: 0;
     -fx-background-radius: 1;
 }

@@ -38,6 +38,17 @@ public class ModPGPageAppController {
         }
     }
 
+    public static void setDescription(AdminBean a){
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            String admin = a.getUsername();
+            String desc = a.getDescrizione();
+            dao.setDescription(admin,desc);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     //cerco arbitro tramite admin username
     public static Referee getRefereeFromAdmin(UserBean u){
         Referee ref = null;
@@ -128,7 +139,7 @@ public class ModPGPageAppController {
         try{
             AdminDAO dao = AdminDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
-            list = eventDao.getEventList();
+            list = eventDao.getAdminEventList();
         }catch (IOException e){
             e.printStackTrace();
         }

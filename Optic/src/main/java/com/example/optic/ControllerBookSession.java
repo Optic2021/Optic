@@ -47,13 +47,9 @@ public class ControllerBookSession extends GraphicController {
 
     public void tableview(MouseEvent e){
         try {
-
             Node node=((Node)e.getTarget()).getParent();
-
             AdminBean campo=(AdminBean) table.getSelectionModel().getSelectedItem();
-
             toView("views/userPgPage.fxml",user.getText(),campo);
-
         }
         catch(Exception z){
             z.printStackTrace();

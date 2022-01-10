@@ -63,4 +63,9 @@ public class Valutazione {
     public void setFk_UsernameA(String fk_UsernameA) {
         this.fk_UsernameA = fk_UsernameA;
     }
+
+    public String getFormattedText(){
+        String desc = this.fk_UsernameP1+" :\n"+descrizione;
+        return desc;
+    }
 }

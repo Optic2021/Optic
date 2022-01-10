@@ -1,9 +1,17 @@
 package com.example.optic;
 
+import com.example.optic.AppControllers.EventListController;
 import com.example.optic.AppControllers.ModPGPageAppController;
+import com.example.optic.AppControllers.RefCampoController;
+import com.example.optic.AppControllers.UserProfileAppController;
+import com.example.optic.dao.AdminDAO;
+import com.example.optic.dao.RefereeDAO;
+import com.example.optic.entities.Admin;
 import com.example.optic.entities.Event;
+import com.example.optic.entities.Referee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
@@ -22,14 +30,22 @@ public class ControllerEventList extends GraphicController {
 
     @Override
     public void setUserVariables(String user) throws IOException {
-        this.setList();
+        ArrayList<Event> list = new ArrayList<Event>();
+        if(user.contains("player")){//uso la dao del player
+            //list = UserProfileAppController.getEventList();
+            this.setList(list);
+        }else if(user.contains("admin")){//uso la dao dell'admin
+            list = ModPGPageAppController.getEventList();
+            this.setList(list);
+        }else{//uso la dao del referee
+            list = RefCampoController.getEventList();
+            this.setList(list);
+        }
     }
 
-    public void setList() throws IOException {
+    public void setList(ArrayList<Event> list) throws IOException {
         this.events.getItems().clear();
-        ArrayList<Event> list = ModPGPageAppController.getEventList();
         for(int i = 0; i < list.size();i++){
-            System.out.println(list.get(i).getFormattedText().length());
             events.getItems().add(list.get(i).getFormattedText());
         }
         events.setCellFactory(new Callback<ListView<String>, ListCell<String>>() {

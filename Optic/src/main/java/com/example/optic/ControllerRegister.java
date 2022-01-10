@@ -32,6 +32,11 @@ public class ControllerRegister extends GraphicController {
     private Label pgNameLabel;
     @FXML
     private TextField pgNameField;
+    @FXML
+    private Label pgProv;
+    @FXML
+    private TextField pgProvField;
+
 
     public void toLogin(ActionEvent e) throws IOException {
         this.toView("views/login.fxml");
@@ -53,7 +58,7 @@ public class ControllerRegister extends GraphicController {
         }else if(password.getText().equals(confPassword.getText()) != true){
             err.setContentText("Le password non combaciano");
             err.show();
-        }else if(prof == 2 && (addressField.getText().isEmpty() || pgNameField.getText().isEmpty())) {
+        }else if(prof == 2 && (addressField.getText().isEmpty() || pgNameField.getText().isEmpty() || pgProv.getText().isEmpty())) {
             err.setContentText("Inserire informazioni campo!");
             err.show();
         } else{
@@ -68,6 +73,7 @@ public class ControllerRegister extends GraphicController {
                 case 2 -> {
                     bean.setVia(addressField.getText());
                     bean.setNomeC(pgNameField.getText());
+                    bean.setProv(pgProvField.getText());
                     res = RegisterController.isUsernameUsed(bean, 2);
                     if (!res) {
                         RegisterController.userRegister(bean, 2);
@@ -116,6 +122,8 @@ public class ControllerRegister extends GraphicController {
         addressLabel.setVisible(true);
         pgNameLabel.setVisible(true);
         pgNameField.setVisible(true);
+        pgProv.setVisible(true);
+        pgProvField.setVisible(true);
     }
 
     public void hideAddress(){
@@ -123,5 +131,7 @@ public class ControllerRegister extends GraphicController {
         addressLabel.setVisible(false);
         pgNameLabel.setVisible(false);
         pgNameField.setVisible(false);
+        pgProv.setVisible(false);
+        pgProvField.setVisible(false);
     }
 }

@@ -38,8 +38,6 @@ public class ControllerUserPgPage extends GraphicController {
     private TableColumn nome;
     @FXML
     private TableColumn recensione;
-
-
     @FXML
     private Label star1;
     @FXML

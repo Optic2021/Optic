@@ -9,6 +9,7 @@ public class Admin {
     private String fb;
     private String wa;
     private String via;
+    private String provincia;
 
     public Admin(){}
 
@@ -17,11 +18,12 @@ public class Admin {
         this.password = password;
     }
 
-    public Admin(String username, String password, String via, String nomeC){
+    public Admin(String username, String password, String via, String nomeC, String provincia){
         this.username = username;
         this.password = password;
         this.via = via;
         this.nomeC = nomeC;
+        this.provincia = provincia;
     }
 
     public String getUsername() {
@@ -86,5 +88,13 @@ public class Admin {
 
     public void setVia(String via) {
         this.via = via;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 }

@@ -50,20 +50,31 @@ public class RegisterController {
     }
 
     public static void userRegister(UserBean user,int userType) throws Exception {
+        String username;
+        String password;
         try {
             switch (userType) {
                 case 1 -> {
                     PlayerDAO player = PlayerDAO.getInstance();
-                    player.newPlayer(user.getUsername(), user.getPassword());
+                    username = user.getUsername();
+                    password = user.getPassword();
+                    player.newPlayer(username, password);
                 }
                 case 2 -> {
                     AdminDAO admin = AdminDAO.getInstance();
-                    admin.newAdmin(user.getUsername(),user.getPassword(),user.getVia(),user.getNomeC());
+                    String via = user.getVia();
+                    String nomeC = user.getNomeC();
+                    String prov = user.getProv();
+                    username = user.getUsername();
+                    password = user.getPassword();
+                    admin.newAdmin(username,password,via,nomeC,prov);
                 }
                 case 3 -> {
                     RefereeDAO referee = RefereeDAO.getInstance();
+                    username = user.getUsername();
+                    password = user.getPassword();
                     referee.getConn();
-                    referee.newReferee(user.getUsername(), user.getPassword());
+                    referee.newReferee(username, password);
                 }
             }
         }catch (Exception e){

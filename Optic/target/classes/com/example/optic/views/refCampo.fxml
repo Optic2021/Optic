@@ -68,7 +68,7 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="93.0" text="Arbitro:" textAlignment="RIGHT">
+                                <Label fx:id="userType" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="93.0" text="Arbitro:" textAlignment="RIGHT">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -385,7 +385,7 @@
                                                         <Insets left="5.0" right="5.0" />
                                                     </GridPane.margin>
                                                 </Label>
-                                                <Label alignment="CENTER" layoutX="15.0" layoutY="11.0" prefHeight="20.0" prefWidth="177.0" styleClass="text-black" text="Ruba la bandiera" GridPane.rowIndex="1">
+                                                <Label alignment="CENTER" layoutX="15.0" layoutY="11.0" prefHeight="20.0" prefWidth="177.0" styleClass="text-black" text="Evento" GridPane.rowIndex="1">
                                                     <font>
                                                         <Font size="14.0" />
                                                     </font>
@@ -393,7 +393,7 @@
                                                         <Insets left="5.0" right="5.0" />
                                                     </GridPane.margin>
                                                 </Label>
-                                                <Label alignment="CENTER" layoutX="15.0" layoutY="32.0" prefHeight="20.0" prefWidth="177.0" styleClass="text-black" text="27/9/2022" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                <Label alignment="CENTER" layoutX="15.0" layoutY="32.0" prefHeight="20.0" prefWidth="177.0" styleClass="text-black" text="Data" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                     <font>
                                                         <Font size="14.0" />
                                                     </font>
@@ -401,7 +401,7 @@
                                                         <Insets left="5.0" right="5.0" />
                                                     </GridPane.margin>
                                                 </Label>
-                                                <Label alignment="CENTER" layoutX="201.0" layoutY="32.0" prefHeight="20.0" prefWidth="177.0" styleClass="text-black" text="23" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                <Label alignment="CENTER" layoutX="201.0" layoutY="32.0" prefHeight="20.0" prefWidth="177.0" styleClass="text-black" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                     <font>
                                                         <Font size="14.0" />
                                                     </font>

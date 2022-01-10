@@ -1,10 +1,7 @@
 package com.example.optic.dao;
 
-import com.example.optic.bean.AdminBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -131,6 +128,10 @@ public class RefereeDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public Connection getConnection(){
+        return this.conn;
     }
 
     public void closeConn(){

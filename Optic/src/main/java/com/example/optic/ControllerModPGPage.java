@@ -91,7 +91,7 @@ public class ControllerModPGPage extends GraphicController {
     @FXML
     private TableColumn playerVal;
 
-    public void toLogin(ActionEvent e) throws IOException {
+    public void toLogin() throws IOException {
         ModPGPageAppController.closeConn();
         this.toView("views/login.fxml");
     }
@@ -112,12 +112,12 @@ public class ControllerModPGPage extends GraphicController {
         if(a != null) {
             this.title.setText(a.getNomeC());
             this.address.setText(a.getVia());
-            //aggiungere provincia
+            this.prov.setText(a.getProvincia());
             this.description.setText(a.getDescrizioneC());
             this.description.setWrapText(true);
-            this.urlInstagram.setText(a.getIg());;
-            this.urlFacebook.setText(a.getFb());;
-            this.numWhatsapp.setText(a.getWa());;
+            this.urlInstagram.setText(a.getIg());
+            this.urlFacebook.setText(a.getFb());
+            this.numWhatsapp.setText(a.getWa());
             this.setFirstPlay(a.getUsername());
         }
     }
@@ -132,7 +132,6 @@ public class ControllerModPGPage extends GraphicController {
             //controllo se esiste una giornata da poter mostrare
             if (play != null) {
                 //mostro informazioni della giornata
-                //activity.impostaAttivita;
                 SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
                 date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
@@ -227,10 +226,9 @@ public class ControllerModPGPage extends GraphicController {
         admin.setUsername(user);
         ArrayList<Valutazione> list = ModPGPageAppController.getReviewList(admin);
         for(int i = 0; i < list.size(); i++) {
-            ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFk_UsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
             numVal++;
             mediaVal += list.get(i).getStelle();
-            reviews.getItems().add(val.getDescrizione());
+            reviews.getItems().add(list.get(i).getFormattedText());
         }
         if(numVal > 0) {
             stars = mediaVal / numVal;
@@ -414,14 +412,9 @@ public class ControllerModPGPage extends GraphicController {
         Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlInstagram.getText()});
     }
     public void whatsapp(){
-        //query db
-        /*@Override public void start(Stage stage) throws Exception {
-            WebView web = new WebView();
-            web.getEngine().load("http://www.google.com/");
-            Scene scene = new Scene(web);
-            stage.setScene(scene);
-            stage.show();
-        }*/
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Numero whatsapp: "+numWhatsapp.getText());
+        alert.show();
     }
 
 
@@ -432,17 +425,15 @@ public class ControllerModPGPage extends GraphicController {
         aggiorna.setVisible(true);
         refName.setText(ref.getText());//salvo il nome attuale dell'arbitro per controllare successivamente se sono state apportate modifiche
         ref.setEditable(true);
-
-        /*grid.setVisible(true);
-        urlFacebook.setEditable(true);
-        urlInstagram.setEditable(true);
-        numWhatsapp.setEditable(true);*/
-
     }
 
     public void save(ActionEvent e){
+        AdminBean a = new AdminBean();
         //passare a classe di scrittura in database
-        String text1 =description.getText();
+        String desc = description.getText();
+        a.setUsername(user.getText());
+        a.setDescrizione(desc);
+        ModPGPageAppController.setDescription(a);
         description.setEditable(false);
         ref.setEditable(false);
         //setto il nuovo arbitro se il nome non è vuoto e se è diverso da quello precedente
@@ -451,10 +442,5 @@ public class ControllerModPGPage extends GraphicController {
         }
         addPhoto.setVisible(false);
         aggiorna.setVisible(false);
-
-        /*urlFacebook.setEditable(false);
-        urlInstagram.setEditable(false);
-        numWhatsapp.setEditable(false);
-        grid.setVisible(false);*/
     }
 }

@@ -2,17 +2,11 @@ package com.example.optic.dao;
 
 import com.example.optic.bean.AdminBean;
 import com.example.optic.entities.Admin;
-import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Referee;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Properties;
 
 public class AdminDAO {
@@ -40,15 +34,15 @@ public class AdminDAO {
         }
     }
 
-    public void newAdmin(String username,String password,String via, String nomeC) throws Exception {
+    public void newAdmin(String username,String password,String via, String nomeC, String prov) throws Exception {
         Statement stmt = null;
-        Admin admin = new Admin(username, password, via, nomeC);
+        Admin admin = new Admin(username, password, via, nomeC, prov);
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
             stmt = instance.conn.createStatement();
-            String sql = "INSERT INTO admin VALUES(?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO admin VALUES(?,?,?,?,?,?,?,?,?)";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, admin.getUsername());
             prepStmt.setString(2, admin.getPassword());
@@ -58,6 +52,7 @@ public class AdminDAO {
             prepStmt.setString(6, admin.getDescrizioneC());
             prepStmt.setString(7, admin.getNomeC());
             prepStmt.setString(8, admin.getVia());
+            prepStmt.setString(9, admin.getProvincia());
             prepStmt.executeUpdate();
         } finally {
             try {
@@ -86,6 +81,29 @@ public class AdminDAO {
             prepStmt.setString(3, whatsapp);
             prepStmt.setString(4, user);
             prepStmt.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void setDescription(String admin, String desc){
+        Statement stmt = null;
+        try{
+            stmt = instance.conn.createStatement();
+            String sql = "UPDATE admin SET DescrizioneC=? WHERE Username=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt.setString(1, desc);
+            prepStmt.setString(2, admin);
+            prepStmt.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
         } finally {
             try {
                 if (stmt != null)
@@ -120,7 +138,7 @@ public class AdminDAO {
                 admin.setDescrizioneC(rs.getString("DescrizioneC"));
                 admin.setNomeC(rs.getString("NomeC"));
                 admin.setVia(rs.getString("Via"));
-
+                admin.setProvincia(rs.getString("Provincia"));
                 //chiudo result set
                 rs.close();
             }
