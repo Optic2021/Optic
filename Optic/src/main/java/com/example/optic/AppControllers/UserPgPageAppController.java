@@ -17,8 +17,7 @@ public class UserPgPageAppController {
     public static AdminBean getCampoInfo(AdminBean campo) throws Exception{
         AdminDAO dao= AdminDAO.getInstance();
 
-        String nomeC=campo.getNomeCampo();
-        System.out.println("Nome Campo: "+nomeC);
+        String nomeC=campo.getNomeCampo();;
 
         Admin x = dao.getCampo(nomeC);
         AdminBean y = new AdminBean();
@@ -52,7 +51,7 @@ public class UserPgPageAppController {
 
             PlayerDAO player= PlayerDAO.getInstance();
             ValutazioneDAO dao= new ValutazioneDAO(player);
-            list=dao.getAdminReviewList1(admin.getUsername());
+            list=dao.getAdminReviewList1(admin.getNomeCampo());
 
         } catch (IOException e) {
             e.printStackTrace();
