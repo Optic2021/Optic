@@ -62,6 +62,34 @@ public class GraphicController {
         obj.setScene(scene);
         obj.show();
     }
+
+    public void toView(String view,String user, String viewer) throws Exception {
+        Stage obj = (Stage) id.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
+        GraphicController controller = fxmlLoader.getController();
+        System.out.println(controller);
+        String usr=user+" "+viewer;
+        controller.setUserVariables(usr);
+        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+        scene.setOnMouseDragged(new EventHandler<MouseEvent>(){
+            @Override
+            public void handle(MouseEvent event) {
+                obj.setX(event.getScreenX() - xOffset);
+                obj.setY(event.getScreenY() - yOffset);
+            }
+        });
+        scene.setFill(Color.TRANSPARENT);
+        obj.setScene(scene);
+        obj.show();
+    }
+
     public void toView(String view, String usr) throws Exception {
         Stage obj = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
@@ -86,6 +114,7 @@ public class GraphicController {
         obj.setScene(scene);
         obj.show();
     }
+
     public void toView(String view, String usr, AdminBean campo)throws Exception{
         Stage obj = (Stage) id.getScene().getWindow();
 

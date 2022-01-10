@@ -67,10 +67,12 @@ public class ValutazioneDAO {
     }
 
     public ArrayList<Valutazione> getAdminReviewList1(String user){
-        String sql= "SELECT fk_UsernameA from valutazione join admin on fk_UsernameA=Username";
+        System.out.println("Nome campo "+user);
+        String sql= "SELECT fk_UsernameA from valutazione join admin on fk_UsernameA=Username WHERE NomeC=?";
         String usernameA = null;
         try {
             PreparedStatement prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             rs.first();
             usernameA = rs.getString("fk_UsernameA");
@@ -202,5 +204,3 @@ public class ValutazioneDAO {
         }
     }
 }
-
-

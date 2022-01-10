@@ -8,6 +8,7 @@ import com.example.optic.entities.Campo;
 import com.example.optic.entities.Valutazione;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextArea;
@@ -18,7 +19,6 @@ import javafx.scene.paint.Color;
 import java.io.IOException;
 import java.lang.Object;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 public class ControllerUserPgPage extends GraphicController {
     @FXML
@@ -38,6 +38,8 @@ public class ControllerUserPgPage extends GraphicController {
     private TableColumn nome;
     @FXML
     private TableColumn recensione;
+
+
     @FXML
     private Label star1;
     @FXML
@@ -137,16 +139,15 @@ public class ControllerUserPgPage extends GraphicController {
     }
 
     public void populateTable(AdminBean admin){
+
         ArrayList<Valutazione> list = UserPgPageAppController.reviewList(admin);
         nome.setCellValueFactory(new PropertyValueFactory<>("fk_UsernameP1"));
         recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
         int k = list.size();
-        System.out.println("Valore di k: "+k);
         int i = 0;
         Valutazione val;
 
         while (i < k) {
-            System.out.println("Valore di i: "+i);
             val = list.get(i);
             table.getItems().add(val);
             i++;
@@ -190,7 +191,27 @@ public class ControllerUserPgPage extends GraphicController {
         populateTable(admin);
     }
 
-    public void paginaProfilo(ActionEvent e){
-
+    public void paginaProfilo(/*MouseEvent e*/){
+        try {
+            //this.toView("views/userProfile.fxml",user.getText());
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
     }
+
+    public void tableview(MouseEvent event) throws IOException {
+        Node node=((Node)event.getTarget()).getParent();
+        Valutazione val = (Valutazione) table.getSelectionModel().getSelectedItem();
+        try {
+            if (user.getText().equals(val.getFk_UsernameP1())){
+                toView("views/userProfile.fxml", user.getText());
+            }else{
+                System.out.println("Entro qui");
+                toView("views/userViewProfile.fxml",val.getFk_UsernameP1(), user.getText());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
