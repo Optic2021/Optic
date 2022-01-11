@@ -144,7 +144,7 @@ public class ControllerModPGPage extends GraphicController {
     }
 
     //recupero la prossima giornata di gioco disponibile
-    public void getNextPlay() throws ParseException {
+    public void getNextPlay() throws ParseException, IOException {
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
         SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
@@ -175,6 +175,16 @@ public class ControllerModPGPage extends GraphicController {
             } catch (ParseException | IOException e) {
                 e.printStackTrace();
             }
+        }else{
+            eventBox.setVisible(true);
+            this.populateEventBox();
+            datePicker.setVisible(true);
+            addPlay.setVisible(true);
+            idPlay.setVisible(false);
+            date.setVisible(false);
+            activity.setVisible(false);
+            nPlayers.setVisible(false);
+            players.setVisible(false);
         }
     }
 
@@ -266,7 +276,7 @@ public class ControllerModPGPage extends GraphicController {
         }
     }
 
-    public void insertPlay() throws ParseException {
+    public void insertPlay() throws ParseException, IOException {
         //controllo se sono stati inseriti i dati della giornata da inserire
         Alert err = new Alert(Alert.AlertType.ERROR);
         if(eventBox.getSelectionModel().isEmpty() || datePicker.getValue() == null){
@@ -287,6 +297,7 @@ public class ControllerModPGPage extends GraphicController {
             boolean res = ModPGPageAppController.isDateValid(playBean);
             if(!res) {
                 ModPGPageAppController.insertPlay(playBean);
+                this.setFirstPlay(user.getText());
                 Alert conf = new Alert(Alert.AlertType.CONFIRMATION);
                 conf.setContentText("Giornata inserita con successo!");
                 conf.show();
