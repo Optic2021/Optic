@@ -1,11 +1,12 @@
 package com.example.optic;
 
+import com.example.optic.AppControllers.ModPGPageAppController;
 import com.example.optic.AppControllers.UserPgPageAppController;
 import com.example.optic.bean.AdminBean;
+import com.example.optic.bean.GiornataBean;
+import com.example.optic.bean.UserBean;
 import com.example.optic.bean.ValutazioneBean;
-import com.example.optic.entities.Admin;
-import com.example.optic.entities.Campo;
-import com.example.optic.entities.Valutazione;
+import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -18,7 +19,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import java.io.IOException;
 import java.lang.Object;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class ControllerUserPgPage extends GraphicController {
     @FXML
@@ -30,6 +35,12 @@ public class ControllerUserPgPage extends GraphicController {
     @FXML
     private Label ref;
     @FXML
+    private Label address;
+    @FXML
+    private Label prov;
+    @FXML
+    private Label adminName;
+    @FXML
     private TextArea testoRecensione;
 
     @FXML
@@ -39,6 +50,21 @@ public class ControllerUserPgPage extends GraphicController {
     @FXML
     private TableColumn recensione;
 
+    @FXML
+    private TableView players;
+    @FXML
+    private TableColumn playerName;
+    @FXML
+    private TableColumn playerVal;
+
+    @FXML
+    private Label idPlay;
+    @FXML
+    private Label activity;
+    @FXML
+    private Label date;
+    @FXML
+    private Label numGiocatori;
 
     @FXML
     private Label star1;
@@ -51,9 +77,118 @@ public class ControllerUserPgPage extends GraphicController {
     @FXML
     private Label star5;
 
+    @Override
+    public void setUserVariables(String string) {
+        String [] result = string.split("/");
+        String username = result[0];
+        String campo = result[1];
+        user.setText(username);
+
+        AdminBean admin = null;
+        AdminBean playground = null;
+        try {
+            playground = new AdminBean();
+            playground.setNomeCampo(campo);
+            admin = UserPgPageAppController.getCampoInfo(playground);
+            populateReviewTable(playground);
+            this.setFirstPlay(admin.getUsername());
+        }catch(Exception a){
+            a.printStackTrace();
+        }
+        try {
+            setCampo(admin);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    //setto la prima giornata di gioco disponibile
+    public void setFirstPlay(String user) throws Exception {
+        Giornata play = null;
+        UserBean bean = new UserBean();
+        //setto la bean con info dell'admin del campo attualmente visualizzato
+        bean.setUsername(user);
+        try {
+            play = UserPgPageAppController.getFirstPlay(bean);
+            //controllo se esiste una giornata da poter mostrare
+            if (play != null) {
+                //mostro informazioni della giornata
+                SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+                idPlay.setText(Integer.toString(play.getIdGiornata()));
+                date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                activity.setText(play.getFk_Nome());
+                this.populatePlayersTable();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    //recupero la prossima giornata di gioco disponibile
+    public void getNextPlay() throws ParseException {
+        GiornataBean playBean = new GiornataBean();
+        Giornata play = null;
+        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date data = date_format.parse(date.getText());
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(data);
+            playBean.setData(cal);
+            playBean.setAdmin(adminName.getText());
+            play = UserPgPageAppController.getNextPlay(playBean);
+            if (play != null) {
+                idPlay.setText(Integer.toString(play.getIdGiornata()));
+                date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                activity.setText(play.getFk_Nome());
+                this.populatePlayersTable();
+            }
+        }catch (ParseException | IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    //recupero la giornata di gioco precedente a quella mostrata
+    public void getLastPlay(){
+        GiornataBean playBean = new GiornataBean();
+        Giornata play = null;
+        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date data = date_format.parse(date.getText());
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(data);
+            playBean.setData(cal);
+            playBean.setAdmin(adminName.getText());
+            play = UserPgPageAppController.getLastPlay(playBean);
+            if (play != null) {
+                idPlay.setText(Integer.toString(play.getIdGiornata()));
+                date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                activity.setText(play.getFk_Nome());
+                this.populatePlayersTable();
+            }
+        }catch (ParseException | IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void populatePlayersTable() throws IOException {
+        GiornataBean playBean = new GiornataBean();
+        players.getItems().clear();
+        playerName.setCellValueFactory(new PropertyValueFactory<>("username"));
+        playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
+        Player p = new Player();
+        playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
+        ArrayList<Player> list = UserPgPageAppController.getPlayersList(playBean);
+        for(int i = 0; i < list.size(); i++) {
+            p = list.get(i);
+            players.getItems().add(p);
+        }
+        numGiocatori.setText(Integer.toString(list.size()));
+    }
+
     public void toHome(ActionEvent e) throws Exception {
         this.toView("views/userHomeMap.fxml",user.getText());
     }
+
     public void starEnter(MouseEvent e){
         Label l = (Label)e.getSource();
         String id = l.getId();
@@ -114,31 +249,7 @@ public class ControllerUserPgPage extends GraphicController {
         }
     }
 
-    @Override
-    public void setUserVariables(String string) {
-        String [] result=string.split(" ");
-        String username=result[0];
-        String campo=result[1];
-        user.setText(username);
-
-        AdminBean admin1 = null;
-        AdminBean admin = null;
-        try {
-            admin = new AdminBean();
-            admin.setNomeCampo(campo);
-            admin1 = UserPgPageAppController.getCampoInfo(admin);
-            populateTable(admin);
-        }catch(Exception a){
-            a.printStackTrace();
-        }
-        try {
-            setCampo(admin1);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    public void populateTable(AdminBean admin){
+    public void populateReviewTable(AdminBean admin){
 
         ArrayList<Valutazione> list = UserPgPageAppController.reviewList(admin);
         nome.setCellValueFactory(new PropertyValueFactory<>("fk_UsernameP1"));
@@ -157,8 +268,10 @@ public class ControllerUserPgPage extends GraphicController {
     public void setCampo(AdminBean admin){
         campo.setText(admin.getNomeCampo());
         desc.setText(admin.getDescrizione());
-        //Una volta sistemato db aggiungere anche il referee e controllare su tutti gli altri metodi
-        //ref.setText(admin.getReferee());
+        adminName.setText(admin.getUsername());
+        ref.setText(admin.getReferee());
+        address.setText(admin.getVia());
+        prov.setText(admin.getProvincia());
     }
 
     public void review() throws IOException {
@@ -188,7 +301,7 @@ public class ControllerUserPgPage extends GraphicController {
         AdminBean admin=new AdminBean();
         admin.setNomeCampo(campo.getText());
         table.getItems().clear();
-        populateTable(admin);
+        populateReviewTable(admin);
     }
 
     public void paginaProfilo(/*MouseEvent e*/){

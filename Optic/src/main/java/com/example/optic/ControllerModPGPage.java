@@ -28,6 +28,8 @@ public class ControllerModPGPage extends GraphicController {
     @FXML
     private Label user;
     @FXML
+    private Label userType;
+    @FXML
     private Label title;
     @FXML
     private Label star1;
@@ -376,7 +378,7 @@ public class ControllerModPGPage extends GraphicController {
             FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 580);
             GraphicController controller = fxmlLoader.getController();
-            controller.setUserVariables(user.getText());
+            controller.setUserVariables(userType.getText());
             scene.setFill(Color.TRANSPARENT);
             list.setResizable(false);
             list.initOwner(obj);

@@ -1,24 +1,16 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.EventListController;
 import com.example.optic.AppControllers.ModPGPageAppController;
 import com.example.optic.AppControllers.RefCampoController;
-import com.example.optic.AppControllers.UserProfileAppController;
-import com.example.optic.dao.AdminDAO;
-import com.example.optic.dao.RefereeDAO;
-import com.example.optic.entities.Admin;
 import com.example.optic.entities.Event;
-import com.example.optic.entities.Referee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -31,13 +23,13 @@ public class ControllerEventList extends GraphicController {
     @Override
     public void setUserVariables(String user) throws IOException {
         ArrayList<Event> list = new ArrayList<Event>();
-        if(user.contains("player")){//uso la dao del player
+        if(user.contains("Giocatore")){//uso la dao del player
             //list = UserProfileAppController.getEventList();
             this.setList(list);
-        }else if(user.contains("admin")){//uso la dao dell'admin
+        }else if(user.contains("Admin")){//uso la dao dell'admin
             list = ModPGPageAppController.getEventList();
             this.setList(list);
-        }else{//uso la dao del referee
+        }else if(user.contains("Arbitro")){//uso la dao del referee
             list = RefCampoController.getEventList();
             this.setList(list);
         }

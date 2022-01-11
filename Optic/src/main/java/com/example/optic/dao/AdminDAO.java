@@ -160,6 +160,7 @@ public class AdminDAO {
         try{
             stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM referee WHERE fk_UsernameA1=?";
+            System.out.println(user);
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
@@ -284,7 +285,6 @@ public class AdminDAO {
                 admin = null;
             }else {
                 rs.first();
-
                 admin.setUsername(rs.getString("Username"));
                 admin.setPassword(rs.getString("Password"));
                 admin.setIg(rs.getString("Instagram"));
@@ -292,8 +292,8 @@ public class AdminDAO {
                 admin.setWa(rs.getString("Whatsapp"));
                 admin.setDescrizioneC(rs.getString("DescrizioneC"));
                 admin.setNomeC(rs.getString("NomeC"));
-                //admin.setVia(rs.getString("Via"));
-                //admin.setReferee(rs.getString("referee.Username"));
+                admin.setVia(rs.getString("Via"));
+                admin.setProvincia(rs.getString("Provincia"));
 
                 //chiudo result set
                 rs.close();

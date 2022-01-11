@@ -123,7 +123,7 @@ public class GraphicController {
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
         GraphicController controller = fxmlLoader.getController();
 
-        usr=usr+" "+campo.getNomeCampo();
+        usr = usr+"/"+campo.getNomeCampo();
         controller.setUserVariables(usr);
 
         scene.setOnMousePressed(new EventHandler<MouseEvent>(){

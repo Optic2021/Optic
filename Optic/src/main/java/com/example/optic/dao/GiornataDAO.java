@@ -33,11 +33,17 @@ public class GiornataDAO {
     //recupero la prima giornata disponibile per la prenotazione dei giocatori
     public Giornata getFirstPlay(String admin) throws Exception{
         Statement stmt = null;
+        PreparedStatement prepStmt = null;
         Giornata play = null;
+        String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(Data) FROM giornata WHERE curdate() < Data AND fk_UsernameA2 =?)";
         try{
-            stmt = this.daoA.getConnection().createStatement();
-            String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(Data) FROM giornata WHERE curdate() < Data AND fk_UsernameA2 =?)";
-            PreparedStatement prepStmt = this.daoA.getConnection().prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            if(this.daoA != null) {
+                stmt = this.daoA.getConnection().createStatement();
+                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }else if(this.daoP != null){
+                stmt = this.daoP.getConnection().createStatement();
+                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }
             prepStmt.setString(1,admin);
             ResultSet rs = prepStmt.executeQuery();
             if (rs.first()){ //giornata trovata
@@ -60,14 +66,20 @@ public class GiornataDAO {
 
     public Giornata getNextPlay(String admin, Calendar cal){
         Statement stmt = null;
+        PreparedStatement prepStmt = null;
+        String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(G.Data) FROM giornata G WHERE ?<G.Data AND G.fk_UsernameA2 =?)";
         Giornata play = null;
         Date data = null;
         try{
-            stmt = this.daoA.getConnection().createStatement();
+            if(this.daoA != null) {
+                stmt = this.daoA.getConnection().createStatement();
+                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }else if(this.daoP != null){
+                stmt = this.daoP.getConnection().createStatement();
+                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
             data = cal.getTime();//converto il calendar in data
-            String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(G.Data) FROM giornata G WHERE ?<G.Data AND G.fk_UsernameA2 =?)";
-            PreparedStatement prepStmt = this.daoA.getConnection().prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,dateFormat.format(data));//converto la data in string
             prepStmt.setString(2,admin);
             ResultSet rs = prepStmt.executeQuery();
@@ -91,15 +103,21 @@ public class GiornataDAO {
 
     public Giornata getLastPlay(String admin, Calendar cal){
         Statement stmt = null;
+        PreparedStatement prepStmt = null;
+        String sql = "SELECT * FROM giornata WHERE Data=(SELECT max(G.Data) FROM giornata G WHERE ?>G.Data AND G.fk_UsernameA2 =?)";
         Giornata play = null;
         Date data = null;
         try{
-            stmt = this.daoA.getConnection().createStatement();
+            if(this.daoA != null) {
+                stmt = this.daoA.getConnection().createStatement();
+                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }else if(this.daoP != null){
+                stmt = this.daoP.getConnection().createStatement();
+                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
             data = cal.getTime();//converto il calendar in data
-            String sql = "SELECT * FROM giornata WHERE Data=(SELECT max(G.Data) FROM giornata G WHERE ?>G.Data AND G.fk_UsernameA2 =?)";
-            PreparedStatement prepStmt =this.daoA.getConnection().prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            prepStmt.setString(1,dateFormat.format(data));//converto la data in string
+            prepStmt.setString(1,dateFormat.format(data));
             prepStmt.setString(2,admin);
             ResultSet rs = prepStmt.executeQuery();
             if (rs.first()){ //giornata trovata
@@ -123,12 +141,19 @@ public class GiornataDAO {
     public ArrayList<Player> getPlayersList(int playId){
         ArrayList<Player> list = new ArrayList<Player>();
         Statement stmt = null;
+        PreparedStatement prepStmt = null;
+        String sql = "SELECT Username,Valutazione FROM (player JOIN prenotazione ON Username = fk_Username) WHERE fk_idGiornata =?";
         String nome;
         int stelle;
         try{
-            stmt = this.daoA.getConnection().createStatement();
-            String sql = "SELECT Username,Valutazione FROM (player JOIN prenotazione ON Username = fk_Username) WHERE fk_idGiornata =?";
-            PreparedStatement prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            //controllo quale connessione è attualmente attiva e la utilizzo
+            if(this.daoA != null) {
+                stmt = this.daoA.getConnection().createStatement();
+                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }else if(this.daoP != null){
+                stmt = this.daoP.getConnection().createStatement();
+                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }
             prepStmt.setString(1,Integer.toString(playId));
             ResultSet rs = prepStmt.executeQuery();
             if(rs.first()){
