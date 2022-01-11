@@ -4,12 +4,15 @@ import com.example.optic.AppControllers.ModPGPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
+import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
@@ -144,12 +147,13 @@ public class ControllerModPGPage extends GraphicController {
     }
 
     //recupero la prossima giornata di gioco disponibile
-    public void getNextPlay() throws ParseException, IOException {
+    public void getNextPlay() throws ParseException {
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
         SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
         if(!(idPlay.getText().isEmpty())) {
             try {
+                //crea nuova giornata
                 Date data = date_format.parse(date.getText());
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(data);
@@ -177,7 +181,11 @@ public class ControllerModPGPage extends GraphicController {
             }
         }else{
             eventBox.setVisible(true);
-            this.populateEventBox();
+            try {
+                this.populateEventBox();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             datePicker.setVisible(true);
             addPlay.setVisible(true);
             idPlay.setVisible(false);

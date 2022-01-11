@@ -2,10 +2,8 @@ package com.example.optic;
 
 import com.example.optic.AppControllers.ModPGPageAppController;
 import com.example.optic.AppControllers.UserPgPageAppController;
-import com.example.optic.bean.AdminBean;
-import com.example.optic.bean.GiornataBean;
-import com.example.optic.bean.UserBean;
-import com.example.optic.bean.ValutazioneBean;
+import com.example.optic.bean.*;
+import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -417,6 +415,21 @@ public class ControllerUserPgPage extends GraphicController {
             }else{
                 System.out.println("Entro qui");
                 toView("views/userViewProfile.fxml",val.getFk_UsernameP1(), user.getText());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void tableview2(MouseEvent event) throws IOException {
+        Node node=((Node)event.getTarget()).getParent();
+        Player player = (Player) players.getSelectionModel().getSelectedItem();
+        try {
+            if (user.getText().equals(player.getUsername())){
+                toView("views/userProfile.fxml", user.getText());
+            }else{
+                System.out.println("Entro qui");
+                toView("views/userViewProfile.fxml",player.getUsername(), user.getText());
             }
         } catch (Exception e) {
             e.printStackTrace();
