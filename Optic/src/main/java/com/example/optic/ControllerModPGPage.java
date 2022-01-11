@@ -44,8 +44,6 @@ public class ControllerModPGPage extends GraphicController {
     @FXML
     private TextArea description;
     //settata non editable
-    @FXML
-    private Button addPhoto;
     //settata non visible
     @FXML
     private Button aggiorna;
@@ -150,31 +148,33 @@ public class ControllerModPGPage extends GraphicController {
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
         SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            Date data = date_format.parse(date.getText());
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(data);
-            playBean.setData(cal);
-            playBean.setAdmin(user.getText());
-            play = ModPGPageAppController.getNextPlay(playBean);
-            if (play != null) {
-                idPlay.setText(Integer.toString(play.getIdGiornata()));
-                date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
-                activity.setText(play.getFk_Nome());
-                this.populatePlayersTable();
-            } else {
-                eventBox.setVisible(true);
-                this.populateEventBox();
-                datePicker.setVisible(true);
-                addPlay.setVisible(true);
-                idPlay.setVisible(false);
-                date.setVisible(false);
-                activity.setVisible(false);
-                nPlayers.setVisible(false);
-                players.setVisible(false);
+        if(!(idPlay.getText().isEmpty())) {
+            try {
+                Date data = date_format.parse(date.getText());
+                Calendar cal = Calendar.getInstance();
+                cal.setTime(data);
+                playBean.setData(cal);
+                playBean.setAdmin(user.getText());
+                play = ModPGPageAppController.getNextPlay(playBean);
+                if (play != null) {
+                    idPlay.setText(Integer.toString(play.getIdGiornata()));
+                    date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                    activity.setText(play.getFk_Nome());
+                    this.populatePlayersTable();
+                } else {
+                    eventBox.setVisible(true);
+                    this.populateEventBox();
+                    datePicker.setVisible(true);
+                    addPlay.setVisible(true);
+                    idPlay.setVisible(false);
+                    date.setVisible(false);
+                    activity.setVisible(false);
+                    nPlayers.setVisible(false);
+                    players.setVisible(false);
+                }
+            } catch (ParseException | IOException e) {
+                e.printStackTrace();
             }
-        }catch (ParseException | IOException e){
-            e.printStackTrace();
         }
     }
 
@@ -183,40 +183,42 @@ public class ControllerModPGPage extends GraphicController {
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
         SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            if(!(activity.getText().isEmpty()) && eventBox.isVisible()) {
-                eventBox.setVisible(false);
-                datePicker.setVisible(false);
-                addPlay.setVisible(false);
-                idPlay.setVisible(true);
-                date.setVisible(true);
-                activity.setVisible(true);
-                nPlayers.setVisible(true);
-                players.setVisible(true);
-            }else{
-                Date data = date_format.parse(date.getText());
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(data);
-                playBean.setData(cal);
-                playBean.setAdmin(user.getText());
-                play = ModPGPageAppController.getLastPlay(playBean);
-                if (play != null) {
-                    idPlay.setText(Integer.toString(play.getIdGiornata()));
-                    date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
-                    activity.setText(play.getFk_Nome());
-                    this.populatePlayersTable();
+        if(!(idPlay.getText().isEmpty())) {
+            try {
+                if (!(activity.getText().isEmpty()) && eventBox.isVisible()) {
+                    eventBox.setVisible(false);
+                    datePicker.setVisible(false);
+                    addPlay.setVisible(false);
+                    idPlay.setVisible(true);
+                    date.setVisible(true);
+                    activity.setVisible(true);
+                    nPlayers.setVisible(true);
+                    players.setVisible(true);
+                } else {
+                    Date data = date_format.parse(date.getText());
+                    Calendar cal = Calendar.getInstance();
+                    cal.setTime(data);
+                    playBean.setData(cal);
+                    playBean.setAdmin(user.getText());
+                    play = ModPGPageAppController.getLastPlay(playBean);
+                    if (play != null) {
+                        idPlay.setText(Integer.toString(play.getIdGiornata()));
+                        date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                        activity.setText(play.getFk_Nome());
+                        this.populatePlayersTable();
+                    }
+                    eventBox.setVisible(false);
+                    datePicker.setVisible(false);
+                    addPlay.setVisible(false);
+                    idPlay.setVisible(true);
+                    date.setVisible(true);
+                    activity.setVisible(true);
+                    nPlayers.setVisible(true);
+                    players.setVisible(true);
                 }
-                eventBox.setVisible(false);
-                datePicker.setVisible(false);
-                addPlay.setVisible(false);
-                idPlay.setVisible(true);
-                date.setVisible(true);
-                activity.setVisible(true);
-                nPlayers.setVisible(true);
-                players.setVisible(true);
+            } catch (ParseException | IOException e) {
+                e.printStackTrace();
             }
-        }catch (ParseException | IOException e){
-            e.printStackTrace();
         }
     }
 
@@ -423,7 +425,6 @@ public class ControllerModPGPage extends GraphicController {
     public void modify(ActionEvent e){
         //abilita la modalita modifica
         description.setEditable(true);
-        addPhoto.setVisible(true);
         aggiorna.setVisible(true);
         refName.setText(ref.getText());//salvo il nome attuale dell'arbitro per controllare successivamente se sono state apportate modifiche
         ref.setEditable(true);
@@ -442,7 +443,6 @@ public class ControllerModPGPage extends GraphicController {
         if(!(ref.getText().isEmpty()) && !(ref.getText().equals(refName.getText()))) {
             this.setReferee(ref.getText());
         }
-        addPhoto.setVisible(false);
         aggiorna.setVisible(false);
     }
 }

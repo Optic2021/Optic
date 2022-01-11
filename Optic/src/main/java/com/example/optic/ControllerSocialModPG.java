@@ -44,6 +44,7 @@ public class ControllerSocialModPG extends GraphicController{
 
     //CONVENZIONE per quanto riguarda i social con exit esco senza salvare con conferma esco e salvo
     public  void conferma(){
+        boolean res = true;
         Alert err = new Alert(Alert.AlertType.ERROR);
         AdminBean bean = new AdminBean();
         bean.setUsername(user.getText());
@@ -51,19 +52,42 @@ public class ControllerSocialModPG extends GraphicController{
         bean.setIg(urlInstagram.getText());
         bean.setWa(numWhatsapp.getText());
         //controllo se gli url sono validi
-        if(!(urlInstagram.getText().contains("instagram"))){
-            err.setContentText("Url instagram non valido.");
-            err.show();
-        } else if(!(urlFacebook.getText().contains("facebook"))){
-            err.setContentText("Url facebook non valido.");
-            err.show();
-        } else if(numWhatsapp.getText().length() != 10){
-            err.setContentText("Numero di telefono non valido");
-            err.show();
-        } else if(urlInstagram.getText().length() > 200 || urlInstagram.getText().length() > 200) {
-            err.setContentText("Link dei social troppo lunghi");
-            err.show();
-        }else{
+        if(urlFacebook.getText() != null) {
+            if(!(urlFacebook.getText().isEmpty())) {
+                if (!(urlFacebook.getText().contains("facebook"))) {
+                    res = false;
+                    err.setContentText("Url facebook non valido.");
+                    err.show();
+                } else if (urlFacebook.getText().length() > 200) {
+                    res = false;
+                    err.setContentText("Url facebook troppo lungo.");
+                    err.show();
+                }
+            }
+        }
+        if(urlInstagram.getText() != null) {
+            if(!(urlInstagram.getText().isEmpty())) {
+                if (!(urlInstagram.getText().contains("instagram"))) {
+                    res = false;
+                    err.setContentText("Url instagram non valido.");
+                    err.show();
+                } else if (urlInstagram.getText().length() > 200) {
+                    res = false;
+                    err.setContentText("Url instagram troppo lungo.");
+                    err.show();
+                }
+            }
+        }
+        if (numWhatsapp.getText() != null){
+            if(!(numWhatsapp.getText().isEmpty())) {
+                if (numWhatsapp.getText().length() != 10) {
+                    res = false;
+                    err.setContentText("Numero di telefono non valido");
+                    err.show();
+                }
+            }
+        }
+        if(res){
             ModPGPageAppController.setAdminSocial(bean);
             ActionEvent event = new ActionEvent();
             exitSocial(event);
