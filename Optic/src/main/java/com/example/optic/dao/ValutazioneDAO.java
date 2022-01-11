@@ -74,9 +74,10 @@ public class ValutazioneDAO {
             PreparedStatement prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
-            rs.first();
-            usernameA = rs.getString("fk_UsernameA");
-            System.out.println("Username admin: "+usernameA);
+            if(rs.first()){
+                rs.first();
+                usernameA = rs.getString("fk_UsernameA");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -4,11 +4,8 @@ import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.bean.ValutazioneBean;
-import com.example.optic.dao.GiornataDAO;
-import com.example.optic.dao.PlayerDAO;
-import com.example.optic.dao.ValutazioneDAO;
+import com.example.optic.dao.*;
 import com.example.optic.entities.*;
-import com.example.optic.dao.AdminDAO;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,6 +18,7 @@ public class UserPgPageAppController {
         Admin x = dao.getCampo(nomeC);
         System.out.println(nomeC);
         AdminBean y = new AdminBean();
+        Referee ref = null;
 
         y.setUsername(x.getUsername());
         y.setPassword(x.getPassword());
@@ -29,11 +27,35 @@ public class UserPgPageAppController {
         y.setIg(x.getIg());
         y.setWa(x.getWa());
         y.setNomeCampo(x.getNomeC());
-        Referee ref = dao.getRefereeFromAdmin(x.getUsername());
-        y.setReferee(ref.getUsername());
+        ref = dao.getRefereeFromAdmin(x.getUsername());
+        if(ref != null){
+            y.setReferee(ref.getUsername());
+        }
         y.setVia(x.getVia());
         y.setProvincia(x.getProvincia());
         return y;
+    }
+
+    public static boolean isPlayerBooked(UserBean player, GiornataBean play){
+        boolean res = true;
+        try{
+            PlayerDAO dao = PlayerDAO.getInstance();
+            PrenotazioneDAO prenDao = new PrenotazioneDAO(dao);
+            res = prenDao.isPlayerBooked(player.getUsername(), play.getIdPlay());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return res;
+    }
+
+    public static void bookPlay(UserBean player, GiornataBean play){
+        try{
+            PlayerDAO dao = PlayerDAO.getInstance();
+            PrenotazioneDAO prenDao = new PrenotazioneDAO(dao);
+            prenDao.bookPlay(player.getUsername(), play.getIdPlay());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static Giornata getFirstPlay(UserBean bean){
