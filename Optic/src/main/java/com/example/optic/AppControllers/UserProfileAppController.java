@@ -2,10 +2,13 @@ package com.example.optic.AppControllers;
 
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.ValutazioneBean;
+import com.example.optic.bean.UserBean;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.dao.ValutazioneDAO;
+import com.example.optic.dao.GiornataDAO;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
+import com.example.optic.entities.Giornata;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -57,5 +60,16 @@ public class UserProfileAppController {
             dao.deleteValutazione(val,1);
         }
         dao.saveReview(val,1);
+    }
+    public static ArrayList<Giornata> getRecentPlayList(UserBean user){
+        ArrayList<Giornata> list = new ArrayList<Giornata>();
+        try{
+            PlayerDAO daoP = PlayerDAO.getInstance();
+            GiornataDAO dao = new GiornataDAO(daoP);
+            list = dao.getRecentPlayList(user.getUsername());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return list;
     }
 }

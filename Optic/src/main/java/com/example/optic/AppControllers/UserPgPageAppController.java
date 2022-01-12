@@ -16,7 +16,6 @@ public class UserPgPageAppController {
         AdminDAO dao = AdminDAO.getInstance();
         String nomeC = campo.getNomeCampo();;
         Admin x = dao.getCampo(nomeC);
-        System.out.println(nomeC);
         AdminBean y = new AdminBean();
         Referee ref = null;
 
@@ -109,10 +108,10 @@ public class UserPgPageAppController {
     public static void saveReview(ValutazioneBean val) throws IOException {
         PlayerDAO p= PlayerDAO.getInstance();
         ValutazioneDAO dao=new ValutazioneDAO(p);
-        if(dao.getValutazione(val)){
-            dao.deleteValutazione(val);
+        if(dao.getValutazione(val,1)){
+            dao.deleteValutazione(val,1);
         }
-        dao.saveReview(val);
+        dao.saveReview(val,1);
     }
 
     public static ArrayList<Valutazione> reviewList(AdminBean admin){

@@ -37,4 +37,6 @@ public class ValutazioneBean {
     public void setRiceve(String riceve) {
         this.riceve = riceve;
     }
+
 }
+

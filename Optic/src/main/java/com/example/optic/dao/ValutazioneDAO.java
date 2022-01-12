@@ -67,7 +67,6 @@ public class ValutazioneDAO {
     }
 
     public ArrayList<Valutazione> getAdminReviewList1(String user){
-        System.out.println("Nome campo "+user);
         String sql= "SELECT fk_UsernameA from valutazione join admin on fk_UsernameA=Username WHERE NomeC=?";
         String usernameA = null;
         try {
@@ -153,7 +152,6 @@ public class ValutazioneDAO {
             if(campo_player==0) {
                 prepStmt.setString(4, rs.getString("Username"));
             }else{
-                System.out.println("machecazo "+val.getRiceve());
                 prepStmt.setString(4, val.getRiceve());
 
             }

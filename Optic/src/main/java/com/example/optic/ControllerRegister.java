@@ -86,7 +86,6 @@ public class ControllerRegister extends GraphicController {
                 case 3 -> {
                     res = RegisterController.isUsernameUsed(bean, 3);
                     if (!res) {
-                        System.out.println("Passo in persistenza");
                         RegisterController.userRegister(bean, 3);
                         view = "views/refCampo.fxml";
                     }else{
