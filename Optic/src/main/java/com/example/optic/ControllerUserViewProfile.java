@@ -1,9 +1,7 @@
 package com.example.optic;
 
 import com.example.optic.AppControllers.UserProfileAppController;
-import com.example.optic.AppControllers.UserViewProfileAppController;
 import com.example.optic.bean.PlayerBean;
-import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Storico;
 import com.example.optic.entities.Valutazione;
@@ -12,10 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
-
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -57,10 +52,6 @@ public class ControllerUserViewProfile extends GraphicController{
     private TableColumn date;
     @FXML
     private TableColumn playground;
-
-    //Label per acquisizione della recensione
-    @FXML
-    private  TextArea desc;
 
     @Override
     public void setUserVariables(String user) throws Exception {
@@ -171,96 +162,6 @@ public class ControllerUserViewProfile extends GraphicController{
             default:
         }
     }
-
-    public void review(ActionEvent e){
-
-        String description=desc.getText();
-        int starN;
-        String givento=profile.getText();
-        String giver=user.getText();
-
-        if(star1.getTextFill().equals(Color.rgb(229,190,51)) && star2.getTextFill().equals(Color.rgb(28,28,28))){
-            starN=1;
-        }else if (star2.getTextFill().equals(Color.rgb(229,190,51)) && star3.getTextFill().equals(Color.rgb(28,28,28))){
-            starN=2;
-        } else if (star3.getTextFill().equals(Color.rgb(229,190,51)) && star4.getTextFill().equals(Color.rgb(28,28,28))) {
-            starN=3;
-        } else if (star4.getTextFill().equals(Color.rgb(229,190,51)) && star5.getTextFill().equals(Color.rgb(28,28,28))) {
-            starN=4;
-        }else{
-            starN=5;
-        }
-        ValutazioneBean val= new ValutazioneBean();
-        val.setUsernameP1(giver);
-        val.setRecensione(description);
-        val.setStelle(starN);
-        val.setRiceve(givento);
-
-        UserProfileAppController.saveReview(val);
-
-    }
-
-    //forse si puo mettere su graphic controller
-    public void starEnter(MouseEvent e){
-        Label l = (Label)e.getSource();
-        String id = l.getId();
-        int starN = Integer.parseInt(id.substring(id.length() - 1));
-        switch(starN){
-            case 2: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 3: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 4: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(229,190,51));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 5: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(229,190,51));
-                star5.setTextFill(Color.rgb(229,190,51));
-                break;
-            default:star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(28,28,28));
-                star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-        }
-    }
-    public void starExit(MouseEvent e){
-        Label l = (Label)e.getSource();
-        String id = l.getId();
-        int starN = Integer.parseInt(id.substring(id.length() - 1));
-        switch(starN){
-            case 1: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(28,28,28));
-                star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 2: star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 3: star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 4: star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            default:;
-        }
-    }
-
 
     public void toHome(ActionEvent e) throws Exception {
         this.toView("views/userHomeMap.fxml",user.getText());

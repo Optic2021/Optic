@@ -387,7 +387,7 @@ public class ControllerUserPgPage extends GraphicController {
         ValutazioneBean valutazione = new ValutazioneBean();
 
         valutazione.setRecensione(testoRecensione.getText());
-        valutazione.setRiceve(campo.getText());
+        valutazione.setCampo(campo.getText());
         valutazione.setStelle(starN);
         valutazione.setUsernameP1(user.getText());
 

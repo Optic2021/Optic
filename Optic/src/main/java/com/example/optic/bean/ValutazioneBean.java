@@ -4,7 +4,7 @@ public class ValutazioneBean {
     private String recensione;
     private int stelle;
     private String usernameP1;
-    private String riceve;
+    private String campo;
 
     public String getRecensione() {
         return recensione;
@@ -30,11 +30,11 @@ public class ValutazioneBean {
         this.usernameP1 = usernameP1;
     }
 
-    public String getRiceve() {
-        return riceve;
+    public String getCampo() {
+        return campo;
     }
 
-    public void setRiceve(String riceve) {
-        this.riceve = riceve;
+    public void setCampo(String campo) {
+        this.campo = campo;
     }
 }
