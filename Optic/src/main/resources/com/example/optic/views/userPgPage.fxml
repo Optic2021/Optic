@@ -290,7 +290,7 @@
                                   <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                     <HBox prefHeight="37.0" prefWidth="408.0">
+                                     <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="408.0">
                                          <children>
                                              <Label fx:id="star1" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                                  <font>
