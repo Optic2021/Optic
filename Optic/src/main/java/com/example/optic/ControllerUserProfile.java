@@ -119,15 +119,72 @@ public class ControllerUserProfile extends GraphicController{
         }
     }
 
+    /*public  void conferma(){
+        boolean res = true;
+        Alert err = new Alert(Alert.AlertType.ERROR);
+        AdminBean bean = new AdminBean();
+        bean.setUsername(user.getText());
+        bean.setFb(urlFacebook.getText());
+        bean.setIg(urlInstagram.getText());
+        bean.setWa(numWhatsapp.getText());
+        //controllo se gli url sono validi
+        if(urlFacebook.getText() != null) {
+            if(!(urlFacebook.getText().isEmpty())) {
+                if (!(urlFacebook.getText().contains("https://www.facebook.com"))) {
+                    res = false;
+                    err.setContentText("Url facebook non valido.");
+                    err.show();
+                } else if (urlFacebook.getText().length() > 200) {
+                    res = false;
+                    err.setContentText("Url facebook troppo lungo.");
+                    err.show();
+                }
+            }
+        }
+        if(urlInstagram.getText() != null) {
+            if(!(urlInstagram.getText().isEmpty())) {
+                if (!(urlInstagram.getText().contains("https://www.instagram.com"))) {
+                    res = false;
+                    err.setContentText("Url instagram non valido.");
+                    err.show();
+                } else if (urlInstagram.getText().length() > 200) {
+                    res = false;
+                    err.setContentText("Url instagram troppo lungo.");
+                    err.show();
+                }
+            }
+        }
+        if (numWhatsapp.getText() != null){
+            if(!(numWhatsapp.getText().isEmpty())) {
+                if (numWhatsapp.getText().length() != 10) {
+                    res = false;
+                    err.setContentText("Numero di telefono non valido");
+                    err.show();
+                }
+            }
+        }
+        if(res){
+            ModPGPageAppController.setAdminSocial(bean);
+            ActionEvent event = new ActionEvent();
+            exitSocial(event);
+        }
+    }*/
+
     public void facebook() throws IOException {
         if(!urlFacebook.getText().isEmpty()) {
             Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + this.urlFacebook.getText()});
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Nessun profilo facebook inserito");
         }
     }
 
     public void instagram() throws IOException {
         if(!urlInstagram.getText().isEmpty()) {
             Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + this.urlInstagram.getText()});
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Nessun profilo instagram inserito");
         }
     }
 
@@ -170,6 +227,12 @@ public class ControllerUserProfile extends GraphicController{
         String desc = description.getText();
         String fb = urlFacebook.getText();
         String ig = urlInstagram.getText();
+
+        /*if(fb.getText() != null) {
+            if(!(fb.getText().isEmpty())) {
+                if (!(fb.getText().contains("https://www.facebook.com"))) {
+        */
+
         if(desc.length() > 200){
             Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("La descrizione supera il limite massimo di 200 caratteri: "+desc.length());
@@ -178,7 +241,11 @@ public class ControllerUserProfile extends GraphicController{
             Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("L'url supera il limite massimo di 200 caratteri: fb -> "+fb.length()+", ig -> "+ig.length());
             err.show();
-        }else {
+        }else if (!(fb.contains("https://www.facebook.com"))|| (!(ig.contains("https://www.instagram.com")))) {
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("L'url di uno dei due social non è valido");
+            err.show();
+        }else{
             PlayerBean p = new PlayerBean();
             p.setUsername(user.getText());
             p.setDescrizione(desc);

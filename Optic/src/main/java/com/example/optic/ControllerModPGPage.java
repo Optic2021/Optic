@@ -429,14 +429,28 @@ public class ControllerModPGPage extends GraphicController {
     }
 
     public void facebook() throws java.io.IOException {
-        Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlFacebook.getText()});
+        if (!urlFacebook.getText().isEmpty()) {
+            Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + urlFacebook.getText()});
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Nessun profilo facebook inserito");
+        }
     }
     public void instagram() throws IOException {
-        Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlInstagram.getText()});
+        if(!urlInstagram.getText().isEmpty()) {
+            Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + urlInstagram.getText()});
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Nessun profilo instagram inserito");
+        }
     }
     public void whatsapp(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Numero whatsapp: "+numWhatsapp.getText());
+        if(numWhatsapp.getText().isEmpty()||numWhatsapp.getText()==null){
+            alert.setContentText("Numero whatsapp non presente");
+        }else {
+            alert.setContentText("Numero whatsapp: " + numWhatsapp.getText());
+        }
         alert.show();
     }
 

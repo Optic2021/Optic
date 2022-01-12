@@ -54,7 +54,7 @@ public class ControllerSocialModPG extends GraphicController{
         //controllo se gli url sono validi
         if(urlFacebook.getText() != null) {
             if(!(urlFacebook.getText().isEmpty())) {
-                if (!(urlFacebook.getText().contains("facebook"))) {
+                if (!(urlFacebook.getText().contains("https://www.facebook.com"))) {
                     res = false;
                     err.setContentText("Url facebook non valido.");
                     err.show();
@@ -67,7 +67,7 @@ public class ControllerSocialModPG extends GraphicController{
         }
         if(urlInstagram.getText() != null) {
             if(!(urlInstagram.getText().isEmpty())) {
-                if (!(urlInstagram.getText().contains("instagram"))) {
+                if (!(urlInstagram.getText().contains("https://www.instagram.com"))) {
                     res = false;
                     err.setContentText("Url instagram non valido.");
                     err.show();

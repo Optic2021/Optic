@@ -443,6 +443,9 @@ public class ControllerUserPgPage extends GraphicController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Nessun profilo facebook inserito");
         }
     }
     public void toInstagram() throws IOException {
@@ -452,11 +455,19 @@ public class ControllerUserPgPage extends GraphicController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Nessun profilo instagram inserito");
         }
     }
+
     public void toWhatsapp(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Numero whatsapp: "+wa.getText());
+        if(wa.getText()==null){
+            alert.setContentText("Numero whatsapp non presente");
+        }else {
+            alert.setContentText("Numero whatsapp: " + wa.getText());
+        }
         alert.show();
     }
 }
