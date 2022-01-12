@@ -207,10 +207,10 @@
                                 </columnConstraints>
                                 <rowConstraints>
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" style="-fx-cursor: hand;" text="invia" GridPane.columnIndex="1">
+                                    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#review" prefHeight="34.0" prefWidth="87.0" style="-fx-cursor: hand;" text="invia" GridPane.columnIndex="1">
                                        <font>
                                           <Font name="Arial Black" size="16.0" />
                                        </font>
@@ -219,36 +219,36 @@
                                           <String fx:value="menuButton2" />
                                        </styleClass>
                                     </Button>
-                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="408.0">
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="317.0">
                                        <children>
-                                          <Label prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                          <Label fx:id="star1" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                              <font>
                                                 <Font name="Arial Black" size="36.0" />
                                              </font>
                                           </Label>
-                                          <Label prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                          <Label fx:id="star2" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                              <font>
                                                 <Font name="Arial Black" size="36.0" />
                                              </font>
                                           </Label>
-                                          <Label prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                          <Label fx:id="star3" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                              <font>
                                                 <Font name="Arial Black" size="36.0" />
                                              </font>
                                           </Label>
-                                          <Label prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                          <Label fx:id="star4" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                              <font>
                                                 <Font name="Arial Black" size="36.0" />
                                              </font>
                                           </Label>
-                                          <Label prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                          <Label fx:id="star5" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                              <font>
                                                 <Font name="Arial Black" size="36.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <TextArea prefHeight="66.0" prefWidth="316.0" promptText="Descrizione..." GridPane.rowIndex="1" />
+                                    <TextArea fx:id="desc" prefHeight="66.0" prefWidth="316.0" promptText="Inserire recensione..." GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
                            </bottom>

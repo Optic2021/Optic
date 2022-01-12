@@ -138,34 +138,6 @@ public class GiornataDAO {
         return play;
     }
 
-    public ArrayList<Giornata> getRecentPlayList(String user){
-        ArrayList<Giornata> list = new ArrayList<>();
-        Statement stmt = null;
-        Calendar dateCalendar = Calendar.getInstance();
-        Giornata play = null;
-        String campo;
-        try{
-            stmt = this.daoP.getConnection().createStatement();
-            String sql = "SELECT G.Data, C.NomeC FROM ((prenotazione P JOIN giornata G ON P.fk_idGiornata = G.idGiornata AND P.fk_Username = ?) JOIN admin C ON G.fk_UsernameA2 = C.Username) WHERE G.Data < curdate()";
-            PreparedStatement prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            prepStmt.setString(1,user);
-            ResultSet rs = prepStmt.executeQuery();
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
-            if(rs.first()) {
-                rs.first();
-                do {
-                    dateCalendar.setTime(rs.getDate("G.Data"));
-                    campo = rs.getString("C.NomeC");
-                    play = new Giornata(dateCalendar,campo);
-                    list.add(play);
-                } while(rs.next());
-            }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return list;
-    }
-
     public ArrayList<Player> getPlayersList(int playId){
         ArrayList<Player> list = new ArrayList<Player>();
         Statement stmt = null;

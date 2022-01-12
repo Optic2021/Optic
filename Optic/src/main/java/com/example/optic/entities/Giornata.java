@@ -1,7 +1,8 @@
 package com.example.optic.entities;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Giornata {
     private int idGiornata;
@@ -9,15 +10,7 @@ public class Giornata {
     private int num_Giocatori ;
     private String fk_Nome;
     private String fk_Username;
-    private String nomeC;
-    private String dataString;
 
-    public Giornata(Calendar data, String nomeC){
-        this.data = data;
-        this.nomeC = nomeC;
-        SimpleDateFormat dataGiornata = new SimpleDateFormat("yyyy-MM-dd");
-        this.dataString = dataGiornata.format(this.data.getTime());
-    }
     public Giornata(int idGiornata,Calendar data,int num_Giocatori,String evento){
         this.idGiornata = idGiornata;
         this.data = data;
@@ -38,12 +31,6 @@ public class Giornata {
     }
     public void setFk_Username(String newFk_Username){
         this.fk_Username=newFk_Username;
-    }
-    public void setNomeC(String nomeC) {
-        this.nomeC = nomeC;
-    }
-    public void setDataString(String dataString) {
-        this.dataString = dataString;
     }
 
     /**************************/
@@ -66,12 +53,5 @@ public class Giornata {
 
     public String getFk_Username(){
         return this.fk_Username;
-    }
-
-    public String getNomeC() {
-        return this.nomeC;
-    }
-    public String getDataString(){
-        return this.dataString;
     }
 }

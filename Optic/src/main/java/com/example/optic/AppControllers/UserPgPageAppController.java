@@ -109,10 +109,10 @@ public class UserPgPageAppController {
     public static void saveReview(ValutazioneBean val) throws IOException {
         PlayerDAO p= PlayerDAO.getInstance();
         ValutazioneDAO dao=new ValutazioneDAO(p);
-        if(dao.getValutazione(val)){
+        if(dao.getValutazione(val,0)){
             dao.deleteValutazione(val);
         }
-        dao.saveReview(val);
+        dao.saveReview(val,0);
     }
 
     public static ArrayList<Valutazione> reviewList(AdminBean admin){

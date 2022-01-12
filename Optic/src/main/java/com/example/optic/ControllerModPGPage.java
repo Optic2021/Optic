@@ -140,16 +140,6 @@ public class ControllerModPGPage extends GraphicController {
                 date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
                 activity.setText(play.getFk_Nome());
                 this.populatePlayersTable();
-            }else{
-                eventBox.setVisible(true);
-                this.populateEventBox();
-                datePicker.setVisible(true);
-                addPlay.setVisible(true);
-                idPlay.setVisible(false);
-                date.setVisible(false);
-                activity.setVisible(false);
-                nPlayers.setVisible(false);
-                players.setVisible(false);
             }
         }catch (IOException e){
             e.printStackTrace();

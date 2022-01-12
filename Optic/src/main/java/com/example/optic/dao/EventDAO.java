@@ -1,7 +1,6 @@
 package com.example.optic.dao;
 
 import com.example.optic.entities.Event;
-import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 
 import java.sql.PreparedStatement;
