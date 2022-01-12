@@ -1,8 +1,11 @@
 package com.example.optic.AppControllers;
 
 import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.UserBean;
+import com.example.optic.dao.GiornataDAO;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.dao.ValutazioneDAO;
+import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 
@@ -31,6 +34,18 @@ public class UserProfileAppController {
             list = dao.getPlayerReviewList(p.getUsername());
         }catch (IOException e){
            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static ArrayList<Giornata> getRecentPlayList(UserBean user){
+        ArrayList<Giornata> list = new ArrayList<Giornata>();
+        try{
+            PlayerDAO daoP = PlayerDAO.getInstance();
+            GiornataDAO dao = new GiornataDAO(daoP);
+            list = dao.getRecentPlayList(user.getUsername());
+        }catch (IOException e){
+            e.printStackTrace();
         }
         return list;
     }

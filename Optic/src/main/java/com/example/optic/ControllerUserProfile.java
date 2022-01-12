@@ -2,10 +2,8 @@ package com.example.optic;
 
 import com.example.optic.AppControllers.UserProfileAppController;
 import com.example.optic.bean.PlayerBean;
-import com.example.optic.entities.Player;
-import com.example.optic.entities.Storico;
-import com.example.optic.entities.Valutazione;
-import com.example.optic.entities.ValutazionePlayer;
+import com.example.optic.bean.UserBean;
+import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -104,18 +102,15 @@ public class ControllerUserProfile extends GraphicController{
 
     //popolo la tabella con lo storico delle partite del player DA FINIRE!!!!!
     public void populateGamesTable(String user){
-        PlayerBean player = new PlayerBean();
+        UserBean player = new UserBean();
         player.setUsername(user);
-        date.setCellValueFactory(new PropertyValueFactory<>("data"));
-        playground.setCellValueFactory(new PropertyValueFactory<>("campo"));
-        //ArrayList<Prenotazione> list = UserProfileAppController.getReviewList(player);
-        boolean list = true;
-        if(list){
-            SimpleDateFormat dataGiornata = new SimpleDateFormat("dd-mm-yyyy");
-            Date data = new Date(2022,1,10);
-            //ValutazionePlayer val = new ValutazionePlayer(list.get(0).getFk_UsernameP1(),list.get(0).getDescrizione()); //passo chi fa la segnalazione e la descrizione
-            Storico partita = new Storico("11-2-2022","SoftAir River");
-            partite.getItems().add(partita);
+        date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
+        playground.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
+        ArrayList<Giornata> list = UserProfileAppController.getRecentPlayList(player);
+        Giornata g = null;
+        for(int i = 0;i < list.size(); i++){
+            g = list.get(i);
+            partite.getItems().add(g);
         }
     }
 
