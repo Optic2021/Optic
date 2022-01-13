@@ -387,7 +387,7 @@ public class ControllerUserPgPage extends GraphicController {
         ValutazioneBean valutazione = new ValutazioneBean();
 
         valutazione.setRecensione(testoRecensione.getText());
-        valutazione.setCampo(campo.getText());
+        valutazione.setRiceve(campo.getText());
         valutazione.setStelle(starN);
         valutazione.setUsernameP1(user.getText());
 
@@ -413,7 +413,6 @@ public class ControllerUserPgPage extends GraphicController {
             if (user.getText().equals(val.getFk_UsernameP1())){
                 toView("views/userProfile.fxml", user.getText());
             }else{
-                System.out.println("Entro qui");
                 toView("views/userViewProfile.fxml",val.getFk_UsernameP1(), user.getText());
             }
         } catch (Exception e) {
@@ -428,7 +427,6 @@ public class ControllerUserPgPage extends GraphicController {
             if (user.getText().equals(player.getUsername())){
                 toView("views/userProfile.fxml", user.getText());
             }else{
-                System.out.println("Entro qui");
                 toView("views/userViewProfile.fxml",player.getUsername(), user.getText());
             }
         } catch (Exception e) {

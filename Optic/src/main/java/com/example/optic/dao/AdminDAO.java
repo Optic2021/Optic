@@ -160,7 +160,6 @@ public class AdminDAO {
         try{
             stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM referee WHERE fk_UsernameA1=?";
-            System.out.println(user);
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
@@ -227,7 +226,6 @@ public class AdminDAO {
             prepStmt.setString(1,admin);
             prepStmt.setString(2,ref);
             prepStmt.executeUpdate();
-            System.out.println(admin+" "+ref);
         }catch(SQLException e){
             e.printStackTrace();
         }finally{
@@ -318,7 +316,6 @@ public class AdminDAO {
         String desc;
         String via;
         String referee;*/
-        System.out.println("dioghane fai sto commit");
         String nomec;
         String desc;
 
@@ -364,7 +361,6 @@ public class AdminDAO {
         try{
             Class.forName(DRIVER_CLASS_NAME);
             instance.conn = DriverManager.getConnection(DB_URL, USER, PW);
-            System.out.println("Connessione al db effettuata");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -374,7 +370,6 @@ public class AdminDAO {
         try{
             if (instance.conn != null) {
                 instance.conn.close();
-                System.out.println("Connessione al db chiusa");
             }
         } catch (SQLException e) {
             e.printStackTrace();
