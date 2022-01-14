@@ -1,29 +1,23 @@
 package com.example.optic;
 
 import com.example.optic.AppControllers.UserProfileAppController;
-import com.example.optic.AppControllers.UserViewProfileAppController;
 import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.UserBean;
 import com.example.optic.bean.ValutazioneBean;
-import com.example.optic.entities.Player;
-import com.example.optic.entities.Storico;
-import com.example.optic.entities.Valutazione;
-import com.example.optic.entities.ValutazionePlayer;
+import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.StringTokenizer;
 
 public class ControllerUserViewProfile extends GraphicController{
+    //stelle recensione
     @FXML
     private Label star1;
     @FXML
@@ -34,8 +28,19 @@ public class ControllerUserViewProfile extends GraphicController{
     private Label star4;
     @FXML
     private Label star5;
+
+    //stelle valutazione profilo
     @FXML
-    private Label title;
+    private Label star11;
+    @FXML
+    private Label star22;
+    @FXML
+    private Label star33;
+    @FXML
+    private Label star44;
+    @FXML
+    private Label star55;
+
     @FXML
     private Label nVal;
     @FXML
@@ -64,7 +69,7 @@ public class ControllerUserViewProfile extends GraphicController{
 
     @Override
     public void setUserVariables(String user) throws Exception {
-        String [] app =user.split(" ");
+        String [] app = user.split(" ");
         String profile=app[0];
         String viewer=app[1];
 
@@ -75,7 +80,7 @@ public class ControllerUserViewProfile extends GraphicController{
             PlayerBean player = new PlayerBean();
             player.setUsername(profile);
             this.populateReviewList(profile);
-            this.populateGamesTable(user);
+            this.populateGamesTable();
             p = UserProfileAppController.getPlayer(player);
         } catch (Exception e) {
             e.printStackTrace();
@@ -85,7 +90,7 @@ public class ControllerUserViewProfile extends GraphicController{
             this.description.setText(p.getDescrizione());
             //se il giocatore è valutato positivamente, nome giallo
             if(p.getStato().equals("positivo")){
-                this.title.setVisible(true);
+                //giocatore positivo
             }
             this.urlInstagram.setText(p.getIg());;
             this.urlFacebook.setText(p.getFb());;
@@ -116,20 +121,19 @@ public class ControllerUserViewProfile extends GraphicController{
         nVal.setText(Integer.toString(numVal));
     }
 
-    //popolo la tabella con lo storico delle partite del player DA FINIRE!!!!!
-    public void populateGamesTable(String user){
-        PlayerBean player = new PlayerBean();
-        player.setUsername(user);
-        date.setCellValueFactory(new PropertyValueFactory<>("data"));
-        playground.setCellValueFactory(new PropertyValueFactory<>("campo"));
-        //ArrayList<Prenotazione> list = UserProfileAppController.getReviewList(player);
-        boolean list = true;
-        if(list){
-            SimpleDateFormat dataGiornata = new SimpleDateFormat("dd-mm-yyyy");
-            Date data = new Date(2022,1,10);
-            //ValutazionePlayer val = new ValutazionePlayer(list.get(0).getFk_UsernameP1(),list.get(0).getDescrizione()); //passo chi fa la segnalazione e la descrizione
-            Storico partita = new Storico("11-2-2022","SoftAir River");
-            partite.getItems().add(partita);
+    //popolo la tabella con lo storico delle partite del player
+    public void populateGamesTable(){
+        UserBean player = new UserBean();
+        String[] app = profile.getText().split(" ");
+        String username=app[1];
+        player.setUsername(username);
+        date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
+        playground.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
+        ArrayList<Giornata> list = UserProfileAppController.getRecentPlayList(player);
+        Giornata g = null;
+        for(int i = 0;i < list.size(); i++){
+            g = list.get(i);
+            partite.getItems().add(g);
         }
     }
 
@@ -147,27 +151,27 @@ public class ControllerUserViewProfile extends GraphicController{
 
     private void setStars(int stars){
         switch (stars){
-            case 1: star1.setVisible(true);
+            case 1: star11.setVisible(true);
                 break;
-            case 2: star1.setVisible(true);
-                star2.setVisible(true);
+            case 2: star11.setVisible(true);
+                star22.setVisible(true);
                 break;
-            case 3: star1.setVisible(true);
-                star2.setVisible(true);
-                star3.setVisible(true);
+            case 3: star11.setVisible(true);
+                star22.setVisible(true);
+                star33.setVisible(true);
                 break;
-            case 4: star1.setVisible(true);
-                star2.setVisible(true);
-                star3.setVisible(true);
-                star4.setVisible(true);
+            case 4: star11.setVisible(true);
+                star22.setVisible(true);
+                star33.setVisible(true);
+                star44.setVisible(true);
                 break;
-            case 5: star1.setVisible(true);
-                star2.setVisible(true);
-                star3.setVisible(true);
-                star4.setVisible(true);
-                star5.setVisible(true);
+            case 5: star11.setVisible(true);
+                star22.setVisible(true);
+                star33.setVisible(true);
+                star44.setVisible(true);
+                star55.setVisible(true);
                 break;
-            default:
+            default:;
         }
     }
 

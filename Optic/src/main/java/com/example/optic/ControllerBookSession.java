@@ -62,14 +62,14 @@ public class ControllerBookSession extends GraphicController {
         player.setUsername(user);
 
         try {
-            ArrayList<AdminBean> lista= BookSessionAppController.getCampi();
+            ArrayList<AdminBean> lista = BookSessionAppController.getCampi();
             NomeC.setCellValueFactory(new PropertyValueFactory<>("nomeCampo"));
-            Provincia.setCellValueFactory(new PropertyValueFactory<>("descrizione"));
+            Provincia.setCellValueFactory(new PropertyValueFactory<>("provincia"));
             boolean list = true;
             int k=lista.size();
             int i=0;
 
-            AdminBean elem= new AdminBean();
+            AdminBean elem = new AdminBean();
 
             while(i<k){
                 elem=lista.get(i);

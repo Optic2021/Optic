@@ -98,7 +98,7 @@ public class ControllerUserProfile extends GraphicController{
         nVal.setText(Integer.toString(numVal));
     }
 
-    //popolo la tabella con lo storico delle partite del player DA FINIRE!!!!!
+    //popolo la tabella con lo storico delle partite del player
     public void populateGamesTable(String user){
         UserBean player = new UserBean();
         player.setUsername(user);
@@ -111,57 +111,6 @@ public class ControllerUserProfile extends GraphicController{
             partite.getItems().add(g);
         }
     }
-
-    /*public  void conferma(){
-        boolean res = true;
-        Alert err = new Alert(Alert.AlertType.ERROR);
-        AdminBean bean = new AdminBean();
-        bean.setUsername(user.getText());
-        bean.setFb(urlFacebook.getText());
-        bean.setIg(urlInstagram.getText());
-        bean.setWa(numWhatsapp.getText());
-        //controllo se gli url sono validi
-        if(urlFacebook.getText() != null) {
-            if(!(urlFacebook.getText().isEmpty())) {
-                if (!(urlFacebook.getText().contains("https://www.facebook.com"))) {
-                    res = false;
-                    err.setContentText("Url facebook non valido.");
-                    err.show();
-                } else if (urlFacebook.getText().length() > 200) {
-                    res = false;
-                    err.setContentText("Url facebook troppo lungo.");
-                    err.show();
-                }
-            }
-        }
-        if(urlInstagram.getText() != null) {
-            if(!(urlInstagram.getText().isEmpty())) {
-                if (!(urlInstagram.getText().contains("https://www.instagram.com"))) {
-                    res = false;
-                    err.setContentText("Url instagram non valido.");
-                    err.show();
-                } else if (urlInstagram.getText().length() > 200) {
-                    res = false;
-                    err.setContentText("Url instagram troppo lungo.");
-                    err.show();
-                }
-            }
-        }
-        if (numWhatsapp.getText() != null){
-            if(!(numWhatsapp.getText().isEmpty())) {
-                if (numWhatsapp.getText().length() != 10) {
-                    res = false;
-                    err.setContentText("Numero di telefono non valido");
-                    err.show();
-                }
-            }
-        }
-        if(res){
-            ModPGPageAppController.setAdminSocial(bean);
-            ActionEvent event = new ActionEvent();
-            exitSocial(event);
-        }
-    }*/
 
     public void facebook() throws IOException {
         if(!urlFacebook.getText().isEmpty()) {
@@ -210,6 +159,7 @@ public class ControllerUserProfile extends GraphicController{
     public void modify(){
         //Rendo visibile il tasto aggiorna e modificabile la grid di connessione ai social e la description
         description.setEditable(true);
+        description.setStyle("-fx-border-color: rgb(229,190,51)");
         urlFacebook.setEditable(true);
         urlInstagram.setEditable(true);
         modifica.setVisible(true);
@@ -217,28 +167,47 @@ public class ControllerUserProfile extends GraphicController{
     }
 
     public void save(){
+        Alert err = new Alert(Alert.AlertType.ERROR);
         String desc = description.getText();
         String fb = urlFacebook.getText();
         String ig = urlInstagram.getText();
-
+        boolean res = true;
         /*if(fb.getText() != null) {
             if(!(fb.getText().isEmpty())) {
                 if (!(fb.getText().contains("https://www.facebook.com"))) {
         */
 
         if(desc.length() > 200){
-            Alert err = new Alert(Alert.AlertType.ERROR);
+            res = false;
             err.setContentText("La descrizione supera il limite massimo di 200 caratteri: "+desc.length());
             err.show();
-        }else if(fb.length() > 200 || ig.length() > 200){
-            Alert err = new Alert(Alert.AlertType.ERROR);
-            err.setContentText("L'url supera il limite massimo di 200 caratteri: fb -> "+fb.length()+", ig -> "+ig.length());
-            err.show();
-        }else if (!(fb.contains("https://www.facebook.com"))|| (!(ig.contains("https://www.instagram.com")))) {
-            Alert err = new Alert(Alert.AlertType.ERROR);
-            err.setContentText("L'url di uno dei due social non è valido");
-            err.show();
-        }else{
+        }if(urlFacebook.getText() != null) {
+            if(!(urlFacebook.getText().isEmpty())) {
+                if (!(urlFacebook.getText().contains("https://www.facebook.com"))) {
+                    res = false;
+                    err.setContentText("Url facebook non valido.");
+                    err.show();
+                } else if (urlFacebook.getText().length() > 200) {
+                    res = false;
+                    err.setContentText("Url facebook troppo lungo.");
+                    err.show();
+                }
+            }
+        }
+        if(urlInstagram.getText() != null) {
+            if(!(urlInstagram.getText().isEmpty())) {
+                if (!(urlInstagram.getText().contains("https://www.instagram.com"))) {
+                    res = false;
+                    err.setContentText("Url instagram non valido.");
+                    err.show();
+                } else if (urlInstagram.getText().length() > 200) {
+                    res = false;
+                    err.setContentText("Url instagram troppo lungo.");
+                    err.show();
+                }
+            }
+        }
+        if(res){
             PlayerBean p = new PlayerBean();
             p.setUsername(user.getText());
             p.setDescrizione(desc);
@@ -247,6 +216,7 @@ public class ControllerUserProfile extends GraphicController{
             UserProfileAppController.setInfo(p);
 
             description.setEditable(false);
+            description.setStyle("");
             urlFacebook.setEditable(false);
             urlInstagram.setEditable(false);
             modifica.setVisible(false);

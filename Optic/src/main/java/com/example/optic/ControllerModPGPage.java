@@ -468,9 +468,11 @@ public class ControllerModPGPage extends GraphicController {
     public void modify(ActionEvent e){
         //abilita la modalita modifica
         description.setEditable(true);
+        description.setStyle("-fx-border-color: rgb(229,190,51)");
         aggiorna.setVisible(true);
         refName.setText(ref.getText());//salvo il nome attuale dell'arbitro per controllare successivamente se sono state apportate modifiche
         ref.setEditable(true);
+        ref.setStyle("-fx-border-color: rgb(229,190,51)");
     }
 
     public void save(ActionEvent e){
@@ -481,7 +483,9 @@ public class ControllerModPGPage extends GraphicController {
         a.setDescrizione(desc);
         ModPGPageAppController.setDescription(a);
         description.setEditable(false);
+        description.setStyle("");
         ref.setEditable(false);
+        ref.setStyle("");
         //setto il nuovo arbitro se il nome non è vuoto e se è diverso da quello precedente
         if(!(ref.getText().isEmpty()) && !(ref.getText().equals(refName.getText()))) {
             this.setReferee(ref.getText());

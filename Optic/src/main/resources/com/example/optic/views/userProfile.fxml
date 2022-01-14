@@ -103,7 +103,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="salva" layoutX="409.0" layoutY="37.0" mnemonicParsing="false" onAction="#save" text="Aggiorna" visible="false">
+                        <Button fx:id="salva" layoutX="402.0" layoutY="37.0" mnemonicParsing="false" onAction="#save" text="Aggiorna" visible="false">
                            <styleClass>
                               <String fx:value="menuButtonDF" />
                               <String fx:value="login" />
@@ -265,7 +265,7 @@
                                        <padding>
                                           <Insets top="10.0" />
                                        </padding></Label>
-                                    <Label alignment="CENTER" prefHeight="39.0" prefWidth="143.0" text="Instagram:" GridPane.rowIndex="1" />
+                                    <Label alignment="CENTER" prefHeight="39.0" prefWidth="143.0" styleClass="text-area" text="Instagram:" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
                            </items>

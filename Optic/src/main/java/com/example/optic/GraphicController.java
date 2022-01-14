@@ -68,7 +68,6 @@ public class GraphicController {
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
         GraphicController controller = fxmlLoader.getController();
-        System.out.println(controller);
         String usr=user+" "+viewer;
         controller.setUserVariables(usr);
         scene.setOnMousePressed(new EventHandler<MouseEvent>(){
