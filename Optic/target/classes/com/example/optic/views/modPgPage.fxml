@@ -259,7 +259,7 @@
                             <top>
                                 <BorderPane prefHeight="160.0" prefWidth="576.0" BorderPane.alignment="CENTER">
                            <top>
-                              <TextArea fx:id="description" editable="false" prefHeight="103.0" prefWidth="572.0" styleClass="text-black" wrapText="true" BorderPane.alignment="CENTER">
+                              <TextArea fx:id="description" editable="false" prefHeight="103.0" prefWidth="572.0" wrapText="true" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -295,6 +295,7 @@
                                        <styleClass>
                                           <String fx:value="backgroundLG" />
                                           <String fx:value="text-black" />
+                                          <String fx:value="border" />
                                        </styleClass>
                                        <font>
                                           <Font size="14.0" />

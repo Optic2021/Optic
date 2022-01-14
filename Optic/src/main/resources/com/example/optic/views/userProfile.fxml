@@ -71,7 +71,7 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="93.0" text="Giocatore:" textAlignment="RIGHT">
+                                <Label fx:id="userType" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="93.0" text="Giocatore:" textAlignment="RIGHT">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -363,6 +363,24 @@
                                         <String fx:value="menuButton" />
                                     </styleClass>
                                 </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#reportList" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Report">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="login" />
+                              <String fx:value="menuButton" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#eventList" prefHeight="54.0" prefWidth="181.0" style="-fx-cursor: hand;" text="Lista Eventi">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="login" />
+                              <String fx:value="menuButton" />
+                           </styleClass>
+                        </Button>
                             </items>
                         </ToolBar>
                     </children>

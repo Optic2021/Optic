@@ -128,6 +128,7 @@ public class ValutazioneDAO {
     public void saveReview(ValutazioneBean val,int campo_player){
         Statement stmt;
         PreparedStatement prepStmt;
+        PreparedStatement prepStmt2;
         ResultSet rs = null;
         String sql1;
         try {
@@ -158,6 +159,13 @@ public class ValutazioneDAO {
 
             }
             prepStmt.executeUpdate();
+            if(campo_player == 1){
+                String sql3 = "update player set Valutazione = (select avg(stelle) as val from valutazione where fk_UsernameP2 = ?) where Username = ?";
+                prepStmt2 = this.daoP.getConnection().prepareStatement(sql3);
+                prepStmt2.setString(1, val.getRiceve());
+                prepStmt2.setString(2, val.getRiceve());
+                prepStmt2.executeUpdate();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

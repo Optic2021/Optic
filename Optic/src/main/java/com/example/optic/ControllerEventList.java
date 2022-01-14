@@ -2,6 +2,7 @@ package com.example.optic;
 
 import com.example.optic.AppControllers.ModPGPageAppController;
 import com.example.optic.AppControllers.RefCampoController;
+import com.example.optic.AppControllers.UserProfileAppController;
 import com.example.optic.entities.Event;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,7 +25,7 @@ public class ControllerEventList extends GraphicController {
     public void setUserVariables(String user) throws IOException {
         ArrayList<Event> list = new ArrayList<Event>();
         if(user.contains("Giocatore")){//uso la dao del player
-            //list = UserProfileAppController.getEventList();
+            list = UserProfileAppController.getEventList();
             this.setList(list);
         }else if(user.contains("Admin")){//uso la dao dell'admin
             list = ModPGPageAppController.getEventList();

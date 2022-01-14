@@ -1,11 +1,11 @@
 package com.example.optic.AppControllers;
 
 import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.ReportBean;
 import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.bean.UserBean;
-import com.example.optic.dao.PlayerDAO;
-import com.example.optic.dao.ValutazioneDAO;
-import com.example.optic.dao.GiornataDAO;
+import com.example.optic.dao.*;
+import com.example.optic.entities.Event;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.Giornata;
@@ -67,6 +67,29 @@ public class UserProfileAppController {
             PlayerDAO daoP = PlayerDAO.getInstance();
             GiornataDAO dao = new GiornataDAO(daoP);
             list = dao.getRecentPlayList(user.getUsername());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static ArrayList<Event> getEventList() throws IOException{
+        ArrayList<Event> list = new ArrayList<Event>();
+        try{
+            PlayerDAO dao = PlayerDAO.getInstance();
+            EventDAO eventDao = new EventDAO(dao);
+            list = eventDao.getPlayerEventList();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static ArrayList<ReportBean> getReportList(String user) {
+        ArrayList<ReportBean> list = new ArrayList<ReportBean>();
+        try{
+            PlayerDAO dao = PlayerDAO.getInstance();
+            list = dao.getPlayerReportList(user);
         }catch (IOException e){
             e.printStackTrace();
         }

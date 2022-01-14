@@ -330,7 +330,7 @@ public class AdminDAO {
             }
             stmt = instance.conn.createStatement();
             //String sql = "SELECT * FROM admin join referee on referee.fk_UsernameA1=admin.Username WHERE NomeC=?";
-            String sql = "SELECT NomeC, DescrizioneC FROM admin";
+            String sql = "SELECT NomeC, Provincia FROM admin";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);;
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
@@ -340,7 +340,7 @@ public class AdminDAO {
                 do {
                     AdminBean admin = new AdminBean();
                     admin.setNomeCampo((rs.getString("NomeC")));
-                    admin.setDescrizione((rs.getString("DescrizioneC")));
+                    admin.setProvincia((rs.getString("Provincia")));
                     list.add(admin);
 
                 }while (rs.next());

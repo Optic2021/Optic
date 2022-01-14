@@ -30,4 +30,8 @@ public class ReportBean {
     public void setPlayer(String player) {
         this.player = player;
     }
+
+    public String getFormattedText(){
+        return "Ricevuto da "+referee+"\nMotivazione: "+motivazione;
+    }
 }

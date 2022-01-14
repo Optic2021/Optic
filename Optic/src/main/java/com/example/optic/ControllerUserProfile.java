@@ -6,9 +6,17 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -16,6 +24,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class ControllerUserProfile extends GraphicController{
+    @FXML
+    private Pane id;
     @FXML
     private Label star1;
     @FXML
@@ -48,6 +58,8 @@ public class ControllerUserProfile extends GraphicController{
     private TableColumn date;
     @FXML
     private TableColumn playground;
+    @FXML
+    private Label userType;
 
     @Override
     public void setUserVariables(String user) throws Exception {
@@ -71,6 +83,46 @@ public class ControllerUserProfile extends GraphicController{
             }
             this.urlInstagram.setText(p.getIg());;
             this.urlFacebook.setText(p.getFb());;
+        }
+    }
+
+    public void eventList(ActionEvent e) throws Exception {
+        try {
+            Stage list = new Stage();
+            Stage obj = (Stage) id.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
+            GraphicController controller = fxmlLoader.getController();
+            controller.setUserVariables(userType.getText());
+            scene.setFill(Color.TRANSPARENT);
+            list.setResizable(false);
+            list.initOwner(obj);
+            list.initModality(Modality.APPLICATION_MODAL);
+            list.initStyle(StageStyle.TRANSPARENT);
+            list.setScene(scene);
+            list.show();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
+    public void reportList(ActionEvent e) throws Exception {
+        try {
+            Stage list = new Stage();
+            Stage obj = (Stage) id.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/reportList.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
+            GraphicController controller = fxmlLoader.getController();
+            controller.setUserVariables(user.getText());
+            scene.setFill(Color.TRANSPARENT);
+            list.setResizable(false);
+            list.initOwner(obj);
+            list.initModality(Modality.APPLICATION_MODAL);
+            list.initStyle(StageStyle.TRANSPARENT);
+            list.setScene(scene);
+            list.show();
+        }catch (Exception ex){
+            ex.printStackTrace();
         }
     }
 

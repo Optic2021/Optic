@@ -1,9 +1,12 @@
 package com.example.optic.dao;
 
+import com.example.optic.bean.ReportBean;
+import com.example.optic.entities.Event;
 import com.example.optic.entities.Player;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class PlayerDAO {
@@ -39,7 +42,7 @@ public class PlayerDAO {
                 instance.getConn();
             }
             stmt = instance.conn.createStatement();
-            String sql = "INSERT INTO player VALUES (?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO player VALUES (?,?,?,?,?,?)";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1,p.getUsername());
             prepStmt.setString(2,p.getPassword());
@@ -47,7 +50,6 @@ public class PlayerDAO {
             prepStmt.setString(4,"0");
             prepStmt.setString(5,"");
             prepStmt.setString(6,"");
-            prepStmt.setString(7,p.getStato());
             prepStmt.executeUpdate();
         } finally {
             try {
@@ -157,5 +159,29 @@ public class PlayerDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<ReportBean> getPlayerReportList(String user) {
+        ArrayList<ReportBean> list = new ArrayList<ReportBean>();
+        Statement stmt = null;
+        try{
+            stmt = instance.conn.createStatement();
+            String sql = "SELECT fk_UsernameR,Motivazione FROM report WHERE fk_UsernameP=?";
+            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt.setString(1,user);
+            ResultSet rs = prepStmt.executeQuery();
+            if(rs.first()){
+                ReportBean e = new ReportBean();
+                rs.first();
+                do{
+                    e.setReferee(rs.getString("fk_UsernameR"));
+                    e.setMotivazione(rs.getString("Motivazione"));
+                    list.add(e);
+                }while(rs.next());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }
