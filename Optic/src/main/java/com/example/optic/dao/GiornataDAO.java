@@ -15,7 +15,7 @@ import java.util.Date;
 public class GiornataDAO {
     private static PlayerDAO daoP;
     private static AdminDAO daoA;
-    //private static RefereeDAO daoR;
+    private static RefereeDAO daoR;
 
     public GiornataDAO(PlayerDAO daoP){
         this.daoP = daoP;
@@ -24,11 +24,11 @@ public class GiornataDAO {
     public GiornataDAO(AdminDAO daoA){
         this.daoA = daoA;
     }
-    /*
-    public GiornataDAO(RefreeDAO daoR){
+
+    public GiornataDAO(RefereeDAO daoR){
         this.daoR = daoR;
     }
-    */
+
 
     //recupero la prima giornata disponibile per la prenotazione dei giocatori
     public Giornata getFirstPlay(String admin) throws Exception{
@@ -43,6 +43,9 @@ public class GiornataDAO {
             }else if(this.daoP != null){
                 stmt = this.daoP.getConnection().createStatement();
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }else if(this.daoR != null){
+                stmt = this.daoR.getConnection().createStatement();
+                prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }
             prepStmt.setString(1,admin);
             ResultSet rs = prepStmt.executeQuery();
@@ -77,6 +80,9 @@ public class GiornataDAO {
             }else if(this.daoP != null){
                 stmt = this.daoP.getConnection().createStatement();
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }else if(this.daoR != null){
+                stmt = this.daoR.getConnection().createStatement();
+                prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
             data = cal.getTime();//converto il calendar in data
@@ -114,6 +120,9 @@ public class GiornataDAO {
             }else if(this.daoP != null){
                 stmt = this.daoP.getConnection().createStatement();
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }else if(this.daoR != null){
+                stmt = this.daoR.getConnection().createStatement();
+                prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
             data = cal.getTime();//converto il calendar in data
@@ -181,6 +190,9 @@ public class GiornataDAO {
             }else if(this.daoP != null){
                 stmt = this.daoP.getConnection().createStatement();
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            }else if(this.daoR != null){
+                stmt = this.daoR.getConnection().createStatement();
+                prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }
             prepStmt.setString(1,Integer.toString(playId));
             ResultSet rs = prepStmt.executeQuery();

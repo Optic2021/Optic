@@ -1,11 +1,12 @@
 package com.example.optic.AppControllers;
 
+import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
-import com.example.optic.dao.AdminDAO;
-import com.example.optic.dao.EventDAO;
-import com.example.optic.dao.RefereeDAO;
+import com.example.optic.dao.*;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Event;
+import com.example.optic.entities.Giornata;
+import com.example.optic.entities.Player;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -31,6 +32,54 @@ public class RefCampoController {
             RefereeDAO dao = RefereeDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
             list = eventDao.getRefereeEventList();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static Giornata getFirstPlay(UserBean bean){
+        Giornata play = null;
+        try{
+            RefereeDAO dao = RefereeDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            play = playDao.getFirstPlay(bean.getUsername());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return play;
+    }
+
+    public static Giornata getNextPlay(GiornataBean bean){
+        Giornata play = null;
+        try{
+            RefereeDAO dao = RefereeDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            play = playDao.getNextPlay(bean.getAdmin(),bean.getData());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return  play;
+    }
+
+    public static Giornata getLastPlay(GiornataBean bean){
+        Giornata play = null;
+        try{
+            RefereeDAO dao = RefereeDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            play = playDao.getLastPlay(bean.getAdmin(),bean.getData());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return  play;
+    }
+
+    public static ArrayList<Player> getPlayersList(GiornataBean bean) throws IOException{
+        ArrayList<Player> list = new ArrayList<Player>();
+        try{
+            RefereeDAO dao = RefereeDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            list = playDao.getPlayersList(bean.getIdPlay());
         }catch (IOException e){
             e.printStackTrace();
         }

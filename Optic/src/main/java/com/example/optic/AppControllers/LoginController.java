@@ -57,9 +57,8 @@ public class LoginController {
     public static boolean refereeLogin(RefereeBean r)throws Exception{
         boolean res=false;
         try{
-            RefereeDAO dao=RefereeDAO.getInstance();
-            dao.getConn();
-            Referee ref=dao.getReferee(r.getUsername());
+            RefereeDAO dao = RefereeDAO.getInstance();
+            Referee ref = dao.getReferee(r.getUsername());
             if(ref!=null){
                 if(ref.getPassword().equals(r.getPassword())){//controllo se la password è uguale
                     //password uguale

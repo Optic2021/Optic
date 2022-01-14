@@ -207,7 +207,7 @@
                                             </columnConstraints>
                                             <rowConstraints>
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                <RowConstraints minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
                                                 <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#review" prefHeight="34.0" prefWidth="87.0" style="-fx-cursor: hand;" text="invia" GridPane.columnIndex="1">

@@ -27,8 +27,6 @@ public class ControllerUserProfile extends GraphicController{
     @FXML
     private Label star5;
     @FXML
-    private Label title;
-    @FXML
     private Label nVal;
     @FXML
     private TextArea description;
@@ -69,7 +67,7 @@ public class ControllerUserProfile extends GraphicController{
             this.description.setText(p.getDescrizione());
             //se il giocatore è valutato positivamente, nome giallo
             if(p.getStato().equals("positivo")){
-                this.title.setVisible(true);
+                //profilo plus
             }
             this.urlInstagram.setText(p.getIg());;
             this.urlFacebook.setText(p.getFb());;

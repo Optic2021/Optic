@@ -86,6 +86,9 @@ public class RefereeDAO {
         Statement stmt = null;
         Referee ref = new Referee(user,"");
         try{
+            if(instance.conn == null || instance.conn.isClosed()) {
+                instance.getConn();
+            }
             stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM referee WHERE Username=?";
             PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
