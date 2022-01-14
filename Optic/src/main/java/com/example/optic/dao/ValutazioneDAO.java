@@ -16,10 +16,12 @@ public class ValutazioneDAO {
 
     public ValutazioneDAO(PlayerDAO daoP){
         this.daoP = daoP;
+        this.daoA = null;
     }
 
     public ValutazioneDAO(AdminDAO daoA){
         this.daoA = daoA;
+        this.daoP = null;
     }
     /*
     public ValutazioneDAO(RefreeDAO daoR){

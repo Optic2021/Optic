@@ -1,5 +1,6 @@
 package com.example.optic.dao;
 
+import com.example.optic.bean.ReportBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
 import java.io.IOException;
@@ -123,6 +124,15 @@ public class RefereeDAO {
         return instance;
     }
 
+    public void saveReport(ReportBean report) throws SQLException {
+        String sql="Insert INTO Report values(null,?,?,?)";
+        PreparedStatement prepstmt=instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+        System.out.println("player "+report.getPlayer()+" referee "+report.getReferee());
+        prepstmt.setString(1,report.getMotivazione());
+        prepstmt.setString(2,report.getReferee());
+        prepstmt.setString(3,report.getPlayer());
+        prepstmt.executeUpdate();
+    }
 
     public void getConn(){
         try{

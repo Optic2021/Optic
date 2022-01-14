@@ -1,6 +1,7 @@
 package com.example.optic.dao;
 
 import com.example.optic.bean.AdminBean;
+import com.example.optic.bean.ReportBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
 import java.io.IOException;
@@ -355,7 +356,6 @@ public class AdminDAO {
         }
         return list;
     }
-
 
     public void getConn(){
         try{

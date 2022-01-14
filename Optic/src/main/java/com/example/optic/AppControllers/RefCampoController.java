@@ -1,6 +1,7 @@
 package com.example.optic.AppControllers;
 
 import com.example.optic.bean.GiornataBean;
+import com.example.optic.bean.ReportBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.dao.*;
 import com.example.optic.entities.Admin;
@@ -13,6 +14,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class RefCampoController {
+
+    public static void saveReport(ReportBean report) throws IOException {
+        RefereeDAO dao=RefereeDAO.getInstance();
+        dao.getConn();
+        try {
+            dao.saveReport(report);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static Admin getAdminFromRef(UserBean user) throws IOException {
         Admin a = null;

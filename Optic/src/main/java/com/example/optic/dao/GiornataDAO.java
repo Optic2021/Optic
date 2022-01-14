@@ -19,14 +19,20 @@ public class GiornataDAO {
 
     public GiornataDAO(PlayerDAO daoP){
         this.daoP = daoP;
+        this.daoA = null;
+        this.daoR = null;
     }
 
     public GiornataDAO(AdminDAO daoA){
         this.daoA = daoA;
+        this.daoP = null;
+        this.daoR = null;
     }
 
     public GiornataDAO(RefereeDAO daoR){
         this.daoR = daoR;
+        this.daoA = null;
+        this.daoP = null;
     }
 
 

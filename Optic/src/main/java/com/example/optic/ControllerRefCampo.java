@@ -1,13 +1,12 @@
 package com.example.optic;
 
 import com.example.optic.AppControllers.RefCampoController;
-import com.example.optic.AppControllers.UserPgPageAppController;
 import com.example.optic.bean.GiornataBean;
+import com.example.optic.bean.ReportBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
-import com.example.optic.entities.Valutazione;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -60,6 +59,10 @@ public class ControllerRefCampo extends GraphicController{
     @FXML
     private TableColumn playerVal;
 
+    @FXML
+    private Label selectedPlayer;
+    @FXML
+    private TextArea reportDesc;
 
     @Override
     public void setUserVariables(String user) throws Exception {
@@ -174,10 +177,22 @@ public class ControllerRefCampo extends GraphicController{
     public void tableview2(MouseEvent event) throws IOException {
         Node node=((Node)event.getTarget()).getParent();
         Player player = (Player) players.getSelectionModel().getSelectedItem();
-        try {
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        //Setto username report
+        String username=player.getUsername();
+        selectedPlayer.setText("Giocatore : "+username);
+    }
+
+    public void report(ActionEvent e) {
+        ReportBean rep=new ReportBean();
+        rep.setMotivazione(reportDesc.getText());
+        String[] giocatore = selectedPlayer.getText().split(" ");
+        rep.setPlayer(giocatore[2]);
+        rep.setReferee(user.getText());
+        try {
+            RefCampoController.saveReport(rep);
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 
@@ -200,6 +215,7 @@ public class ControllerRefCampo extends GraphicController{
             ex.printStackTrace();
         }
     }
+
     public void toLogin(ActionEvent e) throws IOException {
         RefCampoController.closeConn();
         this.toView("views/login.fxml");

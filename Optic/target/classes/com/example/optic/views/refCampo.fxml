@@ -236,8 +236,8 @@
                                                 <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="187.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
-                                                <TextArea maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="325.0" promptText="Inserire recensione..." wrapText="true" GridPane.rowIndex="1" />
-                                                <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" text="Invia" GridPane.columnIndex="1">
+                                                <TextArea fx:id="reportDesc" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="325.0" promptText="Inserire recensione..." wrapText="true" GridPane.rowIndex="1" />
+                                                <Button mnemonicParsing="false" onAction="#report" prefHeight="34.0" prefWidth="87.0" text="Invia" GridPane.columnIndex="1">
                                                     <styleClass>
                                                         <String fx:value="login" />
                                                         <String fx:value="menuButton2" />
@@ -249,7 +249,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </Button>
-                                    <Label contentDisplay="CENTER" prefHeight="77.0" prefWidth="380.0" styleClass="textTitoli" text="Giocatore">
+                                    <Label fx:id="selectedPlayer" contentDisplay="CENTER" prefHeight="77.0" prefWidth="380.0" styleClass="textTitoli" text="Giocatore">
                                        <font>
                                           <Font name="Amiri" size="15.0" />
                                        </font>
