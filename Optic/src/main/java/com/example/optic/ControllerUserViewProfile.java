@@ -7,10 +7,17 @@ import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,6 +25,8 @@ import java.util.Date;
 
 public class ControllerUserViewProfile extends GraphicController{
     //stelle recensione
+    @FXML
+    private Pane id;
     @FXML
     private Label star1;
     @FXML
@@ -172,6 +181,28 @@ public class ControllerUserViewProfile extends GraphicController{
                 star55.setVisible(true);
                 break;
             default:;
+        }
+    }
+
+    public void reportList(){
+        try {
+            String[] app = profile.getText().split(" ");
+            String username=app[1];
+            Stage list = new Stage();
+            Stage obj = (Stage) id.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/reportList.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
+            GraphicController controller = fxmlLoader.getController();
+            controller.setUserVariables(username);
+            scene.setFill(Color.TRANSPARENT);
+            list.setResizable(false);
+            list.initOwner(obj);
+            list.initModality(Modality.APPLICATION_MODAL);
+            list.initStyle(StageStyle.TRANSPARENT);
+            list.setScene(scene);
+            list.show();
+        }catch (Exception ex){
+            ex.printStackTrace();
         }
     }
 

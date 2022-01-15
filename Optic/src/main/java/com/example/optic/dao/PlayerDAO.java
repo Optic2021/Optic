@@ -111,7 +111,6 @@ public class PlayerDAO {
                 p.setValutazione(rs.getInt("Valutazione"));
                 p.setIg(rs.getString("Instagram"));
                 p.setFb(rs.getString("Facebook"));
-                p.setStato(rs.getString("Stato"));
 
                 //chiudo result set
                 rs.close();
