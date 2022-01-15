@@ -8,6 +8,7 @@ import com.example.optic.entities.Admin;
 import com.example.optic.entities.Event;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
+import javafx.scene.control.Alert;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -107,8 +108,9 @@ public class RefCampoController {
             RefereeDAO dao = RefereeDAO.getInstance();
             dao.closeConn();
         }catch (Exception e){
-            System.out.println("Errore chiusura connessione con il database");
-            e.printStackTrace();
+            Alert err = new Alert(Alert.AlertType.CONFIRMATION);
+            err.setContentText("errore chiusura connessione");
+            err.show();
         }
     }
 }

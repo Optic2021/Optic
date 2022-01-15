@@ -9,6 +9,7 @@ import com.example.optic.entities.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserPgPageAppController {
 
@@ -18,7 +19,7 @@ public class UserPgPageAppController {
 
     public static AdminBean getCampoInfo(AdminBean campo) throws Exception{
         AdminDAO dao = AdminDAO.getInstance();
-        String nomeC = campo.getNomeCampo();;
+        String nomeC = campo.getNomeCampo();
         Admin x = dao.getCampo(nomeC);
         AdminBean y = new AdminBean();
         Referee ref = null;
@@ -97,8 +98,8 @@ public class UserPgPageAppController {
         return  play;
     }
 
-    public static ArrayList<Player> getPlayersList(GiornataBean bean) throws IOException{
-        ArrayList<Player> list = new ArrayList<Player>();
+    public static List<Player> getPlayersList(GiornataBean bean) throws IOException{
+        ArrayList<Player> list = new ArrayList<>();
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             GiornataDAO playDao = new GiornataDAO(dao);
@@ -118,7 +119,7 @@ public class UserPgPageAppController {
         dao.saveReview(val,0);
     }
 
-    public static ArrayList<Valutazione> reviewList(AdminBean admin){
+    public static List<Valutazione> reviewList(AdminBean admin){
         ArrayList<Valutazione> list = null;
         try {
 

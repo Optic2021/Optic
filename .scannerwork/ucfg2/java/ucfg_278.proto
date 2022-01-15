@@ -1,43 +1,43 @@
 
 Rcom.example.optic.AppControllers.RefCampoController#getEventList()Ljava/util/List;‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java- -(*"7*ê
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java. .(*"7*ê
 2‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java2 2(1Ñ
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java3 3(1Ñ
 Î
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java2 2(1
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java3 3(1
 listjava.util.ArrayList"__id*
 
 %5java.util.ArrayList*
 1*Ã
 4‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java1 1(2ë
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java2 2(2ë
 è
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java1 1(2*
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java2 2(2*
 eventDaocom.example.optic.dao.EventDAO"__id*&
 $
 %3com.example.optic.dao.EventDAO¼¹
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java2 2(1
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java3 3(1
 %5java.util.ArrayList"Icom.example.optic.dao.EventDAO#getRefereeEventList()Ljava/util/ArrayList;*,
 *
 eventDaocom.example.optic.dao.EventDAO2getRefereeEventList()*
 2*–
 5‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java0 0(6ê
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java1 1(6ê
 ç
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java0 0(6'
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java1 1(6'
 dao com.example.optic.dao.RefereeDAO"__id*(
 &
 %2 com.example.optic.dao.RefereeDAO×Ô
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java1$ 1(,$
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java2$ 2(,$
 %3com.example.optic.dao.EventDAO"com.example.optic.dao.EventDAO¶
 ³
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java1  1(1
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java2  2(1
 %4"Jcom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/RefereeDAO;)V*&
 $
 %3com.example.optic.dao.EventDAO*)
@@ -45,35 +45,35 @@ $
 dao com.example.optic.dao.RefereeDAO*
 4*Ê
 6‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java0 0('±
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java1 1('±
 ®
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java0 0(5&
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java1 1(5&
 %2 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
  com.example.optic.dao.RefereeDAO*
 5*„
 7‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java.  .(1Á¾
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java/  /(1Á¾
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java.$ .(/
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java/$ /(/
 %0java.util.ArrayList"java.util.ArrayListÓ
 Ð
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java.  .(1
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java/  /(1
 %1"java.util.ArrayList#<init>()V*
 
 %0java.util.ArrayListÑ
 Î
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java. .(2
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java/ /(2
 listjava.util.ArrayList"__id*
 
 %0java.util.ArrayList*
 6*Á
 1‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java6 6("­
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java7 7("­
 ‹
-€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java6 6(
+€C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/RefCampoController.java7 7(
 
 listjava.util.ArrayListB7"5
 3com.example.optic.AppControllers.RefCampoController

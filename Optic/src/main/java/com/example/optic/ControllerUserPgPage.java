@@ -21,6 +21,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class ControllerUserPgPage extends GraphicController {
     @FXML
@@ -232,7 +233,7 @@ public class ControllerUserPgPage extends GraphicController {
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
         Player p = new Player();
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        ArrayList<Player> list = UserPgPageAppController.getPlayersList(playBean);
+        List<Player> list = UserPgPageAppController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
             p = list.get(i);
             players.getItems().add(p);
@@ -334,7 +335,7 @@ public class ControllerUserPgPage extends GraphicController {
         int numVal = 0;
         int mediaVal = 0;
         int stars = 0;
-        ArrayList<Valutazione> list = UserPgPageAppController.reviewList(admin);
+        List<Valutazione> list = UserPgPageAppController.reviewList(admin);
         nome.setCellValueFactory(new PropertyValueFactory<>("fk_UsernameP1"));
         recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
         int k = list.size();

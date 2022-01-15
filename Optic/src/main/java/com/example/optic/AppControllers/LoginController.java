@@ -1,5 +1,4 @@
 package com.example.optic.AppControllers;
-
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.RefereeBean;

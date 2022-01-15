@@ -155,7 +155,7 @@ public class AdminDAO {
     }
 
     //recupero l'arbitro utilizzando il nome dell'admin
-    public static Referee getRefereeFromAdmin(String user)throws Exception{
+    public Referee getRefereeFromAdmin(String user)throws Exception{
         Statement stmt = null;
         Referee ref = null;
         try{
@@ -187,7 +187,7 @@ public class AdminDAO {
     }
 
     //recupero l'arbitro utilizzando il nome dello stesso
-    public static Referee getReferee(String user)throws Exception{
+    public Referee getReferee(String user)throws Exception{
         Statement stmt = null;
         Referee ref = null;
         try{

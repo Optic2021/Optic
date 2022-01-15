@@ -1,6 +1,5 @@
 package com.example.optic.AppControllers;
 
-import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.dao.AdminDAO;
 import com.example.optic.dao.PlayerDAO;
@@ -36,7 +35,7 @@ public class RegisterController {
                     res = true;
                 }
             }
-            case 3 -> {
+            default ->{
                 RefereeDAO r = RefereeDAO.getInstance();
                 Referee referee = null;
                 r.getConn();
@@ -44,10 +43,6 @@ public class RegisterController {
                 if(referee != null){
                     res = true;
                 }
-                //res = true; res = RefereeDAO.isReferee(username);
-            }
-            default ->{
-
             }
         }
         return res;
@@ -73,7 +68,7 @@ public class RegisterController {
                     password = user.getPassword();
                     admin.newAdmin(username,password,via,nomeC,prov);
                 }
-                case 3 -> {
+                default -> {
                     RefereeDAO referee = RefereeDAO.getInstance();
                     username = user.getUsername();
                     password = user.getPassword();
@@ -97,7 +92,7 @@ public class RegisterController {
                     AdminDAO admin = AdminDAO.getInstance();
                     admin.closeConn();
                 }
-                case 3 -> {
+                default -> {
                     RefereeDAO referee = RefereeDAO.getInstance();
                     referee.closeConn();
                 }

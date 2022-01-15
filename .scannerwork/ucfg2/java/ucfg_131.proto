@@ -1,10 +1,10 @@
 
 bcom.example.optic.AppControllers.LoginController#playerLogin(Lcom/example/optic/bean/PlayerBean;)Zá
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (%"11*Ø
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (%"11*Ø
 5á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (Iöó
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (Iöó
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (I
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (I
 %5boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
 
 %3java.lang.String*
@@ -12,35 +12,35 @@ bcom.example.optic.AppControllers.LoginController#playerLogin(Lcom/example/optic
 %4java.lang.String2equals(Ljava/lang/Object;)*
 1*∂
 6á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java9 (:°û
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java9 (:°û
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java9 (H
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java9 (H
 %4java.lang.String"Acom.example.optic.bean.PlayerBean#getPassword()Ljava/lang/String;*(
 &
 p!com.example.optic.bean.PlayerBean2getPassword()*
 5*π
 7á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (#§°
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (#§°
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (1
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (1
 %3java.lang.String"Acom.example.optic.entities.Player#getPassword()Ljava/lang/String;*+
 )
 user!com.example.optic.entities.Player2getPassword()*
 6*Å
 8á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (9È
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (9È
 Ê
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (9)
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (9)
 user!com.example.optic.entities.Player"__id*)
 '
 %2!com.example.optic.entities.Player*
 7
 1*ê
 9á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (8˚¯
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (8˚¯
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (8'
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (8'
 %2!com.example.optic.entities.Player"`com.example.optic.dao.PlayerDAO#getPlayer(Ljava/lang/String;)Lcom/example/optic/entities/Player;*(
 &
 daocom.example.optic.dao.PlayerDAO*
@@ -48,31 +48,31 @@ bcom.example.optic.AppControllers.LoginController#playerLogin(Lcom/example/optic
 %1java.lang.String2getPlayer(Ljava/lang/String;)*
 8*û
 10á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (4‰
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (4‰
 ·
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (4&
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (4&
 daocom.example.optic.dao.PlayerDAO"__id*'
 %
 %0com.example.optic.dao.PlayerDAO°û
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java( (7
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java( (7
 %1java.lang.String"Acom.example.optic.bean.PlayerBean#getUsername()Ljava/lang/String;*(
 &
 p!com.example.optic.bean.PlayerBean2getUsername()*
 9*¿
 11á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (%©
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (%©
 ¶
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (3%
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java (3%
 %0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
 com.example.optic.dao.PlayerDAO*
 10*¢
 1á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java$ $("í
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java# #("í
 á
-}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java$ $(
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java# #(
 "":&
 p!com.example.optic.bean.PlayerBeanB4"2
 0com.example.optic.AppControllers.LoginController

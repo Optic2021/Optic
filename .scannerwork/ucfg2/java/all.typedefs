@@ -1659,12 +1659,12 @@ NsetReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)
 2setDescription(Lcom/example/optic/bean/AdminBean;)kcom.example.optic.AppControllers.ModPGPageAppController#setDescription(Lcom/example/optic/bean/AdminBean;)VÆ
 1getReviewList(Lcom/example/optic/bean/AdminBean;)ycom.example.optic.AppControllers.ModPGPageAppController#getReviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;∆
 2getNextPlay(Lcom/example/optic/bean/GiornataBean;)ècom.example.optic.AppControllers.ModPGPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;S
-closeConn()Dcom.example.optic.AppControllers.ModPGPageAppController#closeConn()V®
+closeConn()Dcom.example.optic.AppControllers.ModPGPageAppController#closeConn()V£
 3com.example.optic.AppControllers.RefCampoControllerjava.lang.Objectó
 /saveReport(Lcom/example/optic/bean/ReportBean;)dcom.example.optic.AppControllers.RefCampoController#saveReport(Lcom/example/optic/bean/ReportBean;)V¬
 2getLastPlay(Lcom/example/optic/bean/GiornataBean;)ãcom.example.optic.AppControllers.RefCampoController#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;I
-<init>()=com.example.optic.AppControllers.RefCampoController#<init>()V∑
-5getPlayersList(Lcom/example/optic/bean/GiornataBean;)~com.example.optic.AppControllers.RefCampoController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/ArrayList;º
+<init>()=com.example.optic.AppControllers.RefCampoController#<init>()V≤
+5getPlayersList(Lcom/example/optic/bean/GiornataBean;)ycom.example.optic.AppControllers.RefCampoController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;º
 /getFirstPlay(Lcom/example/optic/bean/UserBean;)àcom.example.optic.AppControllers.RefCampoController#getFirstPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;¬
 2getNextPlay(Lcom/example/optic/bean/GiornataBean;)ãcom.example.optic.AppControllers.RefCampoController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;d
 getEventList()Rcom.example.optic.AppControllers.RefCampoController#getEventList()Ljava/util/List;ø

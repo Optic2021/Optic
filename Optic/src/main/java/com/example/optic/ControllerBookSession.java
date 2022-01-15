@@ -35,13 +35,13 @@ public class ControllerBookSession extends GraphicController {
         this.user.setText(user);
         populateCampiTable(user);
     }
-    public void toProfile(ActionEvent e) throws Exception {
+    public void toProfile() throws Exception {
         this.toView("views/userProfile.fxml",user.getText());
     }
-    public void toHome(ActionEvent e) throws IOException {
+    public void toHome() throws IOException {
         this.toView("views/userHomeMap.fxml");
     }
-    public void toLogin(ActionEvent e) throws IOException {
+    public void toLogin() throws IOException {
         BookSessionAppController.closeConn();
         this.toView("views/login.fxml");
     }

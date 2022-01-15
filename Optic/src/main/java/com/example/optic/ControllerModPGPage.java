@@ -330,7 +330,7 @@ public class ControllerModPGPage extends GraphicController {
         UserBean bean2 = new UserBean();
         bean2.setUsername(user);
         //prendo l'arbitro collegato all'admin
-        Referee ref2 = ModPGPageAppController.getRefereeFromAdmin(bean2);
+        Referee ref2=ModPGPageAppController.getRefereeFromAdmin(bean2);
         if(ref2 == null){
             ref.setText("");
         }else{

@@ -5,6 +5,8 @@ import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.dao.*;
 import com.example.optic.entities.*;
+import javafx.scene.control.Alert;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -200,8 +202,9 @@ public class ModPGPageAppController {
             AdminDAO dao = AdminDAO.getInstance();
             dao.closeConn();
         }catch (Exception e){
-            System.out.println("Errore chiusura connessione con il database");
-            e.printStackTrace();
+            Alert err = new Alert(Alert.AlertType.CONFIRMATION);
+            err.setContentText("errore chiusura connessione");
+            err.show();
         }
     }
 }
