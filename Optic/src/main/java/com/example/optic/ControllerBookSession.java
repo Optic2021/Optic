@@ -29,6 +29,8 @@ public class ControllerBookSession extends GraphicController {
     @FXML
     private TableColumn Provincia;
 
+    System.out.println("ciao");
+
     @Override
     public void setUserVariables(String user){
         this.user.setText(user);
