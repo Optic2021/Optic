@@ -13,6 +13,10 @@ import java.io.IOException;
 
 public class RegisterController {
 
+    private RegisterController(){
+        //does np
+    }
+
     public static boolean isUsernameUsed(UserBean user, int userType) throws Exception {
         boolean res = false;
         switch (userType){

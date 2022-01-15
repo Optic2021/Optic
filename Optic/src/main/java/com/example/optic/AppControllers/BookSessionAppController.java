@@ -3,17 +3,22 @@ package com.example.optic.AppControllers;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.dao.AdminDAO;
 import com.example.optic.dao.PlayerDAO;
-import com.example.optic.entities.Admin;
+import javafx.scene.control.Alert;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class BookSessionAppController {
 
-    public static ArrayList<AdminBean> getCampi() throws Exception {
+    private BookSessionAppController(){
+        //does np
+    }
+
+    public static List<AdminBean> getCampi() throws Exception {
         AdminDAO dao = AdminDAO.getInstance();
-        ArrayList<AdminBean> lista = new ArrayList<AdminBean>();
+        ArrayList<AdminBean> lista = new ArrayList<>();
         try {
             lista=dao.getCampoList();
         }catch (Exception e){
@@ -28,8 +33,9 @@ public class BookSessionAppController {
             PlayerDAO dao = PlayerDAO.getInstance();
             dao.closeConn();
         }catch (Exception e){
-            System.out.println("Errore chiusura connessione con il database");
-            e.printStackTrace();
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("Errore chiusura connessione al db");
+            err.show();
         }
     }
 }

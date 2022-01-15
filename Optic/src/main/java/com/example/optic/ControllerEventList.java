@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControllerEventList extends GraphicController {
     @FXML
@@ -23,7 +24,7 @@ public class ControllerEventList extends GraphicController {
 
     @Override
     public void setUserVariables(String user) throws IOException {
-        ArrayList<Event> list = new ArrayList<Event>();
+        List<Event> list;
         if(user.contains("Giocatore")){//uso la dao del player
             list = UserProfileAppController.getEventList();
             this.setList(list);
@@ -36,7 +37,7 @@ public class ControllerEventList extends GraphicController {
         }
     }
 
-    public void setList(ArrayList<Event> list) throws IOException {
+    public void setList(List<Event> list) throws IOException {
         this.events.getItems().clear();
         for(int i = 0; i < list.size();i++){
             events.getItems().add(list.get(i).getFormattedText());

@@ -12,6 +12,10 @@ import java.util.ArrayList;
 
 public class UserPgPageAppController {
 
+    private UserPgPageAppController(){
+        //does np
+    }
+
     public static AdminBean getCampoInfo(AdminBean campo) throws Exception{
         AdminDAO dao = AdminDAO.getInstance();
         String nomeC = campo.getNomeCampo();;

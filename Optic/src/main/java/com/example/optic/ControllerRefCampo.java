@@ -26,6 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class ControllerRefCampo extends GraphicController{
     @FXML
@@ -166,7 +167,7 @@ public class ControllerRefCampo extends GraphicController{
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
         Player p = null;
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        ArrayList<Player> list = RefCampoController.getPlayersList(playBean);
+        List<Player> list = RefCampoController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
             p = list.get(i);
             players.getItems().add(p);

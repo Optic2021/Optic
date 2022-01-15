@@ -127,8 +127,8 @@ public class PlayerDAO {
     }
 
     public static PlayerDAO getInstance() throws IOException {
-        if(PlayerDAO.instance == null){
-            PlayerDAO.instance = new PlayerDAO();
+        if(instance == null){
+            instance = new PlayerDAO();
         }
         return instance;
     }

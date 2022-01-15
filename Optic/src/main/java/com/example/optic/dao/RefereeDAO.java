@@ -83,7 +83,7 @@ public class RefereeDAO {
     }
 
     //chiede l aggiunta di una catch clause
-    public static Referee getReferee(String user)throws Exception{
+    public Referee getReferee(String user)throws Exception{
         Statement stmt = null;
         Referee ref = new Referee(user,"");
         try{
@@ -118,8 +118,8 @@ public class RefereeDAO {
     }
 
     public static RefereeDAO getInstance() throws IOException {
-        if(RefereeDAO.instance == null){
-            RefereeDAO.instance = new RefereeDAO();
+        if(instance == null){
+            instance = new RefereeDAO();
         }
         return instance;
     }

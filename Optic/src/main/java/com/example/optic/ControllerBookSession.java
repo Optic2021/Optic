@@ -18,6 +18,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControllerBookSession extends GraphicController {
     @FXML
@@ -62,7 +63,7 @@ public class ControllerBookSession extends GraphicController {
         player.setUsername(user);
 
         try {
-            ArrayList<AdminBean> lista = BookSessionAppController.getCampi();
+            List<AdminBean> lista = BookSessionAppController.getCampi();
             NomeC.setCellValueFactory(new PropertyValueFactory<>("nomeCampo"));
             Provincia.setCellValueFactory(new PropertyValueFactory<>("provincia"));
             boolean list = true;

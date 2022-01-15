@@ -4,21 +4,19 @@ import com.example.optic.AppControllers.ModPGPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
-import com.example.optic.dao.PlayerDAO;
 import com.example.optic.entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,6 +24,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class ControllerModPGPage extends GraphicController {
     @FXML
@@ -256,7 +255,7 @@ public class ControllerModPGPage extends GraphicController {
         int mediaVal = 0;
         int stars = 0;
         admin.setUsername(user);
-        ArrayList<Valutazione> list = ModPGPageAppController.getReviewList(admin);
+        List<Valutazione> list = ModPGPageAppController.getReviewList(admin);
         for(int i = 0; i < list.size(); i++) {
             numVal++;
             mediaVal += list.get(i).getStelle();
@@ -278,7 +277,7 @@ public class ControllerModPGPage extends GraphicController {
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
         Player p = new Player();
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        ArrayList<Player> list = ModPGPageAppController.getPlayersList(playBean);
+        List<Player> list = ModPGPageAppController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
             p = list.get(i);
             players.getItems().add(p);
@@ -288,7 +287,7 @@ public class ControllerModPGPage extends GraphicController {
 
     public void populateEventBox() throws IOException {
         eventBox.getItems().clear();
-        ArrayList<Event> list = ModPGPageAppController.getEventList();
+        List<Event> list = ModPGPageAppController.getEventList();
         for(int i = 0; i < list.size();i++){
             eventBox.getItems().add(list.get(i).getNome());
         }

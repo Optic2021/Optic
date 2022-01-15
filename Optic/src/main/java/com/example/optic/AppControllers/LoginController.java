@@ -9,10 +9,15 @@ import com.example.optic.dao.RefereeDAO;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Referee;
+import javafx.scene.control.Alert;
 
 import java.io.IOException;
 
 public class LoginController {
+
+    private LoginController(){
+        //does np
+    }
 
     public static boolean playerLogin(PlayerBean p) throws Exception {
         boolean res = false;
@@ -21,12 +26,9 @@ public class LoginController {
             PlayerDAO dao = PlayerDAO.getInstance();
             Player user = dao.getPlayer(p.getUsername());
             //controllo se il player esiste
-            if(user != null){
-                //esiste
-                if(user.getPassword().equals(p.getPassword())){//controllo se la password è uguale
-                    //password uguale
-                    res = true;
-                }
+            if(user != null && user.getPassword().equals(p.getPassword())){//controllo se esiste se la password è uguale
+                //password uguale
+                res = true;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -41,12 +43,9 @@ public class LoginController {
             AdminDAO dao = AdminDAO.getInstance();
             Admin user = dao.getAdmin(a.getUsername());
             //controllo se il player esiste
-            if(user != null){
-                //esiste
-                if(user.getPassword().equals(a.getPassword())){//controllo se la password è uguale
-                    //password uguale
-                    res = true;
-                }
+            if(user != null && user.getPassword().equals(a.getPassword())) {//controllo se esiste e se la password è uguale
+                //password uguale
+                res = true;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,11 +58,9 @@ public class LoginController {
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
             Referee ref = dao.getReferee(r.getUsername());
-            if(ref!=null){
-                if(ref.getPassword().equals(r.getPassword())){//controllo se la password è uguale
-                    //password uguale
-                    res = true;
-                }
+            if(ref!=null && ref.getPassword().equals(r.getPassword())){//controllo se esiste e se la password è uguale
+                //password uguale
+                res = true;
             }
         }catch (Exception e) {
             e.printStackTrace();
@@ -82,14 +79,16 @@ public class LoginController {
                     AdminDAO admin = AdminDAO.getInstance();
                     admin.closeConn();
                 }
-                case 3 -> {
+                default ->  {
+                    //valore 3
                     RefereeDAO referee = RefereeDAO.getInstance();
                     referee.closeConn();
                 }
             }
         }catch (Exception e){
-            System.out.println("Errore chiusura connessione con il database");
-            e.printStackTrace();
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("Errore chiusura connessione al db");
+            err.show();
         }
     }
 }

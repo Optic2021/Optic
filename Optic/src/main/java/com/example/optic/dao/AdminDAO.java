@@ -254,8 +254,8 @@ public class AdminDAO {
     }
 
     public static AdminDAO getInstance() throws IOException {
-        if(AdminDAO.instance == null){
-            AdminDAO.instance = new AdminDAO();
+        if(instance == null){
+            instance = new AdminDAO();
         }
         return instance;
     }

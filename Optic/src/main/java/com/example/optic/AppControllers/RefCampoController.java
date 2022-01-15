@@ -12,8 +12,13 @@ import com.example.optic.entities.Player;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class RefCampoController {
+
+    private RefCampoController(){
+        //does np
+    }
 
     public static void saveReport(ReportBean report) throws IOException {
         RefereeDAO dao=RefereeDAO.getInstance();
@@ -37,8 +42,8 @@ public class RefCampoController {
         return a;
     }
 
-    public static ArrayList<Event> getEventList() throws IOException{
-        ArrayList<Event> list = new ArrayList<Event>();
+    public static List<Event> getEventList() throws IOException{
+        ArrayList<Event> list = new ArrayList<>();
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
@@ -85,8 +90,8 @@ public class RefCampoController {
         return  play;
     }
 
-    public static ArrayList<Player> getPlayersList(GiornataBean bean) throws IOException{
-        ArrayList<Player> list = new ArrayList<Player>();
+    public static List<Player> getPlayersList(GiornataBean bean) throws IOException{
+        ArrayList<Player> list = new ArrayList<>();
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
             GiornataDAO playDao = new GiornataDAO(dao);

@@ -2,17 +2,19 @@ package com.example.optic.AppControllers;
 
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
-import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.dao.*;
 import com.example.optic.entities.*;
-
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class ModPGPageAppController {
+
+    private ModPGPageAppController(){
+        //does np
+    }
 
     public static Admin getAdmin(AdminBean a){
         Admin admin = null;
@@ -109,8 +111,8 @@ public class ModPGPageAppController {
         return ref;
     }
 
-    public static ArrayList<Valutazione> getReviewList(AdminBean a) throws IOException {
-        ArrayList<Valutazione> list = new ArrayList<Valutazione>();
+    public static List<Valutazione> getReviewList(AdminBean a) throws IOException {
+        ArrayList<Valutazione> list = new ArrayList<>();
         //utilizzo la dao dell'admin dove è creata la connessisone
         try {
             AdminDAO daoA = AdminDAO.getInstance();
@@ -122,8 +124,8 @@ public class ModPGPageAppController {
         return list;
     }
 
-    public static ArrayList<Player> getPlayersList(GiornataBean bean) throws IOException{
-        ArrayList<Player> list = new ArrayList<Player>();
+    public static List<Player> getPlayersList(GiornataBean bean) throws IOException{
+        ArrayList<Player> list = new ArrayList<>();
         try{
             AdminDAO dao = AdminDAO.getInstance();
             GiornataDAO playDao = new GiornataDAO(dao);
@@ -134,8 +136,8 @@ public class ModPGPageAppController {
         return list;
     }
 
-    public static ArrayList<Event> getEventList() throws IOException{
-        ArrayList<Event> list = new ArrayList<Event>();
+    public static List<Event> getEventList() throws IOException{
+        ArrayList<Event> list = new ArrayList<>();
         try{
             AdminDAO dao = AdminDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);

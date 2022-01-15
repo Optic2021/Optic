@@ -12,8 +12,13 @@ import com.example.optic.entities.Giornata;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserProfileAppController {
+
+    private UserProfileAppController(){
+        //does np
+    }
 
     public static Player getPlayer(PlayerBean p){
         Player player = null;
@@ -27,7 +32,7 @@ public class UserProfileAppController {
     }
 
     public static ArrayList<Valutazione> getReviewList(PlayerBean p) throws IOException {
-        ArrayList<Valutazione> list = new ArrayList<Valutazione>();
+        ArrayList<Valutazione> list = new ArrayList<>();
         //utilizzo la dao del player dove è creata la connessisone
         try {
             PlayerDAO daoP = PlayerDAO.getInstance();
@@ -62,7 +67,7 @@ public class UserProfileAppController {
         dao.saveReview(val,1);
     }
     public static ArrayList<Giornata> getRecentPlayList(UserBean user){
-        ArrayList<Giornata> list = new ArrayList<Giornata>();
+        ArrayList<Giornata> list = new ArrayList<>();
         try{
             PlayerDAO daoP = PlayerDAO.getInstance();
             GiornataDAO dao = new GiornataDAO(daoP);
@@ -73,8 +78,8 @@ public class UserProfileAppController {
         return list;
     }
 
-    public static ArrayList<Event> getEventList() throws IOException{
-        ArrayList<Event> list = new ArrayList<Event>();
+    public static List<Event> getEventList() throws IOException{
+        ArrayList<Event> list = new ArrayList<>();
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
@@ -86,7 +91,7 @@ public class UserProfileAppController {
     }
 
     public static ArrayList<ReportBean> getReportList(String user) {
-        ArrayList<ReportBean> list = new ArrayList<ReportBean>();
+        ArrayList<ReportBean> list = new ArrayList<>();
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             list = dao.getPlayerReportList(user);
