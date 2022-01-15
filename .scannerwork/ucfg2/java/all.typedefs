@@ -341,7 +341,22 @@ $com.example.optic.dao.ValutazioneDAOjava.lang.Object¢
 setUser(Ljava/lang/String;)Icom.example.optic.entities.ValutazionePlayer#setUser(Ljava/lang/String;)Vv
 "setDescrizione(Ljava/lang/String;)Pcom.example.optic.entities.ValutazionePlayer#setDescrizione(Ljava/lang/String;)Vä
 ,<init>(Ljava/lang/String;Ljava/lang/String;)Zcom.example.optic.entities.ValutazionePlayer#<init>(Ljava/lang/String;Ljava/lang/String;)Vc
-getDescrizione()Ocom.example.optic.entities.ValutazionePlayer#getDescrizione()Ljava/lang/String;ã
+getDescrizione()Ocom.example.optic.entities.ValutazionePlayer#getDescrizione()Ljava/lang/String;“
+&com.example.optic.entities.Valutazionejava.lang.Objecta
+getFk_UsernameP1()Kcom.example.optic.entities.Valutazione#getFk_UsernameP1()Ljava/lang/String;a
+getFk_UsernameP2()Kcom.example.optic.entities.Valutazione#getFk_UsernameP2()Ljava/lang/String;t
+$setFk_UsernameP2(Ljava/lang/String;)Lcom.example.optic.entities.Valutazione#setFk_UsernameP2(Ljava/lang/String;)Vr
+#setFk_UsernameA(Ljava/lang/String;)Kcom.example.optic.entities.Valutazione#setFk_UsernameA(Ljava/lang/String;)Vp
+"setDescrizione(Ljava/lang/String;)Jcom.example.optic.entities.Valutazione#setDescrizione(Ljava/lang/String;)VB
+getStelle()3com.example.optic.entities.Valutazione#getStelle()IP
+getIdValutazione():com.example.optic.entities.Valutazione#getIdValutazione()I]
+getDescrizione()Icom.example.optic.entities.Valutazione#getDescrizione()Ljava/lang/String;D
+setStelle(I)4com.example.optic.entities.Valutazione#setStelle(I)Vt
+$setFk_UsernameP1(Ljava/lang/String;)Lcom.example.optic.entities.Valutazione#setFk_UsernameP1(Ljava/lang/String;)V_
+getFk_UsernameA()Jcom.example.optic.entities.Valutazione#getFk_UsernameA()Ljava/lang/String;™
+?<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)gcom.example.optic.entities.Valutazione#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)VR
+setIdValutazione(I);com.example.optic.entities.Valutazione#setIdValutazione(I)Va
+getFormattedText()Kcom.example.optic.entities.Valutazione#getFormattedText()Ljava/lang/String;ã
 !com.example.optic.bean.PlayerBeanjava.lang.Objectjava.io.Serializablee
 setPassword(Ljava/lang/String;)Bcom.example.optic.bean.PlayerBean#setPassword(Ljava/lang/String;)VY
 setFb(Ljava/lang/String;)<com.example.optic.bean.PlayerBean#setFb(Ljava/lang/String;)VR
@@ -911,22 +926,7 @@ Euntil(Ljava/time/temporal/Temporal;Ljava/time/temporal/TemporalUnit;)Xjava.tim
 <init>(Ljava/lang/String;)=com.example.optic.entities.Player#<init>(Ljava/lang/String;)V
 ,<init>(Ljava/lang/String;Ljava/lang/String;)Ocom.example.optic.entities.Player#<init>(Ljava/lang/String;Ljava/lang/String;)VL
 
-getStato()>com.example.optic.entities.Player#getStato()Ljava/lang/String;“
-&com.example.optic.entities.Valutazionejava.lang.Objecta
-getFk_UsernameP1()Kcom.example.optic.entities.Valutazione#getFk_UsernameP1()Ljava/lang/String;a
-getFk_UsernameP2()Kcom.example.optic.entities.Valutazione#getFk_UsernameP2()Ljava/lang/String;t
-$setFk_UsernameP2(Ljava/lang/String;)Lcom.example.optic.entities.Valutazione#setFk_UsernameP2(Ljava/lang/String;)Vr
-#setFk_UsernameA(Ljava/lang/String;)Kcom.example.optic.entities.Valutazione#setFk_UsernameA(Ljava/lang/String;)Vp
-"setDescrizione(Ljava/lang/String;)Jcom.example.optic.entities.Valutazione#setDescrizione(Ljava/lang/String;)VB
-getStelle()3com.example.optic.entities.Valutazione#getStelle()IP
-getIdValutazione():com.example.optic.entities.Valutazione#getIdValutazione()I]
-getDescrizione()Icom.example.optic.entities.Valutazione#getDescrizione()Ljava/lang/String;D
-setStelle(I)4com.example.optic.entities.Valutazione#setStelle(I)Vt
-$setFk_UsernameP1(Ljava/lang/String;)Lcom.example.optic.entities.Valutazione#setFk_UsernameP1(Ljava/lang/String;)V_
-getFk_UsernameA()Jcom.example.optic.entities.Valutazione#getFk_UsernameA()Ljava/lang/String;™
-?<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)gcom.example.optic.entities.Valutazione#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)VR
-setIdValutazione(I);com.example.optic.entities.Valutazione#setIdValutazione(I)Va
-getFormattedText()Kcom.example.optic.entities.Valutazione#getFormattedText()Ljava/lang/String;Ÿ
+getStato()>com.example.optic.entities.Player#getStato()Ljava/lang/String;Ÿ
 &com.example.optic.bean.ValutazioneBeanjava.lang.Object<
 <init>()0com.example.optic.bean.ValutazioneBean#<init>()Vn
 !setRecensione(Ljava/lang/String;)Icom.example.optic.bean.ValutazioneBean#setRecensione(Ljava/lang/String;)Vf
@@ -1048,7 +1048,7 @@ $setUserVariables(Ljava/lang/String;)Mcom.example.optic.ControllerUserProfile#s
 &populateGamesTable(Ljava/lang/String;)Ocom.example.optic.ControllerUserProfile#populateGamesTable(Ljava/lang/String;)VC
 instagram()4com.example.optic.ControllerUserProfile#instagram()VC
 setStars(I)4com.example.optic.ControllerUserProfile#setStars(I)V=
-modify()1com.example.optic.ControllerUserProfile#modify()V¶
+modify()1com.example.optic.ControllerUserProfile#modify()V°
 
 9com.example.optic.AppControllers.UserProfileAppControllerjava.lang.Objectº
 4getRecentPlayList(Lcom/example/optic/bean/UserBean;)Écom.example.optic.AppControllers.UserProfileAppController#getRecentPlayList(Lcom/example/optic/bean/UserBean;)Ljava/util/ArrayList;æ
@@ -1057,32 +1057,47 @@ $setUserVariables(Ljava/lang/String;)Mcom.example.optic.ControllerUserProfile#s
 ,setInfo(Lcom/example/optic/bean/PlayerBean;)gcom.example.optic.AppControllers.UserProfileAppController#setInfo(Lcom/example/optic/bean/PlayerBean;)Vß
 4saveReview(Lcom/example/optic/bean/ValutazioneBean;)ocom.example.optic.AppControllers.UserProfileAppController#saveReview(Lcom/example/optic/bean/ValutazioneBean;)Vï
 !getReportList(Ljava/lang/String;)pcom.example.optic.AppControllers.UserProfileAppController#getReportList(Ljava/lang/String;)Ljava/util/ArrayList;∏
-2getReviewList(Lcom/example/optic/bean/PlayerBean;)Åcom.example.optic.AppControllers.UserProfileAppController#getReviewList(Lcom/example/optic/bean/PlayerBean;)Ljava/util/ArrayList;o
-getEventList()]com.example.optic.AppControllers.UserProfileAppController#getEventList()Ljava/util/ArrayList;æ
-!com.example.optic.bean.ReportBeanjava.lang.Objectk
-"setMotivazione(Ljava/lang/String;)Ecom.example.optic.bean.ReportBean#setMotivazione(Ljava/lang/String;)V?
-ReportBean()/com.example.optic.bean.ReportBean#ReportBean()VX
-getMotivazione()Dcom.example.optic.bean.ReportBean#getMotivazione()Ljava/lang/String;P
-getReferee()@com.example.optic.bean.ReportBean#getReferee()Ljava/lang/String;7
-<init>()+com.example.optic.bean.ReportBean#<init>()VN
-getPlayer()?com.example.optic.bean.ReportBean#getPlayer()Ljava/lang/String;c
-setReferee(Ljava/lang/String;)Acom.example.optic.bean.ReportBean#setReferee(Ljava/lang/String;)V\
-getFormattedText()Fcom.example.optic.bean.ReportBean#getFormattedText()Ljava/lang/String;a
-setPlayer(Ljava/lang/String;)@com.example.optic.bean.ReportBean#setPlayer(Ljava/lang/String;)Vó
-"com.example.optic.entities.Storicojava.lang.Object`
-setCampo(Ljava/lang/String;)@com.example.optic.entities.Storico#setCampo(Ljava/lang/String;)VK
-	getData()>com.example.optic.entities.Storico#getData()Ljava/lang/String;M
+2getReviewList(Lcom/example/optic/bean/PlayerBean;)Åcom.example.optic.AppControllers.UserProfileAppController#getReviewList(Lcom/example/optic/bean/PlayerBean;)Ljava/util/ArrayList;j
+getEventList()Xcom.example.optic.AppControllers.UserProfileAppController#getEventList()Ljava/util/List;ˇ
+"com.example.optic.bean.RefereeBeanjava.lang.Objectf
+setPassword(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setPassword(Ljava/lang/String;)VS
+getPassword()Bcom.example.optic.bean.RefereeBean#getPassword()Ljava/lang/String;8
+<init>(),com.example.optic.bean.RefereeBean#<init>()Vp
+$setFk_UsernameA1(Ljava/lang/String;)Hcom.example.optic.bean.RefereeBean#setFk_UsernameA1(Ljava/lang/String;)VS
+getUsername()Bcom.example.optic.bean.RefereeBean#getUsername()Ljava/lang/String;B
+RefereeBean()1com.example.optic.bean.RefereeBean#RefereeBean()V]
+getFk_UsernameA1()Gcom.example.optic.bean.RefereeBean#getFk_UsernameA1()Ljava/lang/String;f
+setUsername(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setUsername(Ljava/lang/String;)Vß
+0com.example.optic.AppControllers.LoginControllerjava.lang.Objectñ
+0playerLogin(Lcom/example/optic/bean/PlayerBean;)bcom.example.optic.AppControllers.LoginController#playerLogin(Lcom/example/optic/bean/PlayerBean;)ZN
+closeConn(I)>com.example.optic.AppControllers.LoginController#closeConn(I)VF
+<init>():com.example.optic.AppControllers.LoginController#<init>()Vö
+2refereeLogin(Lcom/example/optic/bean/RefereeBean;)dcom.example.optic.AppControllers.LoginController#refereeLogin(Lcom/example/optic/bean/RefereeBean;)Zí
+.adminLogin(Lcom/example/optic/bean/AdminBean;)`com.example.optic.AppControllers.LoginController#adminLogin(Lcom/example/optic/bean/AdminBean;)Zì
+$com.example.optic.ControllerRegister#com.example.optic.GraphicController:
+<init>().com.example.optic.ControllerRegister#<init>()VD
+hideAddress()3com.example.optic.ControllerRegister#hideAddress()VD
+showAddress()3com.example.optic.ControllerRegister#showAddress()V”
+!com.example.optic.entities.Reportjava.lang.Objectm
+#setFk_UsernameR(Ljava/lang/String;)Fcom.example.optic.entities.Report#setFk_UsernameR(Ljava/lang/String;)Vm
+#setFk_UsernameP(Ljava/lang/String;)Fcom.example.optic.entities.Report#setFk_UsernameP(Ljava/lang/String;)Vk
+"setMotivazione(Ljava/lang/String;)Ecom.example.optic.entities.Report#setMotivazione(Ljava/lang/String;)VX
+getMotivazione()Dcom.example.optic.entities.Report#getMotivazione()Ljava/lang/String;Z
+getFk_UsernameR()Ecom.example.optic.entities.Report#getFk_UsernameR()Ljava/lang/String;7
+<init>()+com.example.optic.entities.Report#<init>()VA
+getIdReport()0com.example.optic.entities.Report#getIdReport()IC
+setIdReport(I)1com.example.optic.entities.Report#setIdReport(I)VZ
+getFk_UsernameP()Ecom.example.optic.entities.Report#getFk_UsernameP()Ljava/lang/String;é
++com.example.optic.ControllerUserViewProfile#com.example.optic.GraphicControllerE
 
-getCampo()?com.example.optic.entities.Storico#getCampo()Ljava/lang/String;Ä
-,<init>(Ljava/lang/String;Ljava/lang/String;)Pcom.example.optic.entities.Storico#<init>(Ljava/lang/String;Ljava/lang/String;)V^
-setData(Ljava/lang/String;)?com.example.optic.entities.Storico#setData(Ljava/lang/String;)Vû
- com.example.optic.entities.Campojava.lang.Objectf
- setProvincia(Ljava/lang/String;)Bcom.example.optic.entities.Campo#setProvincia(Ljava/lang/String;)VK
-
-getNomec()=com.example.optic.entities.Campo#getNomec()Ljava/lang/String;~
-,<init>(Ljava/lang/String;Ljava/lang/String;)Ncom.example.optic.entities.Campo#<init>(Ljava/lang/String;Ljava/lang/String;)V^
-setNomec(Ljava/lang/String;)>com.example.optic.entities.Campo#setNomec(Ljava/lang/String;)VS
-getProvincia()Acom.example.optic.entities.Campo#getProvincia()Ljava/lang/String;ã
+facebook()7com.example.optic.ControllerUserViewProfile#facebook()V}
+&populateReviewList(Ljava/lang/String;)Scom.example.optic.ControllerUserViewProfile#populateReviewList(Ljava/lang/String;)Vy
+$setUserVariables(Ljava/lang/String;)Qcom.example.optic.ControllerUserViewProfile#setUserVariables(Ljava/lang/String;)VA
+<init>()5com.example.optic.ControllerUserViewProfile#<init>()VG
+instagram()8com.example.optic.ControllerUserViewProfile#instagram()VG
+setStars(I)8com.example.optic.ControllerUserViewProfile#setStars(I)VI
+reportList()9com.example.optic.ControllerUserViewProfile#reportList()VY
+populateGamesTable()Acom.example.optic.ControllerUserViewProfile#populateGamesTable()Vã
 "java.lang.reflect.AnnotatedElementjava.lang.Objectß
 /getDeclaredAnnotationsByType(Ljava/lang/Class;)tjava.lang.reflect.AnnotatedElement#getDeclaredAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;t
 &isAnnotationPresent(Ljava/lang/Class;)Jjava.lang.reflect.AnnotatedElement#isAnnotationPresent(Ljava/lang/Class;)Zò
@@ -1230,7 +1245,130 @@ AcheckMemberAccess(Ljava/lang/SecurityManager;ILjava/lang/Class;Z)Rjava.lang.Cl
 toGenericString()3java.lang.Class#toGenericString()Ljava/lang/String;¨
 :getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)njava.lang.Class#getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)Ljava/lang/PublicMethods$MethodList;R
 getSimpleBinaryName0()8java.lang.Class#getSimpleBinaryName0()Ljava/lang/String;1
-isLocalClass()java.lang.Class#isLocalClass()Z–T
+isLocalClass()java.lang.Class#isLocalClass()Z°
+3com.example.optic.AppControllers.RegisterControllerjava.lang.Objectô
+0userRegister(Lcom/example/optic/bean/UserBean;I)ecom.example.optic.AppControllers.RegisterController#userRegister(Lcom/example/optic/bean/UserBean;I)VQ
+closeConn(I)Acom.example.optic.AppControllers.RegisterController#closeConn(I)VI
+<init>()=com.example.optic.AppControllers.RegisterController#<init>()Vù
+2isUsernameUsed(Lcom/example/optic/bean/UserBean;I)gcom.example.optic.AppControllers.RegisterController#isUsernameUsed(Lcom/example/optic/bean/UserBean;I)Z(
+java.lang.Appendablejava.lang.Object>
+java.io.Closeablejava.lang.Objectjava.lang.AutoCloseable%
+java.io.Flushablejava.lang.ObjectÉ
+java.io.OutputStreamjava.io.Closeablejava.lang.Objectjava.io.FlushableS
+nullOutputStream()=java.io.OutputStream#nullOutputStream()Ljava/io/OutputStream;,
+	write([B)java.io.OutputStream#write([B)V*
+<init>()java.io.OutputStream#<init>()V(
+flush()java.io.OutputStream#flush()V0
+write([BII)!java.io.OutputStream#write([BII)V(
+close()java.io.OutputStream#close()Vé
+java.io.FilterOutputStreamjava.io.OutputStream2
+	write([B)%java.io.FilterOutputStream#write([B)V\
+<init>(Ljava/io/OutputStream;):java.io.FilterOutputStream#<init>(Ljava/io/OutputStream;)V.
+flush()#java.io.FilterOutputStream#flush()V0
+write(I)$java.io.FilterOutputStream#write(I)V6
+write([BII)'java.io.FilterOutputStream#write([BII)V.
+close()#java.io.FilterOutputStream#close()VÖ 
+java.io.PrintStreamjava.lang.Appendablejava.io.Closeablejava.io.FilterOutputStream+
+	write([C)java.io.PrintStream#write([C)V)
+print(J)java.io.PrintStream#print(J)V-
+
+println(J)java.io.PrintStream#println(J)V)
+print(F)java.io.PrintStream#print(F)V-
+
+println(F)java.io.PrintStream#println(F)V/
+write([BII) java.io.PrintStream#write([BII)VÅ
+4<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)Ijava.io.PrintStream#<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)V)
+print(Z)java.io.PrintStream#print(Z)V1
+clearError()!java.io.PrintStream#clearError()V-
+
+println(Z)java.io.PrintStream#println(Z)Vi
+(<init>(Ljava/io/File;Ljava/lang/String;)=java.io.PrintStream#<init>(Ljava/io/File;Ljava/lang/String;)V)
+write(I)java.io.PrintStream#write(I)VO
+println(Ljava/lang/Object;)0java.io.PrintStream#println(Ljava/lang/Object;)VK
+print(Ljava/lang/String;).java.io.PrintStream#print(Ljava/lang/String;)Ví
+4requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Zjava.io.PrintStream#requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;)
+print(I)java.io.PrintStream#print(I)V-
+
+println(I)java.io.PrintStream#println(I)V'
+flush()java.io.PrintStream#flush()V´
+?format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;m
+ append(Ljava/lang/CharSequence;)Ijava.io.PrintStream#append(Ljava/lang/CharSequence;)Ljava/io/PrintStream;l
+toCharset(Ljava/lang/String;)Kjava.io.PrintStream#toCharset(Ljava/lang/String;)Ljava/nio/charset/Charset;W
+<init>(ZLjava/io/OutputStream;)4java.io.PrintStream#<init>(ZLjava/io/OutputStream;)V+
+	print([C)java.io.PrintStream#print([C)Vq
+"append(Ljava/lang/CharSequence;II)Kjava.io.PrintStream#append(Ljava/lang/CharSequence;II)Ljava/io/PrintStream;)
+print(D)java.io.PrintStream#print(D)Vq
+,<init>(Ljava/lang/String;Ljava/lang/String;)Ajava.io.PrintStream#<init>(Ljava/lang/String;Ljava/lang/String;)V-
+
+println(D)java.io.PrintStream#println(D)VO
+println(Ljava/lang/String;)0java.io.PrintStream#println(Ljava/lang/String;)VW
+<init>(Ljava/io/OutputStream;Z)4java.io.PrintStream#<init>(Ljava/io/OutputStream;Z)VE
+<init>(Ljava/io/File;)+java.io.PrintStream#<init>(Ljava/io/File;)Vy
+0<init>(Ljava/io/File;Ljava/nio/charset/Charset;)Ejava.io.PrintStream#<init>(Ljava/io/File;Ljava/nio/charset/Charset;)V1
+ensureOpen()!java.io.PrintStream#ensureOpen()Vã
+9<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)Njava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)V´
+?printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;-
+
+setError()java.io.PrintStream#setError()Vá
+-printf(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;?
+	append(C)2java.io.PrintStream#append(C)Ljava/io/PrintStream;M
+<init>(Ljava/lang/String;)/java.io.PrintStream#<init>(Ljava/lang/String;)Vá
+-format(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;+
+	newLine()java.io.PrintStream#newLine()V)
+print(C)java.io.PrintStream#print(C)V1
+checkError()!java.io.PrintStream#checkError()Z+
+	println()java.io.PrintStream#println()V'
+close()java.io.PrintStream#close()V-
+
+println(C)java.io.PrintStream#println(C)VK
+write(Ljava/lang/String;).java.io.PrintStream#write(Ljava/lang/String;)VK
+print(Ljava/lang/Object;).java.io.PrintStream#print(Ljava/lang/Object;)V{
+1<init>(Ljava/io/OutputStream;ZLjava/lang/String;)Fjava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/lang/String;)VU
+<init>(Ljava/io/OutputStream;)3java.io.PrintStream#<init>(Ljava/io/OutputStream;)V/
+println([C) java.io.PrintStream#println([C)Vã
+9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)V
+Applicationjava.lang.Object¶
+com.example.optic.OpticApplication-
+<init>()!com.example.optic.Optic#<init>()VO
+main([Ljava/lang/String;)2com.example.optic.Optic#main([Ljava/lang/String;)V 
+EventHandlerjava.lang.Object-
+Lcom/example/optic/Optic$703;EventHandler-
+Lcom/example/optic/Optic$956;EventHandlerˇ
+'com.example.optic.ControllerBookSession#com.example.optic.GraphicControllery
+&populateCampiTable(Ljava/lang/String;)Ocom.example.optic.ControllerBookSession#populateCampiTable(Ljava/lang/String;)Vu
+$setUserVariables(Ljava/lang/String;)Mcom.example.optic.ControllerBookSession#setUserVariables(Ljava/lang/String;)V=
+<init>()1com.example.optic.ControllerBookSession#<init>()VŸ
+9com.example.optic.AppControllers.BookSessionAppControllerjava.lang.Objectb
+
+getCampi()Tcom.example.optic.AppControllers.BookSessionAppController#getCampi()Ljava/util/List;O
+<init>()Ccom.example.optic.AppControllers.BookSessionAppController#<init>()VU
+closeConn()Fcom.example.optic.AppControllers.BookSessionAppController#closeConn()Væ
+!com.example.optic.bean.ReportBeanjava.lang.Objectk
+"setMotivazione(Ljava/lang/String;)Ecom.example.optic.bean.ReportBean#setMotivazione(Ljava/lang/String;)V?
+ReportBean()/com.example.optic.bean.ReportBean#ReportBean()VX
+getMotivazione()Dcom.example.optic.bean.ReportBean#getMotivazione()Ljava/lang/String;P
+getReferee()@com.example.optic.bean.ReportBean#getReferee()Ljava/lang/String;7
+<init>()+com.example.optic.bean.ReportBean#<init>()VN
+getPlayer()?com.example.optic.bean.ReportBean#getPlayer()Ljava/lang/String;c
+setReferee(Ljava/lang/String;)Acom.example.optic.bean.ReportBean#setReferee(Ljava/lang/String;)V\
+getFormattedText()Fcom.example.optic.bean.ReportBean#getFormattedText()Ljava/lang/String;a
+setPlayer(Ljava/lang/String;)@com.example.optic.bean.ReportBean#setPlayer(Ljava/lang/String;)Vó
+"com.example.optic.entities.Storicojava.lang.Object`
+setCampo(Ljava/lang/String;)@com.example.optic.entities.Storico#setCampo(Ljava/lang/String;)VK
+	getData()>com.example.optic.entities.Storico#getData()Ljava/lang/String;M
+
+getCampo()?com.example.optic.entities.Storico#getCampo()Ljava/lang/String;Ä
+,<init>(Ljava/lang/String;Ljava/lang/String;)Pcom.example.optic.entities.Storico#<init>(Ljava/lang/String;Ljava/lang/String;)V^
+setData(Ljava/lang/String;)?com.example.optic.entities.Storico#setData(Ljava/lang/String;)V¶
+=com.example.optic.AppControllers.UserViewProfileAppControllerjava.lang.ObjectS
+<init>()Gcom.example.optic.AppControllers.UserViewProfileAppController#<init>()Vû
+ com.example.optic.entities.Campojava.lang.Objectf
+ setProvincia(Ljava/lang/String;)Bcom.example.optic.entities.Campo#setProvincia(Ljava/lang/String;)VK
+
+getNomec()=com.example.optic.entities.Campo#getNomec()Ljava/lang/String;~
+,<init>(Ljava/lang/String;Ljava/lang/String;)Ncom.example.optic.entities.Campo#<init>(Ljava/lang/String;Ljava/lang/String;)V^
+setNomec(Ljava/lang/String;)>com.example.optic.entities.Campo#setNomec(Ljava/lang/String;)VS
+getProvincia()Acom.example.optic.entities.Campo#getProvincia()Ljava/lang/String;–T
 java.lang.ClassLoaderjava.lang.Object•
 EcheckPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)\java.lang.ClassLoader#checkPackageAccess(Ljava/lang/Class;Ljava/security/ProtectionDomain;)Vâ
 7trySetObjectField(Ljava/lang/String;Ljava/lang/Object;)Njava.lang.ClassLoader#trySetObjectField(Ljava/lang/String;Ljava/lang/Object;)ZU
@@ -1466,83 +1604,7 @@ FstoreToXML(Ljava/io/OutputStream;Ljava/lang/String;Ljava/lang/String;)\java.ut
 :compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)ajava.util.Properties#compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;n
 *enumerateStringProperties(Ljava/util/Map;)@java.util.Properties#enumerateStringProperties(Ljava/util/Map;)V&
 size()java.util.Properties#size()IP
-load(Ljava/io/InputStream;)1java.util.Properties#load(Ljava/io/InputStream;)V(
-java.lang.Appendablejava.lang.Object>
-java.io.Closeablejava.lang.Objectjava.lang.AutoCloseable%
-java.io.Flushablejava.lang.ObjectÉ
-java.io.OutputStreamjava.io.Closeablejava.lang.Objectjava.io.FlushableS
-nullOutputStream()=java.io.OutputStream#nullOutputStream()Ljava/io/OutputStream;,
-	write([B)java.io.OutputStream#write([B)V*
-<init>()java.io.OutputStream#<init>()V(
-flush()java.io.OutputStream#flush()V0
-write([BII)!java.io.OutputStream#write([BII)V(
-close()java.io.OutputStream#close()Vé
-java.io.FilterOutputStreamjava.io.OutputStream2
-	write([B)%java.io.FilterOutputStream#write([B)V\
-<init>(Ljava/io/OutputStream;):java.io.FilterOutputStream#<init>(Ljava/io/OutputStream;)V.
-flush()#java.io.FilterOutputStream#flush()V0
-write(I)$java.io.FilterOutputStream#write(I)V6
-write([BII)'java.io.FilterOutputStream#write([BII)V.
-close()#java.io.FilterOutputStream#close()VÖ 
-java.io.PrintStreamjava.lang.Appendablejava.io.Closeablejava.io.FilterOutputStream+
-	write([C)java.io.PrintStream#write([C)V)
-print(J)java.io.PrintStream#print(J)V-
-
-println(J)java.io.PrintStream#println(J)V)
-print(F)java.io.PrintStream#print(F)V-
-
-println(F)java.io.PrintStream#println(F)V/
-write([BII) java.io.PrintStream#write([BII)VÅ
-4<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)Ijava.io.PrintStream#<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)V)
-print(Z)java.io.PrintStream#print(Z)V1
-clearError()!java.io.PrintStream#clearError()V-
-
-println(Z)java.io.PrintStream#println(Z)Vi
-(<init>(Ljava/io/File;Ljava/lang/String;)=java.io.PrintStream#<init>(Ljava/io/File;Ljava/lang/String;)V)
-write(I)java.io.PrintStream#write(I)VO
-println(Ljava/lang/Object;)0java.io.PrintStream#println(Ljava/lang/Object;)VK
-print(Ljava/lang/String;).java.io.PrintStream#print(Ljava/lang/String;)Ví
-4requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Zjava.io.PrintStream#requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;)
-print(I)java.io.PrintStream#print(I)V-
-
-println(I)java.io.PrintStream#println(I)V'
-flush()java.io.PrintStream#flush()V´
-?format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;m
- append(Ljava/lang/CharSequence;)Ijava.io.PrintStream#append(Ljava/lang/CharSequence;)Ljava/io/PrintStream;l
-toCharset(Ljava/lang/String;)Kjava.io.PrintStream#toCharset(Ljava/lang/String;)Ljava/nio/charset/Charset;W
-<init>(ZLjava/io/OutputStream;)4java.io.PrintStream#<init>(ZLjava/io/OutputStream;)V+
-	print([C)java.io.PrintStream#print([C)Vq
-"append(Ljava/lang/CharSequence;II)Kjava.io.PrintStream#append(Ljava/lang/CharSequence;II)Ljava/io/PrintStream;)
-print(D)java.io.PrintStream#print(D)Vq
-,<init>(Ljava/lang/String;Ljava/lang/String;)Ajava.io.PrintStream#<init>(Ljava/lang/String;Ljava/lang/String;)V-
-
-println(D)java.io.PrintStream#println(D)VO
-println(Ljava/lang/String;)0java.io.PrintStream#println(Ljava/lang/String;)VW
-<init>(Ljava/io/OutputStream;Z)4java.io.PrintStream#<init>(Ljava/io/OutputStream;Z)VE
-<init>(Ljava/io/File;)+java.io.PrintStream#<init>(Ljava/io/File;)Vy
-0<init>(Ljava/io/File;Ljava/nio/charset/Charset;)Ejava.io.PrintStream#<init>(Ljava/io/File;Ljava/nio/charset/Charset;)V1
-ensureOpen()!java.io.PrintStream#ensureOpen()Vã
-9<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)Njava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)V´
-?printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;-
-
-setError()java.io.PrintStream#setError()Vá
--printf(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;?
-	append(C)2java.io.PrintStream#append(C)Ljava/io/PrintStream;M
-<init>(Ljava/lang/String;)/java.io.PrintStream#<init>(Ljava/lang/String;)Vá
--format(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;+
-	newLine()java.io.PrintStream#newLine()V)
-print(C)java.io.PrintStream#print(C)V1
-checkError()!java.io.PrintStream#checkError()Z+
-	println()java.io.PrintStream#println()V'
-close()java.io.PrintStream#close()V-
-
-println(C)java.io.PrintStream#println(C)VK
-write(Ljava/lang/String;).java.io.PrintStream#write(Ljava/lang/String;)VK
-print(Ljava/lang/Object;).java.io.PrintStream#print(Ljava/lang/Object;)V{
-1<init>(Ljava/io/OutputStream;ZLjava/lang/String;)Fjava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/lang/String;)VU
-<init>(Ljava/io/OutputStream;)3java.io.PrintStream#<init>(Ljava/io/OutputStream;)V/
-println([C) java.io.PrintStream#println([C)Vã
-9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)V≈
+load(Ljava/io/InputStream;)1java.util.Properties#load(Ljava/io/InputStream;)V≈
 java.sql.DriverManagerjava.lang.Objectb
 #setLogWriter(Ljava/io/PrintWriter;);java.sql.DriverManager#setLogWriter(Ljava/io/PrintWriter;)Vb
 #deregisterDriver(Ljava/sql/Driver;);java.sql.DriverManager#deregisterDriver(Ljava/sql/Driver;)VL
@@ -1567,116 +1629,7 @@ EgetConnection(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)qjava.sql
 getLoginTimeout())java.sql.DriverManager#getLoginTimeout()I¿
 HgetConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)tjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)Ljava/sql/Connection;Å
 !com.example.optic.ControllerLogin#com.example.optic.GraphicController7
-<init>()+com.example.optic.ControllerLogin#<init>()VÁ
-%com.example.optic.ControllerEventList#com.example.optic.GraphicControllers
-$setUserVariables(Ljava/lang/String;)Kcom.example.optic.ControllerEventList#setUserVariables(Ljava/lang/String;)V;
-<init>()/com.example.optic.ControllerEventList#<init>()Vg
-setList(Ljava/util/ArrayList;)Ecom.example.optic.ControllerEventList#setList(Ljava/util/ArrayList;)V˜
-7com.example.optic.AppControllers.ModPGPageAppControllerjava.lang.ObjectÕ
-6getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)ícom.example.optic.AppControllers.ModPGPageAppController#getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;ô
-.freeReferee(Lcom/example/optic/bean/UserBean;)gcom.example.optic.AppControllers.ModPGPageAppController#freeReferee(Lcom/example/optic/bean/UserBean;)V°
-2isDateValid(Lcom/example/optic/bean/GiornataBean;)kcom.example.optic.AppControllers.ModPGPageAppController#isDateValid(Lcom/example/optic/bean/GiornataBean;)Zü
-1insertPlay(Lcom/example/optic/bean/GiornataBean;)jcom.example.optic.AppControllers.ModPGPageAppController#insertPlay(Lcom/example/optic/bean/GiornataBean;)V¿
-/getFirstPlay(Lcom/example/optic/bean/UserBean;)åcom.example.optic.AppControllers.ModPGPageAppController#getFirstPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;ª
--getReferee(Lcom/example/optic/bean/UserBean;)âcom.example.optic.AppControllers.ModPGPageAppController#getReferee(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;m
-getEventList()[com.example.optic.AppControllers.ModPGPageAppController#getEventList()Ljava/util/ArrayList;°
-2setAdminSocial(Lcom/example/optic/bean/AdminBean;)kcom.example.optic.AppControllers.ModPGPageAppController#setAdminSocial(Lcom/example/optic/bean/AdminBean;)V∆
-2getLastPlay(Lcom/example/optic/bean/GiornataBean;)ècom.example.optic.AppControllers.ModPGPageAppController#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;M
-<init>()Acom.example.optic.AppControllers.ModPGPageAppController#<init>()Vº
-5getPlayersList(Lcom/example/optic/bean/GiornataBean;)Çcom.example.optic.AppControllers.ModPGPageAppController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/ArrayList;∑
-,getAdmin(Lcom/example/optic/bean/AdminBean;)Ücom.example.optic.AppControllers.ModPGPageAppController#getAdmin(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/entities/Admin;⁄
-NsetReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)ácom.example.optic.AppControllers.ModPGPageAppController#setReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)V°
-2setDescription(Lcom/example/optic/bean/AdminBean;)kcom.example.optic.AppControllers.ModPGPageAppController#setDescription(Lcom/example/optic/bean/AdminBean;)V≥
-1getReviewList(Lcom/example/optic/bean/AdminBean;)~com.example.optic.AppControllers.ModPGPageAppController#getReviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/ArrayList;∆
-2getNextPlay(Lcom/example/optic/bean/GiornataBean;)ècom.example.optic.AppControllers.ModPGPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;S
-closeConn()Dcom.example.optic.AppControllers.ModPGPageAppController#closeConn()V≠
-3com.example.optic.AppControllers.RefCampoControllerjava.lang.Objectó
-/saveReport(Lcom/example/optic/bean/ReportBean;)dcom.example.optic.AppControllers.RefCampoController#saveReport(Lcom/example/optic/bean/ReportBean;)V¬
-2getLastPlay(Lcom/example/optic/bean/GiornataBean;)ãcom.example.optic.AppControllers.RefCampoController#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;I
-<init>()=com.example.optic.AppControllers.RefCampoController#<init>()V∑
-5getPlayersList(Lcom/example/optic/bean/GiornataBean;)~com.example.optic.AppControllers.RefCampoController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/ArrayList;º
-/getFirstPlay(Lcom/example/optic/bean/UserBean;)àcom.example.optic.AppControllers.RefCampoController#getFirstPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;¬
-2getNextPlay(Lcom/example/optic/bean/GiornataBean;)ãcom.example.optic.AppControllers.RefCampoController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;i
-getEventList()Wcom.example.optic.AppControllers.RefCampoController#getEventList()Ljava/util/ArrayList;ø
-2getAdminFromRef(Lcom/example/optic/bean/UserBean;)àcom.example.optic.AppControllers.RefCampoController#getAdminFromRef(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Admin;O
-closeConn()@com.example.optic.AppControllers.RefCampoController#closeConn()V
-Callbackjava.lang.Object8
-,Lcom/example/optic/ControllerEventList$1628;Callback
-ListCelljava.lang.ObjectÇ
-,Lcom/example/optic/ControllerEventList$1822;ListCellH
-updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)Vﬁ
-9com.example.optic.AppControllers.BookSessionAppControllerjava.lang.Objectg
-
-getCampi()Ycom.example.optic.AppControllers.BookSessionAppController#getCampi()Ljava/util/ArrayList;O
-<init>()Ccom.example.optic.AppControllers.BookSessionAppController#<init>()VU
-closeConn()Fcom.example.optic.AppControllers.BookSessionAppController#closeConn()V 
-EventHandlerjava.lang.Object:
-*Lcom/example/optic/GraphicController$1461;EventHandler:
-*Lcom/example/optic/GraphicController$1721;EventHandler:
-*Lcom/example/optic/GraphicController$2537;EventHandler:
-*Lcom/example/optic/GraphicController$2797;EventHandler:
-*Lcom/example/optic/GraphicController$3561;EventHandler:
-*Lcom/example/optic/GraphicController$3821;EventHandler:
-*Lcom/example/optic/GraphicController$4653;EventHandler:
-*Lcom/example/optic/GraphicController$4913;EventHandler®
-'com.example.optic.entities.Prenotazionejava.lang.Objectq
-"setFk_Username(Ljava/lang/String;)Kcom.example.optic.entities.Prenotazione#setFk_Username(Ljava/lang/String;)V^
-getFk_Username()Jcom.example.optic.entities.Prenotazione#getFk_Username()Ljava/lang/String;=
-<init>()1com.example.optic.entities.Prenotazione#<init>()Vu
-$setFk_idGiornata(Ljava/lang/String;)Mcom.example.optic.entities.Prenotazione#setFk_idGiornata(Ljava/lang/String;)Vb
-getFk_idGiornata()Lcom.example.optic.entities.Prenotazione#getFk_idGiornata()Ljava/lang/String;ˇ
-"com.example.optic.bean.RefereeBeanjava.lang.Objectf
-setPassword(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setPassword(Ljava/lang/String;)VS
-getPassword()Bcom.example.optic.bean.RefereeBean#getPassword()Ljava/lang/String;8
-<init>(),com.example.optic.bean.RefereeBean#<init>()Vp
-$setFk_UsernameA1(Ljava/lang/String;)Hcom.example.optic.bean.RefereeBean#setFk_UsernameA1(Ljava/lang/String;)VS
-getUsername()Bcom.example.optic.bean.RefereeBean#getUsername()Ljava/lang/String;B
-RefereeBean()1com.example.optic.bean.RefereeBean#RefereeBean()V]
-getFk_UsernameA1()Gcom.example.optic.bean.RefereeBean#getFk_UsernameA1()Ljava/lang/String;f
-setUsername(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setUsername(Ljava/lang/String;)Vß
-0com.example.optic.AppControllers.LoginControllerjava.lang.Objectñ
-0playerLogin(Lcom/example/optic/bean/PlayerBean;)bcom.example.optic.AppControllers.LoginController#playerLogin(Lcom/example/optic/bean/PlayerBean;)ZN
-closeConn(I)>com.example.optic.AppControllers.LoginController#closeConn(I)VF
-<init>():com.example.optic.AppControllers.LoginController#<init>()Vö
-2refereeLogin(Lcom/example/optic/bean/RefereeBean;)dcom.example.optic.AppControllers.LoginController#refereeLogin(Lcom/example/optic/bean/RefereeBean;)Zí
-.adminLogin(Lcom/example/optic/bean/AdminBean;)`com.example.optic.AppControllers.LoginController#adminLogin(Lcom/example/optic/bean/AdminBean;)Zì
-$com.example.optic.ControllerRegister#com.example.optic.GraphicController:
-<init>().com.example.optic.ControllerRegister#<init>()VD
-hideAddress()3com.example.optic.ControllerRegister#hideAddress()VD
-showAddress()3com.example.optic.ControllerRegister#showAddress()V”
-!com.example.optic.entities.Reportjava.lang.Objectm
-#setFk_UsernameR(Ljava/lang/String;)Fcom.example.optic.entities.Report#setFk_UsernameR(Ljava/lang/String;)Vm
-#setFk_UsernameP(Ljava/lang/String;)Fcom.example.optic.entities.Report#setFk_UsernameP(Ljava/lang/String;)Vk
-"setMotivazione(Ljava/lang/String;)Ecom.example.optic.entities.Report#setMotivazione(Ljava/lang/String;)VX
-getMotivazione()Dcom.example.optic.entities.Report#getMotivazione()Ljava/lang/String;Z
-getFk_UsernameR()Ecom.example.optic.entities.Report#getFk_UsernameR()Ljava/lang/String;7
-<init>()+com.example.optic.entities.Report#<init>()VA
-getIdReport()0com.example.optic.entities.Report#getIdReport()IC
-setIdReport(I)1com.example.optic.entities.Report#setIdReport(I)VZ
-getFk_UsernameP()Ecom.example.optic.entities.Report#getFk_UsernameP()Ljava/lang/String;é
-+com.example.optic.ControllerUserViewProfile#com.example.optic.GraphicControllerE
-
-facebook()7com.example.optic.ControllerUserViewProfile#facebook()V}
-&populateReviewList(Ljava/lang/String;)Scom.example.optic.ControllerUserViewProfile#populateReviewList(Ljava/lang/String;)Vy
-$setUserVariables(Ljava/lang/String;)Qcom.example.optic.ControllerUserViewProfile#setUserVariables(Ljava/lang/String;)VA
-<init>()5com.example.optic.ControllerUserViewProfile#<init>()VG
-instagram()8com.example.optic.ControllerUserViewProfile#instagram()VG
-setStars(I)8com.example.optic.ControllerUserViewProfile#setStars(I)VI
-reportList()9com.example.optic.ControllerUserViewProfile#reportList()VY
-populateGamesTable()Acom.example.optic.ControllerUserViewProfile#populateGamesTable()V°
-3com.example.optic.AppControllers.RegisterControllerjava.lang.Objectô
-0userRegister(Lcom/example/optic/bean/UserBean;I)ecom.example.optic.AppControllers.RegisterController#userRegister(Lcom/example/optic/bean/UserBean;I)VQ
-closeConn(I)Acom.example.optic.AppControllers.RegisterController#closeConn(I)VI
-<init>()=com.example.optic.AppControllers.RegisterController#<init>()Vù
-2isUsernameUsed(Lcom/example/optic/bean/UserBean;I)gcom.example.optic.AppControllers.RegisterController#isUsernameUsed(Lcom/example/optic/bean/UserBean;I)Z
-Applicationjava.lang.Object¶
-com.example.optic.OpticApplication-
-<init>()!com.example.optic.Optic#<init>()VO
-main([Ljava/lang/String;)2com.example.optic.Optic#main([Ljava/lang/String;)V-
-Lcom/example/optic/Optic$703;EventHandler-
-Lcom/example/optic/Optic$956;EventHandler¶
-=com.example.optic.AppControllers.UserViewProfileAppControllerjava.lang.ObjectS
-<init>()Gcom.example.optic.AppControllers.UserViewProfileAppController#<init>()V◊
+<init>()+com.example.optic.ControllerLogin#<init>()V◊
 com.example.optic.entities.Fotojava.lang.Objecti
 "setFk_Username(Ljava/lang/String;)Ccom.example.optic.entities.Foto#setFk_Username(Ljava/lang/String;)VV
 getFk_Username()Bcom.example.optic.entities.Foto#getFk_Username()Ljava/lang/String;5
@@ -1684,7 +1637,44 @@ $setUserVariables(Ljava/lang/String;)Qcom.example.optic.ControllerUserViewProfi
 getImmagine()<com.example.optic.entities.Foto#getImmagine()Ljava/sql/Blob;=
 setIdFoto(I)-com.example.optic.entities.Foto#setIdFoto(I)V]
 setImmagine(Ljava/sql/Blob;)=com.example.optic.entities.Foto#setImmagine(Ljava/sql/Blob;)V;
-getIdFoto(),com.example.optic.entities.Foto#getIdFoto()I«
+getIdFoto(),com.example.optic.entities.Foto#getIdFoto()I›
+%com.example.optic.ControllerEventList#com.example.optic.GraphicController]
+setList(Ljava/util/List;)@com.example.optic.ControllerEventList#setList(Ljava/util/List;)Vs
+$setUserVariables(Ljava/lang/String;)Kcom.example.optic.ControllerEventList#setUserVariables(Ljava/lang/String;)V;
+<init>()/com.example.optic.ControllerEventList#<init>()VÁ
+7com.example.optic.AppControllers.ModPGPageAppControllerjava.lang.ObjectÕ
+6getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)ícom.example.optic.AppControllers.ModPGPageAppController#getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;ô
+.freeReferee(Lcom/example/optic/bean/UserBean;)gcom.example.optic.AppControllers.ModPGPageAppController#freeReferee(Lcom/example/optic/bean/UserBean;)V°
+2isDateValid(Lcom/example/optic/bean/GiornataBean;)kcom.example.optic.AppControllers.ModPGPageAppController#isDateValid(Lcom/example/optic/bean/GiornataBean;)Zü
+1insertPlay(Lcom/example/optic/bean/GiornataBean;)jcom.example.optic.AppControllers.ModPGPageAppController#insertPlay(Lcom/example/optic/bean/GiornataBean;)V¿
+/getFirstPlay(Lcom/example/optic/bean/UserBean;)åcom.example.optic.AppControllers.ModPGPageAppController#getFirstPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;ª
+-getReferee(Lcom/example/optic/bean/UserBean;)âcom.example.optic.AppControllers.ModPGPageAppController#getReferee(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;h
+getEventList()Vcom.example.optic.AppControllers.ModPGPageAppController#getEventList()Ljava/util/List;°
+2setAdminSocial(Lcom/example/optic/bean/AdminBean;)kcom.example.optic.AppControllers.ModPGPageAppController#setAdminSocial(Lcom/example/optic/bean/AdminBean;)V∆
+2getLastPlay(Lcom/example/optic/bean/GiornataBean;)ècom.example.optic.AppControllers.ModPGPageAppController#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;M
+<init>()Acom.example.optic.AppControllers.ModPGPageAppController#<init>()V∂
+5getPlayersList(Lcom/example/optic/bean/GiornataBean;)}com.example.optic.AppControllers.ModPGPageAppController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;∑
+,getAdmin(Lcom/example/optic/bean/AdminBean;)Ücom.example.optic.AppControllers.ModPGPageAppController#getAdmin(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/entities/Admin;⁄
+NsetReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)ácom.example.optic.AppControllers.ModPGPageAppController#setReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)V°
+2setDescription(Lcom/example/optic/bean/AdminBean;)kcom.example.optic.AppControllers.ModPGPageAppController#setDescription(Lcom/example/optic/bean/AdminBean;)VÆ
+1getReviewList(Lcom/example/optic/bean/AdminBean;)ycom.example.optic.AppControllers.ModPGPageAppController#getReviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;∆
+2getNextPlay(Lcom/example/optic/bean/GiornataBean;)ècom.example.optic.AppControllers.ModPGPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;S
+closeConn()Dcom.example.optic.AppControllers.ModPGPageAppController#closeConn()V®
+3com.example.optic.AppControllers.RefCampoControllerjava.lang.Objectó
+/saveReport(Lcom/example/optic/bean/ReportBean;)dcom.example.optic.AppControllers.RefCampoController#saveReport(Lcom/example/optic/bean/ReportBean;)V¬
+2getLastPlay(Lcom/example/optic/bean/GiornataBean;)ãcom.example.optic.AppControllers.RefCampoController#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;I
+<init>()=com.example.optic.AppControllers.RefCampoController#<init>()V∑
+5getPlayersList(Lcom/example/optic/bean/GiornataBean;)~com.example.optic.AppControllers.RefCampoController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/ArrayList;º
+/getFirstPlay(Lcom/example/optic/bean/UserBean;)àcom.example.optic.AppControllers.RefCampoController#getFirstPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;¬
+2getNextPlay(Lcom/example/optic/bean/GiornataBean;)ãcom.example.optic.AppControllers.RefCampoController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;d
+getEventList()Rcom.example.optic.AppControllers.RefCampoController#getEventList()Ljava/util/List;ø
+2getAdminFromRef(Lcom/example/optic/bean/UserBean;)àcom.example.optic.AppControllers.RefCampoController#getAdminFromRef(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Admin;O
+closeConn()@com.example.optic.AppControllers.RefCampoController#closeConn()V
+Callbackjava.lang.Object8
+,Lcom/example/optic/ControllerEventList$1617;Callback
+ListCelljava.lang.ObjectÇ
+,Lcom/example/optic/ControllerEventList$1811;ListCellH
+updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)V«
 'com.example.optic.ControllerSocialModPG#com.example.optic.GraphicControlleru
 $setUserVariables(Ljava/lang/String;)Mcom.example.optic.ControllerSocialModPG#setUserVariables(Ljava/lang/String;)VA
 
@@ -1699,7 +1689,15 @@ $setUserVariables(Ljava/lang/String;)Jcom.example.optic.ControllerRefCampo#setU
  setFirstPlay(Ljava/lang/String;)Fcom.example.optic.ControllerRefCampo#setFirstPlay(Ljava/lang/String;)VD
 getLastPlay()3com.example.optic.ControllerRefCampo#getLastPlay()VD
 getNextPlay()3com.example.optic.ControllerRefCampo#getNextPlay()VD
-toInstagram()3com.example.optic.ControllerRefCampo#toInstagram()Vò
+toInstagram()3com.example.optic.ControllerRefCampo#toInstagram()V:
+*Lcom/example/optic/GraphicController$1461;EventHandler:
+*Lcom/example/optic/GraphicController$1721;EventHandler:
+*Lcom/example/optic/GraphicController$2537;EventHandler:
+*Lcom/example/optic/GraphicController$2797;EventHandler:
+*Lcom/example/optic/GraphicController$3561;EventHandler:
+*Lcom/example/optic/GraphicController$3821;EventHandler:
+*Lcom/example/optic/GraphicController$4653;EventHandler:
+*Lcom/example/optic/GraphicController$4913;EventHandlerò
 %com.example.optic.ControllerModPGPage#com.example.optic.GraphicController?
 
 facebook()1com.example.optic.ControllerModPGPage#facebook()Vw
@@ -1835,4 +1833,10 @@ $setUserVariables(Ljava/lang/String;)Lcom.example.optic.ControllerReportList#se
 setList(Ljava/util/ArrayList;)Fcom.example.optic.ControllerReportList#setList(Ljava/util/ArrayList;)V9
 -Lcom/example/optic/ControllerReportList$1392;CallbackÉ
 -Lcom/example/optic/ControllerReportList$1598;ListCellH
-updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)V
+updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)V®
+'com.example.optic.entities.Prenotazionejava.lang.Objectq
+"setFk_Username(Ljava/lang/String;)Kcom.example.optic.entities.Prenotazione#setFk_Username(Ljava/lang/String;)V^
+getFk_Username()Jcom.example.optic.entities.Prenotazione#getFk_Username()Ljava/lang/String;=
+<init>()1com.example.optic.entities.Prenotazione#<init>()Vu
+$setFk_idGiornata(Ljava/lang/String;)Mcom.example.optic.entities.Prenotazione#setFk_idGiornata(Ljava/lang/String;)Vb
+getFk_idGiornata()Lcom.example.optic.entities.Prenotazione#getFk_idGiornata()Ljava/lang/String;

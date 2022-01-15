@@ -1,16 +1,17 @@
 
-;com.example.optic.bean.AdminBean#getVia()Ljava/lang/String;x
-nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaI I("1*á
-1x
-nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaJ J(Ê
-Ç
-x
-nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaJ J(
-%0java.lang.String"__id*-*+"
- com.example.optic.bean.AdminBean"
-via"”
-x
-nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaJ J(
+Dcom.example.optic.entities.Referee#getAdminCampo()Ljava/lang/String;y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java# #("1*í
+1y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java$ $(Ô
+Ñ
+y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java$ $(
+%0java.lang.String"__id*6*4$
+"com.example.optic.entities.Referee"
+
+adminCampo"•
+y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java$ $(
 
-%0java.lang.StringB$"
- com.example.optic.bean.AdminBean
+%0java.lang.StringB&$
+"com.example.optic.entities.Referee

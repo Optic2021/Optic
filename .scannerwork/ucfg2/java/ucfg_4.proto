@@ -1,91 +1,80 @@
 
-êcom.example.optic.AppControllers.UserPgPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaH H(&"9*ñ
-2ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaM M(F˜
-Ù
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaM M(F+
+çcom.example.optic.AppControllers.UserPgPageAppController#getFirstPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java@ @('"8*î
+2ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaE E(;ˆ
+Û
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaE E(;+
 play#com.example.optic.entities.Giornata"__id*+
 )
-%5#com.example.optic.entities.Giornata*
-1*¯
-4ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaM M(FŸ÷
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaM M(F)
-%5#com.example.optic.entities.Giornata"zcom.example.optic.dao.GiornataDAO#getNextPlay(Ljava/lang/String;Ljava/util/Calendar;)Lcom/example/optic/entities/Giornata;*.
+%4#com.example.optic.entities.Giornata*
+1*¥
+4ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaE E(;ñì
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaE E(;)
+%4#com.example.optic.entities.Giornata"gcom.example.optic.dao.GiornataDAO#getFirstPlay(Ljava/lang/String;)Lcom/example/optic/entities/Giornata;*.
 ,
 playDao!com.example.optic.dao.GiornataDAO*
 
-%3java.lang.String*
-
-%4java.util.Calendar23getNextPlay(Ljava/lang/String;Ljava/util/Calendar;)*
-2*Õ
-5ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaM7 M(;Æ´
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaM7 M(E
-%4java.util.Calendar"Acom.example.optic.bean.GiornataBean#getData()Ljava/util/Calendar;*-
-+
-bean#com.example.optic.bean.GiornataBean2	getData()*
-4*ƒ
-6ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaL L(7ˆ
-Û
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaL L(7,
+%3java.lang.String2 getFirstPlay(Ljava/lang/String;)*
+2*ø
+5ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaD D(7ı
+Ú
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaD D(7,
 playDao!com.example.optic.dao.GiornataDAO"__id*)
 '
-%1!com.example.optic.dao.GiornataDAO¨©
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaM' M(6
-%3java.lang.String"@com.example.optic.bean.GiornataBean#getAdmin()Ljava/lang/String;*-
-+
-bean#com.example.optic.bean.GiornataBean2
-getAdmin()*
-5*∂
-7ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaK K(4Ó
-Î
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaK K(4&
+%1!com.example.optic.dao.GiornataDAO©¶
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaE( E(:
+%3java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*)
+'
+beancom.example.optic.bean.UserBean2getUsername()*
+4*≤
+6ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaC C(4Ì
+Í
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaC C(4&
 daocom.example.optic.dao.PlayerDAO"__id*'
 %
-%0com.example.optic.dao.PlayerDAO„‡
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaL& L(1'
-%1!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAO¿
-Ω
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaL" L(6
+%0com.example.optic.dao.PlayerDAO‚ﬂ
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaD& D(1'
+%1!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAOø
+º
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaD" D(6
 %2"Lcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)V*)
 '
 %1!com.example.optic.dao.GiornataDAO*(
 &
 daocom.example.optic.dao.PlayerDAO*
-6*“
-8ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaK K(%≥
-∞
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaK K(3%
+5*–
+7ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaC C(%≤
+Ø
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaC C(3%
 %0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
 com.example.optic.dao.PlayerDAO*
-7*Ò
-9ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaI I(“
-œ
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaI I(+
+6*Ô
+8ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaA A(—
+Œ
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaA A(+
 play#com.example.optic.entities.Giornata"__id*
 ""*
-8*›
-1ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaQ Q("√
-ë
-ÜC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaQ Q(-
+7*€
+1ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaI I("¬
+ê
+ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.javaI I(-
 +
-play#com.example.optic.entities.Giornata:+
-bean#com.example.optic.bean.GiornataBeanB<":
+play#com.example.optic.entities.Giornata:'
+beancom.example.optic.bean.UserBeanB<":
 8com.example.optic.AppControllers.UserPgPageAppController

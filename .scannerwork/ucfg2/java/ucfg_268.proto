@@ -1,17 +1,16 @@
 
-?com.example.optic.bean.UserBean#getPassword()Ljava/lang/String;w
-mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java ("1*â
-1w
-mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (Í
-Ê
-w
-mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (
-%0java.lang.String"__id*1*/!
-com.example.optic.bean.UserBean"
-
-password"“
-w
-mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (
+Bcom.example.optic.entities.Giornata#getFk_Nome()Ljava/lang/String;z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java? ?("1*î
+1z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java@ @(Ó
+Ð
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java@ @(
+%0java.lang.String"__id*4*2%
+#com.example.optic.entities.Giornata"	
+fk_Nome"–
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java@ @(
 
-%0java.lang.StringB#!
-com.example.optic.bean.UserBean
+%0java.lang.StringB'%
+#com.example.optic.entities.Giornata

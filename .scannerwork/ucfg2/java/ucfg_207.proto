@@ -1,16 +1,16 @@
 
-Dcom.example.optic.entities.Player#getDescrizione()Ljava/lang/String;y
-oC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java. .( "1*í
-1y
-oC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java/ /(Ô
-Ñ
-y
-oC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java/ /(
-%0java.lang.String"__id*6*4#
-!com.example.optic.entities.Player"
-descrizione"•
-y
-oC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java/ /(
+Acom.example.optic.bean.AdminBean#getNomeCampo()Ljava/lang/String;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaA A("1*ä
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaB B(Ï
+Ì
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaB B(
+%0java.lang.String"__id*3*1"
+ com.example.optic.bean.AdminBean"
+	nomeCampo"“
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaB B(
 
-%0java.lang.StringB%#
-!com.example.optic.entities.Player
+%0java.lang.StringB$"
+ com.example.optic.bean.AdminBean

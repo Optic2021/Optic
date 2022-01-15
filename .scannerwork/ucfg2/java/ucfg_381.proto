@@ -1,16 +1,16 @@
 
-Ccom.example.optic.entities.Event#getDescrizione()Ljava/lang/String;x
-nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java ( "1*é
-1x
-nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java (Ò
-Ï
-x
-nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java (
-%0java.lang.String"__id*5*3"
- com.example.optic.entities.Event"
-descrizione"”
-x
-nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java (
+Jcom.example.optic.entities.Prenotazione#getFk_Username()Ljava/lang/String;~
+tC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java ( "1*‚
+1~
+tC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (ß
+Ü
+~
+tC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (
+%0java.lang.String"__id*<*:)
+'com.example.optic.entities.Prenotazione"
+fk_Username"š
+~
+tC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (
 
-%0java.lang.StringB$"
- com.example.optic.entities.Event
+%0java.lang.StringB+)
+'com.example.optic.entities.Prenotazione
