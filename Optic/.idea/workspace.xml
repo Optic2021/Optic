@@ -38,6 +38,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.3816092" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RunManager">
     <configuration name="Optic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -110,6 +111,7 @@
       <workItem from="1642239982565" duration="1632000" />
       <workItem from="1642241652880" duration="82000" />
       <workItem from="1642243646979" duration="575000" />
+      <workItem from="1642252354637" duration="25000" />
     </task>
     <servers />
   </component>
