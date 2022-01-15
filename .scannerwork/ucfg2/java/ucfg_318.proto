@@ -1,0 +1,368 @@
+
+`com.example.optic.dao.PlayerDAO#getPlayer(Ljava/lang/String;)Lcom/example/optic/entities/Player;w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java\ \("32*ñ
+24w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javag g(#êç
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javag g(2
+%18java.sql.ResultSet"=java.sql.PreparedStatement#executeQuery()Ljava/sql/ResultSet;*(
+&
+prepStmtjava.sql.PreparedStatement2executeQuery()*
+23*ã
+25x
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javae e(ä–
+Õ
+x
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javae e(ä&
+prepStmtjava.sql.PreparedStatement"__id*#
+!
+%16java.sql.PreparedStatement±Æ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaf f(&
+%17void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
+
+userjava.lang.String2setString(ILjava/lang/String;)*
+24*Í
+26w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javac c(2ª
+∏
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javac c(2
+stmtjava.sql.Statement"__id*
+
+%11java.sql.Statement∆
+√
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javad d(A
+sqljava.lang.String"__id*)'
+%SELECT * FROM player WHERE Username=?›
+⁄
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javae) e(1&
+%12com.example.optic.dao.PlayerDAO"__id*1*/!
+com.example.optic.dao.PlayerDAO"
+
+instance“
+œ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javae) e(6
+%13java.sql.Connection"__id*2*0
+&
+%12com.example.optic.dao.PlayerDAO"
+connñ
+ì
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaeL e(m
+
+%14int"__id*
+""ó
+î
+x
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaen e(à
+
+%15int"__id*
+""ıÚ
+x
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javae) e(â!
+%16java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
+
+%13java.sql.Connection*
+
+sqljava.lang.String*
+
+
+%14int*
+
+
+%15int2&prepareStatement(Ljava/lang/String;II)*
+25*º
+27w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javac c(‹
+Ÿ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javac c(%
+%9com.example.optic.dao.PlayerDAO"__id*1*/!
+com.example.optic.dao.PlayerDAO"
+
+instance—
+Œ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javac c( 
+%10java.sql.Connection"__id*1*/
+%
+%9com.example.optic.dao.PlayerDAO"
+connÉÄ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javac c(2
+%11java.sql.Statement"9java.sql.Connection#createStatement()Ljava/sql/Statement;*
+
+%10java.sql.Connection2createStatement()*
+26*Õ
+28w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaa a(‹
+Ÿ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaa a(%
+%7com.example.optic.dao.PlayerDAO"__id*1*/!
+com.example.optic.dao.PlayerDAO"
+
+instanceËÂ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaa a("
+
+%8void"*com.example.optic.dao.PlayerDAO#getConn()V*'
+%
+%7com.example.optic.dao.PlayerDAO2	getConn()*
+27*ë
+30w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java`( `(0‹
+Ÿ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java`( `(0%
+%4com.example.optic.dao.PlayerDAO"__id*1*/!
+com.example.optic.dao.PlayerDAO"
+
+instance–
+Õ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java`( `(5
+%5java.sql.Connection"__id*1*/
+%
+%4com.example.optic.dao.PlayerDAO"
+conn’“
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java`( `(@
+%6boolean"java.sql.Connection#isClosed()Z*
+
+%5java.sql.Connection2
+isClosed()*
+27
+28*π
+31w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java` `(‹
+Ÿ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java` `(%
+%2com.example.optic.dao.PlayerDAO"__id*1*/!
+com.example.optic.dao.PlayerDAO"
+
+instance–
+Õ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java` `(
+%3java.sql.Connection"__id*1*/
+%
+%2com.example.optic.dao.PlayerDAO"
+conn*
+28
+30*⁄
+32w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java] ](¶
+£
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java] ](
+stmtjava.sql.Statement"__id*
+""»≈
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java^ ^('
+%0!com.example.optic.entities.Player"!com.example.optic.entities.Playerà
+Ö
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java^ ^(#
+%1"=com.example.optic.entities.Player#<init>(Ljava/lang/String;)V*)
+'
+%0!com.example.optic.entities.Player*
+
+userjava.lang.String’
+“
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java^ ^($&
+p!com.example.optic.entities.Player"__id*)
+'
+%0!com.example.optic.entities.Player*
+31*¨
+10w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javap p(2ß§
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javap p(2
+%30void"<com.example.optic.entities.Player#setIg(Ljava/lang/String;)V*(
+&
+p!com.example.optic.entities.Player*
+
+%29java.lang.String2setIg(Ljava/lang/String;)*
+9*©
+11w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javap p(£†
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javap p(1
+%29java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+	Instagram2getString(Ljava/lang/String;)*
+10*ê
+12w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javao o(:äá
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javao o(:
+%28void"4com.example.optic.entities.Player#setValutazione(I)V*(
+&
+p!com.example.optic.entities.Player*
+
+
+%27int2setValutazione(I)*
+11*á
+13w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javao o(Å˛
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javao! o(9
+
+%27int".java.sql.ResultSet#getInt(Ljava/lang/String;)I*
+
+rsjava.sql.ResultSet*
+Valutazione2getInt(Ljava/lang/String;)*
+12*ø
+14w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javan n(=π∂
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javan n(=
+%26void"Ecom.example.optic.entities.Player#setDescrizione(Ljava/lang/String;)V*(
+&
+p!com.example.optic.entities.Player*
+
+%25java.lang.String2"setDescrizione(Ljava/lang/String;)*
+13*´
+15w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javan n(•¢
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javan! n(<
+%25java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+Descrizione2getString(Ljava/lang/String;)*
+14*π
+16w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javam m(7≥∞
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javam m(7
+%24void"Bcom.example.optic.entities.Player#setPassword(Ljava/lang/String;)V*(
+&
+p!com.example.optic.entities.Player*
+
+%23java.lang.String2setPassword(Ljava/lang/String;)*
+15*®
+17w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javam m(¢ü
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javam m(6
+%23java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+Password2getString(Ljava/lang/String;)*
+16*π
+18w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javal l(7≥∞
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javal l(7
+%22void"Bcom.example.optic.entities.Player#setUsername(Ljava/lang/String;)V*(
+&
+p!com.example.optic.entities.Player*
+
+%21java.lang.String2setUsername(Ljava/lang/String;)*
+17*®
+19w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javal l(¢ü
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javal l(6
+%21java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+Username2getString(Ljava/lang/String;)*
+18*ñ
+0 "é
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java (
+implicit return*¢
+1w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java~ ~("£
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.java~ ~((
+&
+p!com.example.optic.entities.Player*‘
+4w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javay y(Õ 
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javay y( 
+%34void"java.sql.Statement#close()V*
+
+stmtjava.sql.Statement2close()*
+0
+1*’
+7w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javat t(À»
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javat t(
+%33void"java.sql.ResultSet#close()V*
+
+rsjava.sql.ResultSet2close()*	
+4
+0
+1*´
+8w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaq q(1ß§
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaq q(1
+%32void"<com.example.optic.entities.Player#setFb(Ljava/lang/String;)V*(
+&
+p!com.example.optic.entities.Player*
+
+%31java.lang.String2setFb(Ljava/lang/String;)*
+7*¶
+9w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaq q(¢ü
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaq q(0
+%31java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+Facebook2getString(Ljava/lang/String;)*
+8*‘
+20w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javak k(ŒÀ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javak k(
+%20boolean"java.sql.ResultSet#first()Z*
+
+rsjava.sql.ResultSet2first()*
+19*Ω
+21w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javai i(≤
+Ø
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javai i(&
+p!com.example.optic.entities.Player"__id*
+""*	
+4
+0
+1*î
+23w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javag g(3π
+∂
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javag g(3
+rsjava.sql.ResultSet"__id*
+
+%18java.sql.ResultSetŒÀ
+w
+mC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javah h(
+%19boolean"java.sql.ResultSet#first()Z*
+
+rsjava.sql.ResultSet2first()*
+20
+21:
+userjava.lang.StringB#!
+com.example.optic.dao.PlayerDAO

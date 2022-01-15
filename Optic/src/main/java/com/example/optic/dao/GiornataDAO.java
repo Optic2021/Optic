@@ -13,9 +13,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class GiornataDAO {
-    private static PlayerDAO daoP;
-    private static AdminDAO daoA;
-    private static RefereeDAO daoR;
+    private PlayerDAO daoP;
+    private AdminDAO daoA;
+    private RefereeDAO daoR;
 
     public GiornataDAO(PlayerDAO daoP){
         this.daoP = daoP;

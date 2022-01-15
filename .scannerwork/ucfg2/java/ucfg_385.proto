@@ -1,0 +1,64 @@
+
+Ecom.example.optic.entities.Event#getFormattedText()Ljava/lang/String;x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java- -(""1*è
+1x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(Ë
+È
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(
+%0java.lang.String"__id*.*,"
+ com.example.optic.entities.Event"
+nomeÁ
+¾
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(
+%1java.lang.String"__concat*
+
+%0java.lang.String*
+\nÒ
+Ï
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .((
+%2java.lang.String"__id*5*3"
+ com.example.optic.entities.Event"
+descrizioneÓ
+Ð
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .((
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.StringÁ
+¾
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(-
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+\nÖ
+Ó
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(G
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+Giocatori consigliati: Á
+¾
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(U
+%6java.lang.String"__concat*
+
+%5java.lang.String*
+""´
+±
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(V
+sjava.lang.String"__id*
+
+%6java.lang.String"“
+x
+nC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Event.java/ /(
+
+sjava.lang.StringB$"
+ com.example.optic.entities.Event

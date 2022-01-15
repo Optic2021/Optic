@@ -3,11 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-         <properties>
-                           <sonar.organization>carloni2021</sonar.organization>
-                           <sonar.host.url>https://sonarcloud.io/</sonar.host.url>
-         </properties>
          
     <groupId>com.example</groupId>
     <artifactId>Optic</artifactId>
@@ -15,6 +10,8 @@
     <name>Optic</name>
 
     <properties>
+		<sonar.organization>carloni2021</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io/</sonar.host.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.7.1</junit.version>
     </properties>

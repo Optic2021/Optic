@@ -1,0 +1,16 @@
+
+Fcom.example.optic.entities.Giornata#getFk_Username()Ljava/lang/String;{
+qC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaC C( "1*õ
+1{
+qC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaD D(Ø
+Õ
+{
+qC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaD D(
+%0java.lang.String"__id*8*6%
+#com.example.optic.entities.Giornata"
+fk_Username"—
+{
+qC:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaD D( 
+
+%0java.lang.StringB'%
+#com.example.optic.entities.Giornata

@@ -1,0 +1,7 @@
+organization=carloni2021
+projectKey=carloni2021_optics
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.26045
+dashboardUrl=https://sonarcloud.io/dashboard?id=carloni2021_optics
+ceTaskId=AX5eTyID0TwFX3w_Sq8S
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AX5eTyID0TwFX3w_Sq8S

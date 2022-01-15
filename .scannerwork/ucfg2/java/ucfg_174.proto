@@ -1,0 +1,57 @@
+
+Ycom.example.optic.AppControllers.BookSessionAppController#getCampi()Ljava/util/ArrayList;’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java' (/"5*ù
+2’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java ($Ù
+Ö
+’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java ($
+listajava.util.ArrayList"__id*
+
+%3java.util.ArrayList*
+1*Ð
+4’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java (°­
+’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java ($
+%3java.util.ArrayList"Bcom.example.optic.dao.AdminDAO#getCampoList()Ljava/util/ArrayList;*'
+%
+daocom.example.optic.dao.AdminDAO2getCampoList()*
+2*Ä
+
+5’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java (°
+­
+’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java (-$
+%0com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
+com.example.optic.dao.AdminDAOí
+ê
+’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java (.%
+daocom.example.optic.dao.AdminDAO"__id*&
+$
+%0com.example.optic.dao.AdminDAOÈÅ
+’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java) (=
+%1java.util.ArrayList"java.util.ArrayListÚ
+×
+’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java% (?
+%2"java.util.ArrayList#<init>()V*
+
+%1java.util.ArrayListÙ
+Ö
+’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java (@
+listajava.util.ArrayList"__id*
+
+%1java.util.ArrayList*
+4*Ð
+1’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java ("µ
+’
+‡C:/Users/uazap/Desktop/Working copy/optics.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/BookSessionAppController.java (
+
+listajava.util.ArrayListB=";
+9com.example.optic.AppControllers.BookSessionAppController
