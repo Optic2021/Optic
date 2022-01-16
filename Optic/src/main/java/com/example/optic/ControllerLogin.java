@@ -1,6 +1,6 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.LoginController;
+import com.example.optic.app_controllers.LoginController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.RefereeBean;
@@ -24,7 +24,7 @@ public class ControllerLogin extends GraphicController {
     @FXML
     private RadioButton adminRB;
 
-    public void login(ActionEvent e) throws Exception {
+    public void login() throws Exception {
         boolean res = false;
         Alert err = new Alert(Alert.AlertType.ERROR);
         if(username.getText().isEmpty() || password.getText().isEmpty()){
@@ -82,7 +82,7 @@ public class ControllerLogin extends GraphicController {
         }
     }
 
-    public void toRegister(ActionEvent e) throws IOException {
+    public void toRegister() throws IOException {
         this.toView("views/register.fxml");
     }
 }

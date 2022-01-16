@@ -1,9 +1,12 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.UserProfileAppController;
+import com.example.optic.app_controllers.UserProfileAppController;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
-import com.example.optic.entities.*;
+import com.example.optic.entities.Giornata;
+import com.example.optic.entities.Player;
+import com.example.optic.entities.Valutazione;
+import com.example.optic.entities.ValutazionePlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,10 +21,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class ControllerUserProfile extends GraphicController{
     @FXML

@@ -1,6 +1,6 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.ModPGPageAppController;
+import com.example.optic.app_controllers.ModPGPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -134,9 +133,9 @@ public class ControllerModPGPage extends GraphicController {
             //controllo se esiste una giornata da poter mostrare
             if (play != null) {
                 //mostro informazioni della giornata
-                SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
-                date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                 activity.setText(play.getFk_Nome());
                 this.populatePlayersTable();
             }else{
@@ -159,11 +158,11 @@ public class ControllerModPGPage extends GraphicController {
     public void getNextPlay() throws ParseException {
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         if(!(idPlay.getText().isEmpty())) {
             try {
                 //crea nuova giornata
-                Date data = date_format.parse(date.getText());
+                Date data = dateFormat.parse(date.getText());
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(data);
                 playBean.setData(cal);
@@ -171,7 +170,7 @@ public class ControllerModPGPage extends GraphicController {
                 play = ModPGPageAppController.getNextPlay(playBean);
                 if (play != null) {
                     idPlay.setText(Integer.toString(play.getIdGiornata()));
-                    date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                    date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                     activity.setText(play.getFk_Nome());
                     this.populatePlayersTable();
                 } else {
@@ -209,7 +208,7 @@ public class ControllerModPGPage extends GraphicController {
     public void getLastPlay(){
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         if(!(idPlay.getText().isEmpty())) {
             try {
                 if (!(activity.getText().isEmpty()) && eventBox.isVisible()) {
@@ -222,7 +221,7 @@ public class ControllerModPGPage extends GraphicController {
                     nPlayers.setVisible(true);
                     players.setVisible(true);
                 } else {
-                    Date data = date_format.parse(date.getText());
+                    Date data = dateFormat.parse(date.getText());
                     Calendar cal = Calendar.getInstance();
                     cal.setTime(data);
                     playBean.setData(cal);
@@ -230,7 +229,7 @@ public class ControllerModPGPage extends GraphicController {
                     play = ModPGPageAppController.getLastPlay(playBean);
                     if (play != null) {
                         idPlay.setText(Integer.toString(play.getIdGiornata()));
-                        date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                        date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                         activity.setText(play.getFk_Nome());
                         this.populatePlayersTable();
                     }
@@ -275,7 +274,7 @@ public class ControllerModPGPage extends GraphicController {
         players.getItems().clear();
         playerName.setCellValueFactory(new PropertyValueFactory<>("username"));
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
-        Player p = new Player();
+        Player p;
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
         List<Player> list = ModPGPageAppController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
@@ -304,10 +303,10 @@ public class ControllerModPGPage extends GraphicController {
             err.show();
         }else{
             GiornataBean playBean = new GiornataBean();
-            SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
-            Date date = date_format.parse(datePicker.getValue().toString());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Date dataPlay = dateFormat.parse(datePicker.getValue().toString());
             Calendar cal = Calendar.getInstance();
-            cal.setTime(date);
+            cal.setTime(dataPlay);
             playBean.setEvento(eventBox.getSelectionModel().getSelectedItem().toString());
             playBean.setData(cal);
             playBean.setAdmin(user.getText());
@@ -401,7 +400,7 @@ public class ControllerModPGPage extends GraphicController {
         }
     }
 
-    public void eventList(ActionEvent e) throws Exception {
+    public void eventList() throws Exception {
         try {
             Stage list = new Stage();
             Stage obj = (Stage) id.getScene().getWindow();
@@ -464,7 +463,7 @@ public class ControllerModPGPage extends GraphicController {
     }
 
 
-    public void modify(ActionEvent e){
+    public void modify(){
         //abilita la modalita modifica
         description.setEditable(true);
         description.setStyle("-fx-border-color: rgb(229,190,51)");
@@ -474,7 +473,7 @@ public class ControllerModPGPage extends GraphicController {
         ref.setStyle("-fx-border-color: rgb(229,190,51)");
     }
 
-    public void save(ActionEvent e){
+    public void save(){
         AdminBean a = new AdminBean();
         //passare a classe di scrittura in database
         String desc = description.getText();

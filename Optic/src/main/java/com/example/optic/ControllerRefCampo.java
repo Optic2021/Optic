@@ -1,6 +1,6 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.RefCampoController;
+import com.example.optic.app_controllers.RefCampoController;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.ReportBean;
 import com.example.optic.bean.UserBean;
@@ -23,7 +23,6 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -97,12 +96,11 @@ public class ControllerRefCampo extends GraphicController{
             //controllo se esiste una giornata da poter mostrare
             if (play != null) {
                 //mostro informazioni della giornata
-                SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
-                date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                 activity.setText(play.getFk_Nome());
                 //controllo se la data è disponibile per la prenotazione
-                System.out.println("ok");
                 this.populatePlayersTable();
             }
         }catch (Exception e){
@@ -114,10 +112,10 @@ public class ControllerRefCampo extends GraphicController{
     public void getNextPlay() throws ParseException {
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         if(!(idPlay.getText().isEmpty())) {
             try {
-                Date data = date_format.parse(date.getText());
+                Date data = dateFormat.parse(date.getText());
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(data);
                 playBean.setData(cal);
@@ -125,7 +123,7 @@ public class ControllerRefCampo extends GraphicController{
                 play = RefCampoController.getNextPlay(playBean);
                 if (play != null) {
                     idPlay.setText(Integer.toString(play.getIdGiornata()));
-                    date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                    date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                     activity.setText(play.getFk_Nome());
                     this.populatePlayersTable();
                 }
@@ -139,10 +137,10 @@ public class ControllerRefCampo extends GraphicController{
     public void getLastPlay(){
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         if(!(idPlay.getText().isEmpty())) {
             try {
-                Date data = date_format.parse(date.getText());
+                Date data = dateFormat.parse(date.getText());
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(data);
                 playBean.setData(cal);
@@ -150,7 +148,7 @@ public class ControllerRefCampo extends GraphicController{
                 play = RefCampoController.getLastPlay(playBean);
                 if (play != null) {
                     idPlay.setText(Integer.toString(play.getIdGiornata()));
-                    date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                    date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                     activity.setText(play.getFk_Nome());
                     this.populatePlayersTable();
                 }
@@ -176,15 +174,13 @@ public class ControllerRefCampo extends GraphicController{
     }
 
     public void tableview2(MouseEvent event) throws IOException {
-        Node node=((Node)event.getTarget()).getParent();
         Player player = (Player) players.getSelectionModel().getSelectedItem();
-
         //Setto username report
         String username=player.getUsername();
         selectedPlayer.setText("Giocatore : "+username);
     }
 
-    public void report(ActionEvent e) {
+    public void report() {
         ReportBean rep=new ReportBean();
         rep.setMotivazione(reportDesc.getText());
         String[] giocatore = selectedPlayer.getText().split(" ");
@@ -197,7 +193,7 @@ public class ControllerRefCampo extends GraphicController{
         }
     }
 
-    public void eventList(ActionEvent e) throws Exception {
+    public void eventList() throws Exception {
         try {
             Stage list = new Stage();
             Stage obj = (Stage) id.getScene().getWindow();
@@ -217,20 +213,20 @@ public class ControllerRefCampo extends GraphicController{
         }
     }
 
-    public void toLogin(ActionEvent e) throws IOException {
+    public void toLogin() throws IOException {
         RefCampoController.closeConn();
         this.toView("views/login.fxml");
     }
 
     public void toInstagram(){
-       // Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlInstagram.getText()});
+        //Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlInstagram.getText()});
     }
 
     public void toFacebook(){
-       // Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlFacebook.getText()});
+        //Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlFacebook.getText()});
     }
 
     public void toWhatsapp(){
-
+        //devo mettere whatsapp
     }
 }

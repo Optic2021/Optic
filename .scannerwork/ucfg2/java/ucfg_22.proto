@@ -1,16 +1,36 @@
 
-Kcom.example.optic.entities.Valutazione#getFk_UsernameP1()Ljava/lang/String;}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java+ +(""1*€
-1}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(ß
-Ü
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(
-%0java.lang.String"__id*=*;(
-&com.example.optic.entities.Valutazione"
-fk_UsernameP1"™
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(
-
-%0java.lang.StringB*(
-&com.example.optic.entities.Valutazione
+Scom.example.optic.app_controllers.RefCampoController#getEventList()Ljava/util/List;†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java- -(*"7*Ë
+2†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java2 2(1·
+´
+†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java2 2(1
+listjava.util.ArrayList"__id*
+""*
+1*ð
+7†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java.  .(1¼¹
+†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java.$ .(/
+%0java.util.ArrayList"java.util.ArrayListÎ
+Ë
+†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java.  .(1
+%1"java.util.ArrayList#<init>()V*
+
+%0java.util.ArrayListÌ
+É
+†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java. .(2
+listjava.util.ArrayList"__id*
+
+%0java.util.ArrayList*
+2*·
+1†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java6 6("¨
+†
+|F:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java6 6(
+
+listjava.util.ArrayListB8"6
+4com.example.optic.app_controllers.RefCampoController

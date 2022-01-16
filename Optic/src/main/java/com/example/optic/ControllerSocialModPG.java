@@ -1,6 +1,6 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.ModPGPageAppController;
+import com.example.optic.app_controllers.ModPGPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.entities.Admin;
 import javafx.event.ActionEvent;

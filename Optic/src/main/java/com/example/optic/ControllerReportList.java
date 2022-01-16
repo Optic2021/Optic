@@ -1,6 +1,6 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.UserProfileAppController;
+import com.example.optic.app_controllers.UserProfileAppController;
 import com.example.optic.bean.ReportBean;
 import com.example.optic.entities.Event;
 import com.example.optic.entities.Report;

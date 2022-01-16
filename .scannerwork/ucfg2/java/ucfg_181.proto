@@ -1,16 +1,17 @@
 
-=com.example.optic.entities.Campo#getNomec()Ljava/lang/String;w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java ("1*à
-1w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (Ë
-È
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
-%0java.lang.String"__id*/*-"
- com.example.optic.entities.Campo"
-Nomec"“
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
+@com.example.optic.bean.AdminBean#getUsername()Ljava/lang/String;r
+hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java ("1*Ô
+1r
+hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (É
+Æ
+r
+hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (
+%0java.lang.String"__id*2*0"
+ com.example.optic.bean.AdminBean"
+
+username"Ž
+r
+hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (
 
 %0java.lang.StringB$"
- com.example.optic.entities.Campo
+ com.example.optic.bean.AdminBean

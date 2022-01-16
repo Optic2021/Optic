@@ -1,85 +1,36 @@
 
-kcom.example.optic.AppControllers.ModPGPageAppController#isDateValid(Lcom/example/optic/bean/GiornataBean;)Zë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaô ô(%"8*ì
-4ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaü ü(*‘
-—
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaü ü(*
-caljava.util.Calendar"__id*
-
-%4java.util.Calendarùö
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.java† †(0
-%5boolean"Vcom.example.optic.dao.GiornataDAO#isDateValid(Ljava/lang/String;Ljava/util/Calendar;)Z*.
-,
-playDao!com.example.optic.dao.GiornataDAO*
+Ycom.example.optic.app_controllers.UserProfileAppController#getEventList()Ljava/util/List;ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaP P(*"7*Ÿ
+2ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaU U(0æ
+ª
+ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaU U(0
+listjava.util.ArrayList"__id*
+""*
+1*å
+7ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaQ  Q(1√¿
+ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaQ$ Q(/
+%0java.util.ArrayList"java.util.ArrayList’
+“
+ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaQ  Q(1
+%1"java.util.ArrayList#<init>()V*
 
-adminjava.lang.String*
+%0java.util.ArrayList”
+–
+ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaQ Q(2
+listjava.util.ArrayList"__id*
 
-caljava.util.Calendar23isDateValid(Ljava/lang/String;Ljava/util/Calendar;)*
-1*¢
-5ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaû û(+“
-œ
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaû û(+
-adminjava.lang.String"__id*
-
-%3java.lang.StringÆ´
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaü ü()
-%4java.util.Calendar"Acom.example.optic.bean.GiornataBean#getData()Ljava/util/Calendar;*-
-+
-bean#com.example.optic.bean.GiornataBean2	getData()*
-4*ƒ
-6ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaù ù(7ˆ
-Û
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaù ù(7,
-playDao!com.example.optic.dao.GiornataDAO"__id*)
-'
-%1!com.example.optic.dao.GiornataDAO¨©
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaû û(*
-%3java.lang.String"@com.example.optic.bean.GiornataBean#getAdmin()Ljava/lang/String;*-
-+
-bean#com.example.optic.bean.GiornataBean2
-getAdmin()*
-5*≤
-7ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaú ú(2Ï
-È
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaú ú(2%
-daocom.example.optic.dao.AdminDAO"__id*&
-$
-%0com.example.optic.dao.AdminDAO„‡
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaù& ù(1'
-%1!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAOæ
-ª
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaù" ù(6
-%2"Kcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/AdminDAO;)V*)
-'
-%1!com.example.optic.dao.GiornataDAO*'
-%
-daocom.example.optic.dao.AdminDAO*
-6*Œ
-8ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaú ú(#Ø
-¨
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.javaú ú(1$
-%0com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
-com.example.optic.dao.AdminDAO*
-7*∂
-1ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.java§ §("ú
-ë
-ÑC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/ModPGPageAppController.java§ §(
-"":+
-bean#com.example.optic.bean.GiornataBeanB;"9
-7com.example.optic.AppControllers.ModPGPageAppController
+%0java.util.ArrayList*
+2*≈
+1ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaY Y("Ø
+ç
+ÇF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaY Y(
+
+listjava.util.ArrayListB>"<
+:com.example.optic.app_controllers.UserProfileAppController

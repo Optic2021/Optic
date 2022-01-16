@@ -1,15 +1,13 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.BookSessionAppController;
+import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.entities.Admin;
-//import com.example.optic.entities.Campo;
 import com.example.optic.entities.Campo;
 import com.example.optic.entities.Event;
 import com.example.optic.entities.ValutazionePlayer;
 import com.mysql.cj.xdevapi.Table;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.*;
@@ -17,7 +15,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerBookSession extends GraphicController {
@@ -26,9 +23,9 @@ public class ControllerBookSession extends GraphicController {
     @FXML
     private TableView table;
     @FXML
-    private TableColumn NomeC;
+    private TableColumn nomeC;
     @FXML
-    private TableColumn Provincia;
+    private TableColumn provincia;
 
     @Override
     public void setUserVariables(String user){
@@ -48,7 +45,6 @@ public class ControllerBookSession extends GraphicController {
 
     public void tableview(MouseEvent e){
         try {
-            Node node=((Node)e.getTarget()).getParent();
             AdminBean campo=(AdminBean) table.getSelectionModel().getSelectedItem();
             toView("views/userPgPage.fxml",user.getText(),campo);
         }
@@ -64,14 +60,11 @@ public class ControllerBookSession extends GraphicController {
 
         try {
             List<AdminBean> lista = BookSessionAppController.getCampi();
-            NomeC.setCellValueFactory(new PropertyValueFactory<>("nomeCampo"));
-            Provincia.setCellValueFactory(new PropertyValueFactory<>("provincia"));
-            boolean list = true;
+            nomeC.setCellValueFactory(new PropertyValueFactory<>("nomeCampo"));
+            provincia.setCellValueFactory(new PropertyValueFactory<>("provincia"));
             int k=lista.size();
             int i=0;
-
-            AdminBean elem = new AdminBean();
-
+            AdminBean elem;
             while(i<k){
                 elem=lista.get(i);
                 table.getItems().add(elem);

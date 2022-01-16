@@ -1,6 +1,6 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.RegisterController;
+import com.example.optic.app_controllers.RegisterController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;

@@ -121,8 +121,8 @@
             <center>
                 <TableView fx:id="table" onMouseClicked="#tableview" prefHeight="200.0" prefWidth="200.0" styleClass="backgroundG" BorderPane.alignment="CENTER">
                     <columns>
-                        <TableColumn fx:id="NomeC" prefWidth="501.0" text="Nome Campo" />
-                        <TableColumn fx:id="Provincia" prefWidth="506.0" text="Provincia" />
+                        <TableColumn fx:id="nomeC" prefWidth="501.0" text="Nome Campo" />
+                        <TableColumn fx:id="provincia" prefWidth="506.0" text="Provincia" />
                     </columns>
                <BorderPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

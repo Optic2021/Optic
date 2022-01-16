@@ -1,8 +1,8 @@
 package com.example.optic;
 
-import com.example.optic.AppControllers.ModPGPageAppController;
-import com.example.optic.AppControllers.RefCampoController;
-import com.example.optic.AppControllers.UserProfileAppController;
+import com.example.optic.app_controllers.ModPGPageAppController;
+import com.example.optic.app_controllers.RefCampoController;
+import com.example.optic.app_controllers.UserProfileAppController;
 import com.example.optic.entities.Event;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +13,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerEventList extends GraphicController {
@@ -61,7 +60,7 @@ public class ControllerEventList extends GraphicController {
         });
     }
 
-    public void exitListButton(ActionEvent e){
+    public void exitListButton(){
         Stage list = (Stage) id2.getScene().getWindow();
         list.close();
     }
