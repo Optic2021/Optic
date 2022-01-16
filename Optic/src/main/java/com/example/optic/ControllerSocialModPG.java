@@ -64,19 +64,15 @@ public class ControllerSocialModPG extends GraphicController{
                 err.show();
             }
         }
-        if(urlInstagram.getText() != null) {
-            if(!(urlInstagram.getText().isEmpty()) && !(urlInstagram.getText().contains("https://www.instagram.com"))) {
-                res = false;
-                err.setContentText("Url instagram non valido.");
-                err.show();
-            }
+        if(urlInstagram.getText() != null && !(urlInstagram.getText().isEmpty()) && !(urlInstagram.getText().contains("https://www.instagram.com"))) {
+            res = false;
+            err.setContentText("Url instagram non valido.");
+            err.show();
         }
-        if (numWhatsapp.getText() != null){
-            if(!(numWhatsapp.getText().isEmpty()) & numWhatsapp.getText().length() != 10) {
-                res = false;
-                err.setContentText("Numero di telefono non valido");
-                err.show();
-            }
+        if (numWhatsapp.getText() != null && !(numWhatsapp.getText().isEmpty()) & numWhatsapp.getText().length() != 10){
+            res = false;
+            err.setContentText("Numero di telefono non valido");
+            err.show();
         }
         if(res){
             ModPGPageAppController.setAdminSocial(bean);

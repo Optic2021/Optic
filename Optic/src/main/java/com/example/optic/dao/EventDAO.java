@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class EventDAO {
     private static AdminDAO daoA;
@@ -35,8 +36,8 @@ public class EventDAO {
 
     //Assolutamente da fare, parametrizzare i tre sottostanti metodi in un solo metodo
 
-    public ArrayList<Event> getAdminEventList(){
-        ArrayList<Event> list = new ArrayList<Event>();
+    public List<Event> getAdminEventList(){
+        ArrayList<Event> list = new ArrayList<>();
         Statement stmt = null;
         String evento;
         String desc;

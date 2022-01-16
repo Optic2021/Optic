@@ -1,12 +1,12 @@
 
 Wcom.example.optic.app_controllers.ModPGPageAppController#getEventList()Ljava/util/List;ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaç ç(*"7*Ó
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaç ç(*"7*È
 2ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaí í(/”
-–
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaí í(/Œ
+À
 ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaí í(/
-listjava.util.ArrayList"__id*
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaí í(/
+listjava.util.List"__id*
 
 %5java.util.ArrayList*
 1*≈
@@ -51,29 +51,29 @@ $
 ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaê ê(1$
 %2com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
 com.example.optic.dao.AdminDAO*
-5*å
+5*á
 7ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaé  é(1√¿
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaé é(,√¿
 ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaé$ é(/
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaé é(*
 %0java.util.ArrayList"java.util.ArrayList’
 “
 ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaé  é(1
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaé é(,
 %1"java.util.ArrayList#<init>()V*
 
-%0java.util.ArrayList”
-–
+%0java.util.ArrayListŒ
+À
 ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaé é(2
-listjava.util.ArrayList"__id*
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaé é(-
+listjava.util.List"__id*
 
 %0java.util.ArrayList*
-6*≈
+6*¿
 1ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javañ ñ("Ø
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javañ ñ("™
 ç
-ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javañ ñ(
-
-listjava.util.ArrayListB<":
+ÄF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javañ ñ(
+
+listjava.util.ListB<":
 8com.example.optic.app_controllers.ModPGPageAppController

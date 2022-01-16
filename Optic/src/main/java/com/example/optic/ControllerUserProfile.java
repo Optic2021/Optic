@@ -233,19 +233,15 @@ public class ControllerUserProfile extends GraphicController{
             err.setContentText("Url facebook o instagram troppo lungo.");
             err.show();
         }
-        if(urlFacebook.getText() != null) {
-            if(!(urlFacebook.getText().isEmpty()) && !(urlFacebook.getText().contains("https://www.facebook.com"))) {
-                res = false;
-                err.setContentText("Url facebook non valido.");
-                err.show();
-            }
+        if(urlFacebook.getText() != null && !(urlFacebook.getText().isEmpty()) && !(urlFacebook.getText().contains("https://www.facebook.com"))) {
+            res = false;
+            err.setContentText("Url facebook non valido.");
+            err.show();
         }
-        if(urlInstagram.getText() != null) {
-            if(!(urlInstagram.getText().isEmpty()) && !(urlInstagram.getText().contains("https://www.instagram.com"))) {
-                res = false;
-                err.setContentText("Url instagram non valido.");
-                err.show();
-            }
+        if(urlInstagram.getText() != null && !(urlInstagram.getText().isEmpty()) && !(urlInstagram.getText().contains("https://www.instagram.com"))) {
+            res = false;
+            err.setContentText("Url instagram non valido.");
+            err.show();
         }
         if(res){
             PlayerBean p = new PlayerBean();

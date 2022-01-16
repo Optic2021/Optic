@@ -1,7 +1,6 @@
 package com.example.optic.dao;
 
 import com.example.optic.bean.AdminBean;
-import com.example.optic.bean.ReportBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
 import java.io.IOException;
@@ -20,7 +19,7 @@ public class AdminDAO {
     private Connection conn;
 
     //costruttore
-    protected AdminDAO() throws IOException{
+    protected AdminDAO(){
         this.conn = null;
         try {
             InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
@@ -35,16 +34,15 @@ public class AdminDAO {
         }
     }
 
-    public void newAdmin(String username,String password,String via, String nomeC, String prov) throws Exception {
-        Statement stmt = null;
+    public void newAdmin(String username,String password,String via, String nomeC, String prov) {
         Admin admin = new Admin(username, password, via, nomeC, prov);
+        PreparedStatement prepStmt = null;
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             String sql = "INSERT INTO admin VALUES(?,?,?,?,?,?,?,?,?)";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, admin.getUsername());
             prepStmt.setString(2, admin.getPassword());
             prepStmt.setString(3, admin.getIg());
@@ -55,28 +53,26 @@ public class AdminDAO {
             prepStmt.setString(8, admin.getVia());
             prepStmt.setString(9, admin.getProvincia());
             prepStmt.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException se2) {
+                if (prepStmt != null)
+                    prepStmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
     }
 
-    public static void setAdmin1(String user,String instagram,String facebook,String whatsapp,String DescrizioneC,String NomeC) {
-        //qui possiamo dividere i due tipi di update
-    }
-
-    public void setAdminSocial(String user,String instagram,String facebook,String whatsapp) throws SQLException {
-        Statement stmt = null;
+    public void setAdminSocial(String user,String instagram,String facebook,String whatsapp){
+        PreparedStatement prepStmt = null;
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             String sql = "UPDATE admin SET Instagram=?, Facebook=?, Whatsapp=? WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, instagram);
             prepStmt.setString(2, facebook);
             prepStmt.setString(3, whatsapp);
@@ -86,8 +82,8 @@ public class AdminDAO {
             e.printStackTrace();
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -95,11 +91,10 @@ public class AdminDAO {
     }
 
     public void setDescription(String admin, String desc){
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         try{
-            stmt = instance.conn.createStatement();
             String sql = "UPDATE admin SET DescrizioneC=? WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, desc);
             prepStmt.setString(2, admin);
             prepStmt.executeUpdate();
@@ -107,8 +102,8 @@ public class AdminDAO {
             e.printStackTrace();
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -116,15 +111,14 @@ public class AdminDAO {
     }
 
     public Admin getAdmin(String user) throws Exception {
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         Admin admin = new Admin(user,"");
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM admin WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,admin.getUsername());
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
@@ -145,8 +139,8 @@ public class AdminDAO {
             }
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -156,12 +150,11 @@ public class AdminDAO {
 
     //recupero l'arbitro utilizzando il nome dell'admin
     public Referee getRefereeFromAdmin(String user)throws Exception{
-        Statement stmt = null;
-        Referee ref = null;
+        PreparedStatement prepStmt = null;
+        Referee ref;
         try{
-            stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM referee WHERE fk_UsernameA1=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
@@ -177,8 +170,8 @@ public class AdminDAO {
             }
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -188,12 +181,11 @@ public class AdminDAO {
 
     //recupero l'arbitro utilizzando il nome dello stesso
     public Referee getReferee(String user)throws Exception{
-        Statement stmt = null;
-        Referee ref = null;
+        PreparedStatement prepStmt = null;
+        Referee ref;
         try{
-            stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM referee WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
@@ -209,8 +201,8 @@ public class AdminDAO {
             }
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -219,11 +211,10 @@ public class AdminDAO {
     }
 
     public void setReferee(String admin, String ref) throws SQLException {
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         try{
-            stmt = instance.conn.createStatement();
             String sql = "UPDATE referee SET fk_UsernameA1=? WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1,admin);
             prepStmt.setString(2,ref);
             prepStmt.executeUpdate();
@@ -231,8 +222,8 @@ public class AdminDAO {
             e.printStackTrace();
         }finally{
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -240,16 +231,22 @@ public class AdminDAO {
     }
 
     public void freeReferee(String username) throws SQLException{
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         try{
-            stmt = instance.conn.createStatement();
             String sql = "UPDATE referee SET fk_UsernameA1=? WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setNull(1, Types.NULL);
             prepStmt.setString(2,username);
             prepStmt.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();
+        }finally{
+            try {
+                if (prepStmt != null)
+                    prepStmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -267,17 +264,16 @@ public class AdminDAO {
 
     //Da finire con adminDao
     public Admin getCampo(String nomeC) throws Exception {
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         Admin admin = new Admin("","");
         admin.setNomeC(nomeC);
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             //String sql = "SELECT * FROM admin join referee on referee.fk_UsernameA1=admin.Username WHERE NomeC=?";
             String sql = "SELECT * FROM admin WHERE NomeC=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,admin.getNomeC());
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
@@ -299,8 +295,8 @@ public class AdminDAO {
             }
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -309,14 +305,6 @@ public class AdminDAO {
     }
 
     public ArrayList<AdminBean> getCampoList() throws Exception {
-        /*String user;
-        String pass;
-        String ig;
-        String fb;
-        String wa;
-        String desc;
-        String via;
-        String referee;*/
         String nomec;
         String desc;
 

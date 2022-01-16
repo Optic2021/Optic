@@ -64,7 +64,6 @@ public class ControllerRegister extends GraphicController {
         } else{
             String name = username.getText();
             String pw = password.getText();
-            String view;
             UserBean bean = new UserBean();
             bean.setUsername(name);
             bean.setPassword(pw);
