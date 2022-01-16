@@ -1,13 +1,78 @@
 
-0com.example.optic.entities.Report#getIdReport()Is
-iF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Report.java	 	("1*÷
-1s
-iF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Report.java
- 
-("}
-s
-iF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Report.java
- 
-(
-""B%#
-!com.example.optic.entities.Report
+`com.example.optic.AppControllers.LoginController#adminLogin(Lcom/example/optic/bean/AdminBean;)Z‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java& &($"11*¯
+5‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java- -(Iš—
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java- -(I
+%5boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+%3java.lang.String*
+
+%4java.lang.String2equals(Ljava/lang/Object;)*
+1*´
+6‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java-9 -(:Ÿœ
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java-9 -(H
+%4java.lang.String"@com.example.optic.bean.AdminBean#getPassword()Ljava/lang/String;*'
+%
+a com.example.optic.bean.AdminBean2getPassword()*
+5*·
+7‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java- -(#¢Ÿ
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java- -(1
+%3java.lang.String"@com.example.optic.entities.Admin#getPassword()Ljava/lang/String;**
+(
+user com.example.optic.entities.Admin2getPassword()*
+6*ÿ
+8‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java+ +(7ç
+ä
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java+ +(7(
+user com.example.optic.entities.Admin"__id*(
+&
+%2 com.example.optic.entities.Admin*
+7
+1*Š
+9‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java+ +(6õò
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java+ +(6&
+%2 com.example.optic.entities.Admin"]com.example.optic.dao.AdminDAO#getAdmin(Ljava/lang/String;)Lcom/example/optic/entities/Admin;*'
+%
+daocom.example.optic.dao.AdminDAO*
+
+%1java.lang.String2getAdmin(Ljava/lang/String;)*
+8*š
+10‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java* *(2â
+ß
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java* *(2%
+daocom.example.optic.dao.AdminDAO"__id*&
+$
+%0com.example.optic.dao.AdminDAOŸœ
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java+& +(5
+%1java.lang.String"@com.example.optic.bean.AdminBean#getUsername()Ljava/lang/String;*'
+%
+a com.example.optic.bean.AdminBean2getUsername()*
+9*¼
+11‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java* *(#¥
+¢
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java* *(1$
+%0com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
+com.example.optic.dao.AdminDAO*
+10*¢
+1‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java4 4("’
+‡
+}C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/LoginController.java4 4(
+"":%
+a com.example.optic.bean.AdminBeanB4"2
+0com.example.optic.AppControllers.LoginController

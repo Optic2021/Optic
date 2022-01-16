@@ -1,16 +1,16 @@
 
->com.example.optic.entities.Storico#getData()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java ("1*ÿ
-1t
-jF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (…
-∆
-t
-jF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
-%0java.lang.String"__id*0*.$
-"com.example.optic.entities.Storico"
-data"ê
-t
-jF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
+Dcom.example.optic.bean.ReportBean#getMotivazione()Ljava/lang/String;x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java ( "1*Í
+1x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java	 	(”
+–
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java	 	(
+%0java.lang.String"__id*6*4#
+!com.example.optic.bean.ReportBean"
+motivazione"î
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java	 	(
 
-%0java.lang.StringB&$
-"com.example.optic.entities.Storico
+%0java.lang.StringB%#
+!com.example.optic.bean.ReportBean

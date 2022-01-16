@@ -1,9 +1,16 @@
 
-4com.example.optic.entities.Event#getGiocatoriCons()Ir
-hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java% %("1*õ
-1r
-hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java& &("|
-r
-hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java& &(
-""B$"
- com.example.optic.entities.Event
+Ccom.example.optic.dao.AdminDAO#getConnection()Ljava/sql/Connection;w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.javaˆ ˆ(#"1*ã
+1w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java‰ ‰(Ë
+È
+w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java‰ ‰(
+%0java.sql.Connection"__id*,** 
+com.example.optic.dao.AdminDAO"
+conn"–
+w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java‰ ‰(
+
+%0java.sql.ConnectionB" 
+com.example.optic.dao.AdminDAO

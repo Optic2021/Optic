@@ -1,42 +1,16 @@
 
-lcom.example.optic.app_controllers.ModPGPageAppController#isDateValid(Lcom/example/optic/bean/GiornataBean;)Zç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaó ó(%"6*Î
-4ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaù ù(*–
-Õ
-ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaù ù(*
-caljava.util.Calendar"__id*
-
-%1java.util.Calendar*
-1*ñ
-5ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaú ú(+Œ
-À
-ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaú ú(+
-adminjava.lang.String"__id*
-
-%0java.lang.String™ß
-ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaù ù()
-%1java.util.Calendar"Acom.example.optic.bean.GiornataBean#getData()Ljava/util/Calendar;*-
-+
-bean#com.example.optic.bean.GiornataBean2	getData()*
-4*√
-6ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaõ õ(7®•
-ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaú ú(*
-%0java.lang.String"@com.example.optic.bean.GiornataBean#getAdmin()Ljava/lang/String;*-
-+
-bean#com.example.optic.bean.GiornataBean2
-getAdmin()*
-5*Æ
-1ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java¢ ¢("ò
-ç
-ÄF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java¢ ¢(
-"":+
-bean#com.example.optic.bean.GiornataBeanB<":
-8com.example.optic.app_controllers.ModPGPageAppController
+Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;x
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaâ â(#"1*Á
+1x
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaä ä(Õ
+ 
+x
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaä ä(
+%0java.sql.Connection"__id*-*+!
+com.example.optic.dao.PlayerDAO"
+conn"ó
+x
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaä ä(
+
+%0java.sql.ConnectionB#!
+com.example.optic.dao.PlayerDAO

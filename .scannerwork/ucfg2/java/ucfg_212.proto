@@ -1,9 +1,16 @@
 
-,com.example.optic.entities.Foto#getIdFoto()Iq
-gF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java ("1*ó
-1q
-gF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java ("{
-q
-gF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java (
-""B#!
-com.example.optic.entities.Foto
+;com.example.optic.bean.AdminBean#getVia()Ljava/lang/String;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaI I("1*Þ
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaJ J(É
+Æ
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaJ J(
+%0java.lang.String"__id*-*+"
+ com.example.optic.bean.AdminBean"
+via"“
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaJ J(
+
+%0java.lang.StringB$"
+ com.example.optic.bean.AdminBean

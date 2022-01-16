@@ -1,44 +1,16 @@
 
-Kcom.example.optic.entities.Valutazione#getFormattedText()Ljava/lang/String;x
-nF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaC C(""1*¤
-
-1x
-nF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(Ú
-×
-x
-nF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D((
-%0java.lang.String"__id*=*;(
-&com.example.optic.entities.Valutazione"
-fk_UsernameP1Ã
-À
-x
-nF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(/
-%1java.lang.String"__concat*
-
-%0java.lang.String*
- :\nØ
-Õ
-x
-nF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD0 D(;
-%2java.lang.String"__id*;*9(
+Icom.example.optic.entities.Valutazione#getDescrizione()Ljava/lang/String;}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java ( "1*þ
+1}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (Ý
+Ú
+}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (
+%0java.lang.String"__id*;*9(
 &com.example.optic.entities.Valutazione"
-descrizioneÓ
-Ð
-x
-nF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(;
-%3java.lang.String"__concat*
+descrizione"™
+}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (
 
-%1java.lang.String*
-
-%2java.lang.String·
-´
-x
-nF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(<
-descjava.lang.String"__id*
-
-%3java.lang.String"–
-x
-nF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaE E(
-
-descjava.lang.StringB*(
+%0java.lang.StringB*(
 &com.example.optic.entities.Valutazione

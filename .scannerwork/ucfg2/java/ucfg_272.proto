@@ -1,16 +1,16 @@
 
-@com.example.optic.entities.Giornata#getNomeC()Ljava/lang/String;u
-kF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaG G("1*Ý
-1u
-kF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaH H(Ì
-É
-u
-kF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaH H(
-%0java.lang.String"__id*2*0%
-#com.example.optic.entities.Giornata"
-nomeC"‘
-u
-kF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaH H(
-
-%0java.lang.StringB'%
+Acom.example.optic.entities.Giornata#getData()Ljava/util/Calendar;z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java7 7("1*ï
+1z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java8 8(Ò
+Ï
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java8 8(
+%0java.util.Calendar"__id*1*/%
+#com.example.optic.entities.Giornata"
+data"˜
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java8 8(
+
+%0java.util.CalendarB'%
 #com.example.optic.entities.Giornata

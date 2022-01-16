@@ -4,8 +4,6 @@ import com.example.optic.app_controllers.LoginController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.RefereeBean;
-import com.example.optic.dao.AdminDAO;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.io.IOException;
@@ -47,9 +45,6 @@ public class ControllerLogin extends GraphicController {
                     a.setPassword(pw);
                     res = LoginController.adminLogin(a);
                     view = "views/modPgPage.fxml";
-                    if(!res){
-                        LoginController.closeConn(2);
-                    }
                 }
                 case 3 ->{
                     RefereeBean r= new RefereeBean();
@@ -57,9 +52,6 @@ public class ControllerLogin extends GraphicController {
                     r.setPassword(pw);
                     res = LoginController.refereeLogin(r);
                     view = "views/refCampo.fxml";
-                    if(!res){
-                        LoginController.closeConn(3);
-                    }
                 }
                 default -> {
                     PlayerBean p = new PlayerBean();
@@ -67,15 +59,13 @@ public class ControllerLogin extends GraphicController {
                     p.setPassword(pw);
                     res = LoginController.playerLogin(p);
                     view = "views/userHomeMap.fxml";
-                    if(!res){
-                        LoginController.closeConn(1);
-                    }
                 }
 
             }
             if (res) {
                 this.toView(view, name);
             } else {
+                LoginController.closeConn(prof);
                 err.setContentText("Credenziali errate");
                 err.show();
             }

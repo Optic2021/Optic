@@ -1,16 +1,45 @@
 
-Acom.example.optic.entities.Campo#getProvincia()Ljava/lang/String;r
-hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java ("1*Õ
-1r
-hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (Ê
-Ç
-r
-hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
-%0java.lang.String"__id*3*1"
- com.example.optic.entities.Campo"
-	Provincia"Ž
-r
-hF:/Studio/Universita/ISPW/OrgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
+Fcom.example.optic.bean.ReportBean#getFormattedText()Ljava/lang/String;x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java" "(""1*±
+
+1x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(Ï
+Ì
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(%
+%0java.lang.String"__id*2*0#
+!com.example.optic.bean.ReportBean"	
+refereeË
+È
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(%
+%1java.lang.String"__concat*
+Ricevuto da *
 
-%0java.lang.StringB$"
- com.example.optic.entities.Campo
+%0java.lang.StringÎ
+Ë
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(7
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+\nMotivazione: Ó
+Ð
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java#8 #(C
+%3java.lang.String"__id*6*4#
+!com.example.optic.bean.ReportBean"
+motivazioneÓ
+Ð
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(C
+%4java.lang.String"__concat*
+
+%2java.lang.String*
+
+%3java.lang.String"”
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(D
+
+%4java.lang.StringB%#
+!com.example.optic.bean.ReportBean
