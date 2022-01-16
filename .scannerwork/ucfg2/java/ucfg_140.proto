@@ -1,16 +1,13 @@
 
-Ecom.example.optic.entities.Report#getFk_UsernameR()Ljava/lang/String;x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (!"1*ë
-1x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (Ô
-Ñ
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (
-%0java.lang.String"__id*7*5#
-!com.example.optic.entities.Report"
-fk_UsernameR"”
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (
-
-%0java.lang.StringB%#
+0com.example.optic.entities.Report#getIdReport()Is
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Report.java	 	("1*÷
+1s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Report.java
+ 
+("}
+s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Report.java
+ 
+(
+""B%#
 !com.example.optic.entities.Report

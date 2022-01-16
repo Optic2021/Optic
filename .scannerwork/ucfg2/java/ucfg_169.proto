@@ -1,45 +1,45 @@
 
-Fcom.example.optic.bean.ReportBean#getFormattedText()Ljava/lang/String;x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java" "(""1*±
+Fcom.example.optic.bean.ReportBean#getFormattedText()Ljava/lang/String;s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java" "(""1*é
 
-1x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(œ
-Ã
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(%
+1s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #( 
+«
+s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(%
 %0java.lang.String"__id*2*0#
 !com.example.optic.bean.ReportBean"	
-refereeÀ
-»
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(%
+referee∆
+√
+s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(%
 %1java.lang.String"__concat*
 Ricevuto da *
 
-%0java.lang.StringŒ
-À
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(7
+%0java.lang.String…
+∆
+s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(7
 %2java.lang.String"__concat*
 
 %1java.lang.String*
-\nMotivazione: ”
-–
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java#8 #(C
+\nMotivazione: Œ
+À
+s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java#8 #(C
 %3java.lang.String"__id*6*4#
 !com.example.optic.bean.ReportBean"
-motivazione”
-–
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(C
+motivazioneŒ
+À
+s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(C
 %4java.lang.String"__concat*
 
 %2java.lang.String*
 
-%3java.lang.String"î
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(D
+%3java.lang.String"è
+s
+iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(D
 
 %4java.lang.StringB%#
 !com.example.optic.bean.ReportBean

@@ -23,6 +23,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControllerUserViewProfile extends GraphicController{
     //stelle recensione
@@ -114,7 +115,7 @@ public class ControllerUserViewProfile extends GraphicController{
         int mediaVal = 0;
         int stars = 0;
         player.setUsername(user);
-        ArrayList<Valutazione> list = UserProfileAppController.getReviewList(player);
+        List<Valutazione> list = UserProfileAppController.getReviewList(player);
         for(int i = 0; i < list.size(); i++) {
             ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFk_UsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
             numVal++;
@@ -139,7 +140,7 @@ public class ControllerUserViewProfile extends GraphicController{
         player.setUsername(username);
         date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
         playground.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
-        ArrayList<Giornata> list = UserProfileAppController.getRecentPlayList(player);
+        List<Giornata> list = UserProfileAppController.getRecentPlayList(player);
         Giornata g = null;
         for(int i = 0;i < list.size(); i++){
             g = list.get(i);

@@ -1,214 +1,16 @@
 
-ãcom.example.optic.AppControllers.UserPgPageAppController#getCampoInfo(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/bean/AdminBean;ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (("3*ô
-2ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java$ $(Ø¨
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java$ $(*
-%21java.lang.String"Bcom.example.optic.entities.Referee#getUsername()Ljava/lang/String;*+
-)
-ref"com.example.optic.entities.Referee2getUsername()…∆
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java$ $(+
-%22void"@com.example.optic.bean.AdminBean#setReferee(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%21java.lang.String2setReferee(Ljava/lang/String;)*
-1*†?
-3ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (Æ
-´
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (-$
-%0com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
-com.example.optic.dao.AdminDAOÎ
-Ë
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (.%
-daocom.example.optic.dao.AdminDAO"__id*&
-$
-%0com.example.optic.dao.AdminDAOÆ´
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (+
-%1java.lang.String"Acom.example.optic.bean.AdminBean#getNomeCampo()Ljava/lang/String;*+
-)
-campo com.example.optic.bean.AdminBean2getNomeCampo()—
-Œ
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (,
-nomeCjava.lang.String"__id*
+Hcom.example.optic.entities.ValutazionePlayer#getUser()Ljava/lang/String;~
+tF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/ValutazionePlayer.java ("1*Ä
+1~
+tF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/ValutazionePlayer.java (›
+⁄
+~
+tF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/ValutazionePlayer.java (
+%0java.lang.String"__id*:*8.
+,com.example.optic.entities.ValutazionePlayer"
+user"ö
+~
+tF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/ValutazionePlayer.java (
 
-%1java.lang.StringÅ˛
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (%&
-%2 com.example.optic.entities.Admin"]com.example.optic.dao.AdminDAO#getCampo(Ljava/lang/String;)Lcom/example/optic/entities/Admin;*'
-%
-daocom.example.optic.dao.AdminDAO*
-
-nomeCjava.lang.String2getCampo(Ljava/lang/String;)Ì
-Í
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (&%
-x com.example.optic.entities.Admin"__id*(
-&
-%2 com.example.optic.entities.Admin‡›
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (#&
-%3 com.example.optic.bean.AdminBean" com.example.optic.bean.AdminBeanÚ
-Ô
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (%
-%4"*com.example.optic.bean.AdminBean#<init>()V*(
-&
-%3 com.example.optic.bean.AdminBeanÌ
-Í
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (&%
-y com.example.optic.bean.AdminBean"__id*(
-&
-%3 com.example.optic.bean.AdminBeanœ
-Ã
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java ()
-ref"com.example.optic.entities.Referee"__id*
-""®•
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (%
-%5java.lang.String"@com.example.optic.entities.Admin#getUsername()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getUsername()…∆
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (&
-
-%6void"Acom.example.optic.bean.AdminBean#setUsername(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%5java.lang.String2setUsername(Ljava/lang/String;)®•
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (%
-%7java.lang.String"@com.example.optic.entities.Admin#getPassword()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getPassword()…∆
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (&
-
-%8void"Acom.example.optic.bean.AdminBean#setPassword(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%7java.lang.String2setPassword(Ljava/lang/String;)∞≠
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (,
-%9java.lang.String"Dcom.example.optic.entities.Admin#getDescrizioneC()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getDescrizioneC()–Õ
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (-
-%10void"Dcom.example.optic.bean.AdminBean#setDescrizione(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%9java.lang.String2"setDescrizione(Ljava/lang/String;)ùö
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (
-%11java.lang.String":com.example.optic.entities.Admin#getFb()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getFb()øº
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (
-%12void";com.example.optic.bean.AdminBean#setFb(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%11java.lang.String2setFb(Ljava/lang/String;)ùö
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (
-%13java.lang.String":com.example.optic.entities.Admin#getIg()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getIg()øº
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java (
-%14void";com.example.optic.bean.AdminBean#setIg(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%13java.lang.String2setIg(Ljava/lang/String;)ùö
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java   (
-%15java.lang.String":com.example.optic.entities.Admin#getWa()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getWa()øº
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java   (
-%16void";com.example.optic.bean.AdminBean#setWa(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%15java.lang.String2setWa(Ljava/lang/String;)£†
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java! !(#
-%17java.lang.String"=com.example.optic.entities.Admin#getNomeC()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2
-getNomeC()Õ 
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java! !($
-%18void"Bcom.example.optic.bean.AdminBean#setNomeCampo(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%17java.lang.String2 setNomeCampo(Ljava/lang/String;)©¶
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java"& "(5
-%19java.lang.String"@com.example.optic.entities.Admin#getUsername()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getUsername()öó
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java" "(6)
-%20"com.example.optic.entities.Referee"jcom.example.optic.dao.AdminDAO#getRefereeFromAdmin(Ljava/lang/String;)Lcom/example/optic/entities/Referee;*'
-%
-daocom.example.optic.dao.AdminDAO*
-
-%19java.lang.String2'getRefereeFromAdmin(Ljava/lang/String;)Ù
-Ò
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java" "(6)
-ref"com.example.optic.entities.Referee"__id*+
-)
-%20"com.example.optic.entities.Referee*
-2
-1*π
-1ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java& &(	üú
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java& &(
-%23java.lang.String";com.example.optic.entities.Admin#getVia()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getVia()¡æ
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java& &(
-%24void"<com.example.optic.bean.AdminBean#setVia(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%23java.lang.String2setVia(Ljava/lang/String;)´®
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java' '('
-%25java.lang.String"Acom.example.optic.entities.Admin#getProvincia()Ljava/lang/String;*'
-%
-x com.example.optic.entities.Admin2getProvincia()Õ 
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java' '((
-%26void"Bcom.example.optic.bean.AdminBean#setProvincia(Ljava/lang/String;)V*'
-%
-y com.example.optic.bean.AdminBean*
-
-%25java.lang.String2 setProvincia(Ljava/lang/String;)"º
-ê
-ÖC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/AppControllers/UserPgPageAppController.java( (('
-%
-y com.example.optic.bean.AdminBean:)
-campo com.example.optic.bean.AdminBeanB<":
-8com.example.optic.AppControllers.UserPgPageAppController
+%0java.lang.StringB0.
+,com.example.optic.entities.ValutazionePlayer

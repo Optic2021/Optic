@@ -38,11 +38,11 @@ public class ControllerRegister extends GraphicController {
     private TextField pgProvField;
 
 
-    public void toLogin(ActionEvent e) throws IOException {
+    public void toLogin() throws IOException {
         this.toView("views/login.fxml");
     }
 
-    public void register(ActionEvent e) throws Exception {
+    public void register() throws Exception {
         boolean res = false;
         userRB.setUserData(1);
         adminRB.setUserData(2);
@@ -55,7 +55,7 @@ public class ControllerRegister extends GraphicController {
         }else if(password.getText().length() < 4){
             err.setContentText("La password deve contenere almeno 4 caratteri");
             err.show();
-        }else if(password.getText().equals(confPassword.getText()) != true){
+        }else if(!(password.getText().equals(confPassword.getText()))){
             err.setContentText("Le password non combaciano");
             err.show();
         }else if(prof == 2 && (addressField.getText().isEmpty() || pgNameField.getText().isEmpty() || pgProv.getText().isEmpty())) {
@@ -64,10 +64,11 @@ public class ControllerRegister extends GraphicController {
         } else{
             String name = username.getText();
             String pw = password.getText();
-            String view = "views/register.fxml";
+            String view;
             UserBean bean = new UserBean();
             bean.setUsername(name);
             bean.setPassword(pw);
+            String[] arr = {"views/userHomeMap.fxml","views/modPgPage.fxml","views/refCampo.fxml"};
             switch (prof) {
                 //registrazione admin
                 case 2 -> {
@@ -75,41 +76,25 @@ public class ControllerRegister extends GraphicController {
                     bean.setNomeC(pgNameField.getText());
                     bean.setProv(pgProvField.getText());
                     res = RegisterController.isUsernameUsed(bean, 2);
-                    if (!res) {
-                        RegisterController.userRegister(bean, 2);
-                        view = "views/modPgPage.fxml";
-                    }else{
-                        RegisterController.closeConn(2);
-                    }
                 }
                 //registrazione arbitro
                 case 3 -> {
                     res = RegisterController.isUsernameUsed(bean, 3);
-                    if (!res) {
-                        RegisterController.userRegister(bean, 3);
-                        view = "views/refCampo.fxml";
-                    }else{
-                        RegisterController.closeConn(3);
-                    }
                 }
                 //registrazione giocatore
                 default -> {
                     res = RegisterController.isUsernameUsed(bean, 1);
-                    if (!res) {
-                        RegisterController.userRegister(bean, 1);
-                        view = "views/userHomeMap.fxml";
-                    }else{
-                        RegisterController.closeConn(1);
-                    }
                 }
 
             }
             if (!res) {
+                RegisterController.userRegister(bean, prof);
                 Alert conf = new Alert(Alert.AlertType.CONFIRMATION);
                 conf.setContentText("Registrazione avvenuta con successo!");
                 conf.show();
-                this.toView(view, name);
+                this.toView(arr[prof], name);
             } else {
+                RegisterController.closeConn(prof);
                 err.setContentText("Username già utilizzato");
                 err.show();
             }

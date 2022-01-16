@@ -1,16 +1,17 @@
 
-:com.example.optic.entities.Admin#getFb()Ljava/lang/String;w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaE E("1*Ý
-1w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaF F(È
-Å
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaF F(
-%0java.lang.String"__id*,**"
- com.example.optic.entities.Admin"
-fb"“
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaF F(
+@com.example.optic.entities.Admin#getUsername()Ljava/lang/String;r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java ("1*Ô
+1r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (É
+Æ
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (
+%0java.lang.String"__id*2*0"
+ com.example.optic.entities.Admin"
+
+username"Ž
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (
 
 %0java.lang.StringB$"
  com.example.optic.entities.Admin

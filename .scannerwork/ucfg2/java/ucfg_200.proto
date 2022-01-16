@@ -1,17 +1,16 @@
 
-@com.example.optic.bean.AdminBean#getPassword()Ljava/lang/String;w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java ("1*ã
-1w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (Î
-Ë
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (
-%0java.lang.String"__id*2*0"
+Ccom.example.optic.bean.AdminBean#getDescrizione()Ljava/lang/String;r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java9 9( "1*×
+1r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java: :(Ì
+É
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java: :(
+%0java.lang.String"__id*5*3"
  com.example.optic.bean.AdminBean"
-
-password"“
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (
+descrizione"Ž
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java: :(
 
 %0java.lang.StringB$"
  com.example.optic.bean.AdminBean

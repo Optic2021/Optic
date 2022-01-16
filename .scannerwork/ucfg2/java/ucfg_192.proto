@@ -1,48 +1,17 @@
 
-Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javax x(("3*†
-2w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaz z('ÆÃ
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaz z(%&
-%1 com.example.optic.dao.RefereeDAO" com.example.optic.dao.RefereeDAOØ
-Õ
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaz z('
-%2"*com.example.optic.dao.RefereeDAO#<init>()V*(
-&
-%1 com.example.optic.dao.RefereeDAOÞ
-Û
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaz z('0"
- com.example.optic.dao.RefereeDAO"
+@com.example.optic.bean.AdminBean#getPassword()Ljava/lang/String;r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java ("1*Ô
+1r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (É
+Æ
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (
+%0java.lang.String"__id*2*0"
+ com.example.optic.bean.AdminBean"
 
-instance"__id*(
-&
-%1 com.example.optic.dao.RefereeDAO*
-1*å
-3w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javay y(Þ
-Û
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javay y(&
-%0 com.example.optic.dao.RefereeDAO"__id*2*0"
- com.example.optic.dao.RefereeDAO"
-
-instance*
-2
-1*ƒ
-1w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java| |(Þ
-Û
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java| |(&
-%3 com.example.optic.dao.RefereeDAO"__id*2*0"
- com.example.optic.dao.RefereeDAO"
-
-instance"£
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java| |((
-&
-%3 com.example.optic.dao.RefereeDAOB$""
- com.example.optic.dao.RefereeDAO
+password"Ž
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (
+
+%0java.lang.StringB$"
+ com.example.optic.bean.AdminBean

@@ -44,8 +44,7 @@ public class ControllerEventList extends GraphicController {
         events.setCellFactory(new Callback<ListView<String>, ListCell<String>>() {
             @Override
             public ListCell<String> call(ListView<String> stringListView) {
-                ListCell<String> cell = new ListCell<String>() {
-
+                return new ListCell<String>() {
                     protected void updateItem(String item, boolean empty) {
                         super.updateItem(item, empty);
                         if (!empty) {
@@ -55,7 +54,6 @@ public class ControllerEventList extends GraphicController {
                         }
                     }
                 };
-                return cell;
             }
         });
     }

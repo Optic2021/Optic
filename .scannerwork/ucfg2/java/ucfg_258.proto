@@ -1,16 +1,16 @@
 
-;com.example.optic.entities.Admin#getVia()Ljava/lang/String;w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaU U("1*Þ
-1w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaV V(É
-Æ
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaV V(
-%0java.lang.String"__id*-*+"
- com.example.optic.entities.Admin"
-via"“
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaV V(
+Dcom.example.optic.entities.Admin#getDescrizioneC()Ljava/lang/String;r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java- -(!"1*Ø
+1r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java. .(Í
+Ê
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java. .(
+%0java.lang.String"__id*6*4"
+ com.example.optic.entities.Admin"
+descrizioneC"Ž
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java. .(
 
 %0java.lang.StringB$"
  com.example.optic.entities.Admin

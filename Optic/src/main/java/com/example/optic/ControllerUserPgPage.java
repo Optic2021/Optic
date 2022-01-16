@@ -103,14 +103,14 @@ public class ControllerUserPgPage extends GraphicController {
     public void setUserVariables(String string) {
         String [] result = string.split("/");
         String username = result[0];
-        String campo = result[1];
+        String field = result[1];
         user.setText(username);
 
         AdminBean admin = null;
         AdminBean playground = null;
         try {
             playground = new AdminBean();
-            playground.setNomeCampo(campo);
+            playground.setNomeCampo(field);
             admin = UserPgPageAppController.getCampoInfo(playground);
             populateReviewTable(playground);
             this.setFirstPlay(admin.getUsername());
@@ -125,7 +125,7 @@ public class ControllerUserPgPage extends GraphicController {
     }
 
     //setto la prima giornata di gioco disponibile
-    public void setFirstPlay(String user) throws Exception {
+    public void setFirstPlay(String user) {
         Giornata play = null;
         UserBean bean = new UserBean();
         //setto la bean con info dell'admin del campo attualmente visualizzato
@@ -149,13 +149,13 @@ public class ControllerUserPgPage extends GraphicController {
     }
 
     //recupero la prossima giornata di gioco disponibile
-    public void getNextPlay() throws ParseException {
+    public void getNextPlay() {
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         if(!(idPlay.getText().isEmpty())) {
             try {
-                Date data = date_format.parse(date.getText());
+                Date data = dateFormat.parse(date.getText());
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(data);
                 playBean.setData(cal);
@@ -163,7 +163,7 @@ public class ControllerUserPgPage extends GraphicController {
                 play = UserPgPageAppController.getNextPlay(playBean);
                 if (play != null) {
                     idPlay.setText(Integer.toString(play.getIdGiornata()));
-                    date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                    date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                     activity.setText(play.getFk_Nome());
                     //controllo se la data è disponibile per la prenotazione
                     this.isDateValid();
@@ -179,10 +179,10 @@ public class ControllerUserPgPage extends GraphicController {
     public void getLastPlay(){
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         if(!(idPlay.getText().isEmpty())) {
             try {
-                Date data = date_format.parse(date.getText());
+                Date data = dateFormat.parse(date.getText());
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(data);
                 playBean.setData(cal);
@@ -190,7 +190,7 @@ public class ControllerUserPgPage extends GraphicController {
                 play = UserPgPageAppController.getLastPlay(playBean);
                 if (play != null) {
                     idPlay.setText(Integer.toString(play.getIdGiornata()));
-                    date.setText(date_format.format(play.getData().getTime()));//converto il calendar in un formato di data
+                    date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                     activity.setText(play.getFk_Nome());
                     //controllo se la data è disponibile per la prenotazione
                     this.isDateValid();
@@ -203,13 +203,10 @@ public class ControllerUserPgPage extends GraphicController {
     }
 
     public void isDateValid() throws ParseException {
-        SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
-        Date datePlay = date_format.parse(date.getText());
-        if(datePlay.toInstant().isBefore(Instant.now())) {
-            book.setVisible(false);
-        } else{
-            book.setVisible(true);
-        }
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date datePlay = dateFormat.parse(date.getText());
+        boolean bool = datePlay.toInstant().isBefore(Instant.now());
+        book.setVisible(bool);
     }
 
     public void bookPlay() throws IOException {
@@ -232,7 +229,7 @@ public class ControllerUserPgPage extends GraphicController {
         players.getItems().clear();
         playerName.setCellValueFactory(new PropertyValueFactory<>("username"));
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
-        Player p = new Player();
+        Player p;
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
         List<Player> list = UserPgPageAppController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
@@ -242,7 +239,7 @@ public class ControllerUserPgPage extends GraphicController {
         numGiocatori.setText(Integer.toString(list.size()));
     }
 
-    public void toHome(ActionEvent e) throws Exception {
+    public void toHome() throws Exception {
         this.toView("views/userHomeMap.fxml",user.getText());
     }
 
@@ -300,9 +297,7 @@ public class ControllerUserPgPage extends GraphicController {
             case 3: star4.setTextFill(Color.rgb(28,28,28));
                 star5.setTextFill(Color.rgb(28,28,28));
                 break;
-            case 4: star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            default:;
+            default:star5.setTextFill(Color.rgb(28,28,28));
         }
     }
 
@@ -322,13 +317,11 @@ public class ControllerUserPgPage extends GraphicController {
                 star33.setVisible(true);
                 star44.setVisible(true);
                 break;
-            case 5: star11.setVisible(true);
+            default:star11.setVisible(true);
                 star22.setVisible(true);
                 star33.setVisible(true);
                 star44.setVisible(true);
                 star55.setVisible(true);
-                break;
-            default:
         }
     }
 
@@ -371,9 +364,7 @@ public class ControllerUserPgPage extends GraphicController {
     }
 
     public void review() throws IOException {
-        String t;
-        int starN=0;
-
+        int starN = 0;
         if(star1.getTextFill().equals(Color.rgb(229,190,51)) && star2.getTextFill().equals(Color.rgb(28,28,28))){
             starN=1;
         }else if (star2.getTextFill().equals(Color.rgb(229,190,51)) && star3.getTextFill().equals(Color.rgb(28,28,28))){
@@ -387,25 +378,15 @@ public class ControllerUserPgPage extends GraphicController {
         }
 
         ValutazioneBean valutazione = new ValutazioneBean();
-
         valutazione.setRecensione(testoRecensione.getText());
         valutazione.setRiceve(campo.getText());
         valutazione.setStelle(starN);
         valutazione.setUsernameP1(user.getText());
-
         UserPgPageAppController.saveReview(valutazione);
         AdminBean admin=new AdminBean();
         admin.setNomeCampo(campo.getText());
         table.getItems().clear();
         populateReviewTable(admin);
-    }
-
-    public void paginaProfilo(/*MouseEvent e*/){
-        try {
-            //this.toView("views/userProfile.fxml",user.getText());
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
     }
 
     public void tableview(MouseEvent event) throws IOException {
@@ -422,8 +403,7 @@ public class ControllerUserPgPage extends GraphicController {
         }
     }
 
-    public void tableview2(MouseEvent event) throws IOException {
-        Node node=((Node)event.getTarget()).getParent();
+    public void tableview2() {
         Player player = (Player) players.getSelectionModel().getSelectedItem();
         try {
             if (user.getText().equals(player.getUsername())){
@@ -436,7 +416,7 @@ public class ControllerUserPgPage extends GraphicController {
         }
     }
 
-    public void toFacebook() throws IOException {
+    public void toFacebook() {
         if (fb.getText() != null) {
             try {
                 Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + fb.getText()});
@@ -448,7 +428,7 @@ public class ControllerUserPgPage extends GraphicController {
             alert.setContentText("Nessun profilo facebook inserito");
         }
     }
-    public void toInstagram() throws IOException {
+    public void toInstagram() {
         if (ig.getText() != null) {
             try {
                 Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + ig.getText()});

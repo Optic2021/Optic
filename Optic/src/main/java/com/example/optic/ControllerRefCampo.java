@@ -86,7 +86,7 @@ public class ControllerRefCampo extends GraphicController{
     }
 
     //setto la prima giornata di gioco disponibile
-    public void setFirstPlay(String user) throws Exception {
+    public void setFirstPlay(String user){
         Giornata play = null;
         UserBean bean = new UserBean();
         //setto la bean con info dell'admin del campo attualmente visualizzato
@@ -109,7 +109,7 @@ public class ControllerRefCampo extends GraphicController{
     }
 
     //recupero la prossima giornata di gioco disponibile
-    public void getNextPlay() throws ParseException {
+    public void getNextPlay(){
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -173,7 +173,7 @@ public class ControllerRefCampo extends GraphicController{
         numGiocatori.setText(Integer.toString(list.size()));
     }
 
-    public void tableview2(MouseEvent event) throws IOException {
+    public void tableview2() throws IOException {
         Player player = (Player) players.getSelectionModel().getSelectedItem();
         //Setto username report
         String username=player.getUsername();
@@ -193,7 +193,7 @@ public class ControllerRefCampo extends GraphicController{
         }
     }
 
-    public void eventList() throws Exception {
+    public void eventList() {
         try {
             Stage list = new Stage();
             Stage obj = (Stage) id.getScene().getWindow();

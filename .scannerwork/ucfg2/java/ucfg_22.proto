@@ -1,16 +1,79 @@
 
-Kcom.example.optic.entities.Valutazione#getFk_UsernameP1()Ljava/lang/String;}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java+ +(""1*€
-1}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(ß
-Ü
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(
-%0java.lang.String"__id*=*;(
-&com.example.optic.entities.Valutazione"
-fk_UsernameP1"™
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(
-
-%0java.lang.StringB*(
-&com.example.optic.entities.Valutazione
+Scom.example.optic.app_controllers.RefCampoController#getEventList()Ljava/util/List;†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java. .(*"7*à
+2†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java3 3(1Ì
+É
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java3 3(1
+listjava.util.ArrayList"__id*
+
+%5java.util.ArrayList*
+1*´
+4†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java2 2(2æ
+ã
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java2 2(2*
+eventDaocom.example.optic.dao.EventDAO"__id*&
+$
+%3com.example.optic.dao.EventDAO·´
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java3 3(1
+%5java.util.ArrayList"Icom.example.optic.dao.EventDAO#getRefereeEventList()Ljava/util/ArrayList;*,
+*
+eventDaocom.example.optic.dao.EventDAO2getRefereeEventList()*
+2*‚
+5†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java1 1(6å
+â
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java1 1(6'
+dao com.example.optic.dao.RefereeDAO"__id*(
+&
+%2 com.example.optic.dao.RefereeDAOÒÏ
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java2$ 2(,$
+%3com.example.optic.dao.EventDAO"com.example.optic.dao.EventDAO±
+®
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java2  2(1
+%4"Jcom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/RefereeDAO;)V*&
+$
+%3com.example.optic.dao.EventDAO*)
+'
+dao com.example.optic.dao.RefereeDAO*
+4*À
+6†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java1 1('¬
+©
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java1 1(5&
+%2 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
+ com.example.optic.dao.RefereeDAO*
+5*ð
+7†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java/  /(1¼¹
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java/$ /(/
+%0java.util.ArrayList"java.util.ArrayListÎ
+Ë
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java/  /(1
+%1"java.util.ArrayList#<init>()V*
+
+%0java.util.ArrayListÌ
+É
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java/ /(2
+listjava.util.ArrayList"__id*
+
+%0java.util.ArrayList*
+6*·
+1†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java7 7("¨
+†
+|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java7 7(
+
+listjava.util.ArrayListB8"6
+4com.example.optic.app_controllers.RefCampoController

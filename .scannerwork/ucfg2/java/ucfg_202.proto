@@ -1,16 +1,16 @@
 
-:com.example.optic.bean.AdminBean#getIg()Ljava/lang/String;w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java! !("1*Ý
-1w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java" "(È
-Å
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java" "(
-%0java.lang.String"__id*,**"
- com.example.optic.bean.AdminBean"
-ig"“
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java" "(
+Acom.example.optic.bean.AdminBean#getNomeCampo()Ljava/lang/String;r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaA A("1*Õ
+1r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaB B(Ê
+Ç
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaB B(
+%0java.lang.String"__id*3*1"
+ com.example.optic.bean.AdminBean"
+	nomeCampo"Ž
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaB B(
 
 %0java.lang.StringB$"
  com.example.optic.bean.AdminBean

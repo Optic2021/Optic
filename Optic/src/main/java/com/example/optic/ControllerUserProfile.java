@@ -22,6 +22,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControllerUserProfile extends GraphicController{
     @FXML
@@ -81,12 +82,12 @@ public class ControllerUserProfile extends GraphicController{
             if(p.getStato().equals("positivo")){
                 //profilo plus
             }
-            this.urlInstagram.setText(p.getIg());;
-            this.urlFacebook.setText(p.getFb());;
+            this.urlInstagram.setText(p.getIg());
+            this.urlFacebook.setText(p.getFb());
         }
     }
 
-    public void eventList(ActionEvent e) throws Exception {
+    public void eventList() throws Exception {
         try {
             Stage list = new Stage();
             Stage obj = (Stage) id.getScene().getWindow();
@@ -106,7 +107,7 @@ public class ControllerUserProfile extends GraphicController{
         }
     }
 
-    public void reportList(ActionEvent e) throws Exception {
+    public void reportList() throws Exception {
         try {
             Stage list = new Stage();
             Stage obj = (Stage) id.getScene().getWindow();
@@ -133,7 +134,7 @@ public class ControllerUserProfile extends GraphicController{
         int mediaVal = 0;
         int stars = 0;
         player.setUsername(user);
-        ArrayList<Valutazione> list = UserProfileAppController.getReviewList(player);
+        List<Valutazione> list = UserProfileAppController.getReviewList(player);
         for(int i = 0; i < list.size(); i++) {
             ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFk_UsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
             numVal++;
@@ -156,7 +157,7 @@ public class ControllerUserProfile extends GraphicController{
         player.setUsername(user);
         date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
         playground.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
-        ArrayList<Giornata> list = UserProfileAppController.getRecentPlayList(player);
+        List<Giornata> list = UserProfileAppController.getRecentPlayList(player);
         Giornata g = null;
         for(int i = 0;i < list.size(); i++){
             g = list.get(i);
@@ -198,13 +199,11 @@ public class ControllerUserProfile extends GraphicController{
                     star3.setVisible(true);
                     star4.setVisible(true);
                     break;
-            case 5: star1.setVisible(true);
-                    star2.setVisible(true);
-                    star3.setVisible(true);
-                    star4.setVisible(true);
-                    star5.setVisible(true);
-                    break;
-            default:
+            default:star1.setVisible(true);
+                star2.setVisible(true);
+                star3.setVisible(true);
+                star4.setVisible(true);
+                star5.setVisible(true);
         }
     }
 
@@ -224,39 +223,28 @@ public class ControllerUserProfile extends GraphicController{
         String fb = urlFacebook.getText();
         String ig = urlInstagram.getText();
         boolean res = true;
-        /*if(fb.getText() != null) {
-            if(!(fb.getText().isEmpty())) {
-                if (!(fb.getText().contains("https://www.facebook.com"))) {
-        */
-
         if(desc.length() > 200){
             res = false;
             err.setContentText("La descrizione supera il limite massimo di 200 caratteri: "+desc.length());
             err.show();
-        }if(urlFacebook.getText() != null) {
-            if(!(urlFacebook.getText().isEmpty())) {
-                if (!(urlFacebook.getText().contains("https://www.facebook.com"))) {
-                    res = false;
-                    err.setContentText("Url facebook non valido.");
-                    err.show();
-                } else if (urlFacebook.getText().length() > 200) {
-                    res = false;
-                    err.setContentText("Url facebook troppo lungo.");
-                    err.show();
-                }
+        }
+        if(urlFacebook.getText().length() > 200 || urlInstagram.getText().length() > 200){
+            res = false;
+            err.setContentText("Url facebook o instagram troppo lungo.");
+            err.show();
+        }
+        if(urlFacebook.getText() != null) {
+            if(!(urlFacebook.getText().isEmpty()) && !(urlFacebook.getText().contains("https://www.facebook.com"))) {
+                res = false;
+                err.setContentText("Url facebook non valido.");
+                err.show();
             }
         }
         if(urlInstagram.getText() != null) {
-            if(!(urlInstagram.getText().isEmpty())) {
-                if (!(urlInstagram.getText().contains("https://www.instagram.com"))) {
-                    res = false;
-                    err.setContentText("Url instagram non valido.");
-                    err.show();
-                } else if (urlInstagram.getText().length() > 200) {
-                    res = false;
-                    err.setContentText("Url instagram troppo lungo.");
-                    err.show();
-                }
+            if(!(urlInstagram.getText().isEmpty()) && !(urlInstagram.getText().contains("https://www.instagram.com"))) {
+                res = false;
+                err.setContentText("Url instagram non valido.");
+                err.show();
             }
         }
         if(res){
@@ -276,7 +264,7 @@ public class ControllerUserProfile extends GraphicController{
         }
     }
 
-    public void toHome(ActionEvent e) throws Exception {
+    public void toHome() throws Exception {
         this.toView("views/userHomeMap.fxml",user.getText());
     }
 }

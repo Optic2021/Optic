@@ -1,17 +1,16 @@
 
-Bcom.example.optic.entities.Referee#getPassword()Ljava/lang/String;y
-oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java ("1*Î
-1y
-oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java (“
+Gcom.example.optic.bean.RefereeBean#getFk_UsernameA1()Ljava/lang/String;t
+jF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/RefereeBean.java (""1*·
+1t
+jF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/RefereeBean.java (“
 œ
-y
-oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java (
-%0java.lang.String"__id*4*2$
-"com.example.optic.entities.Referee"
-
-password"ï
-y
-oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java (
+t
+jF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/RefereeBean.java (
+%0java.lang.String"__id*9*7$
+"com.example.optic.bean.RefereeBean"
+fk_UsernameA1"ê
+t
+jF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/RefereeBean.java (
 
 %0java.lang.StringB&$
-"com.example.optic.entities.Referee
+"com.example.optic.bean.RefereeBean

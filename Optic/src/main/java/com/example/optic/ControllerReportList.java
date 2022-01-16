@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControllerReportList extends GraphicController {
     @FXML
@@ -27,13 +28,13 @@ public class ControllerReportList extends GraphicController {
     @Override
     public void setUserVariables(String user) throws IOException {
         player.setText("Lista Report di: "+user);
-        ArrayList<ReportBean> list = new ArrayList<ReportBean>();
+        List<ReportBean> list;
         list = UserProfileAppController.getReportList(user);
         this.setList(list);
     }
 
 
-    public void setList(ArrayList<ReportBean> list) throws IOException {
+    public void setList(List<ReportBean> list) throws IOException {
         this.reports.getItems().clear();
         if(!list.isEmpty()) {
             for (int i = 0; i < list.size(); i++) {
@@ -42,8 +43,7 @@ public class ControllerReportList extends GraphicController {
             reports.setCellFactory(new Callback<ListView<String>, ListCell<String>>() {
                 @Override
                 public ListCell<String> call(ListView<String> stringListView) {
-                    ListCell<String> cell = new ListCell<String>() {
-
+                    return new ListCell<String>() {
                         protected void updateItem(String item, boolean empty) {
                             super.updateItem(item, empty);
                             if (!empty) {
@@ -53,7 +53,6 @@ public class ControllerReportList extends GraphicController {
                             }
                         }
                     };
-                    return cell;
                 }
             });
         }else{
@@ -61,7 +60,7 @@ public class ControllerReportList extends GraphicController {
         }
     }
 
-    public void exitListButton(ActionEvent e){
+    public void exitListButton(){
         Stage list = (Stage) id2.getScene().getWindow();
         list.close();
     }

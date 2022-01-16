@@ -37,7 +37,7 @@ public class ControllerSocialModPG extends GraphicController{
         }
     }
 
-    public void exitSocial(ActionEvent e) {
+    public void exitSocial() {
         Stage social = (Stage)this.idS.getScene().getWindow();
         social.close();
     }
@@ -52,45 +52,35 @@ public class ControllerSocialModPG extends GraphicController{
         bean.setIg(urlInstagram.getText());
         bean.setWa(numWhatsapp.getText());
         //controllo se gli url sono validi
+        if(urlInstagram.getText().length() > 200 || urlFacebook.getText().length() > 200){
+            res = false;
+            err.setContentText("Url facebook o instagram troppo lunghi.");
+            err.show();
+        }
         if(urlFacebook.getText() != null) {
-            if(!(urlFacebook.getText().isEmpty())) {
-                if (!(urlFacebook.getText().contains("https://www.facebook.com"))) {
-                    res = false;
-                    err.setContentText("Url facebook non valido.");
-                    err.show();
-                } else if (urlFacebook.getText().length() > 200) {
-                    res = false;
-                    err.setContentText("Url facebook troppo lungo.");
-                    err.show();
-                }
+            if(!(urlFacebook.getText().isEmpty()) && !(urlFacebook.getText().contains("https://www.facebook.com"))) {
+                res = false;
+                err.setContentText("Url facebook non valido.");
+                err.show();
             }
         }
         if(urlInstagram.getText() != null) {
-            if(!(urlInstagram.getText().isEmpty())) {
-                if (!(urlInstagram.getText().contains("https://www.instagram.com"))) {
-                    res = false;
-                    err.setContentText("Url instagram non valido.");
-                    err.show();
-                } else if (urlInstagram.getText().length() > 200) {
-                    res = false;
-                    err.setContentText("Url instagram troppo lungo.");
-                    err.show();
-                }
+            if(!(urlInstagram.getText().isEmpty()) && !(urlInstagram.getText().contains("https://www.instagram.com"))) {
+                res = false;
+                err.setContentText("Url instagram non valido.");
+                err.show();
             }
         }
         if (numWhatsapp.getText() != null){
-            if(!(numWhatsapp.getText().isEmpty())) {
-                if (numWhatsapp.getText().length() != 10) {
-                    res = false;
-                    err.setContentText("Numero di telefono non valido");
-                    err.show();
-                }
+            if(!(numWhatsapp.getText().isEmpty()) & numWhatsapp.getText().length() != 10) {
+                res = false;
+                err.setContentText("Numero di telefono non valido");
+                err.show();
             }
         }
         if(res){
             ModPGPageAppController.setAdminSocial(bean);
-            ActionEvent event = new ActionEvent();
-            exitSocial(event);
+            exitSocial();
         }
     }
 

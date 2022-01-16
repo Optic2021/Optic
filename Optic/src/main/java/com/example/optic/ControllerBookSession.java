@@ -3,17 +3,9 @@ package com.example.optic;
 import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
-import com.example.optic.entities.Admin;
-import com.example.optic.entities.Campo;
-import com.example.optic.entities.Event;
-import com.example.optic.entities.ValutazionePlayer;
-import com.mysql.cj.xdevapi.Table;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -43,7 +35,7 @@ public class ControllerBookSession extends GraphicController {
         this.toView("views/login.fxml");
     }
 
-    public void tableview(MouseEvent e){
+    public void tableview(){
         try {
             AdminBean campo=(AdminBean) table.getSelectionModel().getSelectedItem();
             toView("views/userPgPage.fxml",user.getText(),campo);
