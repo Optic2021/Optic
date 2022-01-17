@@ -19,22 +19,18 @@ public class AdminDAO {
     private Connection conn;
 
     //costruttore
-    protected AdminDAO(){
+    protected AdminDAO() throws IOException {
         this.conn = null;
-        try {
-            InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
-            Properties prop = new Properties();
-            prop.load(input);
-            this.USER = prop.getProperty("USER");
-            this.PW = prop.getProperty("PW");
-            this.DB_URL = prop.getProperty("DB_URL");
-            this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
+        Properties prop = new Properties();
+        prop.load(input);
+        this.USER = prop.getProperty("USER");
+        this.PW = prop.getProperty("PW");
+        this.DB_URL = prop.getProperty("DB_URL");
+        this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
     }
 
-    public void newAdmin(String username,String password,String via, String nomeC, String prov) {
+    public void newAdmin(String username,String password,String via, String nomeC, String prov) throws SQLException,ClassNotFoundException {
         Admin admin = new Admin(username, password, via, nomeC, prov);
         PreparedStatement prepStmt = null;
         try {
@@ -53,19 +49,13 @@ public class AdminDAO {
             prepStmt.setString(8, admin.getVia());
             prepStmt.setString(9, admin.getProvincia());
             prepStmt.executeUpdate();
-        } catch (SQLException e){
-            e.printStackTrace();
         } finally {
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (prepStmt != null)
+                prepStmt.close();
         }
     }
 
-    public void setAdminSocial(String user,String instagram,String facebook,String whatsapp){
+    public void setAdminSocial(String user,String instagram,String facebook,String whatsapp) throws SQLException, ClassNotFoundException {
         PreparedStatement prepStmt = null;
         try {
             if (instance.conn == null || instance.conn.isClosed()) {
@@ -78,19 +68,13 @@ public class AdminDAO {
             prepStmt.setString(3, whatsapp);
             prepStmt.setString(4, user);
             prepStmt.executeUpdate();
-        } catch (SQLException e){
-            e.printStackTrace();
         } finally {
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (prepStmt != null)
+                prepStmt.close();
         }
     }
 
-    public void setDescription(String admin, String desc){
+    public void setDescription(String admin, String desc) throws SQLException {
         PreparedStatement prepStmt = null;
         try{
             String sql = "UPDATE admin SET DescrizioneC=? WHERE Username=?";
@@ -98,19 +82,13 @@ public class AdminDAO {
             prepStmt.setString(1, desc);
             prepStmt.setString(2, admin);
             prepStmt.executeUpdate();
-        } catch (SQLException e){
-            e.printStackTrace();
         } finally {
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (prepStmt != null)
+                prepStmt.close();
         }
     }
 
-    public Admin getAdmin(String user) throws Exception {
+    public Admin getAdmin(String user) throws SQLException,ClassNotFoundException{
         PreparedStatement prepStmt = null;
         Admin admin = new Admin(user,"");
         try{
@@ -138,18 +116,15 @@ public class AdminDAO {
                 rs.close();
             }
         } finally {
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
+            if (prepStmt != null) {
+                prepStmt.close();
             }
         }
         return admin;
     }
 
     //recupero l'arbitro utilizzando il nome dell'admin
-    public Referee getRefereeFromAdmin(String user)throws Exception{
+    public Referee getRefereeFromAdmin(String user)throws SQLException {
         PreparedStatement prepStmt = null;
         Referee ref;
         try{
@@ -169,18 +144,14 @@ public class AdminDAO {
                 rs.close();
             }
         } finally {
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (prepStmt != null)
+                prepStmt.close();
         }
         return ref;
     }
 
     //recupero l'arbitro utilizzando il nome dello stesso
-    public Referee getReferee(String user)throws Exception{
+    public Referee getReferee(String user)throws SQLException {
         PreparedStatement prepStmt = null;
         Referee ref;
         try{
@@ -200,12 +171,8 @@ public class AdminDAO {
                 rs.close();
             }
         } finally {
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (prepStmt != null)
+                prepStmt.close();
         }
         return ref;
     }
@@ -218,15 +185,9 @@ public class AdminDAO {
             prepStmt.setString(1,admin);
             prepStmt.setString(2,ref);
             prepStmt.executeUpdate();
-        }catch(SQLException e){
-            e.printStackTrace();
-        }finally{
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        } finally{
+            if (prepStmt != null)
+                prepStmt.close();
         }
     }
 
@@ -238,15 +199,9 @@ public class AdminDAO {
             prepStmt.setNull(1, Types.NULL);
             prepStmt.setString(2,username);
             prepStmt.executeUpdate();
-        }catch (SQLException e){
-            e.printStackTrace();
-        }finally{
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        } finally{
+            if (prepStmt != null)
+                prepStmt.close();
         }
     }
 
@@ -263,7 +218,7 @@ public class AdminDAO {
     }
 
     //Da finire con adminDao
-    public Admin getCampo(String nomeC) throws Exception {
+    public Admin getCampo(String nomeC)throws ClassNotFoundException,SQLException {
         PreparedStatement prepStmt = null;
         Admin admin = new Admin("","");
         admin.setNomeC(nomeC);
@@ -294,17 +249,13 @@ public class AdminDAO {
                 rs.close();
             }
         } finally {
-            try {
-                if (prepStmt != null)
-                    prepStmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (prepStmt != null)
+                prepStmt.close();
         }
         return admin;
     }
 
-    public ArrayList<AdminBean> getCampoList() throws Exception {
+    public ArrayList<AdminBean> getCampoList()throws ClassNotFoundException,SQLException {
         String nomec;
         String desc;
 
@@ -331,36 +282,24 @@ public class AdminDAO {
                     admin.setProvincia((rs.getString("Provincia")));
                     list.add(admin);
 
-                }while (rs.next());
+                } while (rs.next());
                 rs.close();
             }
-        } finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        }finally {
+            if (stmt != null)
+                stmt.close();
         }
         return list;
     }
 
-    public void getConn(){
-        try{
-            Class.forName(DRIVER_CLASS_NAME);
-            instance.conn = DriverManager.getConnection(DB_URL, USER, PW);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void getConn() throws ClassNotFoundException,SQLException {
+        Class.forName(DRIVER_CLASS_NAME);
+        instance.conn = DriverManager.getConnection(DB_URL, USER, PW);
     }
 
-    public void closeConn(){
-        try{
-            if (instance.conn != null) {
-                instance.conn.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+    public void closeConn() throws SQLException {
+        if (instance.conn != null) {
+            instance.conn.close();
         }
     }
 }

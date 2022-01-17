@@ -43,13 +43,13 @@ public class RefCampoController {
         return a;
     }
 
-    public static List<Event> getEventList() throws IOException{
-        ArrayList<Event> list = new ArrayList<>();
+    public static List<Event> getEventList(){
+        List<Event> list = null;
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
             list = eventDao.getRefereeEventList();
-        }catch (IOException e){
+        }catch (IOException | SQLException e){
             e.printStackTrace();
         }
         return list;
@@ -91,7 +91,7 @@ public class RefCampoController {
         return  play;
     }
 
-    public static List<Player> getPlayersList(GiornataBean bean) throws IOException{
+    public static List<Player> getPlayersList(GiornataBean bean){
         ArrayList<Player> list = new ArrayList<>();
         try{
             RefereeDAO dao = RefereeDAO.getInstance();

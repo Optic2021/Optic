@@ -1,16 +1,16 @@
 
-?com.example.optic.entities.Storico#getCampo()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java ("1*Ù
-1t
-jF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (Ê
-Ç
-t
-jF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
-%0java.lang.String"__id*1*/$
-"com.example.optic.entities.Storico"
-campo"
-t
-jF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
+:com.example.optic.entities.Admin#getIg()Ljava/lang/String;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java= =("1*Ý
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java> >(È
+Å
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java> >(
+%0java.lang.String"__id*,**"
+ com.example.optic.entities.Admin"
+ig"“
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java> >(
 
-%0java.lang.StringB&$
-"com.example.optic.entities.Storico
+%0java.lang.StringB$"
+ com.example.optic.entities.Admin

@@ -1,13 +1,16 @@
 package com.example.optic;
 
 import com.example.optic.app_controllers.UserProfileAppController;
-import com.example.optic.bean.PlayerBean;
-import com.example.optic.bean.UserBean;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;
-import javafx.event.ActionEvent;
+
+
+import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.UserBean;
+import com.example.optic.utilities.ImportStar;
+import com.example.optic.utilities.ImportUrl;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,48 +22,28 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerUserProfile extends GraphicController{
-    @FXML
-    private Pane id;
-    @FXML
-    private Label star1;
-    @FXML
-    private Label star2;
-    @FXML
-    private Label star3;
-    @FXML
-    private Label star4;
-    @FXML
-    private Label star5;
-    @FXML
-    private Label nVal;
-    @FXML
-    private TextArea description;
-    @FXML
-    private TextField urlFacebook;
-    @FXML
-    private TextField urlInstagram;
-    @FXML
-    private GridPane modifica;
-    @FXML
-    private Button salva;
-    @FXML
-    private Label user;
-    @FXML
-    private ListView reviews;
-    @FXML
-    private TableView partite;
-    @FXML
-    private TableColumn date;
-    @FXML
-    private TableColumn playground;
-    @FXML
-    private Label userType;
+    @FXML private Pane id;
+    @FXML private Label star1;
+    @FXML private Label star2;
+    @FXML private Label star3;
+    @FXML private Label star4;
+    @FXML private Label star5;
+    @FXML private Label nVal;
+    @FXML private TextArea description;
+    @FXML private TextField urlFacebook;
+    @FXML private TextField urlInstagram;
+    @FXML private GridPane modifica;
+    @FXML private Button salva;
+    @FXML private Label user;
+    @FXML private ListView reviews;
+    @FXML private TableView partite;
+    @FXML private TableColumn date;
+    @FXML private TableColumn playground;
+    @FXML private Label userType;
 
     @Override
     public void setUserVariables(String user) throws Exception {
@@ -184,27 +167,7 @@ public class ControllerUserProfile extends GraphicController{
     }
 
     private void setStars(int stars){
-        switch (stars){
-            case 1: star1.setVisible(true);
-                    break;
-            case 2: star1.setVisible(true);
-                    star2.setVisible(true);
-                    break;
-            case 3: star1.setVisible(true);
-                    star2.setVisible(true);
-                    star3.setVisible(true);
-                    break;
-            case 4: star1.setVisible(true);
-                    star2.setVisible(true);
-                    star3.setVisible(true);
-                    star4.setVisible(true);
-                    break;
-            default:star1.setVisible(true);
-                star2.setVisible(true);
-                star3.setVisible(true);
-                star4.setVisible(true);
-                star5.setVisible(true);
-        }
+        ImportStar.setStars(stars,star1,star2,star3,star4,star5);
     }
 
     public void modify(){
@@ -228,21 +191,7 @@ public class ControllerUserProfile extends GraphicController{
             err.setContentText("La descrizione supera il limite massimo di 200 caratteri: "+desc.length());
             err.show();
         }
-        if(urlFacebook.getText().length() > 200 || urlInstagram.getText().length() > 200){
-            res = false;
-            err.setContentText("Url facebook o instagram troppo lungo.");
-            err.show();
-        }
-        if(urlFacebook.getText() != null && !(urlFacebook.getText().isEmpty()) && !(urlFacebook.getText().contains("https://www.facebook.com"))) {
-            res = false;
-            err.setContentText("Url facebook non valido.");
-            err.show();
-        }
-        if(urlInstagram.getText() != null && !(urlInstagram.getText().isEmpty()) && !(urlInstagram.getText().contains("https://www.instagram.com"))) {
-            res = false;
-            err.setContentText("Url instagram non valido.");
-            err.show();
-        }
+        ImportUrl.controlliUrl(urlInstagram,urlFacebook,null,true);
         if(res){
             PlayerBean p = new PlayerBean();
             p.setUsername(user.getText());

@@ -1,13 +1,17 @@
 package com.example.optic;
 
 import com.example.optic.app_controllers.UserProfileAppController;
-import com.example.optic.bean.PlayerBean;
-import com.example.optic.bean.UserBean;
-import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;
+import java.util.List;
+
+import com.example.optic.utilities.ImportStar;
+import com.example.optic.bean.PlayerBean;
+import com.example.optic.bean.UserBean;
+import com.example.optic.bean.ValutazioneBean;
+import com.example.optic.utilities.ImportUrl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,77 +24,48 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ControllerUserViewProfile extends GraphicController{
     //stelle recensione
-    @FXML
-    private Pane id;
-    @FXML
-    private Label star1;
-    @FXML
-    private Label star2;
-    @FXML
-    private Label star3;
-    @FXML
-    private Label star4;
-    @FXML
-    private Label star5;
-
+    @FXML private Pane id;
+    @FXML private Label star1;
+    @FXML private Label star2;
+    @FXML private Label star3;
+    @FXML private Label star4;
+    @FXML private Label star5;
     //stelle valutazione profilo
-    @FXML
-    private Label star11;
-    @FXML
-    private Label star22;
-    @FXML
-    private Label star33;
-    @FXML
-    private Label star44;
-    @FXML
-    private Label star55;
-
-    @FXML
-    private Label nVal;
-    @FXML
-    private TextArea description;
-    @FXML
-    private TextField urlFacebook;
-    @FXML
-    private TextField urlInstagram;
-
-    @FXML
-    private Label user;
-    @FXML
-    private  Label profile;
-    @FXML
-    private ListView reviews;
-    @FXML
-    private TableView partite;
-    @FXML
-    private TableColumn date;
-    @FXML
-    private TableColumn playground;
-
+    @FXML private Label star11;
+    @FXML private Label star22;
+    @FXML private Label star33;
+    @FXML private Label star44;
+    @FXML private Label star55;
+    @FXML private Label nVal;
+    @FXML private TextArea description;
+    @FXML private TextField urlFacebook;
+    @FXML private TextField urlInstagram;
+    @FXML private Label user;
+    @FXML private  Label profile;
+    @FXML private ListView reviews;
+    @FXML private TableView partite;
+    @FXML private TableColumn date;
+    @FXML private TableColumn playground;
     //Label per acquisizione della recensione
-    @FXML
-    private  TextArea desc;
+    @FXML private  TextArea desc;
 
     @Override
     public void setUserVariables(String user) throws Exception {
         String [] app = user.split(" ");
-        String profile=app[0];
+        String prof=app[0];
         String viewer=app[1];
 
-        this.profile.setText("Profile: "+profile);
+        this.profile.setText("Profile: "+prof);
         this.user.setText(viewer);
         Player p = null;
         try {
             PlayerBean player = new PlayerBean();
-            player.setUsername(profile);
-            this.populateReviewList(profile);
+            player.setUsername(prof);
+            this.populateReviewList(prof);
             this.populateGamesTable();
             p = UserProfileAppController.getPlayer(player);
         } catch (Exception e) {
@@ -103,8 +78,8 @@ public class ControllerUserViewProfile extends GraphicController{
             if(p.getStato().equals("positivo")){
                 //giocatore positivo
             }
-            this.urlInstagram.setText(p.getIg());;
-            this.urlFacebook.setText(p.getFb());;
+            this.urlInstagram.setText(p.getIg());
+            this.urlFacebook.setText(p.getFb());
         }
     }
 
@@ -159,33 +134,7 @@ public class ControllerUserViewProfile extends GraphicController{
             Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + this.urlInstagram.getText()});
         }
     }
-
-    private void setStars(int stars){
-        switch (stars){
-            case 1: star11.setVisible(true);
-                break;
-            case 2: star11.setVisible(true);
-                star22.setVisible(true);
-                break;
-            case 3: star11.setVisible(true);
-                star22.setVisible(true);
-                star33.setVisible(true);
-                break;
-            case 4: star11.setVisible(true);
-                star22.setVisible(true);
-                star33.setVisible(true);
-                star44.setVisible(true);
-                break;
-            case 5: star11.setVisible(true);
-                star22.setVisible(true);
-                star33.setVisible(true);
-                star44.setVisible(true);
-                star55.setVisible(true);
-                break;
-            default:;
-        }
-    }
-
+    //Set della visibilita delle stelle in base al valore
     public void reportList(){
         try {
             String[] app = profile.getText().split(" ");
@@ -208,9 +157,9 @@ public class ControllerUserViewProfile extends GraphicController{
         }
     }
 
-    public void review(ActionEvent e){
+    public void review(){
 
-        String description=desc.getText();
+        String descript=desc.getText();
         int starN;
         String givento=profile.getText();
         String giver=user.getText();
@@ -226,12 +175,12 @@ public class ControllerUserViewProfile extends GraphicController{
         }else{
             starN=5;
         }
-        String array[];
+        String []array;
         array=givento.split(" ");
 
         ValutazioneBean val= new ValutazioneBean();
         val.setUsernameP1(giver);
-        val.setRecensione(description);
+        val.setRecensione(descript);
         val.setStelle(starN);
         val.setRiceve(array[1]);
 
@@ -248,63 +197,13 @@ public class ControllerUserViewProfile extends GraphicController{
 
     //forse si puo mettere su graphic controller
     public void starEnter(MouseEvent e){
-        Label l = (Label)e.getSource();
-        String id = l.getId();
-        int starN = Integer.parseInt(id.substring(id.length() - 1));
-        switch(starN){
-            case 2: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 3: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 4: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(229,190,51));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 5: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(229,190,51));
-                star5.setTextFill(Color.rgb(229,190,51));
-                break;
-            default:star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(28,28,28));
-                star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-        }
+        ImportStar.starEnter(e, star1,star2, star3, star4, star5);
     }
     public void starExit(MouseEvent e){
-        Label l = (Label)e.getSource();
-        String id = l.getId();
-        int starN = Integer.parseInt(id.substring(id.length() - 1));
-        switch(starN){
-            case 1: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(28,28,28));
-                star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 2: star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 3: star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 4: star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            default:;
-        }
+        ImportStar.starEnter(e, star1,star2, star3, star4, star5);
+    }
+    private void setStars(int stars){
+        ImportStar.setStars(stars, star1,star2, star3, star4, star5);
     }
 
 

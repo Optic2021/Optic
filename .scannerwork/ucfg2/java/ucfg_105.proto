@@ -1,134 +1,16 @@
 
-acom.example.optic.dao.ValutazioneDAO#getAdminReviewList1(Ljava/lang/String;)Ljava/util/ArrayList;v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaG" G(5"12*½
-3v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaP P(8º
-·
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaP P(8
-	usernameAjava.lang.String"__id*
+=com.example.optic.entities.Campo#getNomec()Ljava/lang/String;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java ("1*à
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (Ë
+È
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
+%0java.lang.String"__id*/*-"
+ com.example.optic.entities.Campo"
+Nomec"“
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
 
-%9java.lang.String*
-1*§
-4v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaP P(¤¡
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaP P(8
-%9java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
-
-rsjava.sql.ResultSet*
-fk_UsernameA2getString(Ljava/lang/String;)*
-3*Ï
-5v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaO O(ÌÉ
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaO O(
-%8boolean"java.sql.ResultSet#first()Z*
-
-rsjava.sql.ResultSet2first()*
-4*Œ
-7v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaM M(3·
-´
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaM M(3
-rsjava.sql.ResultSet"__id*
-
-%6java.sql.ResultSetÌÉ
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaN N(
-%7boolean"java.sql.ResultSet#first()Z*
-
-rsjava.sql.ResultSet2first()*
-5
-1*‘
-8v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaM M(#Ž‹
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaM M(2
-%6java.sql.ResultSet"=java.sql.PreparedStatement#executeQuery()Ljava/sql/ResultSet;*(
-&
-prepStmtjava.sql.PreparedStatement2executeQuery()*
-7*„
-9w
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaK K(—Î
-Ë
-w
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaK K(—&
-prepStmtjava.sql.PreparedStatement"__id*"
- 
-%4java.sql.PreparedStatement¯¬
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaL L(&
-
-%5void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
-&
-prepStmtjava.sql.PreparedStatement*2*
-
-userjava.lang.String2setString(ILjava/lang/String;)*
-8*£
-10v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaKT K(W”
-‘
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaKY K(z	
-%2int"__id*
-""•
-’
-w
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaK{ K(•	
-%3int"__id*
-""ðí
-w
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaK) K(– 
-%4java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
-
-%1java.sql.Connection*
-
-sqljava.lang.String*
-	
-%2int*
-	
-%3int2&prepareStatement(Ljava/lang/String;II)*
-9*ú
-11v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaK) K(-Ü
-Ù
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaK) K(2%
-%0com.example.optic.dao.PlayerDAO"__id*2*0&
-$com.example.optic.dao.ValutazioneDAO"
-daoP–“
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaK) K(B
-%1java.sql.Connection"Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;*'
-%
-%0com.example.optic.dao.PlayerDAO2getConnection()*
-10*¦
-12v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaH H(lö
-ó
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaH H(m
-sqljava.lang.String"__id*ZX
-VSELECT fk_UsernameA from valutazione join admin on fk_UsernameA=Username WHERE NomeC=?¨
-¥
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaI I( 
-	usernameAjava.lang.String"__id*
-""*
-11*ƒ
-1v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaU U(!ìé
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaU U(,
-%11java.util.ArrayList"`com.example.optic.dao.ValutazioneDAO#getAdminReviewList(Ljava/lang/String;)Ljava/util/ArrayList;*(&
-$com.example.optic.dao.ValutazioneDAO*
-
-	usernameAjava.lang.String2&getAdminReviewList(Ljava/lang/String;)"–
-v
-lF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaU U(-
-
-%11java.util.ArrayList:
-userjava.lang.StringB(&
-$com.example.optic.dao.ValutazioneDAO
+%0java.lang.StringB$"
+ com.example.optic.entities.Campo

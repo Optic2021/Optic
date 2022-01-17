@@ -1,45 +1,16 @@
 
-Fcom.example.optic.bean.ReportBean#getFormattedText()Ljava/lang/String;s
-iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java" "(""1*é
-
-1s
-iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #( 
-«
-s
-iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(%
-%0java.lang.String"__id*2*0#
-!com.example.optic.bean.ReportBean"	
-referee∆
-√
-s
-iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(%
-%1java.lang.String"__concat*
-Ricevuto da *
+Dcom.example.optic.entities.Admin#getDescrizioneC()Ljava/lang/String;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java- -(!"1*Á
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java. .(“
+œ
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java. .(
+%0java.lang.String"__id*6*4"
+ com.example.optic.entities.Admin"
+descrizioneC"ì
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java. .(
 
-%0java.lang.String…
-∆
-s
-iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(7
-%2java.lang.String"__concat*
-
-%1java.lang.String*
-\nMotivazione: Œ
-À
-s
-iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java#8 #(C
-%3java.lang.String"__id*6*4#
-!com.example.optic.bean.ReportBean"
-motivazioneŒ
-À
-s
-iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(C
-%4java.lang.String"__concat*
-
-%2java.lang.String*
-
-%3java.lang.String"è
-s
-iF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java# #(D
-
-%4java.lang.StringB%#
-!com.example.optic.bean.ReportBean
+%0java.lang.StringB$"
+ com.example.optic.entities.Admin

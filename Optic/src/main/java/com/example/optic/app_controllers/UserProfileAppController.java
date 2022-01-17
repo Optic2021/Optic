@@ -11,6 +11,7 @@ import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.Giornata;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,12 +80,12 @@ public class UserProfileAppController {
     }
 
     public static List<Event> getEventList() throws IOException{
-        ArrayList<Event> list = new ArrayList<>();
+        List<Event> list = new ArrayList<>();
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
             list = eventDao.getPlayerEventList();
-        }catch (IOException e){
+        }catch (IOException | SQLException e){
             e.printStackTrace();
         }
         return list;

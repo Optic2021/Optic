@@ -4,7 +4,6 @@ import com.example.optic.app_controllers.ModPGPageAppController;
 import com.example.optic.app_controllers.RefCampoController;
 import com.example.optic.app_controllers.UserProfileAppController;
 import com.example.optic.entities.Event;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;

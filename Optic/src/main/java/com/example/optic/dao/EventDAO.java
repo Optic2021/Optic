@@ -36,7 +36,7 @@ public class EventDAO {
 
     //Assolutamente da fare, parametrizzare i tre sottostanti metodi in un solo metodo
 
-    public List<Event> getAdminEventList(){
+    public List<Event> getAdminEventList() throws SQLException {
         ArrayList<Event> list = new ArrayList<>();
         Statement stmt = null;
         String evento;
@@ -58,21 +58,15 @@ public class EventDAO {
                 }while(rs.next());
             }
             rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        } finally {
+            if (stmt != null)
+                stmt.close();
         }
         return list;
     }
 
-    public ArrayList<Event> getRefereeEventList(){
-        ArrayList<Event> list = new ArrayList<Event>();
+    public List<Event> getRefereeEventList() throws SQLException {
+        ArrayList<Event> list = new ArrayList<>();
         Statement stmt = null;
         String evento;
         String desc;
@@ -93,19 +87,13 @@ public class EventDAO {
                 }while(rs.next());
             }
             rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        } finally {
+            if (stmt != null)
+                stmt.close();
         }
         return list;
     }
-    public ArrayList<Event> getPlayerEventList(){
+    public List<Event> getPlayerEventList() throws SQLException {
         ArrayList<Event> list = new ArrayList<Event>();
         Statement stmt = null;
         String evento;
@@ -127,15 +115,9 @@ public class EventDAO {
                 }while(rs.next());
             }
             rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        } finally {
+            if (stmt != null)
+                stmt.close();
         }
         return list;
     }

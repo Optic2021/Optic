@@ -1,80 +1,16 @@
 
-xcom.example.optic.app_controllers.UserPgPageAppController#reviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.javaz$ z(."8*
-2é
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.javaÄ Ä(>‘
-—
-é
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.javaÄ Ä(>
-listjava.util.ArrayList"__id*
-
-%4java.util.ArrayList*
-1*†
-4é
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.javaÄ Ä(>ÑÅ
-é
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.javaÄ Ä(>
-%4java.util.ArrayList"acom.example.optic.dao.ValutazioneDAO#getAdminReviewList1(Ljava/lang/String;)Ljava/util/ArrayList;*-
-+
-dao$com.example.optic.dao.ValutazioneDAO*
-
-%3java.lang.String2'getAdminReviewList1(Ljava/lang/String;)*
-2*º
-5å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java (;Û
-
-å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java (;+
-dao$com.example.optic.dao.ValutazioneDAO"__id*,
-*
-%1$com.example.optic.dao.ValutazioneDAO¨©
-é
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.javaÄ) Ä(=
-%3java.lang.String"Acom.example.optic.bean.AdminBean#getNomeCampo()Ljava/lang/String;*+
-)
-admin com.example.optic.bean.AdminBean2getNomeCampo()*
-4*¥
-6å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java~ ~(6Ï
-È
-å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java~ ~(6)
-playercom.example.optic.dao.PlayerDAO"__id*'
-%
-%0com.example.optic.dao.PlayerDAO‰·
-å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java$ (2*
-%1$com.example.optic.dao.ValutazioneDAO"$com.example.optic.dao.ValutazioneDAOƒ
-¡
-å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java  (:
-%2"Ocom.example.optic.dao.ValutazioneDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)V*,
-*
-%1$com.example.optic.dao.ValutazioneDAO*+
-)
-playercom.example.optic.dao.PlayerDAO*
-5*»
-7å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java~ ~('Æ
-´
-å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java~ ~(5%
-%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
-com.example.optic.dao.PlayerDAO*
-6*◊
-8å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java{& {(*Ω
-∫
-å
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.java{ {(+
-listjava.util.ArrayList"__id*
-""*
-7*«
-1é
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.javaÖ Ö("∞
-é
-ÅF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserPgPageAppController.javaÖ Ö(
-
-listjava.util.ArrayList:)
-admin com.example.optic.bean.AdminBeanB=";
-9com.example.optic.app_controllers.UserPgPageAppController
+Acom.example.optic.bean.GiornataBean#getData()Ljava/util/Calendar;z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/GiornataBean.java ("1*Ô
+1z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/GiornataBean.java (“
+œ
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/GiornataBean.java (
+%0java.util.Calendar"__id*1*/%
+#com.example.optic.bean.GiornataBean"
+data"ò
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/GiornataBean.java (
+
+%0java.util.CalendarB'%
+#com.example.optic.bean.GiornataBean

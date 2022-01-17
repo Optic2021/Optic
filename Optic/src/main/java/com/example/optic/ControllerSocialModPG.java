@@ -1,11 +1,10 @@
 package com.example.optic;
 
 import com.example.optic.app_controllers.ModPGPageAppController;
+import com.example.optic.utilities.ImportUrl;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.entities.Admin;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -45,35 +44,13 @@ public class ControllerSocialModPG extends GraphicController{
     //CONVENZIONE per quanto riguarda i social con exit esco senza salvare con conferma esco e salvo
     public  void conferma(){
         boolean res = true;
-        Alert err = new Alert(Alert.AlertType.ERROR);
         AdminBean bean = new AdminBean();
         bean.setUsername(user.getText());
         bean.setFb(urlFacebook.getText());
         bean.setIg(urlInstagram.getText());
         bean.setWa(numWhatsapp.getText());
         //controllo se gli url sono validi
-        if(urlInstagram.getText().length() > 200 || urlFacebook.getText().length() > 200){
-            res = false;
-            err.setContentText("Url facebook o instagram troppo lunghi.");
-            err.show();
-        }
-        if(urlFacebook.getText() != null) {
-            if(!(urlFacebook.getText().isEmpty()) && !(urlFacebook.getText().contains("https://www.facebook.com"))) {
-                res = false;
-                err.setContentText("Url facebook non valido.");
-                err.show();
-            }
-        }
-        if(urlInstagram.getText() != null && !(urlInstagram.getText().isEmpty()) && !(urlInstagram.getText().contains("https://www.instagram.com"))) {
-            res = false;
-            err.setContentText("Url instagram non valido.");
-            err.show();
-        }
-        if (numWhatsapp.getText() != null && !(numWhatsapp.getText().isEmpty()) & numWhatsapp.getText().length() != 10){
-            res = false;
-            err.setContentText("Numero di telefono non valido");
-            err.show();
-        }
+        res= ImportUrl.controlliUrl(urlInstagram,urlFacebook,numWhatsapp,false);
         if(res){
             ModPGPageAppController.setAdminSocial(bean);
             exitSocial();

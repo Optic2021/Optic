@@ -6,6 +6,7 @@ import com.example.optic.dao.PlayerDAO;
 import javafx.scene.control.Alert;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,13 +16,20 @@ public class BookSessionAppController {
         //does np
     }
 
-    public static List<AdminBean> getCampi() throws Exception {
-        AdminDAO dao = AdminDAO.getInstance();
-        ArrayList<AdminBean> lista = new ArrayList<>();
+    public static List<AdminBean> getCampi(){
+        AdminDAO dao = null;
         try {
-            lista=dao.getCampoList();
-        }catch (Exception e){
+            dao = AdminDAO.getInstance();
+        } catch (IOException e) {
             e.printStackTrace();
+        }
+        ArrayList<AdminBean> lista = new ArrayList<>();
+        try{
+            lista=dao.getCampoList();
+        }catch (ClassNotFoundException y){
+            y.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         return lista;
     }

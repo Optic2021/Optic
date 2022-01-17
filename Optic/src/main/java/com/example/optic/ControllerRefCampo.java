@@ -7,6 +7,7 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
+import com.example.optic.utilities.ImportList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -58,11 +59,12 @@ public class ControllerRefCampo extends GraphicController{
     private TableColumn playerName;
     @FXML
     private TableColumn playerVal;
-
     @FXML
     private Label selectedPlayer;
     @FXML
     private TextArea reportDesc;
+
+    private String format="yyyy-MM-dd";
 
     @Override
     public void setUserVariables(String user) throws Exception {
@@ -96,7 +98,7 @@ public class ControllerRefCampo extends GraphicController{
             //controllo se esiste una giornata da poter mostrare
             if (play != null) {
                 //mostro informazioni della giornata
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat dateFormat = new SimpleDateFormat(format);
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
                 date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                 activity.setText(play.getFk_Nome());
@@ -104,7 +106,9 @@ public class ControllerRefCampo extends GraphicController{
                 this.populatePlayersTable();
             }
         }catch (Exception e){
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Errore caricamento giocate");
+            alert.show();
         }
     }
 
@@ -112,7 +116,7 @@ public class ControllerRefCampo extends GraphicController{
     public void getNextPlay(){
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
         if(!(idPlay.getText().isEmpty())) {
             try {
                 Date data = dateFormat.parse(date.getText());
@@ -137,7 +141,7 @@ public class ControllerRefCampo extends GraphicController{
     public void getLastPlay(){
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
         if(!(idPlay.getText().isEmpty())) {
             try {
                 Date data = dateFormat.parse(date.getText());
@@ -194,29 +198,15 @@ public class ControllerRefCampo extends GraphicController{
     }
 
     public void eventList() {
-        try {
-            Stage list = new Stage();
-            Stage obj = (Stage) id.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
-            GraphicController controller = fxmlLoader.getController();
-            controller.setUserVariables(userType.getText());
-            scene.setFill(Color.TRANSPARENT);
-            list.setResizable(false);
-            list.initOwner(obj);
-            list.initModality(Modality.APPLICATION_MODAL);
-            list.initStyle(StageStyle.TRANSPARENT);
-            list.setScene(scene);
-            list.show();
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }
+        ImportList.eventList(userType,id);
     }
 
     public void toLogin() throws IOException {
         RefCampoController.closeConn();
         this.toView("views/login.fxml");
     }
+
+    /*DA AGGIUNGERE HBOX CON IG WA FB*/
 
     public void toInstagram(){
         //Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlInstagram.getText()});
@@ -227,6 +217,12 @@ public class ControllerRefCampo extends GraphicController{
     }
 
     public void toWhatsapp(){
-        //devo mettere whatsapp
+        /*Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        if(numWhatsapp.getText().isEmpty()||numWhatsapp.getText()==null){
+            alert.setContentText("Numero whatsapp non presente");
+        }else {
+            alert.setContentText("Numero whatsapp: " + numWhatsapp.getText());
+        }
+        alert.show();*/
     }
 }

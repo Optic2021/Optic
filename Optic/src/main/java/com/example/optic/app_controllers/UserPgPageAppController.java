@@ -8,6 +8,7 @@ import com.example.optic.dao.*;
 import com.example.optic.entities.*;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,10 +18,22 @@ public class UserPgPageAppController {
         //does np
     }
 
-    public static AdminBean getCampoInfo(AdminBean campo) throws Exception{
-        AdminDAO dao = AdminDAO.getInstance();
+    public static AdminBean getCampoInfo(AdminBean campo){
+        AdminDAO dao = null;
+        try {
+            dao = AdminDAO.getInstance();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         String nomeC = campo.getNomeCampo();
-        Admin x = dao.getCampo(nomeC);
+        Admin x = null;
+        try {
+            x = dao.getCampo(nomeC);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         AdminBean y = new AdminBean();
         Referee ref = null;
 
@@ -31,7 +44,11 @@ public class UserPgPageAppController {
         y.setIg(x.getIg());
         y.setWa(x.getWa());
         y.setNomeCampo(x.getNomeC());
-        ref = dao.getRefereeFromAdmin(x.getUsername());
+        try {
+            ref = dao.getRefereeFromAdmin(x.getUsername());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         if(ref != null){
             y.setReferee(ref.getUsername());
         }

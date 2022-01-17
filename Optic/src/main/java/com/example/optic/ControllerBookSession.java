@@ -10,14 +10,10 @@ import java.io.IOException;
 import java.util.List;
 
 public class ControllerBookSession extends GraphicController {
-    @FXML
-    private Label user;
-    @FXML
-    private TableView table;
-    @FXML
-    private TableColumn nomeC;
-    @FXML
-    private TableColumn provincia;
+    @FXML private Label user;
+    @FXML private TableView table;
+    @FXML private TableColumn nomeC;
+    @FXML private TableColumn provincia;
 
     @Override
     public void setUserVariables(String user){

@@ -5,6 +5,7 @@ import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
+import com.example.optic.utilities.ImportList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,8 +17,10 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.w3c.dom.events.EventException;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -26,71 +29,44 @@ import java.util.Date;
 import java.util.List;
 
 public class ControllerModPGPage extends GraphicController {
-    @FXML
-    private Label user;
-    @FXML
-    private Label userType;
-    @FXML
-    private Label title;
-    @FXML
-    private Label star1;
-    @FXML
-    private Label star2;
-    @FXML
-    private Label star3;
-    @FXML
-    private Label star4;
-    @FXML
-    private Label star5;
-    @FXML
-    private TextArea description;
+    @FXML private Label user;
+    @FXML private Label userType;
+    @FXML private Label title;
+    @FXML private Label star1;
+    @FXML private Label star2;
+    @FXML private Label star3;
+    @FXML private Label star4;
+    @FXML private Label star5;
+    @FXML private TextArea description;
     //settata non editable
     //settata non visible
-    @FXML
-    private Button aggiorna;
+    @FXML private Button aggiorna;
     //settata non visible
-    @FXML
-    private Button addPlay;
+    @FXML private Button addPlay;
     //settata non visible
-    @FXML
-    private Label urlFacebook;
+    @FXML private Label urlFacebook;
     //settata non editable
-    @FXML
-    private Label urlInstagram;
+    @FXML private Label urlInstagram;
     //settata non editable
-    @FXML
-    private Label numWhatsapp;
-    @FXML
-    private Label refName;
-    @FXML
-    private Label prov;
-    @FXML
-    private Label address;
+    @FXML private Label numWhatsapp;
+    @FXML private Label refName;
+    @FXML private Label prov;
+    @FXML private Label address;
     //settata non editable
-    @FXML
-    private Pane id;
-    @FXML
-    private TextField ref;
-    @FXML
-    private ListView reviews;
-    @FXML
-    private ComboBox eventBox;
-    @FXML
-    private DatePicker datePicker;
-    @FXML
-    private Label nPlayers;
-    @FXML
-    private Label activity;
-    @FXML
-    private Label date;
-    @FXML
-    private Label idPlay;
-    @FXML
-    private TableView players;
-    @FXML
-    private TableColumn playerName;
-    @FXML
-    private TableColumn playerVal;
+    @FXML private Pane id;
+    @FXML private TextField ref;
+    @FXML private ListView reviews;
+    @FXML private ComboBox eventBox;
+    @FXML private DatePicker datePicker;
+    @FXML private Label nPlayers;
+    @FXML private Label activity;
+    @FXML private Label date;
+    @FXML private Label idPlay;
+    @FXML private TableView players;
+    @FXML private TableColumn playerName;
+    @FXML private TableColumn playerVal;
+
+    private String format="yyyy-MM-dd";
 
     public void toLogin() throws IOException {
         ModPGPageAppController.closeConn();
@@ -133,14 +109,15 @@ public class ControllerModPGPage extends GraphicController {
             //controllo se esiste una giornata da poter mostrare
             if (play != null) {
                 //mostro informazioni della giornata
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat dateFormat = new SimpleDateFormat(format);
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
                 date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
                 activity.setText(play.getFk_Nome());
                 this.populatePlayersTable();
             }else{
-                eventBox.setVisible(true);
+
                 this.populateEventBox();
+                eventBox.setVisible(true);
                 datePicker.setVisible(true);
                 addPlay.setVisible(true);
                 idPlay.setVisible(false);
@@ -155,10 +132,11 @@ public class ControllerModPGPage extends GraphicController {
     }
 
     //recupero la prossima giornata di gioco disponibile
+    //le generalizzo ma non sono sicuro sia corretto
     public void getNextPlay() throws ParseException {
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
         if(!(idPlay.getText().isEmpty())) {
             try {
                 //crea nuova giornata
@@ -208,7 +186,7 @@ public class ControllerModPGPage extends GraphicController {
     public void getLastPlay(){
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
         if(!(idPlay.getText().isEmpty())) {
             try {
                 if (!(activity.getText().isEmpty()) && eventBox.isVisible()) {
@@ -303,7 +281,7 @@ public class ControllerModPGPage extends GraphicController {
             err.show();
         }else{
             GiornataBean playBean = new GiornataBean();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat dateFormat = new SimpleDateFormat(format);
             Date dataPlay = dateFormat.parse(datePicker.getValue().toString());
             Calendar cal = Calendar.getInstance();
             cal.setTime(dataPlay);
@@ -400,33 +378,21 @@ public class ControllerModPGPage extends GraphicController {
         }
     }
 
-    public void eventList() throws Exception {
-        try {
-            Stage list = new Stage();
-            Stage obj = (Stage) id.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
-            GraphicController controller = fxmlLoader.getController();
-            controller.setUserVariables(userType.getText());
-            scene.setFill(Color.TRANSPARENT);
-            list.setResizable(false);
-            list.initOwner(obj);
-            list.initModality(Modality.APPLICATION_MODAL);
-            list.initStyle(StageStyle.TRANSPARENT);
-            list.setScene(scene);
-            list.show();
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }
+    public void eventList(){
+        ImportList.eventList(userType,id);
     }
 
-    public void socialModify() throws Exception {
+    public void socialModify() throws IOException{
         Stage social = new Stage();
         Stage obj = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/SocialModPG.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 250);
         GraphicController controller = fxmlLoader.getController();
-        controller.setUserVariables(user.getText());
+        try {
+            controller.setUserVariables(user.getText());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         scene.setFill(Color.TRANSPARENT);
         social.setResizable(false);
         social.initOwner(obj);
@@ -450,6 +416,7 @@ public class ControllerModPGPage extends GraphicController {
         }else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Nessun profilo instagram inserito");
+            alert.show();
         }
     }
     public void whatsapp(){

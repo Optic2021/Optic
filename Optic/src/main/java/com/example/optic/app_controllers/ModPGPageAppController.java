@@ -8,6 +8,7 @@ import com.example.optic.entities.*;
 import javafx.scene.control.Alert;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -126,7 +127,7 @@ public class ModPGPageAppController {
         return list;
     }
 
-    public static List<Player> getPlayersList(GiornataBean bean) throws IOException{
+    public static List<Player> getPlayersList(GiornataBean bean) {
         ArrayList<Player> list = new ArrayList<>();
         try{
             AdminDAO dao = AdminDAO.getInstance();
@@ -138,7 +139,7 @@ public class ModPGPageAppController {
         return list;
     }
 
-    public static List<Event> getEventList() throws IOException{
+    public static List<Event> getEventList() {
         List<Event> list = new ArrayList<>();
         try{
             AdminDAO dao = AdminDAO.getInstance();
@@ -146,6 +147,8 @@ public class ModPGPageAppController {
             list = eventDao.getAdminEventList();
         }catch (IOException e){
             e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         return list;
     }
