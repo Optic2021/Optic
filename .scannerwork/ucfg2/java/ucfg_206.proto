@@ -1,15 +1,15 @@
 
 Ycom.example.optic.app_controllers.UserProfileAppController#getEventList()Ljava/util/List;’
-‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaR R(*"7*ó
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaR R(*"7*î
 2’
-‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaW W(0Ó
-Ð
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaW W(0Î
+Ë
 ’
 ‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaW W(0
-listjava.util.List"__id*
-
-%5java.util.ArrayList*
-1*Ö
+listjava.util.List"__id*
+
+%5java.util.List*
+1*Ì
 4’
 ‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaV V(2ò
 ï
@@ -17,10 +17,10 @@ Ycom.example.optic.app_controllers.UserProfileAppController#getEventList()Ljava/
 ‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaV V(2*
 eventDaocom.example.optic.dao.EventDAO"__id*&
 $
-%3com.example.optic.dao.EventDAOÁ¾
+%3com.example.optic.dao.EventDAO·´
 ’
-‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaW W(0
-%5java.util.ArrayList"Hcom.example.optic.dao.EventDAO#getPlayerEventList()Ljava/util/ArrayList;*,
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaW W(0
+%5java.util.List"Ccom.example.optic.dao.EventDAO#getPlayerEventList()Ljava/util/List;*,
 *
 eventDaocom.example.optic.dao.EventDAO2getPlayerEventList()*
 2*®

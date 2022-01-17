@@ -46,7 +46,7 @@ public class ControllerUserProfile extends GraphicController{
     @FXML private Label userType;
 
     @Override
-    public void setUserVariables(String user) throws Exception {
+    public void setUserVariables(String user){
         this.user.setText(user);
         Player p = null;
         try {
@@ -70,7 +70,7 @@ public class ControllerUserProfile extends GraphicController{
         }
     }
 
-    public void eventList() throws Exception {
+    public void eventList(){
         try {
             Stage list = new Stage();
             Stage obj = (Stage) id.getScene().getWindow();
@@ -85,12 +85,12 @@ public class ControllerUserProfile extends GraphicController{
             list.initStyle(StageStyle.TRANSPARENT);
             list.setScene(scene);
             list.show();
-        }catch (Exception ex){
-            ex.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    public void reportList() throws Exception {
+    public void reportList(){
         try {
             Stage list = new Stage();
             Stage obj = (Stage) id.getScene().getWindow();
@@ -105,19 +105,24 @@ public class ControllerUserProfile extends GraphicController{
             list.initStyle(StageStyle.TRANSPARENT);
             list.setScene(scene);
             list.show();
-        }catch (Exception ex){
+        }catch (IOException ex){
             ex.printStackTrace();
         }
     }
 
     //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
-    public void populateReviewList(String user) throws IOException {
+    public void populateReviewList(String user) {
         PlayerBean player = new PlayerBean();
         int numVal = 0;
         int mediaVal = 0;
         int stars = 0;
         player.setUsername(user);
-        List<Valutazione> list = UserProfileAppController.getReviewList(player);
+        List<Valutazione> list = null;
+        try {
+            list = UserProfileAppController.getReviewList(player);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         for(int i = 0; i < list.size(); i++) {
             ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFk_UsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
             numVal++;

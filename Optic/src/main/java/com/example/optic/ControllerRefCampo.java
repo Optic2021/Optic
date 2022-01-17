@@ -29,50 +29,41 @@ import java.util.Date;
 import java.util.List;
 
 public class ControllerRefCampo extends GraphicController{
-    @FXML
-    private Pane id;
-    @FXML
-    private Label user;
-    @FXML
-    private Label userType;
-    @FXML
-    private TextArea desc;
-    @FXML
-    private Label address;
-    @FXML
-    private Label prov;
-    @FXML
-    private Label admin;
-    @FXML
-    private Label title;
-    @FXML
-    private Label activity;
-    @FXML
-    private Label idPlay;
-    @FXML
-    private Label date;
-    @FXML
-    private TableView players;
-    @FXML
-    private Label numGiocatori;
-    @FXML
-    private TableColumn playerName;
-    @FXML
-    private TableColumn playerVal;
-    @FXML
-    private Label selectedPlayer;
-    @FXML
-    private TextArea reportDesc;
+    @FXML private Pane id;
+    @FXML private Label user;
+    @FXML private Label userType;
+    @FXML private TextArea desc;
+    @FXML private Label address;
+    @FXML private Label prov;
+    @FXML private Label admin;
+    @FXML private Label title;
+    @FXML private Label activity;
+    @FXML private Label idPlay;
+    @FXML private Label date;
+    @FXML private TableView players;
+    @FXML private Label numGiocatori;
+    @FXML private TableColumn playerName;
+    @FXML private TableColumn playerVal;
+    @FXML private Label selectedPlayer;
+    @FXML private TextArea reportDesc;
+
+    @FXML private Label numWhatsapp;
+    @FXML private Label urlInstagram;
+    @FXML private Label urlFacebook;
 
     private String format="yyyy-MM-dd";
 
     @Override
-    public void setUserVariables(String user) throws Exception {
+    public void setUserVariables(String user) {
         this.user.setText(user);
         Admin a = null;
         UserBean bean = new UserBean();
         bean.setUsername(user);
-        a = RefCampoController.getAdminFromRef(bean);
+        try {
+            a = RefCampoController.getAdminFromRef(bean);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         if(a == null){
             Alert err = new Alert(Alert.AlertType.WARNING);
             err.setContentText("Non sei collegato a nessun campo!");
@@ -209,20 +200,28 @@ public class ControllerRefCampo extends GraphicController{
     /*DA AGGIUNGERE HBOX CON IG WA FB*/
 
     public void toInstagram(){
-        //Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlInstagram.getText()});
+        try {
+            Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlInstagram.getText()});
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void toFacebook(){
-        //Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlFacebook.getText()});
+        try {
+            Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome "+urlFacebook.getText()});
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void toWhatsapp(){
-        /*Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         if(numWhatsapp.getText().isEmpty()||numWhatsapp.getText()==null){
             alert.setContentText("Numero whatsapp non presente");
         }else {
             alert.setContentText("Numero whatsapp: " + numWhatsapp.getText());
         }
-        alert.show();*/
+        alert.show();
     }
 }

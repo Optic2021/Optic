@@ -74,7 +74,7 @@ public class ControllerModPGPage extends GraphicController {
     }
 
     @Override
-    public void setUserVariables(String user) throws Exception {
+    public void setUserVariables(String user) {
         this.user.setText(user);
         Admin a = null;
         try {
@@ -95,7 +95,11 @@ public class ControllerModPGPage extends GraphicController {
             this.urlInstagram.setText(a.getIg());
             this.urlFacebook.setText(a.getFb());
             this.numWhatsapp.setText(a.getWa());
-            this.setFirstPlay(a.getUsername());
+            try {
+                this.setFirstPlay(a.getUsername());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

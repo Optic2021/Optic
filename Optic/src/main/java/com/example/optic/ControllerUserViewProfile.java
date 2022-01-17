@@ -54,7 +54,7 @@ public class ControllerUserViewProfile extends GraphicController{
     @FXML private  TextArea desc;
 
     @Override
-    public void setUserVariables(String user) throws Exception {
+    public void setUserVariables(String user) {
         String [] app = user.split(" ");
         String prof=app[0];
         String viewer=app[1];

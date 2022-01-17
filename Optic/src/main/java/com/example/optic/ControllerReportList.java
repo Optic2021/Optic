@@ -26,11 +26,15 @@ public class ControllerReportList extends GraphicController {
     private Label player;
 
     @Override
-    public void setUserVariables(String user) throws IOException {
+    public void setUserVariables(String user) {
         player.setText("Lista Report di: "+user);
         List<ReportBean> list;
         list = UserProfileAppController.getReportList(user);
-        this.setList(list);
+        try {
+            this.setList(list);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

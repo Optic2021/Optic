@@ -109,12 +109,12 @@ iterator()4java.sql.SQLException#iterator()Ljava/util/Iterator;u
 
 getNomeC()<com.example.optic.bean.UserBean#getNomeC()Ljava/lang/String;]
 setNomeC(Ljava/lang/String;)=com.example.optic.bean.UserBean#setNomeC(Ljava/lang/String;)Vc
-setUsername(Ljava/lang/String;)@com.example.optic.bean.UserBean#setUsername(Ljava/lang/String;)V∂
+setUsername(Ljava/lang/String;)@com.example.optic.bean.UserBean#setUsername(Ljava/lang/String;)V±
 com.example.optic.dao.EventDAOjava.lang.ObjectY
 getAdminEventList()Bcom.example.optic.dao.EventDAO#getAdminEventList()Ljava/util/List;v
 )<init>(Lcom/example/optic/dao/PlayerDAO;)Icom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)Vt
-(<init>(Lcom/example/optic/dao/AdminDAO;)Hcom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/AdminDAO;)V`
-getPlayerEventList()Hcom.example.optic.dao.EventDAO#getPlayerEventList()Ljava/util/ArrayList;x
+(<init>(Lcom/example/optic/dao/AdminDAO;)Hcom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/AdminDAO;)V[
+getPlayerEventList()Ccom.example.optic.dao.EventDAO#getPlayerEventList()Ljava/util/List;x
 *<init>(Lcom/example/optic/dao/RefereeDAO;)Jcom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/RefereeDAO;)V]
 getRefereeEventList()Dcom.example.optic.dao.EventDAO#getRefereeEventList()Ljava/util/List;≈
 !com.example.optic.dao.GiornataDAOjava.lang.ObjectÖ
@@ -1188,7 +1188,9 @@ AcheckMemberAccess(Ljava/lang/SecurityManager;ILjava/lang/Class;Z)Rjava.lang.Cl
 toGenericString()3java.lang.Class#toGenericString()Ljava/lang/String;¨
 :getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)njava.lang.Class#getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)Ljava/lang/PublicMethods$MethodList;R
 getSimpleBinaryName0()8java.lang.Class#getSimpleBinaryName0()Ljava/lang/String;1
-isLocalClass()java.lang.Class#isLocalClass()Zü
+isLocalClass()java.lang.Class#isLocalClass()Zv
+%com.example.optic.utilities.ImportUrljava.lang.Object;
+<init>()/com.example.optic.utilities.ImportUrl#<init>()Vü
 "com.example.optic.entities.Refereejava.lang.Objectf
 setPassword(Ljava/lang/String;)Ccom.example.optic.entities.Referee#setPassword(Ljava/lang/String;)VS
 getPassword()Bcom.example.optic.entities.Referee#getPassword()Ljava/lang/String;§
@@ -1623,21 +1625,19 @@ NsetReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)
 2getNextPlay(Lcom/example/optic/bean/GiornataBean;)êcom.example.optic.app_controllers.ModPGPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;T
 closeConn()Ecom.example.optic.app_controllers.ModPGPageAppController#closeConn()V
 Callbackjava.lang.Object8
-,Lcom/example/optic/ControllerEventList$1557;Callback
+,Lcom/example/optic/ControllerEventList$1656;Callback
 ListCelljava.lang.ObjectÇ
-,Lcom/example/optic/ControllerEventList$1734;ListCellH
-updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)Vv
-%com.example.optic.utilities.ImportUrljava.lang.Object;
-<init>()/com.example.optic.utilities.ImportUrl#<init>()V 
+,Lcom/example/optic/ControllerEventList$1833;ListCellH
+updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)V 
 EventHandlerjava.lang.Object:
-*Lcom/example/optic/GraphicController$1461;EventHandler:
-*Lcom/example/optic/GraphicController$1721;EventHandler:
-*Lcom/example/optic/GraphicController$2537;EventHandler:
-*Lcom/example/optic/GraphicController$2797;EventHandler:
-*Lcom/example/optic/GraphicController$3561;EventHandler:
-*Lcom/example/optic/GraphicController$3821;EventHandler:
-*Lcom/example/optic/GraphicController$4653;EventHandler:
-*Lcom/example/optic/GraphicController$4913;EventHandler®
+*Lcom/example/optic/GraphicController$1443;EventHandler:
+*Lcom/example/optic/GraphicController$1703;EventHandler:
+*Lcom/example/optic/GraphicController$2519;EventHandler:
+*Lcom/example/optic/GraphicController$2779;EventHandler:
+*Lcom/example/optic/GraphicController$3543;EventHandler:
+*Lcom/example/optic/GraphicController$3803;EventHandler:
+*Lcom/example/optic/GraphicController$4635;EventHandler:
+*Lcom/example/optic/GraphicController$4895;EventHandler®
 'com.example.optic.entities.Prenotazionejava.lang.Objectq
 "setFk_Username(Ljava/lang/String;)Kcom.example.optic.entities.Prenotazione#setFk_Username(Ljava/lang/String;)V^
 getFk_Username()Jcom.example.optic.entities.Prenotazione#getFk_Username()Ljava/lang/String;=
@@ -1875,6 +1875,6 @@ Cparse(Ljava/lang/CharSequence;Ljava/time/format/DateTimeFormatter;)ljava.time.
 $setUserVariables(Ljava/lang/String;)Lcom.example.optic.ControllerReportList#setUserVariables(Ljava/lang/String;)V<
 <init>()0com.example.optic.ControllerReportList#<init>()VL
 exitListButton()8com.example.optic.ControllerReportList#exitListButton()V9
--Lcom/example/optic/ControllerReportList$1377;CallbackÉ
--Lcom/example/optic/ControllerReportList$1566;ListCellH
+-Lcom/example/optic/ControllerReportList$1457;CallbackÉ
+-Lcom/example/optic/ControllerReportList$1646;ListCellH
 updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)V

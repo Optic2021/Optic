@@ -21,21 +21,25 @@ public class ControllerEventList extends GraphicController {
     private ListView events;
 
     @Override
-    public void setUserVariables(String user) throws IOException {
+    public void setUserVariables(String user){
         List<Event> list;
-        if(user.contains("Giocatore")){//uso la dao del player
-            list = UserProfileAppController.getEventList();
-            this.setList(list);
-        }else if(user.contains("Admin")){//uso la dao dell'admin
-            list = ModPGPageAppController.getEventList();
-            this.setList(list);
-        }else if(user.contains("Arbitro")){//uso la dao del referee
-            list = RefCampoController.getEventList();
-            this.setList(list);
+        try {
+            if (user.contains("Giocatore")) {//uso la dao del player
+                list = UserProfileAppController.getEventList();
+                this.setList(list);
+            }else if (user.contains("Admin")) {//uso la dao dell'admin
+                list = ModPGPageAppController.getEventList();
+                this.setList(list);
+            } else if (user.contains("Arbitro")) {//uso la dao del referee
+                list = RefCampoController.getEventList();
+                this.setList(list);
+            }
+        }catch(IOException e){
+            e.printStackTrace();
         }
     }
 
-    public void setList(List<Event> list) throws IOException {
+    public void setList(List<Event> list){
         this.events.getItems().clear();
         for(int i = 0; i < list.size();i++){
             events.getItems().add(list.get(i).getFormattedText());

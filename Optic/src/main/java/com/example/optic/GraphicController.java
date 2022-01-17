@@ -38,7 +38,7 @@ public class GraphicController {
         obj.setY(e.getScreenY() + yOffset);
     }
 
-    public void setUserVariables(String username) throws Exception {}
+    public void setUserVariables(String username){}
 
     public void toView(String view) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();
