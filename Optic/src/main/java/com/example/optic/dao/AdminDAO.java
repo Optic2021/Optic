@@ -255,42 +255,7 @@ public class AdminDAO {
         return admin;
     }
 
-    public ArrayList<AdminBean> getCampoList()throws ClassNotFoundException,SQLException {
-        String nomec;
-        String desc;
 
-        ArrayList<AdminBean> list= new ArrayList<AdminBean>();
-
-        Statement stmt = null;
-        //AdminBean admin = new AdminBean();
-        try{
-            if(instance.conn == null || instance.conn.isClosed()) {
-                instance.getConn();
-            }
-            stmt = instance.conn.createStatement();
-            //String sql = "SELECT * FROM admin join referee on referee.fk_UsernameA1=admin.Username WHERE NomeC=?";
-            String sql = "SELECT NomeC, Provincia FROM admin";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);;
-            ResultSet rs = prepStmt.executeQuery();
-            if (!rs.first()){ // rs empty
-                AdminBean admin = null;
-            }else {
-                rs.first();
-                do {
-                    AdminBean admin = new AdminBean();
-                    admin.setNomeCampo((rs.getString("NomeC")));
-                    admin.setProvincia((rs.getString("Provincia")));
-                    list.add(admin);
-
-                } while (rs.next());
-                rs.close();
-            }
-        }finally {
-            if (stmt != null)
-                stmt.close();
-        }
-        return list;
-    }
 
     public void getConn() throws ClassNotFoundException,SQLException {
         Class.forName(DRIVER_CLASS_NAME);

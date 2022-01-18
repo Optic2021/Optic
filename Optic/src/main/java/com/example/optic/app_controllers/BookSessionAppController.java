@@ -17,9 +17,9 @@ public class BookSessionAppController {
     }
 
     public static List<AdminBean> getCampi(){
-        AdminDAO dao = null;
+        PlayerDAO dao = null;
         try {
-            dao = AdminDAO.getInstance();
+            dao = PlayerDAO.getInstance();
         } catch (IOException e) {
             e.printStackTrace();
         }
