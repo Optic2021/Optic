@@ -101,8 +101,7 @@ public class Player {
             break;
             case 4: this.stelle = "* * * *";
             break;
-            case 5: this.stelle = "* * * * *";
-            default:;
+            default:this.stelle = "* * * * *";
         }
     }
 }

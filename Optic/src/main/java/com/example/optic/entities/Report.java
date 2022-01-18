@@ -2,24 +2,24 @@ package com.example.optic.entities;
 
 public class Report {
     private int idReport;
-    private String Motivazione;
-    private String fk_UsernameR;
-    private String fk_UsernameP;
+    private String motivazione;
+    private String fkUsernameR;
+    private String fkUsernameP;
 
     public int getIdReport() {
         return idReport;
     }
 
     public String getMotivazione() {
-        return Motivazione;
+        return motivazione;
     }
 
-    public String getFk_UsernameP() {
-        return fk_UsernameP;
+    public String getFkUsernameP() {
+        return fkUsernameP;
     }
 
-    public String getFk_UsernameR() {
-        return fk_UsernameR;
+    public String getFkUsernameR() {
+        return fkUsernameR;
     }
 
     public void setIdReport(int idReport) {
@@ -27,15 +27,15 @@ public class Report {
     }
 
     public void setMotivazione(String motivazione) {
-        Motivazione = motivazione;
+        this.motivazione = motivazione;
     }
 
-    public void setFk_UsernameR(String fk_UsernameR) {
-        this.fk_UsernameR = fk_UsernameR;
+    public void setFkUsernameR(String fkUsernameR) {
+        this.fkUsernameR = fkUsernameR;
     }
 
-    public void setFk_UsernameP(String fk_UsernameP) {
-        this.fk_UsernameP = fk_UsernameP;
+    public void setFkUsernameP(String fkUsernameP) {
+        this.fkUsernameP = fkUsernameP;
     }
 
 }

@@ -6,7 +6,6 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.dao.*;
 import com.example.optic.entities.*;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -29,9 +28,7 @@ public class UserPgPageAppController {
         Admin x = null;
         try {
             x = dao.getCampo(nomeC);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException|SQLException e) {
             e.printStackTrace();
         }
         AdminBean y = new AdminBean();
@@ -116,7 +113,7 @@ public class UserPgPageAppController {
     }
 
     public static List<Player> getPlayersList(GiornataBean bean) throws IOException{
-        ArrayList<Player> list = new ArrayList<>();
+        List<Player> list = new ArrayList<>();
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             GiornataDAO playDao = new GiornataDAO(dao);
@@ -137,7 +134,7 @@ public class UserPgPageAppController {
     }
 
     public static List<Valutazione> reviewList(AdminBean admin){
-        ArrayList<Valutazione> list = null;
+        List<Valutazione> list = null;
         try {
 
             PlayerDAO player= PlayerDAO.getInstance();

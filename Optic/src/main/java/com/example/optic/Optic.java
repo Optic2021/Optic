@@ -8,8 +8,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.paint.Color;
-import java.io.IOException;
-import java.sql.*;
 
 public class Optic extends Application {
     private double xOffset = 0;

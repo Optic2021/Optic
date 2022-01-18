@@ -216,27 +216,27 @@
                                                 </Button>
                                                 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="317.0">
                                                     <children>
-                                                        <Label fx:id="star1" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                                        <Label fx:id="starUW1" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                                             <font>
                                                                 <Font name="Arial Black" size="36.0" />
                                                             </font>
                                                         </Label>
-                                                        <Label fx:id="star2" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                                        <Label fx:id="starUW2" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                                             <font>
                                                                 <Font name="Arial Black" size="36.0" />
                                                             </font>
                                                         </Label>
-                                                        <Label fx:id="star3" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                                        <Label fx:id="starUW3" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                                             <font>
                                                                 <Font name="Arial Black" size="36.0" />
                                                             </font>
                                                         </Label>
-                                                        <Label fx:id="star4" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                                        <Label fx:id="starUW4" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                                             <font>
                                                                 <Font name="Arial Black" size="36.0" />
                                                             </font>
                                                         </Label>
-                                                        <Label fx:id="star5" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
+                                                        <Label fx:id="starUW5" onMouseEntered="#starEnter" onMouseExited="#starExit" prefHeight="40.0" prefWidth="21.0" styleClass="text-black" text="*">
                                                             <font>
                                                                 <Font name="Arial Black" size="36.0" />
                                                             </font>

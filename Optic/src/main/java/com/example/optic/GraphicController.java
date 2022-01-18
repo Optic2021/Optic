@@ -1,7 +1,6 @@
 package com.example.optic;
 
 import com.example.optic.bean.AdminBean;
-import com.example.optic.entities.Campo;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -13,7 +12,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class GraphicController {
@@ -25,10 +23,10 @@ public class GraphicController {
     private double xOffset = 0;
     private double yOffset = 0;
 
-    public void exitButton(ActionEvent e){
+    public void exitButton(){
         Platform.exit();
     }
-    public void reduceButton(ActionEvent e){
+    public void reduceButton(){
         Stage obj = (Stage) id.getScene().getWindow();
         obj.setIconified(true);
     }
@@ -38,7 +36,9 @@ public class GraphicController {
         obj.setY(e.getScreenY() + yOffset);
     }
 
-    public void setUserVariables(String username){}
+    public void setUserVariables(String username){
+        //ogni controller grafico implementerà la sua versione in base alle necessità
+    }
 
     public void toView(String view) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();
@@ -63,7 +63,7 @@ public class GraphicController {
         obj.show();
     }
 
-    public void toView(String view,String user, String viewer) throws Exception {
+    public void toView(String view,String user, String viewer) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
@@ -89,7 +89,7 @@ public class GraphicController {
         obj.show();
     }
 
-    public void toView(String view, String usr) throws Exception {
+    public void toView(String view, String usr) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
@@ -114,7 +114,7 @@ public class GraphicController {
         obj.show();
     }
 
-    public void toView(String view, String usr, AdminBean campo)throws Exception{
+    public void toView(String view, String usr, AdminBean campo)throws IOException{
         Stage obj = (Stage) id.getScene().getWindow();
 
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));

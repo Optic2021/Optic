@@ -7,7 +7,9 @@ public class UserBean implements java.io.Serializable {
     private String nomeC;
     private String prov;
 
-    public UserBean(){}
+    public UserBean(){
+        //costruttore vuoto
+    }
 
     public String getUsername() {
         return username;

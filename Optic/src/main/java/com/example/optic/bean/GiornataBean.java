@@ -9,7 +9,8 @@ public class GiornataBean implements java.io.Serializable {
     private String evento;
     private String admin;
 
-    public void GiornataBean(){
+    public GiornataBean(){
+        //costruttore vuoto
     }
 
     public int getIdPlay() {

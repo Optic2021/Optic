@@ -1,5 +1,6 @@
 package com.example.optic;
 
+import com.example.optic.app_controllers.RefCampoController;
 import com.example.optic.app_controllers.UserPgPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
@@ -8,14 +9,12 @@ import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
-
+import com.example.optic.utilities.ImportGetPlay;
 import com.example.optic.utilities.ImportStar;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -44,17 +43,17 @@ public class ControllerUserPgPage extends GraphicController {
     @FXML private Label date;
     @FXML private Label numGiocatori;
     //stelle della recensione
-    @FXML private Label star1;
-    @FXML private Label star2;
-    @FXML private Label star3;
-    @FXML private Label star4;
-    @FXML private Label star5;
+    @FXML private Label starUPG1;
+    @FXML private Label starUPG2;
+    @FXML private Label starUPG3;
+    @FXML private Label starUPG4;
+    @FXML private Label starUPG5;
     //stelle valutazione del campo
-    @FXML private Label star11;
-    @FXML private Label star22;
-    @FXML private Label star33;
-    @FXML private Label star44;
-    @FXML private Label star55;
+    @FXML private Label starUPG11;
+    @FXML private Label starUPG22;
+    @FXML private Label starUPG33;
+    @FXML private Label starUPG44;
+    @FXML private Label starUPG55;
     @FXML private Label fb;
     @FXML private Label ig;
     @FXML private Label wa;
@@ -100,7 +99,7 @@ public class ControllerUserPgPage extends GraphicController {
                 SimpleDateFormat dateFormat = new SimpleDateFormat(format);
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
                 date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
-                activity.setText(play.getFk_Nome());
+                activity.setText(play.getFkNome());
                 //controllo se la data è disponibile per la prenotazione
                 this.isDateValid();
                 this.populatePlayersTable();
@@ -109,63 +108,25 @@ public class ControllerUserPgPage extends GraphicController {
             e.printStackTrace();
         }
     }
-    //recupero la prossima giornata di gioco disponibile
-    public void getNextPlay() {
-        GiornataBean playBean = new GiornataBean();
-        Giornata play = null;
-        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
-        if(!(idPlay.getText().isEmpty())) {
-            try {
-                Date data = dateFormat.parse(date.getText());
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(data);
-                playBean.setData(cal);
-                playBean.setAdmin(adminName.getText());
-                play = UserPgPageAppController.getNextPlay(playBean);
-                if (play != null) {
-                    idPlay.setText(Integer.toString(play.getIdGiornata()));
-                    date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
-                    activity.setText(play.getFk_Nome());
-                    //controllo se la data è disponibile per la prenotazione
-                    this.isDateValid();
-                    this.populatePlayersTable();
-                }
-            } catch (ParseException | IOException e) {
-                e.printStackTrace();
-            }
-        }
+
+
+    ///recupero la prossima giornata di gioco disponibile
+    public void getNextPlay() throws IOException {
+        ImportGetPlay.getPlay(idPlay, date, adminName, activity,0);
+        this.populatePlayersTable();
     }
+
     //recupero la giornata di gioco precedente a quella mostrata
-    public void getLastPlay(){
-        GiornataBean playBean = new GiornataBean();
-        Giornata play = null;
-        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
-        if(!(idPlay.getText().isEmpty())) {
-            try {
-                Date data = dateFormat.parse(date.getText());
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(data);
-                playBean.setData(cal);
-                playBean.setAdmin(adminName.getText());
-                play = UserPgPageAppController.getLastPlay(playBean);
-                if (play != null) {
-                    idPlay.setText(Integer.toString(play.getIdGiornata()));
-                    date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
-                    activity.setText(play.getFk_Nome());
-                    //controllo se la data è disponibile per la prenotazione
-                    this.isDateValid();
-                    this.populatePlayersTable();
-                }
-            } catch (ParseException | IOException e) {
-                e.printStackTrace();
-            }
-        }
+    public void getLastPlay() throws IOException {
+        ImportGetPlay.getPlay(idPlay, date, adminName, activity,1);
+        this.populatePlayersTable();
     }
+
     public void isDateValid() throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat(format);
         Date datePlay = dateFormat.parse(date.getText());
         boolean bool = datePlay.toInstant().isBefore(Instant.now());
-        book.setVisible(bool);
+        book.setVisible(!bool);
     }
     public void bookPlay() throws IOException {
         UserBean bean = new UserBean();
@@ -195,18 +156,18 @@ public class ControllerUserPgPage extends GraphicController {
         }
         numGiocatori.setText(Integer.toString(list.size()));
     }
-    public void toHome() throws Exception {
+    public void toHome() throws IOException {
         this.toView("views/userHomeMap.fxml", user.getText());
     }
 
     public void starEnter(MouseEvent e){
-        ImportStar.starEnter(e,star1,star2,star3,star4,star5);
+        ImportStar.starEnter(e,starUPG1,starUPG2,starUPG3,starUPG4,starUPG5);
     }
     public void starExit(MouseEvent e){
-        ImportStar.starEnter(e,star1,star2,star3,star4,star5);
+        ImportStar.starEnter(e,starUPG1,starUPG2,starUPG3,starUPG4,starUPG5);
     }
     private void setStars(int stars){
-        ImportStar.setStars(stars,star11,star22,star33,star44,star55);
+        ImportStar.setStars(stars,starUPG11,starUPG22,starUPG33,starUPG44,starUPG55);
     }
 
     public void populateReviewTable(AdminBean admin){
@@ -249,7 +210,7 @@ public class ControllerUserPgPage extends GraphicController {
 
     public void review() throws IOException {
         int starN = 0;
-        starN= ImportStar.getStarN(star1,star2,star3,star4,star5);
+        starN= ImportStar.getStarN(starUPG1,starUPG2,starUPG3,starUPG4,starUPG5);
         ValutazioneBean valutazione = new ValutazioneBean();
         valutazione.setRecensione(testoRecensione.getText());
         valutazione.setRiceve(campo.getText());
@@ -265,10 +226,10 @@ public class ControllerUserPgPage extends GraphicController {
     public void tableview() throws IOException {
         Valutazione val = (Valutazione) table.getSelectionModel().getSelectedItem();
         try {
-            if (user.getText().equals(val.getFk_UsernameP1())){
+            if (user.getText().equals(val.getFkUsernameP1())){
                 toView("views/userProfile.fxml", user.getText());
             }else{
-                toView("views/userViewProfile.fxml",val.getFk_UsernameP1(), user.getText());
+                toView("views/userViewProfile.fxml",val.getFkUsernameP1(), user.getText());
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -9,7 +9,6 @@ import com.example.optic.entities.Event;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import javafx.scene.control.Alert;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,23 +20,19 @@ public class RefCampoController {
         //does np
     }
 
-    public static void saveReport(ReportBean report) throws IOException {
+    public static void saveReport(ReportBean report) {
         RefereeDAO dao=RefereeDAO.getInstance();
         dao.getConn();
-        try {
-            dao.saveReport(report);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        dao.saveReport(report);
     }
 
-    public static Admin getAdminFromRef(UserBean user) throws IOException {
+    public static Admin getAdminFromRef(UserBean user) {
         Admin a = null;
         try {
             RefereeDAO dao = RefereeDAO.getInstance();
             dao.getConn();
             a = dao.getAdminFromRef(user.getUsername());
-        }catch (IOException | SQLException e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return a;
@@ -48,8 +43,8 @@ public class RefCampoController {
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
-            list = eventDao.getRefereeEventList();
-        }catch (IOException | SQLException e){
+            list = eventDao.getEventList();
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return list;
@@ -92,14 +87,10 @@ public class RefCampoController {
     }
 
     public static List<Player> getPlayersList(GiornataBean bean){
-        ArrayList<Player> list = new ArrayList<>();
-        try{
-            RefereeDAO dao = RefereeDAO.getInstance();
-            GiornataDAO playDao = new GiornataDAO(dao);
-            list = playDao.getPlayersList(bean.getIdPlay());
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        List<Player> list;
+        RefereeDAO dao = RefereeDAO.getInstance();
+        GiornataDAO playDao = new GiornataDAO(dao);
+        list = playDao.getPlayersList(bean.getIdPlay());
         return list;
     }
 

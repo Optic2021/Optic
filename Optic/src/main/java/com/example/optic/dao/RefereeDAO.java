@@ -9,44 +9,43 @@ import java.sql.*;
 import java.util.Properties;
 
 public class RefereeDAO {
-    private static String USER;
-    private static String PW;
-    private static String DB_URL;
-    private static String DRIVER_CLASS_NAME;
+    private String user;
+    private String passWord;
+    private String dbUrl;
+    private String driverClassName;
 
     private static RefereeDAO instance = null;
     private Connection conn;
 
-    protected RefereeDAO() throws IOException {
+    protected RefereeDAO() {
         this.conn = null;
         try {
             InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
             Properties prop = new Properties();
             prop.load(input);
-            this.USER = prop.getProperty("USER");
-            this.PW = prop.getProperty("PW");
-            this.DB_URL = prop.getProperty("DB_URL");
-            this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
+            this.user = prop.getProperty("USER");
+            this.passWord = prop.getProperty("PW");
+            this.dbUrl = prop.getProperty("DB_URL");
+            this.driverClassName = prop.getProperty("DRIVER_CLASS_NAME");
         }catch (IOException e){
             e.printStackTrace();
         }
     }
 
-    public void newReferee(String username,String password) throws Exception {
-        Statement stmt = null;
+    public void newReferee(String username,String password) throws SQLException {
+        PreparedStatement prepStmt = null;
         Referee r = new Referee(username, password);
         try {
-            stmt = instance.conn.createStatement();
             String sql = "INSERT INTO referee VALUES(?,?,?)";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1, r.getUsername());
             prepStmt.setString(2, r.getPassword());
             prepStmt.setNull(3, Types.NULL);
             prepStmt.executeUpdate();
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -54,12 +53,11 @@ public class RefereeDAO {
     }
 
     public Admin getAdminFromRef(String refUsername) throws SQLException {
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         Admin a = new Admin();
         try{
-            stmt = instance.conn.createStatement();
             String sql = "SELECT A.Username,A.Instagram,A.Facebook,A.Whatsapp,A.NomeC,A.DescrizioneC,A.Via FROM (referee R JOIN admin A ON R.fk_UsernameA1 = A.Username) WHERE R.Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,refUsername);
             ResultSet rs = prepStmt.executeQuery();
             if (rs.first()){ // trovato admin
@@ -78,21 +76,27 @@ public class RefereeDAO {
             }
         }catch (SQLException e){
             e.printStackTrace();
+        }finally {
+            try {
+                if (prepStmt != null)
+                    prepStmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return a;
     }
 
     //chiede l aggiunta di una catch clause
-    public Referee getReferee(String user)throws Exception{
-        Statement stmt = null;
+    public Referee getReferee(String user) throws SQLException {
+        PreparedStatement prepStmt = null;
         Referee ref = new Referee(user,"");
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM referee WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
@@ -108,8 +112,8 @@ public class RefereeDAO {
             }
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -117,27 +121,38 @@ public class RefereeDAO {
         return ref;
     }
 
-    public static RefereeDAO getInstance() throws IOException {
+    public static RefereeDAO getInstance() {
         if(instance == null){
             instance = new RefereeDAO();
         }
         return instance;
     }
 
-    public void saveReport(ReportBean report) throws SQLException {
+    public void saveReport(ReportBean report) {
         String sql="Insert INTO Report values(null,?,?,?)";
-        PreparedStatement prepstmt=instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-        System.out.println("player "+report.getPlayer()+" referee "+report.getReferee());
-        prepstmt.setString(1,report.getMotivazione());
-        prepstmt.setString(2,report.getReferee());
-        prepstmt.setString(3,report.getPlayer());
-        prepstmt.executeUpdate();
+        PreparedStatement prepStmt = null;
+        try {
+            prepStmt = instance.conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            prepStmt.setString(1, report.getMotivazione());
+            prepStmt.setString(2, report.getReferee());
+            prepStmt.setString(3, report.getPlayer());
+            prepStmt.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (prepStmt != null)
+                    prepStmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void getConn(){
         try{
-            Class.forName(DRIVER_CLASS_NAME);
-            instance.conn = DriverManager.getConnection(DB_URL, USER, PW);
+            Class.forName(driverClassName);
+            instance.conn = DriverManager.getConnection(dbUrl, user, passWord);
         } catch (Exception e) {
             e.printStackTrace();
         }

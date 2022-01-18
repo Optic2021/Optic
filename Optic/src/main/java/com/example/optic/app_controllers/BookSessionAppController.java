@@ -1,10 +1,8 @@
 package com.example.optic.app_controllers;
 
 import com.example.optic.bean.AdminBean;
-import com.example.optic.dao.AdminDAO;
 import com.example.optic.dao.PlayerDAO;
 import javafx.scene.control.Alert;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -23,11 +21,9 @@ public class BookSessionAppController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        ArrayList<AdminBean> lista = new ArrayList<>();
+        List<AdminBean> lista = new ArrayList<>();
         try{
             lista=dao.getCampoList();
-        }catch (ClassNotFoundException y){
-            y.printStackTrace();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

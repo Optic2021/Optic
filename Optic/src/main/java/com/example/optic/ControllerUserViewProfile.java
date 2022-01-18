@@ -6,13 +6,10 @@ import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;
 import java.util.List;
-
 import com.example.optic.utilities.ImportStar;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.bean.ValutazioneBean;
-import com.example.optic.utilities.ImportUrl;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -29,11 +26,11 @@ import java.io.IOException;
 public class ControllerUserViewProfile extends GraphicController{
     //stelle recensione
     @FXML private Pane id;
-    @FXML private Label star1;
-    @FXML private Label star2;
-    @FXML private Label star3;
-    @FXML private Label star4;
-    @FXML private Label star5;
+    @FXML private Label starUW1;
+    @FXML private Label starUW2;
+    @FXML private Label starUW3;
+    @FXML private Label starUW4;
+    @FXML private Label starUW5;
     //stelle valutazione profilo
     @FXML private Label star11;
     @FXML private Label star22;
@@ -92,7 +89,7 @@ public class ControllerUserViewProfile extends GraphicController{
         player.setUsername(user);
         List<Valutazione> list = UserProfileAppController.getReviewList(player);
         for(int i = 0; i < list.size(); i++) {
-            ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFk_UsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
+            ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFkUsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
             numVal++;
             mediaVal += list.get(i).getStelle();
             reviews.getItems().add(val.getDescrizione());
@@ -164,13 +161,13 @@ public class ControllerUserViewProfile extends GraphicController{
         String givento=profile.getText();
         String giver=user.getText();
 
-        if(star1.getTextFill().equals(Color.rgb(229,190,51)) && star2.getTextFill().equals(Color.rgb(28,28,28))){
+        if(starUW1.getTextFill().equals(Color.rgb(229,190,51)) && starUW2.getTextFill().equals(Color.rgb(28,28,28))){
             starN=1;
-        }else if (star2.getTextFill().equals(Color.rgb(229,190,51)) && star3.getTextFill().equals(Color.rgb(28,28,28))){
+        }else if (starUW2.getTextFill().equals(Color.rgb(229,190,51)) && starUW3.getTextFill().equals(Color.rgb(28,28,28))){
             starN=2;
-        } else if (star3.getTextFill().equals(Color.rgb(229,190,51)) && star4.getTextFill().equals(Color.rgb(28,28,28))) {
+        } else if (starUW3.getTextFill().equals(Color.rgb(229,190,51)) && starUW4.getTextFill().equals(Color.rgb(28,28,28))) {
             starN=3;
-        } else if (star4.getTextFill().equals(Color.rgb(229,190,51)) && star5.getTextFill().equals(Color.rgb(28,28,28))) {
+        } else if (starUW4.getTextFill().equals(Color.rgb(229,190,51)) && starUW5.getTextFill().equals(Color.rgb(28,28,28))) {
             starN=4;
         }else{
             starN=5;
@@ -197,17 +194,17 @@ public class ControllerUserViewProfile extends GraphicController{
 
     //forse si puo mettere su graphic controller
     public void starEnter(MouseEvent e){
-        ImportStar.starEnter(e, star1,star2, star3, star4, star5);
+        ImportStar.starEnter(e, starUW1,starUW2, starUW3, starUW4, starUW5);
     }
     public void starExit(MouseEvent e){
-        ImportStar.starEnter(e, star1,star2, star3, star4, star5);
+        ImportStar.starEnter(e, starUW1,starUW2, starUW3, starUW4, starUW5);
     }
     private void setStars(int stars){
-        ImportStar.setStars(stars, star1,star2, star3, star4, star5);
+        ImportStar.setStars(stars, star11,star22, star33, star44, star55);
     }
 
 
-    public void toHome(ActionEvent e) throws Exception {
+    public void toHome() throws IOException {
         this.toView("views/userHomeMap.fxml",user.getText());
     }
 }

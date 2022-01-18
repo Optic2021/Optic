@@ -22,7 +22,7 @@ public class ControllerLogin extends GraphicController {
     @FXML
     private RadioButton adminRB;
 
-    public void login() throws Exception {
+    public void login() throws IOException {
         boolean res = false;
         Alert err = new Alert(Alert.AlertType.ERROR);
         if(username.getText().isEmpty() || password.getText().isEmpty()){

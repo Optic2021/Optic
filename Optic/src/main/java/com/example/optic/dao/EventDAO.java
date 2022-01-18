@@ -1,21 +1,16 @@
 package com.example.optic.dao;
 
 import com.example.optic.entities.Event;
-import com.example.optic.entities.Giornata;
-import com.example.optic.entities.Player;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class EventDAO {
-    private static AdminDAO daoA;
-    private static RefereeDAO daoR;
-    private static PlayerDAO daoP;
+    private AdminDAO daoA;
+    private RefereeDAO daoR;
+    private PlayerDAO daoP;
 
     public EventDAO(AdminDAO daoA){
         this.daoA = daoA;
@@ -36,16 +31,21 @@ public class EventDAO {
 
     //Assolutamente da fare, parametrizzare i tre sottostanti metodi in un solo metodo
 
-    public List<Event> getAdminEventList() throws SQLException {
+    public List<Event> getEventList() throws SQLException {
         ArrayList<Event> list = new ArrayList<>();
-        Statement stmt = null;
+        String sql = "SELECT * FROM evento";
+        PreparedStatement prepStmt = null;
         String evento;
         String desc;
         int numGiocatori;
         try{
-            stmt = this.daoA.getConnection().createStatement();
-            String sql = "SELECT * FROM evento";
-            PreparedStatement prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            if (daoP!=null){
+                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            }else if(daoA != null){
+                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            } else if(daoR != null){
+                prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            }
             ResultSet rs = prepStmt.executeQuery();
             if(rs.first()){
                 rs.first();
@@ -59,65 +59,8 @@ public class EventDAO {
             }
             rs.close();
         } finally {
-            if (stmt != null)
-                stmt.close();
-        }
-        return list;
-    }
-
-    public List<Event> getRefereeEventList() throws SQLException {
-        ArrayList<Event> list = new ArrayList<>();
-        Statement stmt = null;
-        String evento;
-        String desc;
-        int numGiocatori;
-        try{
-            stmt = this.daoR.getConnection().createStatement();
-            String sql = "SELECT * FROM evento";
-            PreparedStatement prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = prepStmt.executeQuery();
-            if(rs.first()){
-                rs.first();
-                do{
-                    evento = rs.getString("Nome");
-                    desc = rs.getString("Descrizione");
-                    numGiocatori = rs.getInt("GiocatoriCons");
-                    Event e = new Event(evento,desc,numGiocatori);
-                    list.add(e);
-                }while(rs.next());
-            }
-            rs.close();
-        } finally {
-            if (stmt != null)
-                stmt.close();
-        }
-        return list;
-    }
-    public List<Event> getPlayerEventList() throws SQLException {
-        ArrayList<Event> list = new ArrayList<Event>();
-        Statement stmt = null;
-        String evento;
-        String desc;
-        int numGiocatori;
-        try{
-            stmt = this.daoP.getConnection().createStatement();
-            String sql = "SELECT * FROM evento";
-            PreparedStatement prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = prepStmt.executeQuery();
-            if(rs.first()){
-                rs.first();
-                do{
-                    evento = rs.getString("Nome");
-                    desc = rs.getString("Descrizione");
-                    numGiocatori = rs.getInt("GiocatoriCons");
-                    Event e = new Event(evento,desc,numGiocatori);
-                    list.add(e);
-                }while(rs.next());
-            }
-            rs.close();
-        } finally {
-            if (stmt != null)
-                stmt.close();
+            if (prepStmt != null)
+                prepStmt.close();
         }
         return list;
     }

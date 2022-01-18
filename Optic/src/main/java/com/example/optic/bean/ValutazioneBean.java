@@ -6,6 +6,10 @@ public class ValutazioneBean {
     private String usernameP1;
     private String riceve;
 
+    public ValutazioneBean(){
+        //costruttore vuoto
+    }
+
     public String getRecensione() {
         return recensione;
     }

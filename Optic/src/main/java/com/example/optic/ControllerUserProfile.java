@@ -5,10 +5,9 @@ import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;
-
-
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
+import com.example.optic.utilities.ImportList;
 import com.example.optic.utilities.ImportStar;
 import com.example.optic.utilities.ImportUrl;
 import javafx.fxml.FXML;
@@ -27,11 +26,11 @@ import java.util.List;
 
 public class ControllerUserProfile extends GraphicController{
     @FXML private Pane id;
-    @FXML private Label star1;
-    @FXML private Label star2;
-    @FXML private Label star3;
-    @FXML private Label star4;
-    @FXML private Label star5;
+    @FXML private Label starUP1;
+    @FXML private Label starUP2;
+    @FXML private Label starUP3;
+    @FXML private Label starUP4;
+    @FXML private Label starUP5;
     @FXML private Label nVal;
     @FXML private TextArea description;
     @FXML private TextField urlFacebook;
@@ -71,23 +70,7 @@ public class ControllerUserProfile extends GraphicController{
     }
 
     public void eventList(){
-        try {
-            Stage list = new Stage();
-            Stage obj = (Stage) id.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource("views/eventList.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
-            GraphicController controller = fxmlLoader.getController();
-            controller.setUserVariables(userType.getText());
-            scene.setFill(Color.TRANSPARENT);
-            list.setResizable(false);
-            list.initOwner(obj);
-            list.initModality(Modality.APPLICATION_MODAL);
-            list.initStyle(StageStyle.TRANSPARENT);
-            list.setScene(scene);
-            list.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ImportList.eventList(userType,id);
     }
 
     public void reportList(){
@@ -124,7 +107,7 @@ public class ControllerUserProfile extends GraphicController{
             e.printStackTrace();
         }
         for(int i = 0; i < list.size(); i++) {
-            ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFk_UsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
+            ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFkUsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
             numVal++;
             mediaVal += list.get(i).getStelle();
             reviews.getItems().add(val.getDescrizione());
@@ -172,7 +155,7 @@ public class ControllerUserProfile extends GraphicController{
     }
 
     private void setStars(int stars){
-        ImportStar.setStars(stars,star1,star2,star3,star4,star5);
+        ImportStar.setStars(stars,starUP1,starUP2,starUP3,starUP4,starUP5);
     }
 
     public void modify(){
@@ -214,7 +197,7 @@ public class ControllerUserProfile extends GraphicController{
         }
     }
 
-    public void toHome() throws Exception {
+    public void toHome() throws IOException {
         this.toView("views/userHomeMap.fxml",user.getText());
     }
 }

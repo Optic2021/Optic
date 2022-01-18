@@ -5,11 +5,13 @@ public class ReportBean {
     String referee;
     String player;
 
+    public ReportBean(){
+        //costruttore vuoto
+    }
+
     public String getMotivazione() {
         return motivazione;
     }
-
-    public void ReportBean(){}
 
     public void setMotivazione(String motivazione) {
         this.motivazione = motivazione;

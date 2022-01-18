@@ -7,9 +7,9 @@ import com.example.optic.dao.RefereeDAO;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Referee;
-import javafx.scene.control.Alert;
-
+import com.example.optic.utilities.ImportCloseConn;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class RegisterController {
 
@@ -17,7 +17,7 @@ public class RegisterController {
         //does np
     }
 
-    public static boolean isUsernameUsed(UserBean user, int userType) throws Exception {
+    public static boolean isUsernameUsed(UserBean user, int userType) throws SQLException, IOException, ClassNotFoundException {
         boolean res = false;
         switch (userType){
             case 1 ->   {
@@ -49,7 +49,7 @@ public class RegisterController {
         return res;
     }
 
-    public static void userRegister(UserBean user,int userType) throws Exception {
+    public static void userRegister(UserBean user,int userType) {
         String username;
         String password;
         try {
@@ -82,26 +82,7 @@ public class RegisterController {
         }
     }
 
-    public static void closeConn(int user) throws IOException {
-        try {
-            switch (user) {
-                case 1 -> {
-                    PlayerDAO player = PlayerDAO.getInstance();
-                    player.closeConn();
-                }
-                case 2 -> {
-                    AdminDAO admin = AdminDAO.getInstance();
-                    admin.closeConn();
-                }
-                default -> {
-                    RefereeDAO referee = RefereeDAO.getInstance();
-                    referee.closeConn();
-                }
-            }
-        }catch (Exception e){
-            Alert err = new Alert(Alert.AlertType.ERROR);
-            err.setContentText("Errore chiusura connessione con il database");
-            err.show();
-        }
+    public static void closeConn(int user) {
+        ImportCloseConn.closeConn(user);
     }
 }

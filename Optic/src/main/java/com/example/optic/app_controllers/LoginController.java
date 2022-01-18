@@ -1,4 +1,5 @@
 package com.example.optic.app_controllers;
+
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.RefereeBean;
@@ -8,9 +9,7 @@ import com.example.optic.dao.RefereeDAO;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Referee;
-import javafx.scene.control.Alert;
-
-import java.io.IOException;
+import com.example.optic.utilities.ImportCloseConn;
 
 public class LoginController {
 
@@ -18,7 +17,7 @@ public class LoginController {
         //does np
     }
 
-    public static boolean playerLogin(PlayerBean p) throws Exception {
+    public static boolean playerLogin(PlayerBean p) {
         boolean res = false;
         //controllo username e password
         try {
@@ -35,7 +34,7 @@ public class LoginController {
         return res;
     }
 
-    public static boolean adminLogin(AdminBean a) throws Exception {
+    public static boolean adminLogin(AdminBean a) {
         boolean res = false;
         //controllo username e password
         try {
@@ -52,7 +51,7 @@ public class LoginController {
         return res;
     }
 
-    public static boolean refereeLogin(RefereeBean r)throws Exception{
+    public static boolean refereeLogin(RefereeBean r){
         boolean res=false;
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
@@ -67,27 +66,7 @@ public class LoginController {
         return res;
     }
 
-    public static void closeConn(int user) throws IOException {
-        try {
-            switch (user) {
-                case 1 -> {
-                    PlayerDAO player = PlayerDAO.getInstance();
-                    player.closeConn();
-                }
-                case 2 -> {
-                    AdminDAO admin = AdminDAO.getInstance();
-                    admin.closeConn();
-                }
-                default ->  {
-                    //valore 3
-                    RefereeDAO referee = RefereeDAO.getInstance();
-                    referee.closeConn();
-                }
-            }
-        }catch (Exception e){
-            Alert err = new Alert(Alert.AlertType.ERROR);
-            err.setContentText("Errore chiusura connessione al db");
-            err.show();
-        }
+    public static void closeConn(int user) {
+        ImportCloseConn.closeConn(user);
     }
 }

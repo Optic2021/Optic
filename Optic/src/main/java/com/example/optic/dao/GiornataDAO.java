@@ -1,21 +1,20 @@
 package com.example.optic.dao;
 
-import com.example.optic.bean.GiornataBean;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
-import com.example.optic.entities.Valutazione;
-
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class GiornataDAO {
     private PlayerDAO daoP;
     private AdminDAO daoA;
     private RefereeDAO daoR;
+    private String formato = "yyyy-MM-dd";
 
     public GiornataDAO(PlayerDAO daoP){
         this.daoP = daoP;
@@ -35,62 +34,19 @@ public class GiornataDAO {
         this.daoP = null;
     }
 
-
-    //recupero la prima giornata disponibile per la prenotazione dei giocatori
-    public Giornata getFirstPlay(String admin) throws Exception{
-        Statement stmt = null;
+    public Giornata getPlay(String admin,Calendar cal, String sql){
         PreparedStatement prepStmt = null;
-        Giornata play = null;
-        String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(Data) FROM giornata WHERE curdate() < Data AND fk_UsernameA2 =?)";
-        try{
-            if(this.daoA != null) {
-                stmt = this.daoA.getConnection().createStatement();
-                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            }else if(this.daoP != null){
-                stmt = this.daoP.getConnection().createStatement();
-                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            }else if(this.daoR != null){
-                stmt = this.daoR.getConnection().createStatement();
-                prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            }
-            prepStmt.setString(1,admin);
-            ResultSet rs = prepStmt.executeQuery();
-            if (rs.first()){ //giornata trovata
-                rs.first();
-                //trasformo il formato di data di mysql
-                int idPlay = rs.getInt("idGiornata");
-                Calendar data = Calendar.getInstance();
-                data.setTime(rs.getDate("Data"));
-                int nGiocatori = rs.getInt("NumGiocatori");
-                String evento = rs.getString("fk_Nome");
-                play = new Giornata(idPlay,data,nGiocatori,evento);
-                //chiudo result set
-                rs.close();
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return play;
-    }
-
-    public Giornata getNextPlay(String admin, Calendar cal){
-        Statement stmt = null;
-        PreparedStatement prepStmt = null;
-        String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(G.Data) FROM giornata G WHERE ?<G.Data AND G.fk_UsernameA2 =?)";
         Giornata play = null;
         Date data = null;
         try{
             if(this.daoA != null) {
-                stmt = this.daoA.getConnection().createStatement();
                 prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }else if(this.daoP != null){
-                stmt = this.daoP.getConnection().createStatement();
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }else if(this.daoR != null){
-                stmt = this.daoR.getConnection().createStatement();
                 prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
+            DateFormat dateFormat = new SimpleDateFormat(formato);//creo formato per la data
             data = cal.getTime();//converto il calendar in data
             prepStmt.setString(1,dateFormat.format(data));//converto la data in string
             prepStmt.setString(2,admin);
@@ -113,59 +69,34 @@ public class GiornataDAO {
         return play;
     }
 
-    public Giornata getLastPlay(String admin, Calendar cal){
-        Statement stmt = null;
-        PreparedStatement prepStmt = null;
-        String sql = "SELECT * FROM giornata WHERE Data=(SELECT max(G.Data) FROM giornata G WHERE ?>G.Data AND G.fk_UsernameA2 =?)";
-        Giornata play = null;
-        Date data = null;
-        try{
-            if(this.daoA != null) {
-                stmt = this.daoA.getConnection().createStatement();
-                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            }else if(this.daoP != null){
-                stmt = this.daoP.getConnection().createStatement();
-                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            }else if(this.daoR != null){
-                stmt = this.daoR.getConnection().createStatement();
-                prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            }
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
-            data = cal.getTime();//converto il calendar in data
-            prepStmt.setString(1,dateFormat.format(data));
-            prepStmt.setString(2,admin);
-            ResultSet rs = prepStmt.executeQuery();
-            if (rs.first()){ //giornata trovata
-                rs.first();
-                //trasformo il formato di data di mysql
-                int idPlay = rs.getInt("idGiornata");
-                Calendar dateCalendar = Calendar.getInstance();
-                dateCalendar.setTime(rs.getDate("Data"));
-                int nGiocatori = rs.getInt("NumGiocatori");
-                String evento = rs.getString("fk_Nome");
-                play = new Giornata(idPlay,dateCalendar,nGiocatori,evento);
-                //chiudo result set
-                rs.close();
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return play;
+    //recupero la prima giornata disponibile per la prenotazione dei giocatori
+    public Giornata getFirstPlay(String admin){
+        String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(Data) FROM giornata WHERE ? < Data AND fk_UsernameA2 =?)";
+        Calendar cal = Calendar.getInstance();
+        return this.getPlay(admin,cal,sql);
     }
 
-    public ArrayList<Giornata> getRecentPlayList(String user){
+    public Giornata getNextPlay(String admin, Calendar cal){
+        String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(G.Data) FROM giornata G WHERE ?<G.Data AND G.fk_UsernameA2 =?)";
+        return this.getPlay(admin,cal,sql);
+    }
+
+    public Giornata getLastPlay(String admin, Calendar cal){
+        String sql = "SELECT * FROM giornata WHERE Data=(SELECT max(G.Data) FROM giornata G WHERE ?>G.Data AND G.fk_UsernameA2 =?)";
+        return this.getPlay(admin,cal,sql);
+    }
+
+    public List<Giornata> getRecentPlayList(String user){
         ArrayList<Giornata> list = new ArrayList<>();
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         Calendar dateCalendar = Calendar.getInstance();
         Giornata play = null;
         String campo;
         try{
-            stmt = this.daoP.getConnection().createStatement();
             String sql = "SELECT G.Data, C.NomeC FROM ((prenotazione P JOIN giornata G ON P.fk_idGiornata = G.idGiornata AND P.fk_Username = ?) JOIN admin C ON G.fk_UsernameA2 = C.Username) WHERE G.Data < curdate()";
-            PreparedStatement prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
             if(rs.first()) {
                 rs.first();
                 do {
@@ -181,9 +112,8 @@ public class GiornataDAO {
         return list;
     }
 
-    public ArrayList<Player> getPlayersList(int playId){
-        ArrayList<Player> list = new ArrayList<Player>();
-        Statement stmt = null;
+    public List<Player> getPlayersList(int playId){
+        ArrayList<Player> list = new ArrayList<>();
         PreparedStatement prepStmt = null;
         String sql = "SELECT Username,Valutazione FROM (player JOIN prenotazione ON Username = fk_Username) WHERE fk_idGiornata =?";
         String nome;
@@ -191,13 +121,10 @@ public class GiornataDAO {
         try{
             //controllo quale connessione è attualmente attiva e la utilizzo
             if(this.daoA != null) {
-                stmt = this.daoA.getConnection().createStatement();
                 prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }else if(this.daoP != null){
-                stmt = this.daoP.getConnection().createStatement();
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }else if(this.daoR != null){
-                stmt = this.daoR.getConnection().createStatement();
                 prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             }
             prepStmt.setString(1,Integer.toString(playId));
@@ -216,8 +143,8 @@ public class GiornataDAO {
             e.printStackTrace();
         }finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -227,13 +154,12 @@ public class GiornataDAO {
 
     public boolean isDateValid(String admin, Calendar cal){
         boolean res = true;
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         try{
-            stmt = this.daoA.getConnection().createStatement();
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
+            DateFormat dateFormat = new SimpleDateFormat(formato);//creo formato per la data
             Date data = cal.getTime();//converto il calendar in data
             String sql = "SELECT * FROM giornata WHERE Data =? AND fk_UsernameA2 =?";
-            PreparedStatement prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1, dateFormat.format(data));
             prepStmt.setString(2, admin);
             ResultSet rs = prepStmt.executeQuery();
@@ -244,8 +170,8 @@ public class GiornataDAO {
             e.printStackTrace();
         }finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -254,13 +180,12 @@ public class GiornataDAO {
     }
 
     public void insertPlay(String admin, String evento, Calendar cal){
-        Statement stmt = null;
+        PreparedStatement prepStmt = null;
         try{
-            stmt = this.daoA.getConnection().createStatement();
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//creo formato per la data
+            DateFormat dateFormat = new SimpleDateFormat(formato);//creo formato per la data
             Date data = cal.getTime();//converto il calendar in data
             String sql = "INSERT INTO giornata (Data, NumGiocatori, fk_Nome, fk_UsernameA2) VALUES(?,?,?,?)";
-            PreparedStatement prepStmt = this.daoA.getConnection().prepareStatement(sql);
+            prepStmt = this.daoA.getConnection().prepareStatement(sql);
             prepStmt.setString(1, dateFormat.format(data));
             prepStmt.setNull(2, Types.NULL);
             prepStmt.setString(3, evento);
@@ -270,8 +195,8 @@ public class GiornataDAO {
             e.printStackTrace();
         }finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

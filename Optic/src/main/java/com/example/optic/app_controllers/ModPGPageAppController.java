@@ -6,7 +6,6 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.dao.*;
 import com.example.optic.entities.*;
 import javafx.scene.control.Alert;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -115,7 +114,7 @@ public class ModPGPageAppController {
     }
 
     public static List<Valutazione> getReviewList(AdminBean a) throws IOException {
-        ArrayList<Valutazione> list = new ArrayList<>();
+        List<Valutazione> list = new ArrayList<>();
         //utilizzo la dao dell'admin dove è creata la connessisone
         try {
             AdminDAO daoA = AdminDAO.getInstance();
@@ -128,7 +127,7 @@ public class ModPGPageAppController {
     }
 
     public static List<Player> getPlayersList(GiornataBean bean) {
-        ArrayList<Player> list = new ArrayList<>();
+        List<Player> list = new ArrayList<>();
         try{
             AdminDAO dao = AdminDAO.getInstance();
             GiornataDAO playDao = new GiornataDAO(dao);
@@ -144,7 +143,7 @@ public class ModPGPageAppController {
         try{
             AdminDAO dao = AdminDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
-            list = eventDao.getAdminEventList();
+            list = eventDao.getEventList();
         }catch (IOException e){
             e.printStackTrace();
         } catch (SQLException throwables) {

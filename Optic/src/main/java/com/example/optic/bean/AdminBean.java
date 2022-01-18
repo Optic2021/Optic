@@ -12,7 +12,9 @@ public class AdminBean implements java.io.Serializable{
     private String provincia;
     private String referee;
 
-    public void AdminBean(){}
+    public AdminBean(){
+        //costruttore vuoto
+    }
 
     public String getUsername() {
         return username;

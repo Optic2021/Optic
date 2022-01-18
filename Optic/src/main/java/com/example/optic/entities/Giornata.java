@@ -6,9 +6,9 @@ import java.util.Calendar;
 public class Giornata {
     private int idGiornata;
     private Calendar data;
-    private int num_Giocatori ;
-    private String fk_Nome;
-    private String fk_Username;
+    private int numGiocatori ;
+    private String fkNome;
+    private String fkUsername;
     private String nomeC;
     private String dataString;
 
@@ -18,11 +18,11 @@ public class Giornata {
         SimpleDateFormat dataGiornata = new SimpleDateFormat("yyyy-MM-dd");
         this.dataString = dataGiornata.format(this.data.getTime());
     }
-    public Giornata(int idGiornata,Calendar data,int num_Giocatori,String evento){
+    public Giornata(int idGiornata,Calendar data,int numGiocatori,String evento){
         this.idGiornata = idGiornata;
         this.data = data;
-        this.num_Giocatori = num_Giocatori;
-        this.fk_Nome = evento;
+        this.numGiocatori = numGiocatori;
+        this.fkNome = evento;
     }
     public void setIdGiornata(int newIdGiornata){
         this.idGiornata=newIdGiornata;
@@ -30,14 +30,14 @@ public class Giornata {
     public void setData(Calendar newData){
         this.data=newData;
     }
-    public void setNum_Giocatori(int newNum_Giocatori){
-        this.num_Giocatori=newNum_Giocatori;
+    public void setNumGiocatori(int newNumGiocatori){
+        this.numGiocatori=newNumGiocatori;
     }
-    public void setFk_Nome(String newFk_Nome){
-        this.fk_Nome=newFk_Nome;
+    public void setFkNome(String newFkNome){
+        this.fkNome=newFkNome;
     }
-    public void setFk_Username(String newFk_Username){
-        this.fk_Username=newFk_Username;
+    public void setFkUsername(String newFkUsername){
+        this.fkUsername=newFkUsername;
     }
     public void setNomeC(String nomeC) {
         this.nomeC = nomeC;
@@ -56,16 +56,16 @@ public class Giornata {
         return this.data;
     }
 
-    public int getNum_Giocatori(){
-        return this.num_Giocatori;
+    public int getNumGiocatori(){
+        return this.numGiocatori;
     }
 
-    public String getFk_Nome(){
-        return this.fk_Nome;
+    public String getFkNome(){
+        return this.fkNome;
     }
 
-    public String getFk_Username(){
-        return this.fk_Username;
+    public String getFkUsername(){
+        return this.fkUsername;
     }
 
     public String getNomeC() {

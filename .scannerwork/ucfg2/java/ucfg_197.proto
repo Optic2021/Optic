@@ -1,16 +1,17 @@
 
-@com.example.optic.entities.Giornata#getNomeC()Ljava/lang/String;z
-pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaG G("1*ì
-1z
-pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaH H(Ñ
+Ecom.example.optic.entities.Giornata#getDataString()Ljava/lang/String;u
+kF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaJ J("1*â
+1u
+kF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaK K(Ñ
 Î
-z
-pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaH H(
-%0java.lang.String"__id*2*0%
-#com.example.optic.entities.Giornata"
-nomeC"–
-z
-pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaH H(
+u
+kF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaK K(
+%0java.lang.String"__id*7*5%
+#com.example.optic.entities.Giornata"
+
+dataString"‘
+u
+kF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaK K(
 
 %0java.lang.StringB'%
 #com.example.optic.entities.Giornata

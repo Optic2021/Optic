@@ -2,19 +2,19 @@ package com.example.optic.dao;
 
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.ReportBean;
-import com.example.optic.entities.Event;
 import com.example.optic.entities.Player;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class PlayerDAO {
-    private static String USER;
-    private static String PW;
-    private static String DB_URL;
-    private static String DRIVER_CLASS_NAME;
+    private String user;
+    private String passWord;
+    private String dbUrl;
+    private String driverClassName;
 
     //utilizzo pattern singleton per rendere unica la connessione
     private static PlayerDAO instance = null;
@@ -26,25 +26,24 @@ public class PlayerDAO {
             InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
             Properties prop = new Properties();
             prop.load(input);
-            this.USER = prop.getProperty("USER");
-            this.PW = prop.getProperty("PW");
-            this.DB_URL = prop.getProperty("DB_URL");
-            this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
+            this.user = prop.getProperty("USER");
+            this.passWord = prop.getProperty("PW");
+            this.dbUrl = prop.getProperty("DB_URL");
+            this.driverClassName = prop.getProperty("DRIVER_CLASS_NAME");
         }catch (IOException e){
             e.printStackTrace();
         }
     }
 
-    public void newPlayer(String user, String password) throws Exception {
-        Statement stmt = null;
+    public void newPlayer(String user, String password) throws SQLException {
+        PreparedStatement prepStmt = null;
         Player p = new Player(user,password);
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             String sql = "INSERT INTO player VALUES (?,?,?,?,?,?)";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1,p.getUsername());
             prepStmt.setString(2,p.getPassword());
             prepStmt.setString(3,"");
@@ -54,8 +53,8 @@ public class PlayerDAO {
             prepStmt.executeUpdate();
         } finally {
             try {
-                if (stmt != null){
-                    stmt.close();
+                if (prepStmt != null){
+                    prepStmt.close();
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -64,15 +63,13 @@ public class PlayerDAO {
     }
 
     public void setPlayerInfo(String user, String desc, String fb, String ig){
-        Statement stmt = null;
-        Player p = new Player(user);
+        PreparedStatement prepStmt = null;
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             String sql = "UPDATE player SET Descrizione=?, Instagram=?, Facebook=? WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql);
+            prepStmt = instance.conn.prepareStatement(sql);
             prepStmt.setString(1,desc);
             prepStmt.setString(2,ig);
             prepStmt.setString(3,fb);
@@ -82,24 +79,23 @@ public class PlayerDAO {
             e.printStackTrace();
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    public Player getPlayer(String user) throws Exception {
-        Statement stmt = null;
+    public Player getPlayer(String user) throws SQLException {
+        PreparedStatement prepStmt = null;
         Player p = new Player(user);
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             String sql = "SELECT * FROM player WHERE Username=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
@@ -118,8 +114,8 @@ public class PlayerDAO {
             }
         } finally {
             try {
-                if (stmt != null)
-                    stmt.close();
+                if (prepStmt != null)
+                    prepStmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -142,9 +138,8 @@ public class PlayerDAO {
     //apro la connessione
     public void getConn(){
         try{
-            Class.forName(DRIVER_CLASS_NAME);
-            instance.conn = DriverManager.getConnection(DB_URL, USER, PW);
-            System.out.println("Connessione al db effettuata");
+            Class.forName(driverClassName);
+            instance.conn = DriverManager.getConnection(dbUrl, user, passWord);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -154,20 +149,18 @@ public class PlayerDAO {
         try{
             if (instance.conn != null) {
                 instance.conn.close();
-                System.out.println("Connessione al db chiusa");
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public ArrayList<ReportBean> getPlayerReportList(String user) {
-        ArrayList<ReportBean> list = new ArrayList<ReportBean>();
-        Statement stmt = null;
+    public List<ReportBean> getPlayerReportList(String user) {
+        ArrayList<ReportBean> list = new ArrayList<>();
+        PreparedStatement prepStmt = null;
         try{
-            stmt = instance.conn.createStatement();
             String sql = "SELECT fk_UsernameR,Motivazione FROM report WHERE fk_UsernameP=?";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if(rs.first()){
@@ -181,32 +174,32 @@ public class PlayerDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally {
+            try {
+                if (prepStmt != null)
+                    prepStmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return list;
     }
 
-    public ArrayList<AdminBean> getCampoList()throws ClassNotFoundException,SQLException {
-        String nomec;
-        String desc;
-
-        ArrayList<AdminBean> list= new ArrayList<AdminBean>();
-
-        Statement stmt = null;
-        //AdminBean admin = new AdminBean();
+    public List<AdminBean> getCampoList()throws SQLException {
+        ArrayList<AdminBean> list= new ArrayList<>();
+        PreparedStatement prepStmt = null;
+        AdminBean admin = null;
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            stmt = instance.conn.createStatement();
             String sql = "SELECT NomeC, Provincia FROM admin";
-            PreparedStatement prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);;
+            prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             ResultSet rs = prepStmt.executeQuery();
-            if (!rs.first()){ // rs empty
-                AdminBean admin = null;
-            }else {
+            if (rs.first()){ // rs empty
                 rs.first();
                 do {
-                    AdminBean admin = new AdminBean();
+                    admin = new AdminBean();
                     admin.setNomeCampo((rs.getString("NomeC")));
                     admin.setProvincia((rs.getString("Provincia")));
                     list.add(admin);
@@ -215,8 +208,8 @@ public class PlayerDAO {
                 rs.close();
             }
         }finally {
-            if (stmt != null)
-                stmt.close();
+            if (prepStmt != null)
+                prepStmt.close();
         }
         return list;
     }

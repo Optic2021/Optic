@@ -9,7 +9,6 @@ import com.example.optic.entities.Event;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.Giornata;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class UserProfileAppController {
     }
 
     public static List<Valutazione> getReviewList(PlayerBean p) throws IOException {
-        ArrayList<Valutazione> list = new ArrayList<>();
+        List<Valutazione> list = new ArrayList<>();
         //utilizzo la dao del player dove è creata la connessisone
         try {
             PlayerDAO daoP = PlayerDAO.getInstance();
@@ -68,7 +67,7 @@ public class UserProfileAppController {
         dao.saveReview(val,1);
     }
     public static List<Giornata> getRecentPlayList(UserBean user){
-        ArrayList<Giornata> list = new ArrayList<>();
+        List<Giornata> list = new ArrayList<>();
         try{
             PlayerDAO daoP = PlayerDAO.getInstance();
             GiornataDAO dao = new GiornataDAO(daoP);
@@ -84,7 +83,7 @@ public class UserProfileAppController {
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
-            list = eventDao.getPlayerEventList();
+            list = eventDao.getEventList();
         }catch (IOException | SQLException e){
             e.printStackTrace();
         }
@@ -92,7 +91,7 @@ public class UserProfileAppController {
     }
 
     public static List<ReportBean> getReportList(String user) {
-        ArrayList<ReportBean> list = new ArrayList<>();
+        List<ReportBean> list = new ArrayList<>();
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             list = dao.getPlayerReportList(user);

@@ -5,8 +5,8 @@ import java.sql.Blob;
 public class Foto {
 
     private int idFoto;
-    private Blob Immagine;
-    private String fk_Username;
+    private Blob immagine;
+    private String fkUsername;
 
     public int getIdFoto() {
         return idFoto;
@@ -17,18 +17,18 @@ public class Foto {
     }
 
     public Blob getImmagine() {
-        return Immagine;
+        return immagine;
     }
 
     public void setImmagine(Blob immagine) {
-        Immagine = immagine;
+        this.immagine = immagine;
     }
 
-    public String getFk_Username() {
-        return fk_Username;
+    public String getFkUsername() {
+        return fkUsername;
     }
 
-    public void setFk_Username(String fk_Username) {
-        this.fk_Username = fk_Username;
+    public void setFkUsername(String fkUsername) {
+        this.fkUsername = fkUsername;
     }
 }

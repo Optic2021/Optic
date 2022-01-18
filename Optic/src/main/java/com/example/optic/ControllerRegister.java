@@ -1,13 +1,11 @@
 package com.example.optic;
 
 import com.example.optic.app_controllers.RegisterController;
-import com.example.optic.bean.AdminBean;
-import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class ControllerRegister extends GraphicController {
     @FXML
@@ -42,7 +40,7 @@ public class ControllerRegister extends GraphicController {
         this.toView("views/login.fxml");
     }
 
-    public void register() throws Exception {
+    public void register() throws SQLException, IOException, ClassNotFoundException {
         boolean res = false;
         userRB.setUserData(1);
         adminRB.setUserData(2);
@@ -91,7 +89,7 @@ public class ControllerRegister extends GraphicController {
                 Alert conf = new Alert(Alert.AlertType.CONFIRMATION);
                 conf.setContentText("Registrazione avvenuta con successo!");
                 conf.show();
-                this.toView(arr[prof], name);
+                this.toView(arr[prof-1], name);
             } else {
                 RegisterController.closeConn(prof);
                 err.setContentText("Username già utilizzato");

@@ -20,7 +20,7 @@ public class ControllerBookSession extends GraphicController {
         this.user.setText(user);
         populateCampiTable(user);
     }
-    public void toProfile() throws Exception {
+    public void toProfile() throws IOException {
         this.toView("views/userProfile.fxml",user.getText());
     }
     public void toHome() throws IOException {

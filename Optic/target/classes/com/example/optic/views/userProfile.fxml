@@ -131,7 +131,7 @@
                                         </Label>
                                         <HBox prefHeight="37.0" prefWidth="110.0">
                                             <children>
-                                                <Label fx:id="star1" prefHeight="40.0" prefWidth="21.0" text="*" visible="false">
+                                                <Label fx:id="starUP1" prefHeight="40.0" prefWidth="21.0" text="*" visible="false">
                                                     <font>
                                                         <Font name="Arial Black" size="36.0" />
                                                     </font>
@@ -143,7 +143,7 @@
                                           <String fx:value="text-yellow" />
                                        </styleClass>
                                                 </Label>
-                                                <Label fx:id="star2" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
+                                                <Label fx:id="starUP2" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
                                                     <font>
                                                         <Font name="Arial Black" size="36.0" />
                                                     </font>
@@ -151,7 +151,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </Label>
-                                                <Label fx:id="star3" layoutX="31.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
+                                                <Label fx:id="starUP3" layoutX="31.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
                                                     <font>
                                                         <Font name="Arial Black" size="36.0" />
                                                     </font>
@@ -159,7 +159,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </Label>
-                                                <Label fx:id="star4" layoutX="52.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
+                                                <Label fx:id="starUP4" layoutX="52.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
                                                     <font>
                                                         <Font name="Arial Black" size="36.0" />
                                                     </font>
@@ -167,7 +167,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </Label>
-                                                <Label fx:id="star5" layoutX="73.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
+                                                <Label fx:id="starUP5" layoutX="73.0" layoutY="10.0" prefHeight="40.0" prefWidth="21.0" styleClass="text-yellow" text="*" visible="false">
                                                     <font>
                                                         <Font name="Arial Black" size="36.0" />
                                                     </font>

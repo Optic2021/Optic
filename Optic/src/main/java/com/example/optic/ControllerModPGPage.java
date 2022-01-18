@@ -6,7 +6,7 @@ import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import com.example.optic.utilities.ImportList;
-import javafx.event.ActionEvent;
+import com.example.optic.utilities.ImportStar;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,10 +17,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.w3c.dom.events.EventException;
-
 import java.io.IOException;
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -32,11 +29,11 @@ public class ControllerModPGPage extends GraphicController {
     @FXML private Label user;
     @FXML private Label userType;
     @FXML private Label title;
-    @FXML private Label star1;
-    @FXML private Label star2;
-    @FXML private Label star3;
-    @FXML private Label star4;
-    @FXML private Label star5;
+    @FXML private Label starMPG1;
+    @FXML private Label starMPG2;
+    @FXML private Label starMPG3;
+    @FXML private Label starMPG4;
+    @FXML private Label starMPG5;
     @FXML private TextArea description;
     //settata non editable
     //settata non visible
@@ -116,7 +113,7 @@ public class ControllerModPGPage extends GraphicController {
                 SimpleDateFormat dateFormat = new SimpleDateFormat(format);
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
                 date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
-                activity.setText(play.getFk_Nome());
+                activity.setText(play.getFkNome());
                 this.populatePlayersTable();
             }else{
 
@@ -153,7 +150,7 @@ public class ControllerModPGPage extends GraphicController {
                 if (play != null) {
                     idPlay.setText(Integer.toString(play.getIdGiornata()));
                     date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
-                    activity.setText(play.getFk_Nome());
+                    activity.setText(play.getFkNome());
                     this.populatePlayersTable();
                 } else {
                     eventBox.setVisible(true);
@@ -212,7 +209,7 @@ public class ControllerModPGPage extends GraphicController {
                     if (play != null) {
                         idPlay.setText(Integer.toString(play.getIdGiornata()));
                         date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
-                        activity.setText(play.getFk_Nome());
+                        activity.setText(play.getFkNome());
                         this.populatePlayersTable();
                     }
                     eventBox.setVisible(false);
@@ -357,29 +354,7 @@ public class ControllerModPGPage extends GraphicController {
     }
 
     private void setStars(int stars){
-        switch (stars){
-            case 1: star1.setVisible(true);
-                break;
-            case 2: star1.setVisible(true);
-                star2.setVisible(true);
-                break;
-            case 3: star1.setVisible(true);
-                star2.setVisible(true);
-                star3.setVisible(true);
-                break;
-            case 4: star1.setVisible(true);
-                star2.setVisible(true);
-                star3.setVisible(true);
-                star4.setVisible(true);
-                break;
-            case 5: star1.setVisible(true);
-                star2.setVisible(true);
-                star3.setVisible(true);
-                star4.setVisible(true);
-                star5.setVisible(true);
-                break;
-            default:
-        }
+        ImportStar.setStars(stars,starMPG1,starMPG2,starMPG3,starMPG4,starMPG5);
     }
 
     public void eventList(){

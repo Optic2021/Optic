@@ -43,7 +43,6 @@ public class Event {
     }
 
     public String getFormattedText(){
-        String s = nome+"\n"+descrizione+"\n"+"Giocatori consigliati: "+giocatoriCons;
-        return s;
+        return nome+"\n"+descrizione+"\n"+"Giocatori consigliati: "+giocatoriCons;
     }
 }

@@ -1,22 +1,22 @@
 package com.example.optic.entities;
 
 public class Prenotazione {
-    private String fk_Username;
-    private String fk_idGiornata;
+    private String fkUsername;
+    private String fkIdGiornata;
 
-    public String getFk_Username() {
-        return fk_Username;
+    public String getFkUsername() {
+        return fkUsername;
     }
 
-    public void setFk_Username(String fk_Username) {
-        this.fk_Username = fk_Username;
+    public void setFkUsername(String fkUsername) {
+        this.fkUsername = fkUsername;
     }
 
-    public String getFk_idGiornata() {
-        return fk_idGiornata;
+    public String getFkIdGiornata() {
+        return fkIdGiornata;
     }
 
-    public void setFk_idGiornata(String fk_idGiornata) {
-        this.fk_idGiornata = fk_idGiornata;
+    public void setFkIdGiornata(String fkIdGiornata) {
+        this.fkIdGiornata = fkIdGiornata;
     }
 }

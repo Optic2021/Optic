@@ -3,9 +3,11 @@ package com.example.optic.bean;
 public class RefereeBean {
     private String username;
     private String password;
-    private String fk_UsernameA1;
+    private String fkUsernameA1;
 
-    public void RefereeBean(){}
+    public RefereeBean(){
+        //costruttore vuoto
+    }
 
     public String getUsername() {
         return username;
@@ -23,12 +25,12 @@ public class RefereeBean {
         this.password = password;
     }
 
-    public String getFk_UsernameA1() {
-        return fk_UsernameA1;
+    public String getFkUsernameA1() {
+        return fkUsernameA1;
     }
 
-    public void setFk_UsernameA1(String fk_UsernameA1) {
-        this.fk_UsernameA1 = fk_UsernameA1;
+    public void setFkUsernameA1(String fkUsernameA1) {
+        this.fkUsernameA1 = fkUsernameA1;
     }
 }
 

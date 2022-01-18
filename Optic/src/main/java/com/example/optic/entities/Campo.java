@@ -1,27 +1,27 @@
 package com.example.optic.entities;
 
 public class Campo {
-    private String Nomec;
-    private String Provincia;
+    private String nomeC;
+    private String provincia;
 
-    public Campo(String Nomec,String Provincia){
-        this.Nomec=Nomec;
-        this.Provincia=Provincia;
+    public Campo(String nomeC,String provincia){
+        this.nomeC=nomeC;
+        this.provincia=provincia;
     }
 
     public String getNomec() {
-        return Nomec;
+        return nomeC;
     }
 
     public void setNomec(String nomec) {
-        Nomec = nomec;
+        nomeC = nomec;
     }
 
     public String getProvincia() {
-        return Provincia;
+        return provincia;
     }
 
     public void setProvincia(String provincia) {
-        Provincia = provincia;
+        this.provincia = provincia;
     }
 }

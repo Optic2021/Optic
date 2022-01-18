@@ -2,9 +2,6 @@ package com.example.optic;
 
 import com.example.optic.app_controllers.UserProfileAppController;
 import com.example.optic.bean.ReportBean;
-import com.example.optic.entities.Event;
-import com.example.optic.entities.Report;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
@@ -14,7 +11,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerReportList extends GraphicController {

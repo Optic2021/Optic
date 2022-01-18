@@ -1,0 +1,58 @@
+
+Ecom.example.optic.entities.Event#getFormattedText()Ljava/lang/String;r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java- -(""1*ü
+1r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(Å
+Â
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(
+%0java.lang.String"__id*.*,"
+ com.example.optic.entities.Event"
+nome»
+¸
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(
+%1java.lang.String"__concat*
+
+%0java.lang.String*
+\nÌ
+É
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .($
+%2java.lang.String"__id*5*3"
+ com.example.optic.entities.Event"
+descrizioneÍ
+Ê
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .($
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.String»
+¸
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .()
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+\nÐ
+Í
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(C
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+Giocatori consigliati: »
+¸
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(Q
+%6java.lang.String"__concat*
+
+%5java.lang.String*
+"""Ž
+r
+hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Event.java. .(R
+
+%6java.lang.StringB$"
+ com.example.optic.entities.Event

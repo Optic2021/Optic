@@ -1,19 +1,20 @@
 package com.example.optic.dao;
 
-import com.example.optic.bean.AdminBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Properties;
 
 public class AdminDAO {
-    private static String USER;
-    private static String PW;
-    private static String DB_URL;
-    private static String DRIVER_CLASS_NAME;
+    private String user;
+    private String passWord;
+    private String dbUrl;
+    private String driverClassName;
+    private String userField = "Username";
+    private String pwField = "Password";
+
 
     private static AdminDAO instance = null;
     private Connection conn;
@@ -24,10 +25,10 @@ public class AdminDAO {
         InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
         Properties prop = new Properties();
         prop.load(input);
-        this.USER = prop.getProperty("USER");
-        this.PW = prop.getProperty("PW");
-        this.DB_URL = prop.getProperty("DB_URL");
-        this.DRIVER_CLASS_NAME = prop.getProperty("DRIVER_CLASS_NAME");
+        this.user = prop.getProperty("USER");
+        this.passWord = prop.getProperty("PW");
+        this.dbUrl = prop.getProperty("DB_URL");
+        this.driverClassName = prop.getProperty("DRIVER_CLASS_NAME");
     }
 
     public void newAdmin(String username,String password,String via, String nomeC, String prov) throws SQLException,ClassNotFoundException {
@@ -50,8 +51,9 @@ public class AdminDAO {
             prepStmt.setString(9, admin.getProvincia());
             prepStmt.executeUpdate();
         } finally {
-            if (prepStmt != null)
+            if (prepStmt != null) {
                 prepStmt.close();
+            }
         }
     }
 
@@ -103,8 +105,8 @@ public class AdminDAO {
                 admin = null;
             }else {
                 rs.first();
-                admin.setUsername(rs.getString("Username"));
-                admin.setPassword(rs.getString("Password"));
+                admin.setUsername(rs.getString(userField));
+                admin.setPassword(rs.getString(pwField));
                 admin.setIg(rs.getString("Instagram"));
                 admin.setFb(rs.getString("Facebook"));
                 admin.setWa(rs.getString("Whatsapp"));
@@ -136,8 +138,8 @@ public class AdminDAO {
                 ref=null;
             }else {
                 rs.first();
-                String name = rs.getString("Username");
-                String pw = rs.getString("Password");
+                String name = rs.getString(userField);
+                String pw = rs.getString(pwField);
                 String admin = rs.getString("fk_UsernameA1");
                 ref = new Referee(name,pw,admin);
                 //chiudo result set
@@ -163,8 +165,8 @@ public class AdminDAO {
                 ref=null;
             }else {
                 rs.first();
-                String name = rs.getString("Username");
-                String pw = rs.getString("Password");
+                String name = rs.getString(userField);
+                String pw = rs.getString(pwField);
                 String admin = rs.getString("fk_UsernameA1");
                 ref = new Referee(name,pw,admin);
                 //chiudo result set
@@ -226,7 +228,6 @@ public class AdminDAO {
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
-            //String sql = "SELECT * FROM admin join referee on referee.fk_UsernameA1=admin.Username WHERE NomeC=?";
             String sql = "SELECT * FROM admin WHERE NomeC=?";
             prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,admin.getNomeC());
@@ -235,8 +236,8 @@ public class AdminDAO {
                 admin = null;
             }else {
                 rs.first();
-                admin.setUsername(rs.getString("Username"));
-                admin.setPassword(rs.getString("Password"));
+                admin.setUsername(rs.getString(userField));
+                admin.setPassword(rs.getString(pwField));
                 admin.setIg(rs.getString("Instagram"));
                 admin.setFb(rs.getString("Facebook"));
                 admin.setWa(rs.getString("Whatsapp"));
@@ -258,8 +259,8 @@ public class AdminDAO {
 
 
     public void getConn() throws ClassNotFoundException,SQLException {
-        Class.forName(DRIVER_CLASS_NAME);
-        instance.conn = DriverManager.getConnection(DB_URL, USER, PW);
+        Class.forName(driverClassName);
+        instance.conn = DriverManager.getConnection(dbUrl, user, passWord);
     }
 
     public void closeConn() throws SQLException {
