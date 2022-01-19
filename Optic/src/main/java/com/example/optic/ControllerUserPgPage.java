@@ -175,7 +175,7 @@ public class ControllerUserPgPage extends GraphicController {
         int mediaVal = 0;
         int stars = 0;
         List<Valutazione> list = UserPgPageAppController.reviewList(admin);
-        nome.setCellValueFactory(new PropertyValueFactory<>("fk_UsernameP1"));
+        nome.setCellValueFactory(new PropertyValueFactory<>("fkUsernameP1"));
         recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
         int k = list.size();
         int i = 0;
@@ -203,9 +203,9 @@ public class ControllerUserPgPage extends GraphicController {
         ref.setText(admin.getReferee());
         address.setText(admin.getVia());
         prov.setText(admin.getProvincia());
-        fb.setText(admin.getFb());
-        ig.setText(admin.getIg());
-        wa.setText(admin.getWa());
+        fb.setText(admin.getFaceb());
+        ig.setText(admin.getInsta());
+        wa.setText(admin.getWhats());
     }
 
     public void review() throws IOException {
@@ -223,7 +223,7 @@ public class ControllerUserPgPage extends GraphicController {
         populateReviewTable(admin);
     }
 
-    public void tableview() throws IOException {
+    public void tableview() {
         Valutazione val = (Valutazione) table.getSelectionModel().getSelectedItem();
         try {
             if (user.getText().equals(val.getFkUsernameP1())){

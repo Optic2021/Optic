@@ -1,68 +1,68 @@
 
-âcom.example.optic.app_controllers.RefCampoController#getAdminFromRef(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Admin;Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java ('"8*˜
-2Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(7„
-‡
-Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(7%
+âcom.example.optic.app_controllers.RefCampoController#getAdminFromRef(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Admin;å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java ('"8*É
+2å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(7È
+Ê
+å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(7%
 a com.example.optic.entities.Admin"__id*(
 &
 %3 com.example.optic.entities.Admin*
-1*ö
-4Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(7ÜÉ
-Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(7&
+1*¶
+4å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(7åâ
+å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(7&
 %3 com.example.optic.entities.Admin"fcom.example.optic.dao.RefereeDAO#getAdminFromRef(Ljava/lang/String;)Lcom/example/optic/entities/Admin;*)
 '
 dao com.example.optic.dao.RefereeDAO*
 
 %2java.lang.String2#getAdminFromRef(Ljava/lang/String;)*
-2*≥
-5Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(üú
-Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java"$ "(6
+2*ø
+5å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java" "(•¢
+å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java"$ "(6
 %2java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*)
 '
 usercom.example.optic.bean.UserBean2getUsername()*
-4*˜
-6Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java   (6Â
-‚
-Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java   (6'
+4*â
+6å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java   (6Î
+Ë
+å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java   (6'
 dao com.example.optic.dao.RefereeDAO"__id*(
 &
-%0 com.example.optic.dao.RefereeDAO˚¯
-Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java! !(
+%0 com.example.optic.dao.RefereeDAOÅ˛
+å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java! !(
 
 %1void"+com.example.optic.dao.RefereeDAO#getConn()V*)
 '
 dao com.example.optic.dao.RefereeDAO2	getConn()*
-5*¿
-7Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java   ('¨
-©
-Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java   (5&
+5*Ã
+7å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java   ('≤
+Ø
+å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java   (5&
 %0 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
  com.example.optic.dao.RefereeDAO*
-6*’
-8Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java (¡
-æ
-Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java (%
+6*·
+8å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java («
+ƒ
+å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java (%
 a com.example.optic.entities.Admin"__id*
 ""*
-7*¡
-1Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java& &("≤
-Ü
-|F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java& &('
+7*Õ
+1å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java& &("∏
+å
+ÅC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefCampoController.java& &('
 %
 a com.example.optic.entities.Admin:'
 usercom.example.optic.bean.UserBeanB8"6

@@ -9,10 +9,6 @@ public class PlayerBean implements java.io.Serializable{
     private String fb;
     private String stato = "nullo";
 
-    public PlayerBean(){
-        //costruttore vuoto
-    }
-
     //metodi set e get
     public String getUsername() {
         return username;

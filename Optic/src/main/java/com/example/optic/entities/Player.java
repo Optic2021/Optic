@@ -91,7 +91,7 @@ public class Player {
         this.stato = stato;
     }
 
-    public void setStarsFromVal(int valutazione){
+    private void setStarsFromVal(int valutazione){
         switch (valutazione){
             case 1: this.stelle = "*";
             break;

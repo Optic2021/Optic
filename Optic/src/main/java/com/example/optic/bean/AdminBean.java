@@ -3,18 +3,14 @@ package com.example.optic.bean;
 public class AdminBean implements java.io.Serializable{
     private String username;
     private String password;
-    private String ig;
-    private String fb;
-    private String wa;
+    private String insta;
+    private String faceb;
+    private String whats;
     private String descrizione;
     private String nomeCampo;
     private String via;
     private String provincia;
     private String referee;
-
-    public AdminBean(){
-        //costruttore vuoto
-    }
 
     public String getUsername() {
         return username;
@@ -32,28 +28,28 @@ public class AdminBean implements java.io.Serializable{
         this.password = password;
     }
 
-    public String getIg() {
-        return ig;
+    public String getInsta() {
+        return insta;
     }
 
-    public void setIg(String ig) {
-        this.ig = ig;
+    public void setInsta(String insta) {
+        this.insta = insta;
     }
 
-    public String getFb() {
-        return fb;
+    public String getFaceb() {
+        return faceb;
     }
 
-    public void setFb(String fb) {
-        this.fb = fb;
+    public void setFaceb(String faceb) {
+        this.faceb = faceb;
     }
 
-    public String getWa() {
-        return wa;
+    public String getWhats() {
+        return whats;
     }
 
-    public void setWa(String wa) {
-        this.wa = wa;
+    public void setWhats(String whats) {
+        this.whats = whats;
     }
 
     public String getDescrizione() {

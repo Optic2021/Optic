@@ -1,60 +1,17 @@
 
-Œcom.example.optic.app_controllers.UserProfileAppController#getPlayer(Lcom/example/optic/bean/PlayerBean;)Lcom/example/optic/entities/Player;
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (""7*Œ
-2
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (3ñ
-î
-
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (3+
-player!com.example.optic.entities.Player"__id*)
-'
-%2!com.example.optic.entities.Player*
-1*œ
-4
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (3þ
-
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (3'
-%2!com.example.optic.entities.Player"`com.example.optic.dao.PlayerDAO#getPlayer(Ljava/lang/String;)Lcom/example/optic/entities/Player;*(
-&
-daocom.example.optic.dao.PlayerDAO*
+Ecom.example.optic.entities.Giornata#getFkUsername()Ljava/lang/String;z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaC C("1*ñ
+1z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaD D(Ö
+Ó
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaD D(
+%0java.lang.String"__id*7*5%
+#com.example.optic.entities.Giornata"
+
+fkUsername"–
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.javaD D(
 
-%1java.lang.String2getPlayer(Ljava/lang/String;)*
-2*¯
-5
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (4ê
-ç
-
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (4&
-daocom.example.optic.dao.PlayerDAO"__id*'
-%
-%0com.example.optic.dao.PlayerDAO§¤
-
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java# (2
-%1java.lang.String"Acom.example.optic.bean.PlayerBean#getUsername()Ljava/lang/String;*(
-&
-p!com.example.optic.bean.PlayerBean2getUsername()*
-4*Ê
-6
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (%¯
-¬
-
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (3%
-%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
-com.example.optic.dao.PlayerDAO*
-5*é
-7
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (Î
-Ë
-
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (+
-player!com.example.optic.entities.Player"__id*
-""*
-6*Õ
-1
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java ("¿
-
-‚F:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (-
-+
-player!com.example.optic.entities.Player:&
-p!com.example.optic.bean.PlayerBeanB>"<
-:com.example.optic.app_controllers.UserProfileAppController
+%0java.lang.StringB'%
+#com.example.optic.entities.Giornata

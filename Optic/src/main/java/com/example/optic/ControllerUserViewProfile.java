@@ -6,6 +6,8 @@ import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;
 import java.util.List;
+
+import com.example.optic.utilities.ImportList;
 import com.example.optic.utilities.ImportStar;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.UserBean;
@@ -81,27 +83,19 @@ public class ControllerUserViewProfile extends GraphicController{
     }
 
     //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
-    public void populateReviewList(String user) throws IOException {
+    public void populateReviewList(String user){
         PlayerBean player = new PlayerBean();
-        int numVal = 0;
-        int mediaVal = 0;
-        int stars = 0;
         player.setUsername(user);
-        List<Valutazione> list = UserProfileAppController.getReviewList(player);
-        for(int i = 0; i < list.size(); i++) {
-            ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFkUsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
-            numVal++;
-            mediaVal += list.get(i).getStelle();
-            reviews.getItems().add(val.getDescrizione());
+        List<Valutazione> list = null;
+        try {
+            list = UserProfileAppController.getReviewList(player);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        if(numVal > 0) {
-            stars = mediaVal / numVal;
-            if (stars > 0) {
-                //coloro le stelle in base alla valutazione
-                this.setStars(stars);
-            }
+        int stars= ImportList.populateReviewList(list,reviews,nVal);
+        if(stars>0){
+            setStars(stars);
         }
-        nVal.setText(Integer.toString(numVal));
     }
 
     //popolo la tabella con lo storico delle partite del player
@@ -183,13 +177,9 @@ public class ControllerUserViewProfile extends GraphicController{
 
         UserProfileAppController.saveReview(val);
         reviews.getItems().clear();
-        try {
-            String []ar;
-            ar=profile.getText().split(" ");
-            populateReviewList(ar[1]);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        String []ar;
+        ar=profile.getText().split(" ");
+        populateReviewList(ar[1]);
     }
 
     //forse si puo mettere su graphic controller

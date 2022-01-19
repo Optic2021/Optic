@@ -1,43 +1,28 @@
 package com.example.optic.dao;
 
-import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.ReportBean;
+import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
+import com.example.optic.utilities.ImportDAO;
+
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 public class PlayerDAO {
-    private String user;
-    private String passWord;
-    private String dbUrl;
-    private String driverClassName;
 
     //utilizzo pattern singleton per rendere unica la connessione
     private static PlayerDAO instance = null;
     private Connection conn;
 
-    protected PlayerDAO() throws IOException {
+    protected PlayerDAO(){
         this.conn = null;
-        try {
-            InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
-            Properties prop = new Properties();
-            prop.load(input);
-            this.user = prop.getProperty("USER");
-            this.passWord = prop.getProperty("PW");
-            this.dbUrl = prop.getProperty("DB_URL");
-            this.driverClassName = prop.getProperty("DRIVER_CLASS_NAME");
-        }catch (IOException e){
-            e.printStackTrace();
-        }
     }
 
-    public void newPlayer(String user, String password) throws SQLException {
+    public void newPlayer(String usern, String password) throws SQLException {
         PreparedStatement prepStmt = null;
-        Player p = new Player(user,password);
+        Player p = new Player(usern,password);
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
@@ -137,9 +122,10 @@ public class PlayerDAO {
 
     //apro la connessione
     public void getConn(){
+        ImportDAO imp= new ImportDAO();
         try{
-            Class.forName(driverClassName);
-            instance.conn = DriverManager.getConnection(dbUrl, user, passWord);
+            Class.forName(imp.getDriverClassName());
+            instance.conn = DriverManager.getConnection(imp.getDbUrl(), imp.getUser(), imp.getPassWord());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -185,10 +171,10 @@ public class PlayerDAO {
         return list;
     }
 
-    public List<AdminBean> getCampoList()throws SQLException {
-        ArrayList<AdminBean> list= new ArrayList<>();
+    public List<Admin> getCampoList()throws SQLException {
+        ArrayList<Admin> list= new ArrayList<>();
         PreparedStatement prepStmt = null;
-        AdminBean admin = null;
+        Admin admin = null;
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
@@ -199,8 +185,8 @@ public class PlayerDAO {
             if (rs.first()){ // rs empty
                 rs.first();
                 do {
-                    admin = new AdminBean();
-                    admin.setNomeCampo((rs.getString("NomeC")));
+                    admin = new Admin();
+                    admin.setNomeC((rs.getString("NomeC")));
                     admin.setProvincia((rs.getString("Provincia")));
                     list.add(admin);
 

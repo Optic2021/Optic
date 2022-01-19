@@ -19,7 +19,7 @@ public class ModPGPageAppController {
     }
 
     public static Admin getAdmin(AdminBean a){
-        Admin admin = null;
+        Admin admin = new Admin();
         try {
             AdminDAO dao = AdminDAO.getInstance();
             admin = dao.getAdmin(a.getUsername());
@@ -31,9 +31,9 @@ public class ModPGPageAppController {
 
     public static void setAdminSocial(AdminBean a){
         String admin = a.getUsername();
-        String fb = a.getFb();
-        String ig = a.getIg();
-        String wa = a.getWa();
+        String fb = a.getFaceb();
+        String ig = a.getInsta();
+        String wa = a.getWhats();
         try{
             AdminDAO dao = AdminDAO.getInstance();
             dao.setAdminSocial(admin,ig,fb,wa);

@@ -1,16 +1,180 @@
 
-:com.example.optic.bean.AdminBean#getIg()Ljava/lang/String;r
-hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java# #("1*Œ
-1r
-hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java$ $(√
-¿
-r
-hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java$ $(
-%0java.lang.String"__id*,**"
- com.example.optic.bean.AdminBean"
-ig"é
-r
-hF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java$ $(
+kcom.example.optic.utilities.ImportAdminDAO#setAdmin(Ljava/sql/ResultSet;)Lcom/example/optic/entities/Admin;Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java ( "4*ñ0
+2Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (ÿ’
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (
+%3boolean"java.sql.ResultSet#first()Z*
+
+rsjava.sql.ResultSet2first()¨©
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (6
+%4java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+Username2getString(Ljava/lang/String;)æª
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (7
+
+%5void"Acom.example.optic.entities.Admin#setUsername(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
 
-%0java.lang.StringB$"
- com.example.optic.bean.AdminBean
+%4java.lang.String2setUsername(Ljava/lang/String;)¨©
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (6
+%6java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+Password2getString(Ljava/lang/String;)æª
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (7
+
+%7void"Acom.example.optic.entities.Admin#setPassword(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
+
+%6java.lang.String2setPassword(Ljava/lang/String;)≠™
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (1
+%8java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+	Instagram2getString(Ljava/lang/String;)≤Ø
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (2
+
+%9void";com.example.optic.entities.Admin#setIg(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
+
+%8java.lang.String2setIg(Ljava/lang/String;)≠™
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (0
+%10java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+Facebook2getString(Ljava/lang/String;)¥±
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (1
+%11void";com.example.optic.entities.Admin#setFb(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
+
+%10java.lang.String2setFb(Ljava/lang/String;)≠™
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (0
+%12java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+Whatsapp2getString(Ljava/lang/String;)¥±
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (1
+%13void";com.example.optic.entities.Admin#setWa(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
+
+%12java.lang.String2setWa(Ljava/lang/String;)±Æ
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java" (>
+%14java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+DescrizioneC2getString(Ljava/lang/String;)»≈
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (?
+%15void"Ecom.example.optic.entities.Admin#setDescrizioneC(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
+
+%14java.lang.String2#setDescrizioneC(Ljava/lang/String;)™ß
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (0
+%16java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*	
+NomeC2getString(Ljava/lang/String;)∫∑
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (1
+%17void">com.example.optic.entities.Admin#setNomeC(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
+
+%16java.lang.String2setNomeC(Ljava/lang/String;)®•
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (,
+%18java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+Via2getString(Ljava/lang/String;)∂≥
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (-
+%19void"<com.example.optic.entities.Admin#setVia(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
+
+%18java.lang.String2setVia(Ljava/lang/String;)Æ´
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (8
+%20java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+	Provincia2getString(Ljava/lang/String;)¬ø
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (9
+%21void"Bcom.example.optic.entities.Admin#setProvincia(Ljava/lang/String;)V*+
+)
+admin com.example.optic.entities.Admin*
+
+%20java.lang.String2 setProvincia(Ljava/lang/String;)÷”
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (
+%22void"java.sql.ResultSet#close()V*
+
+rsjava.sql.ResultSet2close()*
+1*œ
+3Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (¿
+Ω
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java ()
+admin com.example.optic.entities.Admin"__id*
+""*
+1*â
+4Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (!—Œ
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (&
+%0 com.example.optic.entities.Admin" com.example.optic.entities.Admin„
+‡
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (!
+%1"*com.example.optic.entities.Admin#<init>()V*(
+&
+%0 com.example.optic.entities.Admin‚
+ﬂ
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (")
+admin com.example.optic.entities.Admin"__id*(
+&
+%0 com.example.optic.entities.Adminÿ’
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (
+%2boolean"java.sql.ResultSet#first()Z*
+
+rsjava.sql.ResultSet2first()*
+2
+3*ª
+1Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java ("±
+Å
+wC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportAdminDAO.java (+
+)
+admin com.example.optic.entities.Admin:
+rsjava.sql.ResultSetB.",
+*com.example.optic.utilities.ImportAdminDAO

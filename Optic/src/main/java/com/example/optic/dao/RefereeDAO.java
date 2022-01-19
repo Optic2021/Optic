@@ -3,33 +3,16 @@ package com.example.optic.dao;
 import com.example.optic.bean.ReportBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
-import java.io.IOException;
-import java.io.InputStream;
+import com.example.optic.utilities.ImportDAO;
+
 import java.sql.*;
-import java.util.Properties;
 
 public class RefereeDAO {
-    private String user;
-    private String passWord;
-    private String dbUrl;
-    private String driverClassName;
-
     private static RefereeDAO instance = null;
     private Connection conn;
 
     protected RefereeDAO() {
         this.conn = null;
-        try {
-            InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
-            Properties prop = new Properties();
-            prop.load(input);
-            this.user = prop.getProperty("USER");
-            this.passWord = prop.getProperty("PW");
-            this.dbUrl = prop.getProperty("DB_URL");
-            this.driverClassName = prop.getProperty("DRIVER_CLASS_NAME");
-        }catch (IOException e){
-            e.printStackTrace();
-        }
     }
 
     public void newReferee(String username,String password) throws SQLException {
@@ -151,8 +134,9 @@ public class RefereeDAO {
 
     public void getConn(){
         try{
-            Class.forName(driverClassName);
-            instance.conn = DriverManager.getConnection(dbUrl, user, passWord);
+            ImportDAO imp= new ImportDAO();
+            Class.forName(imp.getDriverClassName());
+            instance.conn = DriverManager.getConnection(imp.getDbUrl(), imp.getUser(), imp.getPassWord());
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -22,7 +22,7 @@ public class RegisterController {
         switch (userType){
             case 1 ->   {
                 PlayerDAO p = PlayerDAO.getInstance();
-                Player player = null;
+                Player player ;
                 player = p.getPlayer(user.getUsername());
                 if(player != null){
                     res = true;
@@ -30,7 +30,7 @@ public class RegisterController {
             }
             case 2 -> {
                 AdminDAO a = AdminDAO.getInstance();
-                Admin admin = null;
+                Admin admin ;
                 admin = a.getAdmin(user.getUsername());
                 if(admin != null) {
                     res = true;
@@ -38,7 +38,7 @@ public class RegisterController {
             }
             default ->{
                 RefereeDAO r = RefereeDAO.getInstance();
-                Referee referee = null;
+                Referee referee ;
                 r.getConn();
                 referee = r.getReferee(user.getUsername());
                 if(referee != null){

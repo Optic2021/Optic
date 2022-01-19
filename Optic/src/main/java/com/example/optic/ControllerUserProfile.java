@@ -96,9 +96,6 @@ public class ControllerUserProfile extends GraphicController{
     //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
     public void populateReviewList(String user) {
         PlayerBean player = new PlayerBean();
-        int numVal = 0;
-        int mediaVal = 0;
-        int stars = 0;
         player.setUsername(user);
         List<Valutazione> list = null;
         try {
@@ -106,20 +103,10 @@ public class ControllerUserProfile extends GraphicController{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for(int i = 0; i < list.size(); i++) {
-            ValutazionePlayer val = new ValutazionePlayer(list.get(i).getFkUsernameP1(), list.get(i).getDescrizione()); //passo chi fa la segnalazione e la descrizione
-            numVal++;
-            mediaVal += list.get(i).getStelle();
-            reviews.getItems().add(val.getDescrizione());
+        int stars=ImportList.populateReviewList(list,reviews,nVal);
+        if(stars>0){
+            setStars(stars);
         }
-        if(numVal > 0) {
-            stars = mediaVal / numVal;
-            if (stars > 0) {
-                //coloro le stelle in base alla valutazione
-                this.setStars(stars);
-            }
-        }
-        nVal.setText(Integer.toString(numVal));
     }
 
     //popolo la tabella con lo storico delle partite del player

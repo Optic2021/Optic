@@ -2,33 +2,20 @@ package com.example.optic.dao;
 
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
+import com.example.optic.utilities.ImportAdminDAO;
+import com.example.optic.utilities.ImportDAO;
+
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
-import java.util.Properties;
 
 public class AdminDAO {
-    private String user;
-    private String passWord;
-    private String dbUrl;
-    private String driverClassName;
-    private String userField = "Username";
-    private String pwField = "Password";
-
 
     private static AdminDAO instance = null;
     private Connection conn;
 
     //costruttore
-    protected AdminDAO() throws IOException {
+    protected AdminDAO(){
         this.conn = null;
-        InputStream input = getClass().getClassLoader().getResourceAsStream("prop.properties");
-        Properties prop = new Properties();
-        prop.load(input);
-        this.user = prop.getProperty("USER");
-        this.passWord = prop.getProperty("PW");
-        this.dbUrl = prop.getProperty("DB_URL");
-        this.driverClassName = prop.getProperty("DRIVER_CLASS_NAME");
     }
 
     public void newAdmin(String username,String password,String via, String nomeC, String prov) throws SQLException,ClassNotFoundException {
@@ -92,31 +79,16 @@ public class AdminDAO {
 
     public Admin getAdmin(String user) throws SQLException,ClassNotFoundException{
         PreparedStatement prepStmt = null;
-        Admin admin = new Admin(user,"");
+        Admin admin ;
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
             String sql = "SELECT * FROM admin WHERE Username=?";
             prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            prepStmt.setString(1,admin.getUsername());
+            prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
-            if (!rs.first()){ // rs empty
-                admin = null;
-            }else {
-                rs.first();
-                admin.setUsername(rs.getString(userField));
-                admin.setPassword(rs.getString(pwField));
-                admin.setIg(rs.getString("Instagram"));
-                admin.setFb(rs.getString("Facebook"));
-                admin.setWa(rs.getString("Whatsapp"));
-                admin.setDescrizioneC(rs.getString("DescrizioneC"));
-                admin.setNomeC(rs.getString("NomeC"));
-                admin.setVia(rs.getString("Via"));
-                admin.setProvincia(rs.getString("Provincia"));
-                //chiudo result set
-                rs.close();
-            }
+            admin= ImportAdminDAO.setAdmin(rs);
         } finally {
             if (prepStmt != null) {
                 prepStmt.close();
@@ -138,8 +110,8 @@ public class AdminDAO {
                 ref=null;
             }else {
                 rs.first();
-                String name = rs.getString(userField);
-                String pw = rs.getString(pwField);
+                String name = rs.getString("Username");
+                String pw = rs.getString("Password");
                 String admin = rs.getString("fk_UsernameA1");
                 ref = new Referee(name,pw,admin);
                 //chiudo result set
@@ -165,8 +137,8 @@ public class AdminDAO {
                 ref=null;
             }else {
                 rs.first();
-                String name = rs.getString(userField);
-                String pw = rs.getString(pwField);
+                String name = rs.getString("Username");
+                String pw = rs.getString("Password");
                 String admin = rs.getString("fk_UsernameA1");
                 ref = new Referee(name,pw,admin);
                 //chiudo result set
@@ -221,34 +193,17 @@ public class AdminDAO {
 
     //Da finire con adminDao
     public Admin getCampo(String nomeC)throws ClassNotFoundException,SQLException {
+        Admin admin= null;
         PreparedStatement prepStmt = null;
-        Admin admin = new Admin("","");
-        admin.setNomeC(nomeC);
         try{
             if(instance.conn == null || instance.conn.isClosed()) {
                 instance.getConn();
             }
             String sql = "SELECT * FROM admin WHERE NomeC=?";
             prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            prepStmt.setString(1,admin.getNomeC());
+            prepStmt.setString(1,nomeC);
             ResultSet rs = prepStmt.executeQuery();
-            if (!rs.first()){ // rs empty
-                admin = null;
-            }else {
-                rs.first();
-                admin.setUsername(rs.getString(userField));
-                admin.setPassword(rs.getString(pwField));
-                admin.setIg(rs.getString("Instagram"));
-                admin.setFb(rs.getString("Facebook"));
-                admin.setWa(rs.getString("Whatsapp"));
-                admin.setDescrizioneC(rs.getString("DescrizioneC"));
-                admin.setNomeC(rs.getString("NomeC"));
-                admin.setVia(rs.getString("Via"));
-                admin.setProvincia(rs.getString("Provincia"));
-
-                //chiudo result set
-                rs.close();
-            }
+            admin= ImportAdminDAO.setAdmin(rs);
         } finally {
             if (prepStmt != null)
                 prepStmt.close();
@@ -259,8 +214,9 @@ public class AdminDAO {
 
 
     public void getConn() throws ClassNotFoundException,SQLException {
-        Class.forName(driverClassName);
-        instance.conn = DriverManager.getConnection(dbUrl, user, passWord);
+        ImportDAO imp=new ImportDAO();
+        Class.forName(imp.getDriverClassName());
+        instance.conn = DriverManager.getConnection(imp.getDbUrl(), imp.getUser(), imp.getPassWord());
     }
 
     public void closeConn() throws SQLException {

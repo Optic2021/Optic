@@ -1,17 +1,48 @@
 
-Icom.example.optic.entities.Prenotazione#getFkUsername()Ljava/lang/String;y
-oF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java ("1*ò
-1y
-oF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (Ù
-Ö
-y
-oF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (
-%0java.lang.String"__id*;*9)
-'com.example.optic.entities.Prenotazione"
+Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¶ ¶(&"3*ú
+2w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¸ ¸(%Â¿
+w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¸ ¸(#$
+%1com.example.optic.dao.AdminDAO"com.example.optic.dao.AdminDAOÔ
+Ñ
+w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¸ ¸(%
+%2"(com.example.optic.dao.AdminDAO#<init>()V*&
+$
+%1com.example.optic.dao.AdminDAOÚ
+×
+w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¸ ¸(%. 
+com.example.optic.dao.AdminDAO"
 
-fkUsername"•
-y
-oF:/Studio/Universita/ISPW/orgWorkingCopy/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (
-
-%0java.lang.StringB+)
-'com.example.optic.entities.Prenotazione
+instance"__id*&
+$
+%1com.example.optic.dao.AdminDAO*
+1*á
+3w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java· ·(Ú
+×
+w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java· ·($
+%0com.example.optic.dao.AdminDAO"__id*0*. 
+com.example.optic.dao.AdminDAO"
+
+instance*
+2
+1*ý
+1w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.javaº º(Ú
+×
+w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.javaº º($
+%3com.example.optic.dao.AdminDAO"__id*0*. 
+com.example.optic.dao.AdminDAO"
+
+instance"¡
+w
+kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.javaº º(&
+$
+%3com.example.optic.dao.AdminDAOB"" 
+com.example.optic.dao.AdminDAO

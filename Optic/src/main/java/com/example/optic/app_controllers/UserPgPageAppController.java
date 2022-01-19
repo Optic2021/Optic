@@ -37,9 +37,9 @@ public class UserPgPageAppController {
         y.setUsername(x.getUsername());
         y.setPassword(x.getPassword());
         y.setDescrizione(x.getDescrizioneC());
-        y.setFb(x.getFb());
-        y.setIg(x.getIg());
-        y.setWa(x.getWa());
+        y.setFaceb(x.getFb());
+        y.setInsta(x.getIg());
+        y.setWhats(x.getWa());
         y.setNomeCampo(x.getNomeC());
         try {
             ref = dao.getRefereeFromAdmin(x.getUsername());

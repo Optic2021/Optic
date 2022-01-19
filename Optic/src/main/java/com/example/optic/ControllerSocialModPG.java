@@ -46,9 +46,9 @@ public class ControllerSocialModPG extends GraphicController{
         boolean res = true;
         AdminBean bean = new AdminBean();
         bean.setUsername(user.getText());
-        bean.setFb(urlFacebook.getText());
-        bean.setIg(urlInstagram.getText());
-        bean.setWa(numWhatsapp.getText());
+        bean.setFaceb(urlFacebook.getText());
+        bean.setInsta(urlInstagram.getText());
+        bean.setWhats(numWhatsapp.getText());
         //controllo se gli url sono validi
         res= ImportUrl.controlliUrl(urlInstagram,urlFacebook,numWhatsapp,false);
         if(res){

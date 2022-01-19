@@ -3,6 +3,7 @@ package com.example.optic;
 import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
+import com.example.optic.entities.Admin;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -34,7 +35,9 @@ public class ControllerBookSession extends GraphicController {
     public void tableview(){
         try {
             AdminBean campo=(AdminBean) table.getSelectionModel().getSelectedItem();
-            toView("views/userPgPage.fxml",user.getText(),campo);
+            if (!campo.getNomeCampo().isEmpty()){
+                toView("views/userPgPage.fxml",user.getText(),campo);
+            }
         }
         catch(Exception z){
             z.printStackTrace();
@@ -47,12 +50,12 @@ public class ControllerBookSession extends GraphicController {
         player.setUsername(user);
 
         try {
-            List<AdminBean> lista = BookSessionAppController.getCampi();
-            nomeC.setCellValueFactory(new PropertyValueFactory<>("nomeCampo"));
+            List<Admin> lista = BookSessionAppController.getCampi();
+            nomeC.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
             provincia.setCellValueFactory(new PropertyValueFactory<>("provincia"));
             int k=lista.size();
             int i=0;
-            AdminBean elem;
+            Admin elem;
             while(i<k){
                 elem=lista.get(i);
                 table.getItems().add(elem);
@@ -63,7 +66,5 @@ public class ControllerBookSession extends GraphicController {
             err.setContentText("Errore acquisizione campi");
             err.show();
         }
-
-
     }
 }

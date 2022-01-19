@@ -2,6 +2,7 @@ package com.example.optic.app_controllers;
 
 import com.example.optic.bean.AdminBean;
 import com.example.optic.dao.PlayerDAO;
+import com.example.optic.entities.Admin;
 import javafx.scene.control.Alert;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -14,14 +15,14 @@ public class BookSessionAppController {
         //does np
     }
 
-    public static List<AdminBean> getCampi(){
+    public static List<Admin> getCampi(){
         PlayerDAO dao = null;
         try {
             dao = PlayerDAO.getInstance();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        List<AdminBean> lista = new ArrayList<>();
+        List<Admin> lista = new ArrayList<>();
         try{
             lista=dao.getCampoList();
         } catch (SQLException throwables) {

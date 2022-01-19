@@ -73,7 +73,7 @@ public class ControllerModPGPage extends GraphicController {
     @Override
     public void setUserVariables(String user) {
         this.user.setText(user);
-        Admin a = null;
+        Admin a = new Admin();
         try {
             AdminBean admin = new AdminBean();
             admin.setUsername(user);
