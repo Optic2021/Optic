@@ -6,9 +6,7 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.dao.*;
 import com.example.optic.entities.*;
-import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserPgPageAppController {
@@ -19,11 +17,7 @@ public class UserPgPageAppController {
 
     public static AdminBean getCampoInfo(AdminBean campo){
         AdminDAO dao = null;
-        try {
-            dao = AdminDAO.getInstance();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        dao = AdminDAO.getInstance();
         String nomeC = campo.getNomeCampo();
         Admin x = null;
         try {
@@ -33,24 +27,25 @@ public class UserPgPageAppController {
         }
         AdminBean y = new AdminBean();
         Referee ref = null;
-
-        y.setUsername(x.getUsername());
-        y.setPassword(x.getPassword());
-        y.setDescrizione(x.getDescrizioneC());
-        y.setFaceb(x.getFb());
-        y.setInsta(x.getIg());
-        y.setWhats(x.getWa());
-        y.setNomeCampo(x.getNomeC());
-        try {
-            ref = dao.getRefereeFromAdmin(x.getUsername());
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if(x != null) {
+            y.setUsername(x.getUsername());
+            y.setPassword(x.getPassword());
+            y.setDescrizione(x.getDescrizioneC());
+            y.setFaceb(x.getFb());
+            y.setInsta(x.getIg());
+            y.setWhats(x.getWa());
+            y.setNomeCampo(x.getNomeC());
+            try {
+                ref = dao.getRefereeFromAdmin(x.getUsername());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            if (ref != null) {
+                y.setReferee(ref.getUsername());
+            }
+            y.setVia(x.getVia());
+            y.setProvincia(x.getProvincia());
         }
-        if(ref != null){
-            y.setReferee(ref.getUsername());
-        }
-        y.setVia(x.getVia());
-        y.setProvincia(x.getProvincia());
         return y;
     }
 
@@ -112,19 +107,15 @@ public class UserPgPageAppController {
         return  play;
     }
 
-    public static List<Player> getPlayersList(GiornataBean bean) throws IOException{
-        List<Player> list = new ArrayList<>();
-        try{
-            PlayerDAO dao = PlayerDAO.getInstance();
-            GiornataDAO playDao = new GiornataDAO(dao);
-            list = playDao.getPlayersList(bean.getIdPlay());
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+    public static List<Player> getPlayersList(GiornataBean bean){
+        List<Player> list;
+        PlayerDAO dao = PlayerDAO.getInstance();
+        GiornataDAO playDao = new GiornataDAO(dao);
+        list = playDao.getPlayersList(bean.getIdPlay());
         return list;
     }
 
-    public static void saveReview(ValutazioneBean val) throws IOException {
+    public static void saveReview(ValutazioneBean val) {
         PlayerDAO p= PlayerDAO.getInstance();
         ValutazioneDAO dao=new ValutazioneDAO(p);
         if(dao.getValutazione(val,0)){
@@ -134,16 +125,12 @@ public class UserPgPageAppController {
     }
 
     public static List<Valutazione> reviewList(AdminBean admin){
-        List<Valutazione> list = null;
-        try {
+        List<Valutazione> list;
 
-            PlayerDAO player= PlayerDAO.getInstance();
-            ValutazioneDAO dao= new ValutazioneDAO(player);
-            list=dao.getAdminReviewList1(admin.getNomeCampo());
+        PlayerDAO player= PlayerDAO.getInstance();
+        ValutazioneDAO dao= new ValutazioneDAO(player);
+        list=dao.getAdminReviewList1(admin.getNomeCampo());
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return list;
     }
 }

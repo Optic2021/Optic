@@ -4,8 +4,6 @@ import com.example.optic.entities.Admin;
 import com.example.optic.entities.Referee;
 import com.example.optic.utilities.ImportAdminDAO;
 import com.example.optic.utilities.ImportDAO;
-
-import java.io.IOException;
 import java.sql.*;
 
 public class AdminDAO {
@@ -127,20 +125,20 @@ public class AdminDAO {
     //recupero l'arbitro utilizzando il nome dello stesso
     public Referee getReferee(String user)throws SQLException {
         PreparedStatement prepStmt = null;
-        Referee ref;
+        Referee arbitro;
         try{
             String sql = "SELECT * FROM referee WHERE Username=?";
             prepStmt = instance.conn.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             prepStmt.setString(1,user);
             ResultSet rs = prepStmt.executeQuery();
             if (!rs.first()){ // rs empty
-                ref=null;
+                arbitro=null;
             }else {
                 rs.first();
-                String name = rs.getString("Username");
-                String pw = rs.getString("Password");
+                String nome = rs.getString("Username");
+                String pass = rs.getString("Password");
                 String admin = rs.getString("fk_UsernameA1");
-                ref = new Referee(name,pw,admin);
+                arbitro = new Referee(nome,pass,admin);
                 //chiudo result set
                 rs.close();
             }
@@ -148,7 +146,7 @@ public class AdminDAO {
             if (prepStmt != null)
                 prepStmt.close();
         }
-        return ref;
+        return arbitro;
     }
 
     public void setReferee(String admin, String ref) throws SQLException {
@@ -179,7 +177,7 @@ public class AdminDAO {
         }
     }
 
-    public static AdminDAO getInstance() throws IOException {
+    public static AdminDAO getInstance() {
         if(instance == null){
             instance = new AdminDAO();
         }

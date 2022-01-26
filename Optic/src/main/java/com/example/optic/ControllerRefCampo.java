@@ -92,14 +92,14 @@ public class ControllerRefCampo extends GraphicController{
     }
 
     //recupero la prossima giornata di gioco disponibile
-    public void getNextPlay() throws IOException {
-        ImportGetPlay.getPlay(idPlay, date, admin, activity,0);
+    public void getNextPlay() throws IOException, ParseException {
+        ImportGetPlay.getPlay(idPlay, date, admin, activity,0,0);
         this.populatePlayersTable();
     }
 
     //recupero la giornata di gioco precedente a quella mostrata
-    public void getLastPlay() throws IOException {
-        ImportGetPlay.getPlay(idPlay, date, admin, activity,1);
+    public void getLastPlay() throws IOException, ParseException {
+        ImportGetPlay.getPlay(idPlay, date, admin, activity,1,0);
         this.populatePlayersTable();
     }
 

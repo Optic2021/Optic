@@ -17,11 +17,7 @@ public class BookSessionAppController {
 
     public static List<Admin> getCampi(){
         PlayerDAO dao = null;
-        try {
-            dao = PlayerDAO.getInstance();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        dao = PlayerDAO.getInstance();
         List<Admin> lista = new ArrayList<>();
         try{
             lista=dao.getCampoList();

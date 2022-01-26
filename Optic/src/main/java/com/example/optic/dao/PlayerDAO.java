@@ -4,8 +4,6 @@ import com.example.optic.bean.ReportBean;
 import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
 import com.example.optic.utilities.ImportDAO;
-
-import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -108,7 +106,7 @@ public class PlayerDAO {
         return p;
     }
 
-    public static PlayerDAO getInstance() throws IOException {
+    public static PlayerDAO getInstance() {
         if(instance == null){
             instance = new PlayerDAO();
         }

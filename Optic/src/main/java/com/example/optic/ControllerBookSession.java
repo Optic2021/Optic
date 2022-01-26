@@ -34,9 +34,11 @@ public class ControllerBookSession extends GraphicController {
 
     public void tableview(){
         try {
-            AdminBean campo=(AdminBean) table.getSelectionModel().getSelectedItem();
-            if (!campo.getNomeCampo().isEmpty()){
-                toView("views/userPgPage.fxml",user.getText(),campo);
+            Admin campo=(Admin) table.getSelectionModel().getSelectedItem();
+            AdminBean bean = new AdminBean();
+            bean.setNomeCampo(campo.getNomeC());
+            if (!bean.getNomeCampo().isEmpty()){
+                toView("views/userPgPage.fxml",user.getText(),bean);
             }
         }
         catch(Exception z){
@@ -47,7 +49,7 @@ public class ControllerBookSession extends GraphicController {
     public void populateCampiTable(String user) {
         //da finire
         PlayerBean player = new PlayerBean();
-        player.setUsername(user);
+        player.setBUsername(user);
 
         try {
             List<Admin> lista = BookSessionAppController.getCampi();

@@ -9,7 +9,6 @@ import com.example.optic.entities.Event;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.Giornata;
-import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,30 +23,26 @@ public class UserProfileAppController {
         Player player = null;
         try {
             PlayerDAO dao = PlayerDAO.getInstance();
-            player = dao.getPlayer(p.getUsername());
+            player = dao.getPlayer(p.getBUsername());
         } catch (Exception e) {
             e.printStackTrace();
         }
         return player;
     }
 
-    public static List<Valutazione> getReviewList(PlayerBean p) throws IOException {
-        List<Valutazione> list = new ArrayList<>();
+    public static List<Valutazione> getReviewList(PlayerBean p) {
+        List<Valutazione> list;
         //utilizzo la dao del player dove è creata la connessisone
-        try {
-            PlayerDAO daoP = PlayerDAO.getInstance();
-            ValutazioneDAO dao = new ValutazioneDAO(daoP);
-            list = dao.getPlayerReviewList(p.getUsername());
-        }catch (IOException e){
-           e.printStackTrace();
-        }
+        PlayerDAO daoP = PlayerDAO.getInstance();
+        ValutazioneDAO dao = new ValutazioneDAO(daoP);
+        list = dao.getPlayerReviewList(p.getBUsername());
         return list;
     }
 
     public static void setInfo(PlayerBean p){
         try {
             PlayerDAO player = PlayerDAO.getInstance();
-            player.setPlayerInfo(p.getUsername(),p.getDescrizione(),p.getFb(),p.getIg());
+            player.setPlayerInfo(p.getBUsername(),p.getBDescrizione(),p.getBFb(),p.getBIg());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -55,49 +50,37 @@ public class UserProfileAppController {
 
     public static void saveReview(ValutazioneBean val){
         PlayerDAO playerDAO= null;
-        try {
-            playerDAO = PlayerDAO.getInstance();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        playerDAO = PlayerDAO.getInstance();
         ValutazioneDAO dao = new ValutazioneDAO(playerDAO);
         if(dao.getValutazione(val,1)){
             dao.deleteValutazione(val,1);
         }
         dao.saveReview(val,1);
     }
-    public static List<Giornata> getRecentPlayList(UserBean user){
-        List<Giornata> list = new ArrayList<>();
-        try{
-            PlayerDAO daoP = PlayerDAO.getInstance();
-            GiornataDAO dao = new GiornataDAO(daoP);
-            list = dao.getRecentPlayList(user.getUsername());
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+    public static List<Giornata> getRecentPlayList(UserBean user) throws SQLException {
+        List<Giornata> list;
+        PlayerDAO daoP = PlayerDAO.getInstance();
+        GiornataDAO dao = new GiornataDAO(daoP);
+        list = dao.getRecentPlayList(user.getUsername());
         return list;
     }
 
-    public static List<Event> getEventList() throws IOException{
+    public static List<Event> getEventList(){
         List<Event> list = new ArrayList<>();
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
             list = eventDao.getEventList();
-        }catch (IOException | SQLException e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return list;
     }
 
     public static List<ReportBean> getReportList(String user) {
-        List<ReportBean> list = new ArrayList<>();
-        try{
-            PlayerDAO dao = PlayerDAO.getInstance();
-            list = dao.getPlayerReportList(user);
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        List<ReportBean> list;
+        PlayerDAO dao = PlayerDAO.getInstance();
+        list = dao.getPlayerReportList(user);
         return list;
     }
 }

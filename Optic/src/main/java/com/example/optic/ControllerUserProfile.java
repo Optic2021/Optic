@@ -22,6 +22,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class ControllerUserProfile extends GraphicController{
@@ -50,7 +51,7 @@ public class ControllerUserProfile extends GraphicController{
         Player p = null;
         try {
             PlayerBean player = new PlayerBean();
-            player.setUsername(user);
+            player.setBUsername(user);
             this.populateReviewList(user);
             this.populateGamesTable(user);
             p = UserProfileAppController.getPlayer(player);
@@ -96,21 +97,17 @@ public class ControllerUserProfile extends GraphicController{
     //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
     public void populateReviewList(String user) {
         PlayerBean player = new PlayerBean();
-        player.setUsername(user);
-        List<Valutazione> list = null;
-        try {
-            list = UserProfileAppController.getReviewList(player);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        int stars=ImportList.populateReviewList(list,reviews,nVal);
+        player.setBUsername(user);
+        List<Valutazione> reviewList = null;
+        reviewList = UserProfileAppController.getReviewList(player);
+        int stars=ImportList.populateReviewList(reviewList,reviews,nVal);
         if(stars>0){
             setStars(stars);
         }
     }
 
     //popolo la tabella con lo storico delle partite del player
-    public void populateGamesTable(String user){
+    public void populateGamesTable(String user) throws SQLException {
         UserBean player = new UserBean();
         player.setUsername(user);
         date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
@@ -169,10 +166,10 @@ public class ControllerUserProfile extends GraphicController{
         ImportUrl.controlliUrl(urlInstagram,urlFacebook,null,true);
         if(res){
             PlayerBean p = new PlayerBean();
-            p.setUsername(user.getText());
-            p.setDescrizione(desc);
-            p.setFb(fb);
-            p.setIg(ig);
+            p.setBUsername(user.getText());
+            p.setBDescrizione(desc);
+            p.setBFb(fb);
+            p.setBIg(ig);
             UserProfileAppController.setInfo(p);
 
             description.setEditable(false);

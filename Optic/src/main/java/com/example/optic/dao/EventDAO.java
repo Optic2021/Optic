@@ -37,6 +37,7 @@ public class EventDAO {
         PreparedStatement prepStmt = null;
         String evento;
         String desc;
+        ResultSet rs;
         int numGiocatori;
         try{
             if (daoP!=null){
@@ -46,18 +47,20 @@ public class EventDAO {
             } else if(daoR != null){
                 prepStmt = this.daoR.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             }
-            ResultSet rs = prepStmt.executeQuery();
-            if(rs.first()){
-                rs.first();
-                do{
-                    evento = rs.getString("Nome");
-                    desc = rs.getString("Descrizione");
-                    numGiocatori = rs.getInt("GiocatoriCons");
-                    Event e = new Event(evento,desc,numGiocatori);
-                    list.add(e);
-                }while(rs.next());
+            if(prepStmt != null) {
+                rs = prepStmt.executeQuery();
+                if (rs.first()) {
+                    rs.first();
+                    do {
+                        evento = rs.getString("Nome");
+                        desc = rs.getString("Descrizione");
+                        numGiocatori = rs.getInt("GiocatoriCons");
+                        Event e = new Event(evento, desc, numGiocatori);
+                        list.add(e);
+                    } while (rs.next());
+                }
+                rs.close();
             }
-            rs.close();
         } finally {
             if (prepStmt != null)
                 prepStmt.close();

@@ -1,17 +1,17 @@
 
-<com.example.optic.entities.Foto#getImmagine()Ljava/sql/Blob;v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java ("1*Ù
-1v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java (É
-Æ
-v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java (
+<com.example.optic.entities.Foto#getImmagine()Ljava/sql/Blob;q
+gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java ("1*Ê
+1q
+gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java (Ä
+Á
+q
+gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java (
 %0java.sql.Blob"__id*1*/!
 com.example.optic.entities.Foto"
 
-immagine"
-v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java (
+immagine"Š
+q
+gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Foto.java (
 
 %0java.sql.BlobB#!
 com.example.optic.entities.Foto

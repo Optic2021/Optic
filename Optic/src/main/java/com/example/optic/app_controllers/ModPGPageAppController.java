@@ -113,28 +113,20 @@ public class ModPGPageAppController {
         return ref;
     }
 
-    public static List<Valutazione> getReviewList(AdminBean a) throws IOException {
-        List<Valutazione> list = new ArrayList<>();
+    public static List<Valutazione> getReviewList(AdminBean a) {
+        List<Valutazione> list;
         //utilizzo la dao dell'admin dove è creata la connessisone
-        try {
-            AdminDAO daoA = AdminDAO.getInstance();
-            ValutazioneDAO dao = new ValutazioneDAO(daoA);
-            list = dao.getAdminReviewList(a.getUsername());
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        AdminDAO daoA = AdminDAO.getInstance();
+        ValutazioneDAO dao = new ValutazioneDAO(daoA);
+        list = dao.getAdminReviewList(a.getUsername());
         return list;
     }
 
     public static List<Player> getPlayersList(GiornataBean bean) {
-        List<Player> list = new ArrayList<>();
-        try{
-            AdminDAO dao = AdminDAO.getInstance();
-            GiornataDAO playDao = new GiornataDAO(dao);
-            list = playDao.getPlayersList(bean.getIdPlay());
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        List<Player> list;
+        AdminDAO dao = AdminDAO.getInstance();
+        GiornataDAO playDao = new GiornataDAO(dao);
+        list = playDao.getPlayersList(bean.getIdPlay());
         return list;
     }
 
@@ -144,8 +136,6 @@ public class ModPGPageAppController {
             AdminDAO dao = AdminDAO.getInstance();
             EventDAO eventDao = new EventDAO(dao);
             list = eventDao.getEventList();
-        }catch (IOException e){
-            e.printStackTrace();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -154,30 +144,22 @@ public class ModPGPageAppController {
 
     public static boolean isDateValid(GiornataBean bean){
         boolean res = true;
-        try{
-            AdminDAO dao = AdminDAO.getInstance();
-            GiornataDAO playDao = new GiornataDAO(dao);
-            String admin = bean.getAdmin();
-            Calendar cal = bean.getData();
-            res = playDao.isDateValid(admin,cal);
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        AdminDAO dao = AdminDAO.getInstance();
+        GiornataDAO playDao = new GiornataDAO(dao);
+        String admin = bean.getAdmin();
+        Calendar cal = bean.getData();
+        res = playDao.isDateValid(admin,cal);
         return res;
     }
 
 
     public static void insertPlay(GiornataBean bean){
-        try{
-            AdminDAO dao = AdminDAO.getInstance();
-            GiornataDAO playDao = new GiornataDAO(dao);
-            String event = bean.getEvento();
-            String admin = bean.getAdmin();
-            Calendar cal = bean.getData();
-            playDao.insertPlay(admin,event,cal);
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        AdminDAO dao = AdminDAO.getInstance();
+        GiornataDAO playDao = new GiornataDAO(dao);
+        String event = bean.getEvento();
+        String admin = bean.getAdmin();
+        Calendar cal = bean.getData();
+        playDao.insertPlay(admin,event,cal);
     }
 
     //setto all'admin (bean) il corrispettivo arbitro (bean2)

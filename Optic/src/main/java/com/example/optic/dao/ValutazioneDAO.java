@@ -26,16 +26,16 @@ public class ValutazioneDAO {
 
     public List<Valutazione> getPlayerReviewList(String user){
         ArrayList<Valutazione> list = new ArrayList<>();
-        PreparedStatement prepStmt = null;
+        PreparedStatement prepStmt2 = null;
         String descrizione;
         String recensore;
         String recensito;
         int stelle;
         try{
             String sql = "SELECT * FROM valutazione WHERE fk_UsernameP2 =?";
-            prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            prepStmt.setString(1,user);
-            ResultSet rs = prepStmt.executeQuery();
+            prepStmt2 = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            prepStmt2.setString(1,user);
+            ResultSet rs = prepStmt2.executeQuery();
             if(rs.first()){
                 rs.first();
                 do{
@@ -52,8 +52,8 @@ public class ValutazioneDAO {
             e.printStackTrace();
         }finally {
             try {
-                if (prepStmt != null)
-                    prepStmt.close();
+                if (prepStmt2 != null)
+                    prepStmt2.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -88,16 +88,16 @@ public class ValutazioneDAO {
 
     public List<Valutazione> getAdminReviewList(String user){
         ArrayList<Valutazione> list = new ArrayList<>();
-        PreparedStatement prepStmt = null;
+        PreparedStatement prepStmt3 = null;
         try{
             String sql = "SELECT * FROM valutazione WHERE fk_UsernameA =?";
             if (daoA==null){
-                prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+                prepStmt3 = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             }else {
-                prepStmt = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+                prepStmt3 = this.daoA.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             }
-            prepStmt.setString(1,user);
-            ResultSet rs = prepStmt.executeQuery();
+            prepStmt3.setString(1,user);
+            ResultSet rs = prepStmt3.executeQuery();
             if(rs.first()){
                 rs.first();
                 do{
@@ -114,8 +114,8 @@ public class ValutazioneDAO {
             e.printStackTrace();
         }finally {
             try {
-                if (prepStmt != null)
-                    prepStmt.close();
+                if (prepStmt3 != null)
+                    prepStmt3.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -125,16 +125,15 @@ public class ValutazioneDAO {
 
     public void saveReview(ValutazioneBean val,int campoPlayer){
         PreparedStatement prepStmt = null;
-        PreparedStatement prepStmt2 = null;
-        ResultSet rs = null;
+        ResultSet rs2 = null;
         String sql1;
         try {
             if(campoPlayer==0) {
                 String sql = selectUsername;
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 prepStmt.setString(1, val.getRiceve());
-                rs = prepStmt.executeQuery();
-                rs.first();
+                rs2 = prepStmt.executeQuery();
+                rs2.first();
                 //in teoria impossibile che non trovo admin
                 sql1 = "INSERT into valutazione (Descrizione,Stelle,fk_UsernameP1,fk_UsernameA) values (?,?,?,?)";
             }else{
@@ -146,18 +145,17 @@ public class ValutazioneDAO {
             prepStmt.setString(3,val.getUsernameP1());
             //Campo inteso come username admin
             if(campoPlayer==0) {
-                prepStmt.setString(4, rs.getString(userField));
+                prepStmt.setString(4, rs2.getString(userField));
             }else{
                 prepStmt.setString(4, val.getRiceve());
-
             }
             prepStmt.executeUpdate();
             if(campoPlayer == 1){
                 String sql3 = "update player set Valutazione = (select avg(stelle) as val from valutazione where fk_UsernameP2 = ?) where Username = ?";
-                prepStmt2 = this.daoP.getConnection().prepareStatement(sql3);
-                prepStmt2.setString(1, val.getRiceve());
-                prepStmt2.setString(2, val.getRiceve());
-                prepStmt2.executeUpdate();
+                prepStmt = this.daoP.getConnection().prepareStatement(sql3);
+                prepStmt.setString(1, val.getRiceve());
+                prepStmt.setString(2, val.getRiceve());
+                prepStmt.executeUpdate();
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -165,8 +163,6 @@ public class ValutazioneDAO {
             try {
                 if (prepStmt != null)
                     prepStmt.close();
-                if (prepStmt2 != null)
-                    prepStmt2.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -219,7 +215,7 @@ public class ValutazioneDAO {
     public void deleteValutazione(ValutazioneBean val,int campoPlayer) {
         //restituisce una valutazione dato player e campo
         PreparedStatement prepStmt = null;
-        ResultSet rs = null;
+        ResultSet resSet = null;
         String sql1;
         try {
             //get usernameAdmin
@@ -227,15 +223,15 @@ public class ValutazioneDAO {
                 String sql = selectUsername;
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 prepStmt.setString(1, val.getRiceve());
-                rs = prepStmt.executeQuery();
-                rs.first();
+                resSet = prepStmt.executeQuery();
+                resSet.first();
                 sql1 = "DELETE from Valutazione where fk_UsernameP1=? AND fk_UsernameA=?";
             }else{
                 sql1 = "DELETE from Valutazione where fk_UsernameP1=? AND fk_UsernameP2=?";
             }
             prepStmt = this.daoP.getConnection().prepareStatement(sql1, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             if (campoPlayer==0) {
-                prepStmt.setString(2, rs.getString(userField));
+                prepStmt.setString(2, resSet.getString(userField));
             }else{
                 prepStmt.setString(2, val.getRiceve());
             }

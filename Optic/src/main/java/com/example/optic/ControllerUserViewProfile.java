@@ -5,6 +5,8 @@ import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;
+
+import java.sql.SQLException;
 import java.util.List;
 
 import com.example.optic.utilities.ImportList;
@@ -63,7 +65,7 @@ public class ControllerUserViewProfile extends GraphicController{
         Player p = null;
         try {
             PlayerBean player = new PlayerBean();
-            player.setUsername(prof);
+            player.setBUsername(prof);
             this.populateReviewList(prof);
             this.populateGamesTable();
             p = UserProfileAppController.getPlayer(player);
@@ -85,13 +87,9 @@ public class ControllerUserViewProfile extends GraphicController{
     //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
     public void populateReviewList(String user){
         PlayerBean player = new PlayerBean();
-        player.setUsername(user);
+        player.setBUsername(user);
         List<Valutazione> list = null;
-        try {
-            list = UserProfileAppController.getReviewList(player);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        list = UserProfileAppController.getReviewList(player);
         int stars= ImportList.populateReviewList(list,reviews,nVal);
         if(stars>0){
             setStars(stars);
@@ -99,18 +97,24 @@ public class ControllerUserViewProfile extends GraphicController{
     }
 
     //popolo la tabella con lo storico delle partite del player
-    public void populateGamesTable(){
+    public void populateGamesTable() throws SQLException {
         UserBean player = new UserBean();
         String[] app = profile.getText().split(" ");
         String username=app[1];
         player.setUsername(username);
         date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
         playground.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
-        List<Giornata> list = UserProfileAppController.getRecentPlayList(player);
+        List<Giornata> pList = UserProfileAppController.getRecentPlayList(player);
         Giornata g = null;
-        for(int i = 0;i < list.size(); i++){
-            g = list.get(i);
+        for(int i = 0;i < pList.size(); i++){
+            g = pList.get(i);
             partite.getItems().add(g);
+        }
+    }
+
+    public void instagram() throws IOException {
+        if(!urlInstagram.getText().isEmpty()) {
+            Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + this.urlInstagram.getText()});
         }
     }
 
@@ -120,11 +124,6 @@ public class ControllerUserViewProfile extends GraphicController{
         }
     }
 
-    public void instagram() throws IOException {
-        if(!urlInstagram.getText().isEmpty()) {
-            Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + this.urlInstagram.getText()});
-        }
-    }
     //Set della visibilita delle stelle in base al valore
     public void reportList(){
         try {

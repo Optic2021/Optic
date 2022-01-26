@@ -64,83 +64,83 @@ public class GraphicController {
     }
 
     public void toView(String view,String user, String viewer) throws IOException {
-        Stage obj = (Stage) id.getScene().getWindow();
+        Stage obj1 = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
+        Scene scene1 = new Scene(fxmlLoader.load(), 1200, 720);
         GraphicController controller = fxmlLoader.getController();
         String usr=user+" "+viewer;
         controller.setUserVariables(usr);
-        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
+        scene1.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
                 xOffset = event.getSceneX();
                 yOffset = event.getSceneY();
             }
         });
-        scene.setOnMouseDragged(new EventHandler<MouseEvent>(){
+        scene1.setOnMouseDragged(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
-                obj.setX(event.getScreenX() - xOffset);
-                obj.setY(event.getScreenY() - yOffset);
+                obj1.setX(event.getScreenX() - xOffset);
+                obj1.setY(event.getScreenY() - yOffset);
             }
         });
-        scene.setFill(Color.TRANSPARENT);
-        obj.setScene(scene);
-        obj.show();
+        scene1.setFill(Color.TRANSPARENT);
+        obj1.setScene(scene1);
+        obj1.show();
     }
 
     public void toView(String view, String usr) throws IOException {
-        Stage obj = (Stage) id.getScene().getWindow();
+        Stage obj2 = (Stage) id.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
+        Scene scene2 = new Scene(fxmlLoader.load(), 1200, 720);
         GraphicController controller = fxmlLoader.getController();
         controller.setUserVariables(usr);
-        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
+        scene2.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
                 xOffset = event.getSceneX();
                 yOffset = event.getSceneY();
             }
         });
-        scene.setOnMouseDragged(new EventHandler<MouseEvent>(){
+        scene2.setOnMouseDragged(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
-                obj.setX(event.getScreenX() - xOffset);
-                obj.setY(event.getScreenY() - yOffset);
+                obj2.setX(event.getScreenX() - xOffset);
+                obj2.setY(event.getScreenY() - yOffset);
             }
         });
-        scene.setFill(Color.TRANSPARENT);
-        obj.setScene(scene);
-        obj.show();
+        scene2.setFill(Color.TRANSPARENT);
+        obj2.setScene(scene2);
+        obj2.show();
     }
 
     public void toView(String view, String usr, AdminBean campo)throws IOException{
-        Stage obj = (Stage) id.getScene().getWindow();
+        Stage obj3 = (Stage) id.getScene().getWindow();
 
         FXMLLoader fxmlLoader = new FXMLLoader(Optic.class.getResource(view));
 
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
+        Scene scene3 = new Scene(fxmlLoader.load(), 1200, 720);
         GraphicController controller = fxmlLoader.getController();
 
         usr = usr+"/"+campo.getNomeCampo();
         controller.setUserVariables(usr);
 
-        scene.setOnMousePressed(new EventHandler<MouseEvent>(){
+        scene3.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
                 xOffset = event.getSceneX();
                 yOffset = event.getSceneY();
             }
         });
-        scene.setOnMouseDragged(new EventHandler<MouseEvent>(){
+        scene3.setOnMouseDragged(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
-                obj.setX(event.getScreenX() - xOffset);
-                obj.setY(event.getScreenY() - yOffset);
+                obj3.setX(event.getScreenX() - xOffset);
+                obj3.setY(event.getScreenY() - yOffset);
             }
         });
-        scene.setFill(Color.TRANSPARENT);
-        obj.setScene(scene);
-        obj.show();
+        scene3.setFill(Color.TRANSPARENT);
+        obj3.setScene(scene3);
+        obj3.show();
     }
 }

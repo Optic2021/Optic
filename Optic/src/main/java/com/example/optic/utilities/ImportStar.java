@@ -4,6 +4,9 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ImportStar {
 
     private ImportStar(){/*Does nothing*/}
@@ -11,38 +14,19 @@ public class ImportStar {
     public static void starEnter(MouseEvent e, Label star1, Label star2, Label star3, Label star4, Label star5){
         Label l = (Label)e.getSource();
         String idnt = l.getId();
+        List<Label> labels = new ArrayList<>();
+        labels.add(star1);
+        labels.add(star2);
+        labels.add(star3);
+        labels.add(star4);
+        labels.add(star5);
         int starN = Integer.parseInt(idnt.substring(idnt.length() - 1));
-        switch(starN){
-            case 2: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 3: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 4: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(229,190,51));
-                star5.setTextFill(Color.rgb(28,28,28));
-                break;
-            case 5: star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(229,190,51));
-                star3.setTextFill(Color.rgb(229,190,51));
-                star4.setTextFill(Color.rgb(229,190,51));
-                star5.setTextFill(Color.rgb(229,190,51));
-                break;
-            default:
-                star1.setTextFill(Color.rgb(229,190,51));
-                star2.setTextFill(Color.rgb(28,28,28));
-                star3.setTextFill(Color.rgb(28,28,28));
-                star4.setTextFill(Color.rgb(28,28,28));
-                star5.setTextFill(Color.rgb(28,28,28));
+        for(int i = 0; i < 5; i++){
+            if(i < starN){
+                labels.get(i).setTextFill(Color.rgb(229,190,51));
+            }else{
+                labels.get(i).setTextFill(Color.rgb(28,28,28));
+            }
         }
     }
     //Colora le stelle quando il mouse esce dalla label

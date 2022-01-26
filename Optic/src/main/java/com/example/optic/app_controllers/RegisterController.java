@@ -8,7 +8,6 @@ import com.example.optic.entities.Admin;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Referee;
 import com.example.optic.utilities.ImportCloseConn;
-import java.io.IOException;
 import java.sql.SQLException;
 
 public class RegisterController {
@@ -17,7 +16,7 @@ public class RegisterController {
         //does np
     }
 
-    public static boolean isUsernameUsed(UserBean user, int userType) throws SQLException, IOException, ClassNotFoundException {
+    public static boolean isUsernameUsed(UserBean user, int userType) throws SQLException, ClassNotFoundException {
         boolean res = false;
         switch (userType){
             case 1 ->   {

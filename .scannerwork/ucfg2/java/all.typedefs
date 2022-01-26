@@ -59,10 +59,9 @@ getNomeC()<com.example.optic.bean.UserBean#getNomeC()Ljava/lang/String;]
 setUsername(Ljava/lang/String;)@com.example.optic.bean.UserBean#setUsername(Ljava/lang/String;)V÷
 java.lang.Iterablejava.lang.Objectd
 &forEach(Ljava/util/function/Consumer;):java.lang.Iterable#forEach(Ljava/util/function/Consumer;)VH
-spliterator()7java.lang.Iterable#spliterator()Ljava/util/Spliterator;¬
+spliterator()7java.lang.Iterable#spliterator()Ljava/util/Spliterator;√
 java.lang.Throwablejava.lang.Objectjava.io.Serializable;
-printStackTrace()&java.lang.Throwable#printStackTrace()V}
-2validateSuppressedExceptionsList(Ljava/util/List;)Gjava.lang.Throwable#validateSuppressedExceptionsList(Ljava/util/List;)IZ
+printStackTrace()&java.lang.Throwable#printStackTrace()VZ
 getOurStackTrace()Djava.lang.Throwable#getOurStackTrace()[Ljava/lang/StackTraceElement;¡
 ìprintEnclosedStackTrace(Ljava/lang/Throwable$PrintStreamOrWriter;[Ljava/lang/StackTraceElement;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)®java.lang.Throwable#printEnclosedStackTrace(Ljava/lang/Throwable$PrintStreamOrWriter;[Ljava/lang/StackTraceElement;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V>
 
@@ -139,23 +138,23 @@ getAdmin()@com.example.optic.bean.GiornataBean#getAdmin()Ljava/lang/String;N
 getIdPlay()0com.example.optic.bean.GiornataBean#getIdPlay()Ic
 setEvento(Ljava/lang/String;)Bcom.example.optic.bean.GiornataBean#setEvento(Ljava/lang/String;)Vc
 setData(Ljava/util/Calendar;)Bcom.example.optic.bean.GiornataBean#setData(Ljava/util/Calendar;)VG
-getnGiocatori()4com.example.optic.bean.GiornataBean#getnGiocatori()I 
+getnGiocatori()4com.example.optic.bean.GiornataBean#getnGiocatori()Iﬁ
 
-!com.example.optic.bean.PlayerBeanjava.lang.Objectjava.io.Serializablee
-setPassword(Ljava/lang/String;)Bcom.example.optic.bean.PlayerBean#setPassword(Ljava/lang/String;)VY
-setFb(Ljava/lang/String;)<com.example.optic.bean.PlayerBean#setFb(Ljava/lang/String;)VR
-getUsername()Acom.example.optic.bean.PlayerBean#getUsername()Ljava/lang/String;G
-getValutazione()3com.example.optic.bean.PlayerBean#getValutazione()Ik
-"setDescrizione(Ljava/lang/String;)Ecom.example.optic.bean.PlayerBean#setDescrizione(Ljava/lang/String;)V_
-setStato(Ljava/lang/String;)?com.example.optic.bean.PlayerBean#setStato(Ljava/lang/String;)VI
-setValutazione(I)4com.example.optic.bean.PlayerBean#setValutazione(I)VX
-getDescrizione()Dcom.example.optic.bean.PlayerBean#getDescrizione()Ljava/lang/String;F
-getFb();com.example.optic.bean.PlayerBean#getFb()Ljava/lang/String;e
-setUsername(Ljava/lang/String;)Bcom.example.optic.bean.PlayerBean#setUsername(Ljava/lang/String;)VR
-getPassword()Acom.example.optic.bean.PlayerBean#getPassword()Ljava/lang/String;7
-<init>()+com.example.optic.bean.PlayerBean#<init>()VF
-getIg();com.example.optic.bean.PlayerBean#getIg()Ljava/lang/String;Y
-setIg(Ljava/lang/String;)<com.example.optic.bean.PlayerBean#setIg(Ljava/lang/String;)VL
+!com.example.optic.bean.PlayerBeanjava.lang.Objectjava.io.Serializablem
+#setBDescrizione(Ljava/lang/String;)Fcom.example.optic.bean.PlayerBean#setBDescrizione(Ljava/lang/String;)V[
+setBFb(Ljava/lang/String;)=com.example.optic.bean.PlayerBean#setBFb(Ljava/lang/String;)VG
+getValutazione()3com.example.optic.bean.PlayerBean#getValutazione()I_
+setStato(Ljava/lang/String;)?com.example.optic.bean.PlayerBean#setStato(Ljava/lang/String;)VH
+getBFb()<com.example.optic.bean.PlayerBean#getBFb()Ljava/lang/String;I
+setValutazione(I)4com.example.optic.bean.PlayerBean#setValutazione(I)VZ
+getBDescrizione()Ecom.example.optic.bean.PlayerBean#getBDescrizione()Ljava/lang/String;H
+getBIg()<com.example.optic.bean.PlayerBean#getBIg()Ljava/lang/String;[
+setBIg(Ljava/lang/String;)=com.example.optic.bean.PlayerBean#setBIg(Ljava/lang/String;)VT
+getBPassword()Bcom.example.optic.bean.PlayerBean#getBPassword()Ljava/lang/String;7
+<init>()+com.example.optic.bean.PlayerBean#<init>()Vg
+ setBUsername(Ljava/lang/String;)Ccom.example.optic.bean.PlayerBean#setBUsername(Ljava/lang/String;)Vg
+ setBPassword(Ljava/lang/String;)Ccom.example.optic.bean.PlayerBean#setBPassword(Ljava/lang/String;)VT
+getBUsername()Bcom.example.optic.bean.PlayerBean#getBUsername()Ljava/lang/String;L
 
 getStato()>com.example.optic.bean.PlayerBean#getStato()Ljava/lang/String;¬
 #com.example.optic.GraphicControllerjava.lang.ObjectÅ
@@ -1326,19 +1325,19 @@ NsetReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)
 2getNextPlay(Lcom/example/optic/bean/GiornataBean;)êcom.example.optic.app_controllers.ModPGPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;T
 closeConn()Ecom.example.optic.app_controllers.ModPGPageAppController#closeConn()V
 Callbackjava.lang.Object8
-,Lcom/example/optic/ControllerEventList$1656;Callback
+,Lcom/example/optic/ControllerEventList$1524;Callback
 ListCelljava.lang.ObjectÇ
-,Lcom/example/optic/ControllerEventList$1833;ListCellH
+,Lcom/example/optic/ControllerEventList$1701;ListCellH
 updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)V 
 EventHandlerjava.lang.Object:
 *Lcom/example/optic/GraphicController$1466;EventHandler:
 *Lcom/example/optic/GraphicController$1726;EventHandler:
-*Lcom/example/optic/GraphicController$2544;EventHandler:
-*Lcom/example/optic/GraphicController$2804;EventHandler:
-*Lcom/example/optic/GraphicController$3570;EventHandler:
-*Lcom/example/optic/GraphicController$3830;EventHandler:
-*Lcom/example/optic/GraphicController$4664;EventHandler:
-*Lcom/example/optic/GraphicController$4924;EventHandler†
+*Lcom/example/optic/GraphicController$2547;EventHandler:
+*Lcom/example/optic/GraphicController$2808;EventHandler:
+*Lcom/example/optic/GraphicController$3583;EventHandler:
+*Lcom/example/optic/GraphicController$3844;EventHandler:
+*Lcom/example/optic/GraphicController$4687;EventHandler:
+*Lcom/example/optic/GraphicController$4948;EventHandler†
 'com.example.optic.entities.Prenotazionejava.lang.Objecto
 !setFkUsername(Ljava/lang/String;)Jcom.example.optic.entities.Prenotazione#setFkUsername(Ljava/lang/String;)Vs
 #setFkIdGiornata(Ljava/lang/String;)Lcom.example.optic.entities.Prenotazione#setFkIdGiornata(Ljava/lang/String;)V=

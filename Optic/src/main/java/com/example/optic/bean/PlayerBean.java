@@ -10,27 +10,27 @@ public class PlayerBean implements java.io.Serializable{
     private String stato = "nullo";
 
     //metodi set e get
-    public String getUsername() {
+    public String getBUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setBUsername(String username) {
         this.username = username;
     }
 
-    public String getPassword() {
+    public String getBPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setBPassword(String password) {
         this.password = password;
     }
 
-    public String getDescrizione() {
+    public String getBDescrizione() {
         return descrizione;
     }
 
-    public void setDescrizione(String descrizione) {
+    public void setBDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
 
@@ -42,19 +42,19 @@ public class PlayerBean implements java.io.Serializable{
         this.valutazione = valutazione;
     }
 
-    public String getIg() {
+    public String getBIg() {
         return ig;
     }
 
-    public void setIg(String ig) {
+    public void setBIg(String ig) {
         this.ig = ig;
     }
 
-    public String getFb() {
+    public String getBFb() {
         return fb;
     }
 
-    public void setFb(String fb) {
+    public void setBFb(String fb) {
         this.fb = fb;
     }
 

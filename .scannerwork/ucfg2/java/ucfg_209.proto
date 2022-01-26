@@ -1,89 +1,61 @@
 
-com.example.optic.app_controllers.UserProfileAppController#getRecentPlayList(Lcom/example/optic/bean/UserBean;)Ljava/util/List;í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaE! E(2"8*Ó
-2í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaJ J(<Œ
-À
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaJ J(<
-listjava.util.List"__id*
-
-%6java.util.List*
-1*î
-4í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaJ J(<ÙÒ
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaJ J(<
-%6java.util.List"Wcom.example.optic.dao.GiornataDAO#getRecentPlayList(Ljava/lang/String;)Ljava/util/List;**
+com.example.optic.app_controllers.UserProfileAppController#getRecentPlayList(Lcom/example/optic/bean/UserBean;)Ljava/util/List;ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java<! <(2"1*ñ
+1ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java= =(π
+∂
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java= =(
+listjava.util.List"__id*
+""Ø
+¨
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java> >(0%
+%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
+com.example.optic.dao.PlayerDAOÎ
+Ë
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java> >(1'
+daoPcom.example.optic.dao.PlayerDAO"__id*'
+%
+%0com.example.optic.dao.PlayerDAOﬂ‹
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java? ?()'
+%1!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAOΩ
+∫
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java? ?(/
+%2"Lcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)V*)
+'
+%1!com.example.optic.dao.GiornataDAO*)
+'
+daoPcom.example.optic.dao.PlayerDAOÓ
+Î
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java? ?(0(
+dao!com.example.optic.dao.GiornataDAO"__id*)
+'
+%1!com.example.optic.dao.GiornataDAO¶£
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java@% @(7
+%3java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*)
+'
+usercom.example.optic.bean.UserBean2getUsername()ÔÏ
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java@ @(8
+%4java.util.List"Wcom.example.optic.dao.GiornataDAO#getRecentPlayList(Ljava/lang/String;)Ljava/util/List;**
 (
 dao!com.example.optic.dao.GiornataDAO*
 
-%5java.lang.String2%getRecentPlayList(Ljava/lang/String;)*
-2*¡
-5í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaI I(4Û
-
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaI I(4(
-dao!com.example.optic.dao.GiornataDAO"__id*)
-'
-%3!com.example.optic.dao.GiornataDAO´®
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaJ) J(;
-%5java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*)
-'
-usercom.example.optic.bean.UserBean2getUsername()*
-4*º
-6í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaH H(5
-Ì
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaH H(5'
-daoPcom.example.optic.dao.PlayerDAO"__id*'
-%
-%2com.example.optic.dao.PlayerDAO‰·
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaI" I(-'
-%3!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAO¬
-ø
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaI I(3
-%4"Lcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)V*)
-'
-%3!com.example.optic.dao.GiornataDAO*)
-'
-daoPcom.example.optic.dao.PlayerDAO*
-5*‘
-7í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaH H(&¥
-±
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaH H(4%
-%2com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
-com.example.optic.dao.PlayerDAO*
-6*õ
-8í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaF F(/»≈
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaF" F(-
-%0java.util.ArrayList"java.util.ArrayList⁄
-◊
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaF F(/
-%1"java.util.ArrayList#<init>()V*
-
-%0java.util.ArrayList”
-–
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaF F(0
-listjava.util.List"__id*
-
-%0java.util.ArrayList*
-7* 
-1í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaN N("Ø
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaN N(
+%3java.lang.String2%getRecentPlayList(Ljava/lang/String;)…
+∆
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java@ @(8
+listjava.util.List"__id*
+
+%4java.util.List"™
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaA A(
 
 listjava.util.List:'
 usercom.example.optic.bean.UserBeanB>"<

@@ -111,14 +111,16 @@ public class ControllerUserPgPage extends GraphicController {
 
 
     ///recupero la prossima giornata di gioco disponibile
-    public void getNextPlay() throws IOException {
-        ImportGetPlay.getPlay(idPlay, date, adminName, activity,0);
+    public void getNextPlay() throws IOException, ParseException {
+        ImportGetPlay.getPlay(idPlay, date, adminName, activity,0,1);
+        this.isDateValid();
         this.populatePlayersTable();
     }
 
     //recupero la giornata di gioco precedente a quella mostrata
-    public void getLastPlay() throws IOException {
-        ImportGetPlay.getPlay(idPlay, date, adminName, activity,1);
+    public void getLastPlay() throws IOException, ParseException {
+        ImportGetPlay.getPlay(idPlay, date, adminName, activity,1,1);
+        this.isDateValid();
         this.populatePlayersTable();
     }
 

@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/driver/mysql-connector-java-8.0.27.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3816092" />
@@ -139,6 +139,8 @@
       <workItem from="1642503371593" duration="15147000" />
       <workItem from="1642587477392" duration="13167000" />
       <workItem from="1642603501132" duration="2258000" />
+      <workItem from="1643193182631" duration="60000" />
+      <workItem from="1643193261824" duration="10409000" />
     </task>
     <servers />
   </component>

@@ -1,70 +1,61 @@
 
-Ucom.example.optic.app_controllers.BookSessionAppController#getCampi()Ljava/util/List;í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (&"9*Ô
-2í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ($œ
-Ã
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ($
+Ucom.example.optic.app_controllers.BookSessionAppController#getCampi()Ljava/util/List;ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (&"5*Â
+2ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ($ 
+«
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ($
 listajava.util.List"__id*
 
-%4java.util.List*
-1*»
-4í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (®•
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ($
-%4java.util.List">com.example.optic.dao.PlayerDAO#getCampoList()Ljava/util/List;*(
+%3java.util.List*
+1*æ
+4ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (£†
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ($
+%3java.util.List">com.example.optic.dao.PlayerDAO#getCampoList()Ljava/util/List;*(
 &
 daocom.example.optic.dao.PlayerDAO2getCampoList()*
-2*ú
-5í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (-»≈
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java  (+
-%2java.util.ArrayList"java.util.ArrayList⁄
-◊
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (-
-%3"java.util.ArrayList#<init>()V*
-
-%2java.util.ArrayList‘
-—
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (.
-listajava.util.List"__id*
-
-%2java.util.ArrayList*
-4*è
-6í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ()Ô
-Ï
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ()&
+2*Û
+5ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (…
+∆
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (&
+daocom.example.optic.dao.PlayerDAO"__id*
+""Ø
+¨
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (%%
+%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
+com.example.optic.dao.PlayerDAOÍ
+Á
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (%&
 daocom.example.optic.dao.PlayerDAO"__id*'
 %
-%0com.example.optic.dao.PlayerDAO*
-5*‘
-8í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (¥
-±
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ()%
-%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
-com.example.optic.dao.PlayerDAO*
-6*Ó
-9í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (Œ
-À
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (&
-daocom.example.optic.dao.PlayerDAO"__id*
-""*
-8*À
-1í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ("∞
-í
-áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (
+%0com.example.optic.dao.PlayerDAO√¿
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java  (+
+%1java.util.ArrayList"java.util.ArrayList’
+“
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (-
+%2"java.util.ArrayList#<init>()V*
+
+%1java.util.ArrayListœ
+Ã
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (.
+listajava.util.List"__id*
+
+%1java.util.ArrayList*
+4*¡
+1ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ("´
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (
 
 listajava.util.ListB>"<
 :com.example.optic.app_controllers.BookSessionAppController

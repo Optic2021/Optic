@@ -29,7 +29,7 @@ public class ImportCloseConn {
                     referee.closeConn();
                 }
             }
-        }catch (SQLException | IOException e){
+        }catch (SQLException e){
             Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("Errore chiusura connessione con il database");
             err.show();

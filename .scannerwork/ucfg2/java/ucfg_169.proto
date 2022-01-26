@@ -1,17 +1,17 @@
 
-@com.example.optic.entities.Admin#getUsername()Ljava/lang/String;w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java ("1*ã
-1w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (Î
-Ë
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (
+@com.example.optic.entities.Admin#getUsername()Ljava/lang/String;r
+hF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java ("1*Ô
+1r
+hF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (É
+Æ
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (
 %0java.lang.String"__id*2*0"
  com.example.optic.entities.Admin"
 
-username"“
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (
+username"Ž
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java (
 
 %0java.lang.StringB$"
  com.example.optic.entities.Admin
