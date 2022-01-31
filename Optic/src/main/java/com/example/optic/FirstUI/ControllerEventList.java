@@ -1,4 +1,4 @@
-package com.example.optic;
+package com.example.optic.FirstUI;
 
 import com.example.optic.app_controllers.ModPGPageAppController;
 import com.example.optic.app_controllers.RefCampoController;
@@ -11,7 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import java.io.IOException;
+
 import java.util.List;
 
 public class ControllerEventList extends GraphicController {

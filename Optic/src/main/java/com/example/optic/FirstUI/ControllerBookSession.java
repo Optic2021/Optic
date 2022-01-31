@@ -1,4 +1,4 @@
-package com.example.optic;
+package com.example.optic.FirstUI;
 
 import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.bean.AdminBean;

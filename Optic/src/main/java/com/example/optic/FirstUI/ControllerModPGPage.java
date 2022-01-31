@@ -1,5 +1,6 @@
-package com.example.optic;
+package com.example.optic.FirstUI;
 
+import com.example.optic.Optic;
 import com.example.optic.app_controllers.ModPGPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;

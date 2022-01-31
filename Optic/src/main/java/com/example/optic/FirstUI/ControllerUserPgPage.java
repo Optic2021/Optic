@@ -1,6 +1,5 @@
-package com.example.optic;
+package com.example.optic.FirstUI;
 
-import com.example.optic.app_controllers.RefCampoController;
 import com.example.optic.app_controllers.UserPgPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
@@ -19,7 +18,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 

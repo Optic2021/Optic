@@ -1,10 +1,10 @@
-package com.example.optic;
+package com.example.optic.FirstUI;
 
+import com.example.optic.Optic;
 import com.example.optic.app_controllers.UserProfileAppController;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
-import com.example.optic.entities.ValutazionePlayer;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.optic;
+package com.example.optic.FirstUI;
 
 import com.example.optic.app_controllers.RefCampoController;
 import com.example.optic.bean.GiornataBean;
@@ -16,8 +16,6 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class ControllerRefCampo extends GraphicController{
