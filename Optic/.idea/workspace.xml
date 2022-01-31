@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/driver/mysql-connector-java-8.0.27.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3816092" />
@@ -46,7 +46,7 @@
       <recent name="C:\Users\uazap\Desktop\Working copy\Optic.git\trunk\Optic\src\main\java\com\example\optic\utilities" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Optic">
     <configuration name="Optic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.optic.Optic" />
       <module name="Optic" />
@@ -60,9 +60,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in Optic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Optic" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLoginController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Optic" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestLoginController" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Optic" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestPlayer" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserProfile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Optic" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUserProfile" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Optic" />
+        <item itemvalue="JUnit.All in Optic" />
+        <item itemvalue="JUnit.TestPlayer" />
+        <item itemvalue="JUnit.TestUserProfile" />
+        <item itemvalue="JUnit.TestLoginController" />
       </list>
     </recent_temporary>
   </component>
@@ -142,6 +181,8 @@
       <workItem from="1643193182631" duration="60000" />
       <workItem from="1643193261824" duration="10409000" />
       <workItem from="1643629181365" duration="1138000" />
+      <workItem from="1643636527460" duration="773000" />
+      <workItem from="1643637590129" duration="7524000" />
     </task>
     <servers />
   </component>

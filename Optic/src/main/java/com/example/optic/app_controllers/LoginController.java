@@ -13,7 +13,7 @@ import com.example.optic.utilities.ImportCloseConn;
 
 public class LoginController {
 
-    private LoginController(){
+    public LoginController(){
         //does np
     }
 
