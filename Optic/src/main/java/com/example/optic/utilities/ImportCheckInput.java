@@ -17,4 +17,14 @@ public class ImportCheckInput {
         }
         return res;
     }
+
+    public static boolean isNumber(String str){
+        boolean res = true;
+        for(int i = 0; i < str.length(); i++){
+            if(!Character.isDigit(str.charAt(i))){
+                res = false;
+            }
+        }
+        return res;
+    }
 }
