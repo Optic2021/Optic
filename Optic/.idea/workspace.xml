@@ -52,7 +52,7 @@
       <module name="Optic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.optic.*" />
+          <option name="PATTERN" value="com.example.optic.FirstUI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,6 +141,7 @@
       <workItem from="1642603501132" duration="2258000" />
       <workItem from="1643193182631" duration="60000" />
       <workItem from="1643193261824" duration="10409000" />
+      <workItem from="1643629181365" duration="1138000" />
     </task>
     <servers />
   </component>

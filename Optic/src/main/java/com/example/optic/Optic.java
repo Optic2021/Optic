@@ -40,7 +40,8 @@ public class Optic extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        //launch();
+        Optic2UI.main2();
     }
 
 }

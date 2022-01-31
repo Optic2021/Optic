@@ -1,6 +1,6 @@
 package com.example.optic.utilities;
 
-import com.example.optic.GraphicController;
+import com.example.optic.FirstUI.GraphicController;
 import com.example.optic.Optic;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;
@@ -8,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TableView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
