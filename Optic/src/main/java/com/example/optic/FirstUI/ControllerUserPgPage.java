@@ -1,6 +1,7 @@
 package com.example.optic.FirstUI;
 
-import com.example.optic.app_controllers.UserPgPageAppController;
+import com.example.optic.app_controllers.BookSessionAppController;
+import com.example.optic.app_controllers.ReviewAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
@@ -71,7 +72,7 @@ public class ControllerUserPgPage extends GraphicController {
         try {
             playground = new AdminBean();
             playground.setNomeCampo(field);
-            admin = UserPgPageAppController.getCampoInfo(playground);
+            admin = BookSessionAppController.getCampoInfo(playground);
             populateReviewTable(playground);
             this.setFirstPlay(admin.getUsername());
         }catch(Exception a){
@@ -90,7 +91,7 @@ public class ControllerUserPgPage extends GraphicController {
         //setto la bean con info dell'admin del campo attualmente visualizzato
         bean.setUsername(user);
         try {
-            play = UserPgPageAppController.getFirstPlay(bean);
+            play = BookSessionAppController.getFirstPlay(bean);
             //controllo se esiste una giornata da poter mostrare
             if (play != null) {
                 //mostro informazioni della giornata
@@ -133,12 +134,12 @@ public class ControllerUserPgPage extends GraphicController {
         GiornataBean playBean = new GiornataBean();
         bean.setUsername(user.getText());
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        if(UserPgPageAppController.isPlayerBooked(bean,playBean)){
+        if(BookSessionAppController.isPlayerBooked(bean,playBean)){
             Alert conf = new Alert(Alert.AlertType.ERROR);
             conf.setContentText("Sei già prenotato!");
             conf.show();
         }else{
-            UserPgPageAppController.bookPlay(bean,playBean);
+            BookSessionAppController.bookPlay(bean,playBean);
             this.populatePlayersTable();
         }
     }
@@ -149,7 +150,7 @@ public class ControllerUserPgPage extends GraphicController {
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
         Player p;
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        List<Player> list = UserPgPageAppController.getPlayersList(playBean);
+        List<Player> list = BookSessionAppController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
             p = list.get(i);
             players.getItems().add(p);
@@ -174,7 +175,7 @@ public class ControllerUserPgPage extends GraphicController {
         int numVal = 0;
         int mediaVal = 0;
         int stars = 0;
-        List<Valutazione> list = UserPgPageAppController.reviewList(admin);
+        List<Valutazione> list = ReviewAppController.reviewList(admin);
         nome.setCellValueFactory(new PropertyValueFactory<>("fkUsernameP1"));
         recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
         int k = list.size();
@@ -216,7 +217,7 @@ public class ControllerUserPgPage extends GraphicController {
         valutazione.setRiceve(campo.getText());
         valutazione.setStelle(starN);
         valutazione.setUsernameP1(user.getText());
-        UserPgPageAppController.saveReview(valutazione);
+        ReviewAppController.saveReview(valutazione);
         AdminBean admin=new AdminBean();
         admin.setNomeCampo(campo.getText());
         table.getItems().clear();

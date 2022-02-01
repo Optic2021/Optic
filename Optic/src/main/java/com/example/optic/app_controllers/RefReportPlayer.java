@@ -14,9 +14,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RefCampoController {
+public class RefReportPlayer {
 
-    private RefCampoController(){
+    private RefReportPlayer(){
         //does np
     }
 

@@ -1,7 +1,7 @@
 package com.example.optic.FirstUI;
 
 import com.example.optic.app_controllers.ModPGPageAppController;
-import com.example.optic.app_controllers.RefCampoController;
+import com.example.optic.app_controllers.RefReportPlayer;
 import com.example.optic.app_controllers.UserProfileAppController;
 import com.example.optic.entities.Event;
 import javafx.fxml.FXML;
@@ -30,7 +30,7 @@ public class ControllerEventList extends GraphicController {
             list = ModPGPageAppController.getEventList();
             this.setList(list);
         } else if (user.contains("Arbitro")) {//uso la dao del referee
-            list = RefCampoController.getEventList();
+            list = RefReportPlayer.getEventList();
             this.setList(list);
         }
     }

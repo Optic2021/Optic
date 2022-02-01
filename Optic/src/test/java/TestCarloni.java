@@ -1,3 +1,4 @@
+import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.app_controllers.LoginController;
 import com.example.optic.app_controllers.RegisterController;
 import com.example.optic.bean.GiornataBean;
@@ -14,13 +15,21 @@ public class TestCarloni {
     //testo il login con un utente inesistente
     @Test
     public void testPlayerBooked(){
-        boolean res=PrenotazioneDAO.isPlayerBooked("carlo",5);
+        UserBean user = new UserBean();
+        user.setUsername("Carlo");
+        GiornataBean giornata= new GiornataBean();
+        giornata.setIdPlay(5);
+        boolean res= BookSessionAppController.isPlayerBooked(user,giornata);
         assertEquals(true,res);
     }
 
     @Test
     public void testPlayerBookedFail(){
-        boolean res=PrenotazioneDAO.isPlayerBooked("giuseppe",5);
+        UserBean user = new UserBean();
+        user.setUsername("Giuseppe");
+        GiornataBean giornata= new GiornataBean();
+        giornata.setIdPlay(5);
+        boolean res=BookSessionAppController.isPlayerBooked(user,giornata);
         assertEquals(true,res);
     }
 

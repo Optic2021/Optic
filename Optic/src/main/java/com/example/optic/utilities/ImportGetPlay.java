@@ -1,12 +1,12 @@
 package com.example.optic.utilities;
 
-import com.example.optic.app_controllers.RefCampoController;
-import com.example.optic.app_controllers.UserPgPageAppController;
+import com.example.optic.app_controllers.BookSessionAppController;
+import com.example.optic.app_controllers.RefReportPlayer;
+import com.example.optic.app_controllers.ReviewAppController;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.entities.Giornata;
 import javafx.scene.control.Label;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -30,15 +30,15 @@ public class ImportGetPlay {
             playBean.setAdmin(adminName.getText());
             if (userType == 0) {//referee
                 if(type == 0){
-                    play = RefCampoController.getNextPlay(playBean);
+                    play = RefReportPlayer.getNextPlay(playBean);
                 }else{
-                    play = RefCampoController.getLastPlay(playBean);
+                    play = RefReportPlayer.getLastPlay(playBean);
                 }
             }else{//player
                 if(type == 0){
-                    play = UserPgPageAppController.getNextPlay(playBean);
+                    play = BookSessionAppController.getNextPlay(playBean);
                 }else{
-                    play = UserPgPageAppController.getLastPlay(playBean);
+                    play = BookSessionAppController.getLastPlay(playBean);
                 }
             }
             if (play != null) {

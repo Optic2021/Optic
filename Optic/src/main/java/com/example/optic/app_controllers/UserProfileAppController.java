@@ -19,6 +19,7 @@ public class UserProfileAppController {
         //does np
     }
 
+    //Restituisce info player dato uno username
     public static Player getPlayer(PlayerBean p){
         Player player = null;
         try {
@@ -39,6 +40,7 @@ public class UserProfileAppController {
         return list;
     }
 
+    //Modifica informazioni del profilo
     public static void setInfo(PlayerBean p){
         try {
             PlayerDAO player = PlayerDAO.getInstance();
@@ -48,6 +50,7 @@ public class UserProfileAppController {
         }
     }
 
+    //Salva review nel profilo
     public static void saveReview(ValutazioneBean val){
         PlayerDAO playerDAO= null;
         playerDAO = PlayerDAO.getInstance();
@@ -57,6 +60,8 @@ public class UserProfileAppController {
         }
         dao.saveReview(val,1);
     }
+
+    //Restituisce lo storico partite
     public static List<Giornata> getRecentPlayList(UserBean user) throws SQLException {
         List<Giornata> list;
         PlayerDAO daoP = PlayerDAO.getInstance();
@@ -65,6 +70,7 @@ public class UserProfileAppController {
         return list;
     }
 
+    //Restituisce la lista di eventi
     public static List<Event> getEventList(){
         List<Event> list = new ArrayList<>();
         try{
@@ -77,6 +83,7 @@ public class UserProfileAppController {
         return list;
     }
 
+    //Restituisce la lista di report ricevuti
     public static List<ReportBean> getReportList(String user) {
         List<ReportBean> list;
         PlayerDAO dao = PlayerDAO.getInstance();

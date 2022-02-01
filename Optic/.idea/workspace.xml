@@ -45,6 +45,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\uazap\Desktop\Working copy\Optic.git\trunk\Optic\src\main\java\com\example\optic\utilities" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.optic.SecondUI" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Optic">
     <configuration name="Optic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -185,6 +188,7 @@
       <workItem from="1643637590129" duration="7524000" />
       <workItem from="1643645532331" duration="5769000" />
       <workItem from="1643651385157" duration="5000" />
+      <workItem from="1643711340673" duration="8790000" />
     </task>
     <servers />
   </component>
