@@ -5,19 +5,18 @@ import com.example.optic.bean.PlayerBean;
 import com.example.optic.entities.Player;
 import com.example.optic.utilities.ImportCheckInput;
 import com.example.optic.utilities.ImportUrl;
-import javafx.application.Platform;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class UserProfileCLI extends BaseCommandCLI{
+public class PlayerProfileCLI extends BaseCommandCLI{
     private static PlayerBean utente=new PlayerBean();
 
     public static boolean back(String command) {
         boolean flag=false;
         if (command.equals("Back") || command.equals("back") || command.equals("Indietro") || command.equals("indietro")) {
-            UserHomeCLI.main(utente.getBUsername());
+            PlayerHomeCLI.main(utente.getBUsername());
             flag=true;
         }
         return flag;

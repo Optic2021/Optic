@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-public class UserHomeCLI {
+public class PlayerHomeCLI {
     public static void main(String user){
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
@@ -19,10 +19,16 @@ public class UserHomeCLI {
             do {
                 System.out.println("|Home|\n1)Profilo | 2)Lista Campi | 3)Logout");
                 input = br.readLine();
-                res = ImportCheckInput.checkInput(input);
+                res = ImportCheckInput.isNumber(input);
                 //controllo se l'input è corretto
                 if (!res) {
-                    System.out.println("\nComando non valido!");
+                    if(!BaseCommandCLI.exit(input)){
+                        res = ImportCheckInput.checkInput(input);
+                        if(!res){
+                            System.out.println("\nComando non valido!");
+                        }
+                    }
+
                 }else{
                     command = Integer.parseInt(input);
                 }
@@ -30,7 +36,7 @@ public class UserHomeCLI {
             switch (command) {
                 case 2 -> showPlaygroundList(user);
                 case 3 -> logout();
-                default -> UserProfileCLI.main(user);
+                default -> PlayerProfileCLI.main(user);
             }
         }catch (IOException e){
             e.printStackTrace();
@@ -63,7 +69,7 @@ public class UserHomeCLI {
                 }
             } while (!res2);
             if(campo == -1){
-                UserHomeCLI.main(user);
+                PlayerHomeCLI.main(user);
             }else {
                 ModPGPageCLI.main(user, list.get(campo).getNomeC());
             }

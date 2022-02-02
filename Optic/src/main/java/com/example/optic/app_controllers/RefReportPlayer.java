@@ -50,6 +50,7 @@ public class RefReportPlayer {
         return list;
     }
 
+    //Prende la prossima giornata da giocare
     public static Giornata getFirstPlay(UserBean bean){
         Giornata play = null;
         try{
@@ -62,6 +63,7 @@ public class RefReportPlayer {
         return play;
     }
 
+    //Prende la giornata successiva
     public static Giornata getNextPlay(GiornataBean bean){
         Giornata play = null;
         try{
@@ -74,6 +76,7 @@ public class RefReportPlayer {
         return  play;
     }
 
+    //Prende la giornata precedente
     public static Giornata getLastPlay(GiornataBean bean){
         Giornata play = null;
         try{

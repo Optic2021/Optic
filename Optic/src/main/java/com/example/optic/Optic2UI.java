@@ -5,7 +5,8 @@ package com.example.optic;
         String s= console.readLine();
         int i=Integer.parseInt(console.readLine());*/
 
-import com.example.optic.SecondUI.UserHomeCLI;
+import com.example.optic.SecondUI.PlayerHomeCLI;
+import com.example.optic.SecondUI.RefereeReport;
 import com.example.optic.app_controllers.LoginController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
@@ -30,7 +31,7 @@ public class Optic2UI {
             boolean res;
             do {
                 do {
-                    System.out.println("|Login|\n1)Player | 2)Referee | 3)Admin");
+                    System.out.println("|Login|\n1)Player | 2)Admin | 3)Referee");
                     input = br.readLine();
                     typeRes = ImportCheckInput.checkInput(input);
                     //controllo se l'input è corretto
@@ -70,8 +71,8 @@ public class Optic2UI {
             } while (!res);
             switch (type) {
                 case 2 -> System.out.println("Pagina campo");
-                case 3 -> System.out.println("Pagina arbitro");
-                default -> UserHomeCLI.main(user);
+                case 3 ->  RefereeReport.main(user);
+                default -> PlayerHomeCLI.main(user);
             }
         }catch (IOException e){
             e.printStackTrace();
