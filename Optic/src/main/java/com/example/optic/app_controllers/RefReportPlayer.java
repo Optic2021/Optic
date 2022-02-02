@@ -89,7 +89,6 @@ public class RefReportPlayer {
         return  play;
     }
 
-    //Restituisce la lista dei players prenotati per la giornata passata
     public static List<Player> getPlayersList(GiornataBean bean){
         List<Player> list;
         RefereeDAO dao = RefereeDAO.getInstance();

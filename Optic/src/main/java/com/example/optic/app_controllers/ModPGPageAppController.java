@@ -81,6 +81,19 @@ public class ModPGPageAppController {
         return play;
     }
 
+    //restituisce la giornata di gioco passata più recente
+    public static Giornata getRecentPlay(UserBean bean){
+        Giornata play = null;
+        try{
+            AdminDAO dao = AdminDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            play = playDao.getRecentPlay(bean.getUsername());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return play;
+    }
+
     //restituisce giornata successiva
     public static Giornata getNextPlay(GiornataBean bean){
         Giornata play = null;
