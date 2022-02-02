@@ -48,9 +48,7 @@ public class PlayerProfileCLI extends BaseCommandCLI{
             if (!res) {
                 if (BaseCommandCLI.exit(input)) {
                 } else if (back(input)) {
-                  //if(input.equals("save")){
-                  //    save();
-                  //}
+
                 }else if(input.equals("Modifica")){
                     System.out.println("1)Descrizione | 2)Profilo Facebook | 3)Profilo Instagram");
                     try {
