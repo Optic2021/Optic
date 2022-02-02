@@ -42,7 +42,15 @@ public class UserPGPageCLI {
                     UserBean bean = new UserBean();
                     bean.setUsername(a.getUsername());
                     Giornata play = BookSessionAppController.getFirstPlay(bean);
-                    showPlayList(user,a.getUsername(),play);
+                    if(play == null){
+                        play = BookSessionAppController.getRecentPlay(bean);
+                    }
+                    if(play != null){
+                        showPlayList(user,a.getUsername(),play);
+                    }else{
+                        System.out.println("Non ci sono giornate da mostrare.");
+                        UserPGPageCLI.main(user,nomeC);
+                    }
                 }
                 case 3 -> review(user,a);
                 case 4 -> showReviews(user,a);
@@ -155,8 +163,9 @@ public class UserPGPageCLI {
                     //controllo se l'input è corretto
                     if (!res) {
                         System.out.println("Comando non valido!");
-                    } else if (Integer.parseInt(input) >= num) {
+                    } else if (Integer.parseInt(input) > num) {
                         System.out.println("Numero inserito non valido!");
+                        res = false;
                     } else {
                         command = Integer.parseInt(input);
                         if(command == 0){

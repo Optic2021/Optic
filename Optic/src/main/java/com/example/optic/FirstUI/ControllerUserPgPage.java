@@ -93,7 +93,10 @@ public class ControllerUserPgPage extends GraphicController {
         try {
             play = BookSessionAppController.getFirstPlay(bean);
             //controllo se esiste una giornata da poter mostrare
-            if (play != null) {
+            if (play == null) {
+                play = BookSessionAppController.getRecentPlay(bean);
+            }
+            if(play != null) {
                 //mostro informazioni della giornata
                 SimpleDateFormat dateFormat = new SimpleDateFormat(format);
                 idPlay.setText(Integer.toString(play.getIdGiornata()));
@@ -102,6 +105,8 @@ public class ControllerUserPgPage extends GraphicController {
                 //controllo se la data è disponibile per la prenotazione
                 this.isDateValid();
                 this.populatePlayersTable();
+            }else{
+                idPlay.setText("");
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -112,15 +117,19 @@ public class ControllerUserPgPage extends GraphicController {
     ///recupero la prossima giornata di gioco disponibile
     public void getNextPlay() throws IOException, ParseException {
         ImportGetPlay.getPlay(idPlay, date, adminName, activity,0,1);
-        this.isDateValid();
-        this.populatePlayersTable();
+        if(!(idPlay.getText().isEmpty())) {
+            this.isDateValid();
+            this.populatePlayersTable();
+        }
     }
 
     //recupero la giornata di gioco precedente a quella mostrata
     public void getLastPlay() throws IOException, ParseException {
         ImportGetPlay.getPlay(idPlay, date, adminName, activity,1,1);
-        this.isDateValid();
-        this.populatePlayersTable();
+        if(!(idPlay.getText().isEmpty())) {
+            this.isDateValid();
+            this.populatePlayersTable();
+        }
     }
 
     public void isDateValid() throws ParseException {

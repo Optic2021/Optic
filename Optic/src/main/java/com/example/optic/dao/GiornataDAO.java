@@ -81,6 +81,13 @@ public class GiornataDAO {
         return this.getPlay(admin,cal,sql);
     }
 
+    //recupero la giornata passata più recente
+    public Giornata getRecentPlay(String admin) throws SQLException {
+        String sql = "SELECT * FROM giornata WHERE Data=(SELECT max(Data) FROM giornata WHERE ? > Data AND fk_UsernameA2 =?)";
+        Calendar cal = Calendar.getInstance();
+        return this.getPlay(admin,cal,sql);
+    }
+
     public Giornata getNextPlay(String admin, Calendar cal) throws SQLException {
         String sql = "SELECT * FROM giornata WHERE Data=(SELECT min(G.Data) FROM giornata G WHERE ?<G.Data AND G.fk_UsernameA2 =?)";
         return this.getPlay(admin,cal,sql);

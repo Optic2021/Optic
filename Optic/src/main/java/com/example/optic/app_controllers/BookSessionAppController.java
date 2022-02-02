@@ -95,6 +95,19 @@ public class BookSessionAppController {
         return play;
     }
 
+    //restituisce la giornata di gioco passata più recente
+    public static Giornata getRecentPlay(UserBean bean){
+        Giornata play = null;
+        try{
+            PlayerDAO dao = PlayerDAO.getInstance();
+            GiornataDAO playDao = new GiornataDAO(dao);
+            play = playDao.getRecentPlay(bean.getUsername());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return play;
+    }
+
     //Scorre in avanti le giornate
     public static Giornata getNextPlay(GiornataBean bean){
         Giornata play = null;
