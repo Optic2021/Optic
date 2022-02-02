@@ -9,7 +9,7 @@ public class ImportDAO {
 
     public ImportDAO(){
         this.user = "root";
-        this.passWord = "Luca_2001";
+        this.passWord = "17moneC*";
         this.dbUrl = "jdbc:mysql://localhost:3306/optic";
         this.driverClassName = "com.mysql.jdbc.Driver";
     }

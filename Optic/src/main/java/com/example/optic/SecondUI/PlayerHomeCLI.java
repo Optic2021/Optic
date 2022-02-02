@@ -71,7 +71,7 @@ public class PlayerHomeCLI {
             if(campo == -1){
                 PlayerHomeCLI.main(user);
             }else {
-                ModPGPageCLI.main(user, list.get(campo).getNomeC());
+                UserPGPageCLI.main(user, list.get(campo).getNomeC());
             }
         }catch (IOException e){
             e.printStackTrace();

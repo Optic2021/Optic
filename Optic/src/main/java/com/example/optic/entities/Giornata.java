@@ -1,5 +1,7 @@
 package com.example.optic.entities;
 
+import com.example.optic.app_controllers.ReviewAppController;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -23,6 +25,8 @@ public class Giornata {
         this.data = data;
         this.numGiocatori = numGiocatori;
         this.fkNome = evento;
+        SimpleDateFormat dataGiornata = new SimpleDateFormat("yyyy-MM-dd");
+        this.dataString = dataGiornata.format(this.data.getTime());
     }
     public void setIdGiornata(int newIdGiornata){
         this.idGiornata=newIdGiornata;
@@ -41,9 +45,6 @@ public class Giornata {
     }
     public void setNomeC(String nomeC) {
         this.nomeC = nomeC;
-    }
-    public void setDataString(String dataString) {
-        this.dataString = dataString;
     }
 
     /**************************/
