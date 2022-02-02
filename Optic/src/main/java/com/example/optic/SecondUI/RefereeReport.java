@@ -1,21 +1,26 @@
 package com.example.optic.SecondUI;
 
+import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.app_controllers.RefReportPlayer;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.RefereeBean;
+import com.example.optic.bean.ReportBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.Giornata;
+import com.example.optic.entities.Player;
 import com.example.optic.utilities.ImportCheckInput;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
+import java.util.List;
+
+import static com.example.optic.SecondUI.BaseCommandCLI.exit;
 
 public class RefereeReport {
     private static RefereeBean ref= new RefereeBean();
+    private static GiornataBean play= new GiornataBean();
 
     public static void main(String user) {
         Giornata Data;
@@ -32,18 +37,38 @@ public class RefereeReport {
         u1.setUsername(ref.getFkUsernameA1());
 
         //Prendo la prossima giornata da giocare
-        Giornata giornata=RefReportPlayer.getFirstPlay(u1);
-        GiornataBean bean=new GiornataBean();
-        bean.setData(giornata.getData());
-        bean.setAdmin(ref.getFkUsernameA1());
+        Data=RefReportPlayer.getFirstPlay(u1);
+        if(Data == null){
+            Data = BookSessionAppController.getRecentPlay(u1);
+        }
+        if(Data == null){
+            System.out.println("ATTENZIONE: Non ci sono giornate da mostrare.\n");
+        }
+
+        play.setData(Data.getData());
+        play.setIdPlay(Data.getIdGiornata());
+        play.setAdmin(ref.getFkUsernameA1());
 
         //attivita=giornata.getFkNome();
+        int j=0,i=0;
         do {
             System.out.println("Arbitro "+ref.getUsername());
             //print campo in cui lavora
             System.out.println("Assegnato al campo : "+ref.getFkUsernameA1());
-            System.out.println("Giornata :" + dateFormat.format(bean.getData().getTime()));
-            System.out.println("Lista giocatori bla bla bla");
+            System.out.println("Giornata :" + dateFormat.format(play.getData().getTime()));
+            /*************************************/
+
+
+            System.out.println("Num.-|-Username-|-Valutazione");
+            List<Player> list = RefReportPlayer.getPlayersList(play);
+
+            for(i=0;i< list.size();i++){
+                System.out.println(i+"---|---"+list.get(i).getUsername()+"---|---"+list.get(i).getValutazione());
+            }
+            if(i==0) {
+                System.out.println("Nessun giocatore prenotato");
+            }
+            /*************************************/
             System.out.println("<-Indietro                   Avanti->");
 
             try {
@@ -53,26 +78,57 @@ public class RefereeReport {
             }
             res = ImportCheckInput.isNumber(input);
             if (res) {
+                j=Integer.parseInt(input);
                 //seleziona giocatore
+                if(i>j) {
+                    //salva
+                    report(list.get(j).getUsername());
 
+                }else{
+                    System.out.println("ATTENZIONE: Numero non presente in lista\n");
+                }
             } else {
                 Data=null;
                 if (input.toLowerCase().equals("a")) {
                     //vai avanti
-                    System.out.println("Avanti "+dateFormat.format(giornata.getData().getTime()));
-                    Data=RefReportPlayer.getNextPlay(bean);
-
+                    Data=RefReportPlayer.getNextPlay(play);
                 } else if (input.toLowerCase().equals("i")) {
                     //vai indietro
-                    System.out.println("Indietro "+dateFormat.format(giornata.getData().getTime()));
-                    Data=RefReportPlayer.getLastPlay(bean);
+                    Data=RefReportPlayer.getLastPlay(play);
                 } else {
-                    System.out.println("Input non valido");
+                    if(input.toLowerCase().equals("indietro") || input.toLowerCase().equals("back")){
+                        return;
+                    }
+                    exit(input);
+                    System.out.println("ATTENZIONE: Input non valido\n");
                 }
                 if(Data!=null){
-                    bean.setData(Data.getData());
+                    play.setData(Data.getData());
+                    play.setIdPlay(Data.getIdGiornata());
                 }
             }
         }while(true);
+    }
+
+    public static void report(String username){
+        System.out.println("Stai immettendo un nuovo report al player : "+username+"\nImmetti 'Annulla' per annullare l'azione");
+        ReportBean rep= new ReportBean();
+        BufferedReader brtemp = new BufferedReader(new InputStreamReader(System.in));
+        String inputemp= null;
+        try {
+            inputemp = brtemp.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(!inputemp.toLowerCase().equals("annulla")) {
+            rep.setMotivazione(inputemp);
+            rep.setPlayer(username);
+            rep.setReferee(ref.getUsername());
+            RefReportPlayer.saveReport(rep);
+            System.out.println("ATTENZIONE : Report salvato correttamente \n");
+        }else{
+            System.out.println("ATTENZIONE : Report annullato correttamente \n");
+        }
+        return;
     }
 }

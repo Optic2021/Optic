@@ -1,10 +1,4 @@
 package com.example.optic;
-
-/*System.out.println("Inizializzando ");
-        Console console = System.console();
-        String s= console.readLine();
-        int i=Integer.parseInt(console.readLine());*/
-
 import com.example.optic.SecondUI.BaseCommandCLI;
 import com.example.optic.SecondUI.PlayerHomeCLI;
 import com.example.optic.SecondUI.RefereeReport;
@@ -29,10 +23,10 @@ public class Optic2UI extends BaseCommandCLI {
             String password = new String();
             int type = 0;
             boolean typeRes;
-            boolean res;
+            boolean res = false;
             do {
                 do {
-                    System.out.println("|Login|\n1)Player | 2)Admin | 3)Referee 4)Esci");
+                    System.out.println("|Login|\n1)Player | 2)Admin | 3)Referee | 4)Esci");
                     input = br.readLine();
                     typeRes = ImportCheckInput.checkInput(input);
                     //controllo se l'input è corretto
@@ -62,11 +56,14 @@ public class Optic2UI extends BaseCommandCLI {
                         r.setPassword(password);
                         res = LoginController.refereeLogin(r);
                     }
-                    default -> {
+                    case 1 -> {
                         PlayerBean p = new PlayerBean();
                         p.setBUsername(user);
                         p.setBPassword(password);
                         res = LoginController.playerLogin(p);
+                    }
+                    default -> {
+                        System.exit(0);
                     }
                 }
                 if (!res) {
@@ -75,12 +72,16 @@ public class Optic2UI extends BaseCommandCLI {
             } while (!res);
             switch (type) {
                 case 2 -> System.out.println("Pagina campo");
-                case 3 ->  RefereeReport.main(user);
+                case 3 -> {
+                    RefereeReport.main(user);
+                    System.out.println("torno");
+                }
                 default -> PlayerHomeCLI.main(user);
             }
         }catch (IOException e){
             e.printStackTrace();
         }
+        return;
     }
 
 }

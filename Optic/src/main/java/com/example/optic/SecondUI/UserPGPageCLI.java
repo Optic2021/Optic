@@ -171,7 +171,12 @@ public class UserPGPageCLI {
                         if(command == 0){
                             showPlayList(user,admin,play);
                         }else{
-                            PlayerProfileCLI.main(list.get(command-1).getUsername());
+                            //vedo pagina utente
+                            if (!list.get(command-1).getUsername().equals(user)) {
+                                PlayerProfileViewCLI.main(list.get(command - 1).getUsername(), user);
+                            }else{
+                                PlayerProfileCLI.main(user);
+                            }
                         }
                     }
                 }while(!res);
