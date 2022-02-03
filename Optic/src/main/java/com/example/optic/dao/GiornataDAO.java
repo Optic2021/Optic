@@ -98,7 +98,7 @@ public class GiornataDAO {
         return this.getPlay(admin,cal,sql);
     }
 
-    public List<Giornata> getRecentPlayList(String user) throws SQLException {
+    public List<Giornata> getRecentPlayList(String user) {
         ArrayList<Giornata> list = new ArrayList<>();
         PreparedStatement prepStmt = null;
         Calendar dateCalendar = Calendar.getInstance();
@@ -121,8 +121,12 @@ public class GiornataDAO {
         }catch (SQLException e){
             e.printStackTrace();
         }finally {
-            if (prepStmt != null)
-                prepStmt.close();
+            try {
+                if (prepStmt != null)
+                    prepStmt.close();
+            }catch (SQLException e){
+                e.printStackTrace();
+            }
         }
         return list;
     }

@@ -114,16 +114,20 @@ public class ModPGPageCLI extends BaseCommandCLI {
                         Giornata play2 = ModPGPageAppController.getLastPlay(playBean);
                         if (play2 == null) {
                             showPlayList(admin, play);
+                            return;
                         } else {
                             showPlayList(admin, play2);
+                            return;
                         }
                     }
                     case 3 -> {
                         Giornata play2 = ModPGPageAppController.getNextPlay(playBean);
                         if (play2 == null) {
                             showPlayList(admin, play);
+                            return;
                         } else {
                             showPlayList(admin, play2);
+                            return;
                         }
                     }
                     default -> {

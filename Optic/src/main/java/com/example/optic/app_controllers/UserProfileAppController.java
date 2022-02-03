@@ -62,7 +62,7 @@ public class UserProfileAppController {
     }
 
     //Restituisce lo storico partite
-    public static List<Giornata> getRecentPlayList(UserBean user) throws SQLException {
+    public static List<Giornata> getRecentPlayList(UserBean user) {
         List<Giornata> list;
         PlayerDAO daoP = PlayerDAO.getInstance();
         GiornataDAO dao = new GiornataDAO(daoP);

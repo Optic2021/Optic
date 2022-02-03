@@ -1,8 +1,8 @@
 SECONDA GUI
 /Player
-see report pl on pl
-lista eventi on pl
-storico partite sia su profilo dello stesso player sia player su player
+see report pl on pl //fatto
+lista eventi on pl //fatto
+storico partite sia su profilo dello stesso player sia player su player  //fatto
 
 /Admin
 scollegare/collegare admin
