@@ -56,8 +56,6 @@ public class RefereeReportCLI {
             //print campo in cui lavora
             System.out.println("Assegnato al campo : "+ref.getFkUsernameA1());
             System.out.println("Giornata :" + dateFormat.format(play.getData().getTime()));
-            /*************************************/
-
 
             System.out.println("Num.-|-Username-|-Valutazione");
             List<Player> list = RefReportPlayer.getPlayersList(play);
@@ -68,8 +66,7 @@ public class RefereeReportCLI {
             if(i==0) {
                 System.out.println("Nessun giocatore prenotato");
             }
-            /*************************************/
-            System.out.println("<-Indietro                   Avanti->");
+            System.out.println("i)Precedente                   Successiva(a");
 
             try {
                 input = br.readLine();

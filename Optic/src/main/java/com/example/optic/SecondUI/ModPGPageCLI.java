@@ -1,16 +1,15 @@
 package com.example.optic.SecondUI;
 
 import com.example.optic.app_controllers.ModPGPageAppController;
-import com.example.optic.app_controllers.ReviewAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import com.example.optic.utilities.ImportCheckInput;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
@@ -27,12 +26,12 @@ public class ModPGPageCLI extends BaseCommandCLI {
         try {
             do {
                 do {
-                    System.out.println("|Profilo campo|\n1)Info campo | 2)Lista giornate  | 3)Aggiungi Giornata | 4)Modifica info | 5)Vedi recensioni | 6)Indietro");
+                    System.out.println("|Profilo campo|\n1)Info campo \n2)Lista giornate  \n3)Aggiungi Giornata \n4)Modifica info \n5)Vedi recensioni \n6)Indietro");
                     input = br.readLine();
                     res = ImportCheckInput.checkInput(input);
                     //controllo se l'input è corretto
                     if (!res) {
-                        System.out.println("Comando non valido!");
+                        System.out.println("ATTENZIONE: Comando non valido!");
                     } else {
                         command = Integer.parseInt(input);
                     }
@@ -48,7 +47,7 @@ public class ModPGPageCLI extends BaseCommandCLI {
                         if (play != null) {
                             showPlayList(a.getUsername(), play);
                         } else {
-                            System.out.println("Non ci sono giornate da mostrare.");
+                            System.out.println("ATTENZIONE: Non ci sono giornate da mostrare.");
                         }
                     }
                     case 3 -> addGiornata(user);
@@ -82,7 +81,7 @@ public class ModPGPageCLI extends BaseCommandCLI {
             media = stelleTot / val;
             System.out.println("Media stelle: " + media);
         } else {
-            System.out.println("Il campo non ha recensioni.");
+            System.out.println("ATTENZIONE: Il campo non ha recensioni.");
         }
     }
 
@@ -97,13 +96,14 @@ public class ModPGPageCLI extends BaseCommandCLI {
             do {
                 do {
                     System.out.println("Data: " + play.getDataString() + "\nAttività: " + play.getFkNome());
-                    System.out.println("1)Vedi Giocatori | 2)Giornata precedente | 3)Prossima Giornata | 4)Indietro");
+                    System.out.println("1)Vedi Giocatori\n4)Indietro");
+                    System.out.println("2)Precedente                   Successiva(3");
                     String input;
                     input = br.readLine();
                     res = ImportCheckInput.checkInput(input);
                     //controllo se l'input è corretto
                     if (!res) {
-                        System.out.println("Comando non valido!");
+                        System.out.println("ATTENTIONE: Comando non valido!");
                     } else {
                         command = Integer.parseInt(input);
                     }
@@ -144,7 +144,7 @@ public class ModPGPageCLI extends BaseCommandCLI {
     public static void modInfo(Admin admin) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
-        System.out.println("Selezionare la modifica da effettuare: \n1)Descrizione | 2)Arbitro | 3)Facebook | 4)Instagram | 5)Whatsapp");
+        System.out.println("Selezionare la modifica da effettuare: \n1)Descrizione \n2)Arbitro \n3)Facebook \n4)Instagram \n5)Whatsapp");
 
     }
 
@@ -169,7 +169,7 @@ public class ModPGPageCLI extends BaseCommandCLI {
                     res = ImportCheckInput.checkInput(input);
                     //controllo se l'input è corretto
                     if (!res) {
-                        System.out.println("Input non valido!");
+                        System.out.println("ATTENZIONE:Input non valido!");
                     }
                 } while (!res);
             } catch (IOException e) {
@@ -190,7 +190,7 @@ public class ModPGPageCLI extends BaseCommandCLI {
                 res = ImportCheckInput.checkInput(input);
                 //controllo se l'input è corretto
                 if (!res) {
-                    System.out.println("Comando non valido!");
+                    System.out.println("ATTENZIONE: Comando non valido!");
                 }
             } while (!res);
         } catch (IOException e) {
@@ -220,8 +220,8 @@ public class ModPGPageCLI extends BaseCommandCLI {
             }
             if (ImportCheckInput.isNumber(input1)) {
                 ymd[i]=Integer.parseInt(input1);
-            }else{
-                System.out.println(cosa[i]+" non valido");
+            }else /*if(!isDMYValid(ymd[i],i,ymd[2]))*/{
+                System.out.println("ATTENZIONE: 1"+cosa[i]+" non valido");
                 i--;
             }
         }
@@ -249,29 +249,37 @@ public class ModPGPageCLI extends BaseCommandCLI {
             }else if (inputt.toLowerCase().equals("indietro")){
                 return;
             }
-        }while(flag=false);
+        }while(flag==false);
         ModPGPageAppController.insertPlay(bean);
     }
 
-    /*public static void setYMD(Calendar data){
-        String input1= new String();
-        BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
-        int ymd[] = new int[4];
-        String cosa[]={" ","Giorno","Mese","Anno"};
-        for(int i=1;i<4;i++) {
-            System.out.println("Inserisci "+cosa[i]);
-            try {
-                input1 = br1.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            if (ImportCheckInput.isNumber(input1)) {
-                ymd[i]=Integer.parseInt(input1);
-            }else{
-                System.out.println(cosa[i]+" non valido");
-                i--;
-            }
+    //CONTROLLARE IL FORMATO DELLA DATA
+    /*public static boolean isDMYValid(int dmy, int i,int febbraio){
+        boolean flag= true;
+        switch (i){
+            case 1://giorno
+                if(dmy<1){
+                    flag=false;
+                }
+                if(febbraio==2){
+                    if (dmy>28){
+                        flag=false;
+                    }
+                }else if (dmy>31){
+                    flag=false;
+                }
+            break;
+            case 2://mese
+                if (dmy<0 || dmy>12){
+                    flag=false;
+                }
+            break;
+            case 3://anno
+                if (dmy<2022 && dmy>2100){
+                    flag=false;
+                }
+            break;
         }
-        data.set(ymd[3],ymd[2],ymd[1]);
+        return flag;
     }*/
 }
