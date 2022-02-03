@@ -1,62 +1,9 @@
 
-}com.example.optic.app_controllers.UserProfileAppController#getReviewList(Lcom/example/optic/bean/PlayerBean;)Ljava/util/List;ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java!$ !(1"1*µ
-1ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java" "(π
-∂
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java" "(
-listjava.util.List"__id*
-""Ø
-¨
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java$ $(0%
-%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
-com.example.optic.dao.PlayerDAOÎ
-Ë
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java$ $(1'
-daoPcom.example.optic.dao.PlayerDAO"__id*'
-%
-%0com.example.optic.dao.PlayerDAOÂ‚
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java%! %(/*
-%1$com.example.optic.dao.ValutazioneDAO"$com.example.optic.dao.ValutazioneDAO√
-¿
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java% %(5
-%2"Ocom.example.optic.dao.ValutazioneDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)V*,
-*
-%1$com.example.optic.dao.ValutazioneDAO*)
-'
-daoPcom.example.optic.dao.PlayerDAOÙ
-Ò
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java% %(6+
-dao$com.example.optic.dao.ValutazioneDAO"__id*,
-*
-%1$com.example.optic.dao.ValutazioneDAO©¶
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java&' &(7
-%3java.lang.String"Bcom.example.optic.bean.PlayerBean#getBUsername()Ljava/lang/String;*(
-&
-p!com.example.optic.bean.PlayerBean2getBUsername()˘ˆ
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java& &(8
-%4java.util.List"\com.example.optic.dao.ValutazioneDAO#getPlayerReviewList(Ljava/lang/String;)Ljava/util/List;*-
-+
-dao$com.example.optic.dao.ValutazioneDAO*
-
-%3java.lang.String2'getPlayerReviewList(Ljava/lang/String;)…
-∆
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java& &(8
-listjava.util.List"__id*
-
-%4java.util.List"™
-ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java' '(
-
-listjava.util.List:&
-p!com.example.optic.bean.PlayerBeanB>"<
-:com.example.optic.app_controllers.UserProfileAppController
+6com.example.optic.entities.Giornata#getNumGiocatori()Iw
+mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java< <("1*Ä
+1w
+mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java= =("Å
+w
+mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java= =(!
+""B'%
+#com.example.optic.entities.Giornata

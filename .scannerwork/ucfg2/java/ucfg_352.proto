@@ -1,16 +1,17 @@
 
-Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;q
-gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javau u(#"1*“
-1q
-gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(∆
-√
-q
-gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(
-%0java.sql.Connection"__id*-*+!
-com.example.optic.dao.PlayerDAO"
-conn"ê
-q
-gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(
-
-%0java.sql.ConnectionB#!
-com.example.optic.dao.PlayerDAO
+Bcom.example.optic.bean.RefereeBean#getUsername()Ljava/lang/String;v
+lF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/RefereeBean.java ("1*‚
+1v
+lF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/RefereeBean.java (œ
+Ã
+v
+lF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/RefereeBean.java (
+%0java.lang.String"__id*4*2$
+"com.example.optic.bean.RefereeBean"
+
+username"í
+v
+lF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/RefereeBean.java (
+
+%0java.lang.StringB&$
+"com.example.optic.bean.RefereeBean

@@ -1,16 +1,27 @@
 
-;com.example.optic.entities.Player#getIg()Ljava/lang/String;s
-iF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Player.javaF F("1*“
-1s
-iF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Player.javaG G(≈
-¬
-s
-iF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Player.javaG G(
-%0java.lang.String"__id*-*+#
-!com.example.optic.entities.Player"
-ig"è
-s
-iF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Player.javaG G(
-
-%0java.lang.StringB%#
-!com.example.optic.entities.Player
+zcom.example.optic.dao.GiornataDAO#getNextPlay(Ljava/lang/String;Ljava/util/Calendar;)Lcom/example/optic/entities/Giornata;u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java[ [("1*£
+1v
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java\ \(Éå
+â
+v
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java\ \(Ñ
+sqljava.lang.String"__id*pn
+lSELECT * FROM giornata WHERE Data=(SELECT min(G.Data) FROM giornata G WHERE ?<G.Data AND G.fk_UsernameA2 =?)ÔÏ
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java] ](*)
+%0#com.example.optic.entities.Giornata"àcom.example.optic.dao.GiornataDAO#getPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)Lcom/example/optic/entities/Giornata;*%#
+!com.example.optic.dao.GiornataDAO*
+
+adminjava.lang.String*
+
+caljava.util.Calendar*
+
+sqljava.lang.String2AgetPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)"§
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java] ](++
+)
+%0#com.example.optic.entities.Giornata:
+adminjava.lang.String:
+caljava.util.CalendarB%#
+!com.example.optic.dao.GiornataDAO

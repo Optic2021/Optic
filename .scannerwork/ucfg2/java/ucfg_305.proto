@@ -1,16 +1,37 @@
 
-:com.example.optic.bean.UserBean#getVia()Ljava/lang/String;q
-gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java ("1*À
-1q
-gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (¬
-ø
-q
-gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (
-%0java.lang.String"__id*,**!
-com.example.optic.bean.UserBean"
-via"ç
-q
-gF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (
+Kcom.example.optic.entities.Valutazione#getFormattedText()Ljava/lang/String;z
+pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaC C(""1*Û
+1z
+pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(€
+ÿ
+z
+pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D( 
+%0java.lang.String"__id*<*:(
+&com.example.optic.entities.Valutazione"
+fkUsernameP1≈
+¬
+z
+pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D('
+%1java.lang.String"__concat*
 
-%0java.lang.StringB#!
-com.example.optic.bean.UserBean
+%0java.lang.String*
+ :\n⁄
+◊
+z
+pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD( D(3
+%2java.lang.String"__id*;*9(
+&com.example.optic.entities.Valutazione"
+descrizione’
+“
+z
+pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(3
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.String"ñ
+z
+pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(4
+
+%3java.lang.StringB*(
+&com.example.optic.entities.Valutazione

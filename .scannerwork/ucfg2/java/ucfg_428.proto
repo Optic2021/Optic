@@ -1,9 +1,16 @@
 
-4com.example.optic.entities.Event#getGiocatoriCons()Ir
-hF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Event.java% %("1*õ
-1r
-hF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Event.java& &("|
-r
-hF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Event.java& &(
-""B$"
- com.example.optic.entities.Event
+Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;s
+iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javau u(#"1*Ø
+1s
+iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(È
+Å
+s
+iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(
+%0java.sql.Connection"__id*-*+!
+com.example.optic.dao.PlayerDAO"
+conn"’
+s
+iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(
+
+%0java.sql.ConnectionB#!
+com.example.optic.dao.PlayerDAO

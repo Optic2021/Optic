@@ -1,78 +1,74 @@
 
-ecom.example.optic.app_controllers.LoginController#refereeLogin(Lcom/example/optic/bean/RefereeBean;)Zƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java6 6(&"11*§
-5ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java; ;(E–“
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java; ;(E
-%5boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-
-%3java.lang.String*
-
-%4java.lang.String2equals(Ljava/lang/Object;)*
-1*°
-6ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java;5 ;(6Ÿœ
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java;5 ;(D
-%4java.lang.String"Bcom.example.optic.bean.RefereeBean#getPassword()Ljava/lang/String;*)
+Ecom.example.optic.SecondUI.PlayerProfileCLI#back(Ljava/lang/String;)Z
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java ("6*¹
+2
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java (ð
+í
+
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java (%'
+%4!com.example.optic.bean.PlayerBean"__id*;*9-
++com.example.optic.SecondUI.PlayerProfileCLI"
+utente›˜
+
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java (4
+%5java.lang.String"Bcom.example.optic.bean.PlayerBean#getBUsername()Ljava/lang/String;*)
 '
-r"com.example.optic.bean.RefereeBean2getPassword()*
-5*²
-7ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java; ;(¡ž
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java; ;(-
-%3java.lang.String"Bcom.example.optic.entities.Referee#getPassword()Ljava/lang/String;*+
-)
-ref"com.example.optic.entities.Referee2getPassword()*
-6*ú
-8ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java: :(:æ
-ã
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java: :(:)
-ref"com.example.optic.entities.Referee"__id**
-(
-%2"com.example.optic.entities.Referee*
-7
-1*Ž
-9ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java: :(9ýú
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java: :(9(
-%2"com.example.optic.entities.Referee"ccom.example.optic.dao.RefereeDAO#getReferee(Ljava/lang/String;)Lcom/example/optic/entities/Referee;*)
-'
-dao com.example.optic.dao.RefereeDAO*
+%4!com.example.optic.bean.PlayerBean2getBUsername()œ
+™
+
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java (5
+
+%6void"Bcom.example.optic.SecondUI.PlayerHomeCLI#main(Ljava/lang/String;)V*,"*
+(com.example.optic.SecondUI.PlayerHomeCLI*
 
-%1java.lang.String2getReferee(Ljava/lang/String;)*
-8*–
-10ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java9 9(6â
-ß
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java9 9(6'
-dao com.example.optic.dao.RefereeDAO"__id*(
-&
-%0 com.example.optic.dao.RefereeDAOŸœ
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java:) :(8
-%1java.lang.String"Bcom.example.optic.bean.RefereeBean#getUsername()Ljava/lang/String;*)
-'
-r"com.example.optic.bean.RefereeBean2getUsername()*
-9*¼
-11ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java9 9('©
-¦
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.java9 9(5&
-%0 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
- com.example.optic.dao.RefereeDAO*
-10*š
-1ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.javaB B("Ž
-ƒ
-yF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/LoginController.javaB B(
-"":'
-r"com.example.optic.bean.RefereeBeanB5"3
-1com.example.optic.app_controllers.LoginController
+%5java.lang.String*
+1*™
+3
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java^ (eŠ‡
+
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java^ (x
+%3boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+commandjava.lang.String*
+
+indietro2equals(Ljava/lang/Object;)*
+2
+1*™
+4
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java@ (GŠ‡
+
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java@ (Z
+%2boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+commandjava.lang.String*
+
+Indietro2equals(Ljava/lang/Object;)*
+2
+3*•
+5
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java& (-†ƒ
+
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java& (<
+%1boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+commandjava.lang.String*
+back2equals(Ljava/lang/Object;)*
+2
+4*•
+6
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java (†ƒ
+
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java ("
+%0boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+commandjava.lang.String*
+Back2equals(Ljava/lang/Object;)*
+2
+5*
+1
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java ("‰
+
+uF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileCLI.java (
+"":
+commandjava.lang.StringB/"-
++com.example.optic.SecondUI.PlayerProfileCLI

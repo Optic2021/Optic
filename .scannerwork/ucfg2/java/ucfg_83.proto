@@ -1,17 +1,16 @@
 
-Bcom.example.optic.entities.Referee#getUsername()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java ("1*‹
-1t
-jF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java (Õ
- 
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java (
-%0java.lang.String"__id*4*2$
-"com.example.optic.entities.Referee"
-
-username"ê
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java (
+Dcom.example.optic.bean.ReportBean#getMotivazione()Ljava/lang/String;u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java ( "1*·
+1u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java (–
+Õ
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java (
+%0java.lang.String"__id*6*4#
+!com.example.optic.bean.ReportBean"
+motivazione"ë
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java (
 
-%0java.lang.StringB&$
-"com.example.optic.entities.Referee
+%0java.lang.StringB%#
+!com.example.optic.bean.ReportBean

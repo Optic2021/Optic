@@ -1,48 +1,9 @@
 
-Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java´ ´(&"3*æ
-2r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¶ ¶(%½º
-r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¶ ¶(#$
-%1com.example.optic.dao.AdminDAO"com.example.optic.dao.AdminDAOÏ
-Ì
-r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¶ ¶(%
-%2"(com.example.optic.dao.AdminDAO#<init>()V*&
-$
-%1com.example.optic.dao.AdminDAOÕ
-Ò
-r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¶ ¶(%. 
-com.example.optic.dao.AdminDAO"
-
-instance"__id*&
-$
-%1com.example.optic.dao.AdminDAO*
-1*×
-3r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.javaµ µ(Õ
-Ò
-r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.javaµ µ($
-%0com.example.optic.dao.AdminDAO"__id*0*. 
-com.example.optic.dao.AdminDAO"
-
-instance*
-2
-1*î
-1r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¸ ¸(Õ
-Ò
-r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¸ ¸($
-%3com.example.optic.dao.AdminDAO"__id*0*. 
-com.example.optic.dao.AdminDAO"
-
-instance"œ
-r
-fF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¸ ¸(&
-$
-%3com.example.optic.dao.AdminDAOB"" 
-com.example.optic.dao.AdminDAO
+3com.example.optic.entities.Player#getValutazione()Iu
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java6 6("1*û
+1u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java7 7("
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java7 7(
+""B%#
+!com.example.optic.entities.Player

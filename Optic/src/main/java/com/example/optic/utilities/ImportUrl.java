@@ -55,11 +55,10 @@ public class ImportUrl {
                 }
                 break;
             default:
-                /*if (!exclW && numWhatsapp.getText() != null && !(numWhatsapp.getText().isEmpty()) && numWhatsapp.getText().length() != 10){
+                if (numWhatsapp != null && !(numWhatsapp.isEmpty()) && numWhatsapp.length() != 10){
                     res = false;
-                    err.setContentText("Numero di telefono non valido");
-                    err.show();
-                }*/
+                    System.out.println("Numero non valido");
+                }
 
         }
         return res;

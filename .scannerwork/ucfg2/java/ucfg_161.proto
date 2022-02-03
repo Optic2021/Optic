@@ -1,70 +1,60 @@
 
-lcom.example.optic.app_controllers.ModPGPageAppController#isDateValid(Lcom/example/optic/bean/GiornataBean;)Zç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaë ë(%"1*Û
-1ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaí í(´
-®
+ìcom.example.optic.app_controllers.ModPGPageAppController#getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java< <(-"7*ã
+2ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java@ @(:
+Ì
 ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaì ì(-$
-%0com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
-com.example.optic.dao.AdminDAOË
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java@ @(:)
+ref"com.example.optic.entities.Referee"__id**
+(
+%2"com.example.optic.entities.Referee*
+1*∞
+4ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java@ @(:ïí
+ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java@ @(:(
+%2"com.example.optic.entities.Referee"jcom.example.optic.dao.AdminDAO#getRefereeFromAdmin(Ljava/lang/String;)Lcom/example/optic/entities/Referee;*'
+%
+daocom.example.optic.dao.AdminDAO*
+
+%1java.lang.String2'getRefereeFromAdmin(Ljava/lang/String;)*
+2*©
+5ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java? ?(2Ë
 Â
 ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaì ì(.%
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java? ?(2%
 daocom.example.optic.dao.AdminDAO"__id*&
 $
-%0com.example.optic.dao.AdminDAOﬂ‹
+%0com.example.optic.dao.AdminDAO£†
 ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaî" î(-'
-%1!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAO∫
-∑
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java@* @(9
+%1java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*&
+$
+ucom.example.optic.bean.UserBean2getUsername()*
+4*∆
+6ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java? ?(#´
+®
 ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaî î(2
-%2"Kcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/AdminDAO;)V*)
-'
-%1!com.example.optic.dao.GiornataDAO*'
-%
-daocom.example.optic.dao.AdminDAOÚ
-Ô
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java? ?(1$
+%0com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
+com.example.optic.dao.AdminDAO*
+5*Á
+7ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java= =(Ã
+…
 ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaî î(3,
-playDao!com.example.optic.dao.GiornataDAO"__id*)
-'
-%1!com.example.optic.dao.GiornataDAO®•
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java= =()
+ref"com.example.optic.entities.Referee"__id*
+""*
+6*”
+1ç
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaD D("Ω
 ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaï ï(&
-%3java.lang.String"@com.example.optic.bean.GiornataBean#getAdmin()Ljava/lang/String;*-
-+
-bean#com.example.optic.bean.GiornataBean2
-getAdmin()Œ
-À
-ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaï ï('
-adminjava.lang.String"__id*
-
-%3java.lang.String™ß
-ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javañ ñ(%
-%4java.util.Calendar"Acom.example.optic.bean.GiornataBean#getData()Ljava/util/Calendar;*-
-+
-bean#com.example.optic.bean.GiornataBean2	getData()–
-Õ
-ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javañ ñ(&
-caljava.util.Calendar"__id*
-
-%4java.util.Calendarôñ
-ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaó ó(,
-%5boolean"Vcom.example.optic.dao.GiornataDAO#isDateValid(Ljava/lang/String;Ljava/util/Calendar;)Z*.
-,
-playDao!com.example.optic.dao.GiornataDAO*
-
-adminjava.lang.String*
-
-caljava.util.Calendar23isDateValid(Ljava/lang/String;Ljava/util/Calendar;)"ò
-ç
-ÄF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaò ò(
-"":+
-bean#com.example.optic.bean.GiornataBeanB<":
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaD D(+
+)
+ref"com.example.optic.entities.Referee:$
+ucom.example.optic.bean.UserBeanB<":
 8com.example.optic.app_controllers.ModPGPageAppController

@@ -1,13 +1,73 @@
 
-0com.example.optic.entities.Report#getIdReport()Is
-iF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Report.java	 	("1*÷
-1s
-iF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Report.java
- 
-("}
-s
-iF:/Studio/Universita/ISPW/WorkingCopyOrg/trunk/Optic/src/main/java/com/example/optic/entities/Report.java
- 
-(
-""B%#
-!com.example.optic.entities.Report
+’com.example.optic.app_controllers.BookSessionAppController#isPlayerBooked(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/GiornataBean;)Z
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java> >(("8*
+4
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaC C(Pðí
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaC C(P
+%5boolean"Jcom.example.optic.dao.PrenotazioneDAO#isPlayerBooked(Ljava/lang/String;I)Z*2
+0
+prenDao%com.example.optic.dao.PrenotazioneDAO*
+
+%3java.lang.String*
+	
+%4int2#isPlayerBooked(Ljava/lang/String;I)*
+1*«
+5
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaC? C(CŽ‹
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaC? C(O	
+%4int"0com.example.optic.bean.GiornataBean#getIdPlay()I*-
++
+play#com.example.optic.bean.GiornataBean2getIdPlay()*
+4*Æ
+6
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaB B(?ü
+ù
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaB B(?0
+prenDao%com.example.optic.dao.PrenotazioneDAO"__id*-
++
+%1%com.example.optic.dao.PrenotazioneDAOª§
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaC) C(=
+%3java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*+
+)
+playercom.example.optic.bean.UserBean2getUsername()*
+5*¾
+7
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaA A(4ì
+é
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaA A(4&
+daocom.example.optic.dao.PlayerDAO"__id*'
+%
+%0com.example.optic.dao.PlayerDAOéæ
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaB* B(9+
+%1%com.example.optic.dao.PrenotazioneDAO"%com.example.optic.dao.PrenotazioneDAOÆ
+Ã
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaB& B(>
+%2"Pcom.example.optic.dao.PrenotazioneDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)V*-
++
+%1%com.example.optic.dao.PrenotazioneDAO*(
+&
+daocom.example.optic.dao.PlayerDAO*
+6*Î
+8
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaA A(%±
+®
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaA A(3%
+%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
+com.example.optic.dao.PlayerDAO*
+7*²
+1
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaG G("š
+
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaG G(
+"":)
+playercom.example.optic.bean.UserBean:+
+play#com.example.optic.bean.GiornataBeanB>"<
+:com.example.optic.app_controllers.BookSessionAppController

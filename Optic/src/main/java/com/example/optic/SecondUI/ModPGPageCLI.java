@@ -6,6 +6,7 @@ import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import com.example.optic.utilities.ImportCheckInput;
+import com.example.optic.utilities.ImportUrl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -57,7 +58,7 @@ public class ModPGPageCLI extends BaseCommandCLI {
                         System.out.println("Indietro");
                         return;
                     }
-                    default -> showInfo(a);
+                    default -> showInfo(a.getUsername());
                 }
             } while (true);
         } catch (IOException e) {
@@ -143,9 +144,89 @@ public class ModPGPageCLI extends BaseCommandCLI {
 
     public static void modInfo(Admin admin) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        AdminBean a = new AdminBean();
+        a.setUsername(admin.getUsername());
         boolean res;
-        System.out.println("Selezionare la modifica da effettuare: \n1)Descrizione \n2)Arbitro \n3)Facebook \n4)Instagram \n5)Whatsapp");
+        int command;
+        String input;
+        try{
+            do{
+                System.out.println("Selezionare la modifica da effettuare: \n1)Descrizione \n2)Arbitro \n3)Social");
+                input = br.readLine();
+                res = ImportCheckInput.checkInput(input);
+                if(!res){
+                    System.out.println("Comando non valido!");
+                }
+            }while(!res);
+            command = Integer.parseInt(input);
+            switch(command){
+                case 2 -> modReferee(admin);
+                case 3 -> modSocial(admin);
+                default -> modDesc(a);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
+    public static void modReferee(Admin a){
+
+    }
+
+    public static void modSocial(Admin a){
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        AdminBean bean = new AdminBean();
+        bean.setUsername(a.getUsername());
+        bean.setFaceb(a.getFb());
+        bean.setInsta(a.getIg());
+        bean.setWhats(a.getWa());
+        boolean res;
+        int command;
+        String input;
+        try{
+            do{
+                System.out.println("Social da modificare: \n1)Facebook \n2)Instagram \n3)Whatsapp");
+                input = br.readLine();
+                res = ImportCheckInput.checkInput(input);
+                if(!res){
+                    System.out.println("Comando non valido!");
+                }
+            }while(!res);
+            command = Integer.parseInt(input);
+            System.out.println("Inserire nuovo parametro: ");
+            input = br.readLine();
+            switch(command){
+                case 2 :
+                    res = ImportUrl.controlliUrl(input,a.getFb(),a.getWa(),2);
+                    bean.setInsta(input);
+                    break;
+                case 1 :
+                    res = ImportUrl.controlliUrl(a.getIg(),input,a.getWa(),1);
+                    bean.setFaceb(input);
+                    break;
+                default :
+                    res = ImportUrl.controlliUrl(a.getIg(),a.getFb(),input,3);
+                    bean.setWhats(input);
+            }
+            if(res){
+                ModPGPageAppController.setAdminSocial(bean);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void modDesc(AdminBean a){
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String input;
+        System.out.println("Inserire una nuova descrizione: ");
+        try {
+            input = br.readLine();
+            a.setDescrizione(input);
+            ModPGPageAppController.setDescription(a);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public static void showPlayers(Giornata play) {
@@ -178,7 +259,10 @@ public class ModPGPageCLI extends BaseCommandCLI {
         }
     }
 
-    public static void showInfo(Admin admin) {
+    public static void showInfo(String user) {
+        AdminBean bean = new AdminBean();
+        bean.setUsername(user);
+        Admin admin = ModPGPageAppController.getAdmin(bean);
         System.out.println(admin.getNomeC() + "\nDescrizione: " + admin.getDescrizioneC() + "\nAdmin: " + admin.getUsername() + "\nVia: " + admin.getVia() + "\nProvincia: " + admin.getProvincia());
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
