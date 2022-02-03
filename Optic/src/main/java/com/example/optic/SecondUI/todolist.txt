@@ -8,8 +8,8 @@ storico partite sia su profilo dello stesso player sia player su player  //fatto
 scollegare/collegare admin
 recensione
 modifica social
-lista eventi
-aggiungi giornata
+lista eventi      //fatto
+aggiungi giornata //finire
 
 GENERICO
 Cancellare giornate?

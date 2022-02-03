@@ -27,12 +27,14 @@ public class ModPGPageCLI extends BaseCommandCLI {
         try {
             do {
                 do {
-                    System.out.println("|Profilo campo|\n1)Info campo \n2)Lista giornate  \n3)Aggiungi Giornata \n4)Modifica info \n5)Vedi recensioni \n6)Indietro");
+                    System.out.println("|Profilo campo|\n1)Info campo \n2)Lista giornate  \n3)Aggiungi Giornata \n4)Modifica info \n5)Vedi recensioni \n6)Lista Eventi \n7)Indietro");
                     input = br.readLine();
                     res = ImportCheckInput.checkInput(input);
                     //controllo se l'input è corretto
                     if (!res) {
-                        System.out.println("ATTENZIONE: Comando non valido!");
+                        if (!exit(input)){
+                            System.out.println("ATTENZIONE: Comando non valido!");
+                        }
                     } else {
                         command = Integer.parseInt(input);
                     }
@@ -55,6 +57,14 @@ public class ModPGPageCLI extends BaseCommandCLI {
                     case 4 -> modInfo(a);
                     case 5 -> showReviews(a);
                     case 6 -> {
+                        List<Event> list = ModPGPageAppController.getEventList();
+                        for(int i = 0;i<list.size();i++) {
+                            System.out.println(i + ") " + list.get(i).getNome());
+                        }
+                        System.out.println("Premi invio per continuare");
+                        br.readLine();
+                    }
+                    case 7 -> {
                         System.out.println("Indietro");
                         return;
                     }
@@ -160,7 +170,11 @@ public class ModPGPageCLI extends BaseCommandCLI {
             }while(!res);
             command = Integer.parseInt(input);
             switch(command){
-                case 2 -> modReferee(admin);
+                case 2 ->{
+                    UserBean u=new UserBean();
+                    u.setUsername(admin.getUsername());
+                    modReferee(admin,ModPGPageAppController.getRefereeFromAdmin(u));
+                }
                 case 3 -> modSocial(admin);
                 default -> modDesc(a);
             }
@@ -169,8 +183,59 @@ public class ModPGPageCLI extends BaseCommandCLI {
         }
     }
 
-    public static void modReferee(Admin a){
-
+    public static void modReferee(Admin a, Referee ref){
+        System.out.println("1)Cancellare\n2)Modificare");
+        BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
+        String input2=new String();
+        try {
+            input2=br2.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (!ImportCheckInput.isNumber(input2)) {
+            System.out.println("ATTENTIONE: Immettere un numero");
+            return;
+        }
+        int inp=Integer.parseInt(input2);
+        switch (inp){
+            case 1://elimina
+                if(ref!=null){
+                    UserBean u = new UserBean();
+                    u.setUsername(ref.getUsername());
+                    Referee ref2 = ModPGPageAppController.getReferee(u);
+                    if(ref2 == null){
+                    System.out.println("ATTENZIONE: Impossibile scollegare un arbitro inseistente!");
+                    }else{
+                     ModPGPageAppController.freeReferee(u);
+                    }
+                }else{
+                    System.out.println("ATTENZIONE: Nessuno arbitro collegato");
+                }
+                break;
+            default://modifica
+                try {
+                    System.out.println("Immettere lo username dell'arbitro da collegare");
+                    input2= br2.readLine();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                UserBean adminBean = new UserBean();
+                UserBean refBean = new UserBean();
+                refBean.setUsername(input2);
+                adminBean.setUsername(a.getUsername());
+                //controllo se il referee esiste
+                Referee referee = ModPGPageAppController.getReferee(refBean);
+                if(referee == null){
+                    System.out.println("ATTENZIONE: Arbitro inesistente!");
+                }else if(referee.getAdminCampo() != null){//controllo che l'arbitro non sia collegato
+                    System.out.println("ATTENZIONE: Arbitro già di un altro campo!");
+                }else{
+                    System.out.println("ATTENZIONE: Arbitro correttamente collegato!");
+                    ModPGPageAppController.setReferee(adminBean,refBean);
+                }
+                break;
+        }
+        return;
     }
 
     public static void modSocial(Admin a){
@@ -263,23 +328,24 @@ public class ModPGPageCLI extends BaseCommandCLI {
         AdminBean bean = new AdminBean();
         bean.setUsername(user);
         Admin admin = ModPGPageAppController.getAdmin(bean);
-        System.out.println(admin.getNomeC() + "\nDescrizione: " + admin.getDescrizioneC() + "\nAdmin: " + admin.getUsername() + "\nVia: " + admin.getVia() + "\nProvincia: " + admin.getProvincia());
+        UserBean admbean= new UserBean();
+        admbean.setUsername(user);
+        Referee appoggio=ModPGPageAppController.getRefereeFromAdmin(admbean);
+        String param="Nessuno ";
+        if (appoggio!=null){
+            param=appoggio.getUsername();
+        }
+        System.out.println(admin.getNomeC() + "\nDescrizione: " + admin.getDescrizioneC() + "\nAdmin: " + admin.getUsername() + "\nVia: " + admin.getVia() + "\nProvincia: " + admin.getProvincia()+"\nArbitro : "+param);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
+        System.out.println("Premi invio per tornare indietro");
+        String input;
         try {
-            do {
-                System.out.println("Inserire un numero per tornare indietro");
-                String input;
-                input = br.readLine();
-                res = ImportCheckInput.checkInput(input);
-                //controllo se l'input è corretto
-                if (!res) {
-                    System.out.println("ATTENZIONE: Comando non valido!");
-                }
-            } while (!res);
+            input = br.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return;
     }
 
     public static void addGiornata(String user) {
