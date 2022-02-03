@@ -81,7 +81,7 @@ public class Optic2UI extends BaseCommandCLI {
                 switch (type) {
                     case 1 -> PlayerHomeCLI.main(user);
                     case 2 -> ModPGPageCLI.main(user);
-                    case 3 -> RefereeReport.main(user);
+                    case 3 -> RefereeReportCLI.main(user);
                     default -> System.exit(0);
                 }
             }while(true);

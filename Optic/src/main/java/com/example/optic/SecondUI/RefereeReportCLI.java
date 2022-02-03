@@ -18,7 +18,7 @@ import java.util.List;
 
 import static com.example.optic.SecondUI.BaseCommandCLI.exit;
 
-public class RefereeReport {
+public class RefereeReportCLI {
     private static RefereeBean ref= new RefereeBean();
     private static GiornataBean play= new GiornataBean();
 

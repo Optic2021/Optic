@@ -79,7 +79,7 @@ public class RegisterCLI {
             System.out.println("Registrazione avvenuta con successo.");
             switch (type) {
                 case 2 -> ModPGPageCLI.main(user);
-                case 3 ->  RefereeReport.main(user);
+                case 3 ->  RefereeReportCLI.main(user);
                 default -> PlayerHomeCLI.main(user);
             }
         }catch (IOException|SQLException|ClassNotFoundException e){

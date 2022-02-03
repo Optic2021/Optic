@@ -25,7 +25,7 @@ public class PlayerProfileViewCLI extends BaseCommandCLI{
     }
 
     public static void main(String user,String Viewer){
-        Boolean flag=false;
+        Boolean flag=true;
         viewer=Viewer;
         utente.setBUsername(user);
         Player p;

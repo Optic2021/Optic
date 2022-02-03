@@ -170,8 +170,10 @@ public class UserPGPageCLI {
                         command = Integer.parseInt(input);
                         if(command == 0){
                             showPlayList(user,admin,play);
+                        }else if (list.get(command-1).getUsername().equals(user)) {
+                            PlayerProfileCLI.main(user);
                         }else{
-                            PlayerProfileCLI.main(list.get(command-1).getUsername());
+                            PlayerProfileViewCLI.main(list.get(command - 1).getUsername(),user);
                         }
                     }
                 }while(!res);
@@ -188,7 +190,7 @@ public class UserPGPageCLI {
         int val = 0;
         if(!list.isEmpty()){
             for(int i = 0; i < list.size(); i++){
-                System.out.println(list.get(i).getFkUsernameP1()+": "+"\n"+list.get(i).getDescrizione());
+                System.out.println(list.get(i).getFkUsernameP1()+": "+list.get(i).getDescrizione()+" val. :"+list.get(i).getStelle());
                 stelleTot += list.get(i).getStelle();
                 val++;
             }

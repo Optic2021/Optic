@@ -1,0 +1,15 @@
+SECONDA GUI
+/Player
+see report pl on pl
+lista eventi on pl
+storico partite sia su profilo dello stesso player sia player su player
+
+/Admin
+scollegare/collegare admin
+recensione
+modifica social
+lista eventi
+aggiungi giornata
+
+GENERICO
+Cancellare giornate?
