@@ -22,7 +22,199 @@ hashCode()java.lang.Object#hashCode()IÎ
 setUser(Ljava/lang/String;)Icom.example.optic.entities.ValutazionePlayer#setUser(Ljava/lang/String;)Vv
 "setDescrizione(Ljava/lang/String;)Pcom.example.optic.entities.ValutazionePlayer#setDescrizione(Ljava/lang/String;)Vä
 ,<init>(Ljava/lang/String;Ljava/lang/String;)Zcom.example.optic.entities.ValutazionePlayer#<init>(Ljava/lang/String;Ljava/lang/String;)Vc
-getDescrizione()Ocom.example.optic.entities.ValutazionePlayer#getDescrizione()Ljava/lang/String;ì
+getDescrizione()Ocom.example.optic.entities.ValutazionePlayer#getDescrizione()Ljava/lang/String;ä
++com.example.optic.FirstUI.GraphicControllerjava.lang.Objectâ
+,toView(Ljava/lang/String;Ljava/lang/String;)Ycom.example.optic.FirstUI.GraphicController#toView(Ljava/lang/String;Ljava/lang/String;)V≠
+>toView(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)kcom.example.optic.FirstUI.GraphicController#toView(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vy
+$setUserVariables(Ljava/lang/String;)Qcom.example.optic.FirstUI.GraphicController#setUserVariables(Ljava/lang/String;)VA
+<init>()5com.example.optic.FirstUI.GraphicController#<init>()Ve
+toView(Ljava/lang/String;)Gcom.example.optic.FirstUI.GraphicController#toView(Ljava/lang/String;)VI
+exitButton()9com.example.optic.FirstUI.GraphicController#exitButton()VM
+reduceButton();com.example.optic.FirstUI.GraphicController#reduceButton()VÕ
+NtoView(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/bean/AdminBean;){com.example.optic.FirstUI.GraphicController#toView(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)V 
+EventHandlerjava.lang.ObjectB
+2Lcom/example/optic/FirstUI/GraphicController$1473;EventHandlerB
+2Lcom/example/optic/FirstUI/GraphicController$1733;EventHandler(
+java.io.Serializablejava.lang.Objectã
+"java.lang.reflect.AnnotatedElementjava.lang.Objectß
+/getDeclaredAnnotationsByType(Ljava/lang/Class;)tjava.lang.reflect.AnnotatedElement#getDeclaredAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;t
+&isAnnotationPresent(Ljava/lang/Class;)Jjava.lang.reflect.AnnotatedElement#isAnnotationPresent(Ljava/lang/Class;)Zò
+(getDeclaredAnnotation(Ljava/lang/Class;)ljava.lang.reflect.AnnotatedElement#getDeclaredAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;ó
+'getAnnotationsByType(Ljava/lang/Class;)ljava.lang.reflect.AnnotatedElement#getAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;\
+$java.lang.reflect.GenericDeclarationjava.lang.Object"java.lang.reflect.AnnotatedElements
+java.lang.reflect.Typejava.lang.ObjectG
+getTypeName()6java.lang.reflect.Type#getTypeName()Ljava/lang/String;§i
+java.lang.Class$java.lang.reflect.GenericDeclarationjava.lang.reflect.Typejava.lang.Objectjava.io.Serializable"java.lang.reflect.AnnotatedElementG
+getMethods()7java.lang.Class#getMethods()[Ljava/lang/reflect/Method;E
+hasEnclosingMethodInfo())java.lang.Class#hasEnclosingMethodInfo()Z 
+NsearchMethods([Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Class;)xjava.lang.Class#searchMethods([Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;T
+reflectionData()@java.lang.Class#reflectionData()Ljava/lang/Class$ReflectionData;[
+forName(Ljava/lang/String;)<java.lang.Class#forName(Ljava/lang/String;)Ljava/lang/Class;I
+getComponentType()3java.lang.Class#getComponentType()Ljava/lang/Class;ñ
+@getExecutableTypeAnnotationBytes(Ljava/lang/reflect/Executable;)Rjava.lang.Class#getExecutableTypeAnnotationBytes(Ljava/lang/reflect/Executable;)[BQ
+getEnclosingMethod0()8java.lang.Class#getEnclosingMethod0()[Ljava/lang/Object;ã
+3forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Tjava.lang.Class#forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;>
+getClasses().java.lang.Class#getClasses()[Ljava/lang/Class;H
+getNestMembers0()3java.lang.Class#getNestMembers0()[Ljava/lang/Class;Ö
+8addAll(Ljava/util/Collection;[Ljava/lang/reflect/Field;)Ijava.lang.Class#addAll(Ljava/util/Collection;[Ljava/lang/reflect/Field;)Vw
+"getConstructor([Ljava/lang/Class;)Qjava.lang.Class#getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;1
+isAnnotation()java.lang.Class#isAnnotation()ZV
+cast(Ljava/lang/Object;):java.lang.Class#cast(Ljava/lang/Object;)Ljava/lang/Object;h
+getReflectionFactory()Njava.lang.Class#getReflectionFactory()Ljdk/internal/reflect/ReflectionFactory;h
+!cannotCastMsg(Ljava/lang/Object;)Cjava.lang.Class#cannotCastMsg(Ljava/lang/Object;)Ljava/lang/String;J
+getCanonicalName()4java.lang.Class#getCanonicalName()Ljava/lang/String;w
+'getResourceAsStream(Ljava/lang/String;)Ljava.lang.Class#getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;_
+asSubclass(Ljava/lang/Class;)>java.lang.Class#asSubclass(Ljava/lang/Class;)Ljava/lang/Class;á
+*getDeclaredConstructor([Ljava/lang/Class;)Yjava.lang.Class#getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;é
+4methodToString(Ljava/lang/String;[Ljava/lang/Class;)Vjava.lang.Class#methodToString(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/String;e
+getGenericInfo()Qjava.lang.Class#getGenericInfo()Lsun/reflect/generics/repository/ClassRepository;j
+getDeclaredConstructors0(Z)Kjava.lang.Class#getDeclaredConstructors0(Z)[Ljava/lang/reflect/Constructor;G
+isLocalOrAnonymousClass()*java.lang.Class#isLocalOrAnonymousClass()Zú
+7getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)ajava.lang.Class#getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;/
+isSynthetic()java.lang.Class#isSynthetic()Zò
+2copyConstructors([Ljava/lang/reflect/Constructor;)bjava.lang.Class#copyConstructors([Ljava/lang/reflect/Constructor;)[Ljava/lang/reflect/Constructor;/
+isInterface()java.lang.Class#isInterface()Z9
+isAnonymousClass()#java.lang.Class#isAnonymousClass()ZP
+getSimpleBinaryName()7java.lang.Class#getSimpleBinaryName()Ljava/lang/String;?
+getSigners()/java.lang.Class#getSigners()[Ljava/lang/Object;<
+getModule()-java.lang.Class#getModule()Ljava/lang/Module;g
+getField0(Ljava/lang/String;)Fjava.lang.Class#getField0(Ljava/lang/String;)Ljava/lang/reflect/Field;'
+	isArray()java.lang.Class#isArray()Zi
+*desiredAssertionStatus0(Ljava/lang/Class;);java.lang.Class#desiredAssertionStatus0(Ljava/lang/Class;)ZÉ
+7arrayContentsEq([Ljava/lang/Object;[Ljava/lang/Object;)Hjava.lang.Class#arrayContentsEq([Ljava/lang/Object;[Ljava/lang/Object;)Zu
+0<init>(Ljava/lang/ClassLoader;Ljava/lang/Class;)Ajava.lang.Class#<init>(Ljava/lang/ClassLoader;Ljava/lang/Class;)V
+(copyMethods([Ljava/lang/reflect/Method;)Sjava.lang.Class#copyMethods([Ljava/lang/reflect/Method;)[Ljava/lang/reflect/Method;@
+getTypeName()/java.lang.Class#getTypeName()Ljava/lang/String;f
+getDeclaredAnnotations()Jjava.lang.Class#getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;X
+getDeclaredFields0(Z)?java.lang.Class#getDeclaredFields0(Z)[Ljava/lang/reflect/Field;V
+getConstructors()Ajava.lang.Class#getConstructors()[Ljava/lang/reflect/Constructor;†
+>getDeclaredPublicMethods(Ljava/lang/String;[Ljava/lang/Class;)^java.lang.Class#getDeclaredPublicMethods(Ljava/lang/String;[Ljava/lang/Class;)Ljava/util/List;%
+isEnum()java.lang.Class#isEnum()ZX
+getGenericSuperclass()>java.lang.Class#getGenericSuperclass()Ljava/lang/reflect/Type;[
+getDeclaredMethods0(Z)Ajava.lang.Class#getDeclaredMethods0(Z)[Ljava/lang/reflect/Method;E
+desiredAssertionStatus())java.lang.Class#desiredAssertionStatus()Z@
+newInstance()/java.lang.Class#newInstance()Ljava/lang/Object;u
+ getAnnotation(Ljava/lang/Class;)Qjava.lang.Class#getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;d
+privateGetDeclaredFields(Z)Ejava.lang.Class#privateGetDeclaredFields(Z)[Ljava/lang/reflect/Field;A
+getNestHost0()/java.lang.Class#getNestHost0()Ljava/lang/Class;å
+/getMethod(Ljava/lang/String;[Ljava/lang/Class;)Yjava.lang.Class#getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;7
+isTopLevelClass()"java.lang.Class#isTopLevelClass()Z`
+getResource(Ljava/lang/String;)=java.lang.Class#getResource(Ljava/lang/String;)Ljava/net/URL;Ñ
+'getAnnotationsByType(Ljava/lang/Class;)Yjava.lang.Class#getAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;S
+setSigners([Ljava/lang/Object;)0java.lang.Class#setSigners([Ljava/lang/Object;)V?
+getNestHost().java.lang.Class#getNestHost()Ljava/lang/Class;K
+getClassLoader()7java.lang.Class#getClassLoader()Ljava/lang/ClassLoader;é
+0getMethod0(Ljava/lang/String;[Ljava/lang/Class;)Zjava.lang.Class#getMethod0(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;T
+annotationData()@java.lang.Class#annotationData()Ljava/lang/Class$AnnotationData;W
+getEnumConstantsShared();java.lang.Class#getEnumConstantsShared()[Ljava/lang/Object;L
+getCanonicalName0()5java.lang.Class#getCanonicalName0()Ljava/lang/String;D
+getRawTypeAnnotations())java.lang.Class#getRawTypeAnnotations()[B£
+GcheckPackageAccess(Ljava/lang/SecurityManager;Ljava/lang/ClassLoader;Z)Xjava.lang.Class#checkPackageAccess(Ljava/lang/SecurityManager;Ljava/lang/ClassLoader;Z)Vf
+getAnnotatedInterfaces()Jjava.lang.Class#getAnnotatedInterfaces()[Ljava/lang/reflect/AnnotatedType;Z
+getFactory()Jjava.lang.Class#getFactory()Lsun/reflect/generics/factory/GenericsFactory;a
+getAnnotationType()Jjava.lang.Class#getAnnotationType()Lsun/reflect/annotation/AnnotationType;M
+getDeclaringClass0()5java.lang.Class#getDeclaringClass0()Ljava/lang/Class;u
+$getDeclaredField(Ljava/lang/String;)Mjava.lang.Class#getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;3
+isMemberClass() java.lang.Class#isMemberClass()ZD
+getFields()5java.lang.Class#getFields()[Ljava/lang/reflect/Field;i
+getEnclosingMethodInfo()Mjava.lang.Class#getEnclosingMethodInfo()Ljava/lang/Class$EnclosingMethodInfo;Y
+getConstantPool()Djava.lang.Class#getConstantPool()Ljdk/internal/reflect/ConstantPool;T
+getDeclaredFields()=java.lang.Class#getDeclaredFields()[Ljava/lang/reflect/Field;Y
+getGenericInterfaces()?java.lang.Class#getGenericInterfaces()[Ljava/lang/reflect/Type;z
+&copyFields([Ljava/lang/reflect/Field;)Pjava.lang.Class#copyFields([Ljava/lang/reflect/Field;)[Ljava/lang/reflect/Field;8
+	getName()+java.lang.Class#getName()Ljava/lang/String;F
+getNestMembers()2java.lang.Class#getNestMembers()[Ljava/lang/Class;1
+getModifiers()java.lang.Class#getModifiers()I/
+isPrimitive()java.lang.Class#isPrimitive()ZÖ
+(getDeclaredAnnotation(Ljava/lang/Class;)Yjava.lang.Class#getDeclaredAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;K
+getDeclaringClass()4java.lang.Class#getDeclaringClass()Ljava/lang/Class;C
+getSuperclass()0java.lang.Class#getSuperclass()Ljava/lang/Class;d
+resolveName(Ljava/lang/String;)Ajava.lang.Class#resolveName(Ljava/lang/String;)Ljava/lang/String;v
+!privateGetDeclaredConstructors(Z)Qjava.lang.Class#privateGetDeclaredConstructors(Z)[Ljava/lang/reflect/Constructor;e
+getEnclosingConstructor()Hjava.lang.Class#getEnclosingConstructor()Ljava/lang/reflect/Constructor;î
+/getDeclaredAnnotationsByType(Ljava/lang/Class;)ajava.lang.Class#getDeclaredAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;[
+getTypeParameters()Djava.lang.Class#getTypeParameters()[Ljava/lang/reflect/TypeVariable;o
+%getPrimitiveClass(Ljava/lang/String;)Fjava.lang.Class#getPrimitiveClass(Ljava/lang/String;)Ljava/lang/Class;{
+$getConstructor0([Ljava/lang/Class;I)Sjava.lang.Class#getConstructor0([Ljava/lang/Class;I)Ljava/lang/reflect/Constructor;:
+
+toString(),java.lang.Class#toString()Ljava/lang/String;f
+getDeclaredConstructors()Ijava.lang.Class#getDeclaredConstructors()[Ljava/lang/reflect/Constructor;S
+isNestmateOf(Ljava/lang/Class;)0java.lang.Class#isNestmateOf(Ljava/lang/Class;)Z[
+#isAssignableFrom(Ljava/lang/Class;)4java.lang.Class#isAssignableFrom(Ljava/lang/Class;)ZD
+getSimpleName()1java.lang.Class#getSimpleName()Ljava/lang/String;W
+getDeclaredAnnotationMap()9java.lang.Class#getDeclaredAnnotationMap()Ljava/util/Map;Ø
+EforName0(Ljava/lang/String;ZLjava/lang/ClassLoader;Ljava/lang/Class;)fjava.lang.Class#forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Class;D
+initClassName()1java.lang.Class#initClassName()Ljava/lang/String;<
+getRawAnnotations()%java.lang.Class#getRawAnnotations()[B{
+3isOpenToCaller(Ljava/lang/String;Ljava/lang/Class;)Djava.lang.Class#isOpenToCaller(Ljava/lang/String;Ljava/lang/Class;)Z°
+:searchFields([Ljava/lang/reflect/Field;Ljava/lang/String;)cjava.lang.Class#searchFields([Ljava/lang/reflect/Field;Ljava/lang/String;)Ljava/lang/reflect/Field;K
+getEnumConstants()5java.lang.Class#getEnumConstants()[Ljava/lang/Object;V
+getEnclosingMethod()>java.lang.Class#getEnclosingMethod()Ljava/lang/reflect/Method;ñ
+1newReflectionData(Ljava/lang/ref/SoftReference;I)ajava.lang.Class#newReflectionData(Ljava/lang/ref/SoftReference;I)Ljava/lang/Class$ReflectionData;◊
+acasAnnotationType(Lsun/reflect/annotation/AnnotationType;Lsun/reflect/annotation/AnnotationType;)rjava.lang.Class#casAnnotationType(Lsun/reflect/annotation/AnnotationType;Lsun/reflect/annotation/AnnotationType;)Z^
+privateGetPublicFields()Bjava.lang.Class#privateGetPublicFields()[Ljava/lang/reflect/Field;e
+getAnnotatedSuperclass()Ijava.lang.Class#getAnnotatedSuperclass()Ljava/lang/reflect/AnnotatedType;ó
+AcheckMemberAccess(Ljava/lang/SecurityManager;ILjava/lang/Class;Z)Rjava.lang.Class#checkMemberAccess(Ljava/lang/SecurityManager;ILjava/lang/Class;Z)Vg
+privateGetDeclaredMethods(Z)Gjava.lang.Class#privateGetDeclaredMethods(Z)[Ljava/lang/reflect/Method;?
+getPackage()/java.lang.Class#getPackage()Ljava/lang/Package;
+-forName(Ljava/lang/Module;Ljava/lang/String;)Njava.lang.Class#forName(Ljava/lang/Module;Ljava/lang/String;)Ljava/lang/Class;F
+getInterfaces(Z)2java.lang.Class#getInterfaces(Z)[Ljava/lang/Class;`
+getProtectionDomain0()Fjava.lang.Class#getProtectionDomain0()Ljava/security/ProtectionDomain;7
+registerNatives()"java.lang.Class#registerNatives()VF
+getInterfaces0()2java.lang.Class#getInterfaces0()[Ljava/lang/Class;N
+getDeclaredClasses()6java.lang.Class#getDeclaredClasses()[Ljava/lang/Class;a
+privateGetPublicMethods()Djava.lang.Class#privateGetPublicMethods()[Ljava/lang/reflect/Method;F
+getSimpleName0()2java.lang.Class#getSimpleName0()Ljava/lang/String;D
+getInterfaces()1java.lang.Class#getInterfaces()[Ljava/lang/Class;a
+&isAnnotationPresent(Ljava/lang/Class;)7java.lang.Class#isAnnotationPresent(Ljava/lang/Class;)Ze
+getField(Ljava/lang/String;)Ejava.lang.Class#getField(Ljava/lang/String;)Ljava/lang/reflect/Field;Q
+isInstance(Ljava/lang/Object;)/java.lang.Class#isInstance(Ljava/lang/Object;)ZK
+getEnclosingClass()4java.lang.Class#getEnclosingClass()Ljava/lang/Class;W
+getDeclaredMethods()?java.lang.Class#getDeclaredMethods()[Ljava/lang/reflect/Method;^
+getProtectionDomain()Ejava.lang.Class#getProtectionDomain()Ljava/security/ProtectionDomain;Q
+enumConstantDirectory()6java.lang.Class#enumConstantDirectory()Ljava/util/Map;M
+getClassLoader0()8java.lang.Class#getClassLoader0()Ljava/lang/ClassLoader;F
+getPackageName()2java.lang.Class#getPackageName()Ljava/lang/String;P
+getDeclaredClasses0()7java.lang.Class#getDeclaredClasses0()[Ljava/lang/Class;b
+createAnnotationData(I)Gjava.lang.Class#createAnnotationData(I)Ljava/lang/Class$AnnotationData;R
+getGenericSignature0()8java.lang.Class#getGenericSignature0()Ljava/lang/String;g
+!toClass(Ljava/lang/reflect/Type;)Bjava.lang.Class#toClass(Ljava/lang/reflect/Type;)Ljava/lang/Class;V
+getAnnotations()Bjava.lang.Class#getAnnotations()[Ljava/lang/annotation/Annotation;H
+toGenericString()3java.lang.Class#toGenericString()Ljava/lang/String;¨
+:getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)njava.lang.Class#getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)Ljava/lang/PublicMethods$MethodList;R
+getSimpleBinaryName0()8java.lang.Class#getSimpleBinaryName0()Ljava/lang/String;1
+isLocalClass()java.lang.Class#isLocalClass()ZB
+2Lcom/example/optic/FirstUI/GraphicController$2554;EventHandlerB
+2Lcom/example/optic/FirstUI/GraphicController$2815;EventHandlerB
+2Lcom/example/optic/FirstUI/GraphicController$3590;EventHandlerB
+2Lcom/example/optic/FirstUI/GraphicController$3851;EventHandlerB
+2Lcom/example/optic/FirstUI/GraphicController$4694;EventHandlerB
+2Lcom/example/optic/FirstUI/GraphicController$4955;EventHandlerî
+ com.example.optic.bean.AdminBeanjava.lang.Objectjava.io.Serializabled
+setPassword(Ljava/lang/String;)Acom.example.optic.bean.AdminBean#setPassword(Ljava/lang/String;)Vf
+ setProvincia(Ljava/lang/String;)Bcom.example.optic.bean.AdminBean#setProvincia(Ljava/lang/String;)VK
+
+getFaceb()=com.example.optic.bean.AdminBean#getFaceb()Ljava/lang/String;K
+
+getWhats()=com.example.optic.bean.AdminBean#getWhats()Ljava/lang/String;O
+getReferee()?com.example.optic.bean.AdminBean#getReferee()Ljava/lang/String;Z
+setVia(Ljava/lang/String;)<com.example.optic.bean.AdminBean#setVia(Ljava/lang/String;)VQ
+getUsername()@com.example.optic.bean.AdminBean#getUsername()Ljava/lang/String;^
+setWhats(Ljava/lang/String;)>com.example.optic.bean.AdminBean#setWhats(Ljava/lang/String;)Vj
+"setDescrizione(Ljava/lang/String;)Dcom.example.optic.bean.AdminBean#setDescrizione(Ljava/lang/String;)VS
+getNomeCampo()Acom.example.optic.bean.AdminBean#getNomeCampo()Ljava/lang/String;^
+setFaceb(Ljava/lang/String;)>com.example.optic.bean.AdminBean#setFaceb(Ljava/lang/String;)VW
+getDescrizione()Ccom.example.optic.bean.AdminBean#getDescrizione()Ljava/lang/String;d
+setUsername(Ljava/lang/String;)Acom.example.optic.bean.AdminBean#setUsername(Ljava/lang/String;)Vb
+setReferee(Ljava/lang/String;)@com.example.optic.bean.AdminBean#setReferee(Ljava/lang/String;)VS
+getProvincia()Acom.example.optic.bean.AdminBean#getProvincia()Ljava/lang/String;G
+getVia();com.example.optic.bean.AdminBean#getVia()Ljava/lang/String;Q
+getPassword()@com.example.optic.bean.AdminBean#getPassword()Ljava/lang/String;6
+<init>()*com.example.optic.bean.AdminBean#<init>()V^
+setInsta(Ljava/lang/String;)>com.example.optic.bean.AdminBean#setInsta(Ljava/lang/String;)VK
+
+getInsta()=com.example.optic.bean.AdminBean#getInsta()Ljava/lang/String;f
+ setNomeCampo(Ljava/lang/String;)Bcom.example.optic.bean.AdminBean#setNomeCampo(Ljava/lang/String;)Vì
 ,com.example.optic.first_ui.GraphicControllerjava.lang.Objectä
 ,toView(Ljava/lang/String;Ljava/lang/String;)Zcom.example.optic.first_ui.GraphicController#toView(Ljava/lang/String;Ljava/lang/String;)VÆ
 >toView(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)lcom.example.optic.first_ui.GraphicController#toView(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vz
@@ -46,10 +238,10 @@ $setUserVariables(Ljava/lang/String;)Ucom.example.optic.first_ui.ControllerRepo
 4saveReview(Lcom/example/optic/bean/ValutazioneBean;)pcom.example.optic.app_controllers.UserProfileAppController#saveReview(Lcom/example/optic/bean/ValutazioneBean;)Vë
 !getReportList(Ljava/lang/String;)lcom.example.optic.app_controllers.UserProfileAppController#getReportList(Ljava/lang/String;)Ljava/util/List;≥
 2getReviewList(Lcom/example/optic/bean/PlayerBean;)}com.example.optic.app_controllers.UserProfileAppController#getReviewList(Lcom/example/optic/bean/PlayerBean;)Ljava/util/List;k
-getEventList()Ycom.example.optic.app_controllers.UserProfileAppController#getEventList()Ljava/util/List;(
-java.io.Serializablejava.lang.Object√
+getEventList()Ycom.example.optic.app_controllers.UserProfileAppController#getEventList()Ljava/util/List;¬
 java.lang.Throwablejava.lang.Objectjava.io.Serializable;
-printStackTrace()&java.lang.Throwable#printStackTrace()VZ
+printStackTrace()&java.lang.Throwable#printStackTrace()V}
+2validateSuppressedExceptionsList(Ljava/util/List;)Gjava.lang.Throwable#validateSuppressedExceptionsList(Ljava/util/List;)IZ
 getOurStackTrace()Djava.lang.Throwable#getOurStackTrace()[Ljava/lang/StackTraceElement;¡
 ìprintEnclosedStackTrace(Ljava/lang/Throwable$PrintStreamOrWriter;[Ljava/lang/StackTraceElement;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)®java.lang.Throwable#printEnclosedStackTrace(Ljava/lang/Throwable$PrintStreamOrWriter;[Ljava/lang/StackTraceElement;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V>
 
@@ -125,38 +317,65 @@ Lof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)kj
 getPlayer()?com.example.optic.bean.ReportBean#getPlayer()Ljava/lang/String;c
 setReferee(Ljava/lang/String;)Acom.example.optic.bean.ReportBean#setReferee(Ljava/lang/String;)V\
 getFormattedText()Fcom.example.optic.bean.ReportBean#getFormattedText()Ljava/lang/String;a
-setPlayer(Ljava/lang/String;)@com.example.optic.bean.ReportBean#setPlayer(Ljava/lang/String;)Vƒ
+setPlayer(Ljava/lang/String;)@com.example.optic.bean.ReportBean#setPlayer(Ljava/lang/String;)V…
+,com.example.optic.FirstUI.ControllerRegister+com.example.optic.FirstUI.GraphicControllerB
+<init>()6com.example.optic.FirstUI.ControllerRegister#<init>()VD
+	toLogin()7com.example.optic.FirstUI.ControllerRegister#toLogin()VL
+hideAddress();com.example.optic.FirstUI.ControllerRegister#hideAddress()VL
+showAddress();com.example.optic.FirstUI.ControllerRegister#showAddress()VF
+
+register()8com.example.optic.FirstUI.ControllerRegister#register()V„
+com.example.optic.bean.UserBeanjava.lang.Objectjava.io.Serializablec
+setPassword(Ljava/lang/String;)@com.example.optic.bean.UserBean#setPassword(Ljava/lang/String;)VH
+	getProv();com.example.optic.bean.UserBean#getProv()Ljava/lang/String;[
+setProv(Ljava/lang/String;)<com.example.optic.bean.UserBean#setProv(Ljava/lang/String;)VF
+getVia():com.example.optic.bean.UserBean#getVia()Ljava/lang/String;P
+getPassword()?com.example.optic.bean.UserBean#getPassword()Ljava/lang/String;5
+<init>())com.example.optic.bean.UserBean#<init>()VY
+setVia(Ljava/lang/String;);com.example.optic.bean.UserBean#setVia(Ljava/lang/String;)VP
+getUsername()?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;J
+
+getNomeC()<com.example.optic.bean.UserBean#getNomeC()Ljava/lang/String;]
+setNomeC(Ljava/lang/String;)=com.example.optic.bean.UserBean#setNomeC(Ljava/lang/String;)Vc
+setUsername(Ljava/lang/String;)@com.example.optic.bean.UserBean#setUsername(Ljava/lang/String;)V¶
+4com.example.optic.app_controllers.RegisterControllerjava.lang.Objectö
+0userRegister(Lcom/example/optic/bean/UserBean;I)fcom.example.optic.app_controllers.RegisterController#userRegister(Lcom/example/optic/bean/UserBean;I)VR
+closeConn(I)Bcom.example.optic.app_controllers.RegisterController#closeConn(I)VJ
+<init>()>com.example.optic.app_controllers.RegisterController#<init>()Vû
+2isUsernameUsed(Lcom/example/optic/bean/UserBean;I)hcom.example.optic.app_controllers.RegisterController#isUsernameUsed(Lcom/example/optic/bean/UserBean;I)Z~
+
+TestPlayerjava.lang.Object<
+playerSetStarFromVal()"TestPlayer#playerSetStarFromVal()V 
+<init>()TestPlayer#<init>()VÒ
+!com.example.optic.entities.Playerjava.lang.Objecte
+setPassword(Ljava/lang/String;)Bcom.example.optic.entities.Player#setPassword(Ljava/lang/String;)VY
+setFb(Ljava/lang/String;)<com.example.optic.entities.Player#setFb(Ljava/lang/String;)VR
+getUsername()Acom.example.optic.entities.Player#getUsername()Ljava/lang/String;G
+getValutazione()3com.example.optic.entities.Player#getValutazione()Ik
+"setDescrizione(Ljava/lang/String;)Ecom.example.optic.entities.Player#setDescrizione(Ljava/lang/String;)V_
+setStato(Ljava/lang/String;)?com.example.optic.entities.Player#setStato(Ljava/lang/String;)VN
+getStelle()?com.example.optic.entities.Player#getStelle()Ljava/lang/String;I
+setValutazione(I)4com.example.optic.entities.Player#setValutazione(I)VX
+getDescrizione()Dcom.example.optic.entities.Player#getDescrizione()Ljava/lang/String;F
+getFb();com.example.optic.entities.Player#getFb()Ljava/lang/String;e
+setUsername(Ljava/lang/String;)Bcom.example.optic.entities.Player#setUsername(Ljava/lang/String;)Va
+setStelle(Ljava/lang/String;)@com.example.optic.entities.Player#setStelle(Ljava/lang/String;)VR
+getPassword()Acom.example.optic.entities.Player#getPassword()Ljava/lang/String;7
+<init>()+com.example.optic.entities.Player#<init>()VF
+getIg();com.example.optic.entities.Player#getIg()Ljava/lang/String;Y
+setIg(Ljava/lang/String;)<com.example.optic.entities.Player#setIg(Ljava/lang/String;)VK
+setStarsFromVal(I)5com.example.optic.entities.Player#setStarsFromVal(I)V]
+<init>(Ljava/lang/String;I)>com.example.optic.entities.Player#<init>(Ljava/lang/String;I)V[
+<init>(Ljava/lang/String;)=com.example.optic.entities.Player#<init>(Ljava/lang/String;)V
+,<init>(Ljava/lang/String;Ljava/lang/String;)Ocom.example.optic.entities.Player#<init>(Ljava/lang/String;Ljava/lang/String;)VL
+
+getStato()>com.example.optic.entities.Player#getStato()Ljava/lang/String;ƒ
 0com.example.optic.first_ui.ControllerSocialModPG,com.example.optic.first_ui.GraphicController~
 $setUserVariables(Ljava/lang/String;)Vcom.example.optic.first_ui.ControllerSocialModPG#setUserVariables(Ljava/lang/String;)VJ
 
 conferma()<com.example.optic.first_ui.ControllerSocialModPG#conferma()VF
 <init>():com.example.optic.first_ui.ControllerSocialModPG#<init>()VN
-exitSocial()>com.example.optic.first_ui.ControllerSocialModPG#exitSocial()Vî
- com.example.optic.bean.AdminBeanjava.lang.Objectjava.io.Serializabled
-setPassword(Ljava/lang/String;)Acom.example.optic.bean.AdminBean#setPassword(Ljava/lang/String;)Vf
- setProvincia(Ljava/lang/String;)Bcom.example.optic.bean.AdminBean#setProvincia(Ljava/lang/String;)VK
-
-getFaceb()=com.example.optic.bean.AdminBean#getFaceb()Ljava/lang/String;K
-
-getWhats()=com.example.optic.bean.AdminBean#getWhats()Ljava/lang/String;O
-getReferee()?com.example.optic.bean.AdminBean#getReferee()Ljava/lang/String;Z
-setVia(Ljava/lang/String;)<com.example.optic.bean.AdminBean#setVia(Ljava/lang/String;)VQ
-getUsername()@com.example.optic.bean.AdminBean#getUsername()Ljava/lang/String;^
-setWhats(Ljava/lang/String;)>com.example.optic.bean.AdminBean#setWhats(Ljava/lang/String;)Vj
-"setDescrizione(Ljava/lang/String;)Dcom.example.optic.bean.AdminBean#setDescrizione(Ljava/lang/String;)VS
-getNomeCampo()Acom.example.optic.bean.AdminBean#getNomeCampo()Ljava/lang/String;^
-setFaceb(Ljava/lang/String;)>com.example.optic.bean.AdminBean#setFaceb(Ljava/lang/String;)VW
-getDescrizione()Ccom.example.optic.bean.AdminBean#getDescrizione()Ljava/lang/String;d
-setUsername(Ljava/lang/String;)Acom.example.optic.bean.AdminBean#setUsername(Ljava/lang/String;)Vb
-setReferee(Ljava/lang/String;)@com.example.optic.bean.AdminBean#setReferee(Ljava/lang/String;)VS
-getProvincia()Acom.example.optic.bean.AdminBean#getProvincia()Ljava/lang/String;G
-getVia();com.example.optic.bean.AdminBean#getVia()Ljava/lang/String;Q
-getPassword()@com.example.optic.bean.AdminBean#getPassword()Ljava/lang/String;6
-<init>()*com.example.optic.bean.AdminBean#<init>()V^
-setInsta(Ljava/lang/String;)>com.example.optic.bean.AdminBean#setInsta(Ljava/lang/String;)VK
-
-getInsta()=com.example.optic.bean.AdminBean#getInsta()Ljava/lang/String;f
- setNomeCampo(Ljava/lang/String;)Bcom.example.optic.bean.AdminBean#setNomeCampo(Ljava/lang/String;)Vø
+exitSocial()>com.example.optic.first_ui.ControllerSocialModPG#exitSocial()Vø
 8com.example.optic.app_controllers.ModPGPageAppControllerjava.lang.ObjectŒ
 6getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)ìcom.example.optic.app_controllers.ModPGPageAppController#getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;ö
 .freeReferee(Lcom/example/optic/bean/UserBean;)hcom.example.optic.app_controllers.ModPGPageAppController#freeReferee(Lcom/example/optic/bean/UserBean;)V¢
@@ -201,7 +420,145 @@ b<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;
 getDescrizioneC()Dcom.example.optic.entities.Admin#getDescrizioneC()Ljava/lang/String;Æ
 %com.example.optic.utilities.ImportUrljava.lang.Object;
 <init>()/com.example.optic.utilities.ImportUrl#<init>()Vµ
-EcontrolliUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)lcom.example.optic.utilities.ImportUrl#controlliUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Zﬁ
+EcontrolliUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)lcom.example.optic.utilities.ImportUrl#controlliUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Zˆ
+3com.example.optic.FirstUI.ControllerUserViewProfile+com.example.optic.FirstUI.GraphicControllerM
+
+facebook()?com.example.optic.FirstUI.ControllerUserViewProfile#facebook()VI
+toHome()=com.example.optic.FirstUI.ControllerUserViewProfile#toHome()VÖ
+&populateReviewList(Ljava/lang/String;)[com.example.optic.FirstUI.ControllerUserViewProfile#populateReviewList(Ljava/lang/String;)VÅ
+$setUserVariables(Ljava/lang/String;)Ycom.example.optic.FirstUI.ControllerUserViewProfile#setUserVariables(Ljava/lang/String;)VI
+<init>()=com.example.optic.FirstUI.ControllerUserViewProfile#<init>()VO
+instagram()@com.example.optic.FirstUI.ControllerUserViewProfile#instagram()VO
+setStars(I)@com.example.optic.FirstUI.ControllerUserViewProfile#setStars(I)VI
+review()=com.example.optic.FirstUI.ControllerUserViewProfile#review()VQ
+reportList()Acom.example.optic.FirstUI.ControllerUserViewProfile#reportList()Va
+populateGamesTable()Icom.example.optic.FirstUI.ControllerUserViewProfile#populateGamesTable()V(
+java.lang.Comparablejava.lang.Object”
+java.lang.CharSequencejava.lang.ObjectE
+chars():java.lang.CharSequence#chars()Ljava/util/stream/IntStream;é
+9compare(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Qjava.lang.CharSequence#compare(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)IO
+codePoints()?java.lang.CharSequence#codePoints()Ljava/util/stream/IntStream;¬?
+java.lang.Stringjava.lang.CharSequencejava.lang.Comparablejava.lang.Objectjava.io.Serializableã
+2join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ujava.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;R
+startsWith(Ljava/lang/String;)0java.lang.String#startsWith(Ljava/lang/String;)Z&
+length()java.lang.String#length()I?
+substring(I)/java.lang.String#substring(I)Ljava/lang/String;V
+ indexOf([BBILjava/lang/String;I)2java.lang.String#indexOf([BBILjava/lang/String;I)I.
+<init>([BII)java.lang.String#<init>([BII)V&
+<init>()java.lang.String#<init>()V[
+concat(Ljava/lang/String;)=java.lang.String#concat(Ljava/lang/String;)Ljava/lang/String;P
+compareTo(Ljava/lang/String;)/java.lang.String#compareTo(Ljava/lang/String;)I:
+codePointCount(II)$java.lang.String#codePointCount(II)IF
+checkBoundsBeginEnd(III)*java.lang.String#checkBoundsBeginEnd(III)VL
+indexOf(Ljava/lang/String;)-java.lang.String#indexOf(Ljava/lang/String;)II
+codePoints()9java.lang.String#codePoints()Ljava/util/stream/IntStream;^
+$lastIndexOf([BBILjava/lang/String;I)6java.lang.String#lastIndexOf([BBILjava/lang/String;I)IN
+endsWith(Ljava/lang/String;).java.lang.String#endsWith(Ljava/lang/String;)Z(
+	charAt(I)java.lang.String#charAt(I)C(
+	isEmpty()java.lang.String#isEmpty()ZA
+toLowerCase()0java.lang.String#toLowerCase()Ljava/lang/String;Z
+"contains(Ljava/lang/CharSequence;)4java.lang.String#contains(Ljava/lang/CharSequence;)Z•
+?format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)bjava.lang.String#format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;4
+getChars(II[CI)!java.lang.String#getChars(II[CI)VE
+copyValueOf([C)2java.lang.String#copyValueOf([C)Ljava/lang/String;C
+stripLeading()1java.lang.String#stripLeading()Ljava/lang/String;;
+
+valueOf(F)-java.lang.String#valueOf(F)Ljava/lang/String;9
+	repeat(I),java.lang.String#repeat(I)Ljava/lang/String;b
+&<init>([BIILjava/nio/charset/Charset;)8java.lang.String#<init>([BIILjava/nio/charset/Charset;)Vá
+0replaceAll(Ljava/lang/String;Ljava/lang/String;)Sjava.lang.String#replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;4
+getBytes(II[BI)!java.lang.String#getBytes(II[BI)V*
+
+hashCode()java.lang.String#hashCode()IZ
+split(Ljava/lang/String;)=java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;O
+getBytes(Ljava/lang/String;)/java.lang.String#getBytes(Ljava/lang/String;)[BJ
+<init>(Ljava/lang/String;),java.lang.String#<init>(Ljava/lang/String;)VÅ
+-format(Ljava/lang/String;[Ljava/lang/Object;)Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;A
+toUpperCase()0java.lang.String#toUpperCase()Ljava/lang/String;,
+<init>([BB)java.lang.String#<init>([BB)V^
+$<init>([BLjava/nio/charset/Charset;)6java.lang.String#<init>([BLjava/nio/charset/Charset;)V2
+lastIndexOf(I) java.lang.String#lastIndexOf(I)IV
+ lastIndexOf(Ljava/lang/String;I)2java.lang.String#lastIndexOf(Ljava/lang/String;I)IV
+ <init>(Ljava/lang/StringBuffer;)2java.lang.String#<init>(Ljava/lang/StringBuffer;)Và
+9<init>(Ljava/lang/AbstractStringBuilder;Ljava/lang/Void;)Kjava.lang.String#<init>(Ljava/lang/AbstractStringBuilder;Ljava/lang/Void;)V*
+
+isLatin1()java.lang.String#isLatin1()ZL
+matches(Ljava/lang/String;)-java.lang.String#matches(Ljava/lang/String;)Z7
+intern()+java.lang.String#intern()Ljava/lang/String;T
+startsWith(Ljava/lang/String;I)1java.lang.String#startsWith(Ljava/lang/String;I)Z^
+$regionMatches(ILjava/lang/String;II)6java.lang.String#regionMatches(ILjava/lang/String;II)Zd
+'contentEquals(Ljava/lang/CharSequence;)9java.lang.String#contentEquals(Ljava/lang/CharSequence;)ZA
+substring(II)0java.lang.String#substring(II)Ljava/lang/String;K
+subSequence(II)8java.lang.String#subSequence(II)Ljava/lang/CharSequence;d
+'compareToIgnoreCase(Ljava/lang/String;)9java.lang.String#compareToIgnoreCase(Ljava/lang/String;)Iô
+9replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;R
+<init>([BIILjava/lang/String;)0java.lang.String#<init>([BIILjava/lang/String;)VB
+offsetByCodePoints(II)(java.lang.String#offsetByCodePoints(II)IJ
+equals(Ljava/lang/Object;),java.lang.String#equals(Ljava/lang/Object;)Z4
+lastIndexOf(II)!java.lang.String#lastIndexOf(II)I;
+
+valueOf(D)-java.lang.String#valueOf(D)Ljava/lang/String;.
+<init>([III)java.lang.String#<init>([III)V,
+<init>([BI)java.lang.String#<init>([BI)VN
+<init>([CIILjava/lang/Void;).java.lang.String#<init>([CIILjava/lang/Void;)V]
+valueOf(Ljava/lang/Object;)>java.lang.String#valueOf(Ljava/lang/Object;)Ljava/lang/String;+
+
+getBytes()java.lang.String#getBytes()[Bd
+'contentEquals(Ljava/lang/StringBuffer;)9java.lang.String#contentEquals(Ljava/lang/StringBuffer;)Z?
+chars()4java.lang.String#chars()Ljava/util/stream/IntStream;2
+getBytes([BIB) java.lang.String#getBytes([BIB)VA
+valueOf([CII)0java.lang.String#valueOf([CII)Ljava/lang/String;e
+toLowerCase(Ljava/util/Locale;)Bjava.lang.String#toLowerCase(Ljava/util/Locale;)Ljava/lang/String;N
+indexOf(Ljava/lang/String;I).java.lang.String#indexOf(Ljava/lang/String;I)I*
+
+indexOf(I)java.lang.String#indexOf(I)I(
+	isBlank()java.lang.String#isBlank()Ze
+toUpperCase(Ljava/util/Locale;)Bjava.lang.String#toUpperCase(Ljava/util/Locale;)Ljava/lang/String;;
+
+toString()-java.lang.String#toString()Ljava/lang/String;;
+
+valueOf(C)-java.lang.String#valueOf(C)Ljava/lang/String;E
+rangeCheck([CII)1java.lang.String#rangeCheck([CII)Ljava/lang/Void;T
+lastIndexOf(Ljava/lang/String;)1java.lang.String#lastIndexOf(Ljava/lang/String;)IB
+indexOfNonWhitespace()(java.lang.String#indexOfNonWhitespace()I.
+<init>([CII)java.lang.String#<init>([CII)VE
+stripTrailing()2java.lang.String#stripTrailing()Ljava/lang/String;M
+valueOfCodePoint(I)6java.lang.String#valueOfCodePoint(I)Ljava/lang/String;=
+valueOf([C).java.lang.String#valueOf([C)Ljava/lang/String;ã
+2replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ujava.lang.String#replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;$
+coder()java.lang.String#coder()B_
+$getBytes(Ljava/nio/charset/Charset;)7java.lang.String#getBytes(Ljava/nio/charset/Charset;)[B3
+trim())java.lang.String#trim()Ljava/lang/String;<
+lines()1java.lang.String#lines()Ljava/util/stream/Stream;*
+
+<init>([C)java.lang.String#<init>([C)V4
+checkOffset(II)!java.lang.String#checkOffset(II)V5
+strip()*java.lang.String#strip()Ljava/lang/String;1
+toCharArray() java.lang.String#toCharArray()[C0
+<init>([BIII)java.lang.String#<init>([BIII)V=
+replace(CC).java.lang.String#replace(CC)Ljava/lang/String;:
+codePointBefore(I)$java.lang.String#codePointBefore(I)I^
+$equalsIgnoreCase(Ljava/lang/String;)6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z;
+
+valueOf(I)-java.lang.String#valueOf(I)Ljava/lang/String;ï
+7join(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Zjava.lang.String#join(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljava/lang/String;2
+codePointAt(I) java.lang.String#codePointAt(I)IN
+<init>([BLjava/lang/String;).java.lang.String#<init>([BLjava/lang/String;)V*
+
+<init>([B)java.lang.String#<init>([B)V;
+
+valueOf(Z)-java.lang.String#valueOf(Z)Ljava/lang/String;I
+copyValueOf([CII)4java.lang.String#copyValueOf([CII)Ljava/lang/String;,
+indexOf(II)java.lang.String#indexOf(II)I\
+split(Ljava/lang/String;I)>java.lang.String#split(Ljava/lang/String;I)[Ljava/lang/String;F
+checkBoundsOffCount(III)*java.lang.String#checkBoundsOffCount(III)VÑ
+7nonSyncContentEquals(Ljava/lang/AbstractStringBuilder;)Ijava.lang.String#nonSyncContentEquals(Ljava/lang/AbstractStringBuilder;)Z;
+
+valueOf(J)-java.lang.String#valueOf(J)Ljava/lang/String;2
+checkIndex(II) java.lang.String#checkIndex(II)VX
+!<init>(Ljava/lang/StringBuilder;)3java.lang.String#<init>(Ljava/lang/StringBuilder;)V%
+value()java.lang.String#value()[B`
+%regionMatches(ZILjava/lang/String;II)7java.lang.String#regionMatches(ZILjava/lang/String;II)Zﬁ
 
 !com.example.optic.bean.PlayerBeanjava.lang.Objectjava.io.Serializablem
 #setBDescrizione(Ljava/lang/String;)Fcom.example.optic.bean.PlayerBean#setBDescrizione(Ljava/lang/String;)V[
@@ -219,7 +576,35 @@ EcontrolliUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)lcom.exam
  setBPassword(Ljava/lang/String;)Ccom.example.optic.bean.PlayerBean#setBPassword(Ljava/lang/String;)VT
 getBUsername()Bcom.example.optic.bean.PlayerBean#getBUsername()Ljava/lang/String;L
 
-getStato()>com.example.optic.bean.PlayerBean#getStato()Ljava/lang/String;Ÿ
+getStato()>com.example.optic.bean.PlayerBean#getStato()Ljava/lang/String;x
+&com.example.optic.utilities.ImportListjava.lang.Object<
+<init>()0com.example.optic.utilities.ImportList#<init>()Vù
+java.lang.Runtimejava.lang.Objecty
+1loadLibrary0(Ljava/lang/Class;Ljava/lang/String;)Djava.lang.Runtime#loadLibrary0(Ljava/lang/Class;Ljava/lang/String;)Vc
+&removeShutdownHook(Ljava/lang/Thread;)9java.lang.Runtime#removeShutdownHook(Ljava/lang/Thread;)ZÅ
+,exec([Ljava/lang/String;[Ljava/lang/String;)Qjava.lang.Runtime#exec([Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/Process;k
+*load0(Ljava/lang/Class;Ljava/lang/String;)=java.lang.Runtime#load0(Ljava/lang/Class;Ljava/lang/String;)V9
+runFinalization()$java.lang.Runtime#runFinalization()V=
+traceMethodCalls(Z)&java.lang.Runtime#traceMethodCalls(Z)VA
+getRuntime()1java.lang.Runtime#getRuntime()Ljava/lang/Runtime;
+gc()java.lang.Runtime#gc()Võ
+9exec(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)^java.lang.Runtime#exec(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;
++exec(Ljava/lang/String;[Ljava/lang/String;)Pjava.lang.Runtime#exec(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/Process;-
+maxMemory()java.lang.Runtime#maxMemory()Jù
+:exec([Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)_java.lang.Runtime#exec([Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;%
+halt(I)java.lang.Runtime#halt(I)V/
+freeMemory()java.lang.Runtime#freeMemory()JA
+availableProcessors()(java.lang.Runtime#availableProcessors()I'
+<init>()java.lang.Runtime#<init>()VC
+	version()6java.lang.Runtime#version()Ljava/lang/Runtime$Version;?
+traceInstructions(Z)'java.lang.Runtime#traceInstructions(Z)VY
+exec(Ljava/lang/String;)=java.lang.Runtime#exec(Ljava/lang/String;)Ljava/lang/Process;[
+exec([Ljava/lang/String;)>java.lang.Runtime#exec([Ljava/lang/String;)Ljava/lang/Process;1
+totalMemory() java.lang.Runtime#totalMemory()JU
+loadLibrary(Ljava/lang/String;)2java.lang.Runtime#loadLibrary(Ljava/lang/String;)VG
+load(Ljava/lang/String;)+java.lang.Runtime#load(Ljava/lang/String;)V%
+exit(I)java.lang.Runtime#exit(I)V]
+#addShutdownHook(Ljava/lang/Thread;)6java.lang.Runtime#addShutdownHook(Ljava/lang/Thread;)VŸ
 &com.example.optic.bean.ValutazioneBeanjava.lang.Object<
 <init>()0com.example.optic.bean.ValutazioneBean#<init>()Vn
 !setRecensione(Ljava/lang/String;)Icom.example.optic.bean.ValutazioneBean#setRecensione(Ljava/lang/String;)Vf
@@ -229,7 +614,9 @@ getStato()>com.example.optic.bean.PlayerBean#getStato()Ljava/lang/String;Ÿ
 getStelle()3com.example.optic.bean.ValutazioneBean#getStelle()IS
 getRiceve()Dcom.example.optic.bean.ValutazioneBean#getRiceve()Ljava/lang/String;n
 !setUsernameP1(Ljava/lang/String;)Icom.example.optic.bean.ValutazioneBean#setUsernameP1(Ljava/lang/String;)VD
-setStelle(I)4com.example.optic.bean.ValutazioneBean#setStelle(I)Ví
+setStelle(I)4com.example.optic.bean.ValutazioneBean#setStelle(I)Vx
+&com.example.optic.utilities.ImportStarjava.lang.Object<
+<init>()0com.example.optic.utilities.ImportStar#<init>()Ví
 %com.example.optic.dao.PrenotazioneDAOjava.lang.Object}
 )<init>(Lcom/example/optic/dao/PlayerDAO;)Pcom.example.optic.dao.PrenotazioneDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)Vq
 #isPlayerBooked(Ljava/lang/String;I)Jcom.example.optic.dao.PrenotazioneDAO#isPlayerBooked(Ljava/lang/String;I)Ze
@@ -487,133 +874,7 @@ getCampi()Ucom.example.optic.app_controllers.BookSessionAppController#getCampi(
 0getCampoInfo(Lcom/example/optic/bean/AdminBean;)çcom.example.optic.app_controllers.BookSessionAppController#getCampoInfo(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/bean/AdminBean;Ì
 VisPlayerBooked(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/GiornataBean;)ícom.example.optic.app_controllers.BookSessionAppController#isPlayerBooked(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/GiornataBean;)Z…
 2getNextPlay(Lcom/example/optic/bean/GiornataBean;)ícom.example.optic.app_controllers.BookSessionAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;V
-closeConn()Gcom.example.optic.app_controllers.BookSessionAppController#closeConn()V(
-java.lang.Comparablejava.lang.Object”
-java.lang.CharSequencejava.lang.ObjectE
-chars():java.lang.CharSequence#chars()Ljava/util/stream/IntStream;é
-9compare(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Qjava.lang.CharSequence#compare(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)IO
-codePoints()?java.lang.CharSequence#codePoints()Ljava/util/stream/IntStream;¬?
-java.lang.Stringjava.lang.CharSequencejava.lang.Comparablejava.lang.Objectjava.io.Serializableã
-2join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ujava.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;R
-startsWith(Ljava/lang/String;)0java.lang.String#startsWith(Ljava/lang/String;)Z&
-length()java.lang.String#length()I?
-substring(I)/java.lang.String#substring(I)Ljava/lang/String;V
- indexOf([BBILjava/lang/String;I)2java.lang.String#indexOf([BBILjava/lang/String;I)I.
-<init>([BII)java.lang.String#<init>([BII)V&
-<init>()java.lang.String#<init>()V[
-concat(Ljava/lang/String;)=java.lang.String#concat(Ljava/lang/String;)Ljava/lang/String;P
-compareTo(Ljava/lang/String;)/java.lang.String#compareTo(Ljava/lang/String;)I:
-codePointCount(II)$java.lang.String#codePointCount(II)IF
-checkBoundsBeginEnd(III)*java.lang.String#checkBoundsBeginEnd(III)VL
-indexOf(Ljava/lang/String;)-java.lang.String#indexOf(Ljava/lang/String;)II
-codePoints()9java.lang.String#codePoints()Ljava/util/stream/IntStream;^
-$lastIndexOf([BBILjava/lang/String;I)6java.lang.String#lastIndexOf([BBILjava/lang/String;I)IN
-endsWith(Ljava/lang/String;).java.lang.String#endsWith(Ljava/lang/String;)Z(
-	charAt(I)java.lang.String#charAt(I)C(
-	isEmpty()java.lang.String#isEmpty()ZA
-toLowerCase()0java.lang.String#toLowerCase()Ljava/lang/String;Z
-"contains(Ljava/lang/CharSequence;)4java.lang.String#contains(Ljava/lang/CharSequence;)Z•
-?format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)bjava.lang.String#format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;4
-getChars(II[CI)!java.lang.String#getChars(II[CI)VE
-copyValueOf([C)2java.lang.String#copyValueOf([C)Ljava/lang/String;C
-stripLeading()1java.lang.String#stripLeading()Ljava/lang/String;;
-
-valueOf(F)-java.lang.String#valueOf(F)Ljava/lang/String;9
-	repeat(I),java.lang.String#repeat(I)Ljava/lang/String;b
-&<init>([BIILjava/nio/charset/Charset;)8java.lang.String#<init>([BIILjava/nio/charset/Charset;)Vá
-0replaceAll(Ljava/lang/String;Ljava/lang/String;)Sjava.lang.String#replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;4
-getBytes(II[BI)!java.lang.String#getBytes(II[BI)V*
-
-hashCode()java.lang.String#hashCode()IZ
-split(Ljava/lang/String;)=java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;O
-getBytes(Ljava/lang/String;)/java.lang.String#getBytes(Ljava/lang/String;)[BJ
-<init>(Ljava/lang/String;),java.lang.String#<init>(Ljava/lang/String;)VÅ
--format(Ljava/lang/String;[Ljava/lang/Object;)Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;A
-toUpperCase()0java.lang.String#toUpperCase()Ljava/lang/String;,
-<init>([BB)java.lang.String#<init>([BB)V^
-$<init>([BLjava/nio/charset/Charset;)6java.lang.String#<init>([BLjava/nio/charset/Charset;)V2
-lastIndexOf(I) java.lang.String#lastIndexOf(I)IV
- lastIndexOf(Ljava/lang/String;I)2java.lang.String#lastIndexOf(Ljava/lang/String;I)IV
- <init>(Ljava/lang/StringBuffer;)2java.lang.String#<init>(Ljava/lang/StringBuffer;)Và
-9<init>(Ljava/lang/AbstractStringBuilder;Ljava/lang/Void;)Kjava.lang.String#<init>(Ljava/lang/AbstractStringBuilder;Ljava/lang/Void;)V*
-
-isLatin1()java.lang.String#isLatin1()ZL
-matches(Ljava/lang/String;)-java.lang.String#matches(Ljava/lang/String;)Z7
-intern()+java.lang.String#intern()Ljava/lang/String;T
-startsWith(Ljava/lang/String;I)1java.lang.String#startsWith(Ljava/lang/String;I)Z^
-$regionMatches(ILjava/lang/String;II)6java.lang.String#regionMatches(ILjava/lang/String;II)Zd
-'contentEquals(Ljava/lang/CharSequence;)9java.lang.String#contentEquals(Ljava/lang/CharSequence;)ZA
-substring(II)0java.lang.String#substring(II)Ljava/lang/String;K
-subSequence(II)8java.lang.String#subSequence(II)Ljava/lang/CharSequence;d
-'compareToIgnoreCase(Ljava/lang/String;)9java.lang.String#compareToIgnoreCase(Ljava/lang/String;)Iô
-9replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;R
-<init>([BIILjava/lang/String;)0java.lang.String#<init>([BIILjava/lang/String;)VB
-offsetByCodePoints(II)(java.lang.String#offsetByCodePoints(II)IJ
-equals(Ljava/lang/Object;),java.lang.String#equals(Ljava/lang/Object;)Z4
-lastIndexOf(II)!java.lang.String#lastIndexOf(II)I;
-
-valueOf(D)-java.lang.String#valueOf(D)Ljava/lang/String;.
-<init>([III)java.lang.String#<init>([III)V,
-<init>([BI)java.lang.String#<init>([BI)VN
-<init>([CIILjava/lang/Void;).java.lang.String#<init>([CIILjava/lang/Void;)V]
-valueOf(Ljava/lang/Object;)>java.lang.String#valueOf(Ljava/lang/Object;)Ljava/lang/String;+
-
-getBytes()java.lang.String#getBytes()[Bd
-'contentEquals(Ljava/lang/StringBuffer;)9java.lang.String#contentEquals(Ljava/lang/StringBuffer;)Z?
-chars()4java.lang.String#chars()Ljava/util/stream/IntStream;2
-getBytes([BIB) java.lang.String#getBytes([BIB)VA
-valueOf([CII)0java.lang.String#valueOf([CII)Ljava/lang/String;e
-toLowerCase(Ljava/util/Locale;)Bjava.lang.String#toLowerCase(Ljava/util/Locale;)Ljava/lang/String;N
-indexOf(Ljava/lang/String;I).java.lang.String#indexOf(Ljava/lang/String;I)I*
-
-indexOf(I)java.lang.String#indexOf(I)I(
-	isBlank()java.lang.String#isBlank()Ze
-toUpperCase(Ljava/util/Locale;)Bjava.lang.String#toUpperCase(Ljava/util/Locale;)Ljava/lang/String;;
-
-toString()-java.lang.String#toString()Ljava/lang/String;;
-
-valueOf(C)-java.lang.String#valueOf(C)Ljava/lang/String;E
-rangeCheck([CII)1java.lang.String#rangeCheck([CII)Ljava/lang/Void;T
-lastIndexOf(Ljava/lang/String;)1java.lang.String#lastIndexOf(Ljava/lang/String;)IB
-indexOfNonWhitespace()(java.lang.String#indexOfNonWhitespace()I.
-<init>([CII)java.lang.String#<init>([CII)VE
-stripTrailing()2java.lang.String#stripTrailing()Ljava/lang/String;M
-valueOfCodePoint(I)6java.lang.String#valueOfCodePoint(I)Ljava/lang/String;=
-valueOf([C).java.lang.String#valueOf([C)Ljava/lang/String;ã
-2replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ujava.lang.String#replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;$
-coder()java.lang.String#coder()B_
-$getBytes(Ljava/nio/charset/Charset;)7java.lang.String#getBytes(Ljava/nio/charset/Charset;)[B3
-trim())java.lang.String#trim()Ljava/lang/String;<
-lines()1java.lang.String#lines()Ljava/util/stream/Stream;*
-
-<init>([C)java.lang.String#<init>([C)V4
-checkOffset(II)!java.lang.String#checkOffset(II)V5
-strip()*java.lang.String#strip()Ljava/lang/String;1
-toCharArray() java.lang.String#toCharArray()[C0
-<init>([BIII)java.lang.String#<init>([BIII)V=
-replace(CC).java.lang.String#replace(CC)Ljava/lang/String;:
-codePointBefore(I)$java.lang.String#codePointBefore(I)I^
-$equalsIgnoreCase(Ljava/lang/String;)6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z;
-
-valueOf(I)-java.lang.String#valueOf(I)Ljava/lang/String;ï
-7join(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Zjava.lang.String#join(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljava/lang/String;2
-codePointAt(I) java.lang.String#codePointAt(I)IN
-<init>([BLjava/lang/String;).java.lang.String#<init>([BLjava/lang/String;)V*
-
-<init>([B)java.lang.String#<init>([B)V;
-
-valueOf(Z)-java.lang.String#valueOf(Z)Ljava/lang/String;I
-copyValueOf([CII)4java.lang.String#copyValueOf([CII)Ljava/lang/String;,
-indexOf(II)java.lang.String#indexOf(II)I\
-split(Ljava/lang/String;I)>java.lang.String#split(Ljava/lang/String;I)[Ljava/lang/String;F
-checkBoundsOffCount(III)*java.lang.String#checkBoundsOffCount(III)VÑ
-7nonSyncContentEquals(Ljava/lang/AbstractStringBuilder;)Ijava.lang.String#nonSyncContentEquals(Ljava/lang/AbstractStringBuilder;)Z;
-
-valueOf(J)-java.lang.String#valueOf(J)Ljava/lang/String;2
-checkIndex(II) java.lang.String#checkIndex(II)VX
-!<init>(Ljava/lang/StringBuilder;)3java.lang.String#<init>(Ljava/lang/StringBuilder;)V%
-value()java.lang.String#value()[B`
-%regionMatches(ZILjava/lang/String;II)7java.lang.String#regionMatches(ZILjava/lang/String;II)Zü
+closeConn()Gcom.example.optic.app_controllers.BookSessionAppController#closeConn()Vü
 "com.example.optic.entities.Refereejava.lang.Objectf
 setPassword(Ljava/lang/String;)Ccom.example.optic.entities.Referee#setPassword(Ljava/lang/String;)VS
 getPassword()Bcom.example.optic.entities.Referee#getPassword()Ljava/lang/String;§
@@ -642,20 +903,7 @@ bookPlay();com.example.optic.first_ui.ControllerUserPgPage#bookPlay()VE
 review()9com.example.optic.first_ui.ControllerUserPgPage#review()VK
 tableview()<com.example.optic.first_ui.ControllerUserPgPage#tableview()VO
 toInstagram()>com.example.optic.first_ui.ControllerUserPgPage#toInstagram()VO
-isDateValid()>com.example.optic.first_ui.ControllerUserPgPage#isDateValid()V„
-com.example.optic.bean.UserBeanjava.lang.Objectjava.io.Serializablec
-setPassword(Ljava/lang/String;)@com.example.optic.bean.UserBean#setPassword(Ljava/lang/String;)VH
-	getProv();com.example.optic.bean.UserBean#getProv()Ljava/lang/String;[
-setProv(Ljava/lang/String;)<com.example.optic.bean.UserBean#setProv(Ljava/lang/String;)VF
-getVia():com.example.optic.bean.UserBean#getVia()Ljava/lang/String;P
-getPassword()?com.example.optic.bean.UserBean#getPassword()Ljava/lang/String;5
-<init>())com.example.optic.bean.UserBean#<init>()VY
-setVia(Ljava/lang/String;);com.example.optic.bean.UserBean#setVia(Ljava/lang/String;)VP
-getUsername()?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;J
-
-getNomeC()<com.example.optic.bean.UserBean#getNomeC()Ljava/lang/String;]
-setNomeC(Ljava/lang/String;)=com.example.optic.bean.UserBean#setNomeC(Ljava/lang/String;)Vc
-setUsername(Ljava/lang/String;)@com.example.optic.bean.UserBean#setUsername(Ljava/lang/String;)Vï
+isDateValid()>com.example.optic.first_ui.ControllerUserPgPage#isDateValid()Vï
 java.text.Formatjava.lang.Cloneablejava.lang.Objectjava.io.Serializable”
 KcreateAttributedCharacterIterator([Ljava/text/AttributedCharacterIterator;)Éjava.text.Format#createAttributedCharacterIterator([Ljava/text/AttributedCharacterIterator;)Ljava/text/AttributedCharacterIterator;¶
 5createAttributedCharacterIterator(Ljava/lang/String;)mjava.text.Format#createAttributedCharacterIterator(Ljava/lang/String;)Ljava/text/AttributedCharacterIterator;&
@@ -1043,62 +1291,11 @@ getAdmin()@com.example.optic.bean.GiornataBean#getAdmin()Ljava/lang/String;N
 getIdPlay()0com.example.optic.bean.GiornataBean#getIdPlay()Ic
 setEvento(Ljava/lang/String;)Bcom.example.optic.bean.GiornataBean#setEvento(Ljava/lang/String;)Vc
 setData(Ljava/util/Calendar;)Bcom.example.optic.bean.GiornataBean#setData(Ljava/util/Calendar;)VG
-getnGiocatori()4com.example.optic.bean.GiornataBean#getnGiocatori()Ix
-&com.example.optic.utilities.ImportStarjava.lang.Object<
-<init>()0com.example.optic.utilities.ImportStar#<init>()VÂ
+getnGiocatori()4com.example.optic.bean.GiornataBean#getnGiocatori()IÂ
 5com.example.optic.app_controllers.ReviewAppControllerjava.lang.ObjectK
 <init>()?com.example.optic.app_controllers.ReviewAppController#<init>()V£
 4saveReview(Lcom/example/optic/bean/ValutazioneBean;)kcom.example.optic.app_controllers.ReviewAppController#saveReview(Lcom/example/optic/bean/ValutazioneBean;)V¶
-.reviewList(Lcom/example/optic/bean/AdminBean;)tcom.example.optic.app_controllers.ReviewAppController#reviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;Ò
-!com.example.optic.entities.Playerjava.lang.Objecte
-setPassword(Ljava/lang/String;)Bcom.example.optic.entities.Player#setPassword(Ljava/lang/String;)VY
-setFb(Ljava/lang/String;)<com.example.optic.entities.Player#setFb(Ljava/lang/String;)VR
-getUsername()Acom.example.optic.entities.Player#getUsername()Ljava/lang/String;G
-getValutazione()3com.example.optic.entities.Player#getValutazione()Ik
-"setDescrizione(Ljava/lang/String;)Ecom.example.optic.entities.Player#setDescrizione(Ljava/lang/String;)V_
-setStato(Ljava/lang/String;)?com.example.optic.entities.Player#setStato(Ljava/lang/String;)VN
-getStelle()?com.example.optic.entities.Player#getStelle()Ljava/lang/String;I
-setValutazione(I)4com.example.optic.entities.Player#setValutazione(I)VX
-getDescrizione()Dcom.example.optic.entities.Player#getDescrizione()Ljava/lang/String;F
-getFb();com.example.optic.entities.Player#getFb()Ljava/lang/String;e
-setUsername(Ljava/lang/String;)Bcom.example.optic.entities.Player#setUsername(Ljava/lang/String;)Va
-setStelle(Ljava/lang/String;)@com.example.optic.entities.Player#setStelle(Ljava/lang/String;)VR
-getPassword()Acom.example.optic.entities.Player#getPassword()Ljava/lang/String;7
-<init>()+com.example.optic.entities.Player#<init>()VF
-getIg();com.example.optic.entities.Player#getIg()Ljava/lang/String;Y
-setIg(Ljava/lang/String;)<com.example.optic.entities.Player#setIg(Ljava/lang/String;)VK
-setStarsFromVal(I)5com.example.optic.entities.Player#setStarsFromVal(I)V]
-<init>(Ljava/lang/String;I)>com.example.optic.entities.Player#<init>(Ljava/lang/String;I)V[
-<init>(Ljava/lang/String;)=com.example.optic.entities.Player#<init>(Ljava/lang/String;)V
-,<init>(Ljava/lang/String;Ljava/lang/String;)Ocom.example.optic.entities.Player#<init>(Ljava/lang/String;Ljava/lang/String;)VL
-
-getStato()>com.example.optic.entities.Player#getStato()Ljava/lang/String;ù
-java.lang.Runtimejava.lang.Objecty
-1loadLibrary0(Ljava/lang/Class;Ljava/lang/String;)Djava.lang.Runtime#loadLibrary0(Ljava/lang/Class;Ljava/lang/String;)Vc
-&removeShutdownHook(Ljava/lang/Thread;)9java.lang.Runtime#removeShutdownHook(Ljava/lang/Thread;)ZÅ
-,exec([Ljava/lang/String;[Ljava/lang/String;)Qjava.lang.Runtime#exec([Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/Process;k
-*load0(Ljava/lang/Class;Ljava/lang/String;)=java.lang.Runtime#load0(Ljava/lang/Class;Ljava/lang/String;)V9
-runFinalization()$java.lang.Runtime#runFinalization()V=
-traceMethodCalls(Z)&java.lang.Runtime#traceMethodCalls(Z)VA
-getRuntime()1java.lang.Runtime#getRuntime()Ljava/lang/Runtime;
-gc()java.lang.Runtime#gc()Võ
-9exec(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)^java.lang.Runtime#exec(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;
-+exec(Ljava/lang/String;[Ljava/lang/String;)Pjava.lang.Runtime#exec(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/Process;-
-maxMemory()java.lang.Runtime#maxMemory()Jù
-:exec([Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)_java.lang.Runtime#exec([Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;%
-halt(I)java.lang.Runtime#halt(I)V/
-freeMemory()java.lang.Runtime#freeMemory()JA
-availableProcessors()(java.lang.Runtime#availableProcessors()I'
-<init>()java.lang.Runtime#<init>()VC
-	version()6java.lang.Runtime#version()Ljava/lang/Runtime$Version;?
-traceInstructions(Z)'java.lang.Runtime#traceInstructions(Z)VY
-exec(Ljava/lang/String;)=java.lang.Runtime#exec(Ljava/lang/String;)Ljava/lang/Process;[
-exec([Ljava/lang/String;)>java.lang.Runtime#exec([Ljava/lang/String;)Ljava/lang/Process;1
-totalMemory() java.lang.Runtime#totalMemory()JU
-loadLibrary(Ljava/lang/String;)2java.lang.Runtime#loadLibrary(Ljava/lang/String;)VG
-load(Ljava/lang/String;)+java.lang.Runtime#load(Ljava/lang/String;)V%
-exit(I)java.lang.Runtime#exit(I)V]
-#addShutdownHook(Ljava/lang/Thread;)6java.lang.Runtime#addShutdownHook(Ljava/lang/Thread;)Vè
+.reviewList(Lcom/example/optic/bean/AdminBean;)tcom.example.optic.app_controllers.ReviewAppController#reviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;è
 1com.example.optic.app_controllers.RefReportPlayerjava.lang.Objectï
 /saveReport(Lcom/example/optic/bean/ReportBean;)bcom.example.optic.app_controllers.RefReportPlayer#saveReport(Lcom/example/optic/bean/ReportBean;)V¿
 2getLastPlay(Lcom/example/optic/bean/GiornataBean;)âcom.example.optic.app_controllers.RefReportPlayer#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;G
@@ -1121,13 +1318,11 @@ AgetPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)àcom.example
 !getRecentPlay(Ljava/lang/String;)hcom.example.optic.dao.GiornataDAO#getRecentPlay(Ljava/lang/String;)Lcom/example/optic/entities/Giornata;{
 *<init>(Lcom/example/optic/dao/RefereeDAO;)Mcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/RefereeDAO;)VØ
 DinsertPlay(Ljava/lang/String;Ljava/lang/String;Ljava/util/Calendar;)gcom.example.optic.dao.GiornataDAO#insertPlay(Ljava/lang/String;Ljava/lang/String;Ljava/util/Calendar;)Vã
- getFirstPlay(Ljava/lang/String;)gcom.example.optic.dao.GiornataDAO#getFirstPlay(Ljava/lang/String;)Lcom/example/optic/entities/Giornata;‚
-*com.example.optic.second_ui.BaseCommandCLIjava.lang.Object@
-<init>()4com.example.optic.second_ui.BaseCommandCLI#<init>()V`
-exit(Ljava/lang/String;)Dcom.example.optic.second_ui.BaseCommandCLI#exit(Ljava/lang/String;)Z™
-com.example.optic.Optic2UI*com.example.optic.second_ui.BaseCommandCLI0
-<init>()$com.example.optic.Optic2UI#<init>()V.
-main2()#com.example.optic.Optic2UI#main2()V&
+ getFirstPlay(Ljava/lang/String;)gcom.example.optic.dao.GiornataDAO#getFirstPlay(Ljava/lang/String;)Lcom/example/optic/entities/Giornata;Ã
++com.example.optic.SecondUI.RefereeReportCLIjava.lang.Objecta
+main(Ljava/lang/String;)Ecom.example.optic.SecondUI.RefereeReportCLI#main(Ljava/lang/String;)VA
+<init>()5com.example.optic.SecondUI.RefereeReportCLI#<init>()Ve
+report(Ljava/lang/String;)Gcom.example.optic.SecondUI.RefereeReportCLI#report(Ljava/lang/String;)V&
 java.lang.Readablejava.lang.Object>
 java.io.Closeablejava.lang.Objectjava.lang.AutoCloseableú
 java.io.Readerjava.io.Closeablejava.lang.Readablejava.lang.Object"
@@ -1172,7 +1367,15 @@ read([CII)"java.io.BufferedReader#read([CII)IC
 readLine(Z)4java.io.BufferedReader#readLine(Z)Ljava/lang/String;2
 read1([CII)#java.io.BufferedReader#read1([CII)I*
 mark(I)java.io.BufferedReader#mark(I)V*
-close()java.io.BufferedReader#close()V(
+close()java.io.BufferedReader#close()V∑
+"com.example.optic.bean.RefereeBeanjava.lang.Objectf
+setPassword(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setPassword(Ljava/lang/String;)V[
+getFkUsernameA1()Fcom.example.optic.bean.RefereeBean#getFkUsernameA1()Ljava/lang/String;S
+getPassword()Bcom.example.optic.bean.RefereeBean#getPassword()Ljava/lang/String;8
+<init>(),com.example.optic.bean.RefereeBean#<init>()VS
+getUsername()Bcom.example.optic.bean.RefereeBean#getUsername()Ljava/lang/String;n
+#setFkUsernameA1(Ljava/lang/String;)Gcom.example.optic.bean.RefereeBean#setFkUsernameA1(Ljava/lang/String;)Vf
+setUsername(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setUsername(Ljava/lang/String;)V(
 java.lang.Appendablejava.lang.Object%
 java.io.Flushablejava.lang.ObjectÉ
 java.io.OutputStreamjava.io.Closeablejava.lang.Objectjava.io.FlushableS
@@ -1252,7 +1455,16 @@ println(C)java.io.PrintStream#println(C)VK
 <init>()6com.example.optic.utilities.ImportCheckInput#<init>()Vn
 checkInput(Ljava/lang/String;)Lcom.example.optic.utilities.ImportCheckInput#checkInput(Ljava/lang/String;)Zj
 isNumber(Ljava/lang/String;)Jcom.example.optic.utilities.ImportCheckInput#isNumber(Ljava/lang/String;)Zh
-isValid(Ljava/lang/String;)Icom.example.optic.utilities.ImportCheckInput#isValid(Ljava/lang/String;)Zê
+isValid(Ljava/lang/String;)Icom.example.optic.utilities.ImportCheckInput#isValid(Ljava/lang/String;)Zﬂ
+)com.example.optic.SecondUI.BaseCommandCLIjava.lang.Object?
+<init>()3com.example.optic.SecondUI.BaseCommandCLI#<init>()V_
+exit(Ljava/lang/String;)Ccom.example.optic.SecondUI.BaseCommandCLI#exit(Ljava/lang/String;)Z‚
+*com.example.optic.second_ui.BaseCommandCLIjava.lang.Object@
+<init>()4com.example.optic.second_ui.BaseCommandCLI#<init>()V`
+exit(Ljava/lang/String;)Dcom.example.optic.second_ui.BaseCommandCLI#exit(Ljava/lang/String;)Z™
+com.example.optic.Optic2UI*com.example.optic.second_ui.BaseCommandCLI0
+<init>()$com.example.optic.Optic2UI#<init>()V.
+main2()#com.example.optic.Optic2UI#main2()Vê
 java.lang.Systemjava.lang.Object^
 $identityHashCode(Ljava/lang/Object;)6java.lang.System#identityHashCode(Ljava/lang/Object;)I*
 
@@ -1303,15 +1515,7 @@ nanoTime()java.lang.System#nanoTime()Jt
 closeConn(I)?com.example.optic.app_controllers.LoginController#closeConn(I)VG
 <init>();com.example.optic.app_controllers.LoginController#<init>()Võ
 2refereeLogin(Lcom/example/optic/bean/RefereeBean;)ecom.example.optic.app_controllers.LoginController#refereeLogin(Lcom/example/optic/bean/RefereeBean;)Zì
-.adminLogin(Lcom/example/optic/bean/AdminBean;)acom.example.optic.app_controllers.LoginController#adminLogin(Lcom/example/optic/bean/AdminBean;)Z∑
-"com.example.optic.bean.RefereeBeanjava.lang.Objectf
-setPassword(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setPassword(Ljava/lang/String;)V[
-getFkUsernameA1()Fcom.example.optic.bean.RefereeBean#getFkUsernameA1()Ljava/lang/String;S
-getPassword()Bcom.example.optic.bean.RefereeBean#getPassword()Ljava/lang/String;8
-<init>(),com.example.optic.bean.RefereeBean#<init>()VS
-getUsername()Bcom.example.optic.bean.RefereeBean#getUsername()Ljava/lang/String;n
-#setFkUsernameA1(Ljava/lang/String;)Gcom.example.optic.bean.RefereeBean#setFkUsernameA1(Ljava/lang/String;)Vf
-setUsername(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setUsername(Ljava/lang/String;)Vµ
+.adminLogin(Lcom/example/optic/bean/AdminBean;)acom.example.optic.app_controllers.LoginController#adminLogin(Lcom/example/optic/bean/AdminBean;)Zµ
 'com.example.optic.second_ui.RegisterCLIjava.lang.Object9
 main()/com.example.optic.second_ui.RegisterCLI#main()V=
 <init>()1com.example.optic.second_ui.RegisterCLI#<init>()Vù
@@ -1359,155 +1563,7 @@ getNomec()=com.example.optic.entities.Campo#getNomec()Ljava/lang/String;~
 <init>()/com.example.optic.utilities.ImportDAO#<init>()VP
 
 getDbUrl()Bcom.example.optic.utilities.ImportDAO#getDbUrl()Ljava/lang/String;V
-getPassWord()Ecom.example.optic.utilities.ImportDAO#getPassWord()Ljava/lang/String;ã
-"java.lang.reflect.AnnotatedElementjava.lang.Objectß
-/getDeclaredAnnotationsByType(Ljava/lang/Class;)tjava.lang.reflect.AnnotatedElement#getDeclaredAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;t
-&isAnnotationPresent(Ljava/lang/Class;)Jjava.lang.reflect.AnnotatedElement#isAnnotationPresent(Ljava/lang/Class;)Zò
-(getDeclaredAnnotation(Ljava/lang/Class;)ljava.lang.reflect.AnnotatedElement#getDeclaredAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;ó
-'getAnnotationsByType(Ljava/lang/Class;)ljava.lang.reflect.AnnotatedElement#getAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;\
-$java.lang.reflect.GenericDeclarationjava.lang.Object"java.lang.reflect.AnnotatedElements
-java.lang.reflect.Typejava.lang.ObjectG
-getTypeName()6java.lang.reflect.Type#getTypeName()Ljava/lang/String;§i
-java.lang.Class$java.lang.reflect.GenericDeclarationjava.lang.reflect.Typejava.lang.Objectjava.io.Serializable"java.lang.reflect.AnnotatedElementG
-getMethods()7java.lang.Class#getMethods()[Ljava/lang/reflect/Method;E
-hasEnclosingMethodInfo())java.lang.Class#hasEnclosingMethodInfo()Z 
-NsearchMethods([Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Class;)xjava.lang.Class#searchMethods([Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;T
-reflectionData()@java.lang.Class#reflectionData()Ljava/lang/Class$ReflectionData;[
-forName(Ljava/lang/String;)<java.lang.Class#forName(Ljava/lang/String;)Ljava/lang/Class;I
-getComponentType()3java.lang.Class#getComponentType()Ljava/lang/Class;ñ
-@getExecutableTypeAnnotationBytes(Ljava/lang/reflect/Executable;)Rjava.lang.Class#getExecutableTypeAnnotationBytes(Ljava/lang/reflect/Executable;)[BQ
-getEnclosingMethod0()8java.lang.Class#getEnclosingMethod0()[Ljava/lang/Object;ã
-3forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Tjava.lang.Class#forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;>
-getClasses().java.lang.Class#getClasses()[Ljava/lang/Class;H
-getNestMembers0()3java.lang.Class#getNestMembers0()[Ljava/lang/Class;Ö
-8addAll(Ljava/util/Collection;[Ljava/lang/reflect/Field;)Ijava.lang.Class#addAll(Ljava/util/Collection;[Ljava/lang/reflect/Field;)Vw
-"getConstructor([Ljava/lang/Class;)Qjava.lang.Class#getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;1
-isAnnotation()java.lang.Class#isAnnotation()ZV
-cast(Ljava/lang/Object;):java.lang.Class#cast(Ljava/lang/Object;)Ljava/lang/Object;h
-getReflectionFactory()Njava.lang.Class#getReflectionFactory()Ljdk/internal/reflect/ReflectionFactory;h
-!cannotCastMsg(Ljava/lang/Object;)Cjava.lang.Class#cannotCastMsg(Ljava/lang/Object;)Ljava/lang/String;J
-getCanonicalName()4java.lang.Class#getCanonicalName()Ljava/lang/String;w
-'getResourceAsStream(Ljava/lang/String;)Ljava.lang.Class#getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;_
-asSubclass(Ljava/lang/Class;)>java.lang.Class#asSubclass(Ljava/lang/Class;)Ljava/lang/Class;á
-*getDeclaredConstructor([Ljava/lang/Class;)Yjava.lang.Class#getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;é
-4methodToString(Ljava/lang/String;[Ljava/lang/Class;)Vjava.lang.Class#methodToString(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/String;e
-getGenericInfo()Qjava.lang.Class#getGenericInfo()Lsun/reflect/generics/repository/ClassRepository;j
-getDeclaredConstructors0(Z)Kjava.lang.Class#getDeclaredConstructors0(Z)[Ljava/lang/reflect/Constructor;G
-isLocalOrAnonymousClass()*java.lang.Class#isLocalOrAnonymousClass()Zú
-7getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)ajava.lang.Class#getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;/
-isSynthetic()java.lang.Class#isSynthetic()Zò
-2copyConstructors([Ljava/lang/reflect/Constructor;)bjava.lang.Class#copyConstructors([Ljava/lang/reflect/Constructor;)[Ljava/lang/reflect/Constructor;/
-isInterface()java.lang.Class#isInterface()Z9
-isAnonymousClass()#java.lang.Class#isAnonymousClass()ZP
-getSimpleBinaryName()7java.lang.Class#getSimpleBinaryName()Ljava/lang/String;?
-getSigners()/java.lang.Class#getSigners()[Ljava/lang/Object;<
-getModule()-java.lang.Class#getModule()Ljava/lang/Module;g
-getField0(Ljava/lang/String;)Fjava.lang.Class#getField0(Ljava/lang/String;)Ljava/lang/reflect/Field;'
-	isArray()java.lang.Class#isArray()Zi
-*desiredAssertionStatus0(Ljava/lang/Class;);java.lang.Class#desiredAssertionStatus0(Ljava/lang/Class;)ZÉ
-7arrayContentsEq([Ljava/lang/Object;[Ljava/lang/Object;)Hjava.lang.Class#arrayContentsEq([Ljava/lang/Object;[Ljava/lang/Object;)Zu
-0<init>(Ljava/lang/ClassLoader;Ljava/lang/Class;)Ajava.lang.Class#<init>(Ljava/lang/ClassLoader;Ljava/lang/Class;)V
-(copyMethods([Ljava/lang/reflect/Method;)Sjava.lang.Class#copyMethods([Ljava/lang/reflect/Method;)[Ljava/lang/reflect/Method;@
-getTypeName()/java.lang.Class#getTypeName()Ljava/lang/String;f
-getDeclaredAnnotations()Jjava.lang.Class#getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;X
-getDeclaredFields0(Z)?java.lang.Class#getDeclaredFields0(Z)[Ljava/lang/reflect/Field;V
-getConstructors()Ajava.lang.Class#getConstructors()[Ljava/lang/reflect/Constructor;†
->getDeclaredPublicMethods(Ljava/lang/String;[Ljava/lang/Class;)^java.lang.Class#getDeclaredPublicMethods(Ljava/lang/String;[Ljava/lang/Class;)Ljava/util/List;%
-isEnum()java.lang.Class#isEnum()ZX
-getGenericSuperclass()>java.lang.Class#getGenericSuperclass()Ljava/lang/reflect/Type;[
-getDeclaredMethods0(Z)Ajava.lang.Class#getDeclaredMethods0(Z)[Ljava/lang/reflect/Method;E
-desiredAssertionStatus())java.lang.Class#desiredAssertionStatus()Z@
-newInstance()/java.lang.Class#newInstance()Ljava/lang/Object;u
- getAnnotation(Ljava/lang/Class;)Qjava.lang.Class#getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;d
-privateGetDeclaredFields(Z)Ejava.lang.Class#privateGetDeclaredFields(Z)[Ljava/lang/reflect/Field;A
-getNestHost0()/java.lang.Class#getNestHost0()Ljava/lang/Class;å
-/getMethod(Ljava/lang/String;[Ljava/lang/Class;)Yjava.lang.Class#getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;7
-isTopLevelClass()"java.lang.Class#isTopLevelClass()Z`
-getResource(Ljava/lang/String;)=java.lang.Class#getResource(Ljava/lang/String;)Ljava/net/URL;Ñ
-'getAnnotationsByType(Ljava/lang/Class;)Yjava.lang.Class#getAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;S
-setSigners([Ljava/lang/Object;)0java.lang.Class#setSigners([Ljava/lang/Object;)V?
-getNestHost().java.lang.Class#getNestHost()Ljava/lang/Class;K
-getClassLoader()7java.lang.Class#getClassLoader()Ljava/lang/ClassLoader;é
-0getMethod0(Ljava/lang/String;[Ljava/lang/Class;)Zjava.lang.Class#getMethod0(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;T
-annotationData()@java.lang.Class#annotationData()Ljava/lang/Class$AnnotationData;W
-getEnumConstantsShared();java.lang.Class#getEnumConstantsShared()[Ljava/lang/Object;L
-getCanonicalName0()5java.lang.Class#getCanonicalName0()Ljava/lang/String;D
-getRawTypeAnnotations())java.lang.Class#getRawTypeAnnotations()[B£
-GcheckPackageAccess(Ljava/lang/SecurityManager;Ljava/lang/ClassLoader;Z)Xjava.lang.Class#checkPackageAccess(Ljava/lang/SecurityManager;Ljava/lang/ClassLoader;Z)Vf
-getAnnotatedInterfaces()Jjava.lang.Class#getAnnotatedInterfaces()[Ljava/lang/reflect/AnnotatedType;Z
-getFactory()Jjava.lang.Class#getFactory()Lsun/reflect/generics/factory/GenericsFactory;a
-getAnnotationType()Jjava.lang.Class#getAnnotationType()Lsun/reflect/annotation/AnnotationType;M
-getDeclaringClass0()5java.lang.Class#getDeclaringClass0()Ljava/lang/Class;u
-$getDeclaredField(Ljava/lang/String;)Mjava.lang.Class#getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;3
-isMemberClass() java.lang.Class#isMemberClass()ZD
-getFields()5java.lang.Class#getFields()[Ljava/lang/reflect/Field;i
-getEnclosingMethodInfo()Mjava.lang.Class#getEnclosingMethodInfo()Ljava/lang/Class$EnclosingMethodInfo;Y
-getConstantPool()Djava.lang.Class#getConstantPool()Ljdk/internal/reflect/ConstantPool;T
-getDeclaredFields()=java.lang.Class#getDeclaredFields()[Ljava/lang/reflect/Field;Y
-getGenericInterfaces()?java.lang.Class#getGenericInterfaces()[Ljava/lang/reflect/Type;z
-&copyFields([Ljava/lang/reflect/Field;)Pjava.lang.Class#copyFields([Ljava/lang/reflect/Field;)[Ljava/lang/reflect/Field;8
-	getName()+java.lang.Class#getName()Ljava/lang/String;F
-getNestMembers()2java.lang.Class#getNestMembers()[Ljava/lang/Class;1
-getModifiers()java.lang.Class#getModifiers()I/
-isPrimitive()java.lang.Class#isPrimitive()ZÖ
-(getDeclaredAnnotation(Ljava/lang/Class;)Yjava.lang.Class#getDeclaredAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;K
-getDeclaringClass()4java.lang.Class#getDeclaringClass()Ljava/lang/Class;C
-getSuperclass()0java.lang.Class#getSuperclass()Ljava/lang/Class;d
-resolveName(Ljava/lang/String;)Ajava.lang.Class#resolveName(Ljava/lang/String;)Ljava/lang/String;v
-!privateGetDeclaredConstructors(Z)Qjava.lang.Class#privateGetDeclaredConstructors(Z)[Ljava/lang/reflect/Constructor;e
-getEnclosingConstructor()Hjava.lang.Class#getEnclosingConstructor()Ljava/lang/reflect/Constructor;î
-/getDeclaredAnnotationsByType(Ljava/lang/Class;)ajava.lang.Class#getDeclaredAnnotationsByType(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;[
-getTypeParameters()Djava.lang.Class#getTypeParameters()[Ljava/lang/reflect/TypeVariable;o
-%getPrimitiveClass(Ljava/lang/String;)Fjava.lang.Class#getPrimitiveClass(Ljava/lang/String;)Ljava/lang/Class;{
-$getConstructor0([Ljava/lang/Class;I)Sjava.lang.Class#getConstructor0([Ljava/lang/Class;I)Ljava/lang/reflect/Constructor;:
-
-toString(),java.lang.Class#toString()Ljava/lang/String;f
-getDeclaredConstructors()Ijava.lang.Class#getDeclaredConstructors()[Ljava/lang/reflect/Constructor;S
-isNestmateOf(Ljava/lang/Class;)0java.lang.Class#isNestmateOf(Ljava/lang/Class;)Z[
-#isAssignableFrom(Ljava/lang/Class;)4java.lang.Class#isAssignableFrom(Ljava/lang/Class;)ZD
-getSimpleName()1java.lang.Class#getSimpleName()Ljava/lang/String;W
-getDeclaredAnnotationMap()9java.lang.Class#getDeclaredAnnotationMap()Ljava/util/Map;Ø
-EforName0(Ljava/lang/String;ZLjava/lang/ClassLoader;Ljava/lang/Class;)fjava.lang.Class#forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Class;D
-initClassName()1java.lang.Class#initClassName()Ljava/lang/String;<
-getRawAnnotations()%java.lang.Class#getRawAnnotations()[B{
-3isOpenToCaller(Ljava/lang/String;Ljava/lang/Class;)Djava.lang.Class#isOpenToCaller(Ljava/lang/String;Ljava/lang/Class;)Z°
-:searchFields([Ljava/lang/reflect/Field;Ljava/lang/String;)cjava.lang.Class#searchFields([Ljava/lang/reflect/Field;Ljava/lang/String;)Ljava/lang/reflect/Field;K
-getEnumConstants()5java.lang.Class#getEnumConstants()[Ljava/lang/Object;V
-getEnclosingMethod()>java.lang.Class#getEnclosingMethod()Ljava/lang/reflect/Method;ñ
-1newReflectionData(Ljava/lang/ref/SoftReference;I)ajava.lang.Class#newReflectionData(Ljava/lang/ref/SoftReference;I)Ljava/lang/Class$ReflectionData;◊
-acasAnnotationType(Lsun/reflect/annotation/AnnotationType;Lsun/reflect/annotation/AnnotationType;)rjava.lang.Class#casAnnotationType(Lsun/reflect/annotation/AnnotationType;Lsun/reflect/annotation/AnnotationType;)Z^
-privateGetPublicFields()Bjava.lang.Class#privateGetPublicFields()[Ljava/lang/reflect/Field;e
-getAnnotatedSuperclass()Ijava.lang.Class#getAnnotatedSuperclass()Ljava/lang/reflect/AnnotatedType;ó
-AcheckMemberAccess(Ljava/lang/SecurityManager;ILjava/lang/Class;Z)Rjava.lang.Class#checkMemberAccess(Ljava/lang/SecurityManager;ILjava/lang/Class;Z)Vg
-privateGetDeclaredMethods(Z)Gjava.lang.Class#privateGetDeclaredMethods(Z)[Ljava/lang/reflect/Method;?
-getPackage()/java.lang.Class#getPackage()Ljava/lang/Package;
--forName(Ljava/lang/Module;Ljava/lang/String;)Njava.lang.Class#forName(Ljava/lang/Module;Ljava/lang/String;)Ljava/lang/Class;F
-getInterfaces(Z)2java.lang.Class#getInterfaces(Z)[Ljava/lang/Class;`
-getProtectionDomain0()Fjava.lang.Class#getProtectionDomain0()Ljava/security/ProtectionDomain;7
-registerNatives()"java.lang.Class#registerNatives()VF
-getInterfaces0()2java.lang.Class#getInterfaces0()[Ljava/lang/Class;N
-getDeclaredClasses()6java.lang.Class#getDeclaredClasses()[Ljava/lang/Class;a
-privateGetPublicMethods()Djava.lang.Class#privateGetPublicMethods()[Ljava/lang/reflect/Method;F
-getSimpleName0()2java.lang.Class#getSimpleName0()Ljava/lang/String;D
-getInterfaces()1java.lang.Class#getInterfaces()[Ljava/lang/Class;a
-&isAnnotationPresent(Ljava/lang/Class;)7java.lang.Class#isAnnotationPresent(Ljava/lang/Class;)Ze
-getField(Ljava/lang/String;)Ejava.lang.Class#getField(Ljava/lang/String;)Ljava/lang/reflect/Field;Q
-isInstance(Ljava/lang/Object;)/java.lang.Class#isInstance(Ljava/lang/Object;)ZK
-getEnclosingClass()4java.lang.Class#getEnclosingClass()Ljava/lang/Class;W
-getDeclaredMethods()?java.lang.Class#getDeclaredMethods()[Ljava/lang/reflect/Method;^
-getProtectionDomain()Ejava.lang.Class#getProtectionDomain()Ljava/security/ProtectionDomain;Q
-enumConstantDirectory()6java.lang.Class#enumConstantDirectory()Ljava/util/Map;M
-getClassLoader0()8java.lang.Class#getClassLoader0()Ljava/lang/ClassLoader;F
-getPackageName()2java.lang.Class#getPackageName()Ljava/lang/String;P
-getDeclaredClasses0()7java.lang.Class#getDeclaredClasses0()[Ljava/lang/Class;b
-createAnnotationData(I)Gjava.lang.Class#createAnnotationData(I)Ljava/lang/Class$AnnotationData;R
-getGenericSignature0()8java.lang.Class#getGenericSignature0()Ljava/lang/String;g
-!toClass(Ljava/lang/reflect/Type;)Bjava.lang.Class#toClass(Ljava/lang/reflect/Type;)Ljava/lang/Class;V
-getAnnotations()Bjava.lang.Class#getAnnotations()[Ljava/lang/annotation/Annotation;H
-toGenericString()3java.lang.Class#toGenericString()Ljava/lang/String;¨
-:getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)njava.lang.Class#getMethodsRecursive(Ljava/lang/String;[Ljava/lang/Class;Z)Ljava/lang/PublicMethods$MethodList;R
-getSimpleBinaryName0()8java.lang.Class#getSimpleBinaryName0()Ljava/lang/String;1
-isLocalClass()java.lang.Class#isLocalClass()Z≈
+getPassWord()Ecom.example.optic.utilities.ImportDAO#getPassWord()Ljava/lang/String;≈
 java.sql.DriverManagerjava.lang.Objectb
 #setLogWriter(Ljava/io/PrintWriter;);java.sql.DriverManager#setLogWriter(Ljava/io/PrintWriter;)Vb
 #deregisterDriver(Ljava/sql/Driver;);java.sql.DriverManager#deregisterDriver(Ljava/sql/Driver;)VL
@@ -1530,12 +1586,13 @@ EgetConnection(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)qjava.sql
 getLogWriter():java.sql.DriverManager#getLogWriter()Ljava/io/PrintWriter;F
 	drivers()9java.sql.DriverManager#drivers()Ljava/util/stream/Stream;>
 getLoginTimeout())java.sql.DriverManager#getLoginTimeout()I¿
-HgetConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)tjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)Ljava/sql/Connection;¶
-4com.example.optic.app_controllers.RegisterControllerjava.lang.Objectö
-0userRegister(Lcom/example/optic/bean/UserBean;I)fcom.example.optic.app_controllers.RegisterController#userRegister(Lcom/example/optic/bean/UserBean;I)VR
-closeConn(I)Bcom.example.optic.app_controllers.RegisterController#closeConn(I)VJ
-<init>()>com.example.optic.app_controllers.RegisterController#<init>()Vû
-2isUsernameUsed(Lcom/example/optic/bean/UserBean;I)hcom.example.optic.app_controllers.RegisterController#isUsernameUsed(Lcom/example/optic/bean/UserBean;I)Zê
+HgetConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)tjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)Ljava/sql/Connection;æ
+/com.example.optic.FirstUI.ControllerSocialModPG+com.example.optic.FirstUI.GraphicController}
+$setUserVariables(Ljava/lang/String;)Ucom.example.optic.FirstUI.ControllerSocialModPG#setUserVariables(Ljava/lang/String;)VI
+
+conferma();com.example.optic.FirstUI.ControllerSocialModPG#conferma()VE
+<init>()9com.example.optic.FirstUI.ControllerSocialModPG#<init>()VM
+exitSocial()=com.example.optic.FirstUI.ControllerSocialModPG#exitSocial()Vê
 *com.example.optic.utilities.ImportAdminDAOjava.lang.Object@
 <init>()4com.example.optic.utilities.ImportAdminDAO#<init>()Vç
 setAdmin(Ljava/sql/ResultSet;)kcom.example.optic.utilities.ImportAdminDAO#setAdmin(Ljava/sql/ResultSet;)Lcom/example/optic/entities/Admin;°
@@ -1670,9 +1727,7 @@ Cparse(Ljava/lang/CharSequence;Ljava/time/format/DateTimeFormatter;)ljava.time.
 /isSupported(Ljava/time/temporal/TemporalField;)Djava.time.LocalDate#isSupported(Ljava/time/temporal/TemporalField;)ZC
 withYear(I)4java.time.LocalDate#withYear(I)Ljava/time/LocalDate;O
 withDayOfMonth(I):java.time.LocalDate#withDayOfMonth(I)Ljava/time/LocalDate;G
-minusWeeks(J)6java.time.LocalDate#minusWeeks(J)Ljava/time/LocalDate;x
-&com.example.optic.utilities.ImportListjava.lang.Object<
-<init>()0com.example.optic.utilities.ImportList#<init>()Vå	
+minusWeeks(J)6java.time.LocalDate#minusWeeks(J)Ljava/time/LocalDate;å	
 0com.example.optic.first_ui.ControllerUserProfile,com.example.optic.first_ui.GraphicControllerJ
 
 facebook()<com.example.optic.first_ui.ControllerUserProfile#facebook()VF
@@ -1704,11 +1759,60 @@ $setUserVariables(Ljava/lang/String;)Vcom.example.optic.first_ui.ControllerUser
 getCause()@java.lang.ClassNotFoundException#getCause()Ljava/lang/Throwable;Z
 <init>(Ljava/lang/String;)<java.lang.ClassNotFoundException#<init>(Ljava/lang/String;)VV
 getException()Djava.lang.ClassNotFoundException#getException()Ljava/lang/Throwable;Ñ
-/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Qjava.lang.ClassNotFoundException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)Vä
+/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Qjava.lang.ClassNotFoundException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)Vò
+(com.example.optic.SecondUI.PlayerHomeCLIjava.lang.Object^
+main(Ljava/lang/String;)Bcom.example.optic.SecondUI.PlayerHomeCLI#main(Ljava/lang/String;)V>
+logout()2com.example.optic.SecondUI.PlayerHomeCLI#logout()V>
+<init>()2com.example.optic.SecondUI.PlayerHomeCLI#<init>()Vz
+&showPlaygroundList(Ljava/lang/String;)Pcom.example.optic.SecondUI.PlayerHomeCLI#showPlaygroundList(Ljava/lang/String;)Vë
++com.example.optic.SecondUI.PlayerProfileCLI)com.example.optic.SecondUI.BaseCommandCLII
+showReport()9com.example.optic.SecondUI.PlayerProfileCLI#showReport()VO
+showEventList()<com.example.optic.SecondUI.PlayerProfileCLI#showEventList()Va
+main(Ljava/lang/String;)Ecom.example.optic.SecondUI.PlayerProfileCLI#main(Ljava/lang/String;)VA
+<init>()5com.example.optic.SecondUI.PlayerProfileCLI#<init>()V=
+save()3com.example.optic.SecondUI.PlayerProfileCLI#save()Va
+back(Ljava/lang/String;)Ecom.example.optic.SecondUI.PlayerProfileCLI#back(Ljava/lang/String;)ZS
+showRecentPlays()>com.example.optic.SecondUI.PlayerProfileCLI#showRecentPlays()V»	
+(com.example.optic.SecondUI.UserPGPageCLIjava.lang.ObjectÇ
+*main(Ljava/lang/String;Ljava/lang/String;)Tcom.example.optic.SecondUI.UserPGPageCLI#main(Ljava/lang/String;Ljava/lang/String;)V€
+VshowPlayers(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/entities/Giornata;)Äcom.example.optic.SecondUI.UserPGPageCLI#showPlayers(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/entities/Giornata;)V>
+<init>()2com.example.optic.SecondUI.UserPGPageCLI#<init>()V™
+>showInfo(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)hcom.example.optic.SecondUI.UserPGPageCLI#showInfo(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)V¶
+<review(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)fcom.example.optic.SecondUI.UserPGPageCLI#review(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)V∞
+AshowReviews(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)kcom.example.optic.SecondUI.UserPGPageCLI#showReviews(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)V›
+WshowPlayList(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/entities/Giornata;)Åcom.example.optic.SecondUI.UserPGPageCLI#showPlayList(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/entities/Giornata;)Vë	
+,com.example.optic.FirstUI.ControllerRefCampo+com.example.optic.FirstUI.GraphicControllerJ
+toFacebook():com.example.optic.FirstUI.ControllerRefCampo#toFacebook()Vz
+$setUserVariables(Ljava/lang/String;)Rcom.example.optic.FirstUI.ControllerRefCampo#setUserVariables(Ljava/lang/String;)V^
+populatePlayersTable()Dcom.example.optic.FirstUI.ControllerRefCampo#populatePlayersTable()VB
+<init>()6com.example.optic.FirstUI.ControllerRefCampo#<init>()VJ
+toWhatsapp():com.example.optic.FirstUI.ControllerRefCampo#toWhatsapp()Vr
+ setFirstPlay(Ljava/lang/String;)Ncom.example.optic.FirstUI.ControllerRefCampo#setFirstPlay(Ljava/lang/String;)VL
+getLastPlay();com.example.optic.FirstUI.ControllerRefCampo#getLastPlay()VD
+	toLogin()7com.example.optic.FirstUI.ControllerRefCampo#toLogin()VJ
+tableview2():com.example.optic.FirstUI.ControllerRefCampo#tableview2()VL
+getNextPlay();com.example.optic.FirstUI.ControllerRefCampo#getNextPlay()VL
+toInstagram();com.example.optic.FirstUI.ControllerRefCampo#toInstagram()VB
+report()6com.example.optic.FirstUI.ControllerRefCampo#report()VH
+eventList()9com.example.optic.FirstUI.ControllerRefCampo#eventList()Vä
 castelli.TestLoginControllerjava.lang.ObjectN
 testPlayerLoginValid()4castelli.TestLoginController#testPlayerLoginValid()V2
 <init>()&castelli.TestLoginController#<init>()VT
-testPlayerLoginNotValid()7castelli.TestLoginController#testPlayerLoginNotValid()Vö
+testPlayerLoginNotValid()7castelli.TestLoginController#testPlayerLoginNotValid()V˛
+/com.example.optic.FirstUI.ControllerUserProfile+com.example.optic.FirstUI.GraphicControllerI
+
+facebook();com.example.optic.FirstUI.ControllerUserProfile#facebook()VE
+toHome()9com.example.optic.FirstUI.ControllerUserProfile#toHome()VÅ
+&populateReviewList(Ljava/lang/String;)Wcom.example.optic.FirstUI.ControllerUserProfile#populateReviewList(Ljava/lang/String;)V}
+$setUserVariables(Ljava/lang/String;)Ucom.example.optic.FirstUI.ControllerUserProfile#setUserVariables(Ljava/lang/String;)VE
+<init>()9com.example.optic.FirstUI.ControllerUserProfile#<init>()VA
+save()7com.example.optic.FirstUI.ControllerUserProfile#save()VÅ
+&populateGamesTable(Ljava/lang/String;)Wcom.example.optic.FirstUI.ControllerUserProfile#populateGamesTable(Ljava/lang/String;)VK
+instagram()<com.example.optic.FirstUI.ControllerUserProfile#instagram()VK
+setStars(I)<com.example.optic.FirstUI.ControllerUserProfile#setStars(I)VM
+reportList()=com.example.optic.FirstUI.ControllerUserProfile#reportList()VE
+modify()9com.example.optic.FirstUI.ControllerUserProfile#modify()VK
+eventList()<com.example.optic.FirstUI.ControllerUserProfile#eventList()Vö
 ,com.example.optic.second_ui.PlayerProfileCLI*com.example.optic.second_ui.BaseCommandCLIJ
 showReport():com.example.optic.second_ui.PlayerProfileCLI#showReport()VP
 showEventList()=com.example.optic.second_ui.PlayerProfileCLI#showEventList()Vb
@@ -1726,7 +1830,19 @@ DshowPlayers(Ljava/lang/String;Lcom/example/optic/entities/Giornata;)ocom.examp
 <review(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)gcom.example.optic.second_ui.UserPGPageCLI#review(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)V±
 AshowReviews(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)lcom.example.optic.second_ui.UserPGPageCLI#showReviews(Ljava/lang/String;Lcom/example/optic/bean/AdminBean;)Vs
 "isPlayerValid(Ljava/lang/String;I)Mcom.example.optic.second_ui.UserPGPageCLI#isPlayerValid(Ljava/lang/String;I)Zﬁ
-WshowPlayList(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/entities/Giornata;)Çcom.example.optic.second_ui.UserPGPageCLI#showPlayList(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/entities/Giornata;)Vî	
+WshowPlayList(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/entities/Giornata;)Çcom.example.optic.second_ui.UserPGPageCLI#showPlayList(Ljava/lang/String;Ljava/lang/String;Lcom/example/optic/entities/Giornata;)V⁄
+-com.example.optic.FirstUI.ControllerEventList+com.example.optic.FirstUI.GraphicControllere
+setList(Ljava/util/List;)Hcom.example.optic.FirstUI.ControllerEventList#setList(Ljava/util/List;)V{
+$setUserVariables(Ljava/lang/String;)Scom.example.optic.FirstUI.ControllerEventList#setUserVariables(Ljava/lang/String;)VC
+<init>()7com.example.optic.FirstUI.ControllerEventList#<init>()VS
+exitListButton()?com.example.optic.FirstUI.ControllerEventList#exitListButton()V@
+4Lcom/example/optic/FirstUI/ControllerEventList$1499;Callbackä
+4Lcom/example/optic/FirstUI/ControllerEventList$1676;ListCellH
+updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)VÊ
+TestLoginControllerjava.lang.ObjectE
+testPlayerLoginValid()+TestLoginController#testPlayerLoginValid()V)
+<init>()TestLoginController#<init>()VK
+testPlayerLoginNotValid().TestLoginController#testPlayerLoginNotValid()Vî	
 java.lang.Booleanjava.lang.Comparablejava.lang.Objectjava.io.Serializable_
 valueOf(Ljava/lang/String;)@java.lang.Boolean#valueOf(Ljava/lang/String;)Ljava/lang/Boolean;W
  parseBoolean(Ljava/lang/String;)3java.lang.Boolean#parseBoolean(Ljava/lang/String;)ZK
@@ -1756,8 +1872,13 @@ hashCode()java.lang.Boolean#hashCode()I3
 getFkUsername()Icom.example.optic.entities.Prenotazione#getFkUsername()Ljava/lang/String;Õ
 +com.example.optic.utilities.ImportCloseConnjava.lang.ObjectI
 closeConn(I)9com.example.optic.utilities.ImportCloseConn#closeConn(I)VA
-<init>()5com.example.optic.utilities.ImportCloseConn#<init>()V 
-EventHandlerjava.lang.ObjectC
+<init>()5com.example.optic.utilities.ImportCloseConn#<init>()VÆ
+TestCarlonijava.lang.Object=
+TestUsernameUsedFail()#TestCarloni#TestUsernameUsedFail()V5
+TestUsernameUsed()TestCarloni#TestUsernameUsed()V!
+<init>()TestCarloni#<init>()V=
+testPlayerBookedFail()#TestCarloni#testPlayerBookedFail()V5
+testPlayerBooked()TestCarloni#testPlayerBooked()VC
 3Lcom/example/optic/first_ui/GraphicController$1474;EventHandlerC
 3Lcom/example/optic/first_ui/GraphicController$1734;EventHandlerC
 3Lcom/example/optic/first_ui/GraphicController$2555;EventHandlerC
@@ -1784,7 +1905,29 @@ $setUserVariables(Ljava/lang/String;)Zcom.example.optic.first_ui.ControllerUser
 setStars(I)Acom.example.optic.first_ui.ControllerUserViewProfile#setStars(I)VJ
 review()>com.example.optic.first_ui.ControllerUserViewProfile#review()VR
 reportList()Bcom.example.optic.first_ui.ControllerUserViewProfile#reportList()Vb
-populateGamesTable()Jcom.example.optic.first_ui.ControllerUserViewProfile#populateGamesTable()VÀ
+populateGamesTable()Jcom.example.optic.first_ui.ControllerUserViewProfile#populateGamesTable()Vå
+'com.example.optic.SecondUI.ModPGPageCLI)com.example.optic.SecondUI.BaseCommandCLIá
+-modSocial(Lcom/example/optic/entities/Admin;)Vcom.example.optic.SecondUI.ModPGPageCLI#modSocial(Lcom/example/optic/entities/Admin;)V]
+main(Ljava/lang/String;)Acom.example.optic.SecondUI.ModPGPageCLI#main(Ljava/lang/String;)Vã
+/showReviews(Lcom/example/optic/entities/Admin;)Xcom.example.optic.SecondUI.ModPGPageCLI#showReviews(Lcom/example/optic/entities/Admin;)V=
+<init>()1com.example.optic.SecondUI.ModPGPageCLI#<init>()V∑
+EshowPlayList(Ljava/lang/String;Lcom/example/optic/entities/Giornata;)ncom.example.optic.SecondUI.ModPGPageCLI#showPlayList(Ljava/lang/String;Lcom/example/optic/entities/Giornata;)VÉ
++modInfo(Lcom/example/optic/entities/Admin;)Tcom.example.optic.SecondUI.ModPGPageCLI#modInfo(Lcom/example/optic/entities/Admin;)Ve
+showInfo(Ljava/lang/String;)Ecom.example.optic.SecondUI.ModPGPageCLI#showInfo(Ljava/lang/String;)VÉ
++modDesc(Lcom/example/optic/bean/AdminBean;)Tcom.example.optic.SecondUI.ModPGPageCLI#modDesc(Lcom/example/optic/bean/AdminBean;)Vë
+2showPlayers(Lcom/example/optic/entities/Giornata;)[com.example.optic.SecondUI.ModPGPageCLI#showPlayers(Lcom/example/optic/entities/Giornata;)V—
+RmodReferee(Lcom/example/optic/entities/Admin;Lcom/example/optic/entities/Referee;){com.example.optic.SecondUI.ModPGPageCLI#modReferee(Lcom/example/optic/entities/Admin;Lcom/example/optic/entities/Referee;)Vk
+addGiornata(Ljava/lang/String;)Hcom.example.optic.SecondUI.ModPGPageCLI#addGiornata(Ljava/lang/String;)VÅ
+/com.example.optic.SecondUI.PlayerProfileViewCLI)com.example.optic.SecondUI.BaseCommandCLIM
+showReport()=com.example.optic.SecondUI.PlayerProfileViewCLI#showReport()Vâ
+*main(Ljava/lang/String;Ljava/lang/String;)[com.example.optic.SecondUI.PlayerProfileViewCLI#main(Ljava/lang/String;Ljava/lang/String;)VE
+<init>()9com.example.optic.SecondUI.PlayerProfileViewCLI#<init>()VA
+save()7com.example.optic.SecondUI.PlayerProfileViewCLI#save()Ve
+back(Ljava/lang/String;)Icom.example.optic.SecondUI.PlayerProfileViewCLI#back(Ljava/lang/String;)ZW
+showRecentPlays()Bcom.example.optic.SecondUI.PlayerProfileViewCLI#showRecentPlays()V≤
+&com.example.optic.SecondUI.RegisterCLIjava.lang.Object8
+main().com.example.optic.SecondUI.RegisterCLI#main()V<
+<init>()0com.example.optic.SecondUI.RegisterCLI#<init>()VÀ
 !com.example.optic.entities.Reportjava.lang.Objectk
 "setMotivazione(Ljava/lang/String;)Ecom.example.optic.entities.Report#setMotivazione(Ljava/lang/String;)VX
 getMotivazione()Dcom.example.optic.entities.Report#getMotivazione()Ljava/lang/String;7
@@ -1794,7 +1937,27 @@ $setUserVariables(Ljava/lang/String;)Zcom.example.optic.first_ui.ControllerUser
 "setFkUsernameP(Ljava/lang/String;)Ecom.example.optic.entities.Report#setFkUsernameP(Ljava/lang/String;)VX
 getFkUsernameR()Dcom.example.optic.entities.Report#getFkUsernameR()Ljava/lang/String;X
 getFkUsernameP()Dcom.example.optic.entities.Report#getFkUsernameP()Ljava/lang/String;C
-setIdReport(I)1com.example.optic.entities.Report#setIdReport(I)V
+setIdReport(I)1com.example.optic.entities.Report#setIdReport(I)V≈
+.com.example.optic.FirstUI.ControllerUserPgPage+com.example.optic.FirstUI.GraphicControllerL
+toFacebook()<com.example.optic.FirstUI.ControllerUserPgPage#toFacebook()VJ
+setStars(I);com.example.optic.FirstUI.ControllerUserPgPage#setStars(I)Vt
+ setFirstPlay(Ljava/lang/String;)Pcom.example.optic.FirstUI.ControllerUserPgPage#setFirstPlay(Ljava/lang/String;)V¢
+7populateReviewTable(Lcom/example/optic/bean/AdminBean;)gcom.example.optic.FirstUI.ControllerUserPgPage#populateReviewTable(Lcom/example/optic/bean/AdminBean;)VN
+getLastPlay()=com.example.optic.FirstUI.ControllerUserPgPage#getLastPlay()VL
+tableview2()<com.example.optic.FirstUI.ControllerUserPgPage#tableview2()VN
+getNextPlay()=com.example.optic.FirstUI.ControllerUserPgPage#getNextPlay()Vå
+,setCampo(Lcom/example/optic/bean/AdminBean;)\com.example.optic.FirstUI.ControllerUserPgPage#setCampo(Lcom/example/optic/bean/AdminBean;)VD
+toHome()8com.example.optic.FirstUI.ControllerUserPgPage#toHome()V|
+$setUserVariables(Ljava/lang/String;)Tcom.example.optic.FirstUI.ControllerUserPgPage#setUserVariables(Ljava/lang/String;)V`
+populatePlayersTable()Fcom.example.optic.FirstUI.ControllerUserPgPage#populatePlayersTable()VH
+
+bookPlay():com.example.optic.FirstUI.ControllerUserPgPage#bookPlay()VD
+<init>()8com.example.optic.FirstUI.ControllerUserPgPage#<init>()VL
+toWhatsapp()<com.example.optic.FirstUI.ControllerUserPgPage#toWhatsapp()VD
+review()8com.example.optic.FirstUI.ControllerUserPgPage#review()VJ
+tableview();com.example.optic.FirstUI.ControllerUserPgPage#tableview()VN
+toInstagram()=com.example.optic.FirstUI.ControllerUserPgPage#toInstagram()VN
+isDateValid()=com.example.optic.FirstUI.ControllerUserPgPage#isDateValid()V
 Applicationjava.lang.Object¶
 com.example.optic.OpticApplication-
 <init>()!com.example.optic.Optic#<init>()VO
@@ -1814,7 +1977,19 @@ $setUserVariables(Ljava/lang/String;)Scom.example.optic.first_ui.ControllerRefC
 getNextPlay()<com.example.optic.first_ui.ControllerRefCampo#getNextPlay()VM
 toInstagram()<com.example.optic.first_ui.ControllerRefCampo#toInstagram()VC
 report()7com.example.optic.first_ui.ControllerRefCampo#report()VI
-eventList():com.example.optic.first_ui.ControllerRefCampo#eventList()V‡
+eventList():com.example.optic.first_ui.ControllerRefCampo#eventList()V°
+)com.example.optic.FirstUI.ControllerLogin+com.example.optic.FirstUI.GraphicController?
+<init>()3com.example.optic.FirstUI.ControllerLogin#<init>()VG
+toRegister()7com.example.optic.FirstUI.ControllerLogin#toRegister()V=
+login()2com.example.optic.FirstUI.ControllerLogin#login()Vﬂ
+.com.example.optic.FirstUI.ControllerReportList+com.example.optic.FirstUI.GraphicControllerf
+setList(Ljava/util/List;)Icom.example.optic.FirstUI.ControllerReportList#setList(Ljava/util/List;)V|
+$setUserVariables(Ljava/lang/String;)Tcom.example.optic.FirstUI.ControllerReportList#setUserVariables(Ljava/lang/String;)VD
+<init>()8com.example.optic.FirstUI.ControllerReportList#<init>()VT
+exitListButton()@com.example.optic.FirstUI.ControllerReportList#exitListButton()VA
+5Lcom/example/optic/FirstUI/ControllerReportList$1317;Callbackã
+5Lcom/example/optic/FirstUI/ControllerReportList$1506;ListCellH
+updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)V‡
 .com.example.optic.first_ui.ControllerEventList,com.example.optic.first_ui.GraphicControllerf
 setList(Ljava/util/List;)Icom.example.optic.first_ui.ControllerEventList#setList(Ljava/util/List;)V|
 $setUserVariables(Ljava/lang/String;)Tcom.example.optic.first_ui.ControllerEventList#setUserVariables(Ljava/lang/String;)VD
@@ -1822,7 +1997,31 @@ $setUserVariables(Ljava/lang/String;)Tcom.example.optic.first_ui.ControllerEven
 exitListButton()@com.example.optic.first_ui.ControllerEventList#exitListButton()VA
 5Lcom/example/optic/first_ui/ControllerEventList$1500;Callbackã
 5Lcom/example/optic/first_ui/ControllerEventList$1677;ListCellH
-updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)V”
+updateItem(Ljava/lang/String;Z)%null#updateItem(Ljava/lang/String;Z)Vâ
+-com.example.optic.FirstUI.ControllerModPGPage+com.example.optic.FirstUI.GraphicControllerG
+
+facebook()9com.example.optic.FirstUI.ControllerModPGPage#facebook()V
+&populateReviewList(Ljava/lang/String;)Ucom.example.optic.FirstUI.ControllerModPGPage#populateReviewList(Ljava/lang/String;)VM
+freeReferee()<com.example.optic.FirstUI.ControllerModPGPage#freeReferee()VO
+socialModify()=com.example.optic.FirstUI.ControllerModPGPage#socialModify()VI
+instagram():com.example.optic.FirstUI.ControllerModPGPage#instagram()VI
+setStars(I):com.example.optic.FirstUI.ControllerModPGPage#setStars(I)Vs
+ setFirstPlay(Ljava/lang/String;)Ocom.example.optic.FirstUI.ControllerModPGPage#setFirstPlay(Ljava/lang/String;)VM
+getLastPlay()<com.example.optic.FirstUI.ControllerModPGPage#getLastPlay()VE
+	toLogin()8com.example.optic.FirstUI.ControllerModPGPage#toLogin()VC
+modify()7com.example.optic.FirstUI.ControllerModPGPage#modify()VM
+getNextPlay()<com.example.optic.FirstUI.ControllerModPGPage#getNextPlay()VG
+
+whatsapp()9com.example.optic.FirstUI.ControllerModPGPage#whatsapp()Vo
+setReferee(Ljava/lang/String;)Mcom.example.optic.FirstUI.ControllerModPGPage#setReferee(Ljava/lang/String;)VI
+eventList():com.example.optic.FirstUI.ControllerModPGPage#eventList()V{
+$setUserVariables(Ljava/lang/String;)Scom.example.optic.FirstUI.ControllerModPGPage#setUserVariables(Ljava/lang/String;)V_
+populatePlayersTable()Ecom.example.optic.FirstUI.ControllerModPGPage#populatePlayersTable()VC
+<init>()7com.example.optic.FirstUI.ControllerModPGPage#<init>()V?
+save()5com.example.optic.FirstUI.ControllerModPGPage#save()VK
+insertPlay();com.example.optic.FirstUI.ControllerModPGPage#insertPlay()VW
+populateEventBox()Acom.example.optic.FirstUI.ControllerModPGPage#populateEventBox()V}
+%playgroundReferee(Ljava/lang/String;)Tcom.example.optic.FirstUI.ControllerModPGPage#playgroundReferee(Ljava/lang/String;)V”
 com.example.optic.entities.Fotojava.lang.Objectg
 !setFkUsername(Ljava/lang/String;)Bcom.example.optic.entities.Foto#setFkUsername(Ljava/lang/String;)V5
 <init>())com.example.optic.entities.Foto#<init>()VM
@@ -1841,7 +2040,15 @@ register()9com.example.optic.first_ui.ControllerRegister#register()V¶
 *com.example.optic.first_ui.ControllerLogin,com.example.optic.first_ui.GraphicController@
 <init>()4com.example.optic.first_ui.ControllerLogin#<init>()VH
 toRegister()8com.example.optic.first_ui.ControllerLogin#toRegister()V>
-login()3com.example.optic.first_ui.ControllerLogin#login()Vó0
+login()3com.example.optic.first_ui.ControllerLogin#login()V“
+/com.example.optic.FirstUI.ControllerBookSession+com.example.optic.FirstUI.GraphicControllerÅ
+&populateCampiTable(Ljava/lang/String;)Wcom.example.optic.FirstUI.ControllerBookSession#populateCampiTable(Ljava/lang/String;)VK
+toProfile()<com.example.optic.FirstUI.ControllerBookSession#toProfile()VE
+toHome()9com.example.optic.FirstUI.ControllerBookSession#toHome()V}
+$setUserVariables(Ljava/lang/String;)Ucom.example.optic.FirstUI.ControllerBookSession#setUserVariables(Ljava/lang/String;)VE
+<init>()9com.example.optic.FirstUI.ControllerBookSession#<init>()VG
+	toLogin():com.example.optic.FirstUI.ControllerBookSession#toLogin()VK
+tableview()<com.example.optic.FirstUI.ControllerBookSession#tableview()Vó0
 java.lang.Characterjava.lang.Comparablejava.lang.Objectjava.io.SerializableM
 equals(Ljava/lang/Object;)/java.lang.Character#equals(Ljava/lang/Object;)ZO
 isUnicodeIdentifierStart(C)0java.lang.Character#isUnicodeIdentifierStart(C)Z/

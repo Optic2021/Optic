@@ -1,27 +1,9 @@
 
-zcom.example.optic.dao.GiornataDAO#getLastPlay(Ljava/lang/String;Ljava/util/Calendar;)Lcom/example/optic/entities/Giornata;u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java` `("1*£
-1v
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaa a(ƒŒ
-‰
-v
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaa a(„
-sqljava.lang.String"__id*pn
-lSELECT * FROM giornata WHERE Data=(SELECT max(G.Data) FROM giornata G WHERE ?>G.Data AND G.fk_UsernameA2 =?)ïì
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javab b(*)
-%0#com.example.optic.entities.Giornata"ˆcom.example.optic.dao.GiornataDAO#getPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)Lcom/example/optic/entities/Giornata;*%#
-!com.example.optic.dao.GiornataDAO*
-
-adminjava.lang.String*
-
-caljava.util.Calendar*
-
-sqljava.lang.String2AgetPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)"¤
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javab b(++
-)
-%0#com.example.optic.entities.Giornata:
-adminjava.lang.String:
-caljava.util.CalendarB%#
-!com.example.optic.dao.GiornataDAO
+4com.example.optic.entities.Giornata#getIdGiornata()Iz
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java2 2("1*†
+1z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java3 3("„
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java3 3(
+""B'%
+#com.example.optic.entities.Giornata

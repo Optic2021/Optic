@@ -1,37 +1,74 @@
 
-Jcom.example.optic.utilities.ImportCheckInput#isNumber(Ljava/lang/String;)ZÄ
-vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (""5*À
-4Ä
-vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (›⁄
-Ä
-vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java" (/
+Icom.example.optic.SecondUI.PlayerProfileViewCLI#back(Ljava/lang/String;)ZÜ
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java ("6*›
+2Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java (¸
+˘
+Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java (%'
+%4!com.example.optic.bean.PlayerBean"__id*?*=1
+/com.example.optic.SecondUI.PlayerProfileViewCLI"
+utente£†
+Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java (4
+%5java.lang.String"Bcom.example.optic.bean.PlayerBean#getBUsername()Ljava/lang/String;*)
+'
+%4!com.example.optic.bean.PlayerBean2getBUsername()§
+°
+Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java (5
 
-%1char"java.lang.String#charAt(I)C*
-
-strjava.lang.String*
-""2	charAt(I)›
-⁄
-Ä
-vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (0
-%2boolean"java.lang.Character#isDigit(C)Z*"
-java.lang.Character*
+%6void"Bcom.example.optic.SecondUI.PlayerHomeCLI#main(Ljava/lang/String;)V*,"*
+(com.example.optic.SecondUI.PlayerHomeCLI*
+
+%5java.lang.String*
+1*©
+3Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java^ (eíè
+Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java^ (x
+%3boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+commandjava.lang.String*
 
+indietro2equals(Ljava/lang/Object;)*
+2
+1*©
+4Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java@ (Gíè
+Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java@ (Z
+%2boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+commandjava.lang.String*
 
-%1char*
-5*„
-5Ä
-vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (“œ
-Ä
-vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java ('	
-%0int"java.lang.String#length()I*
-
-strjava.lang.String2length()*
-4
-1*î
-1Ä
-vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java ("ã
-Ä
-vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (
-"":
-strjava.lang.StringB0".
-,com.example.optic.utilities.ImportCheckInput
+Indietro2equals(Ljava/lang/Object;)*
+2
+3*•
+5Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java& (-éã
+Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java& (<
+%1boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+commandjava.lang.String*
+back2equals(Ljava/lang/Object;)*
+2
+4*•
+6Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java (éã
+Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java ("
+%0boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+commandjava.lang.String*
+Back2equals(Ljava/lang/Object;)*
+2
+5*†
+1Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java ("ë
+Ü
+|C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/PlayerProfileViewCLI.java (
+"":
+commandjava.lang.StringB3"1
+/com.example.optic.SecondUI.PlayerProfileViewCLI

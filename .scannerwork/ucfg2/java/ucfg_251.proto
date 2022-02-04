@@ -1,79 +1,16 @@
 
-Ycom.example.optic.app_controllers.UserProfileAppController#getEventList()Ljava/util/List;è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaJ J(*"7*Ë
-2è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaO O(*À
+=com.example.optic.entities.Admin#getNomeC()Ljava/lang/String;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java5 5("1*‡
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java6 6(À
 »
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaO O(*
-listjava.util.List"__id*
-
-%5java.util.List*
-1*∑
-4è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaN N(2Ô
-Ï
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaN N(2*
-eventDaocom.example.optic.dao.EventDAO"__id*&
-$
-%3com.example.optic.dao.EventDAO®•
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaO O(*
-%5java.util.List"=com.example.optic.dao.EventDAO#getEventList()Ljava/util/List;*,
-*
-eventDaocom.example.optic.dao.EventDAO2getEventList()*
-2*¢
-5è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaM M(4Ï
-È
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaM M(4&
-daocom.example.optic.dao.PlayerDAO"__id*'
-%
-%2com.example.optic.dao.PlayerDAO€ÿ
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaN$ N(,$
-%3com.example.optic.dao.EventDAO"com.example.optic.dao.EventDAO∏
-µ
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaN  N(1
-%4"Icom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)V*&
-$
-%3com.example.optic.dao.EventDAO*(
-&
-daocom.example.optic.dao.PlayerDAO*
-4*Œ
-6è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaM M(%±
-Æ
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaM M(3%
-%2com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
-com.example.optic.dao.PlayerDAO*
-5*è
-7è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaK K(,≈¬
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaK K(*
-%0java.util.ArrayList"java.util.ArrayList◊
-‘
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaK K(,
-%1"java.util.ArrayList#<init>()V*
-
-%0java.util.ArrayList–
-Õ
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaK K(-
-listjava.util.List"__id*
-
-%0java.util.ArrayList*
-6*ƒ
-1è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaS S("¨
-è
-ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaS S(
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java6 6(
+%0java.lang.String"__id*/*-"
+ com.example.optic.entities.Admin"
+nomeC"ì
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java6 6(
 
-listjava.util.ListB>"<
-:com.example.optic.app_controllers.UserProfileAppController
+%0java.lang.StringB$"
+ com.example.optic.entities.Admin

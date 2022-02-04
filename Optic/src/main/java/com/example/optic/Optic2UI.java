@@ -20,66 +20,78 @@ public class Optic2UI extends BaseCommandCLI {
             String password = null;
             int type = 0;
             boolean typeRes;
-            boolean res;
+            boolean res = false;
             do {
-                do {
-                    do {
-                        System.out.println("|Login|\n1)Player | 2)Admin | 3)Referee | 4)Registrati | 5)Esci");
-                        input = br.readLine();
-                        typeRes = ImportCheckInput.checkInput(input);
-                        //controllo se l'input è corretto
-                        if (!typeRes) {
-                            System.out.println("Tipo di user non valido!");
-                        } else {
-                            type = Integer.parseInt(input);
-                            if (type == 5) {
-                                System.exit(0);
-                            }
+                    System.out.println("|Login|\n1)Player | 2)Admin | 3)Referee | 4)Registrati | 5)Esci");
+                    input = br.readLine();
+                    typeRes = ImportCheckInput.checkInput(input);
+                    //controllo se l'input è corretto
+                    if (!typeRes) {
+                        System.out.println("Tipo di user non valido!");
+                    } else {
+                        type = Integer.parseInt(input);
+                        if (type == 5) {
+                            System.exit(0);
                         }
-                    } while (!typeRes);
-                    if (type != 4) {
-                        System.out.println("Inserisci Username : ");
-                        user = br.readLine();
-                        System.out.println("Inserisci Password : ");
-                        password = br.readLine();
                     }
+                    String []uspass=new String[2];
                     switch (type) {
                         case 2 -> {
+                            uspass=getUsPass();
                             AdminBean a = new AdminBean();
-                            a.setUsername(user);
-                            a.setPassword(password);
+                            a.setUsername(uspass[0]);
+                            a.setPassword(uspass[1]);
                             res = LoginController.adminLogin(a);
                         }
                         case 3 -> {
+                            uspass=getUsPass();
                             RefereeBean r = new RefereeBean();
-                            r.setUsername(user);
-                            r.setPassword(password);
+                            r.setUsername(uspass[0]);
+                            r.setPassword(uspass[1]);
                             res = LoginController.refereeLogin(r);
                         }
                         case 4 -> {
                             RegisterCLI.main();
                             res = true;
                         }
-                        default -> {
+                        case 1 -> {
+                            uspass=getUsPass();
                             PlayerBean p = new PlayerBean();
-                            p.setBUsername(user);
-                            p.setBPassword(password);
+                            p.setBUsername(uspass[0]);
+                            p.setBPassword(uspass[1]);
                             res = LoginController.playerLogin(p);
+                        }
+                        default -> /*doesnp*/{
                         }
                     }
                     if (!res) {
                         System.out.println("Credenziali errate! ");
+                    }else {
+                        switch (type) {
+                            case 1 -> PlayerHomeCLI.main(user);
+                            case 2 -> ModPGPageCLI.main(user);
+                            case 3 -> RefereeReportCLI.main(user);
+                            default -> System.exit(0);
+                        }
                     }
-                } while (!res);
-                switch (type) {
-                    case 1 -> PlayerHomeCLI.main(user);
-                    case 2 -> ModPGPageCLI.main(user);
-                    case 3 -> RefereeReportCLI.main(user);
-                    default -> System.exit(0);
-                }
             }while(true);
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public static String[] getUsPass(){
+        String []ret=new String[2];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Inserisci Username : ");
+        try {
+            ret[0] = br.readLine();
+            System.out.println("Inserisci Password : ");
+            ret[1] = br.readLine();
+        }catch (IOException e) {
+        e.printStackTrace();
+        }
+
+        return ret;
     }
 }

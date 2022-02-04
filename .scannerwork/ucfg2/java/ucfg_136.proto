@@ -1,16 +1,294 @@
 
-=com.example.optic.bean.AdminBean#getWhats()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java/ /("1*◊
-1t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java0 0(»
-≈
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java0 0(
-%0java.lang.String"__id*/*-"
- com.example.optic.bean.AdminBean"
-whats"ê
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java0 0(
-
-%0java.lang.StringB$"
- com.example.optic.bean.AdminBean
+fcom.example.optic.dao.RefereeDAO#getAdminFromRef(Ljava/lang/String;)Lcom/example/optic/entities/Admin;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java& &( "30*‘
+24w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java/ /(ŒÀ
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java/ /(
+%10boolean"java.sql.ResultSet#first()Z*
+
+rsjava.sql.ResultSet2first()*
+23*ë
+26w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java- -(3∏
+µ
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java- -(3
+rsjava.sql.ResultSet"__id*
+
+%8java.sql.ResultSetÕ 
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java. .(
+%9boolean"java.sql.ResultSet#first()Z*
+
+rsjava.sql.ResultSet2first()*
+24
+8*ï
+27w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java- -(#èå
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java- -(2
+%8java.sql.ResultSet"=java.sql.PreparedStatement#executeQuery()Ljava/sql/ResultSet;*(
+&
+prepStmtjava.sql.PreparedStatement2executeQuery()*
+26*é
+28w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java+ +(wŒ
+À
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java+ +(w&
+prepStmtjava.sql.PreparedStatement"__id*"
+ 
+%6java.sql.PreparedStatement∑¥
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java, ,(-
+
+%7void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*!
+
+refUsernamejava.lang.String2setString(ILjava/lang/String;)*
+27*•
+29x
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java* *(º∆
+√
+x
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java* *(Ω
+sqljava.lang.String"__id*ß§
+°SELECT A.Username,A.Instagram,A.Facebook,A.Whatsapp,A.NomeC,A.DescrizioneC,A.Via FROM (referee R JOIN admin A ON R.fk_UsernameA1 = A.Username) WHERE R.Username=?ﬁ
+€
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java+ +(&
+%2 com.example.optic.dao.RefereeDAO"__id*2*0"
+ com.example.optic.dao.RefereeDAO"
+
+instance—
+Œ
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java+ +($
+%3java.sql.Connection"__id*2*0
+&
+%2 com.example.optic.dao.RefereeDAO"
+connï
+í
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java+: +([	
+%4int"__id*
+""ï
+í
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java+\ +(v	
+%5int"__id*
+""Ì
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java+ +(w 
+%6java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
+
+%3java.sql.Connection*
+
+sqljava.lang.String*
+	
+%4int*
+	
+%5int2&prepareStatement(Ljava/lang/String;II)*
+28*≤
+30w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java'% '()≤
+Ø
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java' '(*&
+prepStmtjava.sql.PreparedStatement"__id*
+""∆√
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java( ((&
+%0 com.example.optic.entities.Admin" com.example.optic.entities.Adminÿ
+’
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java( ((
+%1"*com.example.optic.entities.Admin#<init>()V*(
+&
+%0 com.example.optic.entities.Admin”
+–
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java( ((%
+a com.example.optic.entities.Admin"__id*(
+&
+%0 com.example.optic.entities.Admin*
+29*¨
+10w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java6 6(/ß§
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java6 6(/
+%24void"<com.example.optic.entities.Admin#setVia(Ljava/lang/String;)V*'
+%
+a com.example.optic.entities.Admin*
+
+%23java.lang.String2setVia(Ljava/lang/String;)*
+9*•
+11w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java6 6(üú
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java6 6(.
+%23java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*	
+A.Via2getString(Ljava/lang/String;)*
+10*ø
+12w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java5 5(Aπ∂
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java5 5(A
+%22void"Ecom.example.optic.entities.Admin#setDescrizioneC(Ljava/lang/String;)V*'
+%
+a com.example.optic.entities.Admin*
+
+%21java.lang.String2#setDescrizioneC(Ljava/lang/String;)*
+11*Æ
+13w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java5 5(®•
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java5" 5(@
+%21java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+A.DescrizioneC2getString(Ljava/lang/String;)*
+12*±
+14w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java4 4(3´®
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java4 4(3
+%20void">com.example.optic.entities.Admin#setNomeC(Ljava/lang/String;)V*'
+%
+a com.example.optic.entities.Admin*
+
+%19java.lang.String2setNomeC(Ljava/lang/String;)*
+13*ß
+15w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java4 4(°û
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java4 4(2
+%19java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*	
+A.NomeC2getString(Ljava/lang/String;)*
+14*´
+16w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java3 3(3•¢
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java3 3(3
+%18void";com.example.optic.entities.Admin#setWa(Ljava/lang/String;)V*'
+%
+a com.example.optic.entities.Admin*
+
+%17java.lang.String2setWa(Ljava/lang/String;)*
+15*™
+17w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java3 3(§°
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java3 3(2
+%17java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+A.Whatsapp2getString(Ljava/lang/String;)*
+16*´
+18w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java2 2(3•¢
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java2 2(3
+%16void";com.example.optic.entities.Admin#setFb(Ljava/lang/String;)V*'
+%
+a com.example.optic.entities.Admin*
+
+%15java.lang.String2setFb(Ljava/lang/String;)*
+17*™
+19w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java2 2(§°
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java2 2(2
+%15java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+A.Facebook2getString(Ljava/lang/String;)*
+18*ñ
+0 "é
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaG G(
+implicit return*°
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaF F("¢
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaF F('
+%
+a com.example.optic.entities.Admin*‡
+4w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaA A(Ÿ÷
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javaA A($
+%27void"java.sql.Statement#close()V*(
+&
+prepStmtjava.sql.PreparedStatement2close()*
+0
+1*ª
+8w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java: :(±
+Æ
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java: :(%
+a com.example.optic.entities.Admin"__id*
+""*	
+4
+0
+1*’
+9w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java8 8(À»
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java8 8(
+%25void"java.sql.ResultSet#close()V*
+
+rsjava.sql.ResultSet2close()*	
+4
+0
+1*´
+20w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java1 1(4•¢
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java1 1(4
+%14void";com.example.optic.entities.Admin#setIg(Ljava/lang/String;)V*'
+%
+a com.example.optic.entities.Admin*
+
+%13java.lang.String2setIg(Ljava/lang/String;)*
+19*´
+21w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java1 1(•¢
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java1 1(3
+%13java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+A.Instagram2getString(Ljava/lang/String;)*
+20*∑
+22w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java0 0(9±Æ
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java0 0(9
+%12void"Acom.example.optic.entities.Admin#setUsername(Ljava/lang/String;)V*'
+%
+a com.example.optic.entities.Admin*
+
+%11java.lang.String2setUsername(Ljava/lang/String;)*
+21*™
+23w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java0 0(§°
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java0 0(8
+%11java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rsjava.sql.ResultSet*
+
+A.Username2getString(Ljava/lang/String;)*
+22:
+refUsernamejava.lang.StringB$"
+ com.example.optic.dao.RefereeDAO

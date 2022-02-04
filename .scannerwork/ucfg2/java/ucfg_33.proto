@@ -1,16 +1,17 @@
 
-Dcom.example.optic.bean.ValutazioneBean#getRiceve()Ljava/lang/String;z
-pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ValutazioneBean.java% %("1*ð
-1z
-pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ValutazioneBean.java& &(Õ
-Ò
-z
-pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ValutazioneBean.java& &(
-%0java.lang.String"__id*6*4(
-&com.example.optic.bean.ValutazioneBean"
-riceve"–
-z
-pF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ValutazioneBean.java& &(
+Bcom.example.optic.bean.PlayerBean#getBUsername()Ljava/lang/String;x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/PlayerBean.java ("1*ç
+1x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/PlayerBean.java (Ð
+Í
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/PlayerBean.java (
+%0java.lang.String"__id*3*1#
+!com.example.optic.bean.PlayerBean"
+
+username"”
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/PlayerBean.java (
 
-%0java.lang.StringB*(
-&com.example.optic.bean.ValutazioneBean
+%0java.lang.StringB%#
+!com.example.optic.bean.PlayerBean

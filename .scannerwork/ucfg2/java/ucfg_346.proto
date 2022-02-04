@@ -1,16 +1,16 @@
 
-Acom.example.optic.bean.GiornataBean#getData()Ljava/util/Calendar;w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/GiornataBean.java ("1*æ
-1w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/GiornataBean.java (Ï
-Ì
-w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/GiornataBean.java (
-%0java.util.Calendar"__id*1*/%
-#com.example.optic.bean.GiornataBean"
-data"•
-w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/GiornataBean.java (
-
-%0java.util.CalendarB'%
-#com.example.optic.bean.GiornataBean
+?com.example.optic.entities.Player#getStelle()Ljava/lang/String;x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java> >("1*å
+1x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java? ?(Î
+Ë
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java? ?(
+%0java.lang.String"__id*1*/#
+!com.example.optic.entities.Player"
+stelle"”
+x
+nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java? ?(
+
+%0java.lang.StringB%#
+!com.example.optic.entities.Player

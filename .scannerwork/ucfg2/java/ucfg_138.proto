@@ -1,16 +1,48 @@
 
-Ccom.example.optic.bean.AdminBean#getDescrizione()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java7 7( "1*›
-1t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(Œ
-À
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(
-%0java.lang.String"__id*5*3"
- com.example.optic.bean.AdminBean"
-descrizione"ê
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(
-
-%0java.lang.StringB$"
- com.example.optic.bean.AdminBean
+Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javak k(("3*Ü
+2w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javam m('∆√
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javam m(%&
+%1 com.example.optic.dao.RefereeDAO" com.example.optic.dao.RefereeDAOÿ
+’
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javam m('
+%2"*com.example.optic.dao.RefereeDAO#<init>()V*(
+&
+%1 com.example.optic.dao.RefereeDAOﬁ
+€
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javam m('0"
+ com.example.optic.dao.RefereeDAO"
+
+instance"__id*(
+&
+%1 com.example.optic.dao.RefereeDAO*
+1*Â
+3w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javal l(ﬁ
+€
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javal l(&
+%0 com.example.optic.dao.RefereeDAO"__id*2*0"
+ com.example.optic.dao.RefereeDAO"
+
+instance*
+2
+1*É
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javao o(ﬁ
+€
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javao o(&
+%3 com.example.optic.dao.RefereeDAO"__id*2*0"
+ com.example.optic.dao.RefereeDAO"
+
+instance"£
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javao o((
+&
+%3 com.example.optic.dao.RefereeDAOB$""
+ com.example.optic.dao.RefereeDAO

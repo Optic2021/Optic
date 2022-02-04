@@ -1,16 +1,16 @@
 
-Lcom.example.optic.utilities.ImportDAO#getDriverClassName()Ljava/lang/String;y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java ($"1*õ
+>com.example.optic.entities.Storico#getData()Ljava/lang/String;y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java ("1*ç
 1y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (Ü
-Ù
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (Î
+Ë
 y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (
-%0java.lang.String"__id*>*<'
-%com.example.optic.utilities.ImportDAO"
-driverClassName"•
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
+%0java.lang.String"__id*0*.$
+"com.example.optic.entities.Storico"
+data"•
 y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
 
-%0java.lang.StringB)'
-%com.example.optic.utilities.ImportDAO
+%0java.lang.StringB&$
+"com.example.optic.entities.Storico

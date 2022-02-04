@@ -1,16 +1,16 @@
 
-<com.example.optic.bean.UserBean#getNomeC()Ljava/lang/String;s
-iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java& &("1*Ó
-1s
-iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java' '(Æ
-Ã
-s
-iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java' '(
-%0java.lang.String"__id*.*,!
-com.example.optic.bean.UserBean"
-nomeC"
-s
-iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java' '(
+Icom.example.optic.entities.Valutazione#getDescrizione()Ljava/lang/String;}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java ( "1*þ
+1}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (Ý
+Ú
+}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (
+%0java.lang.String"__id*;*9(
+&com.example.optic.entities.Valutazione"
+descrizione"™
+}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (
 
-%0java.lang.StringB#!
-com.example.optic.bean.UserBean
+%0java.lang.StringB*(
+&com.example.optic.entities.Valutazione
