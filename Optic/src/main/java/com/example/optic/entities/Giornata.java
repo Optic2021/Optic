@@ -1,7 +1,5 @@
 package com.example.optic.entities;
 
-import com.example.optic.app_controllers.ReviewAppController;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 

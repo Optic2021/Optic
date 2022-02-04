@@ -1,16 +1,16 @@
 
-Acom.example.optic.bean.AdminBean#getProvincia()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaO O("1*€
+Ccom.example.optic.bean.AdminBean#getDescrizione()Ljava/lang/String;t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java7 7( "1*›
 1t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaP P(Ã
-…
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(Œ
+À
 t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaP P(
-%0java.lang.String"__id*3*1"
- com.example.optic.bean.AdminBean"
-	provincia"ê
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(
+%0java.lang.String"__id*5*3"
+ com.example.optic.bean.AdminBean"
+descrizione"ê
 t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.javaP P(
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(
 
 %0java.lang.StringB$"
  com.example.optic.bean.AdminBean

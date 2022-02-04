@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="idS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" style="-fx-background-radius: 12px 12px 12px 12px; -fx-border-radius: 10px 10px 10px 10px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.optic.FirstUI.ControllerSocialModPG">
+<Pane fx:id="idS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" style="-fx-background-radius: 12px 12px 12px 12px; -fx-border-radius: 10px 10px 10px 10px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.optic.first_ui.ControllerSocialModPG">
     <BorderPane prefHeight="250.0" prefWidth="400.0" style="-fx-background-radius: 12px 12px 12px 12px; -fx-border-radius: 10px 10px 10px 10px;">
         <styleClass>
             <String fx:value="backgroundG" />

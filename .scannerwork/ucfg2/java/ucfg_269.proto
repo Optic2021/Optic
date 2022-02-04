@@ -1,16 +1,37 @@
 
->com.example.optic.entities.Player#getStato()Ljava/lang/String;u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.javaV V("1*Û
+hcom.example.optic.dao.GiornataDAO#getRecentPlay(Ljava/lang/String;)Lcom/example/optic/entities/Giornata;u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaU U(!"1*º
 1u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.javaW W(Ê
-Ç
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaV V(}…
+‚
 u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.javaW W(
-%0java.lang.String"__id*0*.#
-!com.example.optic.entities.Player"
-stato"‘
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaV V(~
+sqljava.lang.String"__id*jh
+fSELECT * FROM giornata WHERE Data=(SELECT max(Data) FROM giornata WHERE ? > Data AND fk_UsernameA2 =?)â
+ß
 u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.javaW W(
-
-%0java.lang.StringB%#
-!com.example.optic.entities.Player
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaW W(-
+%0java.util.Calendar"4java.util.Calendar#getInstance()Ljava/util/Calendar;*"
+java.util.Calendar·
+´
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaW W(.
+caljava.util.Calendar"__id*
+
+%0java.util.Calendarïì
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaX X(*)
+%1#com.example.optic.entities.Giornata"ˆcom.example.optic.dao.GiornataDAO#getPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)Lcom/example/optic/entities/Giornata;*%#
+!com.example.optic.dao.GiornataDAO*
+
+adminjava.lang.String*
+
+caljava.util.Calendar*
+
+sqljava.lang.String2AgetPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)"¤
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaX X(++
+)
+%1#com.example.optic.entities.Giornata:
+adminjava.lang.StringB%#
+!com.example.optic.dao.GiornataDAO

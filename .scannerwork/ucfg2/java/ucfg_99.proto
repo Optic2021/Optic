@@ -1,16 +1,451 @@
 
-=com.example.optic.entities.Campo#getNomec()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java ("1*◊
-1t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (»
-≈
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
-%0java.lang.String"__id*/*-"
- com.example.optic.entities.Campo"
-nomeC"ê
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
+#com.example.optic.Optic2UI#main2()Vn
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java ("50*È
+46n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java  ("ÏÈ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java  (-
+%7java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
+
+brjava.io.BufferedReader2
+readLine()*
+45*⁄
+24n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java9" 9(1Ã
+…
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java9" 9(A
+%28boolean"ecom.example.optic.app_controllers.LoginController#refereeLogin(Lcom/example/optic/bean/RefereeBean;)Z*5"3
+1com.example.optic.app_controllers.LoginController*)
+'
+r"com.example.optic.bean.RefereeBean*
+13
+47
+5
+7
+9
+11*Ã
+47n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (ú
+ô
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java ("
+%5java.io.PrintStream"__id*
+""∞≠
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (m
+
+%6void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%5java.io.PrintStream*CA
+?|Login|\n1)Player | 2)Admin | 3)Referee | 4)Registrati | 5)Esci2println(Ljava/lang/String;)*
+46*Æ
+25n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java8 8(±Æ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java8 8(3
+%27void"Ccom.example.optic.bean.RefereeBean#setPassword(Ljava/lang/String;)V*)
+'
+r"com.example.optic.bean.RefereeBean*
+
+passwordjava.lang.String2setPassword(Ljava/lang/String;)*
+24*ì
+48n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (U∑
+¥
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (U
+brjava.io.BufferedReader"__id*
+
+%3java.io.BufferedReaderú
+ô
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (
+inputjava.lang.String"__id*
+""õ
+ò
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (
+userjava.lang.String"__id*
+""ü
+ú
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (#
+passwordjava.lang.String"__id*
+""*
+47*¸
+26n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java6 6(>œ
+Ã
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java6 6(>'
+r"com.example.optic.bean.RefereeBean"__id*+
+)
+%24"com.example.optic.bean.RefereeBean≠™
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java7 7(/
+%26void"Ccom.example.optic.bean.RefereeBean#setUsername(Ljava/lang/String;)V*)
+'
+r"com.example.optic.bean.RefereeBean*
+
+userjava.lang.String2setUsername(Ljava/lang/String;)*
+25*ó
+49n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java  (T©¶
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java$ (2
+%3java.io.BufferedReader"java.io.BufferedReaderÓ
+Î
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java  (T
+%4"0java.io.BufferedReader#<init>(Ljava/io/Reader;)V*
+
+%3java.io.BufferedReader*!
+
+%1java.io.InputStreamReader*
+48*ó
+27n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java5 :(¬ø
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java60 6(;)
+%24"com.example.optic.bean.RefereeBean""com.example.optic.bean.RefereeBean’
+“
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java6, 6(=
+%25",com.example.optic.bean.RefereeBean#<init>()V*+
+)
+%24"com.example.optic.bean.RefereeBean*
+26*‘
+29n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java3" 3(1∆
+√
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java3" 3(?
+%23boolean"acom.example.optic.app_controllers.LoginController#adminLogin(Lcom/example/optic/bean/AdminBean;)Z*5"3
+1com.example.optic.app_controllers.LoginController*'
+%
+a com.example.optic.bean.AdminBean*
+13
+47
+5
+7
+9
+11*¡
+50n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaI (Oú
+ô
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaI (R
+%0java.io.InputStream"__id*
+""Ø¨
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java7 (H
+%1java.io.InputStreamReader"java.io.InputStreamReaderÛ
+
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java3 (S
+%2"8java.io.InputStreamReader#<init>(Ljava/io/InputStream;)V*!
+
+%1java.io.InputStreamReader*
+
+%0java.io.InputStream*
+49*™
+30n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java2 2(≠™
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java2 2(3
+%22void"Acom.example.optic.bean.AdminBean#setPassword(Ljava/lang/String;)V*'
+%
+a com.example.optic.bean.AdminBean*
+
+passwordjava.lang.String2setPassword(Ljava/lang/String;)*
+29*Ù
+31n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java0 0(:À
+»
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java0 0(:%
+a com.example.optic.bean.AdminBean"__id*)
+'
+%19 com.example.optic.bean.AdminBean©¶
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java1 1(/
+%21void"Acom.example.optic.bean.AdminBean#setUsername(Ljava/lang/String;)V*'
+%
+a com.example.optic.bean.AdminBean*
+
+userjava.lang.String2setUsername(Ljava/lang/String;)*
+30*è
+32n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java/ 4(æª
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java0. 0(7'
+%19 com.example.optic.bean.AdminBean" com.example.optic.bean.AdminBean—
+Œ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java0* 0(9
+%20"*com.example.optic.bean.AdminBean#<init>()V*)
+'
+%19 com.example.optic.bean.AdminBean*
+31*ê
+11n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaK K(7ê
+ç
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaK K(6
+%37void"Ccom.example.optic.second_ui.PlayerHomeCLI#main(Ljava/lang/String;)V*-"+
+)com.example.optic.second_ui.PlayerHomeCLI*
+
+userjava.lang.String*
+47
+0*ª
+33n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java, ,(0≤
+Ø
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java, ,(0
+passwordjava.lang.String"__id*
+
+%18java.lang.String*
+27
+20
+32
+22*Í
+34n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java,# ,(%ÌÍ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java,# ,(0
+%18java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
+
+brjava.io.BufferedReader2
+readLine()*
+33*÷
+35n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java* *(,Æ
+´
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java* *(,
+userjava.lang.String"__id*
+
+%15java.lang.Stringù
+ö
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java+ +("
+%16java.io.PrintStream"__id*
+""àÖ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java+ +(C
+%17void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%16java.io.PrintStream*
+Inserisci Password : 2println(Ljava/lang/String;)*
+34*±
+13n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaG G(ù
+ö
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaG G("
+%35java.io.PrintStream"__id*
+""áÑ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaG G(B
+%36void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%35java.io.PrintStream*
+Credenziali errate! 2println(Ljava/lang/String;)*
+47
+5
+7
+9
+11*Í
+36n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java* *(!ÌÍ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java* *(,
+%15java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
+
+brjava.io.BufferedReader2
+readLine()*
+35*•
+37n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java) )(ù
+ö
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java) )("
+%13java.io.PrintStream"__id*
+""àÖ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java) )(C
+%14void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%13java.io.PrintStream*
+Inserisci Username : 2println(Ljava/lang/String;)*
+36*◊
+17n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaC" C(1…
+∆
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaC" C(@
+%34boolean"ccom.example.optic.app_controllers.LoginController#playerLogin(Lcom/example/optic/bean/PlayerBean;)Z*5"3
+1com.example.optic.app_controllers.LoginController*(
+&
+p!com.example.optic.bean.PlayerBean*
+13
+47
+5
+7
+9
+11*Æ
+18n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaB B(±Æ
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaB B(4
+%33void"Ccom.example.optic.bean.PlayerBean#setBPassword(Ljava/lang/String;)V*(
+&
+p!com.example.optic.bean.PlayerBean*
+
+passwordjava.lang.String2 setBPassword(Ljava/lang/String;)*
+17*˙
+19n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java@ @(<Õ
+ 
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java@ @(<&
+p!com.example.optic.bean.PlayerBean"__id**
+(
+%30!com.example.optic.bean.PlayerBean≠™
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaA A(0
+%32void"Ccom.example.optic.bean.PlayerBean#setBUsername(Ljava/lang/String;)V*(
+&
+p!com.example.optic.bean.PlayerBean*
+
+userjava.lang.String2 setBUsername(Ljava/lang/String;)*
+18*ç
+0 "Ö
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaT T(
+implicit return*¥
+5n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaN N(.µ
+≤
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaN N(-
+%40void"java.lang.System#exit(I)V*"
+java.lang.System*2 *
+47
+0*ï
+7n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaM M(:ñ
+ì
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaM M(9
+%39void"Fcom.example.optic.second_ui.RefereeReportCLI#main(Ljava/lang/String;)V*0".
+,com.example.optic.second_ui.RefereeReportCLI*
+
+userjava.lang.String*
+47
+0*ç
+9n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaL L(6é
+ã
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.javaL L(5
+%38void"Bcom.example.optic.second_ui.ModPGPageCLI#main(Ljava/lang/String;)V*,"*
+(com.example.optic.second_ui.ModPGPageCLI*
+
+userjava.lang.String*
+47
+0*∆
+40n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java$  $(&µ
+≤
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java$  $(.
+%12void"java.lang.System#exit(I)V*"
+java.lang.System*2 *
+47
+37
+27
+20
+32
+22*˘
+42n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java"# "(*‰
+·
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java"# "(:
+
+%11int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
+java.lang.Integer*
+
+inputjava.lang.String*
+47
+37
+27
+40
+20
+32
+22*ì
+20n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java? D(¿Ω
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java@/ @(9(
+%30!com.example.optic.bean.PlayerBean"!com.example.optic.bean.PlayerBean”
+–
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java@+ @(;
+%31"+com.example.optic.bean.PlayerBean#<init>()V**
+(
+%30!com.example.optic.bean.PlayerBean*
+19*∫
+43n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java   ("ú
+ô
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java   (&
+%9java.io.PrintStream"__id*
+""äá
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java   (J
+%10void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%9java.io.PrintStream*
+Tipo di user non valido!2println(Ljava/lang/String;)*
+47
+37
+27
+20
+32
+22*Ï
+22n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java; >(ﬁ
+€
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java< <(.
+%29void"/com.example.optic.second_ui.RegisterCLI#main()V*+")
+'com.example.optic.second_ui.RegisterCLI*
+13
+47
+5
+7
+9
+11*—
+45n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (-Æ
+´
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java (-
+inputjava.lang.String"__id*
 
-%0java.lang.StringB$"
- com.example.optic.entities.Campo
+%7java.lang.Stringü
+ú
+n
+dF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/Optic2UI.java" (D
+%8boolean"Lcom.example.optic.utilities.ImportCheckInput#checkInput(Ljava/lang/String;)Z*0".
+,com.example.optic.utilities.ImportCheckInput*
+
+inputjava.lang.String*
+42
+43B"
+com.example.optic.Optic2UI

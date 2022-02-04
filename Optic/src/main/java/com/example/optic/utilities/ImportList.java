@@ -1,6 +1,6 @@
 package com.example.optic.utilities;
 
-import com.example.optic.FirstUI.GraphicController;
+import com.example.optic.first_ui.GraphicController;
 import com.example.optic.Optic;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.ValutazionePlayer;

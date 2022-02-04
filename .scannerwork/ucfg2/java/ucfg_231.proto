@@ -1,40 +1,16 @@
 
-lcom.example.optic.app_controllers.UserProfileAppController#getReportList(Ljava/lang/String;)Ljava/util/List;
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaW# W(0"1*é
-1
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaX X(»
-¸
-
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaX X(
-listjava.util.List"__id*
-""±
-®
-
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaY Y(/%
-%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
-com.example.optic.dao.PlayerDAOì
-é
-
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaY Y(0&
-daocom.example.optic.dao.PlayerDAO"__id*'
-%
-%0com.example.optic.dao.PlayerDAOóð
-
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaZ Z(,
-%1java.util.List"Wcom.example.optic.dao.PlayerDAO#getPlayerReportList(Ljava/lang/String;)Ljava/util/List;*(
-&
-daocom.example.optic.dao.PlayerDAO*
+Acom.example.optic.entities.Giornata#getData()Ljava/util/Calendar;w
+mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java6 6("1*æ
+1w
+mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java7 7(Ï
+Ì
+w
+mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java7 7(
+%0java.util.Calendar"__id*1*/%
+#com.example.optic.entities.Giornata"
+data"•
+w
+mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java7 7(
 
-userjava.lang.String2'getPlayerReportList(Ljava/lang/String;)Ë
-È
-
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaZ Z(,
-listjava.util.List"__id*
-
-%1java.util.List"¬
-
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java[ [(
-
-listjava.util.List:
-userjava.lang.StringB>"<
-:com.example.optic.app_controllers.UserProfileAppController
+%0java.util.CalendarB'%
+#com.example.optic.entities.Giornata

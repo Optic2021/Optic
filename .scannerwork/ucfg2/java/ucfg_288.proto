@@ -1,16 +1,16 @@
 
-Kcom.example.optic.entities.Prenotazione#getFkIdGiornata()Ljava/lang/String;{
-qF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (!"1*ú
-1{
-qF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (Ý
-Ú
-{
-qF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (
-%0java.lang.String"__id*=*;)
-'com.example.optic.entities.Prenotazione"
-fkIdGiornata"—
-{
-qF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (
+?com.example.optic.entities.Player#getStelle()Ljava/lang/String;u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java> >("1*Ü
+1u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java? ?(Ë
+È
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java? ?(
+%0java.lang.String"__id*1*/#
+!com.example.optic.entities.Player"
+stelle"‘
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java? ?(
 
-%0java.lang.StringB+)
-'com.example.optic.entities.Prenotazione
+%0java.lang.StringB%#
+!com.example.optic.entities.Player

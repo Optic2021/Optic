@@ -55,7 +55,7 @@
       <module name="Optic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.optic.FirstUI.*" />
+          <option name="PATTERN" value="com.example.optic.first_ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -73,8 +73,8 @@
     </configuration>
     <configuration name="TestLoginController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Optic" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestLoginController" />
+      <option name="PACKAGE_NAME" value="castelli" />
+      <option name="MAIN_CLASS_NAME" value="castelli.TestLoginController" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -82,8 +82,8 @@
     </configuration>
     <configuration name="TestPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Optic" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestPlayer" />
+      <option name="PACKAGE_NAME" value="castelli" />
+      <option name="MAIN_CLASS_NAME" value="castelli.TestPlayer" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -202,6 +202,9 @@
       <workItem from="1643901679416" duration="258000" />
       <workItem from="1643902423609" duration="4594000" />
       <workItem from="1643907723499" duration="4177000" />
+      <workItem from="1643968304641" duration="77000" />
+      <workItem from="1643968449903" duration="1761000" />
+      <workItem from="1643970499366" duration="7721000" />
     </task>
     <servers />
   </component>

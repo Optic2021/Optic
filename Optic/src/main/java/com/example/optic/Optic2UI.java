@@ -1,17 +1,11 @@
 package com.example.optic;
 
-/*System.out.println("Inizializzando ");
-        Console console = System.console();
-        String s= console.readLine();
-        int i=Integer.parseInt(console.readLine());*/
-
-import com.example.optic.SecondUI.*;
+import com.example.optic.second_ui.*;
 import com.example.optic.app_controllers.LoginController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.bean.RefereeBean;
 import com.example.optic.utilities.ImportCheckInput;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,10 +15,9 @@ public class Optic2UI extends BaseCommandCLI {
     public static void main2(){
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            String accStr;
             String input;
-            String user = new String();
-            String password = new String();
+            String user = null;
+            String password = null;
             int type = 0;
             boolean typeRes;
             boolean res;

@@ -1,16 +1,91 @@
 
-Dcom.example.optic.entities.Report#getFkUsernameP()Ljava/lang/String;u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java ( "1*·
-1u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (–
-Õ
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (
-%0java.lang.String"__id*6*4#
-!com.example.optic.entities.Report"
-fkUsernameP"ë
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (
+ícom.example.optic.app_controllers.BookSessionAppController#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;è
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java} }(&"9*ñ
+2ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÇ Ç(F˜
+Ù
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÇ Ç(F+
+play#com.example.optic.entities.Giornata"__id*+
+)
+%5#com.example.optic.entities.Giornata*
+1*¯
+4ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÇ Ç(FŸ÷
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÇ Ç(F)
+%5#com.example.optic.entities.Giornata"zcom.example.optic.dao.GiornataDAO#getLastPlay(Ljava/lang/String;Ljava/util/Calendar;)Lcom/example/optic/entities/Giornata;*.
+,
+playDao!com.example.optic.dao.GiornataDAO*
 
-%0java.lang.StringB%#
-!com.example.optic.entities.Report
+%3java.lang.String*
+
+%4java.util.Calendar23getLastPlay(Ljava/lang/String;Ljava/util/Calendar;)*
+2*Õ
+5ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÇ7 Ç(;Æ´
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÇ7 Ç(E
+%4java.util.Calendar"Acom.example.optic.bean.GiornataBean#getData()Ljava/util/Calendar;*-
++
+bean#com.example.optic.bean.GiornataBean2	getData()*
+4*ƒ
+6ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÅ Å(7ˆ
+Û
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÅ Å(7,
+playDao!com.example.optic.dao.GiornataDAO"__id*)
+'
+%1!com.example.optic.dao.GiornataDAO¨©
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÇ' Ç(6
+%3java.lang.String"@com.example.optic.bean.GiornataBean#getAdmin()Ljava/lang/String;*-
++
+bean#com.example.optic.bean.GiornataBean2
+getAdmin()*
+5*∂
+7ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÄ Ä(4Ó
+Î
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÄ Ä(4&
+daocom.example.optic.dao.PlayerDAO"__id*'
+%
+%0com.example.optic.dao.PlayerDAO„‡
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÅ& Å(1'
+%1!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAO¿
+Ω
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÅ" Å(6
+%2"Lcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/PlayerDAO;)V*)
+'
+%1!com.example.optic.dao.GiornataDAO*(
+&
+daocom.example.optic.dao.PlayerDAO*
+6*“
+8ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÄ Ä(%≥
+∞
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÄ Ä(3%
+%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
+com.example.optic.dao.PlayerDAO*
+7*Ì
+9è
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java~ ~(–
+Õ
+è
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java~ ~(+
+play#com.example.optic.entities.Giornata"__id*
+""*
+8*›
+1ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÜ Ü("√
+ë
+ÑF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.javaÜ Ü(-
++
+play#com.example.optic.entities.Giornata:+
+bean#com.example.optic.bean.GiornataBeanB>"<
+:com.example.optic.app_controllers.BookSessionAppController

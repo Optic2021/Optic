@@ -1,16 +1,16 @@
 
-?com.example.optic.entities.Storico#getCampo()Ljava/lang/String;v
-lF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java ("1*ß
-1v
-lF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (Ì
-É
-v
-lF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
-%0java.lang.String"__id*1*/$
-"com.example.optic.entities.Storico"
-campo"’
-v
-lF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
+?com.example.optic.bean.ReportBean#getPlayer()Ljava/lang/String;u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java ("1*Ü
+1u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java (Ë
+È
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java (
+%0java.lang.String"__id*1*/#
+!com.example.optic.bean.ReportBean"
+player"‘
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java (
 
-%0java.lang.StringB&$
-"com.example.optic.entities.Storico
+%0java.lang.StringB%#
+!com.example.optic.bean.ReportBean

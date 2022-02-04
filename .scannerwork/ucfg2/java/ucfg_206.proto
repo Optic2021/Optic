@@ -1,9 +1,17 @@
 
-6com.example.optic.entities.Giornata#getNumGiocatori()Iw
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java< <("1*€
-1w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java= =("
-w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java= =(!
-""B'%
-#com.example.optic.entities.Giornata
+@com.example.optic.entities.Admin#getPassword()Ljava/lang/String;t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java% %("1*Ú
+1t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java& &(Ë
+È
+t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java& &(
+%0java.lang.String"__id*2*0"
+ com.example.optic.entities.Admin"
+
+password"
+t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java& &(
+
+%0java.lang.StringB$"
+ com.example.optic.entities.Admin

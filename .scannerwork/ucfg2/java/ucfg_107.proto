@@ -1,48 +1,16 @@
 
-Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javak k(("3*˙
-2t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javam m('√¿
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javam m(%&
-%1 com.example.optic.dao.RefereeDAO" com.example.optic.dao.RefereeDAO’
-“
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javam m('
-%2"*com.example.optic.dao.RefereeDAO#<init>()V*(
-&
-%1 com.example.optic.dao.RefereeDAO€
-ÿ
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javam m('0"
- com.example.optic.dao.RefereeDAO"
-
-instance"__id*(
-&
-%1 com.example.optic.dao.RefereeDAO*
-1*ﬂ
-3t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javal l(€
-ÿ
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javal l(&
-%0 com.example.optic.dao.RefereeDAO"__id*2*0"
- com.example.optic.dao.RefereeDAO"
-
-instance*
-2
-1*˙
+=com.example.optic.entities.Campo#getNomec()Ljava/lang/String;t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java ("1*◊
 1t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javao o(€
-ÿ
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (»
+≈
 t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javao o(&
-%3 com.example.optic.dao.RefereeDAO"__id*2*0"
- com.example.optic.dao.RefereeDAO"
-
-instance"†
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
+%0java.lang.String"__id*/*-"
+ com.example.optic.entities.Campo"
+nomeC"ê
 t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.javao o((
-&
-%3 com.example.optic.dao.RefereeDAOB$""
- com.example.optic.dao.RefereeDAO
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Campo.java (
+
+%0java.lang.StringB$"
+ com.example.optic.entities.Campo

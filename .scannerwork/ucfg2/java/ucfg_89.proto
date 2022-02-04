@@ -1,45 +1,62 @@
 
-Fcom.example.optic.bean.ReportBean#getFormattedText()Ljava/lang/String;u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java$ $(""1*ú
-
-1u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java% %(Ã
-…
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java% %(%
-%0java.lang.String"__id*2*0#
-!com.example.optic.bean.ReportBean"	
-referee»
-≈
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java% %(%
-%1java.lang.String"__concat*
-Ricevuto da *
+wcom.example.optic.app_controllers.RefReportPlayer#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java\ \(-"1*˝
+1Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java] ](±
+Æ
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java] ](
+listjava.util.List"__id*
+""´
+®
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java^ ^(1&
+%0 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
+ com.example.optic.dao.RefereeDAO‰
+·
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java^ ^(2'
+dao com.example.optic.dao.RefereeDAO"__id*(
+&
+%0 com.example.optic.dao.RefereeDAO◊‘
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java_" _(-'
+%1!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAO∂
+≥
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java_ _(2
+%2"Mcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/RefereeDAO;)V*)
+'
+%1!com.example.optic.dao.GiornataDAO*)
+'
+dao com.example.optic.dao.RefereeDAOÍ
+Á
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java_ _(3,
+playDao!com.example.optic.dao.GiornataDAO"__id*)
+'
+%1!com.example.optic.dao.GiornataDAOÑÅ
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java`& `(6	
+%3int"0com.example.optic.bean.GiornataBean#getIdPlay()I*-
++
+bean#com.example.optic.bean.GiornataBean2getIdPlay()∂≥
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java` `(7
+%4java.util.List"Ccom.example.optic.dao.GiornataDAO#getPlayersList(I)Ljava/util/List;*.
+,
+playDao!com.example.optic.dao.GiornataDAO*
+	
+%3int2getPlayersList(I)¡
+æ
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java` `(7
+listjava.util.List"__id*
+
+%4java.util.List"¢
+Ö
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javaa a(
 
-%0java.lang.StringÀ
-»
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java% %(7
-%2java.lang.String"__concat*
-
-%1java.lang.String*
-\nMotivazione: –
-Õ
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java%8 %(C
-%3java.lang.String"__id*6*4#
-!com.example.optic.bean.ReportBean"
-motivazione–
-Õ
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java% %(C
-%4java.lang.String"__concat*
-
-%2java.lang.String*
-
-%3java.lang.String"ë
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/ReportBean.java% %(D
-
-%4java.lang.StringB%#
-!com.example.optic.bean.ReportBean
+listjava.util.List:+
+bean#com.example.optic.bean.GiornataBeanB5"3
+1com.example.optic.app_controllers.RefReportPlayer

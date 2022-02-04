@@ -1,130 +1,16 @@
 
-lcom.example.optic.utilities.ImportUrl#controlliUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Zy
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java$ $(&"17"10"1*³
-13y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+N +(Y¨¥
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+N +(~
-%4boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*!
-
-urlFacebookjava.lang.String*
-https://www.facebook.com2"contains(Ljava/lang/CharSequence;)*
-12
-1*ã
-14y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+2 +(=ØÕ
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+2 +(G
-%3boolean"java.lang.String#isEmpty()Z*!
-
-urlFacebookjava.lang.String2	isEmpty()*
-13
-1*½
-16y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java) )(§
-¤
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java* *(
-%1java.io.PrintStream"__id*
-""Œ‰
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java* *(:
-
-%2void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%1java.io.PrintStream*
-Url troppo lungo2println(Ljava/lang/String;)*
-1*½
-5y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java5 5(¨
-¥
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java6 6(
-%12java.io.PrintStream"__id*
-""Œ‰
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java6 6(8
-%13void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%12java.io.PrintStream*
-Url non valido2println(Ljava/lang/String;)*
-1*á
-17y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java' /(ÒÏ
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java( (('	
-%0int"java.lang.String#length()I*!
-
-urlFacebookjava.lang.String2length()*
-14
-16
-1*µ
-6y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java4P 4(\¬©
-z
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java4P 4(‚
-%11boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*"
- 
-urlInstagramjava.lang.String*
-https://www.instagram.com2"contains(Ljava/lang/CharSequence;)*
-5
-1*ã
-7y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java43 4(?Ú×
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java43 4(I
-%10boolean"java.lang.String#isEmpty()Z*"
- 
-urlInstagramjava.lang.String2	isEmpty()*
-6
-1*¼
-9y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java2 2(§
-¤
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java3 3(
-%8java.io.PrintStream"__id*
-""Œ‰
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java3 3(:
-
-%9void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%8java.io.PrintStream*
-Url troppo lungo2println(Ljava/lang/String;)*
-1*à
-10y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java0 8(ÓÐ
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java1 1((	
-%7int"java.lang.String#length()I*"
- 
-urlInstagramjava.lang.String2length()*	
-7
-9
-1*»
-12y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java, ,(§
-¤
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java- -(
-%5java.io.PrintStream"__id*
-""Š‡
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java- -(8
-
-%6void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%5java.io.PrintStream*
-Url non valido2println(Ljava/lang/String;)*
-1*„
-1y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.javaA A("ƒ
-y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.javaA A(
-"": 
-urlInstagramjava.lang.String:
-urlFacebookjava.lang.String:
-numWhatsappjava.lang.String:
-""B)"'
-%com.example.optic.utilities.ImportUrl
+:com.example.optic.entities.Admin#getIg()Ljava/lang/String;t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java= =("1*Ô
+1t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java> >(Å
+Â
+t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java> >(
+%0java.lang.String"__id*,**"
+ com.example.optic.entities.Admin"
+ig"
+t
+jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Admin.java> >(
+
+%0java.lang.StringB$"
+ com.example.optic.entities.Admin

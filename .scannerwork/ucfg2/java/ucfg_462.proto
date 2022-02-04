@@ -1,0 +1,37 @@
+
+Mcom.example.optic.second_ui.UserPGPageCLI#isPlayerValid(Ljava/lang/String;I)Z
+sF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/UserPGPageCLI.java¬ ¬(("3*Ÿ
+2
+sF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/UserPGPageCLI.java≈ ≈(≠
+™
+
+sF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/UserPGPageCLI.java≈ ≈(
+%1java.io.PrintStream"__id*
+""ùö
+
+sF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/UserPGPageCLI.java≈ ≈(=
+
+%2void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%1java.io.PrintStream*
+Numero inserito non valido!2println(Ljava/lang/String;)*
+1*É
+3
+sF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/UserPGPageCLI.java√ √(Ù
+Ò
+
+sF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/UserPGPageCLI.javaƒ ƒ(#	
+%0int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
+java.lang.Integer*
+
+inputjava.lang.String*
+2
+1*ê
+1
+sF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/UserPGPageCLI.java» »("â
+
+sF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/UserPGPageCLI.java» »(
+"":
+inputjava.lang.String:
+""B-"+
+)com.example.optic.second_ui.UserPGPageCLI

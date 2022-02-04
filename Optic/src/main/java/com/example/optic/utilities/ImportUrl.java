@@ -40,7 +40,7 @@ public class ImportUrl {
                 if(urlFacebook.length() > 200){
                     res = false;
                     System.out.println("Url troppo lungo");
-                }else if(urlFacebook != null && !(urlFacebook.isEmpty()) && !(urlFacebook.contains("https://www.facebook.com"))) {//il controllo sul null serve per evitare il crush
+                }else if(!(urlFacebook.isEmpty()) && !(urlFacebook.contains("https://www.facebook.com"))) {//il controllo sul null serve per evitare il crush
                     res = false;
                     System.out.println("Url non valido");
                 }
@@ -49,7 +49,7 @@ public class ImportUrl {
                 if(urlInstagram.length() > 200 ){
                     res = false;
                     System.out.println("Url troppo lungo");
-                }else if(urlInstagram != null && !(urlInstagram.isEmpty()) && !(urlInstagram.contains("https://www.instagram.com"))) { //il controllo sul null serve per evitare il crush
+                }else if(!(urlInstagram.isEmpty()) && !(urlInstagram.contains("https://www.instagram.com"))) { //il controllo sul null serve per evitare il crush
                     res = false;
                     System.out.println("Url non valido");
                 }
