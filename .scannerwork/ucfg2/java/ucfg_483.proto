@@ -1,0 +1,37 @@
+
+Icom.example.optic.utilities.ImportCheckInput#isValid(Ljava/lang/String;)Zƒ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (!"5*Ô
+4ƒ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java" "(àÝ
+ƒ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java"" "(/
+
+%1char"java.lang.String#charAt(I)C*
+
+strjava.lang.String*
+""2	charAt(I)à
+Ý
+ƒ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java" "(0
+%2boolean"java.lang.Character#isDigit(C)Z*"
+java.lang.Character*
+
+
+%1char*
+5*é
+5ƒ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java! !(ÕÒ
+ƒ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java! !('	
+%0int"java.lang.String#length()I*
+
+strjava.lang.String2length()*
+4
+1*š
+1ƒ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java& &("Ž
+ƒ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java& &(
+"":
+strjava.lang.StringB0".
+,com.example.optic.utilities.ImportCheckInput
