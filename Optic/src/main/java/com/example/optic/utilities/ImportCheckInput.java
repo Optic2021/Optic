@@ -1,7 +1,7 @@
 package com.example.optic.utilities;
 
 public class ImportCheckInput {
-    public ImportCheckInput(){
+    private ImportCheckInput(){
         //does nothing
     }
     //controllo se il tipo inserito è valido
@@ -19,16 +19,6 @@ public class ImportCheckInput {
     }
 
     public static boolean isNumber(String str){
-        boolean res = true;
-        for(int i = 0; i < str.length(); i++){
-            if(!Character.isDigit(str.charAt(i))){
-                res = false;
-            }
-        }
-        return res;
-    }
-
-    public static boolean isValid(String str){
         boolean res = true;
         for(int i = 0; i < str.length(); i++){
             if(!Character.isDigit(str.charAt(i))){

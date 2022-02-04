@@ -37,32 +37,28 @@ public class TestCarloni {
 
     //testo il login con un utente esistente e password giusta
     @Test
-    public void TestUsernameUsedFail(){
+    public void testUsernameUsedFail(){
         UserBean user=new UserBean();
         user.setUsername("Used");
         user.setPassword("Used");
         boolean res=false;
         try {
             res = RegisterController.isUsernameUsed(user,1);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
         assertEquals(true,res,"Expected to be used");
     }
 
     @Test
-    public void TestUsernameUsed(){
+    public void testUsernameUsed(){
         UserBean user=new UserBean();
         user.setUsername("NotUsed");
         user.setPassword("NotUsed");
         boolean res= false;
         try {
             res = RegisterController.isUsernameUsed(user,2);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException |SQLException e ) {
             e.printStackTrace();
         }
         assertEquals(false,res,"Expected not to be used");

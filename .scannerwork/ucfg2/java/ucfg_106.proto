@@ -1,69 +1,16 @@
 
-Pcom.example.optic.app_controllers.RefReportPlayer#getEventList()Ljava/util/List;ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java) )(*"7*Ú
-2ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java. .(*Ä
-Á
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java. .(*
-listjava.util.List"__id*
-
-%3java.util.List*
-1*¢
-4ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java- -(2è
-å
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java- -(2*
-eventDaocom.example.optic.dao.EventDAO"__id*&
-$
-%1com.example.optic.dao.EventDAO¡ž
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java. .(*
-%3java.util.List"=com.example.optic.dao.EventDAO#getEventList()Ljava/util/List;*,
-*
-eventDaocom.example.optic.dao.EventDAO2getEventList()*
-2*Š
-5ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java, ,(6ç
-ä
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java, ,(6'
-dao com.example.optic.dao.RefereeDAO"__id*(
-&
-%0 com.example.optic.dao.RefereeDAOÔÑ
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java-$ -(,$
-%1com.example.optic.dao.EventDAO"com.example.optic.dao.EventDAO³
-°
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java-  -(1
-%2"Jcom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/RefereeDAO;)V*&
-$
-%1com.example.optic.dao.EventDAO*)
-'
-dao com.example.optic.dao.RefereeDAO*
-4*Ä
-6ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java, ,('®
-«
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java, ,(5&
-%0 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
- com.example.optic.dao.RefereeDAO*
-5*Ê
-7ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java* *(´
-±
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java* *( 
-listjava.util.List"__id*
-""*
-6*¶
-1ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java2 2("¥
-ˆ
-~C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java2 2(
+?com.example.optic.entities.Storico#getCampo()Ljava/lang/String;y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java ("1*è
+1y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (Ï
+Ì
+y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
+%0java.lang.String"__id*1*/$
+"com.example.optic.entities.Storico"
+campo"•
+y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Storico.java (
 
-listjava.util.ListB5"3
-1com.example.optic.app_controllers.RefReportPlayer
+%0java.lang.StringB&$
+"com.example.optic.entities.Storico

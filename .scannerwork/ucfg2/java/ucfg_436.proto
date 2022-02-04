@@ -1,17 +1,48 @@
 
-?com.example.optic.bean.UserBean#getPassword()Ljava/lang/String;v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java ("1*ß
-1v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (Ì
-É
+Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javam m('"3*ü
+2v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javao o(&ÃÀ
 v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (
-%0java.lang.String"__id*1*/!
-com.example.optic.bean.UserBean"
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javao o($%
+%1com.example.optic.dao.PlayerDAO"com.example.optic.dao.PlayerDAOÕ
+Ò
+v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javao o(&
+%2")com.example.optic.dao.PlayerDAO#<init>()V*'
+%
+%1com.example.optic.dao.PlayerDAOÛ
+Ø
+v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javao o(&/!
+com.example.optic.dao.PlayerDAO"
 
-password"’
+instance"__id*'
+%
+%1com.example.optic.dao.PlayerDAO*
+1*á
+3v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javan n(Û
+Ø
 v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java (
-
-%0java.lang.StringB#!
-com.example.optic.bean.UserBean
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javan n(%
+%0com.example.optic.dao.PlayerDAO"__id*1*/!
+com.example.optic.dao.PlayerDAO"
+
+instance*
+2
+1*ý
+1v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaq q(Û
+Ø
+v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaq q(%
+%3com.example.optic.dao.PlayerDAO"__id*1*/!
+com.example.optic.dao.PlayerDAO"
+
+instance"¡
+v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javaq q('
+%
+%3com.example.optic.dao.PlayerDAOB#"!
+com.example.optic.dao.PlayerDAO

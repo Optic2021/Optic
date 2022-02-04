@@ -1,16 +1,16 @@
 
-Ecom.example.optic.dao.RefereeDAO#getConnection()Ljava/sql/Connection;y
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java‘ ‘(#"1*ë
-1y
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java’ ’(Ï
-Ì
-y
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java’ ’(
-%0java.sql.Connection"__id*.*,"
- com.example.optic.dao.RefereeDAO"
-conn"˜
-y
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java’ ’(
-
-%0java.sql.ConnectionB$"
- com.example.optic.dao.RefereeDAO
+Ccom.example.optic.bean.AdminBean#getDescrizione()Ljava/lang/String;w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java7 7( "1*æ
+1w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(Ñ
+Î
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(
+%0java.lang.String"__id*5*3"
+ com.example.optic.bean.AdminBean"
+descrizione"“
+w
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java8 8(
+
+%0java.lang.StringB$"
+ com.example.optic.bean.AdminBean

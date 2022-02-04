@@ -1,16 +1,40 @@
 
-:com.example.optic.entities.Admin#getFb()Ljava/lang/String;w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaE E("1*Ý
-1w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaF F(È
-Å
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaF F(
-%0java.lang.String"__id*,**"
- com.example.optic.entities.Admin"
-fb"“
-w
-mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Admin.javaF F(
+lcom.example.optic.app_controllers.UserProfileAppController#getReportList(Ljava/lang/String;)Ljava/util/List;’
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaW# W(0"1*þ
+1’
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaX X(¾
+»
+’
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaX X(
+listjava.util.List"__id*
+""´
+±
+’
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaY Y(/%
+%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
+com.example.optic.dao.PlayerDAOï
+ì
+’
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaY Y(0&
+daocom.example.optic.dao.PlayerDAO"__id*'
+%
+%0com.example.optic.dao.PlayerDAOöó
+’
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaZ Z(,
+%1java.util.List"Wcom.example.optic.dao.PlayerDAO#getPlayerReportList(Ljava/lang/String;)Ljava/util/List;*(
+&
+daocom.example.optic.dao.PlayerDAO*
+
+userjava.lang.String2'getPlayerReportList(Ljava/lang/String;)Î
+Ë
+’
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaZ Z(,
+listjava.util.List"__id*
+
+%1java.util.List"¯
+’
+‡C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java[ [(
 
-%0java.lang.StringB$"
- com.example.optic.entities.Admin
+listjava.util.List:
+userjava.lang.StringB>"<
+:com.example.optic.app_controllers.UserProfileAppController

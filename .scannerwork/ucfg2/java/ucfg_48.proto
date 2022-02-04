@@ -1,17 +1,393 @@
 
-Hcom.example.optic.bean.ValutazioneBean#getRecensione()Ljava/lang/String;}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ValutazioneBean.java ("1*˝
-1}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ValutazioneBean.java (‹
-Ÿ
+[com.example.optic.dao.ValutazioneDAO#saveReview(Lcom/example/optic/bean/ValutazioneBean;I)V{
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.java~ ~("37*¬
+24}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaè è(5∂≥
 }
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ValutazioneBean.java (
-%0java.lang.String"__id*:*8(
-&com.example.optic.bean.ValutazioneBean"
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaè è(5
+%16void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
+
+%15java.lang.String2setString(ILjava/lang/String;)*
+23*ç
+25~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaé é(Ö÷
+”
+~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaé é(Ö&
+prepStmtjava.sql.PreparedStatement"__id*#
+!
+%14java.sql.PreparedStatementß§
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaè! è(4
+%15java.lang.String"Hcom.example.optic.bean.ValutazioneBean#getRecensione()Ljava/lang/String;*/
+-
+val&com.example.optic.bean.ValutazioneBean2getRecensione()*
+24*«
+26}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaéB é(Fú
+ô
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaéH é(i
 
-recensione"ô
+%12int"__id*
+""ù
+ö
+~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaéj é(Ñ
+
+%13int"__id*
+""¸˘
+~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaé é(Ö!
+%14java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
+
+%11java.sql.Connection*
+
+sql1java.lang.String*
+
+
+%12int*
+
+
+%13int2&prepareStatement(Ljava/lang/String;II)*
+25*í
+27}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaé é(‰
+·
 }
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/ValutazioneBean.java (
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaé é( &
+%10com.example.optic.dao.PlayerDAO"__id*2*0&
+$com.example.optic.dao.ValutazioneDAO"
+daoPüú
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaé é(0
+%11java.sql.Connection"Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;*(
+&
+%10com.example.optic.dao.PlayerDAO2getConnection()*
+26*ç
+28}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaå å(rÅ
+˛
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaå å(r
+sql1java.lang.String"__id*][
+YINSERT into valutazione (Descrizione,Stelle,fk_UsernameP1,fk_UsernameP2) values (?,?,?,?)*
+27*å
+29}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaä ä(qÄ
+˝
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaä ä(q
+sql1java.lang.String"__id*\Z
+XINSERT into valutazione (Descrizione,Stelle,fk_UsernameP1,fk_UsernameA) values (?,?,?,?)*
+27*¢
+30}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaá á(-ø
+º
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaá á(-
+rs2java.sql.ResultSet"__id*
+
+%8java.sql.ResultSet‘—
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaà à(
+%9boolean"java.sql.ResultSet#first()Z*
+
+rs2java.sql.ResultSet2first()*
+29*°
+31}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaá á(ïí
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaá á(-
+%8java.sql.ResultSet"=java.sql.PreparedStatement#executeQuery()Ljava/sql/ResultSet;*(
+&
+prepStmtjava.sql.PreparedStatement2executeQuery()*
+30*¿
+32}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÜ Ü(6¥±
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÜ Ü(6
+
+%7void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
 
-%0java.lang.StringB*(
-&com.example.optic.bean.ValutazioneBean
+%6java.lang.String2setString(ILjava/lang/String;)*
+31*Ç
+10}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaõ õ(K’
+“
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaõ õ(K&
+prepStmtjava.sql.PreparedStatement"__id*#
+!
+%29java.sql.PreparedStatementüú
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaú& ú(5
+%30java.lang.String"Dcom.example.optic.bean.ValutazioneBean#getRiceve()Ljava/lang/String;*/
+-
+val&com.example.optic.bean.ValutazioneBean2getRiceve()*
+9*É
+33~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÖ Ö(â’
+“
+~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÖ Ö(â&
+prepStmtjava.sql.PreparedStatement"__id*"
+ 
+%5java.sql.PreparedStatementûõ
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÜ& Ü(5
+%6java.lang.String"Dcom.example.optic.bean.ValutazioneBean#getRiceve()Ljava/lang/String;*/
+-
+val&com.example.optic.bean.ValutazioneBean2getRiceve()*
+32*Á
+11}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaõF õ(J€ÿ
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaõ õ(K!
+%29java.sql.PreparedStatement"Tjava.sql.Connection#prepareStatement(Ljava/lang/String;)Ljava/sql/PreparedStatement;*
+
+%28java.sql.Connection*
+
+sql3java.lang.String2$prepareStatement(Ljava/lang/String;)*
+10*¿
+34}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÖF Ö(Iõ
+ò
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÖK Ö(l	
+%3int"__id*
+""ú
+ô
+~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÖn Ö(à	
+%4int"__id*
+""˜Ù
+~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÖ Ö(â 
+%5java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
+
+%2java.sql.Connection*
+
+sqljava.lang.String*
+	
+%3int*
+	
+%4int2&prepareStatement(Ljava/lang/String;II)*
+33*∂
+12~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaö ö(ó†
+ù
+~
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaö ö(ò
+sql3java.lang.String"__id*{y
+wupdate player set Valutazione = (select avg(stelle) as val from valutazione where fk_UsernameP2 = ?) where Username = ?‰
+·
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaõ õ($&
+%27com.example.optic.dao.PlayerDAO"__id*2*0&
+$com.example.optic.dao.ValutazioneDAO"
+daoPüú
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaõ õ(4
+%28java.sql.Connection"Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;*(
+&
+%27com.example.optic.dao.PlayerDAO2getConnection()*
+11*Æ
+35}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÑ Ñ(+ﬁ
+€
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÑ Ñ(+
+%0java.lang.String"__id*<*:&
+$com.example.optic.dao.ValutazioneDAO"
+selectUsernameª
+∏
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÑ Ñ(,
+sqljava.lang.String"__id*
+
+%0java.lang.String„
+‡
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÖ Ö($%
+%1com.example.optic.dao.PlayerDAO"__id*2*0&
+$com.example.optic.dao.ValutazioneDAO"
+daoPùö
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÖ Ö(4
+%2java.sql.Connection"Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;*'
+%
+%1com.example.optic.dao.PlayerDAO2getConnection()*
+34*à
+14}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaò ò(ˆÛ
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaò ò($
+
+%26int"+java.sql.PreparedStatement#executeUpdate()I*(
+&
+prepStmtjava.sql.PreparedStatement2executeUpdate()*
+
+2
+0
+12*ü
+37{
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.java% ()∂
+≥
+{
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.java (*&
+prepStmtjava.sql.PreparedStatement"__id*
+""´
+®
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÄ Ä(
+rs2java.sql.ResultSet"__id*
+""™
+ß
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaÅ Å(
+sql1java.lang.String"__id*
+""*
+35
+28*¬
+15}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javañ ñ(6∂≥
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javañ ñ(6
+%25void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
+
+%24java.lang.String2setString(ILjava/lang/String;)*
+14*´
+16}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javañ ñ(üú
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javañ& ñ(5
+%24java.lang.String"Dcom.example.optic.bean.ValutazioneBean#getRiceve()Ljava/lang/String;*/
+-
+val&com.example.optic.bean.ValutazioneBean2getRiceve()*
+15*¬
+17}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaî î(?∂≥
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaî î(?
+%23void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
+
+%22java.lang.String2setString(ILjava/lang/String;)*
+14*ü
+18}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaî î(⁄
+◊
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaî4 î(=
+%21java.lang.String"__id*7*5&
+$com.example.optic.dao.ValutazioneDAO"
+	userField∂≥
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaî& î(>
+%22java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
+
+rs2java.sql.ResultSet*
+
+%21java.lang.String2getString(Ljava/lang/String;)*
+17*ú
+0 "î
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.java™ ™(
+implicit return*È
+2}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.java• •(ﬂ‹
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.java• •($
+%36void"java.sql.Statement#close()V*(
+&
+prepStmtjava.sql.PreparedStatement2close()*
+0*É
+6}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaû û(ˆÛ
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaû û((
+
+%34int"+java.sql.PreparedStatement#executeUpdate()I*(
+&
+prepStmtjava.sql.PreparedStatement2executeUpdate()*
+2
+0*¿
+7}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaù ù(6∂≥
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaù ù(6
+%33void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
+
+%32java.lang.String2setString(ILjava/lang/String;)*
+6*©
+8}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaù ù(üú
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaù& ù(5
+%32java.lang.String"Dcom.example.optic.bean.ValutazioneBean#getRiceve()Ljava/lang/String;*/
+-
+val&com.example.optic.bean.ValutazioneBean2getRiceve()*
+7*¿
+9}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaú ú(6∂≥
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaú ú(6
+%31void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
+
+%30java.lang.String2setString(ILjava/lang/String;)*
+8*∆
+20}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaë ë(5∂≥
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaë ë(5
+%20void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
+
+%19java.lang.String2setString(ILjava/lang/String;)*
+16
+18*≥
+21}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaë ë(ß§
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaë! ë(4
+%19java.lang.String"Hcom.example.optic.bean.ValutazioneBean#getUsernameP1()Ljava/lang/String;*/
+-
+val&com.example.optic.bean.ValutazioneBean2getUsernameP1()*
+20*ç
+22}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaê ê(.Å˛
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaê ê(.
+%18void"&java.sql.PreparedStatement#setInt(II)V*(
+&
+prepStmtjava.sql.PreparedStatement*2*
+
+
+%17int2
+setInt(II)*
+21*ç
+23}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaê ê(Å˛
+}
+qC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/ValutazioneDAO.javaê ê(-
+
+%17int"3com.example.optic.bean.ValutazioneBean#getStelle()I*/
+-
+val&com.example.optic.bean.ValutazioneBean2getStelle()*
+22:-
+val&com.example.optic.bean.ValutazioneBean:
+""B(&
+$com.example.optic.dao.ValutazioneDAO

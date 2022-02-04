@@ -14,14 +14,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.Locale;
 
-public class PlayerProfileCLI extends BaseCommandCLI{
+public class PlayerProfileCLI {
     private static PlayerBean utente=new PlayerBean();
+
+    private PlayerProfileCLI(){/*does np*/}
 
     public static boolean back(String command) {
         boolean flag=false;
-        if (command.equals("Back") || command.equals("back") || command.equals("Indietro") || command.equals("indietro")) {
-            PlayerHomeCLI.main(utente.getBUsername());
+        if (command.equalsIgnoreCase("back") || command.equalsIgnoreCase("indietro")) {
             flag=true;
         }
         return flag;
@@ -36,7 +38,7 @@ public class PlayerProfileCLI extends BaseCommandCLI{
         utente.setBDescrizione(player.getDescrizione());
         int command;
         do {
-            System.out.println("Exit|Esci-------Home-------Back|Indietro");
+            System.out.println("Exit-------Home-------Back");
             System.out.println("User: " + user + "\nDescription :" + utente.getBDescrizione());
             System.out.println("Modifica--------------------------------");
             System.out.println("1 Facebook------------------------------");
@@ -55,10 +57,11 @@ public class PlayerProfileCLI extends BaseCommandCLI{
             //controllo se l'input è numero
             if (!res) {
                 if (BaseCommandCLI.exit(input)) {
+                    return;
                 } else if (back(input)) {
-
+                    return;
                 }else if(input.equals("Modifica")){
-                    System.out.println("1)Descrizione | 2)Profilo Facebook | 3)Profilo Instagram");
+                    System.out.println("1)Descrizione \n2)Profilo Facebook \n3)Profilo Instagram");
                     try {
                         input = bufferReader.readLine();
                     } catch (IOException e) {

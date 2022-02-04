@@ -13,3 +13,32 @@ aggiungi giornata //finire
 
 GENERICO
 Cancellare giornate?
+
+/*public static boolean isDMYValid(int dmy, int i,int febbraio){
+        boolean flag= true;
+        switch (i){
+            case 1://giorno
+                if(dmy<1){
+                    flag=false;
+                }
+                if(febbraio==2){
+                    if (dmy>28){
+                        flag=false;
+                    }
+                }else if (dmy>31){
+                    flag=false;
+                }
+            break;
+            case 2://mese
+                if (dmy<0 || dmy>12){
+                    flag=false;
+                }
+            break;
+            case 3://anno
+                if (dmy<2022 && dmy>2100){
+                    flag=false;
+                }
+            break;
+        }
+        return flag;
+    }*/

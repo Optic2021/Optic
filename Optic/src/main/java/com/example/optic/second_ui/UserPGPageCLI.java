@@ -17,8 +17,8 @@ import java.time.Instant;
 import java.util.List;
 
 public class UserPGPageCLI {
-
-    private static String err = "Comando non valido!";
+    private UserPGPageCLI(){/*does np*/}
+    private static String err = "ATTENZIONE : Comando non valido!";
     public static void main(String user,String nomeC){
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input;
@@ -56,7 +56,7 @@ public class UserPGPageCLI {
                 }
                 case 3 -> review(user,a);
                 case 4 -> showReviews(user,a);
-                case 5 -> PlayerHomeCLI.main(user);
+                case 5 -> {}
                 default -> showInfo(user,a);
             }
         }catch (IOException e){
@@ -97,7 +97,8 @@ public class UserPGPageCLI {
             do {
                 do {
                     System.out.println("Data: "+play.getDataString()+"\nAttività: "+play.getFkNome());
-                    System.out.println("1)Prenota | 2)Vedi Giocatori | 3)Giornata precedente | 4)Prossima Giornata | 5)Indietro");
+                    System.out.println("1)Prenota \n2)Vedi Giocatori \n5)Indietro");
+                    System.out.println("3)Precedente-----------------Successiva(4");
                     System.out.println("Inserire un comando valido");
                     input = br.readLine();
                     //controllo se l'input è corretto
@@ -133,7 +134,6 @@ public class UserPGPageCLI {
                         }
                     }
                     default -> {
-                        System.out.println("Indietro");
                         return;
                     }
                 }
@@ -178,14 +178,14 @@ public class UserPGPageCLI {
                     res2 = isPlayerValid(input,num);
                 }while(!res || !res2);
                 command = Integer.parseInt(input);
-                if(command == 0){
-                    return;
-                }else if (list.get(command-1).getUsername().equals(user)) {
-                    PlayerProfileCLI.main(user);
-                }else{
-                    PlayerProfileViewCLI.main(list.get(command - 1).getUsername(),user);
+                if(command != 0) {
+                    if (list.get(command - 1).getUsername().equals(user)) {
+                        PlayerProfileCLI.main(user);
+                    } else {
+                        PlayerProfileViewCLI.main(list.get(command - 1).getUsername(), user);
+                    }
                 }
-            }catch (IOException e){
+                }catch (IOException e){
                 e.printStackTrace();
             }
         }

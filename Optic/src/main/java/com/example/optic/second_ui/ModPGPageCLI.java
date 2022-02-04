@@ -14,7 +14,9 @@ import java.io.InputStreamReader;
 import java.util.Calendar;
 import java.util.List;
 
-public class ModPGPageCLI extends BaseCommandCLI {
+public class ModPGPageCLI {
+
+    private ModPGPageCLI(){/*does np*/}
 
     public static void main(String user) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,7 +34,7 @@ public class ModPGPageCLI extends BaseCommandCLI {
                     res = ImportCheckInput.checkInput(input);
                     //controllo se l'input è corretto
                     if (!res) {
-                        if (!exit(input)){
+                        if (!BaseCommandCLI.exit(input)){
                             System.out.println("ATTENZIONE: Comando non valido!");
                         }
                     } else {
@@ -89,8 +91,10 @@ public class ModPGPageCLI extends BaseCommandCLI {
                 stelleTot += list.get(i).getStelle();
                 val++;
             }
-            media = stelleTot / val;
-            System.out.println("Media stelle: " + media);
+            if (val!=0) {
+                media = stelleTot / val;
+                System.out.println("Media stelle: " + media);
+            }
         } else {
             System.out.println("ATTENZIONE: Il campo non ha recensioni.");
         }
@@ -193,17 +197,12 @@ public class ModPGPageCLI extends BaseCommandCLI {
             return;
         }
         int inp=Integer.parseInt(input2);
+        //cancellare
         if (inp == 1) {
             if (ref != null) {
                 UserBean u = new UserBean();
                 u.setUsername(ref.getUsername());
-                Referee ref2 = ModPGPageAppController.getReferee(u);
-                if (ref2 == null) {
-                    System.out.println("ATTENZIONE: Impossibile scollegare un arbitro inesistente!");
-                } else {
-                    System.out.println("Arbitro scollegato correttamente.");
-                    ModPGPageAppController.freeReferee(u);
-                }
+                freeReferee(u);
             } else {
                 System.out.println("ATTENZIONE: Nessuno arbitro collegato!");
             }
@@ -228,6 +227,16 @@ public class ModPGPageCLI extends BaseCommandCLI {
                 System.out.println("Arbitro correttamente collegato.");
                 ModPGPageAppController.setReferee(adminBean, refBean);
             }
+        }
+    }
+
+    public static void freeReferee(UserBean u){
+        Referee ref2 = ModPGPageAppController.getReferee(u);
+        if (ref2 == null) {
+            System.out.println("ATTENZIONE: Impossibile scollegare un arbitro inesistente!");
+        } else {
+            System.out.println("Arbitro scollegato correttamente.");
+            ModPGPageAppController.freeReferee(u);
         }
     }
 
@@ -334,7 +343,6 @@ public class ModPGPageCLI extends BaseCommandCLI {
         int inp;
         Boolean flag;
         Calendar data=Calendar.getInstance();
-        //
         String inputt = null;
         BufferedReader brt = new BufferedReader(new InputStreamReader(System.in));
         GiornataBean bean = new GiornataBean();
@@ -352,9 +360,9 @@ public class ModPGPageCLI extends BaseCommandCLI {
             }
             if (ImportCheckInput.isNumber(input1)) {
                 ymd[i]=Integer.parseInt(input1);
-            }else /*if(!isDMYValid(ymd[i],i,ymd[2]))*/{
+            }else{
                 System.out.println("ATTENZIONE: 1"+cosa[i]+" non valido");
-                i--;
+                return;
             }
         }
         //Manca il controllo sulla validita
@@ -386,32 +394,5 @@ public class ModPGPageCLI extends BaseCommandCLI {
     }
 
     //CONTROLLARE IL FORMATO DELLA DATA
-    /*public static boolean isDMYValid(int dmy, int i,int febbraio){
-        boolean flag= true;
-        switch (i){
-            case 1://giorno
-                if(dmy<1){
-                    flag=false;
-                }
-                if(febbraio==2){
-                    if (dmy>28){
-                        flag=false;
-                    }
-                }else if (dmy>31){
-                    flag=false;
-                }
-            break;
-            case 2://mese
-                if (dmy<0 || dmy>12){
-                    flag=false;
-                }
-            break;
-            case 3://anno
-                if (dmy<2022 && dmy>2100){
-                    flag=false;
-                }
-            break;
-        }
-        return flag;
-    }*/
+
 }

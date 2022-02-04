@@ -1,37 +1,16 @@
 
-Kcom.example.optic.entities.Valutazione#getFormattedText()Ljava/lang/String;}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaC C(""1*…	
-1}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(Þ
-Û
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D( 
-%0java.lang.String"__id*<*:(
-&com.example.optic.entities.Valutazione"
-fkUsernameP1È
+;com.example.optic.bean.UserBean#getProv()Ljava/lang/String;v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java. .("1*Û
+1v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java/ /(È
 Å
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D('
-%1java.lang.String"__concat*
+v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java/ /(
+%0java.lang.String"__id*-*+!
+com.example.optic.bean.UserBean"
+prov"’
+v
+lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/UserBean.java/ /(
 
-%0java.lang.String*
- :\nÝ
-Ú
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD( D(3
-%2java.lang.String"__id*;*9(
-&com.example.optic.entities.Valutazione"
-descrizioneØ
-Õ
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(3
-%3java.lang.String"__concat*
-
-%1java.lang.String*
-
-%2java.lang.String"™
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.javaD D(4
-
-%3java.lang.StringB*(
-&com.example.optic.entities.Valutazione
+%0java.lang.StringB#!
+com.example.optic.bean.UserBean

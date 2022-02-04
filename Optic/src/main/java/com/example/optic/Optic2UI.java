@@ -9,15 +9,14 @@ import com.example.optic.utilities.ImportCheckInput;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+public class Optic2UI {
 
-public class Optic2UI extends BaseCommandCLI {
+    private Optic2UI(){/*does np*/}
 
     public static void main2(){
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String input;
-            String user = null;
-            String password = null;
             int type = 0;
             boolean typeRes;
             boolean res = false;
@@ -28,12 +27,9 @@ public class Optic2UI extends BaseCommandCLI {
                     //controllo se l'input è corretto
                     if (!typeRes) {
                         System.out.println("Tipo di user non valido!");
-                    } else {
-                        type = Integer.parseInt(input);
-                        if (type == 5) {
-                            System.exit(0);
-                        }
+                        return;
                     }
+                    type = Integer.parseInt(input);
                     String []uspass=new String[2];
                     switch (type) {
                         case 2 -> {
@@ -61,16 +57,17 @@ public class Optic2UI extends BaseCommandCLI {
                             p.setBPassword(uspass[1]);
                             res = LoginController.playerLogin(p);
                         }
-                        default -> /*doesnp*/{
+                        default -> {
+                            System.exit(0);
                         }
                     }
                     if (!res) {
-                        System.out.println("Credenziali errate! ");
+                        System.out.println("ATTENZIONE : Valori inseriti non validi");
                     }else {
                         switch (type) {
-                            case 1 -> PlayerHomeCLI.main(user);
-                            case 2 -> ModPGPageCLI.main(user);
-                            case 3 -> RefereeReportCLI.main(user);
+                            case 1 -> PlayerHomeCLI.main(uspass[0]);
+                            case 2 -> ModPGPageCLI.main(uspass[0]);
+                            case 3 -> RefereeReportCLI.main(uspass[0]);
                             default -> System.exit(0);
                         }
                     }

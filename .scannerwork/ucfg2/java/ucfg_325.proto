@@ -1,441 +1,16 @@
 
-ˆcom.example.optic.dao.GiornataDAO#getPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)Lcom/example/optic/entities/Giornata;x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java% %("36*â
-24y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/ /(‰Ñ
-Î
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/ /(‰&
-prepStmtjava.sql.PreparedStatement"__id*#
-!
-%17java.sql.PreparedStatement*
-3
-22
-0
-1*²
-25x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/F /(I—
-”
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/K /(l
-
-%15int"__id*
-""˜
-•
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/n /(ˆ
-
-%16int"__id*
-""öó
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/ /(‰!
-%17java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
-
-%14java.sql.Connection*
-
-sqljava.lang.String*
-
-
-%15int*
-
-
-%16int2&prepareStatement(Ljava/lang/String;II)*
-24*ƒ
-26x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/ /(Ý
+Icom.example.optic.entities.Valutazione#getDescrizione()Ljava/lang/String;}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java ( "1*þ
+1}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (Ý
 Ú
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/ /($'
-%13 com.example.optic.dao.RefereeDAO"__id*/*-#
-!com.example.optic.dao.GiornataDAO"
-daoRœ™
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java/ /(4
-%14java.sql.Connection"Ecom.example.optic.dao.RefereeDAO#getConnection()Ljava/sql/Connection;*)
-'
-%13 com.example.optic.dao.RefereeDAO2getConnection()*
-25*ñ
-27x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java. .(Ý
-Ú
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java. .('
-%12 com.example.optic.dao.RefereeDAO"__id*/*-#
-!com.example.optic.dao.GiornataDAO"
-daoR*
-3
-26
-22
-0
-1*â
-28y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java- -(‰Ñ
-Î
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java- -(‰&
-prepStmtjava.sql.PreparedStatement"__id*#
-!
-%11java.sql.PreparedStatement*
-3
-22
-0
-1*¯
-29x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java-F -(I–
-“
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java-K -(l	
-%9int"__id*
-""˜
-•
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java-n -(ˆ
-
-%10int"__id*
-""ôñ
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java- -(‰!
-%11java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
-
-%8java.sql.Connection*
-
-sqljava.lang.String*
-	
-%9int*
-
-
-%10int2&prepareStatement(Ljava/lang/String;II)*
-28*ý
-30x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java- -(Û
-Ø
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java- -($%
-%7com.example.optic.dao.PlayerDAO"__id*/*-#
-!com.example.optic.dao.GiornataDAO"
-daoP˜•
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java- -(4
-%8java.sql.Connection"Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;*'
-%
-%7com.example.optic.dao.PlayerDAO2getConnection()*
-29*æ
-31x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java, ,(Û
-Ø
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java, ,(%
-%6com.example.optic.dao.PlayerDAO"__id*/*-#
-!com.example.optic.dao.GiornataDAO"
-daoP*
-27
-30*á
-32y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+ +(‰Ð
-Í
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+ +(‰&
-prepStmtjava.sql.PreparedStatement"__id*"
- 
-%5java.sql.PreparedStatement*
-3
-22
-0
-1*˜
-10x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java< <(<’
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java< <(<
-%31void"-java.util.Calendar#setTime(Ljava/util/Date;)V*$
-"
-dateCalendarjava.util.Calendar*
-
-%30java.sql.Date2setTime(Ljava/util/Date;)*
-9*¬
-33x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+F +(I–
-“
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+K +(l	
-%3int"__id*
-""—
-”
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+n +(ˆ	
-%4int"__id*
-""òï
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+ +(‰ 
-%5java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
-
-%2java.sql.Connection*
-
-sqljava.lang.String*
-	
-%3int*
-	
-%4int2&prepareStatement(Ljava/lang/String;II)*
-32*ã
-11x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java; ;(CÄ
-Á
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java; ;(C"
-dateCalendarjava.util.Calendar"__id*
-
-%29java.util.Calendar•’
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java<) <(;
-%30java.sql.Date"=java.sql.ResultSet#getDate(Ljava/lang/String;)Ljava/sql/Date;*
-
-rsjava.sql.ResultSet*
-Data2getDate(Ljava/lang/String;)*
-10*ú
-34x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+ +(Ú
-×
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+ +($$
-%1com.example.optic.dao.AdminDAO"__id*/*-#
-!com.example.optic.dao.GiornataDAO"
-daoA–“
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java+ +(4
-%2java.sql.Connection"Ccom.example.optic.dao.AdminDAO#getConnection()Ljava/sql/Connection;*&
-$
-%1com.example.optic.dao.AdminDAO2getConnection()*
-33*í
-12x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java: :(9æ
-ã
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java;, ;(B
-%29java.util.Calendar"4java.util.Calendar#getInstance()Ljava/util/Calendar;*"
-java.util.Calendar*
-11*å
-35x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java* *(Ú
-×
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java* *($
-%0com.example.optic.dao.AdminDAO"__id*/*-#
-!com.example.optic.dao.GiornataDAO"
-daoA*
-31
-34*ˆ
-13x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java:! :(#þ
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java:! :(8
-
-%28int".java.sql.ResultSet#getInt(Ljava/lang/String;)I*
-
-rsjava.sql.ResultSet*
-
-idGiornata2getInt(Ljava/lang/String;)*
-12*›
-36x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java&% &()³
-°
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java& &(*&
-prepStmtjava.sql.PreparedStatement"__id*
-""¸
-µ
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java' '(+
-play#com.example.optic.entities.Giornata"__id*
-""£
- 
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java( ((
-datajava.util.Date"__id*
-""*
-35*Ö
-14x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java8 8(ÏÌ
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java8 8(
-%27boolean"java.sql.ResultSet#first()Z*
-
-rsjava.sql.ResultSet2first()*
-13*œ
-16x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java6 6(7º
-·
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java6 6(7
-rsjava.sql.ResultSet"__id*
-
-%25java.sql.ResultSetÏÌ
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java7 7(
-%26boolean"java.sql.ResultSet#first()Z*
-
-rsjava.sql.ResultSet2first()*
-14
-3
-0
-1*˜
-17x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java6 6('‘Ž
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java6 6(6
-%25java.sql.ResultSet"=java.sql.PreparedStatement#executeQuery()Ljava/sql/ResultSet;*(
-&
-prepStmtjava.sql.PreparedStatement2executeQuery()*
-16*º
-18x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java5 5(³°
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java5 5(,
-%24void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
-&
-prepStmtjava.sql.PreparedStatement*2*
-
-adminjava.lang.String2setString(ILjava/lang/String;)*
-17*¸
-19x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java4 4(>±®
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java4 4(>
-%23void":java.sql.PreparedStatement#setString(ILjava/lang/String;)V*(
-&
-prepStmtjava.sql.PreparedStatement*2*
-
-%22java.lang.String2setString(ILjava/lang/String;)*
-18*—
-0 "
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaK K(
-implicit return*©
-1x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaJ J("©
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaJ J(-
-+
-play#com.example.optic.entities.Giornata*â
-3x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaH H(Ú×
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaH H( 
-%38void"java.sql.Statement#close()V*(
-&
-prepStmtjava.sql.PreparedStatement2close()*
-0
-1*¸
-6x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java? ?(QÞ
-Û
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java? ?(Q+
-play#com.example.optic.entities.Giornata"__id*,
-*
-%34#com.example.optic.entities.GiornataÌÉ
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaA A(
-%36void"java.sql.ResultSet#close()V*
-
-rsjava.sql.ResultSet2close()*	
-3
-0
-1*ð
-7x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java> >(<º
-·
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java> >(<
-eventojava.lang.String"__id*
-
-%33java.lang.StringÎË
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java? ?('*
-%34#com.example.optic.entities.Giornata"#com.example.optic.entities.GiornataÝ
-Ú
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java? ?(Q
-%35"Ucom.example.optic.entities.Giornata#<init>(ILjava/util/Calendar;ILjava/lang/String;)V*,
-*
-%34#com.example.optic.entities.Giornata*
-""*$
-"
-dateCalendarjava.util.Calendar*
-""*
-
-eventojava.lang.String*
-6*§
-8x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java= =(?¢Ÿ
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java>$ >(;
-%33java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
-
-rsjava.sql.ResultSet*	
-fk_Nome2getString(Ljava/lang/String;)*
-7*ˆ
-9x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java=% =('ƒ€
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java=% =(>
-
-%32int".java.sql.ResultSet#getInt(Ljava/lang/String;)I*
-
-rsjava.sql.ResultSet*
-NumGiocatori2getInt(Ljava/lang/String;)*
-8*ï
-20x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java3 3($´
-±
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java3 3($
-datajava.util.Date"__id*
-
-%21java.util.Date±®
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java4& 4(=
-%22java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*$
-"
-
-dateFormatjava.text.DateFormat*
+}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (
+%0java.lang.String"__id*;*9(
+&com.example.optic.entities.Valutazione"
+descrizione"™
+}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java (
 
-datajava.util.Date2format(Ljava/util/Date;)*
-19*À
-21x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java2 2(FÌ
-É
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java2 2(F"
-
-dateFormatjava.text.DateFormat"__id*#
-!
-%19java.text.SimpleDateFormatêç
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java3 3($
-%21java.util.Date",java.util.Calendar#getTime()Ljava/util/Date;*
-
-caljava.util.Calendar2	getTime()*
-20*•
-22x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java2= 2(DÐ
-Í
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java2= 2(D
-%18java.lang.String"__id*2*0#
-!com.example.optic.dao.GiornataDAO"	
-formato¼¹
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java2, 2(<!
-%19java.text.SimpleDateFormat"java.text.SimpleDateFormatü
-ù
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java2( 2(E
-%20"6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)V*#
-!
-%19java.text.SimpleDateFormat*
-
-%18java.lang.String*
-21:
-adminjava.lang.String:
-caljava.util.Calendar:
-sqljava.lang.StringB%#
-!com.example.optic.dao.GiornataDAO
+%0java.lang.StringB*(
+&com.example.optic.entities.Valutazione

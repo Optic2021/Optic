@@ -1,382 +1,17 @@
 
-=com.example.optic.dao.EventDAO#getEventList()Ljava/util/List;u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java" "(#"30*Ô
-24u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java. .(‘
+Dcom.example.optic.entities.Referee#getAdminCampo()Ljava/lang/String;y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java# #("1*Ì
+1y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java$ $(‘
 —
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java. .($$
-%9com.example.optic.dao.AdminDAO"__id*,** 
-com.example.optic.dao.EventDAO"
-daoAîë
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java. .(4
-%10java.sql.Connection"Ccom.example.optic.dao.AdminDAO#getConnection()Ljava/sql/Connection;*&
-$
-%9com.example.optic.dao.AdminDAO2getConnection()*
-23*‹
-25u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java- -(‘
-—
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java- -($
-%8com.example.optic.dao.AdminDAO"__id*,** 
-com.example.optic.dao.EventDAO"
-daoA*
-24
-21*€
-26v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java, ,(àÕ
- 
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java, ,(à&
-prepStmtjava.sql.PreparedStatement"__id*"
- 
-%7java.sql.PreparedStatement*
-3
-16
-0
-1*†
-27u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java,F ,(Iì
-ê
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java,K ,(l	
-%5int"__id*
-""î
-ë
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java,m ,(á	
-%6int"__id*
-""ÔÏ
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java, ,(à 
-%7java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
-
-%4java.sql.Connection*
-
-sqljava.lang.String*
-	
-%5int*
-	
-%6int2&prepareStatement(Ljava/lang/String;II)*
-26*Ò
-28u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java, ,(’
-“
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java, ,($%
-%3com.example.optic.dao.PlayerDAO"__id*,** 
-com.example.optic.dao.EventDAO"
-daoPïí
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java, ,(4
-%4java.sql.Connection"Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;*'
-%
-%3com.example.optic.dao.PlayerDAO2getConnection()*
-27*›
-29u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java+ +(’
-“
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java+ +(%
-%2com.example.optic.dao.PlayerDAO"__id*,** 
-com.example.optic.dao.EventDAO"
-daoP*
-25
-28*Ñ
-30u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java#  #(1™ß
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java#$ #(/
-%0java.util.ArrayList"java.util.ArrayListº
-π
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java#  #(1
-%1"java.util.ArrayList#<init>()V*
-
-%0java.util.ArrayList∫
-∑
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java# #(2
-listjava.util.ArrayList"__id*
-
-%0java.util.ArrayList≥
-∞
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java$ $(,
-sqljava.lang.String"__id*
-SELECT * FROM evento∞
-≠
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java% %(*&
-prepStmtjava.sql.PreparedStatement"__id*
-""§
-°
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java& &(
-eventojava.lang.String"__id*
-""¢
-ü
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java' '(
-descjava.lang.String"__id*
-""¢
-ü
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java( ((
-rsjava.sql.ResultSet"__id*
-""*
-29*º
-10u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java8 8(:µ
-≤
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java8 8(:
-descjava.lang.String"__id*
-
-%24java.lang.StringÅ˛
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java9' 9(A
+y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java$ $(
+%0java.lang.String"__id*6*4$
+"com.example.optic.entities.Referee"
 
-%25int".java.sql.ResultSet#getInt(Ljava/lang/String;)I*
-
-rsjava.sql.ResultSet*
-GiocatoriCons2getInt(Ljava/lang/String;)*
-9*·
-11u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java7 7(5∑
-¥
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java7 7(5
-eventojava.lang.String"__id*
-
-%23java.lang.String£†
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java8 8(:
-%24java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
-
-rsjava.sql.ResultSet*
-Descrizione2getString(Ljava/lang/String;)*
-10*†
-12u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java7! 7(#úô
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java7! 7(5
-%23java.lang.String"Bjava.sql.ResultSet#getString(Ljava/lang/String;)Ljava/lang/String;*
-
-rsjava.sql.ResultSet*
-Nome2getString(Ljava/lang/String;)*
-11*–
-13u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java5 5(Ã…
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java5 5(
-%22boolean"java.sql.ResultSet#first()Z*
-
-rsjava.sql.ResultSet2first()*
-12*ç
-15u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java3 3(,∑
-¥
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java3 3(,
-rsjava.sql.ResultSet"__id*
-
-%20java.sql.ResultSetÃ…
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java4 4(
-%21boolean"java.sql.ResultSet#first()Z*
-
-rsjava.sql.ResultSet2first()*
-13
-5*í
-16u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java3 3(éã
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java3 3(,
-%20java.sql.ResultSet"=java.sql.PreparedStatement#executeQuery()Ljava/sql/ResultSet;*(
-&
-prepStmtjava.sql.PreparedStatement2executeQuery()*
-15*‹
-18v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0 0(àŒ
-À
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0 0(à&
-prepStmtjava.sql.PreparedStatement"__id*#
-!
-%19java.sql.PreparedStatement*
-3
-16
-0
-1*¶
-19u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0F 0(Iî
-ë
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0K 0(l
-
-%17int"__id*
-""ï
-í
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0m 0(á
-
-%18int"__id*
-""Û
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0 0(à!
-%19java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
-
-%16java.sql.Connection*
-
-sqljava.lang.String*
-
-
-%17int*
-
-
-%18int2&prepareStatement(Ljava/lang/String;II)*
-18*î
-0 "å
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.javaE E(
-implicit return*ì
-1u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.javaD D("ñ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.javaD D(
-
-listjava.util.ArrayList*‹
-3u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.javaB B(◊‘
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.javaB B( 
-%31void"java.sql.Statement#close()V*(
-&
-prepStmtjava.sql.PreparedStatement2close()*
-0
-1*—
-5u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java> >(…∆
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java> >(
-%30void"java.sql.ResultSet#close()V*
-
-rsjava.sql.ResultSet2close()*	
-3
-0
-1*–
-7u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java< <( «
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java< <(&
-%29boolean"java.sql.ResultSet#next()Z*
-
-rsjava.sql.ResultSet2next()*
-5
-12*π
-8u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java: :(H“
-œ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java: :(H%
-e com.example.optic.entities.Event"__id*)
-'
-%26 com.example.optic.entities.Event‚
-ﬂ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java; ;(#
-%28boolean"
-__arrayAdd*
-
-listjava.util.ArrayList*: *'
-%
-e com.example.optic.entities.Event*
-7*â
-9u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java9 9(A≈¬
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java:& :(+'
-%26 com.example.optic.entities.Event" com.example.optic.entities.Eventø
-º
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java:" :(G
-%27"Ocom.example.optic.entities.Event#<init>(Ljava/lang/String;Ljava/lang/String;I)V*)
-'
-%26 com.example.optic.entities.Event*
-
-eventojava.lang.String*
-
-descjava.lang.String*
-""*
-8*˜
-20u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0 0(◊
-‘
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0 0($'
-%15 com.example.optic.dao.RefereeDAO"__id*,** 
-com.example.optic.dao.EventDAO"
-daoRôñ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java0 0(4
-%16java.sql.Connection"Ecom.example.optic.dao.RefereeDAO#getConnection()Ljava/sql/Connection;*)
-'
-%15 com.example.optic.dao.RefereeDAO2getConnection()*
-19*Ë
-21u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java/ /(◊
-‘
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java/ /('
-%14 com.example.optic.dao.RefereeDAO"__id*,** 
-com.example.optic.dao.EventDAO"
-daoR*
-3
-16
-20
-0
-1*‹
-22v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java. .(àŒ
-À
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java. .(à&
-prepStmtjava.sql.PreparedStatement"__id*#
-!
-%13java.sql.PreparedStatement*
-3
-16
-0
-1*¶
-23u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java.F .(Iî
-ë
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java.K .(l
-
-%11int"__id*
-""ï
-í
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java.m .(á
-
-%12int"__id*
-""Û
-v
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/EventDAO.java. .(à!
-%13java.sql.PreparedStatement"Vjava.sql.Connection#prepareStatement(Ljava/lang/String;II)Ljava/sql/PreparedStatement;*
-
-%10java.sql.Connection*
-
-sqljava.lang.String*
-
-
-%11int*
-
-
-%12int2&prepareStatement(Ljava/lang/String;II)*
-22B" 
-com.example.optic.dao.EventDAO
+adminCampo"ï
+y
+oC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Referee.java$ $(
+
+%0java.lang.StringB&$
+"com.example.optic.entities.Referee

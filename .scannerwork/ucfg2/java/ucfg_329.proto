@@ -1,27 +1,16 @@
 
-zcom.example.optic.dao.GiornataDAO#getLastPlay(Ljava/lang/String;Ljava/util/Calendar;)Lcom/example/optic/entities/Giornata;x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.java` `("1*¯
-1y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaa a(ƒ
-Œ
-y
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javaa a(„
-sqljava.lang.String"__id*pn
-lSELECT * FROM giornata WHERE Data=(SELECT max(G.Data) FROM giornata G WHERE ?>G.Data AND G.fk_UsernameA2 =?)òï
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javab b(*)
-%0#com.example.optic.entities.Giornata"ˆcom.example.optic.dao.GiornataDAO#getPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)Lcom/example/optic/entities/Giornata;*%#
-!com.example.optic.dao.GiornataDAO*
-
-adminjava.lang.String*
-
-caljava.util.Calendar*
-
-sqljava.lang.String2AgetPlay(Ljava/lang/String;Ljava/util/Calendar;Ljava/lang/String;)"§
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/GiornataDAO.javab b(++
-)
-%0#com.example.optic.entities.Giornata:
-adminjava.lang.String:
-caljava.util.CalendarB%#
-!com.example.optic.dao.GiornataDAO
+Jcom.example.optic.entities.Valutazione#getFkUsernameP1()Ljava/lang/String;}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java+ +(!"1*ÿ
+1}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(Þ
+Û
+}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(
+%0java.lang.String"__id*<*:(
+&com.example.optic.entities.Valutazione"
+fkUsernameP1"™
+}
+sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Valutazione.java, ,(
+
+%0java.lang.StringB*(
+&com.example.optic.entities.Valutazione

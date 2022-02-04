@@ -1,17 +1,249 @@
 
-Icom.example.optic.entities.Prenotazione#getFkUsername()Ljava/lang/String;~
-tC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java ("1*Å
-1~
-tC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (ﬁ
-€
-~
-tC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (
-%0java.lang.String"__id*;*9)
-'com.example.optic.entities.Prenotazione"
-
-fkUsername"ö
-~
-tC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Prenotazione.java (
+çcom.example.optic.app_controllers.BookSessionAppController#getCampoInfo(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/bean/AdminBean;í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (("14*•
+13í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java! !(ÉÄ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java! !(#&
+%2 com.example.optic.entities.Admin"]com.example.optic.dao.AdminDAO#getCampo(Ljava/lang/String;)Lcom/example/optic/entities/Admin;*'
+%
+daocom.example.optic.dao.AdminDAO*
+
+nomeCjava.lang.String2getCampo(Ljava/lang/String;)*
+11*â
+2í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java7 7(°û
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java7 7(
+%25java.lang.String";com.example.optic.entities.Admin#getVia()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getVia()√¿
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java7 7( 
+%26void"<com.example.optic.bean.AdminBean#setVia(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%25java.lang.String2setVia(Ljava/lang/String;)≠™
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java8 8(+
+%27java.lang.String"Acom.example.optic.entities.Admin#getProvincia()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getProvincia()œÃ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java8 8(,
+%28void"Bcom.example.optic.bean.AdminBean#setProvincia(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%27java.lang.String2 setProvincia(Ljava/lang/String;)*
+1*Î
+14í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (Õ
+ 
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (%
+daocom.example.optic.dao.AdminDAO"__id*
+""∞
+≠
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ($$
+%0com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
+com.example.optic.dao.AdminDAOÌ
+Í
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java ($%
+daocom.example.optic.dao.AdminDAO"__id*&
+$
+%0com.example.optic.dao.AdminDAO∞≠
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (+
+%1java.lang.String"Acom.example.optic.bean.AdminBean#getNomeCampo()Ljava/lang/String;*+
+)
+campo com.example.optic.bean.AdminBean2getNomeCampo()”
+–
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (,
+nomeCjava.lang.String"__id*
 
-%0java.lang.StringB+)
-'com.example.optic.entities.Prenotazione
+%1java.lang.StringÕ
+ 
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java (%
+x com.example.optic.entities.Admin"__id*
+""*
+13*ü
+3í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java5 5(±Æ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java5 5(.
+%23java.lang.String"Bcom.example.optic.entities.Referee#getUsername()Ljava/lang/String;*+
+)
+ref"com.example.optic.entities.Referee2getUsername()À»
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java5 5(/
+%24void"@com.example.optic.bean.AdminBean#setReferee(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%23java.lang.String2setReferee(Ljava/lang/String;)*
+2*ô
+5í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java0 0(>ˆ
+Û
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java0 0(>)
+ref"com.example.optic.entities.Referee"__id*+
+)
+%21"com.example.optic.entities.Referee*
+2
+3*º
+7í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java0 0(>úô
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java0 0(>)
+%21"com.example.optic.entities.Referee"jcom.example.optic.dao.AdminDAO#getRefereeFromAdmin(Ljava/lang/String;)Lcom/example/optic/entities/Referee;*'
+%
+daocom.example.optic.dao.AdminDAO*
+
+%20java.lang.String2'getRefereeFromAdmin(Ljava/lang/String;)*
+5*À
+8í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java0 0(´®
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java0. 0(=
+%20java.lang.String"@com.example.optic.entities.Admin#getUsername()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getUsername()*
+7*›#
+9í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java( ((™ß
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java( (()
+%6java.lang.String"@com.example.optic.entities.Admin#getUsername()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getUsername()À»
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java( ((*
+
+%7void"Acom.example.optic.bean.AdminBean#setUsername(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%6java.lang.String2setUsername(Ljava/lang/String;)™ß
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java) )()
+%8java.lang.String"@com.example.optic.entities.Admin#getPassword()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getPassword()À»
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java) )(*
+
+%9void"Acom.example.optic.bean.AdminBean#setPassword(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%8java.lang.String2setPassword(Ljava/lang/String;)≥∞
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java* *(0
+%10java.lang.String"Dcom.example.optic.entities.Admin#getDescrizioneC()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getDescrizioneC()”–
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java* *(1
+%11void"Dcom.example.optic.bean.AdminBean#setDescrizione(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%10java.lang.String2"setDescrizione(Ljava/lang/String;)üú
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java+ +( 
+%12java.lang.String":com.example.optic.entities.Admin#getFb()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getFb()«ƒ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java+ +(!
+%13void">com.example.optic.bean.AdminBean#setFaceb(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%12java.lang.String2setFaceb(Ljava/lang/String;)üú
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java, ,( 
+%14java.lang.String":com.example.optic.entities.Admin#getIg()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getIg()«ƒ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java, ,(!
+%15void">com.example.optic.bean.AdminBean#setInsta(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%14java.lang.String2setInsta(Ljava/lang/String;)üú
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java- -( 
+%16java.lang.String":com.example.optic.entities.Admin#getWa()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2getWa()«ƒ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java- -(!
+%17void">com.example.optic.bean.AdminBean#setWhats(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%16java.lang.String2setWhats(Ljava/lang/String;)•¢
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java. .('
+%18java.lang.String"=com.example.optic.entities.Admin#getNomeC()Ljava/lang/String;*'
+%
+x com.example.optic.entities.Admin2
+getNomeC()œÃ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java. .((
+%19void"Bcom.example.optic.bean.AdminBean#setNomeCampo(Ljava/lang/String;)V*'
+%
+y com.example.optic.bean.AdminBean*
+
+%18java.lang.String2 setNomeCampo(Ljava/lang/String;)*
+8*√
+10í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java% %(%‚ﬂ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java% %(#&
+%4 com.example.optic.bean.AdminBean" com.example.optic.bean.AdminBeanÙ
+Ò
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java% %(%
+%5"*com.example.optic.bean.AdminBean#<init>()V*(
+&
+%4 com.example.optic.bean.AdminBeanÔ
+Ï
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java% %(&%
+y com.example.optic.bean.AdminBean"__id*(
+&
+%4 com.example.optic.bean.AdminBean—
+Œ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java& &()
+ref"com.example.optic.entities.Referee"__id*
+""*
+9
+1*ë
+11í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java! !(#Ô
+Ï
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java! !(#%
+x com.example.optic.entities.Admin"__id*(
+&
+%2 com.example.optic.entities.Admin*
+10*Ÿ
+1í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java: :("æ
+í
+áC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/BookSessionAppController.java: :('
+%
+y com.example.optic.bean.AdminBean:)
+campo com.example.optic.bean.AdminBeanB>"<
+:com.example.optic.app_controllers.BookSessionAppController

@@ -15,7 +15,7 @@ import java.util.List;
 
 public class UserProfileAppController {
 
-    public UserProfileAppController(){
+    private UserProfileAppController(){
         //does np
     }
 

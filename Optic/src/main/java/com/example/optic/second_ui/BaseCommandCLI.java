@@ -1,6 +1,8 @@
 package com.example.optic.second_ui;
 
-public abstract class BaseCommandCLI {
+public class BaseCommandCLI {
+
+    private BaseCommandCLI(){/*does np*/}
 
     public static boolean exit(String command){
         boolean flag=false;

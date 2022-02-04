@@ -1,79 +1,16 @@
 
-Wcom.example.optic.app_controllers.ModPGPageAppController#getEventList()Ljava/util/List;’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java› ›(*"7*î
-2’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java   (*Î
-Ë
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java   (*
-listjava.util.List"__id*
-
-%5java.util.List*
-1*À
-4’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaŸ Ÿ(2ò
-ï
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaŸ Ÿ(2*
-eventDaocom.example.optic.dao.EventDAO"__id*&
-$
-%3com.example.optic.dao.EventDAO«¨
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java   (*
-%5java.util.List"=com.example.optic.dao.EventDAO#getEventList()Ljava/util/List;*,
-*
-eventDaocom.example.optic.dao.EventDAO2getEventList()*
-2*ª
-5’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaž ž(2í
-ê
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaž ž(2%
-daocom.example.optic.dao.AdminDAO"__id*&
-$
-%2com.example.optic.dao.AdminDAOÞÛ
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaŸ$ Ÿ(,$
-%3com.example.optic.dao.EventDAO"com.example.optic.dao.EventDAO¹
-¶
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaŸ  Ÿ(1
-%4"Hcom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/AdminDAO;)V*&
-$
-%3com.example.optic.dao.EventDAO*'
-%
-daocom.example.optic.dao.AdminDAO*
-4*Ð
-6’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaž ž(#°
-­
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaž ž(1$
-%2com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
-com.example.optic.dao.AdminDAO*
-5*›
-7’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaœ œ(,ÈÅ
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaœ œ(*
-%0java.util.ArrayList"java.util.ArrayListÚ
-×
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaœ œ(,
-%1"java.util.ArrayList#<init>()V*
-
-%0java.util.ArrayListÓ
-Ð
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaœ œ(-
-listjava.util.List"__id*
-
-%0java.util.ArrayList*
-6*Ê
-1’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java¤ ¤("¯
-’
-…C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java¤ ¤(
+Acom.example.optic.entities.Giornata#getFkNome()Ljava/lang/String;z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java> >("1*í
+1z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java? ?(Ò
+Ï
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java? ?(
+%0java.lang.String"__id*3*1%
+#com.example.optic.entities.Giornata"
+fkNome"–
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java? ?(
 
-listjava.util.ListB<":
-8com.example.optic.app_controllers.ModPGPageAppController
+%0java.lang.StringB'%
+#com.example.optic.entities.Giornata

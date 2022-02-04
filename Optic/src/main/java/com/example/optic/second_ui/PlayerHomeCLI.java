@@ -1,9 +1,9 @@
 package com.example.optic.second_ui;
 
-import com.example.optic.Optic2UI;
 import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.entities.Admin;
 import com.example.optic.utilities.ImportCheckInput;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,36 +16,52 @@ public class PlayerHomeCLI {
     }
 
     public static void main(String user){
+
+        int command;
+        do {
+            command=acquisisci();
+            switch (command) {
+                case 2 -> {
+                    showPlaygroundList(user);
+                    System.out.println("SONO QUI");
+                }
+                case 3 -> {
+                    return;
+                }
+                default -> PlayerProfileCLI.main(user);
+            }
+        }while (true);
+    }
+    public static int acquisisci(){
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
-        int command = 1;
         String input;
-        try{
+        int command = 1;
+        try {
             do {
                 System.out.println("|Home|\n1)Profilo | 2)Lista Campi | 3)Logout");
-                input = br.readLine();
-                res = ImportCheckInput.isNumber(input);
+
+                    input = br.readLine();
+
+                    res = ImportCheckInput.isNumber(input);
+
                 //controllo se l'input è corretto
                 if (!res) {
-                    if(!BaseCommandCLI.exit(input)){
+                    if (!BaseCommandCLI.exit(input)) {
                         res = ImportCheckInput.checkInput(input);
-                        if(!res){
+                        if (!res) {
                             System.out.println("\nComando non valido!");
                         }
                     }
 
-                }else{
+                } else {
                     command = Integer.parseInt(input);
                 }
-            }while (!res);
-            switch (command) {
-                case 2 -> showPlaygroundList(user);
-                case 3 -> logout();
-                default -> PlayerProfileCLI.main(user);
-            }
-        }catch (IOException e){
+            } while (!res);
+        } catch (IOException e) {
             e.printStackTrace();
         }
+        return command;
     }
 
     private static void showPlaygroundList(String user) {
@@ -68,22 +84,15 @@ public class PlayerHomeCLI {
                     if (campo >= list.size()) {
                         res2 = false;
                     }
-                }
-                if (!res2) {
+                }else{
                     System.out.println("Comando non valido!");
                 }
             } while (!res2);
-            if(campo == -1){
-                PlayerHomeCLI.main(user);
-            }else {
+            if(campo != -1){
                 UserPGPageCLI.main(user, list.get(campo).getNomeC());
             }
         }catch (IOException e){
             e.printStackTrace();
         }
-    }
-
-    private static void logout() {
-        Optic2UI.main2();
     }
 }

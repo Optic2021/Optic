@@ -22,6 +22,8 @@ public class RefereeReportCLI {
     private static RefereeBean ref= new RefereeBean();
     private static GiornataBean play= new GiornataBean();
 
+    private RefereeReportCLI(){/*does np*/}
+
     public static void main(String user) {
         Giornata data;
         String input = null;
@@ -49,7 +51,6 @@ public class RefereeReportCLI {
         play.setIdPlay(data.getIdGiornata());
         play.setAdmin(ref.getFkUsernameA1());
 
-        //attivita=giornata.getFkNome();
         int j=0;
         int i=0;
         do {

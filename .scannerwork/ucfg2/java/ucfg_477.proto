@@ -1,504 +1,128 @@
 
-.com.example.optic.SecondUI.RegisterCLI#main()V}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java ("51*ý
-46}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java («
-¨
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (
-%9java.io.PrintStream"__id*
-""ÃÀ
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (l
-%10void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%9java.io.PrintStream*FD
-B|Registrazione|\n1)Player | 2)Admin | 3)Referee | 4)Login | 5)Esci2println(Ljava/lang/String;)*
-45*ˆ
-24}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java; ;(!üù
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java; ;(,
-%34java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
-
-brjava.io.BufferedReader2
-readLine()*
-23*Ì
-47}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (+À
-½
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (+
-passwordjava.lang.String"__id*
-
-%7java.lang.String*
-46*”
-25}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java9 9(-¾
-»
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java9 9(-
-nomeCjava.lang.String"__id*
-
-%31java.lang.String¬
-©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java: :("
-%32java.io.PrintStream"__id*
-""˜•
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java: :(D
-%33void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%32java.io.PrintStream*
-Inserisci Provincia : 2println(Ljava/lang/String;)*
-24*±
-48}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (+Ú
-×
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (+'
-beancom.example.optic.bean.UserBean"__id*'
-%
-%5com.example.optic.bean.UserBean«
-¨
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (
-inputjava.lang.String"__id*
-""ª
-§
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (
-userjava.lang.String"__id*
-""¬©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java" ((
-%7java.lang.String"java.lang.String¾
-»
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (*
-%8"java.lang.String#<init>()V*
-
-%7java.lang.String*
-47*ˆ
-26}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java9  9("üù
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java9  9(-
-%31java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
-
-brjava.io.BufferedReader2
-readLine()*
-25*þ
-49}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (UÆ
-Ã
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (U
-brjava.io.BufferedReader"__id*
-
-%3java.io.BufferedReaderÊÇ
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java  ((%
-%5com.example.optic.bean.UserBean"com.example.optic.bean.UserBeanÜ
-Ù
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (*
-%6")com.example.optic.bean.UserBean#<init>()V*'
-%
-%5com.example.optic.bean.UserBean*
-48*“
-27}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java7 7(+¼
-¹
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java7 7(+
-viajava.lang.String"__id*
-
-%28java.lang.String¬
-©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java8 8("
-%29java.io.PrintStream"__id*
-""™–
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java8 8(E
-%30void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%29java.io.PrintStream*
-Inserisci Nome Campo : 2println(Ljava/lang/String;)*
-26*ˆ
-28}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java7 7( üù
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java7 7(+
-%28java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
-
-brjava.io.BufferedReader2
-readLine()*
-27*Ô
-29}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java2 @(©
-¦
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java3 3(#
-viajava.lang.String"__id*
-""«
-¨
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java4 4(%
-nomeCjava.lang.String"__id*
-""ª
-§
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java5 5($
-provjava.lang.String"__id*
-""¬
-©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java6 6("
-%26java.io.PrintStream"__id*
-""’
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java6 6(>
-%27void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%26java.io.PrintStream*
-Inserisci Via : 2println(Ljava/lang/String;)*
-28*Ä
-50}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java  (T¸µ
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java$ (2
-%3java.io.BufferedReader"java.io.BufferedReaderý
-ú
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java  (T
-%4"0java.io.BufferedReader#<init>(Ljava/io/Reader;)V*
-
-%3java.io.BufferedReader*!
-
-%1java.io.InputStreamReader*
-49*ý
-51}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaI (O«
-¨
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaI (R
-%0java.io.InputStream"__id*
-""¾»
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java7 (H
-%1java.io.InputStreamReader"java.io.InputStreamReader‚
-ÿ
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java3 (S
-%2"8java.io.InputStreamReader#<init>(Ljava/io/InputStream;)V*!
-
-%1java.io.InputStreamReader*
-
-%0java.io.InputStream*
-50*Ñ
-30}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java/ /(½º
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java/ /(*
-%25void"@com.example.optic.bean.UserBean#setPassword(Ljava/lang/String;)V*)
-'
-beancom.example.optic.bean.UserBean*
-
-passwordjava.lang.String2setPassword(Ljava/lang/String;)*
-16
-18
-29*‰
-31}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java- -((Á
-¾
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java- -((
-passwordjava.lang.String"__id*
-
-%23java.lang.String¹¶
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java. .(&
-%24void"@com.example.optic.bean.UserBean#setUsername(Ljava/lang/String;)V*)
-'
-beancom.example.optic.bean.UserBean*
-
-userjava.lang.String2setUsername(Ljava/lang/String;)*
-30*ï
-10}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaN N(ä
-á
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaN N(7
-%43void"fcom.example.optic.app_controllers.RegisterController#userRegister(Lcom/example/optic/bean/UserBean;I)V*8"6
-4com.example.optic.app_controllers.RegisterController*)
-'
-beancom.example.optic.bean.UserBean*
-""*
-9*ˆ
-32}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java- -(üù
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java- -((
-%23java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
-
-brjava.io.BufferedReader2
-readLine()*
-31*’
-33}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java+ +($½
-º
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java+ +($
-userjava.lang.String"__id*
-
-%20java.lang.String¬
-©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java, ,(
-%21java.io.PrintStream"__id*
-""—”
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java, ,(;
-%22void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%21java.io.PrintStream*
-Inserisci Password : 2println(Ljava/lang/String;)*
-32*ˆ
-34}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java+ +(üù
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java+ +($
-%20java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
-
-brjava.io.BufferedReader2
-readLine()*
-33*Û
-12}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaK K(¬
-©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaK K(
-%41java.io.PrintStream"__id*
-""œ™
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaK K(C
-%42void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%41java.io.PrintStream*
-Username giÃ  in utilizzo!2println(Ljava/lang/String;)*
-46
-10*Ò
-35}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java* *(¬
-©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java* *(
-%18java.io.PrintStream"__id*
-""—”
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java* *(;
-%19void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%18java.io.PrintStream*
-Inserisci Username : 2println(Ljava/lang/String;)*
-34*Ô
-37}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java& &("Ä
-Á
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java& &(*
-%17void"java.lang.System#exit(I)V*"
-java.lang.System*2 *
-35
-46*û
-16}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaF H(ç
-ä
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaG G(G
-%40boolean"hcom.example.optic.app_controllers.RegisterController#isUsernameUsed(Lcom/example/optic/bean/UserBean;I)Z*8"6
-4com.example.optic.app_controllers.RegisterController*)
-'
-beancom.example.optic.bean.UserBean*2*
-46
-10
-12*è
-39}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java# #($Ô
-Ñ
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java# #(,
-%16void"#com.example.optic.Optic2UI#main2()V*"
-com.example.optic.Optic2UI*
-35
-46
-37*û
-18}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaB D(ç
-ä
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaC C(G
-%39boolean"hcom.example.optic.app_controllers.RegisterController#isUsernameUsed(Lcom/example/optic/bean/UserBean;I)Z*8"6
-4com.example.optic.app_controllers.RegisterController*)
-'
-beancom.example.optic.bean.UserBean*2*
-46
-10
-12*œ
-0 "”
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaX X(
-implicit return*§
-4}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaS S(4
-š
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaS S(3
-%48void"Bcom.example.optic.SecondUI.PlayerHomeCLI#main(Ljava/lang/String;)V*,"*
-(com.example.optic.SecondUI.PlayerHomeCLI*
-
-userjava.lang.String*
-0*­
-6}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaR R(7£
- 
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaR R(6
-%47void"Ecom.example.optic.SecondUI.RefereeReportCLI#main(Ljava/lang/String;)V*/"-
-+com.example.optic.SecondUI.RefereeReportCLI*
-
-userjava.lang.String*
-0*¥
-8}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaQ Q(2›
-˜
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaQ Q(1
-%46void"Acom.example.optic.SecondUI.ModPGPageCLI#main(Ljava/lang/String;)V*+")
-'com.example.optic.SecondUI.ModPGPageCLI*
-
-userjava.lang.String*
-0*å
-9}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaO O(¬
-©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaO O(
-%44java.io.PrintStream"__id*
-""¦£
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.javaO O(F
-%45void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%44java.io.PrintStream*(&
-$Registrazione avvenuta con successo.2println(Ljava/lang/String;)*	
-4
-6
-8*‹
-41}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java! !(&ó
-ð
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java! !(6
+hcom.example.optic.app_controllers.RegisterController#isUsernameUsed(Lcom/example/optic/bean/UserBean;I)ZŒ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (("4"6"8*±
+4Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java& .(²
+¯
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java' '(7&
+%6 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
+ com.example.optic.dao.RefereeDAOé
+æ
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java' '(8%
+r com.example.optic.dao.RefereeDAO"__id*(
+&
+%6 com.example.optic.dao.RefereeDAOÏ
+Ì
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java( ((!-
+referee"com.example.optic.entities.Referee"__id*
+""ÿü
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java) )(
 
-%15int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
-java.lang.Integer*
-
-inputjava.lang.String*
-35
-46
-37
-39*Ò
-42}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (¬
-©
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java ("
-%13java.io.PrintStream"__id*
-""“
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (?
-%14void"0java.io.PrintStream#println(Ljava/lang/String;)V*
-
-%13java.io.PrintStream*
-Input non valido!2println(Ljava/lang/String;)*
-35
-46*û
-20}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java? ?(0ç
-ä
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java? ?(G
-%38boolean"hcom.example.optic.app_controllers.RegisterController#isUsernameUsed(Lcom/example/optic/bean/UserBean;I)Z*8"6
-4com.example.optic.app_controllers.RegisterController*)
+%7void"+com.example.optic.dao.RefereeDAO#getConn()V*'
+%
+r com.example.optic.dao.RefereeDAO2	getConn()¥¢
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java*' *(9
+%8java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*)
 '
-beancom.example.optic.bean.UserBean*2*
-46
-10
-12*½
-21}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java> >(±®
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java> >(*
-%37void"<com.example.optic.bean.UserBean#setProv(Ljava/lang/String;)V*)
+usercom.example.optic.bean.UserBean2getUsername()„
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java* *(:(
+%9"com.example.optic.entities.Referee"ccom.example.optic.dao.RefereeDAO#getReferee(Ljava/lang/String;)Lcom/example/optic/entities/Referee;*'
+%
+r com.example.optic.dao.RefereeDAO*
+
+%8java.lang.String2getReferee(Ljava/lang/String;)ó
+ð
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java* *(:-
+referee"com.example.optic.entities.Referee"__id**
+(
+%9"com.example.optic.entities.Referee*
+1*
+6Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java %(ª
+§
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (3$
+%3com.example.optic.dao.AdminDAO"Lcom.example.optic.dao.AdminDAO#getInstance()Lcom/example/optic/dao/AdminDAO;*"" 
+com.example.optic.dao.AdminDAOå
+â
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (4#
+acom.example.optic.dao.AdminDAO"__id*&
+$
+%3com.example.optic.dao.AdminDAOË
+È
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java   ()
+admin com.example.optic.entities.Admin"__id*
+""¥¢
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java!# !(5
+%4java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*)
 '
-beancom.example.optic.bean.UserBean*
-
-provjava.lang.String2setProv(Ljava/lang/String;)*
-20*€
-44}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java ()¾
-»
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java ()
-inputjava.lang.String"__id*
-
-%11java.lang.String¯
-¬
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (@
-%12boolean"Lcom.example.optic.utilities.ImportCheckInput#checkInput(Ljava/lang/String;)Z*0".
-,com.example.optic.utilities.ImportCheckInput*
-
-inputjava.lang.String*
-41
-42*À
-22}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java= =(´±
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java= =(,
-%36void"=com.example.optic.bean.UserBean#setNomeC(Ljava/lang/String;)V*)
+usercom.example.optic.bean.UserBean2getUsername()øõ
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java! !(6&
+%5 com.example.optic.entities.Admin"]com.example.optic.dao.AdminDAO#getAdmin(Ljava/lang/String;)Lcom/example/optic/entities/Admin;*%
+#
+acom.example.optic.dao.AdminDAO*
+
+%4java.lang.String2getAdmin(Ljava/lang/String;)í
+ê
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java! !(6)
+admin com.example.optic.entities.Admin"__id*(
+&
+%5 com.example.optic.entities.Admin*
+1*ž
+8Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (®
+«
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (5%
+%0com.example.optic.dao.PlayerDAO"Ncom.example.optic.dao.PlayerDAO#getInstance()Lcom/example/optic/dao/PlayerDAO;*#"!
+com.example.optic.dao.PlayerDAOç
+ä
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (6$
+pcom.example.optic.dao.PlayerDAO"__id*'
+%
+%0com.example.optic.dao.PlayerDAOÍ
+Ê
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (+
+player!com.example.optic.entities.Player"__id*
+""¥¢
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java% (7
+%1java.lang.String"?com.example.optic.bean.UserBean#getUsername()Ljava/lang/String;*)
 '
-beancom.example.optic.bean.UserBean*
-
-nomeCjava.lang.String2setNomeC(Ljava/lang/String;)*
-21*ˆ
-45}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java (üù
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java ()
-%11java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
-
-brjava.io.BufferedReader2
-readLine()*
-44*ú
-23}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java; ;(,½
-º
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java; ;(,
-provjava.lang.String"__id*
-
-%34java.lang.String®«
-}
-sC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/SecondUI/RegisterCLI.java< <((
-%35void";com.example.optic.bean.UserBean#setVia(Ljava/lang/String;)V*)
+usercom.example.optic.bean.UserBean2getUsername()þû
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (8'
+%2!com.example.optic.entities.Player"`com.example.optic.dao.PlayerDAO#getPlayer(Ljava/lang/String;)Lcom/example/optic/entities/Player;*&
+$
+pcom.example.optic.dao.PlayerDAO*
+
+%1java.lang.String2getPlayer(Ljava/lang/String;)ð
+í
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java (8+
+player!com.example.optic.entities.Player"__id*)
 '
-beancom.example.optic.bean.UserBean*
-
-viajava.lang.String2setVia(Ljava/lang/String;)*
-22B*"(
-&com.example.optic.SecondUI.RegisterCLI
+%2!com.example.optic.entities.Player*
+1*¬
+1Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java0 0("—
+Œ
+C:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/app_controllers/RegisterController.java0 0(
+"":'
+usercom.example.optic.bean.UserBean:
+""B8"6
+4com.example.optic.app_controllers.RegisterController

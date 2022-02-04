@@ -11,6 +11,8 @@ import java.sql.SQLException;
 
 public class RegisterCLI {
 
+    private RegisterCLI(){/*does np*/}
+
     public static void main(){
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -58,7 +60,9 @@ public class RegisterCLI {
                         res = RegisterController.isUsernameUsed(bean,2);
                     }
                     //registrazione arbitro
-                    case 3 -> res = RegisterController.isUsernameUsed(bean,3);
+                    case 3 -> {
+                        res = RegisterController.isUsernameUsed(bean,3);
+                    }
                     case 4 -> Optic2UI.main2();
                     case 5 -> System.exit(0);
                     //registrazione player
