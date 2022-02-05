@@ -11,6 +11,9 @@ import com.example.optic.utilities.ImportUrl;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
@@ -341,7 +344,7 @@ public class ModPGPageCLI {
 
     public static void addGiornata(String user) {
         int inp;
-        Boolean flag;
+        Boolean flag,flag2=true;
         Calendar data=Calendar.getInstance();
         String inputt = null;
         BufferedReader brt = new BufferedReader(new InputStreamReader(System.in));
@@ -369,28 +372,43 @@ public class ModPGPageCLI {
         data.set(ymd[3],ymd[2],ymd[1]);
         bean.setData(data);
         bean.setAdmin(user);
-        ModPGPageAppController.isDateValid(bean);
-        System.out.println("Seleziona evento ");
-        List<Event> list = ModPGPageAppController.getEventList();
-        for(int i = 0;i<list.size();i++) {
-            System.out.println(i + ") " + list.get(i).getNome());
+
+        Calendar cal = Calendar.getInstance();
+        cal.setLenient(false);
+
+        try {
+            DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+            df.setLenient(false);
+            df.parse(Integer.toString(ymd[1])+"-"+Integer.toString(ymd[2])+"-"+Integer.toString(ymd[3]));
+        } catch (ParseException e) {
+            System.out.println("ATTENZIONE : Data non valida");
+            flag2=false;
         }
-        flag=false;
-        do {
-            try {
-                inputt = brt.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
+        if(flag2) {
+            System.out.println("Valida " + Integer.toString(ymd[1]) + "-" + Integer.toString(ymd[2]) + "-" + Integer.toString(ymd[3]));
+            ModPGPageAppController.isDateValid(bean);
+            System.out.println("Seleziona evento ");
+            List<Event> list = ModPGPageAppController.getEventList();
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println(i + ") " + list.get(i).getNome());
             }
-            if (ImportCheckInput.isNumber(inputt)) {
-                inp = Integer.parseInt(inputt);
-                bean.setEvento(list.get(inp).getNome());
-                flag=true;
-            }else if (inputt.equalsIgnoreCase("indietro")){
-                return;
-            }
-        }while(Boolean.FALSE.equals(flag));
-        ModPGPageAppController.insertPlay(bean);
+            flag = false;
+            do {
+                try {
+                    inputt = brt.readLine();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (ImportCheckInput.isNumber(inputt)) {
+                    inp = Integer.parseInt(inputt);
+                    bean.setEvento(list.get(inp).getNome());
+                    flag = true;
+                } else if (inputt.equalsIgnoreCase("indietro")) {
+                    return;
+                }
+            } while (Boolean.FALSE.equals(flag));
+            ModPGPageAppController.insertPlay(bean);
+        }
     }
 
     //CONTROLLARE IL FORMATO DELLA DATA
