@@ -1,154 +1,154 @@
 
-lcom.example.optic.utilities.ImportUrl#controlliUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java$ $(&"5"18"12"1*ƒ
-14|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java, ,(™
-ß
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java- -(
+lcom.example.optic.utilities.ImportUrl#controlliUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Zy
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java$ $(&"5"18"12"1*ª
+14y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java, ,(ß
+§
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java- -(
 %5java.io.PrintStream"__id*
-""çä
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java- -(8
+""äá
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java- -(8
 
 %6void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %5java.io.PrintStream*
 Url non valido2println(Ljava/lang/String;)*
-1*π
-15|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+7 +(B´®
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+7 +(g
+1*≥
+15y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+7 +(B®•
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+7 +(g
 %4boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*!
 
 urlFacebookjava.lang.String*
 https://www.facebook.com2"contains(Ljava/lang/CharSequence;)*
 14
-1*È
-16|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+ +(&€ÿ
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+ +(0
+1*„
+16y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+ +(&ÿ’
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java+ +(0
 %3boolean"java.lang.String#isEmpty()Z*!
 
 urlFacebookjava.lang.String2	isEmpty()*
 15
-1*∆
-17|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java) )(™
-ß
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java* *(
+1*Ω
+17y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java) )(ß
+§
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java* *(
 %1java.io.PrintStream"__id*
-""èå
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java* *(:
+""åâ
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java* *(:
 
 %2void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %1java.io.PrintStream*
 Url troppo lungo2println(Ljava/lang/String;)*
-1*‰
-18|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java' /(’“
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java( (('	
+1*ﬁ
+18y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java' /(“œ
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java( (('	
 %0int"java.lang.String#length()I*!
 
 urlFacebookjava.lang.String2length()*
 16
-17*ä
-1|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java@ @("Ü
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java@ @(
-""*…
-3|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java; ;(´
-®
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java< <(
+17*Ñ
+1y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java@ @("É
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java@ @(
+""*¿
+3y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java; ;(®
+•
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java< <(
 %16java.io.PrintStream"__id*
-""íè
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java< <(;
+""èå
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java< <(;
 %17void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %16java.io.PrintStream*
 Numero non valido2println(Ljava/lang/String;)*
-1*‚
-4|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java:G :(R÷”
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java:G :([
+1*‹
+4y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java:G :(R”–
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java:G :([
 
 %15int"java.lang.String#length()I*!
 
 numWhatsappjava.lang.String2length()*
 3
-1*Ë
-5|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java:- :(8‹Ÿ
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java:- :(B
+1*‚
+5y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java:- :(8Ÿ÷
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java:- :(B
 %14boolean"java.lang.String#isEmpty()Z*!
 
 numWhatsappjava.lang.String2	isEmpty()*
 4
-1*∆
-8|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java5 5(´
-®
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java6 6(
+1*Ω
+8y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java5 5(®
+•
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java6 6(
 %12java.io.PrintStream"__id*
-""èå
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java6 6(8
+""åâ
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java6 6(8
 %13void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %12java.io.PrintStream*
 Url non valido2println(Ljava/lang/String;)*
-1*∫
-9|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java48 4(DÆ´
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java48 4(j
+1*¥
+9y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java48 4(D´®
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java48 4(j
 %11boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*"
  
 urlInstagramjava.lang.String*
 https://www.instagram.com2"contains(Ljava/lang/CharSequence;)*
 8
-1*Í
-10|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java4 4('›⁄
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java4 4(1
+1*‰
+10y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java4 4('⁄◊
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java4 4(1
 %10boolean"java.lang.String#isEmpty()Z*"
  
 urlInstagramjava.lang.String2	isEmpty()*
 9
-1*∆
-11|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java2 2(™
-ß
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java3 3(
+1*Ω
+11y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java2 2(ß
+§
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java3 3(
 %8java.io.PrintStream"__id*
-""èå
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java3 3(:
+""åâ
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java3 3(:
 
 %9void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %8java.io.PrintStream*
 Url troppo lungo2println(Ljava/lang/String;)*
-1*Â
-12|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java0 8(÷”
-|
-rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java1 1((	
+1*ﬂ
+12y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java0 8(”–
+y
+oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportUrl.java1 1((	
 %7int"java.lang.String#length()I*"
  
 urlInstagramjava.lang.String2length()*

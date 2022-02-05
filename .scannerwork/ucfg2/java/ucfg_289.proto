@@ -1,16 +1,17 @@
 
-Dcom.example.optic.entities.Player#getDescrizione()Ljava/lang/String;x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java. .( "1*ê
-1x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java/ /(Ó
-Ð
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java/ /(
-%0java.lang.String"__id*6*4#
+Acom.example.optic.entities.Player#getPassword()Ljava/lang/String;u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java& &("1*Þ
+1u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java' '(Í
+Ê
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java' '(
+%0java.lang.String"__id*3*1#
 !com.example.optic.entities.Player"
-descrizione"”
-x
-nC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Player.java/ /(
+
+password"‘
+u
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Player.java' '(
 
 %0java.lang.StringB%#
 !com.example.optic.entities.Player

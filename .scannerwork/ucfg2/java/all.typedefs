@@ -47,10 +47,9 @@ $setUserVariables(Ljava/lang/String;)Ucom.example.optic.first_ui.ControllerRepo
 !getReportList(Ljava/lang/String;)lcom.example.optic.app_controllers.UserProfileAppController#getReportList(Ljava/lang/String;)Ljava/util/List;³
 2getReviewList(Lcom/example/optic/bean/PlayerBean;)}com.example.optic.app_controllers.UserProfileAppController#getReviewList(Lcom/example/optic/bean/PlayerBean;)Ljava/util/List;k
 getEventList()Ycom.example.optic.app_controllers.UserProfileAppController#getEventList()Ljava/util/List;(
-java.io.Serializablejava.lang.ObjectÂ
+java.io.Serializablejava.lang.ObjectÃ
 java.lang.Throwablejava.lang.Objectjava.io.Serializable;
-printStackTrace()&java.lang.Throwable#printStackTrace()V}
-2validateSuppressedExceptionsList(Ljava/util/List;)Gjava.lang.Throwable#validateSuppressedExceptionsList(Ljava/util/List;)IZ
+printStackTrace()&java.lang.Throwable#printStackTrace()VZ
 getOurStackTrace()Djava.lang.Throwable#getOurStackTrace()[Ljava/lang/StackTraceElement;Á
 “printEnclosedStackTrace(Ljava/lang/Throwable$PrintStreamOrWriter;[Ljava/lang/StackTraceElement;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)¨java.lang.Throwable#printEnclosedStackTrace(Ljava/lang/Throwable$PrintStreamOrWriter;[Ljava/lang/StackTraceElement;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V>
 
@@ -1246,12 +1245,11 @@ println(C)java.io.PrintStream#println(C)VK
 1<init>(Ljava/io/OutputStream;ZLjava/lang/String;)Fjava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/lang/String;)VU
 <init>(Ljava/io/OutputStream;)3java.io.PrintStream#<init>(Ljava/io/OutputStream;)V/
 println([C) java.io.PrintStream#println([C)V‹
-9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)VÊ
+9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Và
 ,com.example.optic.utilities.ImportCheckInputjava.lang.ObjectB
 <init>()6com.example.optic.utilities.ImportCheckInput#<init>()Vn
 checkInput(Ljava/lang/String;)Lcom.example.optic.utilities.ImportCheckInput#checkInput(Ljava/lang/String;)Zj
-isNumber(Ljava/lang/String;)Jcom.example.optic.utilities.ImportCheckInput#isNumber(Ljava/lang/String;)Zh
-isValid(Ljava/lang/String;)Icom.example.optic.utilities.ImportCheckInput#isValid(Ljava/lang/String;)Z­
+isNumber(Ljava/lang/String;)Jcom.example.optic.utilities.ImportCheckInput#isNumber(Ljava/lang/String;)Z­
 1com.example.optic.app_controllers.LoginControllerjava.lang.Object—
 0playerLogin(Lcom/example/optic/bean/PlayerBean;)ccom.example.optic.app_controllers.LoginController#playerLogin(Lcom/example/optic/bean/PlayerBean;)ZO
 closeConn(I)?com.example.optic.app_controllers.LoginController#closeConn(I)VG
@@ -1318,24 +1316,28 @@ nanoTime()java.lang.System#nanoTime()Jt
 main(Ljava/lang/String;)Ccom.example.optic.second_ui.PlayerHomeCLI#main(Ljava/lang/String;)V?
 <init>()3com.example.optic.second_ui.PlayerHomeCLI#<init>()V{
 &showPlaygroundList(Ljava/lang/String;)Qcom.example.optic.second_ui.PlayerHomeCLI#showPlaygroundList(Ljava/lang/String;)VG
-acquisisci()7com.example.optic.second_ui.PlayerHomeCLI#acquisisci()IŒ
+acquisisci()7com.example.optic.second_ui.PlayerHomeCLI#acquisisci()I¥
 (com.example.optic.second_ui.ModPGPageCLIjava.lang.Objectˆ
 -modSocial(Lcom/example/optic/entities/Admin;)Wcom.example.optic.second_ui.ModPGPageCLI#modSocial(Lcom/example/optic/entities/Admin;)V^
-main(Ljava/lang/String;)Bcom.example.optic.second_ui.ModPGPageCLI#main(Ljava/lang/String;)VŒ
-/showReviews(Lcom/example/optic/entities/Admin;)Ycom.example.optic.second_ui.ModPGPageCLI#showReviews(Lcom/example/optic/entities/Admin;)VŠ
-.freeReferee(Lcom/example/optic/bean/UserBean;)Xcom.example.optic.second_ui.ModPGPageCLI#freeReferee(Lcom/example/optic/bean/UserBean;)V>
-<init>()2com.example.optic.second_ui.ModPGPageCLI#<init>()V¸
-EshowPlayList(Ljava/lang/String;Lcom/example/optic/entities/Giornata;)ocom.example.optic.second_ui.ModPGPageCLI#showPlayList(Ljava/lang/String;Lcom/example/optic/entities/Giornata;)V„
-+modInfo(Lcom/example/optic/entities/Admin;)Ucom.example.optic.second_ui.ModPGPageCLI#modInfo(Lcom/example/optic/entities/Admin;)Vf
+main(Ljava/lang/String;)Bcom.example.optic.second_ui.ModPGPageCLI#main(Ljava/lang/String;)VŠ
+.freeReferee(Lcom/example/optic/bean/UserBean;)Xcom.example.optic.second_ui.ModPGPageCLI#freeReferee(Lcom/example/optic/bean/UserBean;)Vf
 showInfo(Ljava/lang/String;)Fcom.example.optic.second_ui.ModPGPageCLI#showInfo(Ljava/lang/String;)V„
 +modDesc(Lcom/example/optic/bean/AdminBean;)Ucom.example.optic.second_ui.ModPGPageCLI#modDesc(Lcom/example/optic/bean/AdminBean;)V’
 2showPlayers(Lcom/example/optic/entities/Giornata;)\com.example.optic.second_ui.ModPGPageCLI#showPlayers(Lcom/example/optic/entities/Giornata;)VÒ
-RmodReferee(Lcom/example/optic/entities/Admin;Lcom/example/optic/entities/Referee;)|com.example.optic.second_ui.ModPGPageCLI#modReferee(Lcom/example/optic/entities/Admin;Lcom/example/optic/entities/Referee;)Vl
-addGiornata(Ljava/lang/String;)Icom.example.optic.second_ui.ModPGPageCLI#addGiornata(Ljava/lang/String;)VÐ
+RmodReferee(Lcom/example/optic/entities/Admin;Lcom/example/optic/entities/Referee;)|com.example.optic.second_ui.ModPGPageCLI#modReferee(Lcom/example/optic/entities/Admin;Lcom/example/optic/entities/Referee;)VL
+showEventList()9com.example.optic.second_ui.ModPGPageCLI#showEventList()VŒ
+/showReviews(Lcom/example/optic/entities/Admin;)Ycom.example.optic.second_ui.ModPGPageCLI#showReviews(Lcom/example/optic/entities/Admin;)V>
+<init>()2com.example.optic.second_ui.ModPGPageCLI#<init>()V¸
+EshowPlayList(Ljava/lang/String;Lcom/example/optic/entities/Giornata;)ocom.example.optic.second_ui.ModPGPageCLI#showPlayList(Ljava/lang/String;Lcom/example/optic/entities/Giornata;)V„
++modInfo(Lcom/example/optic/entities/Admin;)Ucom.example.optic.second_ui.ModPGPageCLI#modInfo(Lcom/example/optic/entities/Admin;)VÈ
+Mcase2(Lcom/example/optic/entities/Giornata;Lcom/example/optic/bean/UserBean;)wcom.example.optic.second_ui.ModPGPageCLI#case2(Lcom/example/optic/entities/Giornata;Lcom/example/optic/bean/UserBean;)Vl
+addGiornata(Ljava/lang/String;)Icom.example.optic.second_ui.ModPGPageCLI#addGiornata(Ljava/lang/String;)V²
 ,com.example.optic.second_ui.RefereeReportCLIjava.lang.Objectb
 main(Ljava/lang/String;)Fcom.example.optic.second_ui.RefereeReportCLI#main(Ljava/lang/String;)VB
 <init>()6com.example.optic.second_ui.RefereeReportCLI#<init>()Vf
-report(Ljava/lang/String;)Hcom.example.optic.second_ui.RefereeReportCLI#report(Ljava/lang/String;)V™
+report(Ljava/lang/String;)Hcom.example.optic.second_ui.RefereeReportCLI#report(Ljava/lang/String;)Vl
+showPlayers(Ljava/util/List;)Kcom.example.optic.second_ui.RefereeReportCLI#showPlayers(Ljava/util/List;)Ir
+ checkCommand(Ljava/lang/String;)Ncom.example.optic.second_ui.RefereeReportCLI#checkCommand(Ljava/lang/String;)V™
 castelli.TestPlayerjava.lang.ObjectE
 playerSetStarFromVal()+castelli.TestPlayer#playerSetStarFromVal()V)
 <init>()castelli.TestPlayer#<init>()V—
@@ -1696,13 +1698,16 @@ $setUserVariables(Ljava/lang/String;)Vcom.example.optic.first_ui.ControllerUser
 castelli.TestLoginControllerjava.lang.ObjectN
 testPlayerLoginValid()4castelli.TestLoginController#testPlayerLoginValid()V2
 <init>()&castelli.TestLoginController#<init>()VT
-testPlayerLoginNotValid()7castelli.TestLoginController#testPlayerLoginNotValid()V€
-,com.example.optic.second_ui.PlayerProfileCLIjava.lang.ObjectJ
+testPlayerLoginNotValid()7castelli.TestLoginController#testPlayerLoginNotValid()Vê
+,com.example.optic.second_ui.PlayerProfileCLIjava.lang.Objectz
+$inputIsNotNumber(Ljava/lang/String;)Rcom.example.optic.second_ui.PlayerProfileCLI#inputIsNotNumber(Ljava/lang/String;)VJ
 showReport():com.example.optic.second_ui.PlayerProfileCLI#showReport()VP
 showEventList()=com.example.optic.second_ui.PlayerProfileCLI#showEventList()Vb
-main(Ljava/lang/String;)Fcom.example.optic.second_ui.PlayerProfileCLI#main(Ljava/lang/String;)VB
+main(Ljava/lang/String;)Fcom.example.optic.second_ui.PlayerProfileCLI#main(Ljava/lang/String;)Vv
+"modInfoPlayer(ILjava/lang/String;)Pcom.example.optic.second_ui.PlayerProfileCLI#modInfoPlayer(ILjava/lang/String;)VB
 <init>()6com.example.optic.second_ui.PlayerProfileCLI#<init>()V>
-save()4com.example.optic.second_ui.PlayerProfileCLI#save()Vb
+save()4com.example.optic.second_ui.PlayerProfileCLI#save()Vt
+!inputIsNumber(Ljava/lang/String;)Ocom.example.optic.second_ui.PlayerProfileCLI#inputIsNumber(Ljava/lang/String;)Vb
 back(Ljava/lang/String;)Fcom.example.optic.second_ui.PlayerProfileCLI#back(Ljava/lang/String;)ZT
 showRecentPlays()?com.example.optic.second_ui.PlayerProfileCLI#showRecentPlays()Vâ
 *com.example.optic.second_ui.BaseCommandCLIjava.lang.Object@

@@ -40,6 +40,7 @@ public class UserPGPageCLI {
                 }
             }while (!res);
             switch (command) {
+                case 1 -> showInfo(user,a);
                 case 2 -> {
                     UserBean bean = new UserBean();
                     bean.setUsername(a.getUsername());
@@ -56,8 +57,7 @@ public class UserPGPageCLI {
                 }
                 case 3 -> review(user,a);
                 case 4 -> showReviews(user,a);
-                case 5 -> {}
-                default -> showInfo(user,a);
+                default -> System.out.println("Indietro");
             }
         }catch (IOException e){
             e.printStackTrace();
@@ -211,7 +211,9 @@ public class UserPGPageCLI {
                 stelleTot += list.get(i).getStelle();
                 val++;
             }
-            media = stelleTot/val;
+            if(val != 0) {
+                media = stelleTot / val;
+            }
             System.out.println("Media stelle: "+media);
         }else{
             System.out.println("Il campo non ha recensioni.");

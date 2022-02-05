@@ -124,8 +124,8 @@ public class GiornataDAO {
             try {
                 if (prepStmt != null)
                     prepStmt.close();
-            }catch (SQLException e){
-                e.printStackTrace();
+            }catch (SQLException ex){
+                ex.printStackTrace();
             }
         }
         return list;

@@ -38,54 +38,50 @@ public class PlayerProfileViewCLI{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input = null;
         boolean res;
-        do {
-            System.out.println("Exit|Esci-------Home-------Back|Indietro");
-            System.out.println("User: " + user + "\nDescription :" + utente.getBDescrizione());
-            System.out.println("1 Facebook------------------------------");
-            System.out.println("2 Instagram-----------------------------");
-            System.out.println("3 Vedi report---------------------------");
-            System.out.println("4 Vedi Storico Partite------------------");
-            System.out.println("5 Inserisci Valutazione-----------------");
+        try {
+            do {
+                System.out.println("Exit|Esci-------Home-------Back|Indietro");
+                System.out.println("User: " + user + "\nDescription :" + utente.getBDescrizione());
+                System.out.println("1 Facebook------------------------------");
+                System.out.println("2 Instagram-----------------------------");
+                System.out.println("3 Vedi report---------------------------");
+                System.out.println("4 Vedi Storico Partite------------------");
+                System.out.println("5 Inserisci Valutazione-----------------");
 
-            try {
                 input = br.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            res = ImportCheckInput.isNumber(input);
-            //controllo se l'input è numero
-            if (!res) {
-                BaseCommandCLI.exit(input);
-                if (back(input)) {
-                    return;
-                }
-            } else {
-                command=Integer.parseInt(input);
-                switch (command) {
-                    //apri facebook
-                    case 1 :
-                        try {
+                res = ImportCheckInput.isNumber(input);
+                //controllo se l'input è numero
+                if (!res) {
+                    BaseCommandCLI.exit(input);
+                    if (back(input)) {
+                        return;
+                    }
+                } else {
+                    command = Integer.parseInt(input);
+                    switch (command) {
+                        //apri facebook
+                        case 1:
                             Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + utente.getBFb()});
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    //apri insta
-                    case 2 :
-                        try {
+                            break;
+                        //apri insta
+                        case 2:
                             Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + utente.getBIg()});
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 3 : showReport();break;
-                    case 4 : showRecentPlays();break;
-                    default:
-                        insertVal(viewer);
-                        break;
+                            break;
+                        case 3:
+                            showReport();
+                            break;
+                        case 4:
+                            showRecentPlays();
+                            break;
+                        default:
+                            insertVal(viewer);
+                            break;
+                    }
                 }
-            }
-        }while(true);
+            } while (true);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
     public static void insertVal(String viewer) {
         boolean flag;
@@ -104,11 +100,7 @@ public class PlayerProfileViewCLI{
                     val.setStelle(Integer.parseInt(input));
                 }
                 System.out.println("Inserisci descrizione valutazione");
-                try {
-                    input = br.readLine();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                input = br.readLine();
                 if (input.length() < 0 || input.length() > 200) {
                     flag = false;
                 } else {

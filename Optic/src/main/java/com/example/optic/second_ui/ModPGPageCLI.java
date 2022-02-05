@@ -49,26 +49,12 @@ public class ModPGPageCLI {
                         UserBean bean = new UserBean();
                         bean.setUsername(a.getUsername());
                         Giornata play = ModPGPageAppController.getFirstPlay(bean);
-                        if (play == null) {
-                            play = ModPGPageAppController.getRecentPlay(bean);
-                        }
-                        if (play != null) {
-                            showPlayList(a.getUsername(), play);
-                        } else {
-                            System.out.println("ATTENZIONE: Non ci sono giornate da mostrare.");
-                        }
+                        case2(play, bean);
                     }
                     case 3 -> addGiornata(user);
                     case 4 -> modInfo(a);
                     case 5 -> showReviews(a);
-                    case 6 -> {
-                        List<Event> list = ModPGPageAppController.getEventList();
-                        for(int i = 0;i<list.size();i++) {
-                            System.out.println(i + ") " + list.get(i).getNome());
-                        }
-                        System.out.println("Premi invio per continuare");
-                        br.readLine();
-                    }
+                    case 6 -> showEventList();
                     case 7 -> {
                         System.out.println("Indietro");
                         return;
@@ -78,6 +64,24 @@ public class ModPGPageCLI {
             } while (true);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void showEventList(){
+        List<Event> list = ModPGPageAppController.getEventList();
+        for(int i = 0;i<list.size();i++) {
+            System.out.println(i + ") " + list.get(i).getNome());
+        }
+    }
+
+    public static void case2(Giornata play, UserBean bean){
+        if (play == null) {
+            play = ModPGPageAppController.getRecentPlay(bean);
+        }
+        if (play != null) {
+            showPlayList(bean.getUsername(), play);
+        } else {
+            System.out.println("ATTENZIONE: Non ci sono giornate da mostrare.");
         }
     }
 
@@ -344,47 +348,37 @@ public class ModPGPageCLI {
 
     public static void addGiornata(String user) {
         int inp;
-        Boolean flag,flag2=true;
+        Boolean flag = true;
         Calendar data=Calendar.getInstance();
         String inputt = null;
         BufferedReader brt = new BufferedReader(new InputStreamReader(System.in));
         GiornataBean bean = new GiornataBean();
 
-        String input1= null;
-        BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
-        int[] ymd = new int[4];
-        String[] cosa={" ","Giorno","Mese","Anno"};
-        for(int i=1;i<4;i++) {
-            System.out.println("Inserisci "+cosa[i]);
-            try {
-                input1 = br1.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            if (ImportCheckInput.isNumber(input1)) {
-                ymd[i]=Integer.parseInt(input1);
-            }else{
-                System.out.println("ATTENZIONE: 1"+cosa[i]+" non valido");
-                return;
-            }
-        }
-        //Manca il controllo sulla validita
-        data.set(ymd[3],ymd[2],ymd[1]);
-        bean.setData(data);
-        bean.setAdmin(user);
-
-        Calendar cal = Calendar.getInstance();
-        cal.setLenient(false);
-
         try {
+            String input1 = null;
+            BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+            int[] ymd = new int[4];
+            String[] cosa = {" ", "Giorno", "Mese", "Anno"};
+            for (int i = 1; i < 4; i++) {
+                System.out.println("Inserisci " + cosa[i]);
+                input1 = br1.readLine();
+                if (ImportCheckInput.isNumber(input1)) {
+                    ymd[i] = Integer.parseInt(input1);
+                } else {
+                    System.out.println("ATTENZIONE: 1" + cosa[i] + " non valido");
+                    return;
+                }
+            }
+            //Manca il controllo sulla validita
+            data.set(ymd[3], ymd[2], ymd[1]);
+            bean.setData(data);
+            bean.setAdmin(user);
+            Calendar cal = Calendar.getInstance();
+            cal.setLenient(false);
             DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
             df.setLenient(false);
-            df.parse(Integer.toString(ymd[1])+"-"+Integer.toString(ymd[2])+"-"+Integer.toString(ymd[3]));
-        } catch (ParseException e) {
-            System.out.println("ATTENZIONE : Data non valida");
-            flag2=false;
-        }
-        if(flag2) {
+            df.parse(Integer.toString(ymd[1]) + "-" + Integer.toString(ymd[2]) + "-" + Integer.toString(ymd[3]));
+
             System.out.println("Valida " + Integer.toString(ymd[1]) + "-" + Integer.toString(ymd[2]) + "-" + Integer.toString(ymd[3]));
             ModPGPageAppController.isDateValid(bean);
             System.out.println("Seleziona evento ");
@@ -394,11 +388,7 @@ public class ModPGPageCLI {
             }
             flag = false;
             do {
-                try {
-                    inputt = brt.readLine();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                inputt = brt.readLine();
                 if (ImportCheckInput.isNumber(inputt)) {
                     inp = Integer.parseInt(inputt);
                     bean.setEvento(list.get(inp).getNome());
@@ -408,6 +398,10 @@ public class ModPGPageCLI {
                 }
             } while (Boolean.FALSE.equals(flag));
             ModPGPageAppController.insertPlay(bean);
+        }catch (IOException e){
+            e.printStackTrace();
+        }catch (ParseException e){
+            System.out.println("ATTENZIONE: formato data non valido");
         }
     }
 

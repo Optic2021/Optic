@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class PlayerProfileCLI {
-    private static PlayerBean utente=new PlayerBean();
+    private static PlayerBean userBean=new PlayerBean();
 
     private PlayerProfileCLI(){/*does np*/}
 
@@ -30,108 +30,117 @@ public class PlayerProfileCLI {
     }
 
     public static void main(String user){
-        utente.setBUsername(user);
+        userBean.setBUsername(user);
         Player player;
-        player = UserProfileAppController.getPlayer(utente);
-        utente.setBIg(player.getIg());
-        utente.setBFb(player.getFb());
-        utente.setBDescrizione(player.getDescrizione());
-        int command;
-        do {
-            System.out.println("Exit-------Home-------Back");
-            System.out.println("User: " + user + "\nDescription :" + utente.getBDescrizione());
-            System.out.println("Modifica--------------------------------");
-            System.out.println("1 Facebook------------------------------");
-            System.out.println("2 Instagram-----------------------------");
-            System.out.println("3 Vedi report---------------------------");
-            System.out.println("4 Lista Eventi--------------------------");
-            System.out.println("5 Vedi Storico Partite------------------");
-            String input = null;
-            BufferedReader bufferReader = new BufferedReader(new InputStreamReader(System.in));
-            try {
+        player = UserProfileAppController.getPlayer(userBean);
+        userBean.setBIg(player.getIg());
+        userBean.setBFb(player.getFb());
+        userBean.setBDescrizione(player.getDescrizione());
+        try {
+            do {
+                System.out.println("Exit-------Home-------Back");
+                System.out.println("User: " + user + "\nDescription :" + userBean.getBDescrizione());
+                System.out.println("Modifica--------------------------------");
+                System.out.println("1 Facebook------------------------------");
+                System.out.println("2 Instagram-----------------------------");
+                System.out.println("3 Vedi report---------------------------");
+                System.out.println("4 Lista Eventi--------------------------");
+                System.out.println("5 Vedi Storico Partite------------------");
+                String input = null;
+                BufferedReader bufferReader = new BufferedReader(new InputStreamReader(System.in));
                 input = bufferReader.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            boolean res = ImportCheckInput.isNumber(input);
-            //controllo se l'input è numero
-            if (!res) {
-                if (BaseCommandCLI.exit(input)) {
-                    return;
-                } else if (back(input)) {
-                    return;
-                }else if(input.equals("Modifica")){
-                    System.out.println("1)Descrizione \n2)Profilo Facebook \n3)Profilo Instagram");
-                    try {
-                        input = bufferReader.readLine();
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                boolean res = ImportCheckInput.isNumber(input);
+                //controllo se l'input è numero
+                if (!res) {
+                    if (BaseCommandCLI.exit(input)) {
+                        System.out.println("Chiusura app");
                     }
-                    command = Integer.parseInt(input);
-                    System.out.println("Inserire nuovi parametri");
-                    try {
-                        input = bufferReader.readLine();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    boolean flag=true;
-                    if(command > 1){
-                        flag=ImportUrl.controlliUrl(input,input,"",command-1);
-                    }
-                    if(flag) {
-                        switch (command) {
-                            case 1:
-                                utente.setBDescrizione(input);
-                                System.out.println("New description: " + utente.getBDescrizione() + "\n");
-                                break;
-                            case 2:
-                                utente.setBFb(input);
-                                System.out.println("New facebook: " + utente.getBFb() + "\n");
-                                break;
-                            default:
-                                utente.setBIg(input);
-                                System.out.println("New instagram: " + utente.getBIg() + "\n");
-                                break;
-                        }
-                        save();
-                    }
+                    inputIsNotNumber(input);
+                } else {
+                    inputIsNumber(input);
                 }
-            } else {
-                command=Integer.parseInt(input);
-                switch (command) {
-                    //apri facebook
-                    case 1 :
-                        try {
-                            Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + utente.getBFb()});
-                        } catch (IOException ex) {
-                            ex.printStackTrace();
-                        }
-                        break;
-                        //apri insta
-                    case 2 :
-                        try {
-                            Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + utente.getBIg()});
-                        } catch (IOException ex) {
-                            ex.printStackTrace();
-                        }
-                        break;
-                    case 3 : showReport();break;
-                    case 4 : showEventList();break;
-                    default : showRecentPlays();
+            } while (true);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
+    private static void inputIsNotNumber(String input) {
+        BufferedReader bufferReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            if (back(input)) {
+                System.out.println("Indietro");
+            } else if (input.equals("Modifica")) {
+                System.out.println("1)Descrizione \n2)Profilo Facebook \n3)Profilo Instagram");
+                input = bufferReader.readLine();
+                int command = Integer.parseInt(input);
+                System.out.println("Inserire nuovi parametri");
+                input = bufferReader.readLine();
+                boolean flag = true;
+                if (command > 1) {
+                    flag = ImportUrl.controlliUrl(input, input, "", command - 1);
+                }
+                if (flag) {
+                    modInfoPlayer(command, input);
                 }
             }
-        }while(true);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    private static void modInfoPlayer(int command, String input) {
+        switch (command) {
+            case 1:
+                userBean.setBDescrizione(input);
+                System.out.println("New description: " + userBean.getBDescrizione() + "\n");
+                break;
+            case 2:
+                userBean.setBFb(input);
+                System.out.println("New facebook: " + userBean.getBFb() + "\n");
+                break;
+            default:
+                userBean.setBIg(input);
+                System.out.println("New instagram: " + userBean.getBIg() + "\n");
+                break;
+        }
+        save();
+    }
+
+    private static void inputIsNumber(String input) {
+        int command = Integer.parseInt(input);
+        try {
+            switch (command) {
+                //apri facebook
+                case 1:
+                    Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + userBean.getBFb()});
+                    break;
+                //apri insta
+                case 2:
+                    Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome " + userBean.getBIg()});
+                    break;
+                case 3:
+                    showReport();
+                    break;
+                case 4:
+                    showEventList();
+                    break;
+                default:
+                    showRecentPlays();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public static void save(){
-        UserProfileAppController.setInfo(utente);
+        UserProfileAppController.setInfo(userBean);
     }
 
     public static void showRecentPlays(){
-        UserBean userBean = new UserBean();
-        userBean.setUsername(utente.getBUsername());
-        List<Giornata> list = UserProfileAppController.getRecentPlayList(userBean);
+        UserBean bean = new UserBean();
+        bean.setUsername(userBean.getBUsername());
+        List<Giornata> list = UserProfileAppController.getRecentPlayList(bean);
         if(list.isEmpty()){
             System.out.println("Non ci sono partite recenti da mostrare.");
         }else {
@@ -169,7 +178,7 @@ public class PlayerProfileCLI {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
         List<ReportBean> list;
-        list = UserProfileAppController.getReportList(utente.getBUsername());
+        list = UserProfileAppController.getReportList(userBean.getBUsername());
         if(list.isEmpty()){
             System.out.println("Non ci sono report da mostrare.");
         }else {
