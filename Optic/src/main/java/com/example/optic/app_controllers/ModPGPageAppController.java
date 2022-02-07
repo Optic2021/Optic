@@ -5,6 +5,7 @@ import com.example.optic.bean.GiornataBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.dao.*;
 import com.example.optic.entities.*;
+import com.example.optic.utilities.NotARefereeException;
 import javafx.scene.control.Alert;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -121,13 +122,16 @@ public class ModPGPageAppController {
     }
 
     //cerco arbitro tramite il suo nome
-    public static Referee getReferee(UserBean u){
+    public static Referee getReferee(UserBean u) throws NotARefereeException{
         Referee ref = null;
         try {
             AdminDAO dao = AdminDAO.getInstance();
             ref = dao.getReferee(u.getUsername());
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        if(ref == null){
+            throw new NotARefereeException();
         }
         return ref;
     }

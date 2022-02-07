@@ -40,7 +40,7 @@ public class Optic extends Application {
     }
 
     public static void main(String[] args) {
-        int i =2;
+        int i = 2;
         if(i==1) {
             launch();
         }else {

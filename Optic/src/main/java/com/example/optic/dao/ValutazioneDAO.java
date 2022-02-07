@@ -123,7 +123,7 @@ public class ValutazioneDAO {
         return list;
     }
 
-    public void saveReview(ValutazioneBean val,int campoPlayer){
+    public void saveReview(ValutazioneBean val,int campoPlayer) {
         PreparedStatement prepStmt = null;
         ResultSet rs2 = null;
         String sql1;
@@ -133,8 +133,7 @@ public class ValutazioneDAO {
                 prepStmt = this.daoP.getConnection().prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 prepStmt.setString(1, val.getRiceve());
                 rs2 = prepStmt.executeQuery();
-                rs2.first();
-                //in teoria impossibile che non trovo admin
+                rs2.first();//in teoria impossibile che non trovo admin
                 sql1 = "INSERT into valutazione (Descrizione,Stelle,fk_UsernameP1,fk_UsernameA) values (?,?,?,?)";
             }else{
                 sql1 = "INSERT into valutazione (Descrizione,Stelle,fk_UsernameP1,fk_UsernameP2) values (?,?,?,?)";
@@ -163,7 +162,7 @@ public class ValutazioneDAO {
             try {
                 if (prepStmt != null)
                     prepStmt.close();
-            } catch (SQLException e) {
+            }catch (SQLException e){
                 e.printStackTrace();
             }
         }

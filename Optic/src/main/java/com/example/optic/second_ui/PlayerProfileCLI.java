@@ -7,6 +7,7 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.entities.Event;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
+import com.example.optic.utilities.EmptyReportListException;
 import com.example.optic.utilities.ImportCheckInput;
 import com.example.optic.utilities.ImportUrl;
 
@@ -178,15 +179,12 @@ public class PlayerProfileCLI {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
         List<ReportBean> list;
-        list = UserProfileAppController.getReportList(userBean.getBUsername());
-        if(list.isEmpty()){
-            System.out.println("Non ci sono report da mostrare.");
-        }else {
+        try{
+            list = UserProfileAppController.getReportList(userBean.getBUsername());
             for (int i = 0; i < list.size(); i++) {
                 System.out.println(list.get(i).getFormattedText()+"\n");
             }
-        }
-        try {
+
             do {
                 System.out.println("Inserire un numero per tornare indietro");
                 String input2;
@@ -199,6 +197,8 @@ public class PlayerProfileCLI {
             } while (!res);
         }catch (IOException e){
             e.printStackTrace();
+        }catch (EmptyReportListException e){
+            System.out.println("Non ci sono report da mostrare.\n");
         }
     }
 

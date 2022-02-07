@@ -8,6 +8,7 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import com.example.optic.utilities.ImportList;
 import com.example.optic.utilities.ImportStar;
+import com.example.optic.utilities.NotARefereeException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -324,33 +325,35 @@ public class ControllerModPGPage extends GraphicController {
         refBean.setUsername(refereeUsername);
         adminBean.setUsername(user.getText());
         //controllo se il referee esiste
-        Referee referee = ModPGPageAppController.getReferee(refBean);
-        if(referee == null){
+        try {
+            Referee referee = ModPGPageAppController.getReferee(refBean);
+            if (referee.getAdminCampo() != null) {//controllo che l'arbitro non sia collegato
+                Alert err = new Alert(Alert.AlertType.ERROR);
+                err.setContentText("Arbitro già di un altro campo!");
+                ref.setText("");
+                err.show();
+            } else {
+                ModPGPageAppController.setReferee(adminBean, refBean);
+            }
+        }catch (NotARefereeException e){
             Alert err = new Alert(Alert.AlertType.ERROR);
             err.setContentText("Arbitro inesistente!");
             this.playgroundReferee(user.getText());
             err.show();
-        }else if(referee.getAdminCampo() != null){//controllo che l'arbitro non sia collegato
-            Alert err = new Alert(Alert.AlertType.ERROR);
-            err.setContentText("Arbitro già di un altro campo!");
-            ref.setText("");
-            err.show();
-        }else{
-            ModPGPageAppController.setReferee(adminBean,refBean);
         }
     }
 
     public void freeReferee(){
         UserBean u = new UserBean();
         u.setUsername(ref.getText());
-        Referee referee = ModPGPageAppController.getReferee(u);
-        if(referee == null){
-            Alert err = new Alert(Alert.AlertType.ERROR);
-            err.setContentText("Impossibile scollegare un arbitro inseistente!");
-            err.show();
-        }else{
+        try {
+            ModPGPageAppController.getReferee(u);
             ModPGPageAppController.freeReferee(u);
             ref.setText("");
+        }catch (NotARefereeException e){
+            Alert err = new Alert(Alert.AlertType.ERROR);
+            err.setContentText("Impossibile scollegare un arbitro inesistente!");
+            err.show();
         }
     }
 

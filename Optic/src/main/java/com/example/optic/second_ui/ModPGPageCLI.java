@@ -7,6 +7,7 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import com.example.optic.utilities.ImportCheckInput;
 import com.example.optic.utilities.ImportUrl;
+import com.example.optic.utilities.NotARefereeException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -220,30 +221,32 @@ public class ModPGPageCLI {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            UserBean adminBean = new UserBean();
-            UserBean refBean = new UserBean();
-            refBean.setUsername(input2);
-            adminBean.setUsername(a.getUsername());
-            //controllo se il referee esiste
-            Referee referee = ModPGPageAppController.getReferee(refBean);
-            if (referee == null) {
+            try {
+                UserBean adminBean = new UserBean();
+                UserBean refBean = new UserBean();
+                refBean.setUsername(input2);
+                adminBean.setUsername(a.getUsername());
+                //controllo se il referee esiste
+                Referee referee = ModPGPageAppController.getReferee(refBean);
+                if (referee.getAdminCampo() != null) {//controllo che l'arbitro non sia collegato
+                    System.out.println("ATTENZIONE: Arbitro già di un altro campo!");
+                } else {
+                    System.out.println("Arbitro correttamente collegato.");
+                    ModPGPageAppController.setReferee(adminBean, refBean);
+                }
+            }catch (NotARefereeException e){
                 System.out.println("ATTENZIONE: Arbitro inesistente!");
-            } else if (referee.getAdminCampo() != null) {//controllo che l'arbitro non sia collegato
-                System.out.println("ATTENZIONE: Arbitro già di un altro campo!");
-            } else {
-                System.out.println("Arbitro correttamente collegato.");
-                ModPGPageAppController.setReferee(adminBean, refBean);
             }
         }
     }
 
     public static void freeReferee(UserBean u){
-        Referee ref2 = ModPGPageAppController.getReferee(u);
-        if (ref2 == null) {
-            System.out.println("ATTENZIONE: Impossibile scollegare un arbitro inesistente!");
-        } else {
+        try {
+            ModPGPageAppController.getReferee(u);
             System.out.println("Arbitro scollegato correttamente.");
             ModPGPageAppController.freeReferee(u);
+        }catch (NotARefereeException e){
+            System.out.println("ATTENZIONE: Impossibile scollegare un arbitro inesistente!");
         }
     }
 

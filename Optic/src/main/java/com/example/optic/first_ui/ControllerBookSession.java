@@ -41,7 +41,7 @@ public class ControllerBookSession extends GraphicController {
                 toView("views/userPgPage.fxml",user.getText(),bean);
             }
         }
-        catch(Exception z){
+        catch(IOException z){
             z.printStackTrace();
         }
     }

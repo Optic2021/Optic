@@ -9,6 +9,8 @@ import com.example.optic.entities.Event;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
 import com.example.optic.entities.Giornata;
+import com.example.optic.utilities.EmptyReportListException;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -84,10 +86,13 @@ public class UserProfileAppController {
     }
 
     //Restituisce la lista di report ricevuti
-    public static List<ReportBean> getReportList(String user) {
+    public static List<ReportBean> getReportList(String user) throws EmptyReportListException {
         List<ReportBean> list;
         PlayerDAO dao = PlayerDAO.getInstance();
         list = dao.getPlayerReportList(user);
+        if(list.isEmpty()){
+            throw new EmptyReportListException();
+        }
         return list;
     }
 }

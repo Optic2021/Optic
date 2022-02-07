@@ -5,7 +5,6 @@ import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.dao.ValutazioneDAO;
 import com.example.optic.entities.Valutazione;
-
 import java.util.List;
 
 public class ReviewAppController {
@@ -21,7 +20,8 @@ public class ReviewAppController {
         if(dao.getValutazione(val,0)){
             dao.deleteValutazione(val,0);
         }
-        dao.saveReview(val,0);
+        dao.saveReview(val, 0);
+
     }
 
     //Prende la lista di valutazioni
