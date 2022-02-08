@@ -39,7 +39,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3816092" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -55,7 +55,7 @@
       <module name="Optic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.optic.first_ui.*" />
+          <option name="PATTERN" value="com.example.optic.utilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -213,6 +213,9 @@
       <workItem from="1644245935592" duration="540000" />
       <workItem from="1644246509951" duration="815000" />
       <workItem from="1644247523858" duration="8086000" />
+      <workItem from="1644333959377" duration="268000" />
+      <workItem from="1644335639994" duration="3598000" />
+      <workItem from="1644342671897" duration="4132000" />
     </task>
     <servers />
   </component>

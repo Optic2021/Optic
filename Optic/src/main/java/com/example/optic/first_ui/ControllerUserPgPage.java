@@ -9,10 +9,10 @@ import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
-import com.example.optic.utilities.ImportGetPlay;
-import com.example.optic.utilities.ImportStar;
+import com.example.optic.utilities.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import java.io.IOException;
@@ -69,20 +69,12 @@ public class ControllerUserPgPage extends GraphicController {
 
         AdminBean admin = null;
         AdminBean playground = null;
-        try {
-            playground = new AdminBean();
-            playground.setNomeCampo(field);
-            admin = BookSessionAppController.getCampoInfo(playground);
-            populateReviewTable(playground);
-            this.setFirstPlay(admin.getUsername());
-        }catch(Exception a){
-            a.printStackTrace();
-        }
-        try {
-            setCampo(admin);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        playground = new AdminBean();
+        playground.setNomeCampo(field);
+        admin = BookSessionAppController.getCampoInfo(playground);
+        populateReviewTable(playground);
+        this.setFirstPlay(admin.getUsername());
+        setCampo(admin);
     }
     //setto la prima giornata di gioco disponibile
     public void setFirstPlay(String user) {
@@ -180,29 +172,36 @@ public class ControllerUserPgPage extends GraphicController {
         ImportStar.setStars(stars,starUPG11,starUPG22,starUPG33,starUPG44,starUPG55);
     }
 
-    public void populateReviewTable(AdminBean admin){
+    //
+    public void populateReviewTable(AdminBean admin) {
         int numVal = 0;
         int mediaVal = 0;
         int stars = 0;
-        List<Valutazione> list = ReviewAppController.reviewList(admin);
-        nome.setCellValueFactory(new PropertyValueFactory<>("fkUsernameP1"));
-        recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
-        int k = list.size();
-        int i = 0;
-        Valutazione val;
-        while (i < k) {
-            val = list.get(i);
-            numVal++;
-            mediaVal += list.get(i).getStelle();
-            table.getItems().add(val);
-            i++;
-        }
-        if(numVal > 0) {
-            stars = mediaVal / numVal;
-            if (stars > 0) {
-                //coloro le stelle in base alla valutazione
-                this.setStars(stars);
+        List<Valutazione> list = null;
+        try {
+            list = ReviewAppController.reviewList(admin);
+
+            nome.setCellValueFactory(new PropertyValueFactory<>("fkUsernameP1"));
+            recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
+            int k = list.size();
+            int i = 0;
+            Valutazione val;
+            while (i < k) {
+                val = list.get(i);
+                numVal++;
+                mediaVal += list.get(i).getStelle();
+                table.getItems().add(val);
+                i++;
             }
+            if (numVal > 0) {
+                stars = mediaVal / numVal;
+                if (stars > 0) {
+                    //coloro le stelle in base alla valutazione
+                    this.setStars(stars);
+                }
+            }
+        } catch (ReviewEmpty e) {
+
         }
     }
 
@@ -236,12 +235,17 @@ public class ControllerUserPgPage extends GraphicController {
     public void tableview() {
         Valutazione val = (Valutazione) table.getSelectionModel().getSelectedItem();
         try {
+            if (val==null)throw new InvalidSelectedPlayer();
             if (user.getText().equals(val.getFkUsernameP1())){
                 toView("views/userProfile.fxml", user.getText());
             }else{
                 toView("views/userViewProfile.fxml",val.getFkUsernameP1(), user.getText());
             }
-        } catch (Exception e) {
+        } catch (InvalidSelectedPlayer invalidSelectedPlayer) {
+            Alert warn = new Alert(AlertType.WARNING);
+            warn.setContentText("Seleziona un giocatore valido");
+            warn.show();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -249,13 +253,20 @@ public class ControllerUserPgPage extends GraphicController {
     public void tableview2() {
         Player player = (Player) players.getSelectionModel().getSelectedItem();
         try {
+            if (player==null){
+                throw new InvalidSelectedPlayer();
+            }
             if (user.getText().equals(player.getUsername())){
                 toView("views/userProfile.fxml", user.getText());
             }else{
                 toView("views/userViewProfile.fxml",player.getUsername(), user.getText());
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException z){
+            z.printStackTrace();
+        } catch (InvalidSelectedPlayer invalidSelectedPlayer) {
+            Alert warn = new Alert(AlertType.WARNING);
+            warn.setContentText("Seleziona un giocatore valido");
+            warn.show();
         }
     }
 

@@ -5,6 +5,7 @@ import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.dao.PlayerDAO;
 import com.example.optic.dao.ValutazioneDAO;
 import com.example.optic.entities.Valutazione;
+
 import java.util.List;
 
 public class ReviewAppController {
@@ -25,13 +26,13 @@ public class ReviewAppController {
     }
 
     //Prende la lista di valutazioni
-    public static List<Valutazione> reviewList(AdminBean admin){
+    public static List<Valutazione> reviewList(AdminBean admin) throws ReviewEmpty {
         List<Valutazione> list;
 
         PlayerDAO player= PlayerDAO.getInstance();
         ValutazioneDAO dao= new ValutazioneDAO(player);
         list=dao.getAdminReviewList1(admin.getNomeCampo());
-
+        if (list.isEmpty()) throw new ReviewEmpty();
         return list;
     }
 }

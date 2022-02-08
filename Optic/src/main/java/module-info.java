@@ -14,4 +14,6 @@ module com.example.optic {
     opens com.example.optic.app_controllers to javafx.fxml;
     exports com.example.optic.first_ui;
     opens com.example.optic.first_ui to javafx.fxml;
+    exports com.example.optic.utilities;
+    opens com.example.optic.utilities to javafx.fxml;
 }

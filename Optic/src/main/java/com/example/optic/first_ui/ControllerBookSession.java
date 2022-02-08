@@ -4,8 +4,10 @@ import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.PlayerBean;
 import com.example.optic.entities.Admin;
+import com.example.optic.utilities.InvalidSelectedPG;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.IOException;
 import java.util.List;
@@ -36,13 +38,20 @@ public class ControllerBookSession extends GraphicController {
         try {
             Admin campo=(Admin) table.getSelectionModel().getSelectedItem();
             AdminBean bean = new AdminBean();
+            if(campo==null){
+                throw new InvalidSelectedPG();
+            }
             bean.setNomeCampo(campo.getNomeC());
             if (!bean.getNomeCampo().isEmpty()){
                 toView("views/userPgPage.fxml",user.getText(),bean);
             }
-        }
-        catch(IOException z){
-            z.printStackTrace();
+        } catch(InvalidSelectedPG z){
+            Alert warn = new Alert(AlertType.WARNING);
+            warn.setContentText("Seleziona un campo valido");
+            warn.show();
+            //z.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

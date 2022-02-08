@@ -54,6 +54,7 @@ public class RegisterController {
         try {
             switch (userType) {
                 case 1 -> {
+                    System.out.println("Player"+user.getUsername());
                     PlayerDAO player = PlayerDAO.getInstance();
                     username = user.getUsername();
                     password = user.getPassword();
