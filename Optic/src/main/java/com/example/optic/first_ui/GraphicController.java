@@ -14,7 +14,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class GraphicController {
+public abstract class GraphicController {
     @FXML
     private Pane id;
     @FXML
@@ -36,9 +36,8 @@ public class GraphicController {
         obj.setY(e.getScreenY() + yOffset);
     }
 
-    public void setUserVariables(String username){
+    public abstract void setUserVariables(String username);
         //ogni controller grafico implementerà la sua versione in base alle necessità
-    }
 
     public void toView(String view) throws IOException {
         Stage obj = (Stage) id.getScene().getWindow();

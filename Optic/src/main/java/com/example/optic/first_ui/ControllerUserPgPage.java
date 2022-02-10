@@ -178,30 +178,26 @@ public class ControllerUserPgPage extends GraphicController {
         int mediaVal = 0;
         int stars = 0;
         List<Valutazione> list = null;
-        try {
-            list = ReviewAppController.reviewList(admin);
+        list = ReviewAppController.reviewList(admin);
 
-            nome.setCellValueFactory(new PropertyValueFactory<>("fkUsernameP1"));
-            recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
-            int k = list.size();
-            int i = 0;
-            Valutazione val;
-            while (i < k) {
-                val = list.get(i);
-                numVal++;
-                mediaVal += list.get(i).getStelle();
-                table.getItems().add(val);
-                i++;
+        nome.setCellValueFactory(new PropertyValueFactory<>("fkUsernameP1"));
+        recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
+        int k = list.size();
+        int i = 0;
+        Valutazione val;
+        while (i < k) {
+            val = list.get(i);
+            numVal++;
+            mediaVal += list.get(i).getStelle();
+            table.getItems().add(val);
+            i++;
+        }
+        if (numVal > 0) {
+            stars = mediaVal / numVal;
+            if (stars > 0) {
+                //coloro le stelle in base alla valutazione
+                this.setStars(stars);
             }
-            if (numVal > 0) {
-                stars = mediaVal / numVal;
-                if (stars > 0) {
-                    //coloro le stelle in base alla valutazione
-                    this.setStars(stars);
-                }
-            }
-        } catch (ReviewEmpty e) {
-
         }
     }
 
@@ -217,6 +213,7 @@ public class ControllerUserPgPage extends GraphicController {
         wa.setText(admin.getWhats());
     }
 
+    //Setta la recensione data al campo
     public void review() throws IOException {
         int starN = 0;
         starN= ImportStar.getStarN(starUPG1,starUPG2,starUPG3,starUPG4,starUPG5);

@@ -22,17 +22,15 @@ public class ReviewAppController {
             dao.deleteValutazione(val,0);
         }
         dao.saveReview(val, 0);
-
     }
 
     //Prende la lista di valutazioni
-    public static List<Valutazione> reviewList(AdminBean admin) throws ReviewEmpty {
+    public static List<Valutazione> reviewList(AdminBean admin){
         List<Valutazione> list;
 
         PlayerDAO player= PlayerDAO.getInstance();
         ValutazioneDAO dao= new ValutazioneDAO(player);
         list=dao.getAdminReviewList1(admin.getNomeCampo());
-        if (list.isEmpty()) throw new ReviewEmpty();
         return list;
     }
 }

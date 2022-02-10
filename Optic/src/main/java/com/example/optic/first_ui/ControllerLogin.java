@@ -22,6 +22,11 @@ public class ControllerLogin extends GraphicController {
     @FXML
     private RadioButton adminRB;
 
+    @Override
+    public void setUserVariables(String username){
+        //does np
+    }
+
     public void login() throws IOException {
         boolean res = false;
         Alert err = new Alert(Alert.AlertType.ERROR);

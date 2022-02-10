@@ -201,24 +201,20 @@ public class UserPGPageCLI {
     }
 
     public static void showReviews(String user, AdminBean admin){
-        try {
-            List<Valutazione> list = ReviewAppController.reviewList(admin);
-            int stelleTot = 0;
-            int media = 0;
-            int val = 0;
-            for (int i = 0; i < list.size(); i++) {
-                System.out.println(list.get(i).getFkUsernameP1() + ": " + list.get(i).getDescrizione() + " val. :" + list.get(i).getStelle());
-                stelleTot += list.get(i).getStelle();
-                val++;
-            }
-            if (val != 0) {
-                media = stelleTot / val;
-            }
-            System.out.println("Media stelle: " + media);
-            UserPGPageCLI.main(user, admin.getNomeCampo());
-        }catch (ReviewEmpty c){
-            System.out.println("Lista vuota");
+        List<Valutazione> list = ReviewAppController.reviewList(admin);
+        int stelleTot = 0;
+        int media = 0;
+        int val = 0;
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i).getFkUsernameP1() + ": " + list.get(i).getDescrizione() + " val. :" + list.get(i).getStelle());
+            stelleTot += list.get(i).getStelle();
+            val++;
         }
+        if (val != 0) {
+            media = stelleTot / val;
+        }
+        System.out.println("Media stelle: " + media);
+        UserPGPageCLI.main(user, admin.getNomeCampo());
     }
 
     public static void review(String user, AdminBean campo){

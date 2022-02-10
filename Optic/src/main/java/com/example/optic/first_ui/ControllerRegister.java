@@ -40,6 +40,11 @@ public class ControllerRegister extends GraphicController {
         this.toView("views/login.fxml");
     }
 
+    @Override
+    public void setUserVariables(String username){
+        //does np
+    }
+
     public void register() throws SQLException, IOException, ClassNotFoundException {
         boolean res = false;
         userRB.setUserData(1);
