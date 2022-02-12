@@ -9,6 +9,8 @@ import com.example.optic.entities.Event;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -24,6 +26,9 @@ public class RefReportPlayer {
         RefereeDAO dao=RefereeDAO.getInstance();
         dao.getConn();
         dao.saveReport(report);
+        Alert conf = new Alert(AlertType.WARNING);
+        conf.setContentText("Report salvato correttamente");
+        conf.show();
     }
 
     public static Admin getAdminFromRef(UserBean user) {
@@ -102,7 +107,7 @@ public class RefReportPlayer {
             RefereeDAO dao = RefereeDAO.getInstance();
             dao.closeConn();
         }catch (Exception e){
-            Alert err = new Alert(Alert.AlertType.CONFIRMATION);
+            Alert err = new Alert(AlertType.ERROR);
             err.setContentText("errore chiusura connessione");
             err.show();
         }
