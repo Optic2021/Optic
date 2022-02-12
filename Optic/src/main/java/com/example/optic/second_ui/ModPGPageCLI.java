@@ -3,6 +3,7 @@ package com.example.optic.second_ui;
 import com.example.optic.app_controllers.ModPGPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
+import com.example.optic.bean.RefereeBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import com.example.optic.utilities.ImportCheckInput;
@@ -47,7 +48,7 @@ public class ModPGPageCLI {
                 } while (!res);
                 switch (command) {
                     case 2 -> {
-                        UserBean bean = new UserBean();
+                        UserBean bean = new AdminBean();
                         bean.setUsername(a.getUsername());
                         Giornata play = ModPGPageAppController.getFirstPlay(bean);
                         case2(play, bean);
@@ -179,7 +180,7 @@ public class ModPGPageCLI {
             command = Integer.parseInt(input);
             switch(command){
                 case 2 ->{
-                    UserBean u=new UserBean();
+                    UserBean u=new RefereeBean();
                     u.setUsername(admin.getUsername());
                     modReferee(admin,ModPGPageAppController.getRefereeFromAdmin(u));
                 }
@@ -208,7 +209,7 @@ public class ModPGPageCLI {
         //cancellare
         if (inp == 1) {
             if (ref != null) {
-                UserBean u = new UserBean();
+                UserBean u = new RefereeBean();
                 u.setUsername(ref.getUsername());
                 freeReferee(u);
             } else {
@@ -222,8 +223,8 @@ public class ModPGPageCLI {
                 e.printStackTrace();
             }
             try {
-                UserBean adminBean = new UserBean();
-                UserBean refBean = new UserBean();
+                UserBean adminBean = new AdminBean();
+                UserBean refBean = new RefereeBean();
                 refBean.setUsername(input2);
                 adminBean.setUsername(a.getUsername());
                 //controllo se il referee esiste
@@ -339,7 +340,7 @@ public class ModPGPageCLI {
         AdminBean bean = new AdminBean();
         bean.setUsername(user);
         Admin admin = ModPGPageAppController.getAdmin(bean);
-        UserBean admbean = new UserBean();
+        UserBean admbean = new AdminBean();
         admbean.setUsername(user);
         Referee appoggio = ModPGPageAppController.getRefereeFromAdmin(admbean);
         String param = "Nessuno ";

@@ -31,7 +31,7 @@ public class PlayerProfileCLI {
     }
 
     public static void main(String user){
-        userBean.setBUsername(user);
+        userBean.setUsername(user);
         Player player;
         player = UserProfileAppController.getPlayer(userBean);
         userBean.setBIg(player.getIg());
@@ -139,8 +139,8 @@ public class PlayerProfileCLI {
     }
 
     public static void showRecentPlays(){
-        UserBean bean = new UserBean();
-        bean.setUsername(userBean.getBUsername());
+        UserBean bean = new PlayerBean();
+        bean.setUsername(userBean.getUsername());
         List<Giornata> list = UserProfileAppController.getRecentPlayList(bean);
         if(list.isEmpty()){
             System.out.println("Non ci sono partite recenti da mostrare.");
@@ -180,7 +180,7 @@ public class PlayerProfileCLI {
         boolean res;
         List<ReportBean> list;
         try{
-            list = UserProfileAppController.getReportList(userBean.getBUsername());
+            list = UserProfileAppController.getReportList(userBean.getUsername());
             for (int i = 0; i < list.size(); i++) {
                 System.out.println(list.get(i).getFormattedText()+"\n");
             }

@@ -2,10 +2,7 @@ package com.example.optic.second_ui;
 
 import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.app_controllers.ReviewAppController;
-import com.example.optic.bean.AdminBean;
-import com.example.optic.bean.GiornataBean;
-import com.example.optic.bean.UserBean;
-import com.example.optic.bean.ValutazioneBean;
+import com.example.optic.bean.*;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
@@ -42,7 +39,7 @@ public class UserPGPageCLI {
             switch (command) {
                 case 1 -> showInfo(user,a);
                 case 2 -> {
-                    UserBean bean = new UserBean();
+                    UserBean bean = new PlayerBean();
                     bean.setUsername(a.getUsername());
                     Giornata play = BookSessionAppController.getFirstPlay(bean);
                     if(play == null){
@@ -107,7 +104,7 @@ public class UserPGPageCLI {
                 command = Integer.parseInt(input);
                 switch (command) {
                     case 1 -> {
-                        UserBean userBean = new UserBean();
+                        UserBean userBean = new PlayerBean();
                         userBean.setUsername(user);
                         playBean.setIdPlay(play.getIdGiornata());
                         bookPlay(userBean,playBean);

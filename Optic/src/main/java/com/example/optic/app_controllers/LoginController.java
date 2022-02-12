@@ -22,9 +22,9 @@ public class LoginController {
         //controllo username e password
         try {
             PlayerDAO dao = PlayerDAO.getInstance();
-            Player user = dao.getPlayer(p.getBUsername());
+            Player user = dao.getPlayer(p.getUsername());
             //controllo se il player esiste
-            if(user != null && user.getPassword().equals(p.getBPassword())){//controllo se esiste se la password è uguale
+            if(user != null && user.getPassword().equals(p.getPassword())){//controllo se esiste se la password è uguale
                 //password uguale
                 res = true;
             }

@@ -51,7 +51,7 @@ public class ControllerUserProfile extends GraphicController{
         Player p = null;
         try {
             PlayerBean player = new PlayerBean();
-            player.setBUsername(user);
+            player.setUsername(user);
             this.populateReviewList(user);
             this.populateGamesTable(user);
             p = UserProfileAppController.getPlayer(player);
@@ -97,7 +97,7 @@ public class ControllerUserProfile extends GraphicController{
     //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
     public void populateReviewList(String user) {
         PlayerBean player = new PlayerBean();
-        player.setBUsername(user);
+        player.setUsername(user);
         List<Valutazione> reviewList = null;
         reviewList = UserProfileAppController.getReviewList(player);
         int stars=ImportList.populateReviewList(reviewList,reviews,nVal);
@@ -108,7 +108,7 @@ public class ControllerUserProfile extends GraphicController{
 
     //popolo la tabella con lo storico delle partite del player
     public void populateGamesTable(String user) throws SQLException {
-        UserBean player = new UserBean();
+        UserBean player = new PlayerBean();
         player.setUsername(user);
         date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
         playground.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
@@ -166,7 +166,7 @@ public class ControllerUserProfile extends GraphicController{
         ImportUrl.controlliUrl(urlInstagram,urlFacebook,null,true);
         if(res){
             PlayerBean p = new PlayerBean();
-            p.setBUsername(user.getText());
+            p.setUsername(user.getText());
             p.setBDescrizione(desc);
             p.setBFb(fb);
             p.setBIg(ig);

@@ -26,7 +26,7 @@ public class UserProfileAppController {
         Player player = null;
         try {
             PlayerDAO dao = PlayerDAO.getInstance();
-            player = dao.getPlayer(p.getBUsername());
+            player = dao.getPlayer(p.getUsername());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -38,7 +38,7 @@ public class UserProfileAppController {
         //utilizzo la dao del player dove è creata la connessisone
         PlayerDAO daoP = PlayerDAO.getInstance();
         ValutazioneDAO dao = new ValutazioneDAO(daoP);
-        list = dao.getPlayerReviewList(p.getBUsername());
+        list = dao.getPlayerReviewList(p.getUsername());
         return list;
     }
 
@@ -46,7 +46,7 @@ public class UserProfileAppController {
     public static void setInfo(PlayerBean p){
         try {
             PlayerDAO player = PlayerDAO.getInstance();
-            player.setPlayerInfo(p.getBUsername(),p.getBDescrizione(),p.getBFb(),p.getBIg());
+            player.setPlayerInfo(p.getUsername(),p.getBDescrizione(),p.getBFb(),p.getBIg());
         } catch (Exception e) {
             e.printStackTrace();
         }

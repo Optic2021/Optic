@@ -29,7 +29,7 @@ public class RefereeReportCLI {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         ref.setUsername(user);
-        UserBean u1 = new UserBean();
+        UserBean u1 = new RefereeBean();
         u1.setUsername(user);
         //set proprietario campo
         ref.setFkUsernameA1(RefReportPlayer.getAdminFromRef(u1).getUsername());

@@ -1,29 +1,55 @@
 package com.example.optic.bean;
 
-public class PlayerBean implements java.io.Serializable{
+public class PlayerBean implements UserBean{
     private String username;
     private String password;
     private String descrizione;
     private int valutazione = 0;
     private String ig;
     private String fb;
-    private String stato = "nullo";
 
     //metodi set e get
-    public String getBUsername() {
+    @Override
+    public String getUsername() {
         return username;
     }
-
-    public void setBUsername(String username) {
+    @Override
+    public void setUsername(String username) {
         this.username = username;
     }
-
-    public String getBPassword() {
+    @Override
+    public String getPassword() {
         return password;
     }
-
-    public void setBPassword(String password) {
+    @Override
+    public void setPassword(String password) {
         this.password = password;
+    }
+    @Override
+    public String getVia() {
+        return null;
+    }
+
+    @Override
+    public void setVia(String via) {
+    }
+
+    @Override
+    public String getNomeC() {
+        return null;
+    }
+
+    @Override
+    public void setNomeC(String nomeC) {
+    }
+
+    @Override
+    public String getProv() {
+        return null;
+    }
+
+    @Override
+    public void setProv(String prov) {
     }
 
     public String getBDescrizione() {
@@ -56,13 +82,5 @@ public class PlayerBean implements java.io.Serializable{
 
     public void setBFb(String fb) {
         this.fb = fb;
-    }
-
-    public String getStato() {
-        return stato;
-    }
-
-    public void setStato(String stato) {
-        this.stato = stato;
     }
 }

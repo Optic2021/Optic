@@ -16,13 +16,13 @@ public class RegisterController {
         //does np
     }
 
-    public static boolean isUsernameUsed(UserBean user, int userType) throws SQLException, ClassNotFoundException {
+    public static boolean isUsernameUsed(String user, int userType) throws SQLException, ClassNotFoundException {
         boolean res = false;
         switch (userType){
             case 1 ->   {
                 PlayerDAO p = PlayerDAO.getInstance();
                 Player player ;
-                player = p.getPlayer(user.getUsername());
+                player = p.getPlayer(user);
                 if(player != null){
                     res = true;
                 }
@@ -30,7 +30,7 @@ public class RegisterController {
             case 2 -> {
                 AdminDAO a = AdminDAO.getInstance();
                 Admin admin ;
-                admin = a.getAdmin(user.getUsername());
+                admin = a.getAdmin(user);
                 if(admin != null) {
                     res = true;
                 }
@@ -39,7 +39,7 @@ public class RegisterController {
                 RefereeDAO r = RefereeDAO.getInstance();
                 Referee referee ;
                 r.getConn();
-                referee = r.getReferee(user.getUsername());
+                referee = r.getReferee(user);
                 if(referee != null){
                     res = true;
                 }
@@ -48,13 +48,14 @@ public class RegisterController {
         return res;
     }
 
+    //factory
+
     public static void userRegister(UserBean user,int userType) {
         String username;
         String password;
         try {
             switch (userType) {
                 case 1 -> {
-                    System.out.println("Player"+user.getUsername());
                     PlayerDAO player = PlayerDAO.getInstance();
                     username = user.getUsername();
                     password = user.getPassword();

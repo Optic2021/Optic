@@ -1,6 +1,6 @@
 package com.example.optic.bean;
 
-public class RefereeBean {
+public class RefereeBean implements UserBean {
     private String username;
     private String password;
     private String fkUsernameA1;
@@ -23,6 +23,35 @@ public class RefereeBean {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String getVia() {
+        return null;
+    }
+
+    @Override
+    public void setVia(String via) {
+
+    }
+
+    @Override
+    public String getNomeC() {
+        return null;
+    }
+
+    @Override
+    public void setNomeC(String nomeC) {
+
+    }
+
+    @Override
+    public String getProv() {
+        return null;
+    }
+
+    @Override
+    public void setProv(String prov) {
     }
 
     public String getFkUsernameA1() {

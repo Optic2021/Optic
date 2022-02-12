@@ -4,6 +4,7 @@ import com.example.optic.Optic;
 import com.example.optic.app_controllers.ModPGPageAppController;
 import com.example.optic.bean.AdminBean;
 import com.example.optic.bean.GiornataBean;
+import com.example.optic.bean.RefereeBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.*;
 import com.example.optic.utilities.ImportList;
@@ -105,7 +106,7 @@ public class ControllerModPGPage extends GraphicController {
     //setto la prima giornata di gioco disponibile
     public void setFirstPlay(String user) throws IOException {
         Giornata play = null;
-        UserBean bean = new UserBean();
+        UserBean bean = new RefereeBean();
         bean.setUsername(user);
         try {
             play = ModPGPageAppController.getFirstPlay(bean);
@@ -307,7 +308,7 @@ public class ControllerModPGPage extends GraphicController {
 
     //prendo il valore dentro il database dell'arbitro
     public void playgroundReferee(String user){
-        UserBean bean2 = new UserBean();
+        UserBean bean2 = new RefereeBean();
         bean2.setUsername(user);
         //prendo l'arbitro collegato all'admin
         Referee ref2=ModPGPageAppController.getRefereeFromAdmin(bean2);
@@ -320,8 +321,8 @@ public class ControllerModPGPage extends GraphicController {
 
     //cambio l'arbitro del campo
     public void setReferee(String refereeUsername){
-        UserBean adminBean = new UserBean();
-        UserBean refBean = new UserBean();
+        UserBean adminBean = new AdminBean();
+        UserBean refBean = new RefereeBean();
         refBean.setUsername(refereeUsername);
         adminBean.setUsername(user.getText());
         //controllo se il referee esiste
@@ -344,7 +345,7 @@ public class ControllerModPGPage extends GraphicController {
     }
 
     public void freeReferee(){
-        UserBean u = new UserBean();
+        UserBean u = new RefereeBean();
         u.setUsername(ref.getText());
         try {
             ModPGPageAppController.getReferee(u);

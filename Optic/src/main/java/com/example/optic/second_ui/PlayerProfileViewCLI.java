@@ -29,7 +29,7 @@ public class PlayerProfileViewCLI{
 
     public static void main(String user,String viewerUsername){
         String viewer = viewerUsername;
-        utente.setBUsername(user);
+        utente.setUsername(user);
         Player p;
         p = UserProfileAppController.getPlayer(utente);
         utente.setBIg(p.getIg());
@@ -107,7 +107,7 @@ public class PlayerProfileViewCLI{
                 } else {
                     val.setRecensione(input);
                 }
-                val.setRiceve(utente.getBUsername());
+                val.setRiceve(utente.getUsername());
                 val.setUsernameP1(viewer);
                 UserProfileAppController.saveReview(val);
             } while (Boolean.FALSE.equals(flag));
@@ -121,8 +121,8 @@ public class PlayerProfileViewCLI{
     }
 
     public static void showRecentPlays(){
-        UserBean bean = new UserBean();
-        bean.setUsername(utente.getBUsername());
+        UserBean bean = new PlayerBean();
+        bean.setUsername(utente.getUsername());
         List<Giornata> list = UserProfileAppController.getRecentPlayList(bean);
         if(list.isEmpty()){
             System.out.println("Non ci sono partite recenti da mostrare.");
@@ -138,7 +138,7 @@ public class PlayerProfileViewCLI{
         boolean res;
         List<ReportBean> list;
         try{
-            list = UserProfileAppController.getReportList(utente.getBUsername());
+            list = UserProfileAppController.getReportList(utente.getUsername());
             for (int i = 0; i < list.size(); i++) {
                 System.out.println(list.get(i).getFormattedText());
             }

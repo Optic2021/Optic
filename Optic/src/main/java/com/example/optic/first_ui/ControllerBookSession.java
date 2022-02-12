@@ -58,7 +58,7 @@ public class ControllerBookSession extends GraphicController {
     public void populateCampiTable(String user) {
         //da finire
         PlayerBean player = new PlayerBean();
-        player.setBUsername(user);
+        player.setUsername(user);
 
         try {
             List<Admin> lista = BookSessionAppController.getCampi();

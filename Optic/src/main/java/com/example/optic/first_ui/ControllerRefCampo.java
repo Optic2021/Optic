@@ -2,6 +2,7 @@ package com.example.optic.first_ui;
 
 import com.example.optic.app_controllers.RefReportPlayer;
 import com.example.optic.bean.GiornataBean;
+import com.example.optic.bean.RefereeBean;
 import com.example.optic.bean.ReportBean;
 import com.example.optic.bean.UserBean;
 import com.example.optic.entities.Admin;
@@ -47,7 +48,7 @@ public class ControllerRefCampo extends GraphicController{
     public void setUserVariables(String user) {
         this.user.setText(user);
         Admin a = null;
-        UserBean bean = new UserBean();
+        UserBean bean = new RefereeBean();
         bean.setUsername(user);
         a = RefReportPlayer.getAdminFromRef(bean);
         if(a == null){
@@ -67,7 +68,7 @@ public class ControllerRefCampo extends GraphicController{
     //setto la prima giornata di gioco disponibile
     public void setFirstPlay(String user){
         Giornata play = null;
-        UserBean bean = new UserBean();
+        UserBean bean = new RefereeBean();
         //setto la bean con info dell'admin del campo attualmente visualizzato
         bean.setUsername(user);
         try {

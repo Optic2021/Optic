@@ -12,11 +12,9 @@ public class TestRegister {
     //testo il login con un utente esistente e password giusta
     @Test
     public void testUsernameUsed(){
-        UserBean user=new UserBean();
-        user.setUsername("Not Used");
         boolean res= false;
         try {
-            res = RegisterController.isUsernameUsed(user,1);
+            res = RegisterController.isUsernameUsed("Not Used",1);
         } catch (ClassNotFoundException |SQLException e ) {
             e.printStackTrace();
         }

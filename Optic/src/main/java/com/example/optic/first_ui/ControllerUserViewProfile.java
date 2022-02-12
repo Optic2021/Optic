@@ -65,7 +65,7 @@ public class ControllerUserViewProfile extends GraphicController{
         Player p = null;
         try {
             PlayerBean player = new PlayerBean();
-            player.setBUsername(prof);
+            player.setUsername(prof);
             this.populateReviewList(prof);
             this.populateGamesTable();
             p = UserProfileAppController.getPlayer(player);
@@ -87,7 +87,7 @@ public class ControllerUserViewProfile extends GraphicController{
     //popolo la lista di review e utilizzo i dati delle valutazioni per il contatore
     public void populateReviewList(String user){
         PlayerBean player = new PlayerBean();
-        player.setBUsername(user);
+        player.setUsername(user);
         List<Valutazione> list = null;
         list = UserProfileAppController.getReviewList(player);
         int stars= ImportList.populateReviewList(list,reviews,nVal);
@@ -98,7 +98,7 @@ public class ControllerUserViewProfile extends GraphicController{
 
     //popolo la tabella con lo storico delle partite del player
     public void populateGamesTable() throws SQLException {
-        UserBean player = new UserBean();
+        UserBean player = new PlayerBean();
         String[] app = profile.getText().split(" ");
         String username=app[1];
         player.setUsername(username);

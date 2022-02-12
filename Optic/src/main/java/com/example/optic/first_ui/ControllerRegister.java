@@ -1,6 +1,7 @@
 package com.example.optic.first_ui;
 
 import com.example.optic.app_controllers.RegisterController;
+import com.example.optic.bean.Factory;
 import com.example.optic.bean.UserBean;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -67,30 +68,17 @@ public class ControllerRegister extends GraphicController {
         } else{
             String name = username.getText();
             String pw = password.getText();
-            UserBean bean = new UserBean();
-            bean.setUsername(name);
-            bean.setPassword(pw);
-            String[] arr = {"views/userHomeMap.fxml","views/modPgPage.fxml","views/refCampo.fxml"};
-            switch (prof) {
-                //registrazione admin
-                case 2 -> {
-                    bean.setVia(addressField.getText());
-                    bean.setNomeC(pgNameField.getText());
-                    bean.setProv(pgProvField.getText());
-                    res = RegisterController.isUsernameUsed(bean, 2);
-                }
-                //registrazione arbitro
-                case 3 -> {
-                    res = RegisterController.isUsernameUsed(bean, 3);
-                }
-                //registrazione giocatore
-                default -> {
-                    res = RegisterController.isUsernameUsed(bean, 1);
-                }
 
-            }
-            if (!res) {
-                RegisterController.userRegister(bean, prof);
+            res = RegisterController.isUsernameUsed(username.getText(), prof);
+            if(!res) {
+                UserBean user = Factory.createUser(prof);
+                user.setUsername(username.getText());
+                user.setPassword(password.getText());
+                user.setVia(addressField.getText());
+                user.setNomeC(pgNameField.getText());
+                user.setProv(pgProvField.getText());
+                String[] arr = {"views/userHomeMap.fxml","views/modPgPage.fxml","views/refCampo.fxml"};
+                RegisterController.userRegister(user, prof);
                 Alert conf = new Alert(Alert.AlertType.CONFIRMATION);
                 conf.setContentText("Registrazione avvenuta con successo!");
                 conf.show();

@@ -2,6 +2,7 @@ package com.example.optic.second_ui;
 
 import com.example.optic.Optic2UI;
 import com.example.optic.app_controllers.RegisterController;
+import com.example.optic.bean.Factory;
 import com.example.optic.bean.UserBean;
 import com.example.optic.utilities.ImportCheckInput;
 import java.io.BufferedReader;
@@ -16,7 +17,7 @@ public class RegisterCLI {
     public static void main(){
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            UserBean bean = new UserBean();
+            UserBean bean= null;
             String input;
             String user = null;
             String password;
@@ -35,6 +36,7 @@ public class RegisterCLI {
                 } while (!res2);
                 type = Integer.parseInt(input);
                 if(type == 1 || type == 2 || type == 3) {
+                    bean = Factory.createUser(type);
                     System.out.println("Inserisci Username : ");
                     user = br.readLine();
                     System.out.println("Inserisci Password : ");
@@ -42,6 +44,7 @@ public class RegisterCLI {
                     bean.setUsername(user);
                     bean.setPassword(password);
                 }
+
                 switch (type) {
                     //registrazione admin
                     case 2 -> {
@@ -57,17 +60,17 @@ public class RegisterCLI {
                         bean.setVia(via);
                         bean.setNomeC(nomeC);
                         bean.setProv(prov);
-                        res = RegisterController.isUsernameUsed(bean,2);
+                        res = RegisterController.isUsernameUsed(user,2);
                     }
                     //registrazione arbitro
                     case 3 -> {
-                        res = RegisterController.isUsernameUsed(bean,3);
+                        res = RegisterController.isUsernameUsed(user,3);
                     }
                     case 4 -> Optic2UI.main2();
                     case 5 -> System.exit(0);
                     //registrazione player
                     default -> {
-                        res = RegisterController.isUsernameUsed(bean,1);
+                        res = RegisterController.isUsernameUsed(user,1);
                     }
                 }
                 if (res) {

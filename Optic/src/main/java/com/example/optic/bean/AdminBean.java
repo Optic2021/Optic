@@ -1,6 +1,6 @@
 package com.example.optic.bean;
 
-public class AdminBean implements java.io.Serializable{
+public class AdminBean implements UserBean{
     private String username;
     private String password;
     private String insta;
@@ -74,6 +74,26 @@ public class AdminBean implements java.io.Serializable{
 
     public void setVia(String via) {
         this.via = via;
+    }
+
+    @Override
+    public String getNomeC() {
+        return null;
+    }
+
+    @Override
+    public void setNomeC(String nomeC) {
+
+    }
+
+    @Override
+    public String getProv() {
+        return null;
+    }
+
+    @Override
+    public void setProv(String prov) {
+
     }
 
     public String getProvincia() {

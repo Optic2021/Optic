@@ -53,8 +53,8 @@ public class Optic2UI {
                         case 1 -> {
                             uspass=getUsPass();
                             PlayerBean p = new PlayerBean();
-                            p.setBUsername(uspass[0]);
-                            p.setBPassword(uspass[1]);
+                            p.setUsername(uspass[0]);
+                            p.setPassword(uspass[1]);
                             res = LoginController.playerLogin(p);
                         }
                         default -> {

@@ -2,10 +2,7 @@ package com.example.optic.first_ui;
 
 import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.app_controllers.ReviewAppController;
-import com.example.optic.bean.AdminBean;
-import com.example.optic.bean.GiornataBean;
-import com.example.optic.bean.UserBean;
-import com.example.optic.bean.ValutazioneBean;
+import com.example.optic.bean.*;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
 import com.example.optic.entities.Valutazione;
@@ -79,7 +76,7 @@ public class ControllerUserPgPage extends GraphicController {
     //setto la prima giornata di gioco disponibile
     public void setFirstPlay(String user) {
         Giornata play = null;
-        UserBean bean = new UserBean();
+        UserBean bean = new AdminBean();
         //setto la bean con info dell'admin del campo attualmente visualizzato
         bean.setUsername(user);
         try {
@@ -131,7 +128,7 @@ public class ControllerUserPgPage extends GraphicController {
         book.setVisible(!bool);
     }
     public void bookPlay() throws IOException {
-        UserBean bean = new UserBean();
+        UserBean bean = new PlayerBean();
         GiornataBean playBean = new GiornataBean();
         bean.setUsername(user.getText());
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));

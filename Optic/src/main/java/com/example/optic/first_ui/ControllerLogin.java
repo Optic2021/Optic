@@ -60,8 +60,8 @@ public class ControllerLogin extends GraphicController {
                 }
                 default -> {
                     PlayerBean p = new PlayerBean();
-                    p.setBUsername(name);
-                    p.setBPassword(pw);
+                    p.setUsername(name);
+                    p.setPassword(pw);
                     res = LoginController.playerLogin(p);
                     view = "views/userHomeMap.fxml";
                 }

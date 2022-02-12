@@ -12,8 +12,8 @@ public class TestLoginController {
     public void testPlayerLoginNotValid(){
         PlayerBean player = new PlayerBean();
         //nome non presente nel database
-        player.setBUsername("NotValid");
-        player.setBPassword("1234");
+        player.setUsername("NotValid");
+        player.setPassword("1234");
         boolean output = LoginController.playerLogin(player);
         assertFalse(output);
     }
@@ -23,9 +23,9 @@ public class TestLoginController {
     public void testPlayerLoginValid(){
         PlayerBean player = new PlayerBean();
         //nome presente nel database
-        player.setBUsername("simone");
+        player.setUsername("simone");
         //password giusta dell'utente simone
-        player.setBPassword("simo");
+        player.setPassword("simo");
         boolean output = LoginController.playerLogin(player);
         assertTrue(output);
     }
