@@ -49,7 +49,7 @@
       <recent name="com.example.optic.SecondUI" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Optic">
+  <component name="RunManager" selected="JUnit.TestRegister.testUsernameUsed">
     <configuration name="Optic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.optic.Optic" />
       <module name="Optic" />
@@ -71,11 +71,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestLoginController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestImportUrl.TestControlliUrl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Optic" />
-      <option name="PACKAGE_NAME" value="castelli" />
-      <option name="MAIN_CLASS_NAME" value="castelli.TestLoginController" />
-      <option name="TEST_OBJECT" value="class" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="carloni.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="carloni" />
+      <option name="MAIN_CLASS_NAME" value="carloni.TestImportUrl" />
+      <option name="METHOD_NAME" value="TestControlliUrl" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,22 +96,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserProfile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRegister.testUsernameUsed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Optic" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestUserProfile" />
-      <option name="TEST_OBJECT" value="class" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="carloni.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="carloni" />
+      <option name="MAIN_CLASS_NAME" value="carloni.TestRegister" />
+      <option name="METHOD_NAME" value="testUsernameUsed" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRegister.testUsernameUsed" />
+        <item itemvalue="JUnit.TestImportUrl.TestControlliUrl" />
         <item itemvalue="Application.Optic" />
         <item itemvalue="JUnit.All in Optic" />
         <item itemvalue="JUnit.TestPlayer" />
-        <item itemvalue="JUnit.TestUserProfile" />
-        <item itemvalue="JUnit.TestLoginController" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +232,8 @@
       <workItem from="1644342671897" duration="4132000" />
       <workItem from="1644419533543" duration="6000" />
       <workItem from="1644419562973" duration="6467000" />
+      <workItem from="1644678310246" duration="1001000" />
+      <workItem from="1644679328622" duration="238000" />
     </task>
     <servers />
   </component>

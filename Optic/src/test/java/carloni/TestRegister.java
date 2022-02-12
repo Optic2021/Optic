@@ -13,10 +13,10 @@ public class TestRegister {
     @Test
     public void testUsernameUsed(){
         UserBean user=new UserBean();
-        user.setUsername("NotUsed");
+        user.setUsername("Not Used");
         boolean res= false;
         try {
-            res = RegisterController.isUsernameUsed(user,2);
+            res = RegisterController.isUsernameUsed(user,1);
         } catch (ClassNotFoundException |SQLException e ) {
             e.printStackTrace();
         }
