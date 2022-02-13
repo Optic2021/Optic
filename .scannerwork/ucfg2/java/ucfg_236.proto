@@ -1,16 +1,9 @@
 
-Acom.example.optic.entities.Giornata#getFkNome()Ljava/lang/String;w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java> >("1*ä
-1w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java? ?(Ï
-Ì
-w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java? ?(
-%0java.lang.String"__id*3*1%
-#com.example.optic.entities.Giornata"
-fkNome"“
-w
-mF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java? ?(
-
-%0java.lang.StringB'%
+6com.example.optic.entities.Giornata#getNumGiocatori()Iz
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java: :("1*†
+1z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java; ;("„
+z
+pC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/entities/Giornata.java; ;(!
+""B'%
 #com.example.optic.entities.Giornata

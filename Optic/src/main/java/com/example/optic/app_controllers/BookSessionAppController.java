@@ -53,7 +53,7 @@ public class BookSessionAppController {
                 y.setReferee(ref.getUsername());
             }
             y.setVia(x.getVia());
-            y.setProvincia(x.getProvincia());
+            y.setProv(x.getProvincia());
         }
         return y;
     }

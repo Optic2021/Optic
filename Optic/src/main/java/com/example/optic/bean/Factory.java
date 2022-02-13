@@ -1,6 +1,7 @@
 package com.example.optic.bean;
 
 public class Factory {
+    private Factory(){/*does np*/}
     public static UserBean createUser(int prof){
         UserBean user;
         switch(prof){

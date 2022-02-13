@@ -1,16 +1,37 @@
 
-Ccom.example.optic.entities.Event#getDescrizione()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Event.java ( "1*›
-1t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Event.java (Œ
-À
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Event.java (
-%0java.lang.String"__id*5*3"
- com.example.optic.entities.Event"
-descrizione"ê
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Event.java (
-
-%0java.lang.StringB$"
- com.example.optic.entities.Event
+Jcom.example.optic.utilities.ImportCheckInput#isNumber(Ljava/lang/String;)ZÉ
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (""5*‘
+4É
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (‡›
+É
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java" (/
+
+%1char"java.lang.String#charAt(I)C*
+
+strjava.lang.String*
+""2	charAt(I)‡
+›
+É
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (0
+%2boolean"java.lang.Character#isDigit(C)Z*"
+java.lang.Character*
+
+
+%1char*
+5*È
+5É
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (’“
+É
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java ('	
+%0int"java.lang.String#length()I*
+
+strjava.lang.String2length()*
+4
+1*ö
+1É
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java ("é
+É
+yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportCheckInput.java (
+"":
+strjava.lang.StringB0".
+,com.example.optic.utilities.ImportCheckInput

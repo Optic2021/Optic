@@ -1,16 +1,16 @@
 
-Acom.example.optic.utilities.ImportDAO#getUser()Ljava/lang/String;y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java ("1*ê
+Ecom.example.optic.dao.RefereeDAO#getConnection()Ljava/sql/Connection;y
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java‘ ‘(#"1*ë
 1y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (Ñ
-Î
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java’ ’(Ï
+Ì
 y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (
-%0java.lang.String"__id*3*1'
-%com.example.optic.utilities.ImportDAO"
-user"•
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java’ ’(
+%0java.sql.Connection"__id*.*,"
+ com.example.optic.dao.RefereeDAO"
+conn"˜
 y
-oF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (
-
-%0java.lang.StringB)'
-%com.example.optic.utilities.ImportDAO
+mC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/RefereeDAO.java’ ’(
+
+%0java.sql.ConnectionB$"
+ com.example.optic.dao.RefereeDAO

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //Il metodo richiamato controlla che il social selezionato tramite variabile social sia valido
 public class TestImportUrl{
     @Test
-    public void TestControlliUrl(){
+    public void testControlliUrl(){
         boolean res=ImportUrl.controlliUrl("","https://www.facebook.com/","",1);
         assertEquals(true,res);
     }

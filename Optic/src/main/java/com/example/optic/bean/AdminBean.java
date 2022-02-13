@@ -60,14 +60,6 @@ public class AdminBean implements UserBean{
         this.descrizione = descrizione;
     }
 
-    public String getNomeCampo() {
-        return nomeCampo;
-    }
-
-    public void setNomeCampo(String nomeCampo) {
-        this.nomeCampo = nomeCampo;
-    }
-
     public String getVia() {
         return via;
     }
@@ -78,30 +70,22 @@ public class AdminBean implements UserBean{
 
     @Override
     public String getNomeC() {
-        return null;
+        return nomeCampo;
     }
 
     @Override
     public void setNomeC(String nomeC) {
-
+        nomeCampo=nomeC;
     }
 
     @Override
     public String getProv() {
-        return null;
+        return provincia;
     }
 
     @Override
     public void setProv(String prov) {
-
-    }
-
-    public String getProvincia() {
-        return provincia;
-    }
-
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+        provincia=prov;
     }
 
     public String getReferee() {

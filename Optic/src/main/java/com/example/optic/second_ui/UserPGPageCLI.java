@@ -62,7 +62,7 @@ public class UserPGPageCLI {
     }
 
     public static void showInfo(String user,AdminBean admin){
-        System.out.println(admin.getNomeCampo()+"\nDescrizione: "+admin.getDescrizione()+"\nAdmin: "+admin.getUsername()+"\nArbitro: "+admin.getReferee()+"\nVia: "+admin.getVia()+"\nProvincia: "+admin.getProvincia());
+        System.out.println(admin.getNomeCampo()+"\nDescrizione: "+admin.getDescrizione()+"\nAdmin: "+admin.getUsername()+"\nArbitro: "+admin.getReferee()+"\nVia: "+admin.getVia()+"\nProvincia: "+admin.getProv());
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
         try {

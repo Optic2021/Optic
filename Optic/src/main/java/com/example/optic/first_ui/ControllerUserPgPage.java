@@ -204,7 +204,7 @@ public class ControllerUserPgPage extends GraphicController {
         adminName.setText(admin.getUsername());
         ref.setText(admin.getReferee());
         address.setText(admin.getVia());
-        prov.setText(admin.getProvincia());
+        prov.setText(admin.getProv());
         fb.setText(admin.getFaceb());
         ig.setText(admin.getInsta());
         wa.setText(admin.getWhats());

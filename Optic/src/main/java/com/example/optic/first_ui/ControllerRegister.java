@@ -67,7 +67,6 @@ public class ControllerRegister extends GraphicController {
             err.show();
         } else{
             String name = username.getText();
-            String pw = password.getText();
 
             res = RegisterController.isUsernameUsed(username.getText(), prof);
             if(!res) {

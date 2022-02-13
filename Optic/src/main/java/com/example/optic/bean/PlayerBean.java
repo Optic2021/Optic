@@ -32,24 +32,29 @@ public class PlayerBean implements UserBean{
 
     @Override
     public void setVia(String via) {
+        //Does np only needed to support Factory
     }
 
     @Override
     public String getNomeC() {
+        //Does np only needed to support Factory
         return null;
     }
 
     @Override
     public void setNomeC(String nomeC) {
+        //Does np only needed to support Factory
     }
 
     @Override
     public String getProv() {
+        //Does np only needed to support Factory
         return null;
     }
 
     @Override
     public void setProv(String prov) {
+        //Does np only needed to support Factory
     }
 
     public String getBDescrizione() {

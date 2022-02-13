@@ -93,6 +93,8 @@ public class Player {
 
     private void setStarsFromVal(int valutazione){
         switch (valutazione){
+            case 0: this.stelle="";
+            break;
             case 1: this.stelle = "*";
             break;
             case 2: this.stelle = "* *";

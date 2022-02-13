@@ -8,19 +8,19 @@ public class RefereeBean implements UserBean {
     public RefereeBean(){
         //costruttore vuoto
     }
-
+    @Override
     public String getUsername() {
         return username;
     }
-
+    @Override
     public void setUsername(String username) {
         this.username = username;
     }
-
+    @Override
     public String getPassword() {
         return password;
     }
-
+    @Override
     public void setPassword(String password) {
         this.password = password;
     }
@@ -32,7 +32,7 @@ public class RefereeBean implements UserBean {
 
     @Override
     public void setVia(String via) {
-
+        //Does np only needed to support Factory
     }
 
     @Override
@@ -42,7 +42,7 @@ public class RefereeBean implements UserBean {
 
     @Override
     public void setNomeC(String nomeC) {
-
+        //Does np only needed to support Factory
     }
 
     @Override
@@ -52,6 +52,7 @@ public class RefereeBean implements UserBean {
 
     @Override
     public void setProv(String prov) {
+        //Does np only needed to support Factory
     }
 
     public String getFkUsernameA1() {

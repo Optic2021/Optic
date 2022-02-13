@@ -1,17 +1,16 @@
 
-@com.example.optic.bean.AdminBean#getPassword()Ljava/lang/String;t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java ("1*Ú
-1t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (Ë
-È
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (
-%0java.lang.String"__id*2*0"
- com.example.optic.bean.AdminBean"
-
-password"
-t
-jF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/AdminBean.java (
+Lcom.example.optic.utilities.ImportDAO#getDriverClassName()Ljava/lang/String;|
+rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java ($"1*þ
+1|
+rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (ß
+Ü
+|
+rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (
+%0java.lang.String"__id*>*<'
+%com.example.optic.utilities.ImportDAO"
+driverClassName"˜
+|
+rC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/utilities/ImportDAO.java (
 
-%0java.lang.StringB$"
- com.example.optic.bean.AdminBean
+%0java.lang.StringB)'
+%com.example.optic.utilities.ImportDAO
