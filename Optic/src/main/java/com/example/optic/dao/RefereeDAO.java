@@ -11,7 +11,7 @@ public class RefereeDAO {
     private static RefereeDAO instance = null;
     private Connection conn;
 
-    protected RefereeDAO() {
+    private RefereeDAO() {
         this.conn = null;
     }
 

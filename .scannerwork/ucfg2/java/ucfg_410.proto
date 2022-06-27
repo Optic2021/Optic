@@ -1,81 +1,81 @@
 
-Mcom.example.optic.bean.Factory#createUser(I)Lcom/example/optic/bean/UserBean;u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (%"2*¹
-2u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (±
-®
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java ('
+Mcom.example.optic.bean.Factory#createUser(I)Lcom/example/optic/bean/UserBean;r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (%"2*³
+2r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (®
+«
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java ('
 usercom.example.optic.bean.UserBean"__id*
 ""*	
 3
 4
-5*ÿ
-3u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (ÈÅ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (*(
-%4"com.example.optic.bean.RefereeBean""com.example.optic.bean.RefereeBeanÚ
-×
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (,
+5*ó
+3r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (ÅÂ
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (*(
+%4"com.example.optic.bean.RefereeBean""com.example.optic.bean.RefereeBean×
+Ô
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (,
 %5",com.example.optic.bean.RefereeBean#<init>()V**
 (
-%4"com.example.optic.bean.RefereeBeanÕ
-Ò
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (,'
+%4"com.example.optic.bean.RefereeBeanÒ
+Ï
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (,'
 usercom.example.optic.bean.UserBean"__id**
 (
 %4"com.example.optic.bean.RefereeBean*
-1*õ
-4u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java
- (ÄÁ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java
+1*é
+4r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java
+ (Á¾
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java
  
 ('&
-%2 com.example.optic.bean.AdminBean" com.example.optic.bean.AdminBeanÖ
-Ó
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java
+%2 com.example.optic.bean.AdminBean" com.example.optic.bean.AdminBeanÓ
+Ð
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java
  
 ()
 %3"*com.example.optic.bean.AdminBean#<init>()V*(
 &
-%2 com.example.optic.bean.AdminBeanÓ
-Ð
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java
+%2 com.example.optic.bean.AdminBeanÐ
+Í
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java
  
 ()'
 usercom.example.optic.bean.UserBean"__id*(
 &
 %2 com.example.optic.bean.AdminBean*
-1*ú
-5u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java 	(ÆÃ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (('
-%0!com.example.optic.bean.PlayerBean"!com.example.optic.bean.PlayerBeanØ
-Õ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (*
+1*î
+5r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java 	(ÃÀ
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (('
+%0!com.example.optic.bean.PlayerBean"!com.example.optic.bean.PlayerBeanÕ
+Ò
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (*
 %1"+com.example.optic.bean.PlayerBean#<init>()V*)
 '
-%0!com.example.optic.bean.PlayerBeanÔ
-Ñ
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (*'
+%0!com.example.optic.bean.PlayerBeanÑ
+Î
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java (*'
 usercom.example.optic.bean.UserBean"__id*)
 '
 %0!com.example.optic.bean.PlayerBean*
-1*Ÿ
-1u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java ("¢
-u
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java ()
+1*™
+1r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java ("Ÿ
+r
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/bean/Factory.java ()
 '
 usercom.example.optic.bean.UserBean:
 ""B"" 

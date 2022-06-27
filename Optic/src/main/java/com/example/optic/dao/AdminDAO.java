@@ -12,7 +12,7 @@ public class AdminDAO {
     private Connection conn;
 
     //costruttore
-    protected AdminDAO(){
+    private AdminDAO(){
         this.conn = null;
     }
 

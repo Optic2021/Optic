@@ -1,30 +1,30 @@
 
-Fcom.example.optic.second_ui.PlayerProfileCLI#back(Ljava/lang/String;)ZÉ
-yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java ("4*¥
-3É
-yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java0 (7£†
-É
-yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java0 (T
+Fcom.example.optic.second_ui.PlayerProfileCLI#back(Ljava/lang/String;)ZÄ
+vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java ("4*Æ
+3Ä
+vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java0 (7†ù
+Ä
+vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java0 (T
 %1boolean"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
 
 commandjava.lang.String*
 
 indietro2$equalsIgnoreCase(Ljava/lang/String;)*
-1*≥
-4É
-yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java (üú
-É
-yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java (,
+1*≠
+4Ä
+vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java (úô
+Ä
+vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java (,
 %0boolean"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
 
 commandjava.lang.String*
 back2$equalsIgnoreCase(Ljava/lang/String;)*
 3
-1*ö
-1É
-yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java ("é
-É
-yC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java (
+1*î
+1Ä
+vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java ("ã
+Ä
+vF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/PlayerProfileCLI.java (
 "":
 commandjava.lang.StringB0".
 ,com.example.optic.second_ui.PlayerProfileCLI

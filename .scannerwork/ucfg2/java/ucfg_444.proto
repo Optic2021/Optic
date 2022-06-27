@@ -1,16 +1,16 @@
 
-Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javau u(#"1*á
-1v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(Ë
-È
-v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(
+Dcom.example.optic.dao.PlayerDAO#getConnection()Ljava/sql/Connection;s
+iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javau u(#"1*Ø
+1s
+iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(È
+Å
+s
+iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(
 %0java.sql.Connection"__id*-*+!
 com.example.optic.dao.PlayerDAO"
-conn"•
-v
-lC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(
+conn"’
+s
+iF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/PlayerDAO.javav v(
 
 %0java.sql.ConnectionB#!
 com.example.optic.dao.PlayerDAO

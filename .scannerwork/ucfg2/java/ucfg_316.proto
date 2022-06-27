@@ -1,16 +1,16 @@
 
-Ccom.example.optic.dao.AdminDAO#getConnection()Ljava/sql/Connection;w
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¼ ¼(#"1*ã
-1w
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java½ ½(Ë
-È
-w
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java½ ½(
+Ccom.example.optic.dao.AdminDAO#getConnection()Ljava/sql/Connection;t
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java¼ ¼(#"1*Ú
+1t
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java½ ½(È
+Å
+t
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java½ ½(
 %0java.sql.Connection"__id*,** 
 com.example.optic.dao.AdminDAO"
-conn"–
-w
-kC:/Users/uazap/Desktop/Working copy/Optic.git/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java½ ½(
+conn"“
+t
+hF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/dao/AdminDAO.java½ ½(
 
 %0java.sql.ConnectionB" 
 com.example.optic.dao.AdminDAO

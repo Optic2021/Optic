@@ -14,7 +14,7 @@ public class PlayerDAO {
     private static PlayerDAO instance = null;
     private Connection conn;
 
-    protected PlayerDAO(){
+    private PlayerDAO(){
         this.conn = null;
     }
 
