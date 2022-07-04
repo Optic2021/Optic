@@ -130,7 +130,26 @@ $setUserVariables(Ljava/lang/String;)Vcom.example.optic.first_ui.ControllerSoci
 
 conferma()<com.example.optic.first_ui.ControllerSocialModPG#conferma()VF
 <init>():com.example.optic.first_ui.ControllerSocialModPG#<init>()VN
-exitSocial()>com.example.optic.first_ui.ControllerSocialModPG#exitSocial()V3
+exitSocial()>com.example.optic.first_ui.ControllerSocialModPG#exitSocial()Vø
+8com.example.optic.app_controllers.ModPGPageAppControllerjava.lang.ObjectŒ
+6getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)ìcom.example.optic.app_controllers.ModPGPageAppController#getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;ö
+.freeReferee(Lcom/example/optic/bean/UserBean;)hcom.example.optic.app_controllers.ModPGPageAppController#freeReferee(Lcom/example/optic/bean/UserBean;)V¢
+2isDateValid(Lcom/example/optic/bean/GiornataBean;)lcom.example.optic.app_controllers.ModPGPageAppController#isDateValid(Lcom/example/optic/bean/GiornataBean;)Z†
+1insertPlay(Lcom/example/optic/bean/GiornataBean;)kcom.example.optic.app_controllers.ModPGPageAppController#insertPlay(Lcom/example/optic/bean/GiornataBean;)V¡
+/getFirstPlay(Lcom/example/optic/bean/UserBean;)çcom.example.optic.app_controllers.ModPGPageAppController#getFirstPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;º
+-getReferee(Lcom/example/optic/bean/UserBean;)äcom.example.optic.app_controllers.ModPGPageAppController#getReferee(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;i
+getEventList()Wcom.example.optic.app_controllers.ModPGPageAppController#getEventList()Ljava/util/List;√
+0getRecentPlay(Lcom/example/optic/bean/UserBean;)écom.example.optic.app_controllers.ModPGPageAppController#getRecentPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;¢
+2setAdminSocial(Lcom/example/optic/bean/AdminBean;)lcom.example.optic.app_controllers.ModPGPageAppController#setAdminSocial(Lcom/example/optic/bean/AdminBean;)V«
+2getLastPlay(Lcom/example/optic/bean/GiornataBean;)êcom.example.optic.app_controllers.ModPGPageAppController#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;N
+<init>()Bcom.example.optic.app_controllers.ModPGPageAppController#<init>()V∑
+5getPlayersList(Lcom/example/optic/bean/GiornataBean;)~com.example.optic.app_controllers.ModPGPageAppController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;∏
+,getAdmin(Lcom/example/optic/bean/AdminBean;)ácom.example.optic.app_controllers.ModPGPageAppController#getAdmin(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/entities/Admin;€
+NsetReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)àcom.example.optic.app_controllers.ModPGPageAppController#setReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)V¢
+2setDescription(Lcom/example/optic/bean/AdminBean;)lcom.example.optic.app_controllers.ModPGPageAppController#setDescription(Lcom/example/optic/bean/AdminBean;)VØ
+1getReviewList(Lcom/example/optic/bean/AdminBean;)zcom.example.optic.app_controllers.ModPGPageAppController#getReviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;«
+2getNextPlay(Lcom/example/optic/bean/GiornataBean;)êcom.example.optic.app_controllers.ModPGPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;T
+closeConn()Ecom.example.optic.app_controllers.ModPGPageAppController#closeConn()V3
 com.example.optic.bean.UserBeanjava.lang.Object˚
  com.example.optic.bean.AdminBeanjava.lang.Objectcom.example.optic.bean.UserBeand
 setPassword(Ljava/lang/String;)Acom.example.optic.bean.AdminBean#setPassword(Ljava/lang/String;)VK
@@ -157,26 +176,7 @@ getNomeC()=com.example.optic.bean.AdminBean#getNomeC()Ljava/lang/String;^
 <init>()*com.example.optic.bean.AdminBean#<init>()V^
 setInsta(Ljava/lang/String;)>com.example.optic.bean.AdminBean#setInsta(Ljava/lang/String;)VK
 
-getInsta()=com.example.optic.bean.AdminBean#getInsta()Ljava/lang/String;ø
-8com.example.optic.app_controllers.ModPGPageAppControllerjava.lang.ObjectŒ
-6getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)ìcom.example.optic.app_controllers.ModPGPageAppController#getRefereeFromAdmin(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;ö
-.freeReferee(Lcom/example/optic/bean/UserBean;)hcom.example.optic.app_controllers.ModPGPageAppController#freeReferee(Lcom/example/optic/bean/UserBean;)V¢
-2isDateValid(Lcom/example/optic/bean/GiornataBean;)lcom.example.optic.app_controllers.ModPGPageAppController#isDateValid(Lcom/example/optic/bean/GiornataBean;)Z†
-1insertPlay(Lcom/example/optic/bean/GiornataBean;)kcom.example.optic.app_controllers.ModPGPageAppController#insertPlay(Lcom/example/optic/bean/GiornataBean;)V¡
-/getFirstPlay(Lcom/example/optic/bean/UserBean;)çcom.example.optic.app_controllers.ModPGPageAppController#getFirstPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;º
--getReferee(Lcom/example/optic/bean/UserBean;)äcom.example.optic.app_controllers.ModPGPageAppController#getReferee(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Referee;i
-getEventList()Wcom.example.optic.app_controllers.ModPGPageAppController#getEventList()Ljava/util/List;√
-0getRecentPlay(Lcom/example/optic/bean/UserBean;)écom.example.optic.app_controllers.ModPGPageAppController#getRecentPlay(Lcom/example/optic/bean/UserBean;)Lcom/example/optic/entities/Giornata;¢
-2setAdminSocial(Lcom/example/optic/bean/AdminBean;)lcom.example.optic.app_controllers.ModPGPageAppController#setAdminSocial(Lcom/example/optic/bean/AdminBean;)V«
-2getLastPlay(Lcom/example/optic/bean/GiornataBean;)êcom.example.optic.app_controllers.ModPGPageAppController#getLastPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;N
-<init>()Bcom.example.optic.app_controllers.ModPGPageAppController#<init>()V∑
-5getPlayersList(Lcom/example/optic/bean/GiornataBean;)~com.example.optic.app_controllers.ModPGPageAppController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;∏
-,getAdmin(Lcom/example/optic/bean/AdminBean;)ácom.example.optic.app_controllers.ModPGPageAppController#getAdmin(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/entities/Admin;€
-NsetReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)àcom.example.optic.app_controllers.ModPGPageAppController#setReferee(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/UserBean;)V¢
-2setDescription(Lcom/example/optic/bean/AdminBean;)lcom.example.optic.app_controllers.ModPGPageAppController#setDescription(Lcom/example/optic/bean/AdminBean;)VØ
-1getReviewList(Lcom/example/optic/bean/AdminBean;)zcom.example.optic.app_controllers.ModPGPageAppController#getReviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;«
-2getNextPlay(Lcom/example/optic/bean/GiornataBean;)êcom.example.optic.app_controllers.ModPGPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;T
-closeConn()Ecom.example.optic.app_controllers.ModPGPageAppController#closeConn()Vá
+getInsta()=com.example.optic.bean.AdminBean#getInsta()Ljava/lang/String;á
  com.example.optic.entities.Adminjava.lang.Objectd
 setPassword(Ljava/lang/String;)Acom.example.optic.entities.Admin#setPassword(Ljava/lang/String;)Vf
  setProvincia(Ljava/lang/String;)Bcom.example.optic.entities.Admin#setProvincia(Ljava/lang/String;)Vl
@@ -493,36 +493,7 @@ getCampi()Ucom.example.optic.app_controllers.BookSessionAppController#getCampi(
 0getCampoInfo(Lcom/example/optic/bean/AdminBean;)çcom.example.optic.app_controllers.BookSessionAppController#getCampoInfo(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/bean/AdminBean;Ì
 VisPlayerBooked(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/GiornataBean;)ícom.example.optic.app_controllers.BookSessionAppController#isPlayerBooked(Lcom/example/optic/bean/UserBean;Lcom/example/optic/bean/GiornataBean;)Z…
 2getNextPlay(Lcom/example/optic/bean/GiornataBean;)ícom.example.optic.app_controllers.BookSessionAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;V
-closeConn()Gcom.example.optic.app_controllers.BookSessionAppController#closeConn()Vü
-"com.example.optic.entities.Refereejava.lang.Objectf
-setPassword(Ljava/lang/String;)Ccom.example.optic.entities.Referee#setPassword(Ljava/lang/String;)VS
-getPassword()Bcom.example.optic.entities.Referee#getPassword()Ljava/lang/String;§
-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)bcom.example.optic.entities.Referee#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VS
-getUsername()Bcom.example.optic.entities.Referee#getUsername()Ljava/lang/String;W
-getAdminCampo()Dcom.example.optic.entities.Referee#getAdminCampo()Ljava/lang/String;Ä
-,<init>(Ljava/lang/String;Ljava/lang/String;)Pcom.example.optic.entities.Referee#<init>(Ljava/lang/String;Ljava/lang/String;)Vj
-!setAdminCampo(Ljava/lang/String;)Ecom.example.optic.entities.Referee#setAdminCampo(Ljava/lang/String;)Vf
-setUsername(Ljava/lang/String;)Ccom.example.optic.entities.Referee#setUsername(Ljava/lang/String;)VŸ
-/com.example.optic.first_ui.ControllerUserPgPage,com.example.optic.first_ui.GraphicControllerM
-toFacebook()=com.example.optic.first_ui.ControllerUserPgPage#toFacebook()VK
-setStars(I)<com.example.optic.first_ui.ControllerUserPgPage#setStars(I)Vu
- setFirstPlay(Ljava/lang/String;)Qcom.example.optic.first_ui.ControllerUserPgPage#setFirstPlay(Ljava/lang/String;)V£
-7populateReviewTable(Lcom/example/optic/bean/AdminBean;)hcom.example.optic.first_ui.ControllerUserPgPage#populateReviewTable(Lcom/example/optic/bean/AdminBean;)VO
-getLastPlay()>com.example.optic.first_ui.ControllerUserPgPage#getLastPlay()VM
-tableview2()=com.example.optic.first_ui.ControllerUserPgPage#tableview2()VO
-getNextPlay()>com.example.optic.first_ui.ControllerUserPgPage#getNextPlay()Vç
-,setCampo(Lcom/example/optic/bean/AdminBean;)]com.example.optic.first_ui.ControllerUserPgPage#setCampo(Lcom/example/optic/bean/AdminBean;)VE
-toHome()9com.example.optic.first_ui.ControllerUserPgPage#toHome()V}
-$setUserVariables(Ljava/lang/String;)Ucom.example.optic.first_ui.ControllerUserPgPage#setUserVariables(Ljava/lang/String;)Va
-populatePlayersTable()Gcom.example.optic.first_ui.ControllerUserPgPage#populatePlayersTable()VI
-
-bookPlay();com.example.optic.first_ui.ControllerUserPgPage#bookPlay()VE
-<init>()9com.example.optic.first_ui.ControllerUserPgPage#<init>()VM
-toWhatsapp()=com.example.optic.first_ui.ControllerUserPgPage#toWhatsapp()VE
-review()9com.example.optic.first_ui.ControllerUserPgPage#review()VK
-tableview()<com.example.optic.first_ui.ControllerUserPgPage#tableview()VO
-toInstagram()>com.example.optic.first_ui.ControllerUserPgPage#toInstagram()VO
-isDateValid()>com.example.optic.first_ui.ControllerUserPgPage#isDateValid()V(
+closeConn()Gcom.example.optic.app_controllers.BookSessionAppController#closeConn()V(
 java.lang.Comparablejava.lang.Object”
 java.lang.CharSequencejava.lang.ObjectE
 chars():java.lang.CharSequence#chars()Ljava/util/stream/IntStream;é
@@ -648,7 +619,40 @@ valueOf(J)-java.lang.String#valueOf(J)Ljava/lang/String;2
 checkIndex(II) java.lang.String#checkIndex(II)VX
 !<init>(Ljava/lang/StringBuilder;)3java.lang.String#<init>(Ljava/lang/StringBuilder;)V%
 value()java.lang.String#value()[B`
-%regionMatches(ZILjava/lang/String;II)7java.lang.String#regionMatches(ZILjava/lang/String;II)Zï
+%regionMatches(ZILjava/lang/String;II)7java.lang.String#regionMatches(ZILjava/lang/String;II)Zü
+"com.example.optic.entities.Refereejava.lang.Objectf
+setPassword(Ljava/lang/String;)Ccom.example.optic.entities.Referee#setPassword(Ljava/lang/String;)VS
+getPassword()Bcom.example.optic.entities.Referee#getPassword()Ljava/lang/String;§
+><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)bcom.example.optic.entities.Referee#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VS
+getUsername()Bcom.example.optic.entities.Referee#getUsername()Ljava/lang/String;W
+getAdminCampo()Dcom.example.optic.entities.Referee#getAdminCampo()Ljava/lang/String;Ä
+,<init>(Ljava/lang/String;Ljava/lang/String;)Pcom.example.optic.entities.Referee#<init>(Ljava/lang/String;Ljava/lang/String;)Vj
+!setAdminCampo(Ljava/lang/String;)Ecom.example.optic.entities.Referee#setAdminCampo(Ljava/lang/String;)Vf
+setUsername(Ljava/lang/String;)Ccom.example.optic.entities.Referee#setUsername(Ljava/lang/String;)VŸ
+/com.example.optic.first_ui.ControllerUserPgPage,com.example.optic.first_ui.GraphicControllerM
+toFacebook()=com.example.optic.first_ui.ControllerUserPgPage#toFacebook()VK
+setStars(I)<com.example.optic.first_ui.ControllerUserPgPage#setStars(I)Vu
+ setFirstPlay(Ljava/lang/String;)Qcom.example.optic.first_ui.ControllerUserPgPage#setFirstPlay(Ljava/lang/String;)V£
+7populateReviewTable(Lcom/example/optic/bean/AdminBean;)hcom.example.optic.first_ui.ControllerUserPgPage#populateReviewTable(Lcom/example/optic/bean/AdminBean;)VO
+getLastPlay()>com.example.optic.first_ui.ControllerUserPgPage#getLastPlay()VM
+tableview2()=com.example.optic.first_ui.ControllerUserPgPage#tableview2()VO
+getNextPlay()>com.example.optic.first_ui.ControllerUserPgPage#getNextPlay()Vç
+,setCampo(Lcom/example/optic/bean/AdminBean;)]com.example.optic.first_ui.ControllerUserPgPage#setCampo(Lcom/example/optic/bean/AdminBean;)VE
+toHome()9com.example.optic.first_ui.ControllerUserPgPage#toHome()V}
+$setUserVariables(Ljava/lang/String;)Ucom.example.optic.first_ui.ControllerUserPgPage#setUserVariables(Ljava/lang/String;)Va
+populatePlayersTable()Gcom.example.optic.first_ui.ControllerUserPgPage#populatePlayersTable()VI
+
+bookPlay();com.example.optic.first_ui.ControllerUserPgPage#bookPlay()VE
+<init>()9com.example.optic.first_ui.ControllerUserPgPage#<init>()VM
+toWhatsapp()=com.example.optic.first_ui.ControllerUserPgPage#toWhatsapp()VE
+review()9com.example.optic.first_ui.ControllerUserPgPage#review()VK
+tableview()<com.example.optic.first_ui.ControllerUserPgPage#tableview()VO
+toInstagram()>com.example.optic.first_ui.ControllerUserPgPage#toInstagram()VO
+isDateValid()>com.example.optic.first_ui.ControllerUserPgPage#isDateValid()VÂ
+5com.example.optic.app_controllers.ReviewAppControllerjava.lang.ObjectK
+<init>()?com.example.optic.app_controllers.ReviewAppController#<init>()V£
+4saveReview(Lcom/example/optic/bean/ValutazioneBean;)kcom.example.optic.app_controllers.ReviewAppController#saveReview(Lcom/example/optic/bean/ValutazioneBean;)V¶
+.reviewList(Lcom/example/optic/bean/AdminBean;)tcom.example.optic.app_controllers.ReviewAppController#reviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;ï
 java.text.Formatjava.lang.Cloneablejava.lang.Objectjava.io.Serializable”
 KcreateAttributedCharacterIterator([Ljava/text/AttributedCharacterIterator;)Éjava.text.Format#createAttributedCharacterIterator([Ljava/text/AttributedCharacterIterator;)Ljava/text/AttributedCharacterIterator;¶
 5createAttributedCharacterIterator(Ljava/lang/String;)mjava.text.Format#createAttributedCharacterIterator(Ljava/lang/String;)Ljava/text/AttributedCharacterIterator;&
@@ -1038,11 +1042,7 @@ getAdmin()@com.example.optic.bean.GiornataBean#getAdmin()Ljava/lang/String;N
 setData(Ljava/util/Calendar;)Bcom.example.optic.bean.GiornataBean#setData(Ljava/util/Calendar;)VG
 getnGiocatori()4com.example.optic.bean.GiornataBean#getnGiocatori()Ix
 &com.example.optic.utilities.ImportStarjava.lang.Object<
-<init>()0com.example.optic.utilities.ImportStar#<init>()VÂ
-5com.example.optic.app_controllers.ReviewAppControllerjava.lang.ObjectK
-<init>()?com.example.optic.app_controllers.ReviewAppController#<init>()V£
-4saveReview(Lcom/example/optic/bean/ValutazioneBean;)kcom.example.optic.app_controllers.ReviewAppController#saveReview(Lcom/example/optic/bean/ValutazioneBean;)V¶
-.reviewList(Lcom/example/optic/bean/AdminBean;)tcom.example.optic.app_controllers.ReviewAppController#reviewList(Lcom/example/optic/bean/AdminBean;)Ljava/util/List;ë
+<init>()0com.example.optic.utilities.ImportStar#<init>()Vë
 1com.example.optic.utilities.InvalidSelectedPlayerjava.lang.ExceptionG
 <init>();com.example.optic.utilities.InvalidSelectedPlayer#<init>()VÒ
 !com.example.optic.entities.Playerjava.lang.Objecte
@@ -1120,7 +1120,13 @@ DinsertPlay(Ljava/lang/String;Ljava/lang/String;Ljava/util/Calendar;)gcom.examp
 com.example.optic.Optic2UIjava.lang.Object0
 <init>()$com.example.optic.Optic2UI#<init>()VH
 getUsPass()9com.example.optic.Optic2UI#getUsPass()[Ljava/lang/String;.
-main2()#com.example.optic.Optic2UI#main2()V&
+main2()#com.example.optic.Optic2UI#main2()V≠
+1com.example.optic.app_controllers.LoginControllerjava.lang.Objectó
+0playerLogin(Lcom/example/optic/bean/PlayerBean;)ccom.example.optic.app_controllers.LoginController#playerLogin(Lcom/example/optic/bean/PlayerBean;)ZO
+closeConn(I)?com.example.optic.app_controllers.LoginController#closeConn(I)VG
+<init>();com.example.optic.app_controllers.LoginController#<init>()Võ
+2refereeLogin(Lcom/example/optic/bean/RefereeBean;)ecom.example.optic.app_controllers.LoginController#refereeLogin(Lcom/example/optic/bean/RefereeBean;)Zì
+.adminLogin(Lcom/example/optic/bean/AdminBean;)acom.example.optic.app_controllers.LoginController#adminLogin(Lcom/example/optic/bean/AdminBean;)Z&
 java.lang.Readablejava.lang.Object>
 java.io.Closeablejava.lang.Objectjava.lang.AutoCloseableú
 java.io.Readerjava.io.Closeablejava.lang.Readablejava.lang.Object"
@@ -1244,13 +1250,7 @@ println(C)java.io.PrintStream#println(C)VK
 ,com.example.optic.utilities.ImportCheckInputjava.lang.ObjectB
 <init>()6com.example.optic.utilities.ImportCheckInput#<init>()Vn
 checkInput(Ljava/lang/String;)Lcom.example.optic.utilities.ImportCheckInput#checkInput(Ljava/lang/String;)Zj
-isNumber(Ljava/lang/String;)Jcom.example.optic.utilities.ImportCheckInput#isNumber(Ljava/lang/String;)Z≠
-1com.example.optic.app_controllers.LoginControllerjava.lang.Objectó
-0playerLogin(Lcom/example/optic/bean/PlayerBean;)ccom.example.optic.app_controllers.LoginController#playerLogin(Lcom/example/optic/bean/PlayerBean;)ZO
-closeConn(I)?com.example.optic.app_controllers.LoginController#closeConn(I)VG
-<init>();com.example.optic.app_controllers.LoginController#<init>()Võ
-2refereeLogin(Lcom/example/optic/bean/RefereeBean;)ecom.example.optic.app_controllers.LoginController#refereeLogin(Lcom/example/optic/bean/RefereeBean;)Zì
-.adminLogin(Lcom/example/optic/bean/AdminBean;)acom.example.optic.app_controllers.LoginController#adminLogin(Lcom/example/optic/bean/AdminBean;)Zﬂ	
+isNumber(Ljava/lang/String;)Jcom.example.optic.utilities.ImportCheckInput#isNumber(Ljava/lang/String;)Zﬂ	
 "com.example.optic.bean.RefereeBeanjava.lang.Objectcom.example.optic.bean.UserBeanf
 setPassword(Ljava/lang/String;)Ccom.example.optic.bean.RefereeBean#setPassword(Ljava/lang/String;)VK
 	getProv()>com.example.optic.bean.RefereeBean#getProv()Ljava/lang/String;[
@@ -1534,15 +1534,15 @@ EgetConnection(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)qjava.sql
 getLogWriter():java.sql.DriverManager#getLogWriter()Ljava/io/PrintWriter;F
 	drivers()9java.sql.DriverManager#drivers()Ljava/util/stream/Stream;>
 getLoginTimeout())java.sql.DriverManager#getLoginTimeout()I¿
-HgetConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)tjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)Ljava/sql/Connection;»
-com.example.optic.bean.Factoryjava.lang.Object^
-createUser(I)Mcom.example.optic.bean.Factory#createUser(I)Lcom/example/optic/bean/UserBean;4
-<init>()(com.example.optic.bean.Factory#<init>()Và
+HgetConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)tjava.sql.DriverManager#getConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)Ljava/sql/Connection;à
 4com.example.optic.app_controllers.RegisterControllerjava.lang.Objectö
 0userRegister(Lcom/example/optic/bean/UserBean;I)fcom.example.optic.app_controllers.RegisterController#userRegister(Lcom/example/optic/bean/UserBean;I)VR
 closeConn(I)Bcom.example.optic.app_controllers.RegisterController#closeConn(I)VJ
 <init>()>com.example.optic.app_controllers.RegisterController#<init>()VÄ
-#isUsernameUsed(Ljava/lang/String;I)Ycom.example.optic.app_controllers.RegisterController#isUsernameUsed(Ljava/lang/String;I)Zê
+#isUsernameUsed(Ljava/lang/String;I)Ycom.example.optic.app_controllers.RegisterController#isUsernameUsed(Ljava/lang/String;I)Z»
+com.example.optic.bean.Factoryjava.lang.Object^
+createUser(I)Mcom.example.optic.bean.Factory#createUser(I)Lcom/example/optic/bean/UserBean;4
+<init>()(com.example.optic.bean.Factory#<init>()Vê
 *com.example.optic.utilities.ImportAdminDAOjava.lang.Object@
 <init>()4com.example.optic.utilities.ImportAdminDAO#<init>()Vç
 setAdmin(Ljava/sql/ResultSet;)kcom.example.optic.utilities.ImportAdminDAO#setAdmin(Ljava/sql/ResultSet;)Lcom/example/optic/entities/Admin;°
@@ -1767,7 +1767,7 @@ hashCode()java.lang.Boolean#hashCode()I3
 .com.example.optic.first_ui.GraphicController$5EventHandler>
 .com.example.optic.first_ui.GraphicController$6EventHandler>
 .com.example.optic.first_ui.GraphicController$7EventHandler>
-.com.example.optic.first_ui.GraphicController$8EventHandler·
+.com.example.optic.first_ui.GraphicController$8EventHandlerŸ
 0com.example.optic.second_ui.PlayerProfileViewCLIjava.lang.ObjectN
 showReport()>com.example.optic.second_ui.PlayerProfileViewCLI#showReport()Vä
 *main(Ljava/lang/String;Ljava/lang/String;)\com.example.optic.second_ui.PlayerProfileViewCLI#main(Ljava/lang/String;Ljava/lang/String;)Vp
@@ -1775,7 +1775,8 @@ hashCode()java.lang.Boolean#hashCode()I3
 <init>():com.example.optic.second_ui.PlayerProfileViewCLI#<init>()VB
 save()8com.example.optic.second_ui.PlayerProfileViewCLI#save()Vf
 back(Ljava/lang/String;)Jcom.example.optic.second_ui.PlayerProfileViewCLI#back(Ljava/lang/String;)ZX
-showRecentPlays()Ccom.example.optic.second_ui.PlayerProfileViewCLI#showRecentPlays()VÇ
+showRecentPlays()Ccom.example.optic.second_ui.PlayerProfileViewCLI#showRecentPlays()Vv
+ showReviewList(Ljava/util/List;)Rcom.example.optic.second_ui.PlayerProfileViewCLI#showReviewList(Ljava/util/List;)VÇ
 4com.example.optic.first_ui.ControllerUserViewProfile,com.example.optic.first_ui.GraphicControllerN
 
 facebook()@com.example.optic.first_ui.ControllerUserViewProfile#facebook()VJ

@@ -1,6 +1,6 @@
 
 ácom.example.optic.app_controllers.ModPGPageAppController#getAdmin(Lcom/example/optic/bean/AdminBean;)Lcom/example/optic/entities/Admin;ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java ( "7*â
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java ("7*â
 2ç
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java (1Ó
 Î
@@ -66,5 +66,5 @@ $
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java (+
 )
 admin com.example.optic.entities.Admin:%
-a com.example.optic.bean.AdminBeanB<":
+a com.example.optic.bean.AdminBeanB<:
 8com.example.optic.app_controllers.ModPGPageAppController

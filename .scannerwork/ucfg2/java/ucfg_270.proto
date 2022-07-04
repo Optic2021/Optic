@@ -1,95 +1,95 @@
 
 \com.example.optic.second_ui.ModPGPageCLI#showPlayers(Lcom/example/optic/entities/Giornata;)V~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∂ ∂(""17*°
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∑ ∑(""17*°
 14~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¿ ¿(*≠
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¡ ¡(*≠
 ™
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¡ ¡(
-%12java.io.PrintStream"__id*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¬ ¬(
+%13java.io.PrintStream"__id*
 ""∆
 √
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¡' ¡(A
-%13java.lang.String"__concat*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¬' ¬(A
+%14java.lang.String"__concat*
 Numero Giocatori: *
 ""òï
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¡ ¡(B
-%14void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¬ ¬(B
+%15void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
-%12java.io.PrintStream*
+%13java.io.PrintStream*
 
-%13java.lang.String2println(Ljava/lang/String;)*
+%14java.lang.String2println(Ljava/lang/String;)*
 7
 11*ﬁ
 3~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java   (≠
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaÀ À(≠
 ™
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java   ("
-%25java.io.PrintStream"__id*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaÀ À("
+%26java.io.PrintStream"__id*
 ""üú
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java   (J
-%26void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaÀ À(J
+%27void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
-%25java.io.PrintStream* 
+%26java.io.PrintStream* 
 ATTENZIONE:Input non valido!2println(Ljava/lang/String;)*
 15
 0*÷
 15~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¿ ¿("…∆
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¡ ¡("…∆
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¿ ¿()
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java¡ ¡()
 
-%11int"java.util.List#size()I*
+%12int"java.util.List#size()I*
 
 listjava.util.List2size()*
 14*Ñ
 5~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∆ ∆()ø
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java« «()ø
 º
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∆ ∆()
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java« «()
 inputjava.lang.String"__id*
 
-%23java.lang.String∞
+%24java.lang.String∞
 ≠
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java« «(<
-%24boolean"Lcom.example.optic.utilities.ImportCheckInput#checkInput(Ljava/lang/String;)Z*0".
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java» »(<
+%25boolean"Lcom.example.optic.utilities.ImportCheckInput#checkInput(Ljava/lang/String;)Z*0".
 ,com.example.optic.utilities.ImportCheckInput*
 
 inputjava.lang.String*
 
 3
 15
-0*è
+0*‚
 17~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∑E ∑(K¨
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∏E ∏(K¨
 ©
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∑E ∑(N
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∏E ∏(N
 %0java.io.InputStream"__id*
 ""øº
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∑3 ∑(D
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∏3 ∏(D
 %1java.io.InputStreamReader"java.io.InputStreamReaderÉ
 Ä
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∑/ ∑(O
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∏/ ∏(O
 %2"8java.io.InputStreamReader#<init>(Ljava/io/InputStream;)V*!
 
 %1java.io.InputStreamReader*
 
 %0java.io.InputStreamπ∂
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∑  ∑(.
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∏  ∏(.
 %3java.io.BufferedReader"java.io.BufferedReader˛
 ˚
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∑ ∑(P
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∏ ∏(P
 %4"0java.io.BufferedReader#<init>(Ljava/io/Reader;)V*
 
 %3java.io.BufferedReader*!
@@ -97,134 +97,140 @@ rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/exampl
 %1java.io.InputStreamReader«
 ƒ
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∑ ∑(Q
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∏ ∏(Q
 brjava.io.BufferedReader"__id*
 
 %3java.io.BufferedReader¨
 ©
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaπ π(
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∫ ∫(
 inputjava.lang.String"__id*
 ""”–
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∫  ∫(,)
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaª  ª(,)
 %5#com.example.optic.bean.GiornataBean"#com.example.optic.bean.GiornataBeanÂ
 ‚
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∫ ∫(.
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaª ª(.
 %6"-com.example.optic.bean.GiornataBean#<init>()V*+
 )
 %5#com.example.optic.bean.GiornataBean„
 ‡
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∫ ∫(/+
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaª ª(/+
 bean#com.example.optic.bean.GiornataBean"__id*+
 )
 %5#com.example.optic.bean.GiornataBeanÑÅ
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaª ª(+	
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaº º(+	
 %7int"4com.example.optic.entities.Giornata#getIdGiornata()I*-
 +
 play#com.example.optic.entities.Giornata2getIdGiornata()åâ
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaª ª(,
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaº º(,
 
 %8void"1com.example.optic.bean.GiornataBean#setIdPlay(I)V*-
 +
 bean#com.example.optic.bean.GiornataBean*
 	
-%7int2setIdPlay(I)Ü
-É
+%7int2setIdPlay(I)ì
+ê
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaº º(G
-%9java.util.List"~com.example.optic.app_controllers.ModPGPageAppController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;*<":
-8com.example.optic.app_controllers.ModPGPageAppController*-
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaΩ Ω(2>
+%98com.example.optic.app_controllers.ModPGPageAppController"__id*H*F*
+(com.example.optic.second_ui.ModPGPageCLI"
+modPGPageAppController¬ø
+~
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaΩ Ω(G
+%10java.util.List"~com.example.optic.app_controllers.ModPGPageAppController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;*@
+>
+%98com.example.optic.app_controllers.ModPGPageAppController*-
 +
-bean#com.example.optic.bean.GiornataBeanπ
-∂
+bean#com.example.optic.bean.GiornataBean25getPlayersList(Lcom/example/optic/bean/GiornataBean;)∫
+∑
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaº º(H
-listjava.util.List"__id*
-
-%9java.util.List”–
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaΩ Ω(H
+listjava.util.List"__id*
+
+%10java.util.List”–
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaΩ Ω(
-%10boolean"java.util.List#isEmpty()Z*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaæ æ(
+%11boolean"java.util.List#isEmpty()Z*
 
 listjava.util.List2	isEmpty()*
 15
 0*à
 6~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∆ ∆(˝˙
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java« «(˝˙
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∆ ∆()
-%23java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java« «()
+%24java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
 
 brjava.io.BufferedReader2
 readLine()*
 5*Â
 7~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java≈ ≈(≠
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∆ ∆(≠
 ™
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java≈ ≈(
-%21java.io.PrintStream"__id*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∆ ∆(
+%22java.io.PrintStream"__id*
 ""™ß
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java≈ ≈(Q
-%22void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java∆ ∆(Q
+%23void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
-%21java.io.PrintStream*+)
+%22java.io.PrintStream*+)
 'Digitare un numero per tornare indietro2println(Ljava/lang/String;)*
 6*Ü
 9~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√+ √(R‹
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ+ ƒ(R‹
 Ÿ
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√+ √(R
-%19java.lang.String"__concat*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ+ ƒ(R
+%20java.lang.String"__concat*
 
-%16java.lang.String*
+%17java.lang.String*
 
-%18java.lang.Stringòï
+%19java.lang.Stringòï
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√ √(S
-%20void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ ƒ(S
+%21void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
-%15java.io.PrintStream*
+%16java.io.PrintStream*
 
-%19java.lang.String2println(Ljava/lang/String;)*
+%20java.lang.String2println(Ljava/lang/String;)*
 7
 11*¶
 10~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√5 √(Röó
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ5 ƒ(Röó
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√5 √(R
-%18java.lang.String"Acom.example.optic.entities.Player#getUsername()Ljava/lang/String;**
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ5 ƒ(R
+%19java.lang.String"Acom.example.optic.entities.Player#getUsername()Ljava/lang/String;**
 (
-%17!com.example.optic.entities.Player2getUsername()*
+%18!com.example.optic.entities.Player2getUsername()*
 9*ù
 0 "ï
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java— —(
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java“ “(
 implicit return*–
 11~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√ √(≠
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ ƒ(≠
 ™
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√ √("
-%15java.io.PrintStream"__id*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ ƒ("
+%16java.io.PrintStream"__id*
 ""µ
 ≤
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√+ √(2
-%16java.lang.String"__concat*
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ+ ƒ(2
+%17java.lang.String"__concat*
 ""*
 )€
 ÿ
 ~
-rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.java√5 √(D(
-%17!com.example.optic.entities.Player"
+rF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/second_ui/ModPGPageCLI.javaƒ5 ƒ(D(
+%18!com.example.optic.entities.Player"
 __arrayGet*
 
 listjava.util.List*

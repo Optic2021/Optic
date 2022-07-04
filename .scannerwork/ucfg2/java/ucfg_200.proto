@@ -1,6 +1,6 @@
 
 lcom.example.optic.app_controllers.ModPGPageAppController#isDateValid(Lcom/example/optic/bean/GiornataBean;)Zè
-ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java¨ ¨(%"1*ã
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java¨ ¨("1*ã
 1è
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java≠ ≠(≠
 ™
@@ -66,5 +66,5 @@ getAdmin()–
 è
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java≥ ≥(
 "":+
-bean#com.example.optic.bean.GiornataBeanB<":
+bean#com.example.optic.bean.GiornataBeanB<:
 8com.example.optic.app_controllers.ModPGPageAppController

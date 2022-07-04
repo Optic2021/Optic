@@ -1,7 +1,7 @@
 organization=optic2021
 projectKey=Optic2021_Optic
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.29762
+serverVersion=8.0.0.29939
 dashboardUrl=https://sonarcloud.io/dashboard?id=Optic2021_Optic
-ceTaskId=AYFx8fXy8zqbvqhBTimZ
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYFx8fXy8zqbvqhBTimZ
+ceTaskId=AYHIfvbdzyi4qE8e5WPZ
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYHIfvbdzyi4qE8e5WPZ

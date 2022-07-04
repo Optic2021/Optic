@@ -1,6 +1,6 @@
 
 Œcom.example.optic.app_controllers.UserProfileAppController#getPlayer(Lcom/example/optic/bean/PlayerBean;)Lcom/example/optic/entities/Player;
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (""7*
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java ("7*
 2
 „F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java (3ó
 ð
@@ -56,5 +56,5 @@
 „F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java! !(-
 +
 player!com.example.optic.entities.Player:&
-p!com.example.optic.bean.PlayerBeanB>"<
+p!com.example.optic.bean.PlayerBeanB><
 :com.example.optic.app_controllers.UserProfileAppController

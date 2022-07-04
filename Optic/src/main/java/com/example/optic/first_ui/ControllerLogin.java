@@ -23,14 +23,13 @@ public class ControllerLogin extends GraphicController {
     @FXML
     private RadioButton adminRB;
 
-    private LoginController loginController;
     @Override
     public void setUserVariables(String username){
         //does np
     }
 
     public void login() throws IOException {
-        loginController = new LoginController();
+        LoginController loginController = new LoginController();
         boolean res = false;
         Alert err = new Alert(Alert.AlertType.ERROR);
         if(username.getText().isEmpty() || password.getText().isEmpty()){

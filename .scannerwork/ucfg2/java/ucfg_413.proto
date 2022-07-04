@@ -1,16 +1,13 @@
 
-Dcom.example.optic.entities.Report#getMotivazione()Ljava/lang/String;u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java ( "1*á
+0com.example.optic.entities.Report#getIdReport()Iu
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java	 	("1*û
 1u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (Ð
-Í
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java
+ 
+("
 u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (
-%0java.lang.String"__id*6*4#
-!com.example.optic.entities.Report"
-motivazione"‘
-u
-kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java (
-
-%0java.lang.StringB%#
+kF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/entities/Report.java
+ 
+(
+""B%#
 !com.example.optic.entities.Report

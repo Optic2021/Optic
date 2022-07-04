@@ -1,30 +1,30 @@
 
 wcom.example.optic.app_controllers.RefReportPlayer#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javaa a(-"1*˝
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java^ ^(&"1*˝
 1Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javab b(±
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java_ _(±
 Æ
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javab b(
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java_ _(
 listjava.util.List"__id*
 ""´
 ®
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javac c(1&
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java` `(1&
 %0 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
  com.example.optic.dao.RefereeDAO‰
 ·
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javac c(2'
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java` `(2'
 dao com.example.optic.dao.RefereeDAO"__id*(
 &
 %0 com.example.optic.dao.RefereeDAO◊‘
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javad" d(-'
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javaa" a(-'
 %1!com.example.optic.dao.GiornataDAO"!com.example.optic.dao.GiornataDAO∂
 ≥
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javad d(2
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javaa a(2
 %2"Mcom.example.optic.dao.GiornataDAO#<init>(Lcom/example/optic/dao/RefereeDAO;)V*)
 '
 %1!com.example.optic.dao.GiornataDAO*)
@@ -32,17 +32,17 @@ wcom.example.optic.app_controllers.RefReportPlayer#getPlayersList(Lcom/example/o
 dao com.example.optic.dao.RefereeDAOÍ
 Á
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javad d(3,
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javaa a(3,
 playDao!com.example.optic.dao.GiornataDAO"__id*)
 '
 %1!com.example.optic.dao.GiornataDAOÑÅ
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javae& e(6	
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javab& b(6	
 %3int"0com.example.optic.bean.GiornataBean#getIdPlay()I*-
 +
 bean#com.example.optic.bean.GiornataBean2getIdPlay()∂≥
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javae e(7
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javab b(7
 %4java.util.List"Ccom.example.optic.dao.GiornataDAO#getPlayersList(I)Ljava/util/List;*.
 ,
 playDao!com.example.optic.dao.GiornataDAO*
@@ -50,13 +50,13 @@ wcom.example.optic.app_controllers.RefReportPlayer#getPlayersList(Lcom/example/o
 %3int2getPlayersList(I)¡
 æ
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javae e(7
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javab b(7
 listjava.util.List"__id*
 
 %4java.util.List"¢
 Ö
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javaf f(
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.javac c(
 
 listjava.util.List:+
-bean#com.example.optic.bean.GiornataBeanB5"3
+bean#com.example.optic.bean.GiornataBeanB53
 1com.example.optic.app_controllers.RefReportPlayer

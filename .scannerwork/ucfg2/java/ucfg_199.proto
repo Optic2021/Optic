@@ -1,6 +1,6 @@
 
 Wcom.example.optic.app_controllers.ModPGPageAppController#getEventList()Ljava/util/List;è
-ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaü ü(*"7*Ë
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaü ü(#"7*Ë
 2è
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java§ §(*À
 »
@@ -75,5 +75,5 @@ $
 è
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.java® ®(
 
-listjava.util.ListB<":
+listjava.util.ListB<:
 8com.example.optic.app_controllers.ModPGPageAppController

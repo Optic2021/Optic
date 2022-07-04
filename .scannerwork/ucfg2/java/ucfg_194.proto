@@ -1,6 +1,6 @@
 
 êcom.example.optic.app_controllers.ModPGPageAppController#getNextPlay(Lcom/example/optic/bean/GiornataBean;)Lcom/example/optic/entities/Giornata;ç
-ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javac c(&"9*é
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javac c("9*é
 2ç
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javah h(FÛ
 
@@ -87,5 +87,5 @@ $
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javal l(-
 +
 play#com.example.optic.entities.Giornata:+
-bean#com.example.optic.bean.GiornataBeanB<":
+bean#com.example.optic.bean.GiornataBeanB<:
 8com.example.optic.app_controllers.ModPGPageAppController

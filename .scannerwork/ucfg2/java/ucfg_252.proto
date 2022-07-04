@@ -1,6 +1,6 @@
 
 }com.example.optic.app_controllers.UserProfileAppController#getReviewList(Lcom/example/optic/bean/PlayerBean;)Ljava/util/List;
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java$$ $(1"1*É
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java$ $(*"1*É
 1
 „F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java% %(»
 ¸
@@ -58,5 +58,5 @@
 „F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.java* *(
 
 listjava.util.List:&
-p!com.example.optic.bean.PlayerBeanB>"<
+p!com.example.optic.bean.PlayerBeanB><
 :com.example.optic.app_controllers.UserProfileAppController

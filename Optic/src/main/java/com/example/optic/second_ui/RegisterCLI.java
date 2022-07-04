@@ -11,13 +11,12 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 
 public class RegisterCLI {
-    private static RegisterController registerController;
 
     private RegisterCLI(){/*does np*/}
 
     public static void main(){
         try {
-            registerController = new RegisterController();
+            RegisterController registerController = new RegisterController();
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             UserBean bean= null;
             String input;

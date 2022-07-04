@@ -120,9 +120,9 @@ public class PlayerProfileViewCLI{
         try {
             do {
                 System.out.println("Inserire un numero per tornare indietro");
-                String inp;
-                inp = br.readLine();
-                res = ImportCheckInput.checkInput(inp);
+                String input;
+                input = br.readLine();
+                res = ImportCheckInput.checkInput(input);
                 //controllo se l'input è corretto
                 if (!res) {
                     System.out.println("Comando non valido!");

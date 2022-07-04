@@ -1,6 +1,6 @@
 
 com.example.optic.app_controllers.UserProfileAppController#getRecentPlayList(Lcom/example/optic/bean/UserBean;)Ljava/util/List;
-„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaC! C(2"1*¬
+„F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaC C(+"1*¬
 1
 „F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaD D(»
 ¸
@@ -58,5 +58,5 @@
 „F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/UserProfileAppController.javaH H(
 
 listjava.util.List:'
-usercom.example.optic.bean.UserBeanB>"<
+usercom.example.optic.bean.UserBeanB><
 :com.example.optic.app_controllers.UserProfileAppController

@@ -1,6 +1,6 @@
 
 ~com.example.optic.app_controllers.ModPGPageAppController#getPlayersList(Lcom/example/optic/bean/GiornataBean;)Ljava/util/List;è
-ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javañ ñ(-"1*€
+ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javañ ñ(&"1*€
 1è
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaó ó(ª
 ∏
@@ -58,5 +58,5 @@ $
 ÇF:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/ModPGPageAppController.javaõ õ(
 
 listjava.util.List:+
-bean#com.example.optic.bean.GiornataBeanB<":
+bean#com.example.optic.bean.GiornataBeanB<:
 8com.example.optic.app_controllers.ModPGPageAppController

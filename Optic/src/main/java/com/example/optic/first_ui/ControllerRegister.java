@@ -36,8 +36,6 @@ public class ControllerRegister extends GraphicController {
     @FXML
     private TextField pgProvField;
 
-    private RegisterController registerController;
-
     public void toLogin() throws IOException {
         this.toView("views/login.fxml");
     }
@@ -48,7 +46,7 @@ public class ControllerRegister extends GraphicController {
     }
 
     public void register() throws SQLException, IOException, ClassNotFoundException {
-        registerController = new RegisterController();
+        RegisterController registerController = new RegisterController();
         boolean res = false;
         userRB.setUserData(1);
         adminRB.setUserData(2);

@@ -1,43 +1,43 @@
 
 Pcom.example.optic.app_controllers.RefReportPlayer#getEventList()Ljava/util/List;…
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java. .(*"7*Ô
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java+ +(#"7*Ô
 2…
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java3 3(*Á
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java0 0(*Á
 ¾
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java3 3(*
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java0 0(*
 listjava.util.List"__id*
 
 %3java.util.List*
 1*™
 4…
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java2 2(2å
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java/ /(2å
 â
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java2 2(2*
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java/ /(2*
 eventDaocom.example.optic.dao.EventDAO"__id*&
 $
 %1com.example.optic.dao.EventDAOž›
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java3 3(*
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java0 0(*
 %3java.util.List"=com.example.optic.dao.EventDAO#getEventList()Ljava/util/List;*,
 *
 eventDaocom.example.optic.dao.EventDAO2getEventList()*
 2*þ
 5…
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java1 1(6ä
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java. .(6ä
 á
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java1 1(6'
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java. .(6'
 dao com.example.optic.dao.RefereeDAO"__id*(
 &
 %0 com.example.optic.dao.RefereeDAOÑÎ
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java2$ 2(,$
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java/$ /(,$
 %1com.example.optic.dao.EventDAO"com.example.optic.dao.EventDAO°
 ­
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java2  2(1
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java/  /(1
 %2"Jcom.example.optic.dao.EventDAO#<init>(Lcom/example/optic/dao/RefereeDAO;)V*&
 $
 %1com.example.optic.dao.EventDAO*)
@@ -45,25 +45,25 @@ $
 dao com.example.optic.dao.RefereeDAO*
 4*¾
 6…
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java1 1('«
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java. .('«
 ¨
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java1 1(5&
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java. .(5&
 %0 com.example.optic.dao.RefereeDAO"Pcom.example.optic.dao.RefereeDAO#getInstance()Lcom/example/optic/dao/RefereeDAO;*$""
  com.example.optic.dao.RefereeDAO*
 5*Ä
 7…
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java/ /(±
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java, ,(±
 ®
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java/ /( 
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java, ,( 
 listjava.util.List"__id*
 ""*
 6*°
 1…
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java7 7("¢
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java4 4("¢
 …
-{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java7 7(
+{F:/Studio/Universita/ISPW/WorkingCopyOptic/trunk/Optic/src/main/java/com/example/optic/app_controllers/RefReportPlayer.java4 4(
 
-listjava.util.ListB5"3
+listjava.util.ListB53
 1com.example.optic.app_controllers.RefReportPlayer
