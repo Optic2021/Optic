@@ -19,6 +19,8 @@ public class ImportGetPlay {
     }
 
     public static void getPlay(Label idPlay, Label date, Label adminName, Label activity, int type, int userType) throws ParseException{
+        RefReportPlayer refReportPlayer = new RefReportPlayer();
+        BookSessionAppController bookSessionAppController = new BookSessionAppController();
         GiornataBean playBean = new GiornataBean();
         Giornata play = null;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -30,15 +32,15 @@ public class ImportGetPlay {
             playBean.setAdmin(adminName.getText());
             if (userType == 0) {//referee
                 if(type == 0){
-                    play = RefReportPlayer.getNextPlay(playBean);
+                    play = refReportPlayer.getNextPlay(playBean);
                 }else{
-                    play = RefReportPlayer.getLastPlay(playBean);
+                    play = refReportPlayer.getLastPlay(playBean);
                 }
             }else{//player
                 if(type == 0){
-                    play = BookSessionAppController.getNextPlay(playBean);
+                    play = bookSessionAppController.getNextPlay(playBean);
                 }else{
-                    play = BookSessionAppController.getLastPlay(playBean);
+                    play = bookSessionAppController.getLastPlay(playBean);
                 }
             }
             if (play != null) {

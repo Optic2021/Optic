@@ -1,5 +1,6 @@
 package castelli;
 
+import com.example.optic.app_controllers.BookSessionAppController;
 import com.example.optic.app_controllers.LoginController;
 import com.example.optic.bean.PlayerBean;
 import org.junit.jupiter.api.Test;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 //Simone Castelli
 public class TestLoginController {
+    private static LoginController loginController = new LoginController();
     //testo il login con un utente inesistente
     @Test
     public void testPlayerLoginNotValid(){
@@ -14,7 +16,7 @@ public class TestLoginController {
         //nome non presente nel database
         player.setUsername("NotValid");
         player.setPassword("1234");
-        boolean output = LoginController.playerLogin(player);
+        boolean output = loginController.playerLogin(player);
         assertFalse(output);
     }
 
@@ -26,7 +28,7 @@ public class TestLoginController {
         player.setUsername("simone");
         //password giusta dell'utente simone
         player.setPassword("simo");
-        boolean output = LoginController.playerLogin(player);
+        boolean output = loginController.playerLogin(player);
         assertTrue(output);
     }
 }

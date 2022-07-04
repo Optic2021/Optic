@@ -45,8 +45,11 @@ public class ControllerUserProfile extends GraphicController{
     @FXML private TableColumn playground;
     @FXML private Label userType;
 
+    private UserProfileAppController userProfileAppController;
+
     @Override
     public void setUserVariables(String user){
+        userProfileAppController = new UserProfileAppController();
         this.user.setText(user);
         Player p = null;
         try {
@@ -54,7 +57,7 @@ public class ControllerUserProfile extends GraphicController{
             player.setUsername(user);
             this.populateReviewList(user);
             this.populateGamesTable(user);
-            p = UserProfileAppController.getPlayer(player);
+            p = userProfileAppController.getPlayer(player);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -99,7 +102,7 @@ public class ControllerUserProfile extends GraphicController{
         PlayerBean player = new PlayerBean();
         player.setUsername(user);
         List<Valutazione> reviewList = null;
-        reviewList = UserProfileAppController.getReviewList(player);
+        reviewList = userProfileAppController.getReviewList(player);
         int stars=ImportList.populateReviewList(reviewList,reviews,nVal);
         if(stars>0){
             setStars(stars);
@@ -112,7 +115,7 @@ public class ControllerUserProfile extends GraphicController{
         player.setUsername(user);
         date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
         playground.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
-        List<Giornata> list = UserProfileAppController.getRecentPlayList(player);
+        List<Giornata> list = userProfileAppController.getRecentPlayList(player);
         Giornata g = null;
         for(int i = 0;i < list.size(); i++){
             g = list.get(i);
@@ -170,7 +173,7 @@ public class ControllerUserProfile extends GraphicController{
             p.setBDescrizione(desc);
             p.setBFb(fb);
             p.setBIg(ig);
-            UserProfileAppController.setInfo(p);
+            userProfileAppController.setInfo(p);
 
             description.setEditable(false);
             description.setStyle("");

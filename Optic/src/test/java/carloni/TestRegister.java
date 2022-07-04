@@ -12,9 +12,10 @@ public class TestRegister {
     //testo il login con un utente esistente e password giusta
     @Test
     public void testUsernameUsed(){
+        RegisterController registerController = new RegisterController();
         boolean res= false;
         try {
-            res = RegisterController.isUsernameUsed("Not Used",1);
+            res = registerController.isUsernameUsed("Not Used",1);
         } catch (ClassNotFoundException |SQLException e ) {
             e.printStackTrace();
         }

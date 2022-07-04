@@ -11,11 +11,13 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 
 public class RegisterCLI {
+    private static RegisterController registerController;
 
     private RegisterCLI(){/*does np*/}
 
     public static void main(){
         try {
+            registerController = new RegisterController();
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             UserBean bean= null;
             String input;
@@ -60,24 +62,24 @@ public class RegisterCLI {
                         bean.setVia(via);
                         bean.setNomeC(nomeC);
                         bean.setProv(prov);
-                        res = RegisterController.isUsernameUsed(user,2);
+                        res = registerController.isUsernameUsed(user,2);
                     }
                     //registrazione arbitro
                     case 3 -> {
-                        res = RegisterController.isUsernameUsed(user,3);
+                        res = registerController.isUsernameUsed(user,3);
                     }
                     case 4 -> Optic2UI.main2();
                     case 5 -> System.exit(0);
                     //registrazione player
                     default -> {
-                        res = RegisterController.isUsernameUsed(user,1);
+                        res = registerController.isUsernameUsed(user,1);
                     }
                 }
                 if (res) {
                     System.out.println("Username già in utilizzo!");
                 }
             } while (res);
-            RegisterController.userRegister(bean, type);
+            registerController.userRegister(bean, type);
             System.out.println("Registrazione avvenuta con successo.");
             switch (type) {
                 case 2 -> ModPGPageCLI.main(user);

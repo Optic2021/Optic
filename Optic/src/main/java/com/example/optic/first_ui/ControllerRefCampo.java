@@ -42,15 +42,17 @@ public class ControllerRefCampo extends GraphicController{
     @FXML private Label urlInstagram;
     @FXML private Label urlFacebook;
 
-    private String format="yyyy-MM-dd";
+    private static String format="yyyy-MM-dd";
+    private RefReportPlayer refReportPlayer;
 
     @Override
     public void setUserVariables(String user) {
+        refReportPlayer = new RefReportPlayer();
         this.user.setText(user);
         Admin a = null;
         UserBean bean = new RefereeBean();
         bean.setUsername(user);
-        a = RefReportPlayer.getAdminFromRef(bean);
+        a = refReportPlayer.getAdminFromRef(bean);
         if(a == null){
             Alert err = new Alert(Alert.AlertType.WARNING);
             err.setContentText("Non sei collegato a nessun campo!");
@@ -72,7 +74,7 @@ public class ControllerRefCampo extends GraphicController{
         //setto la bean con info dell'admin del campo attualmente visualizzato
         bean.setUsername(user);
         try {
-            play = RefReportPlayer.getFirstPlay(bean);
+            play = refReportPlayer.getFirstPlay(bean);
             //controllo se esiste una giornata da poter mostrare
             if (play != null) {
                 //mostro informazioni della giornata
@@ -109,7 +111,7 @@ public class ControllerRefCampo extends GraphicController{
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
         Player p = null;
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        List<Player> list = RefReportPlayer.getPlayersList(playBean);
+        List<Player> list = refReportPlayer.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
             p = list.get(i);
             players.getItems().add(p);
@@ -130,7 +132,7 @@ public class ControllerRefCampo extends GraphicController{
         String[] giocatore = selectedPlayer.getText().split(" ");
         rep.setPlayer(giocatore[2]);
         rep.setReferee(user.getText());
-        RefReportPlayer.saveReport(rep);
+        refReportPlayer.saveReport(rep);
     }
 
     public void eventList() {
@@ -138,7 +140,7 @@ public class ControllerRefCampo extends GraphicController{
     }
 
     public void toLogin() throws IOException {
-        RefReportPlayer.closeConn();
+        refReportPlayer.closeConn();
         this.toView("views/login.fxml");
     }
 

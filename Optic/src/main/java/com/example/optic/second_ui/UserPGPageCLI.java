@@ -16,14 +16,17 @@ import java.util.List;
 public class UserPGPageCLI {
     private UserPGPageCLI(){/*does np*/}
     private static String err = "ATTENZIONE : Comando non valido!";
+    private static BookSessionAppController bookSessionAppController = new BookSessionAppController();
+    private static ReviewAppController reviewAppController = new ReviewAppController();
+
     public static void main(String user,String nomeC){
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input;
         boolean res;
         int command = 0;
         AdminBean campo = new AdminBean();
-        campo.setNomeCampo(nomeC);
-        AdminBean a = BookSessionAppController.getCampoInfo(campo);
+        campo.setNomeC(nomeC);
+        AdminBean a = bookSessionAppController.getCampoInfo(campo);
         try{
             do {
                 System.out.println("|Profilo campo|\n1)Info campo | 2)Lista giornate | 3)Inserisci recensione | 4)Vedi recensioni | 5)Indietro");
@@ -41,9 +44,9 @@ public class UserPGPageCLI {
                 case 2 -> {
                     UserBean bean = new PlayerBean();
                     bean.setUsername(a.getUsername());
-                    Giornata play = BookSessionAppController.getFirstPlay(bean);
+                    Giornata play = bookSessionAppController.getFirstPlay(bean);
                     if(play == null){
-                        play = BookSessionAppController.getRecentPlay(bean);
+                        play = bookSessionAppController.getRecentPlay(bean);
                     }
                     if(play != null){
                         showPlayList(user,a.getUsername(),play);
@@ -62,7 +65,7 @@ public class UserPGPageCLI {
     }
 
     public static void showInfo(String user,AdminBean admin){
-        System.out.println(admin.getNomeCampo()+"\nDescrizione: "+admin.getDescrizione()+"\nAdmin: "+admin.getUsername()+"\nArbitro: "+admin.getReferee()+"\nVia: "+admin.getVia()+"\nProvincia: "+admin.getProv());
+        System.out.println(admin.getNomeC()+"\nDescrizione: "+admin.getDescrizione()+"\nAdmin: "+admin.getUsername()+"\nArbitro: "+admin.getReferee()+"\nVia: "+admin.getVia()+"\nProvincia: "+admin.getProv());
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean res;
         try {
@@ -76,7 +79,7 @@ public class UserPGPageCLI {
                     System.out.println(err);
                 }
             }while (!res);
-            UserPGPageCLI.main(user,admin.getNomeCampo());
+            UserPGPageCLI.main(user,admin.getNomeC());
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -111,7 +114,7 @@ public class UserPGPageCLI {
                     }
                     case 2 -> showPlayers(user, play);
                     case 3 -> {
-                        Giornata play2 = BookSessionAppController.getLastPlay(playBean);
+                        Giornata play2 = bookSessionAppController.getLastPlay(playBean);
                         if (play2 == null) {
                             showPlayList(user, admin, play);
                             return;
@@ -121,7 +124,7 @@ public class UserPGPageCLI {
                         }
                     }
                     case 4 -> {
-                        Giornata play2 = BookSessionAppController.getNextPlay(playBean);
+                        Giornata play2 = bookSessionAppController.getNextPlay(playBean);
                         if (play2 == null) {
                             showPlayList(user, admin, play);
                             return;
@@ -143,10 +146,10 @@ public class UserPGPageCLI {
     private static void bookPlay(UserBean userBean, GiornataBean playBean) {
         if(playBean.getData().toInstant().isBefore(Instant.now())){
             System.out.println("Non è possibile prenotarsi per una giornata passata!");
-        }else if (BookSessionAppController.isPlayerBooked(userBean, playBean)) {
+        }else if (bookSessionAppController.isPlayerBooked(userBean, playBean)) {
             System.out.println("Sei già prenotato!");
         } else {
-            BookSessionAppController.bookPlay(userBean, playBean);
+            bookSessionAppController.bookPlay(userBean, playBean);
             System.out.println("Prenotazione avvenuta con successo.");
         }
     }
@@ -159,7 +162,7 @@ public class UserPGPageCLI {
         int command = 0;
         GiornataBean bean = new GiornataBean();
         bean.setIdPlay(play.getIdGiornata());
-        List<Player> list = BookSessionAppController.getPlayersList(bean);
+        List<Player> list = bookSessionAppController.getPlayersList(bean);
         if(!list.isEmpty()){
             try {
                 do {
@@ -198,7 +201,7 @@ public class UserPGPageCLI {
     }
 
     public static void showReviews(String user, AdminBean admin){
-        List<Valutazione> list = ReviewAppController.reviewList(admin);
+        List<Valutazione> list = reviewAppController.reviewList(admin);
         int stelleTot = 0;
         int media = 0;
         int val = 0;
@@ -211,7 +214,7 @@ public class UserPGPageCLI {
             media = stelleTot / val;
         }
         System.out.println("Media stelle: " + media);
-        UserPGPageCLI.main(user, admin.getNomeCampo());
+        UserPGPageCLI.main(user, admin.getNomeC());
     }
 
     public static void review(String user, AdminBean campo){
@@ -237,10 +240,10 @@ public class UserPGPageCLI {
                     valutazione.setRecensione(input);
                     valutazione.setStelle(stelle);
                     valutazione.setUsernameP1(user);
-                    valutazione.setRiceve(campo.getNomeCampo());
-                    ReviewAppController.saveReview(valutazione);
+                    valutazione.setRiceve(campo.getNomeC());
+                    reviewAppController.saveReview(valutazione);
                     System.out.println("Valutazione inserita.");
-                    UserPGPageCLI.main(user, campo.getNomeCampo());
+                    UserPGPageCLI.main(user, campo.getNomeC());
                 }
             }while(!res);
         }catch (IOException e){

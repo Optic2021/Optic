@@ -13,11 +13,11 @@ import com.example.optic.utilities.ImportCloseConn;
 
 public class LoginController {
 
-    private LoginController(){
+    public LoginController(){
         //does np
     }
 
-    public static boolean playerLogin(PlayerBean p) {
+    public boolean playerLogin(PlayerBean p) {
         boolean res = false;
         //controllo username e password
         try {
@@ -34,7 +34,7 @@ public class LoginController {
         return res;
     }
 
-    public static boolean adminLogin(AdminBean a) {
+    public boolean adminLogin(AdminBean a) {
         boolean res = false;
         //controllo username e password
         try {
@@ -51,7 +51,7 @@ public class LoginController {
         return res;
     }
 
-    public static boolean refereeLogin(RefereeBean r){
+    public boolean refereeLogin(RefereeBean r){
         boolean res=false;
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
@@ -66,7 +66,7 @@ public class LoginController {
         return res;
     }
 
-    public static void closeConn(int user) {
+    public void closeConn(int user) {
         ImportCloseConn.closeConn(user);
     }
 }

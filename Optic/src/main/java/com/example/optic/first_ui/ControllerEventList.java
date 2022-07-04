@@ -20,17 +20,24 @@ public class ControllerEventList extends GraphicController {
     @FXML
     private ListView events;
 
+    private ModPGPageAppController modPGPageAppController;
+    private RefReportPlayer refReportPlayer;
+    private UserProfileAppController userProfileAppController;
+
     @Override
     public void setUserVariables(String user){
+        modPGPageAppController = new ModPGPageAppController();
+        refReportPlayer = new RefReportPlayer();
+        userProfileAppController = new UserProfileAppController();
         List<Event> list;
         if (user.contains("Giocatore")) {//uso la dao del player
-            list = UserProfileAppController.getEventList();
+            list = userProfileAppController.getEventList();
             this.setList(list);
         }else if (user.contains("Admin")) {//uso la dao dell'admin
-            list = ModPGPageAppController.getEventList();
+            list = modPGPageAppController.getEventList();
             this.setList(list);
         } else if (user.contains("Arbitro")) {//uso la dao del referee
-            list = RefReportPlayer.getEventList();
+            list = refReportPlayer.getEventList();
             this.setList(list);
         }
     }

@@ -20,17 +20,18 @@ import java.util.Calendar;
 import java.util.List;
 
 public class ModPGPageCLI {
-
+    private static ModPGPageAppController modPGPageAppController;
     private ModPGPageCLI(){/*does np*/}
 
     public static void main(String user) {
+        modPGPageAppController = new ModPGPageAppController();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input;
         boolean res;
         int command = 0;
         AdminBean admin = new AdminBean();
         admin.setUsername(user);
-        Admin a = ModPGPageAppController.getAdmin(admin);
+        Admin a = modPGPageAppController.getAdmin(admin);
         try {
             do {
                 do {
@@ -50,7 +51,7 @@ public class ModPGPageCLI {
                     case 2 -> {
                         UserBean bean = new AdminBean();
                         bean.setUsername(a.getUsername());
-                        Giornata play = ModPGPageAppController.getFirstPlay(bean);
+                        Giornata play = modPGPageAppController.getFirstPlay(bean);
                         case2(play, bean);
                     }
                     case 3 -> addGiornata(user);
@@ -70,7 +71,7 @@ public class ModPGPageCLI {
     }
 
     public static void showEventList(){
-        List<Event> list = ModPGPageAppController.getEventList();
+        List<Event> list = modPGPageAppController.getEventList();
         for(int i = 0;i<list.size();i++) {
             System.out.println(i + ") " + list.get(i).getNome());
         }
@@ -78,7 +79,7 @@ public class ModPGPageCLI {
 
     public static void case2(Giornata play, UserBean bean){
         if (play == null) {
-            play = ModPGPageAppController.getRecentPlay(bean);
+            play = modPGPageAppController.getRecentPlay(bean);
         }
         if (play != null) {
             showPlayList(bean.getUsername(), play);
@@ -90,7 +91,7 @@ public class ModPGPageCLI {
     public static void showReviews(Admin admin) {
         AdminBean bean = new AdminBean();
         bean.setUsername(admin.getUsername());
-        List<Valutazione> list = ModPGPageAppController.getReviewList(bean);
+        List<Valutazione> list = modPGPageAppController.getReviewList(bean);
         int stelleTot = 0;
         int media;
         int val = 0;
@@ -131,7 +132,7 @@ public class ModPGPageCLI {
                 switch (command) {
                     case 1 -> showPlayers(play);
                     case 2 -> {
-                        Giornata play2 = ModPGPageAppController.getLastPlay(playBean);
+                        Giornata play2 = modPGPageAppController.getLastPlay(playBean);
                         if (play2 == null) {
                             showPlayList(admin, play);
                             return;
@@ -141,7 +142,7 @@ public class ModPGPageCLI {
                         }
                     }
                     case 3 -> {
-                        Giornata play2 = ModPGPageAppController.getNextPlay(playBean);
+                        Giornata play2 = modPGPageAppController.getNextPlay(playBean);
                         if (play2 == null) {
                             showPlayList(admin, play);
                             return;
@@ -182,7 +183,7 @@ public class ModPGPageCLI {
                 case 2 ->{
                     UserBean u=new RefereeBean();
                     u.setUsername(admin.getUsername());
-                    modReferee(admin,ModPGPageAppController.getRefereeFromAdmin(u));
+                    modReferee(admin,modPGPageAppController.getRefereeFromAdmin(u));
                 }
                 case 3 -> modSocial(admin);
                 default -> modDesc(a);
@@ -228,12 +229,12 @@ public class ModPGPageCLI {
                 refBean.setUsername(input2);
                 adminBean.setUsername(a.getUsername());
                 //controllo se il referee esiste
-                Referee referee = ModPGPageAppController.getReferee(refBean);
+                Referee referee = modPGPageAppController.getReferee(refBean);
                 if (referee.getAdminCampo() != null) {//controllo che l'arbitro non sia collegato
                     System.out.println("ATTENZIONE: Arbitro già di un altro campo!");
                 } else {
                     System.out.println("Arbitro correttamente collegato.");
-                    ModPGPageAppController.setReferee(adminBean, refBean);
+                    modPGPageAppController.setReferee(adminBean, refBean);
                 }
             }catch (NotARefereeException e){
                 System.out.println("ATTENZIONE: Arbitro inesistente!");
@@ -243,9 +244,9 @@ public class ModPGPageCLI {
 
     public static void freeReferee(UserBean u){
         try {
-            ModPGPageAppController.getReferee(u);
+            modPGPageAppController.getReferee(u);
             System.out.println("Arbitro scollegato correttamente.");
-            ModPGPageAppController.freeReferee(u);
+            modPGPageAppController.freeReferee(u);
         }catch (NotARefereeException e){
             System.out.println("ATTENZIONE: Impossibile scollegare un arbitro inesistente!");
         }
@@ -287,7 +288,7 @@ public class ModPGPageCLI {
                     bean.setWhats(inp);
             }
             if(res){
-                ModPGPageAppController.setAdminSocial(bean);
+                modPGPageAppController.setAdminSocial(bean);
             }
         }catch (IOException e){
             e.printStackTrace();
@@ -301,7 +302,7 @@ public class ModPGPageCLI {
         try {
             input = br.readLine();
             a.setDescrizione(input);
-            ModPGPageAppController.setDescription(a);
+            modPGPageAppController.setDescription(a);
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -313,7 +314,7 @@ public class ModPGPageCLI {
         String input;
         GiornataBean bean = new GiornataBean();
         bean.setIdPlay(play.getIdGiornata());
-        List<Player> list = ModPGPageAppController.getPlayersList(bean);
+        List<Player> list = modPGPageAppController.getPlayersList(bean);
         if (!list.isEmpty()) {
             try {
                 do {
@@ -339,10 +340,10 @@ public class ModPGPageCLI {
     public static void showInfo(String user) {
         AdminBean bean = new AdminBean();
         bean.setUsername(user);
-        Admin admin = ModPGPageAppController.getAdmin(bean);
+        Admin admin = modPGPageAppController.getAdmin(bean);
         UserBean admbean = new AdminBean();
         admbean.setUsername(user);
-        Referee appoggio = ModPGPageAppController.getRefereeFromAdmin(admbean);
+        Referee appoggio = modPGPageAppController.getRefereeFromAdmin(admbean);
         String param = "Nessuno ";
         if (appoggio != null) {
             param = appoggio.getUsername();
@@ -384,9 +385,9 @@ public class ModPGPageCLI {
             df.parse(Integer.toString(ymd[1]) + "-" + Integer.toString(ymd[2]) + "-" + Integer.toString(ymd[3]));
 
             System.out.println("Valida " + Integer.toString(ymd[1]) + "-" + Integer.toString(ymd[2]) + "-" + Integer.toString(ymd[3]));
-            ModPGPageAppController.isDateValid(bean);
+            modPGPageAppController.isDateValid(bean);
             System.out.println("Seleziona evento ");
-            List<Event> list = ModPGPageAppController.getEventList();
+            List<Event> list = modPGPageAppController.getEventList();
             for (int i = 0; i < list.size(); i++) {
                 System.out.println(i + ") " + list.get(i).getNome());
             }
@@ -401,7 +402,7 @@ public class ModPGPageCLI {
                     return;
                 }
             } while (Boolean.FALSE.equals(flag));
-            ModPGPageAppController.insertPlay(bean);
+            modPGPageAppController.insertPlay(bean);
         }catch (IOException e){
             e.printStackTrace();
         }catch (ParseException e){

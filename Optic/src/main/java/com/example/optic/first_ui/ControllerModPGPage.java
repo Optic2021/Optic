@@ -66,15 +66,17 @@ public class ControllerModPGPage extends GraphicController {
     @FXML private TableColumn playerName;
     @FXML private TableColumn playerVal;
 
-    private String format="yyyy-MM-dd";
+    private static String format="yyyy-MM-dd";
+    private ModPGPageAppController modPGPageAppController;
 
     public void toLogin() throws IOException {
-        ModPGPageAppController.closeConn();
+        modPGPageAppController.closeConn();
         this.toView("views/login.fxml");
     }
 
     @Override
     public void setUserVariables(String user) {
+        modPGPageAppController = new ModPGPageAppController();
         this.user.setText(user);
         Admin a = new Admin();
         try {
@@ -82,7 +84,7 @@ public class ControllerModPGPage extends GraphicController {
             admin.setUsername(user);
             this.populateReviewList(user);
             this.playgroundReferee(user);
-            a = ModPGPageAppController.getAdmin(admin);
+            a = modPGPageAppController.getAdmin(admin);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -109,7 +111,7 @@ public class ControllerModPGPage extends GraphicController {
         UserBean bean = new RefereeBean();
         bean.setUsername(user);
         try {
-            play = ModPGPageAppController.getFirstPlay(bean);
+            play = modPGPageAppController.getFirstPlay(bean);
             //controllo se esiste una giornata da poter mostrare
             if (play != null) {
                 //mostro informazioni della giornata
@@ -149,7 +151,7 @@ public class ControllerModPGPage extends GraphicController {
                 cal.setTime(data);
                 playBean.setData(cal);
                 playBean.setAdmin(user.getText());
-                play = ModPGPageAppController.getNextPlay(playBean);
+                play = modPGPageAppController.getNextPlay(playBean);
                 if (play != null) {
                     idPlay.setText(Integer.toString(play.getIdGiornata()));
                     date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
@@ -208,7 +210,7 @@ public class ControllerModPGPage extends GraphicController {
                     cal.setTime(data);
                     playBean.setData(cal);
                     playBean.setAdmin(user.getText());
-                    play = ModPGPageAppController.getLastPlay(playBean);
+                    play = modPGPageAppController.getLastPlay(playBean);
                     if (play != null) {
                         idPlay.setText(Integer.toString(play.getIdGiornata()));
                         date.setText(dateFormat.format(play.getData().getTime()));//converto il calendar in un formato di data
@@ -236,7 +238,7 @@ public class ControllerModPGPage extends GraphicController {
         int mediaVal = 0;
         int stars = 0;
         admin.setUsername(user);
-        List<Valutazione> list = ModPGPageAppController.getReviewList(admin);
+        List<Valutazione> list = modPGPageAppController.getReviewList(admin);
         for(int i = 0; i < list.size(); i++) {
             numVal++;
             mediaVal += list.get(i).getStelle();
@@ -258,7 +260,7 @@ public class ControllerModPGPage extends GraphicController {
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
         Player p;
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        List<Player> list = ModPGPageAppController.getPlayersList(playBean);
+        List<Player> list = modPGPageAppController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
             p = list.get(i);
             players.getItems().add(p);
@@ -268,7 +270,7 @@ public class ControllerModPGPage extends GraphicController {
 
     public void populateEventBox() throws IOException {
         eventBox.getItems().clear();
-        List<Event> list = ModPGPageAppController.getEventList();
+        List<Event> list = modPGPageAppController.getEventList();
         for(int i = 0; i < list.size();i++){
             eventBox.getItems().add(list.get(i).getNome());
         }
@@ -292,9 +294,9 @@ public class ControllerModPGPage extends GraphicController {
             playBean.setEvento(eventBox.getSelectionModel().getSelectedItem().toString());
             playBean.setData(cal);
             playBean.setAdmin(user.getText());
-            boolean res = ModPGPageAppController.isDateValid(playBean);
+            boolean res = modPGPageAppController.isDateValid(playBean);
             if(!res) {
-                ModPGPageAppController.insertPlay(playBean);
+                modPGPageAppController.insertPlay(playBean);
                 this.setFirstPlay(user.getText());
                 Alert conf = new Alert(Alert.AlertType.CONFIRMATION);
                 conf.setContentText("Giornata inserita con successo!");
@@ -311,7 +313,7 @@ public class ControllerModPGPage extends GraphicController {
         UserBean bean2 = new RefereeBean();
         bean2.setUsername(user);
         //prendo l'arbitro collegato all'admin
-        Referee ref2=ModPGPageAppController.getRefereeFromAdmin(bean2);
+        Referee ref2=modPGPageAppController.getRefereeFromAdmin(bean2);
         if(ref2 == null){
             ref.setText("");
         }else{
@@ -327,14 +329,14 @@ public class ControllerModPGPage extends GraphicController {
         adminBean.setUsername(user.getText());
         //controllo se il referee esiste
         try {
-            Referee referee = ModPGPageAppController.getReferee(refBean);
+            Referee referee = modPGPageAppController.getReferee(refBean);
             if (referee.getAdminCampo() != null) {//controllo che l'arbitro non sia collegato
                 Alert err = new Alert(Alert.AlertType.ERROR);
                 err.setContentText("Arbitro già di un altro campo!");
                 ref.setText("");
                 err.show();
             } else {
-                ModPGPageAppController.setReferee(adminBean, refBean);
+                modPGPageAppController.setReferee(adminBean, refBean);
             }
         }catch (NotARefereeException e){
             Alert err = new Alert(Alert.AlertType.ERROR);
@@ -348,8 +350,8 @@ public class ControllerModPGPage extends GraphicController {
         UserBean u = new RefereeBean();
         u.setUsername(ref.getText());
         try {
-            ModPGPageAppController.getReferee(u);
-            ModPGPageAppController.freeReferee(u);
+            modPGPageAppController.getReferee(u);
+            modPGPageAppController.freeReferee(u);
             ref.setText("");
         }catch (NotARefereeException e){
             Alert err = new Alert(Alert.AlertType.ERROR);
@@ -430,7 +432,7 @@ public class ControllerModPGPage extends GraphicController {
         String desc = description.getText();
         a.setUsername(user.getText());
         a.setDescrizione(desc);
-        ModPGPageAppController.setDescription(a);
+        modPGPageAppController.setDescription(a);
         description.setEditable(false);
         description.setStyle("");
         ref.setEditable(false);

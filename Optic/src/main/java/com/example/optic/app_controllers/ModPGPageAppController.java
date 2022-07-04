@@ -15,12 +15,12 @@ import java.util.List;
 
 public class ModPGPageAppController {
 
-    private ModPGPageAppController(){
+    public ModPGPageAppController(){
         //does np
     }
 
     //Restituisce admin dato uno username admin
-    public static Admin getAdmin(AdminBean a){
+    public Admin getAdmin(AdminBean a){
         Admin admin = new Admin();
         try {
             AdminDAO dao = AdminDAO.getInstance();
@@ -32,7 +32,7 @@ public class ModPGPageAppController {
     }
 
     //modifica profili social
-    public static void setAdminSocial(AdminBean a){
+    public void setAdminSocial(AdminBean a){
         String admin = a.getUsername();
         String fb = a.getFaceb();
         String ig = a.getInsta();
@@ -46,7 +46,7 @@ public class ModPGPageAppController {
     }
 
     //modifica descrizione campo
-    public static void setDescription(AdminBean a){
+    public void setDescription(AdminBean a){
         try{
             AdminDAO dao = AdminDAO.getInstance();
             String admin = a.getUsername();
@@ -58,7 +58,7 @@ public class ModPGPageAppController {
     }
 
     //cerco arbitro tramite admin username
-    public static Referee getRefereeFromAdmin(UserBean u){
+    public Referee getRefereeFromAdmin(UserBean u){
         Referee ref = null;
         try {
             AdminDAO dao = AdminDAO.getInstance();
@@ -70,7 +70,7 @@ public class ModPGPageAppController {
     }
 
     //restituisce prima giornata disponibile
-    public static Giornata getFirstPlay(UserBean bean){
+    public Giornata getFirstPlay(UserBean bean){
         Giornata play = null;
         try{
             AdminDAO dao = AdminDAO.getInstance();
@@ -83,7 +83,7 @@ public class ModPGPageAppController {
     }
 
     //restituisce la giornata di gioco passata più recente
-    public static Giornata getRecentPlay(UserBean bean){
+    public Giornata getRecentPlay(UserBean bean){
         Giornata play = null;
         try{
             AdminDAO dao = AdminDAO.getInstance();
@@ -96,7 +96,7 @@ public class ModPGPageAppController {
     }
 
     //restituisce giornata successiva
-    public static Giornata getNextPlay(GiornataBean bean){
+    public Giornata getNextPlay(GiornataBean bean){
         Giornata play = null;
         try{
             AdminDAO dao = AdminDAO.getInstance();
@@ -109,7 +109,7 @@ public class ModPGPageAppController {
     }
 
     //restituisce giornata precedente
-    public static Giornata getLastPlay(GiornataBean bean){
+    public Giornata getLastPlay(GiornataBean bean){
         Giornata play = null;
         try{
             AdminDAO dao = AdminDAO.getInstance();
@@ -122,7 +122,7 @@ public class ModPGPageAppController {
     }
 
     //cerco arbitro tramite il suo nome
-    public static Referee getReferee(UserBean u) throws NotARefereeException{
+    public Referee getReferee(UserBean u) throws NotARefereeException{
         Referee ref = null;
         try {
             AdminDAO dao = AdminDAO.getInstance();
@@ -137,7 +137,7 @@ public class ModPGPageAppController {
     }
 
     //Lista review di un admin
-    public static List<Valutazione> getReviewList(AdminBean a) {
+    public List<Valutazione> getReviewList(AdminBean a) {
         List<Valutazione> list;
         //utilizzo la dao dell'admin dove è creata la connessisone
         AdminDAO daoA = AdminDAO.getInstance();
@@ -147,7 +147,7 @@ public class ModPGPageAppController {
     }
 
     //Restituisce lista player prenotati
-    public static List<Player> getPlayersList(GiornataBean bean) {
+    public List<Player> getPlayersList(GiornataBean bean) {
         List<Player> list;
         AdminDAO dao = AdminDAO.getInstance();
         GiornataDAO playDao = new GiornataDAO(dao);
@@ -156,7 +156,7 @@ public class ModPGPageAppController {
     }
 
     //Restituisce lista eventi
-    public static List<Event> getEventList() {
+    public List<Event> getEventList() {
         List<Event> list = new ArrayList<>();
         try{
             AdminDAO dao = AdminDAO.getInstance();
@@ -169,7 +169,7 @@ public class ModPGPageAppController {
     }
 
     //Verifica che una data sia valida
-    public static boolean isDateValid(GiornataBean bean){
+    public boolean isDateValid(GiornataBean bean){
         boolean res ;
         AdminDAO dao = AdminDAO.getInstance();
         GiornataDAO playDao = new GiornataDAO(dao);
@@ -180,7 +180,7 @@ public class ModPGPageAppController {
     }
 
     //Inserisce una nuova giornata
-    public static void insertPlay(GiornataBean bean){
+    public void insertPlay(GiornataBean bean){
         AdminDAO dao = AdminDAO.getInstance();
         GiornataDAO playDao = new GiornataDAO(dao);
         String event = bean.getEvento();
@@ -190,7 +190,7 @@ public class ModPGPageAppController {
     }
 
     //setto all'admin (bean) il corrispettivo arbitro (bean2)
-    public static void setReferee(UserBean admin, UserBean referee) {
+    public void setReferee(UserBean admin, UserBean referee) {
         try{
             AdminDAO dao = AdminDAO.getInstance();
             dao.setReferee(admin.getUsername(),referee.getUsername());
@@ -200,7 +200,7 @@ public class ModPGPageAppController {
     }
 
     //"licenzia" referee dal campo
-    public static void freeReferee(UserBean u) {
+    public void freeReferee(UserBean u) {
         try{
             AdminDAO dao = AdminDAO.getInstance();
             dao.freeReferee(u.getUsername());
@@ -210,7 +210,7 @@ public class ModPGPageAppController {
     }
 
     //chiude la connessione con il db
-    public static void closeConn() throws IOException {
+    public void closeConn() throws IOException {
         try {
             AdminDAO dao = AdminDAO.getInstance();
             dao.closeConn();

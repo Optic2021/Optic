@@ -18,7 +18,8 @@ import java.util.List;
 public class RefereeReportCLI {
     private static RefereeBean ref= new RefereeBean();
     private static GiornataBean play= new GiornataBean();
-
+    private static BookSessionAppController bookSessionAppController = new BookSessionAppController();
+    private static RefReportPlayer refReportPlayer = new RefReportPlayer();
     private RefereeReportCLI(){/*does np*/}
 
     public static void main(String user) {
@@ -32,13 +33,13 @@ public class RefereeReportCLI {
         UserBean u1 = new RefereeBean();
         u1.setUsername(user);
         //set proprietario campo
-        ref.setFkUsernameA1(RefReportPlayer.getAdminFromRef(u1).getUsername());
+        ref.setFkUsernameA1(refReportPlayer.getAdminFromRef(u1).getUsername());
         u1.setUsername(ref.getFkUsernameA1());
 
         //Prendo la prossima giornata da giocare
-        data = RefReportPlayer.getFirstPlay(u1);
+        data = refReportPlayer.getFirstPlay(u1);
         if (data == null) {
-            data = BookSessionAppController.getRecentPlay(u1);
+            data = bookSessionAppController.getRecentPlay(u1);
         }
         if (data == null) {
             System.out.println("ATTENZIONE: Non ci sono giornate da mostrare.\n");
@@ -57,7 +58,7 @@ public class RefereeReportCLI {
                 System.out.println("Assegnato al campo : " + ref.getFkUsernameA1());
                 System.out.println("Giornata :" + dateFormat.format(play.getData().getTime()));
                 System.out.println("Num.-|-Username-|-Valutazione");
-                List<Player> list = RefReportPlayer.getPlayersList(play);
+                List<Player> list = refReportPlayer.getPlayersList(play);
                 i = showPlayers(list);
                 System.out.println("i)Precedente                   Successiva(a");
                 input = br.readLine();
@@ -88,10 +89,10 @@ public class RefereeReportCLI {
         Giornata data = null;
         if (input.equalsIgnoreCase("a")) {
             //vai avanti
-            data = RefReportPlayer.getNextPlay(play);
+            data = refReportPlayer.getNextPlay(play);
         } else if (input.equalsIgnoreCase("i")) {
             //vai indietro
-            data = RefReportPlayer.getLastPlay(play);
+            data = refReportPlayer.getLastPlay(play);
         } else {
             if (input.equalsIgnoreCase("indietro") || input.equalsIgnoreCase("back")) {
                 return;
@@ -127,7 +128,7 @@ public class RefereeReportCLI {
                 rep.setMotivazione(inputemp);
                 rep.setPlayer(username);
                 rep.setReferee(ref.getUsername());
-                RefReportPlayer.saveReport(rep);
+                refReportPlayer.saveReport(rep);
                 System.out.println("ATTENZIONE : Report salvato correttamente \n");
             } else {
                 System.out.println("ATTENZIONE : Report annullato correttamente \n");

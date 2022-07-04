@@ -19,15 +19,15 @@ import java.util.List;
 
 public class BookSessionAppController {
 
-    private BookSessionAppController(){
+    public BookSessionAppController(){
         //does np
     }
 
     //restituisce le informazioni di un campo dato l'admin associato
-    public static AdminBean getCampoInfo(AdminBean campo){
+    public AdminBean getCampoInfo(AdminBean campo){
         AdminDAO dao = null;
         dao = AdminDAO.getInstance();
-        String nomeC = campo.getNomeCampo();
+        String nomeC = campo.getNomeC();
         Admin x = null;
         try {
             x = dao.getCampo(nomeC);
@@ -43,7 +43,7 @@ public class BookSessionAppController {
             y.setFaceb(x.getFb());
             y.setInsta(x.getIg());
             y.setWhats(x.getWa());
-            y.setNomeCampo(x.getNomeC());
+            y.setNomeC(x.getNomeC());
             try {
                 ref = dao.getRefereeFromAdmin(x.getUsername());
             } catch (SQLException e) {
@@ -59,7 +59,7 @@ public class BookSessionAppController {
     }
 
     //verifica che un player sia prenotato per uno specifico giorno
-    public static boolean isPlayerBooked(UserBean player, GiornataBean play){
+    public boolean isPlayerBooked(UserBean player, GiornataBean play){
         boolean res = true;
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
@@ -72,7 +72,7 @@ public class BookSessionAppController {
     }
 
     //Prenota effettivamente la giornata
-    public static void bookPlay(UserBean player, GiornataBean play){
+    public void bookPlay(UserBean player, GiornataBean play){
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
             PrenotazioneDAO prenDao = new PrenotazioneDAO(dao);
@@ -83,7 +83,7 @@ public class BookSessionAppController {
     }
 
     //Prende la prima giornata disponibile da prenotare
-    public static Giornata getFirstPlay(UserBean bean){
+    public Giornata getFirstPlay(UserBean bean){
         Giornata play = null;
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
@@ -96,7 +96,7 @@ public class BookSessionAppController {
     }
 
     //restituisce la giornata di gioco passata più recente
-    public static Giornata getRecentPlay(UserBean bean){
+    public Giornata getRecentPlay(UserBean bean){
         Giornata play = null;
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
@@ -109,7 +109,7 @@ public class BookSessionAppController {
     }
 
     //Scorre in avanti le giornate
-    public static Giornata getNextPlay(GiornataBean bean){
+    public Giornata getNextPlay(GiornataBean bean){
         Giornata play = null;
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
@@ -122,7 +122,7 @@ public class BookSessionAppController {
     }
 
     //Scorre indietro le giornate
-    public static Giornata getLastPlay(GiornataBean bean){
+    public Giornata getLastPlay(GiornataBean bean){
         Giornata play = null;
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
@@ -135,7 +135,7 @@ public class BookSessionAppController {
     }
 
     //Restituisce la lista dei giocatori prenotati per una giornata
-    public static List<Player> getPlayersList(GiornataBean bean){
+    public List<Player> getPlayersList(GiornataBean bean){
         List<Player> list;
         PlayerDAO dao = PlayerDAO.getInstance();
         GiornataDAO playDao = new GiornataDAO(dao);
@@ -143,7 +143,7 @@ public class BookSessionAppController {
         return list;
     }
 
-    public static List<Admin> getCampi(){
+    public List<Admin> getCampi(){
         PlayerDAO dao = null;
         dao = PlayerDAO.getInstance();
         List<Admin> lista = new ArrayList<>();
@@ -156,7 +156,7 @@ public class BookSessionAppController {
     }
 
 
-    public static void closeConn() throws IOException {
+    public void closeConn() throws IOException {
         try {
             PlayerDAO dao = PlayerDAO.getInstance();
             dao.closeConn();

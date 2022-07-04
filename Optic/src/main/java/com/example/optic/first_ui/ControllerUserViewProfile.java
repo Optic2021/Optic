@@ -54,8 +54,11 @@ public class ControllerUserViewProfile extends GraphicController{
     //Label per acquisizione della recensione
     @FXML private  TextArea desc;
 
+    private UserProfileAppController userProfileAppController;
+
     @Override
     public void setUserVariables(String user) {
+        userProfileAppController = new UserProfileAppController();
         String [] app = user.split(" ");
         String prof=app[0];
         String viewer=app[1];
@@ -68,7 +71,7 @@ public class ControllerUserViewProfile extends GraphicController{
             player.setUsername(prof);
             this.populateReviewList(prof);
             this.populateGamesTable();
-            p = UserProfileAppController.getPlayer(player);
+            p = userProfileAppController.getPlayer(player);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -89,7 +92,7 @@ public class ControllerUserViewProfile extends GraphicController{
         PlayerBean player = new PlayerBean();
         player.setUsername(user);
         List<Valutazione> list = null;
-        list = UserProfileAppController.getReviewList(player);
+        list = userProfileAppController.getReviewList(player);
         int stars= ImportList.populateReviewList(list,reviews,nVal);
         if(stars>0){
             setStars(stars);
@@ -104,7 +107,7 @@ public class ControllerUserViewProfile extends GraphicController{
         player.setUsername(username);
         date.setCellValueFactory(new PropertyValueFactory<>("dataString"));
         playground.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
-        List<Giornata> pList = UserProfileAppController.getRecentPlayList(player);
+        List<Giornata> pList = userProfileAppController.getRecentPlayList(player);
         Giornata g = null;
         for(int i = 0;i < pList.size(); i++){
             g = pList.get(i);
@@ -174,7 +177,7 @@ public class ControllerUserViewProfile extends GraphicController{
         val.setStelle(starN);
         val.setRiceve(array[1]);
 
-        UserProfileAppController.saveReview(val);
+        userProfileAppController.saveReview(val);
         reviews.getItems().clear();
         String []ar;
         ar=profile.getText().split(" ");

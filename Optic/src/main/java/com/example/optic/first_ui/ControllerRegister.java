@@ -36,6 +36,7 @@ public class ControllerRegister extends GraphicController {
     @FXML
     private TextField pgProvField;
 
+    private RegisterController registerController;
 
     public void toLogin() throws IOException {
         this.toView("views/login.fxml");
@@ -47,6 +48,7 @@ public class ControllerRegister extends GraphicController {
     }
 
     public void register() throws SQLException, IOException, ClassNotFoundException {
+        registerController = new RegisterController();
         boolean res = false;
         userRB.setUserData(1);
         adminRB.setUserData(2);
@@ -68,7 +70,7 @@ public class ControllerRegister extends GraphicController {
         } else{
             String name = username.getText();
 
-            res = RegisterController.isUsernameUsed(username.getText(), prof);
+            res = registerController.isUsernameUsed(username.getText(), prof);
             if(!res) {
                 UserBean user = Factory.createUser(prof);
                 user.setUsername(username.getText());
@@ -77,13 +79,13 @@ public class ControllerRegister extends GraphicController {
                 user.setNomeC(pgNameField.getText());
                 user.setProv(pgProvField.getText());
                 String[] arr = {"views/userHomeMap.fxml","views/modPgPage.fxml","views/refCampo.fxml"};
-                RegisterController.userRegister(user, prof);
+                registerController.userRegister(user, prof);
                 Alert conf = new Alert(Alert.AlertType.CONFIRMATION);
                 conf.setContentText("Registrazione avvenuta con successo!");
                 conf.show();
                 this.toView(arr[prof-1], name);
             } else {
-                RegisterController.closeConn(prof);
+                registerController.closeConn(prof);
                 err.setContentText("Username già utilizzato");
                 err.show();
             }

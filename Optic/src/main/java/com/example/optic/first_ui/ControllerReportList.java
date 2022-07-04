@@ -23,12 +23,15 @@ public class ControllerReportList extends GraphicController {
     @FXML
     private Label player;
 
+    private UserProfileAppController userProfileAppController;
+
     @Override
     public void setUserVariables(String user) {
+        userProfileAppController = new UserProfileAppController();
         player.setText("Lista Report di: "+user);
         try {
             List<ReportBean> list;
-            list = UserProfileAppController.getReportList(user);
+            list = userProfileAppController.getReportList(user);
             this.setList(list);
         }catch (IOException e) {
             e.printStackTrace();

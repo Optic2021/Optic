@@ -15,6 +15,7 @@ public class Optic2UI {
 
     public static void main2(){
         try {
+            LoginController loginController = new LoginController();
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String input;
             int type = 0;
@@ -37,14 +38,14 @@ public class Optic2UI {
                             AdminBean a = new AdminBean();
                             a.setUsername(uspass[0]);
                             a.setPassword(uspass[1]);
-                            res = LoginController.adminLogin(a);
+                            res = loginController.adminLogin(a);
                         }
                         case 3 -> {
                             uspass=getUsPass();
                             RefereeBean r = new RefereeBean();
                             r.setUsername(uspass[0]);
                             r.setPassword(uspass[1]);
-                            res = LoginController.refereeLogin(r);
+                            res = loginController.refereeLogin(r);
                         }
                         case 4 -> {
                             RegisterCLI.main();
@@ -55,7 +56,7 @@ public class Optic2UI {
                             PlayerBean p = new PlayerBean();
                             p.setUsername(uspass[0]);
                             p.setPassword(uspass[1]);
-                            res = LoginController.playerLogin(p);
+                            res = loginController.playerLogin(p);
                         }
                         default -> {
                             System.exit(0);

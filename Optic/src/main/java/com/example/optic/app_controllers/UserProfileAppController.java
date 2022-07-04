@@ -17,12 +17,12 @@ import java.util.List;
 
 public class UserProfileAppController {
 
-    private UserProfileAppController(){
+    public UserProfileAppController(){
         //does np
     }
 
     //Restituisce info player dato uno username
-    public static Player getPlayer(PlayerBean p){
+    public Player getPlayer(PlayerBean p){
         Player player = null;
         try {
             PlayerDAO dao = PlayerDAO.getInstance();
@@ -33,7 +33,7 @@ public class UserProfileAppController {
         return player;
     }
 
-    public static List<Valutazione> getReviewList(PlayerBean p) {
+    public List<Valutazione> getReviewList(PlayerBean p) {
         List<Valutazione> list;
         //utilizzo la dao del player dove è creata la connessisone
         PlayerDAO daoP = PlayerDAO.getInstance();
@@ -43,7 +43,7 @@ public class UserProfileAppController {
     }
 
     //Modifica informazioni del profilo
-    public static void setInfo(PlayerBean p){
+    public void setInfo(PlayerBean p){
         try {
             PlayerDAO player = PlayerDAO.getInstance();
             player.setPlayerInfo(p.getUsername(),p.getBDescrizione(),p.getBFb(),p.getBIg());
@@ -53,7 +53,7 @@ public class UserProfileAppController {
     }
 
     //Salva review nel profilo
-    public static void saveReview(ValutazioneBean val){
+    public void saveReview(ValutazioneBean val){
         PlayerDAO playerDAO= null;
         playerDAO = PlayerDAO.getInstance();
         ValutazioneDAO dao = new ValutazioneDAO(playerDAO);
@@ -64,7 +64,7 @@ public class UserProfileAppController {
     }
 
     //Restituisce lo storico partite
-    public static List<Giornata> getRecentPlayList(UserBean user) {
+    public List<Giornata> getRecentPlayList(UserBean user) {
         List<Giornata> list;
         PlayerDAO daoP = PlayerDAO.getInstance();
         GiornataDAO dao = new GiornataDAO(daoP);
@@ -73,7 +73,7 @@ public class UserProfileAppController {
     }
 
     //Restituisce la lista di eventi
-    public static List<Event> getEventList(){
+    public List<Event> getEventList(){
         List<Event> list = new ArrayList<>();
         try{
             PlayerDAO dao = PlayerDAO.getInstance();
@@ -86,7 +86,7 @@ public class UserProfileAppController {
     }
 
     //Restituisce la lista di report ricevuti
-    public static List<ReportBean> getReportList(String user) throws EmptyReportListException {
+    public List<ReportBean> getReportList(String user) throws EmptyReportListException {
         List<ReportBean> list;
         PlayerDAO dao = PlayerDAO.getInstance();
         list = dao.getPlayerReportList(user);

@@ -12,11 +12,11 @@ import java.sql.SQLException;
 
 public class RegisterController {
 
-    private RegisterController(){
+    public RegisterController(){
         //does np
     }
 
-    public static boolean isUsernameUsed(String user, int userType) throws SQLException, ClassNotFoundException {
+    public boolean isUsernameUsed(String user, int userType) throws SQLException, ClassNotFoundException {
         boolean res = false;
         switch (userType){
             case 1 ->   {
@@ -50,7 +50,7 @@ public class RegisterController {
 
     //factory
 
-    public static void userRegister(UserBean user,int userType) {
+    public void userRegister(UserBean user,int userType) {
         String username;
         String password;
         try {
@@ -83,7 +83,7 @@ public class RegisterController {
         }
     }
 
-    public static void closeConn(int user) {
+    public void closeConn(int user) {
         ImportCloseConn.closeConn(user);
     }
 }

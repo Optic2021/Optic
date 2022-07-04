@@ -7,8 +7,12 @@ import com.example.optic.bean.UserBean;
 import com.example.optic.bean.ValutazioneBean;
 import com.example.optic.entities.Giornata;
 import com.example.optic.entities.Player;
+import com.example.optic.entities.Valutazione;
+import com.example.optic.entities.ValutazionePlayer;
 import com.example.optic.utilities.EmptyReportListException;
 import com.example.optic.utilities.ImportCheckInput;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,8 +20,9 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 public class PlayerProfileViewCLI{
-    private PlayerProfileViewCLI(){/*does np*/}
     private static PlayerBean utente=new PlayerBean();
+    private static UserProfileAppController userProfileAppController = new UserProfileAppController();
+    private PlayerProfileViewCLI(){/*does np*/}
 
     public static boolean back(String command) {
         boolean flag=false;
@@ -31,7 +36,7 @@ public class PlayerProfileViewCLI{
         String viewer = viewerUsername;
         utente.setUsername(user);
         Player p;
-        p = UserProfileAppController.getPlayer(utente);
+        p = userProfileAppController.getPlayer(utente);
         utente.setBIg(p.getIg());
         utente.setBFb(p.getFb());
         utente.setBDescrizione(p.getDescrizione());
@@ -47,7 +52,8 @@ public class PlayerProfileViewCLI{
                 System.out.println("2 Instagram-----------------------------");
                 System.out.println("3 Vedi report---------------------------");
                 System.out.println("4 Vedi Storico Partite------------------");
-                System.out.println("5 Inserisci Valutazione-----------------");
+                System.out.println("5 Vedi Recensioni-----------------------");
+                System.out.println("6 Inserisci Valutazione-----------------");
 
                 input = br.readLine();
                 res = ImportCheckInput.isNumber(input);
@@ -74,6 +80,13 @@ public class PlayerProfileViewCLI{
                         case 4:
                             showRecentPlays();
                             break;
+                        case 5:
+                            PlayerBean bean = new PlayerBean();
+                            bean.setUsername(user);
+                            List<Valutazione> reviewList = null;
+                            reviewList = userProfileAppController.getReviewList(bean);
+                            showReviewList(reviewList);
+                            break;
                         default:
                             insertVal(viewer);
                             break;
@@ -84,6 +97,42 @@ public class PlayerProfileViewCLI{
             e.printStackTrace();
         }
     }
+
+    public static void showReviewList(List<Valutazione> list){
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        boolean res;
+        int numVal = 0;
+        int mediaVal = 0;
+        int stars = 0;
+        if(list != null) {
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println(list.get(i).getFormattedText()+"\n");
+                numVal++;
+                mediaVal += list.get(i).getStelle();
+            }
+            if (numVal > 0) {
+                stars = mediaVal / numVal;
+            }
+            System.out.println("Media stelle: " + stars);
+        }else{
+            System.out.println("Il player non ha recensioni.");
+        }
+        try {
+            do {
+                System.out.println("Inserire un numero per tornare indietro");
+                String inp;
+                inp = br.readLine();
+                res = ImportCheckInput.checkInput(inp);
+                //controllo se l'input è corretto
+                if (!res) {
+                    System.out.println("Comando non valido!");
+                }
+            } while (!res);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
     public static void insertVal(String viewer) {
         boolean flag;
         String input;
@@ -109,7 +158,7 @@ public class PlayerProfileViewCLI{
                 }
                 val.setRiceve(utente.getUsername());
                 val.setUsernameP1(viewer);
-                UserProfileAppController.saveReview(val);
+                userProfileAppController.saveReview(val);
             } while (Boolean.FALSE.equals(flag));
         } catch (IOException e) {
             e.printStackTrace();
@@ -117,14 +166,14 @@ public class PlayerProfileViewCLI{
     }
 
     public static void save () {
-        UserProfileAppController.setInfo(utente);
+        userProfileAppController.setInfo(utente);
     }
 
     public static void showRecentPlays(){
         UserBean bean = new PlayerBean();
         bean.setUsername(utente.getUsername());
-        List<Giornata> list = UserProfileAppController.getRecentPlayList(bean);
-        if(list.isEmpty()){
+        List<Giornata> list = userProfileAppController.getRecentPlayList(bean);
+        if(list == null){
             System.out.println("Non ci sono partite recenti da mostrare.");
         }else {
             for (int i = 0; i < list.size(); i++) {
@@ -138,7 +187,7 @@ public class PlayerProfileViewCLI{
         boolean res;
         List<ReportBean> list;
         try{
-            list = UserProfileAppController.getReportList(utente.getUsername());
+            list = userProfileAppController.getReportList(utente.getUsername());
             for (int i = 0; i < list.size(); i++) {
                 System.out.println(list.get(i).getFormattedText());
             }

@@ -22,13 +22,15 @@ public class ControllerSocialModPG extends GraphicController{
     @FXML
     private TextField numWhatsapp;
 
+    private ModPGPageAppController modPGPageAppController;
     @Override
     public void setUserVariables(String user){
+        modPGPageAppController = new ModPGPageAppController();
         this.user.setText(user);
         Admin a = null;
         AdminBean bean = new AdminBean();
         bean.setUsername(user);
-        a = ModPGPageAppController.getAdmin(bean);
+        a = modPGPageAppController.getAdmin(bean);
         if(a != null){
             urlFacebook.setText(a.getFb());
             urlInstagram.setText(a.getIg());
@@ -52,7 +54,7 @@ public class ControllerSocialModPG extends GraphicController{
         //controllo se gli url sono validi
         res= ImportUrl.controlliUrl(urlInstagram,urlFacebook,numWhatsapp,false);
         if(res){
-            ModPGPageAppController.setAdminSocial(bean);
+            modPGPageAppController.setAdminSocial(bean);
             exitSocial();
         }
     }

@@ -19,6 +19,7 @@ import java.util.Locale;
 
 public class PlayerProfileCLI {
     private static PlayerBean userBean=new PlayerBean();
+    private static UserProfileAppController userProfileAppController = new UserProfileAppController();
 
     private PlayerProfileCLI(){/*does np*/}
 
@@ -33,7 +34,7 @@ public class PlayerProfileCLI {
     public static void main(String user){
         userBean.setUsername(user);
         Player player;
-        player = UserProfileAppController.getPlayer(userBean);
+        player = userProfileAppController.getPlayer(userBean);
         userBean.setBIg(player.getIg());
         userBean.setBFb(player.getFb());
         userBean.setBDescrizione(player.getDescrizione());
@@ -135,13 +136,13 @@ public class PlayerProfileCLI {
     }
 
     public static void save(){
-        UserProfileAppController.setInfo(userBean);
+        userProfileAppController.setInfo(userBean);
     }
 
     public static void showRecentPlays(){
         UserBean bean = new PlayerBean();
         bean.setUsername(userBean.getUsername());
-        List<Giornata> list = UserProfileAppController.getRecentPlayList(bean);
+        List<Giornata> list = userProfileAppController.getRecentPlayList(bean);
         if(list.isEmpty()){
             System.out.println("Non ci sono partite recenti da mostrare.");
         }else {
@@ -155,7 +156,7 @@ public class PlayerProfileCLI {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean ris;
         List<Event> list;
-        list = UserProfileAppController.getEventList();
+        list = userProfileAppController.getEventList();
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).getFormattedText()+"\n");
         }
@@ -180,7 +181,7 @@ public class PlayerProfileCLI {
         boolean res;
         List<ReportBean> list;
         try{
-            list = UserProfileAppController.getReportList(userBean.getUsername());
+            list = userProfileAppController.getReportList(userBean.getUsername());
             for (int i = 0; i < list.size(); i++) {
                 System.out.println(list.get(i).getFormattedText()+"\n");
             }

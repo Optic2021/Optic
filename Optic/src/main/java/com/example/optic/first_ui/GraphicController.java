@@ -69,6 +69,7 @@ public abstract class GraphicController {
         GraphicController controller = fxmlLoader.getController();
         String usr=user+" "+viewer;
         controller.setUserVariables(usr);
+
         scene1.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
@@ -121,7 +122,7 @@ public abstract class GraphicController {
         Scene scene3 = new Scene(fxmlLoader.load(), 1200, 720);
         GraphicController controller = fxmlLoader.getController();
 
-        usr = usr+"/"+campo.getNomeCampo();
+        usr = usr+"/"+campo.getNomeC();
         controller.setUserVariables(usr);
 
         scene3.setOnMousePressed(new EventHandler<MouseEvent>(){

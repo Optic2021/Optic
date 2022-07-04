@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 public class PlayerHomeCLI {
+    private static BookSessionAppController bookSessionAppController = new BookSessionAppController();
 
     private PlayerHomeCLI(){
         //does nothing
@@ -23,7 +24,6 @@ public class PlayerHomeCLI {
             switch (command) {
                 case 2 -> {
                     showPlaygroundList(user);
-                    System.out.println("SONO QUI");
                 }
                 case 3 -> {
                     return;
@@ -67,7 +67,7 @@ public class PlayerHomeCLI {
     private static void showPlaygroundList(String user) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
-            List<Admin> list = BookSessionAppController.getCampi();
+            List<Admin> list = bookSessionAppController.getCampi();
             String input2;
             int campo = 0;
             boolean res2 = false;

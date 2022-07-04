@@ -18,20 +18,17 @@ import java.util.List;
 
 public class RefReportPlayer {
 
-    private RefReportPlayer(){
+    public RefReportPlayer(){
         //does np
     }
 
-    public static void saveReport(ReportBean report) {
+    public void saveReport(ReportBean report) {
         RefereeDAO dao=RefereeDAO.getInstance();
         dao.getConn();
         dao.saveReport(report);
-        Alert conf = new Alert(AlertType.WARNING);
-        conf.setContentText("Report salvato correttamente");
-        conf.show();
     }
 
-    public static Admin getAdminFromRef(UserBean user) {
+    public Admin getAdminFromRef(UserBean user) {
         Admin a = null;
         try {
             RefereeDAO dao = RefereeDAO.getInstance();
@@ -43,7 +40,7 @@ public class RefReportPlayer {
         return a;
     }
 
-    public static List<Event> getEventList(){
+    public List<Event> getEventList(){
         List<Event> list = null;
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
@@ -56,7 +53,7 @@ public class RefReportPlayer {
     }
 
     //Prende la prossima giornata da giocare
-    public static Giornata getFirstPlay(UserBean bean){
+    public Giornata getFirstPlay(UserBean bean){
         Giornata play = null;
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
@@ -69,7 +66,7 @@ public class RefReportPlayer {
     }
 
     //Prende la giornata successiva
-    public static Giornata getNextPlay(GiornataBean bean){
+    public Giornata getNextPlay(GiornataBean bean){
         Giornata play = null;
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
@@ -82,7 +79,7 @@ public class RefReportPlayer {
     }
 
     //Prende la giornata precedente
-    public static Giornata getLastPlay(GiornataBean bean){
+    public Giornata getLastPlay(GiornataBean bean){
         Giornata play = null;
         try{
             RefereeDAO dao = RefereeDAO.getInstance();
@@ -94,7 +91,7 @@ public class RefReportPlayer {
         return  play;
     }
 
-    public static List<Player> getPlayersList(GiornataBean bean){
+    public List<Player> getPlayersList(GiornataBean bean){
         List<Player> list;
         RefereeDAO dao = RefereeDAO.getInstance();
         GiornataDAO playDao = new GiornataDAO(dao);
@@ -102,7 +99,7 @@ public class RefReportPlayer {
         return list;
     }
 
-    public static void closeConn() throws IOException {
+    public void closeConn() throws IOException {
         try {
             RefereeDAO dao = RefereeDAO.getInstance();
             dao.closeConn();

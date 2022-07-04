@@ -55,7 +55,9 @@ public class ControllerUserPgPage extends GraphicController {
     @FXML private Label wa;
     @FXML private Button book;
 
-    String format="yyyy-MM-dd";
+    private static String format="yyyy-MM-dd";
+    private BookSessionAppController bookSessionAppController;
+    private ReviewAppController reviewAppController;
 
     @Override
     public void setUserVariables(String string) {
@@ -64,11 +66,13 @@ public class ControllerUserPgPage extends GraphicController {
         String field = result[1];
         user.setText(username);
 
+        bookSessionAppController = new BookSessionAppController();
+        reviewAppController = new ReviewAppController();
         AdminBean admin = null;
         AdminBean playground = null;
         playground = new AdminBean();
-        playground.setNomeCampo(field);
-        admin = BookSessionAppController.getCampoInfo(playground);
+        playground.setNomeC(field);
+        admin = bookSessionAppController.getCampoInfo(playground);
         populateReviewTable(playground);
         this.setFirstPlay(admin.getUsername());
         setCampo(admin);
@@ -80,10 +84,10 @@ public class ControllerUserPgPage extends GraphicController {
         //setto la bean con info dell'admin del campo attualmente visualizzato
         bean.setUsername(user);
         try {
-            play = BookSessionAppController.getFirstPlay(bean);
+            play = bookSessionAppController.getFirstPlay(bean);
             //controllo se esiste una giornata da poter mostrare
             if (play == null) {
-                play = BookSessionAppController.getRecentPlay(bean);
+                play = bookSessionAppController.getRecentPlay(bean);
             }
             if(play != null) {
                 //mostro informazioni della giornata
@@ -132,12 +136,12 @@ public class ControllerUserPgPage extends GraphicController {
         GiornataBean playBean = new GiornataBean();
         bean.setUsername(user.getText());
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        if(BookSessionAppController.isPlayerBooked(bean,playBean)){
+        if(bookSessionAppController.isPlayerBooked(bean,playBean)){
             Alert conf = new Alert(Alert.AlertType.ERROR);
             conf.setContentText("Sei già prenotato!");
             conf.show();
         }else{
-            BookSessionAppController.bookPlay(bean,playBean);
+            bookSessionAppController.bookPlay(bean,playBean);
             this.populatePlayersTable();
         }
     }
@@ -148,7 +152,7 @@ public class ControllerUserPgPage extends GraphicController {
         playerVal.setCellValueFactory(new PropertyValueFactory<>("stelle"));
         Player p;
         playBean.setIdPlay(Integer.parseInt(idPlay.getText()));
-        List<Player> list = BookSessionAppController.getPlayersList(playBean);
+        List<Player> list = bookSessionAppController.getPlayersList(playBean);
         for(int i = 0; i < list.size(); i++) {
             p = list.get(i);
             players.getItems().add(p);
@@ -175,7 +179,7 @@ public class ControllerUserPgPage extends GraphicController {
         int mediaVal = 0;
         int stars = 0;
         List<Valutazione> list = null;
-        list = ReviewAppController.reviewList(admin);
+        list = reviewAppController.reviewList(admin);
 
         nome.setCellValueFactory(new PropertyValueFactory<>("fkUsernameP1"));
         recensione.setCellValueFactory(new PropertyValueFactory<>("Descrizione"));
@@ -199,7 +203,7 @@ public class ControllerUserPgPage extends GraphicController {
     }
 
     public void setCampo(AdminBean admin){
-        campo.setText(admin.getNomeCampo());
+        campo.setText(admin.getNomeC());
         desc.setText(admin.getDescrizione());
         adminName.setText(admin.getUsername());
         ref.setText(admin.getReferee());
@@ -219,9 +223,9 @@ public class ControllerUserPgPage extends GraphicController {
         valutazione.setRiceve(campo.getText());
         valutazione.setStelle(starN);
         valutazione.setUsernameP1(user.getText());
-        ReviewAppController.saveReview(valutazione);
+        reviewAppController.saveReview(valutazione);
         AdminBean admin=new AdminBean();
-        admin.setNomeCampo(campo.getText());
+        admin.setNomeC(campo.getText());
         table.getItems().clear();
         populateReviewTable(admin);
     }

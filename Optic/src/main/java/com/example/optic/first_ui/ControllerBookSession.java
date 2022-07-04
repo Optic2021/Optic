@@ -17,9 +17,11 @@ public class ControllerBookSession extends GraphicController {
     @FXML private TableView table;
     @FXML private TableColumn nomeC;
     @FXML private TableColumn provincia;
+    private BookSessionAppController bookSessionAppController;
 
     @Override
     public void setUserVariables(String user){
+        bookSessionAppController = new BookSessionAppController();
         this.user.setText(user);
         populateCampiTable(user);
     }
@@ -30,7 +32,7 @@ public class ControllerBookSession extends GraphicController {
         this.toView("views/userHomeMap.fxml");
     }
     public void toLogin() throws IOException {
-        BookSessionAppController.closeConn();
+        bookSessionAppController.closeConn();
         this.toView("views/login.fxml");
     }
 
@@ -41,8 +43,8 @@ public class ControllerBookSession extends GraphicController {
             if(campo==null){
                 throw new InvalidSelectedPG();
             }
-            bean.setNomeCampo(campo.getNomeC());
-            if (!bean.getNomeCampo().isEmpty()){
+            bean.setNomeC(campo.getNomeC());
+            if (!bean.getNomeC().isEmpty()){
                 toView("views/userPgPage.fxml",user.getText(),bean);
             }
         } catch(InvalidSelectedPG z){
@@ -61,7 +63,7 @@ public class ControllerBookSession extends GraphicController {
         player.setUsername(user);
 
         try {
-            List<Admin> lista = BookSessionAppController.getCampi();
+            List<Admin> lista = bookSessionAppController.getCampi();
             nomeC.setCellValueFactory(new PropertyValueFactory<>("nomeC"));
             provincia.setCellValueFactory(new PropertyValueFactory<>("provincia"));
             int k=lista.size();

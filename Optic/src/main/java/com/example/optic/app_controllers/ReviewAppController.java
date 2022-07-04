@@ -10,12 +10,12 @@ import java.util.List;
 
 public class ReviewAppController {
 
-    private ReviewAppController(){
+    public ReviewAppController(){
         //does np
     }
 
     //salva una valutazione per il campo
-    public static void saveReview(ValutazioneBean val) {
+    public void saveReview(ValutazioneBean val) {
         PlayerDAO p= PlayerDAO.getInstance();
         ValutazioneDAO dao=new ValutazioneDAO(p);
         if(dao.getValutazione(val,0)){
@@ -25,12 +25,12 @@ public class ReviewAppController {
     }
 
     //Prende la lista di valutazioni
-    public static List<Valutazione> reviewList(AdminBean admin){
+    public List<Valutazione> reviewList(AdminBean admin){
         List<Valutazione> list;
 
         PlayerDAO player= PlayerDAO.getInstance();
         ValutazioneDAO dao= new ValutazioneDAO(player);
-        list=dao.getAdminReviewList1(admin.getNomeCampo());
+        list=dao.getAdminReviewList1(admin.getNomeC());
         return list;
     }
 }
